@@ -1,1 +1,3 @@
+?ASlink-Error-<cannot open> : "C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.rel"
 + C:\PROGRA~1\SDCC\bin\sdld.exe -nf "C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\ProjectJunk\LAB2.lk"
++ C:\PROGRA~1\SDCC\bin\sdld.exe -nf "C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\ProjectJunk\LAB2.lk" returned errorcode 3

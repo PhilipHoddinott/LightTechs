@@ -370,6 +370,7 @@ void randGen(void) {
 	previousnum=keyinput%3;
 	x=0;
 	// wait 1/10s 
+	/*
 	while (x<=9){
 		randomnum=random();
 		Counts=0;
@@ -382,10 +383,21 @@ void randGen(void) {
 		//wait();						
 		randList[x]=randomnum;
 		x++;
-	}
+	}*/
+	randList[0]=0;
+	randList[1]=0;
+	randList[2]=0;
+	randList[3]=0;
+	randList[4]=0;
+	randList[5]=1;
+	randList[6]=0;
+	randList[7]=0;
+	randList[8]=0;
+	randList[9]=0;
 	for(x=0;x<10;x++){
 		printf("\rRand %d is %d\n",x,randList[x]);
 	}
+
 }
 
 void resetArrays(void) {
