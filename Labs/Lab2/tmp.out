@@ -1,3 +1,25 @@
 + C:\PROGRA~1\SDCC\bin\sdcpp.exe -nostdinc -Wall -I"--nogcse" -I"C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2" -obj-ext=.rel -D__SDCC_MODEL_SMALL -D__SDCC_FLOAT_REENT -D__SDCC=3_5_0 -DSDCC=350 -D__SDCC_REVISION=9253 -D__SDCC_mcs51 -D__STDC_NO_COMPLEX__ -D__STDC_NO_THREADS__ -D__STDC_NO_ATOMICS__ -D__STDC_NO_VLA__ -isystem "C:\Program Files\SDCC\bin\..\include\mcs51" -isystem "C:\Program Files\SDCC\bin\..\include"  "C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c" 
-C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:80: syntax error: token -> '{' ; column 17
-C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:82: error 7: Old style C declaration. IGNORED 'LED0'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:93: syntax error: token -> 'int' ; column 5
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:103: syntax error: token -> 'int' ; column 13
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:103: syntax error: token -> ')' ; column 28
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:114: syntax error: token -> 'else' ; column 11
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:99: error 20: Undefined identifier 'turn'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:101: error 20: Undefined identifier 'player'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:103: error 20: Undefined identifier 'k'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:106: error 20: Undefined identifier 'k'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:107: error 20: Undefined identifier 'in'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:108: error 20: Undefined identifier 'sum'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:119: error 20: Undefined identifier 'scores'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:119: error 20: Undefined identifier 'player'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:119: error 22: Array or pointer required for '[]' operation 
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:119: error 20: Undefined identifier 'scores'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:119: error 20: Undefined identifier 'player'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:119: error 22: Array or pointer required for '[]' operation 
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:119: error 20: Undefined identifier 'sum'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:122: error 20: Undefined identifier 'player'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:122: error 20: Undefined identifier 'sum'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:122: error 20: Undefined identifier 'scores'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:122: error 20: Undefined identifier 'player'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:122: error 22: Array or pointer required for '[]' operation 
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:123: error 20: Undefined identifier 'sum'
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:127: syntax error: token -> '}' ; column 3

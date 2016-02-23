@@ -46,7 +46,7 @@ void endTurn(void);
 void BILEDOFF(void);
 //unsigned char randGen(void);
 void randGen(void);
-unsigned LEDPAT(void)
+unsigned LEDPAT(void);
 //-----------------------------------------------------------------------------
 // Global Variables
 //-----------------------------------------------------------------------------
@@ -99,8 +99,7 @@ void main(void) {
 		while(turn<3){
 			//calcualte speed each time for the players
 			while(player<3){
-				for(int i=0;i<10;i++){
-					int k =0;
+				for(i=0;i<10;i++){
 					for (int k=0; k<=i;k++){
 						if(!SS){
 							int in=seq(randList[k]);
