@@ -66,7 +66,6 @@ __sbit __at 0x92 PB1;    // Push button 1, associated with Port 1 Pin 2
 __sbit __at 0x90 PB0;    // Push button 0, associated with Port 1 Pin 0
 __sbit __at 0xA5 Buzzer; // buzer port 2 pin 5
 unsigned int Counts=0; 
-unsigned int countHolder=0;
 signed char i=0, x=0, y=0;
 unsigned char randomnum;
 unsigned char previousnum;
@@ -173,10 +172,10 @@ void endTurn(void){
 void Buzz(void){
 	Buzzer=0;
 	wait();
-	Buzzer=1;
+	Buzzzer=1;
 }
 
-char seq(char led){
+int seq(int led){
 	light(led);
 	wait();// wait the time
 	return pushButton(led);
@@ -311,7 +310,7 @@ unsigned char ReadAnalog(unsigned char n){
 //***************
 void Timer0_ISR(void) __interrupt 1
 {
-	Counts++; //Adds 1 to Counts
+	counts++; //Adds 1 to Counts
 }
 
 
@@ -384,15 +383,15 @@ unsigned LEDPAT(void)
 	rand();
 }
 void debounce(void){
-	countHolder=Counts;				//store starting counts
-	while((Counts-countHolder)<4); //wait 15ms 
+	countHolder=counts;				//store starting counts
+	while((counts-countHolder)<4); //wait 15ms 
 					
 }
 
 void StopAndResetTimer(void){
     TR0 = 0;           	// Stop Timer0
     TMR0 = 0;           // Clear high & low byte of T0	
-	Counts=0;			// clear counts
+	counts=0;			// clear counts
 }
 
 void StartTimer(void){

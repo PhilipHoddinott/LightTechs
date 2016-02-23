@@ -35,13 +35,13 @@ void StartTimer(void);
 void pause(void);
 void ending(void);
 
-void system_initilization(void); //initalizze systems
+//void system_initilization(void); //initalizze systems
 void Buzz(void);
 char seq(char led);
 char pushButton(char button);
 void wait(void);
 void endTurn(void);
-char light(char led);
+void light(char led);
 
 
 void BILEDOFF(void);
@@ -65,7 +65,7 @@ __sbit __at 0x94 PB2;    // Push button 2, associated with Port 1 Pin 4
 __sbit __at 0x92 PB1;    // Push button 1, associated with Port 1 Pin 2
 __sbit __at 0x90 PB0;    // Push button 0, associated with Port 1 Pin 0
 __sbit __at 0xA5 Buzzer; // buzer port 2 pin 5
-unsigned int Counts=0; 
+volatile unsigned int Counts=0; 
 unsigned int countHolder=0;
 signed char i=0, x=0, y=0;
 unsigned char randomnum;
@@ -74,13 +74,13 @@ unsigned char numC=0;
 unsigned char on=0;
 unsigned char off=1;
 unsigned char randList[10];
-unsigned char Points [3][3];
+signed char Points [3][3];
 unsigned char sum=0;
 signed char k;
 unsigned char turn;
 unsigned char player;
 unsigned char inputFunc;
-unsigned char scores[2] = {0,0,0};
+unsigned char scores[3] = {0,0,0};
 //******************************************************************************************
 //main program function
 //******************************************************************************************
@@ -88,7 +88,7 @@ int philip =1;
 void main(void) {
 	//system_initilization();
 	Sys_Init();      			// System Initialization
-	Port_Init();     			// Initialize ports 2 and 3
+	Port_Init();    			// Initialize ports 2 and 3
 	Interrupt_Init();			//Initialize Interrupts
 	Timer_Init();				//Initialize timer 0
 	putchar(' ');    		
@@ -184,31 +184,33 @@ char seq(char led){
 
 
 char pushButton(char button){
-switch(button){
-	case 0:
-		if(PB0==0) 
-			return 1;
-		else return 0;
-	case 1:
-		if(PB1==0) 
-			return 1;
-		else return 0;
-	case 2:
-		if(PB2==0) 
-			return 1;
-		else return 0;
-	case 3:
-		if(PB3==0) 
-			return 1;
-		else return 0;
+	switch(button){
+		case 0:
+			if(PB0==0) 
+				return 1;
+			else return 0;
+		case 1:
+			if(PB1==0) 
+				return 1;
+			else return 0;
+		case 2:
+			if(PB2==0) 
+				return 1;
+			else return 0;
+		case 3:
+			if(PB3==0) 
+				return 1;
+			else return 0;
+	}//end switch button
+	return 0;
 }
 
-char light(char led){
+void light(char ledW){
 	LED0=0;
 	LED1=0;
 	LED2=0;
 	LED3=0;
-	switch(led){
+	switch(ledW){
 		case 0:
 			LED0=0;
 			break;
@@ -233,7 +235,7 @@ void wait(void){
 
 
 
-
+/*
 void system_initilization(void){ // this does all the sys init stuff
 	Sys_Init();      			// System Initialization
 	Port_Init();     			// Initialize ports 2 and 3
@@ -241,7 +243,7 @@ void system_initilization(void){ // this does all the sys init stuff
 	Timer_Init();				//Initialize timer 0
 	putchar(' ');    		
 	printf("\r\nStart\r\n");
-}
+}*/
 
 
 
@@ -252,7 +254,7 @@ void system_initilization(void){ // this does all the sys init stuff
 
 // re initialize the ports depending on the setup 
 
-/*void Port_Init(void){
+void Port_Init(void){
 	// Port 3
 	P3MDOUT |= 0xF8; //set Port 3 output pins to push-pull mode
 	P3MDOUT &= 0xFC; //set Port 3 input pins to open drain mode
@@ -263,7 +265,7 @@ void system_initilization(void){ // this does all the sys init stuff
 	P2MDOUT &= 0xFE; //set Port 2 input pin to push-pull mode
 	P2 |= ~0XFE;     //set Port 2 input pin to high impedance state
 
-}*/
+}
 //******************************************************************************************
 //LED Functions
 //******************************************************************************************
@@ -364,37 +366,35 @@ void randGen(void) {
 
 void resetArrays(void) {
 
-	for(x=0; x<=2; x++)
-	{
-		for(y=0; y<=2; y++)
-		{
-			unsigned char Points [x][y]-=0;
+	for(x=0; x<=2; x++) {
+		for(y=0; y<=2; y++) {
+			Points [x][y]=0;
 		}
 	}
 	x=0;
-	while(x<=9)
-	{
+	while(x<=9) {
 		randList[x]=0;
+		x++;
 	}
 }
 
-unsigned LEDPAT(void)
-{
+unsigned LEDPAT(void) {
 	resetArrays();
 	rand();
+	return 0;
 }
 void debounce(void){
 	countHolder=Counts;				//store starting counts
 	while((Counts-countHolder)<4); //wait 15ms 
 					
 }
-
+/*
 void StopAndResetTimer(void){
     TR0 = 0;           	// Stop Timer0
     TMR0 = 0;           // Clear high & low byte of T0	
 	Counts=0;			// clear counts
 }
-
+*/
 void StartTimer(void){
 	TR0=1;
 }
@@ -422,7 +422,9 @@ void incorrect(void){
 	debounce();
 	Buzzer=1;
 }
+
 void ending(void){
+	/*
 	Buzzer=0;
 	Counts=0;			//store starting counts
 	while(Counts<(338/2)); 
@@ -439,6 +441,7 @@ void ending(void){
 	Counts=0;
 	Buzzer=0;
 	while(Counts<(338/2)); 
-	BILED0=1;;
+	BILED0=1;
 	Buzzer=1;
+	*/
 }
