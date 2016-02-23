@@ -77,8 +77,8 @@ unsigned char randList[10];
 signed char Points [3][3];
 unsigned char sum=0;
 signed char k;
-unsigned char turn;
-unsigned char player;
+unsigned char turn=0;
+unsigned char player=0;
 unsigned char inputFunc;
 unsigned char scores[3] = {0,0,0};
 //******************************************************************************************
@@ -108,9 +108,10 @@ void main(void) {
 		
 		randGen();
 		printf("\rdone randgend\n");
-		while(turn<3){
+		while(turn<1){//mate turn 3
 			printf("\r turn %d\n",turn);
 			//calcualte speed each time for the players
+			player=0;
 			while(player<3){
 				printf("\r player %d\n", player);
 				for(i=0;i<3;i++){//make it i<10 			WHEN DONE DO THIS!!!
@@ -142,7 +143,7 @@ void main(void) {
 				endTurn();
 
 			}//end while players
-			player=0;
+			
 			turn++;
 		}//end while turn<3
 		printf("\rPlayer 1 score %i, Player 2 score %i, Player 3 score %i\n", scores[0], scores[1], scores[2]);
@@ -152,8 +153,19 @@ void main(void) {
 		TR0 = 0;								//turn off timer
 		printf("\rToggle slid switch to play again\n");
 		while (!SS);							//wait until the switch is turned off and back on again to loop
-		while (SS); // the toggle						
-	}	
+		printf("\rtoggle once\n");
+		BILED1=0;
+		BILED0=1;
+		while (SS); // the toggle	
+		printf("\rtoggle twice!!\n"); 
+		BILED0=0;
+		BILED1=1;
+		LED0=0;
+		LED1=0;
+		LED2=0;
+		LED3=0;
+		//NEEEEEEEEEEEEEED TO RESET ARRAYS!!!!!!!!!!!!!!!!!!!!!					
+	}	// main infinite loop 
 	
 }//end main
 

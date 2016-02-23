@@ -1,9 +1,9 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.5.0 #9253 (Jun 20 2015) (MINGW64)
-; This file was generated Tue Feb 23 18:34:10 2016
+; This file was generated Tue Feb 23 18:41:38 2016
 ;--------------------------------------------------------
-	.module LAB2ints
+	.module LAB2End23
 	.optsdcc -mmcs51 --model-small
 	
 ;--------------------------------------------------------
@@ -1076,44 +1076,52 @@ __interrupt_vect:
 	.globl __mcs51_genXINIT
 	.globl __mcs51_genXRAMCLEAR
 	.globl __mcs51_genRAMCLEAR
-	C$LAB2ints.c$68$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:68: volatile unsigned int Counts=0; 
+	C$LAB2End23.c$68$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:68: volatile unsigned int Counts=0; 
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$LAB2ints.c$69$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:69: unsigned int countHolder=0;
+	C$LAB2End23.c$69$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:69: unsigned int countHolder=0;
 	mov	_countHolder,a
 	mov	(_countHolder + 1),a
-	C$LAB2ints.c$70$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:70: signed char i=0, x=0, y=0;
+	C$LAB2End23.c$70$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:70: signed char i=0, x=0, y=0;
 ;	1-genFromRTrack replaced	mov	_i,#0x00
 	mov	_i,a
-	C$LAB2ints.c$70$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:70: unsigned char randomnum;
+	C$LAB2End23.c$70$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:70: unsigned char randomnum;
 ;	1-genFromRTrack replaced	mov	_x,#0x00
 	mov	_x,a
-	C$LAB2ints.c$70$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:70: signed char i=0, x=0, y=0;
+	C$LAB2End23.c$70$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:70: signed char i=0, x=0, y=0;
 ;	1-genFromRTrack replaced	mov	_y,#0x00
 	mov	_y,a
-	C$LAB2ints.c$73$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:73: unsigned char numC=0;
+	C$LAB2End23.c$73$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:73: unsigned char numC=0;
 ;	1-genFromRTrack replaced	mov	_numC,#0x00
 	mov	_numC,a
-	C$LAB2ints.c$74$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:74: unsigned char on=0;
+	C$LAB2End23.c$74$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:74: unsigned char on=0;
 ;	1-genFromRTrack replaced	mov	_on,#0x00
 	mov	_on,a
-	C$LAB2ints.c$75$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:75: unsigned char off=1;
+	C$LAB2End23.c$75$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:75: unsigned char off=1;
 	mov	_off,#0x01
-	C$LAB2ints.c$78$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:78: unsigned char sum=0;
+	C$LAB2End23.c$78$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:78: unsigned char sum=0;
 ;	1-genFromRTrack replaced	mov	_sum,#0x00
 	mov	_sum,a
-	C$LAB2ints.c$83$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:83: unsigned char scores[3] = {0,0,0};
+	C$LAB2End23.c$80$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:80: unsigned char turn=0;
+;	1-genFromRTrack replaced	mov	_turn,#0x00
+	mov	_turn,a
+	C$LAB2End23.c$81$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:81: unsigned char player=0;
+;	1-genFromRTrack replaced	mov	_player,#0x00
+	mov	_player,a
+	C$LAB2End23.c$83$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:83: unsigned char scores[3] = {0,0,0};
 ;	1-genFromRTrack replaced	mov	_scores,#0x00
 	mov	_scores,a
 ;	1-genFromRTrack replaced	mov	(_scores + 0x0001),#0x00
@@ -1349,30 +1357,30 @@ _getchar_nw:
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$LAB2ints.c$87$1$12 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:87: void main(void) {
+	C$LAB2End23.c$87$1$12 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:87: void main(void) {
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$LAB2ints.c$89$1$65 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:89: Sys_Init();      			// System Initialization
+	C$LAB2End23.c$89$1$65 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:89: Sys_Init();      			// System Initialization
 	lcall	_Sys_Init
-	C$LAB2ints.c$90$1$65 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:90: Port_Init();    			// Initialize ports 2 and 3
+	C$LAB2End23.c$90$1$65 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:90: Port_Init();    			// Initialize ports 2 and 3
 	lcall	_Port_Init
-	C$LAB2ints.c$91$1$65 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:91: Interrupt_Init();			//Initialize Interrupts
+	C$LAB2End23.c$91$1$65 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:91: Interrupt_Init();			//Initialize Interrupts
 	lcall	_Interrupt_Init
-	C$LAB2ints.c$92$1$65 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:92: Timer_Init();				//Initialize timer 0
+	C$LAB2End23.c$92$1$65 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:92: Timer_Init();				//Initialize timer 0
 	lcall	_Timer_Init
-	C$LAB2ints.c$93$1$65 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:93: putchar(' ');    		
+	C$LAB2End23.c$93$1$65 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:93: putchar(' ');    		
 	mov	dpl,#0x20
 	lcall	_putchar
-	C$LAB2ints.c$94$1$65 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:94: printf("\rPress enter to start game\r\n");
+	C$LAB2End23.c$94$1$65 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:94: printf("\rPress enter to start game\r\n");
 	mov	a,#___str_0
 	push	acc
 	mov	a,#(___str_0 >> 8)
@@ -1383,28 +1391,28 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$97$1$65 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:97: while(1) {	
+	C$LAB2End23.c$97$1$65 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:97: while(1) {	
 00122$:
-	C$LAB2ints.c$98$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:98: BILEDOFF();
+	C$LAB2End23.c$98$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:98: BILEDOFF();
 	lcall	_BILEDOFF
-	C$LAB2ints.c$99$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:99: StopAndResetTimer();
+	C$LAB2End23.c$99$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:99: StopAndResetTimer();
 	lcall	_StopAndResetTimer
-	C$LAB2ints.c$100$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:100: StartTimer();
+	C$LAB2End23.c$100$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:100: StartTimer();
 	lcall	_StartTimer
-	C$LAB2ints.c$101$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:101: keyinput=getchar();
+	C$LAB2End23.c$101$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:101: keyinput=getchar();
 	lcall	_getchar
 	mov	a,dpl
 	mov	_keyinput,a
 	rlc	a
 	subb	a,acc
 	mov	(_keyinput + 1),a
-	C$LAB2ints.c$102$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:102: printf("\r Game now playing\n");
+	C$LAB2End23.c$102$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:102: printf("\r Game now playing\n");
 	mov	a,#___str_1
 	push	acc
 	mov	a,#(___str_1 >> 8)
@@ -1415,23 +1423,23 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$103$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:103: sum=0;
+	C$LAB2End23.c$103$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:103: sum=0;
 	mov	_sum,#0x00
-	C$LAB2ints.c$104$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:104: turn=0;
+	C$LAB2End23.c$104$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:104: turn=0;
 	mov	_turn,#0x00
-	C$LAB2ints.c$105$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:105: player=0;
+	C$LAB2End23.c$105$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:105: player=0;
 	mov	_player,#0x00
-	C$LAB2ints.c$106$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:106: inputFunc=0;
+	C$LAB2End23.c$106$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:106: inputFunc=0;
 	mov	_inputFunc,#0x00
-	C$LAB2ints.c$109$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:109: randGen();
+	C$LAB2End23.c$109$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:109: randGen();
 	lcall	_randGen
-	C$LAB2ints.c$110$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:110: printf("\rdone randgend\n");
+	C$LAB2End23.c$110$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:110: printf("\rdone randgend\n");
 	mov	a,#___str_2
 	push	acc
 	mov	a,#(___str_2 >> 8)
@@ -1442,16 +1450,16 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$111$3$67 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:111: while(turn<3){
+	C$LAB2End23.c$111$3$67 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:111: while(turn<1){//mate turn 3
 00112$:
-	mov	a,#0x100 - 0x03
+	mov	a,#0x100 - 0x01
 	add	a,_turn
-	jnc	00173$
+	jnc	00176$
 	ljmp	00114$
-00173$:
-	C$LAB2ints.c$112$3$67 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:112: printf("\r turn %d\n",turn);
+00176$:
+	C$LAB2End23.c$112$3$67 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:112: printf("\r turn %d\n",turn);
 	mov	r6,_turn
 	mov	r7,#0x00
 	push	ar6
@@ -1466,16 +1474,19 @@ _main:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$LAB2ints.c$114$3$67 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:114: while(player<3){
+	C$LAB2End23.c$114$3$67 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:114: player=0;
+	mov	_player,#0x00
+	C$LAB2End23.c$115$3$67 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:115: while(player<3){
 00109$:
 	mov	a,#0x100 - 0x03
 	add	a,_player
-	jnc	00174$
+	jnc	00177$
 	ljmp	00111$
-00174$:
-	C$LAB2ints.c$115$4$68 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:115: printf("\r player %d\n", player);
+00177$:
+	C$LAB2End23.c$116$4$68 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:116: printf("\r player %d\n", player);
 	mov	r6,_player
 	mov	r7,#0x00
 	push	ar6
@@ -1490,12 +1501,12 @@ _main:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$LAB2ints.c$116$4$68 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:116: for(i=0;i<3;i++){//make it i<10 			WHEN DONE DO THIS!!!
+	C$LAB2End23.c$117$4$68 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:117: for(i=0;i<3;i++){//make it i<10 			WHEN DONE DO THIS!!!
 	mov	_i,#0x00
 00127$:
-	C$LAB2ints.c$118$5$69 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:118: for (k=0; k<=i;k++){
+	C$LAB2End23.c$119$5$69 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:119: for (k=0; k<=i;k++){
 	mov	_k,#0x00
 00125$:
 	clr	c
@@ -1505,11 +1516,11 @@ _main:
 	xrl	b,#0x80
 	subb	a,b
 	jc	00128$
-	C$LAB2ints.c$120$6$70 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:120: if(!SS){
+	C$LAB2End23.c$121$6$70 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:121: if(!SS){
 	jb	_SS,00105$
-	C$LAB2ints.c$121$7$71 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:121: printf("\r !SS\n");
+	C$LAB2End23.c$122$7$71 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:122: printf("\r !SS\n");
 	mov	a,#___str_5
 	push	acc
 	mov	a,#(___str_5 >> 8)
@@ -1520,16 +1531,16 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$122$7$71 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:122: inputFunc=seq(randList[k]);
+	C$LAB2End23.c$123$7$71 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:123: inputFunc=seq(randList[k]);
 	mov	a,_k
 	add	a,#_randList
 	mov	r1,a
 	mov	dpl,@r1
 	lcall	_seq
 	mov	_inputFunc,dpl
-	C$LAB2ints.c$123$7$71 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:123: printf("\rcorrect %i\n",randList[k]);// cheat mode
+	C$LAB2End23.c$124$7$71 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:124: printf("\rcorrect %i\n",randList[k]);// cheat mode
 	mov	a,_k
 	add	a,#_randList
 	mov	r1,a
@@ -1547,46 +1558,46 @@ _main:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$LAB2ints.c$124$7$71 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:124: if (inputFunc>0){
+	C$LAB2End23.c$125$7$71 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:125: if (inputFunc>0){
 	mov	a,_inputFunc
 	jz	00102$
-	C$LAB2ints.c$125$8$72 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:125: sum++;
+	C$LAB2End23.c$126$8$72 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:126: sum++;
 	inc	_sum
 	sjmp	00126$
 00102$:
-	C$LAB2ints.c$127$8$73 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:127: Buzz();
+	C$LAB2End23.c$128$8$73 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:128: Buzz();
 	lcall	_Buzz
-	C$LAB2ints.c$128$8$73 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:128: i=11;
+	C$LAB2End23.c$129$8$73 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:129: i=11;
 	mov	_i,#0x0B
-	C$LAB2ints.c$129$8$73 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:129: break;
+	C$LAB2End23.c$130$8$73 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:130: break;
 	sjmp	00128$
 00105$:
-	C$LAB2ints.c$132$7$74 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:132: pause();
+	C$LAB2End23.c$133$7$74 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:133: pause();
 	lcall	_pause
 00126$:
-	C$LAB2ints.c$118$5$69 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:118: for (k=0; k<=i;k++){
+	C$LAB2End23.c$119$5$69 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:119: for (k=0; k<=i;k++){
 	inc	_k
 	sjmp	00125$
 00128$:
-	C$LAB2ints.c$116$4$68 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:116: for(i=0;i<3;i++){//make it i<10 			WHEN DONE DO THIS!!!
+	C$LAB2End23.c$117$4$68 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:117: for(i=0;i<3;i++){//make it i<10 			WHEN DONE DO THIS!!!
 	inc	_i
 	clr	c
 	mov	a,_i
 	xrl	a,#0x80
 	subb	a,#0x83
-	jnc	00178$
+	jnc	00181$
 	ljmp	00127$
-00178$:
-	C$LAB2ints.c$136$4$68 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:136: scores[player]+=sum;
+00181$:
+	C$LAB2End23.c$137$4$68 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:137: scores[player]+=sum;
 	mov	a,_player
 	add	a,#_scores
 	mov	r1,a
@@ -1594,11 +1605,11 @@ _main:
 	mov	a,_sum
 	add	a,r7
 	mov	@r1,a
-	C$LAB2ints.c$137$4$68 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:137: player++;
+	C$LAB2End23.c$138$4$68 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:138: player++;
 	inc	_player
-	C$LAB2ints.c$140$4$68 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:140: printf("player %d score this turn was %d, total score %d\n", player, sum, scores[player]);
+	C$LAB2End23.c$141$4$68 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:141: printf("player %d score this turn was %d, total score %d\n", player, sum, scores[player]);
 	mov	a,_player
 	add	a,#_scores
 	mov	r1,a
@@ -1624,24 +1635,21 @@ _main:
 	mov	a,sp
 	add	a,#0xf7
 	mov	sp,a
-	C$LAB2ints.c$141$4$68 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:141: sum=0;
+	C$LAB2End23.c$142$4$68 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:142: sum=0;
 	mov	_sum,#0x00
-	C$LAB2ints.c$142$4$68 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:142: endTurn();
+	C$LAB2End23.c$143$4$68 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:143: endTurn();
 	lcall	_endTurn
 	ljmp	00109$
 00111$:
-	C$LAB2ints.c$145$3$67 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:145: player=0;
-	mov	_player,#0x00
-	C$LAB2ints.c$146$3$67 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:146: turn++;
+	C$LAB2End23.c$147$3$67 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:147: turn++;
 	inc	_turn
 	ljmp	00112$
 00114$:
-	C$LAB2ints.c$148$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:148: printf("\rPlayer 1 score %i, Player 2 score %i, Player 3 score %i\n", scores[0], scores[1], scores[2]);
+	C$LAB2End23.c$149$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:149: printf("\rPlayer 1 score %i, Player 2 score %i, Player 3 score %i\n", scores[0], scores[1], scores[2]);
 	mov	r6,(_scores + 0x0002)
 	mov	r7,#0x00
 	mov	r4,(_scores + 0x0001)
@@ -1664,14 +1672,14 @@ _main:
 	mov	a,sp
 	add	a,#0xf7
 	mov	sp,a
-	C$LAB2ints.c$151$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:151: ending();
+	C$LAB2End23.c$152$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:152: ending();
 	lcall	_ending
-	C$LAB2ints.c$152$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:152: TR0 = 0;								//turn off timer
+	C$LAB2End23.c$153$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:153: TR0 = 0;								//turn off timer
 	clr	_TR0
-	C$LAB2ints.c$153$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:153: printf("\rToggle slid switch to play again\n");
+	C$LAB2End23.c$154$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:154: printf("\rToggle slid switch to play again\n");
 	mov	a,#___str_9
 	push	acc
 	mov	a,#(___str_9 >> 8)
@@ -1682,32 +1690,12 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$154$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:154: while (!SS);							//wait until the switch is turned off and back on again to loop
+	C$LAB2End23.c$155$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:155: while (!SS);							//wait until the switch is turned off and back on again to loop
 00115$:
 	jnb	_SS,00115$
-	C$LAB2ints.c$155$2$66 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:155: while (SS); // the toggle						
-00118$:
-	jb	_SS,00180$
-	ljmp	00122$
-00180$:
-	sjmp	00118$
-	C$LAB2ints.c$158$1$65 ==.
-	XG$main$0$0 ==.
-	ret
-;------------------------------------------------------------
-;Allocation info for local variables in function 'pause'
-;------------------------------------------------------------
-	G$pause$0$0 ==.
-	C$LAB2ints.c$164$1$65 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:164: void pause(void){
-;	-----------------------------------------
-;	 function pause
-;	-----------------------------------------
-_pause:
-	C$LAB2ints.c$165$1$76 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:165: printf("\r pause\n");
+	C$LAB2End23.c$156$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:156: printf("\rtoggle once\n");
 	mov	a,#___str_10
 	push	acc
 	mov	a,#(___str_10 >> 8)
@@ -1718,26 +1706,18 @@ _pause:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$166$1$76 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:166: BILED0=0;
-	clr	_BILED0
-	C$LAB2ints.c$167$1$76 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:167: wait();
-	lcall	_wait
-	C$LAB2ints.c$168$1$76 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:168: BILEDOFF();
-	lcall	_BILEDOFF
-	C$LAB2ints.c$169$1$76 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:169: BILED1=0;
+	C$LAB2End23.c$157$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:157: BILED1=0;
 	clr	_BILED1
-	C$LAB2ints.c$170$1$76 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:170: wait();
-	lcall	_wait
-	C$LAB2ints.c$171$1$76 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:171: BILEDOFF();
-	lcall	_BILEDOFF
-	C$LAB2ints.c$172$1$76 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:172: printf("\r end pause\n");
+	C$LAB2End23.c$158$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:158: BILED0=1;
+	setb	_BILED0
+	C$LAB2End23.c$159$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:159: while (SS); // the toggle	
+00118$:
+	jb	_SS,00118$
+	C$LAB2End23.c$160$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:160: printf("\rtoggle twice!!\n"); 
 	mov	a,#___str_11
 	push	acc
 	mov	a,#(___str_11 >> 8)
@@ -1748,21 +1728,40 @@ _pause:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$173$1$76 ==.
-	XG$pause$0$0 ==.
+	C$LAB2End23.c$161$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:161: BILED0=0;
+	clr	_BILED0
+	C$LAB2End23.c$162$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:162: BILED1=1;
+	setb	_BILED1
+	C$LAB2End23.c$163$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:163: LED0=0;
+	clr	_LED0
+	C$LAB2End23.c$164$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:164: LED1=0;
+	clr	_LED1
+	C$LAB2End23.c$165$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:165: LED2=0;
+	clr	_LED2
+	C$LAB2End23.c$166$2$66 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:166: LED3=0;
+	clr	_LED3
+	ljmp	00122$
+	C$LAB2End23.c$170$1$65 ==.
+	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
-;Allocation info for local variables in function 'endTurn'
+;Allocation info for local variables in function 'pause'
 ;------------------------------------------------------------
-	G$endTurn$0$0 ==.
-	C$LAB2ints.c$175$1$76 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:175: void endTurn(void){
+	G$pause$0$0 ==.
+	C$LAB2End23.c$176$1$65 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:176: void pause(void){
 ;	-----------------------------------------
-;	 function endTurn
+;	 function pause
 ;	-----------------------------------------
-_endTurn:
-	C$LAB2ints.c$176$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:176: printf("\r endTurn\n");
+_pause:
+	C$LAB2End23.c$177$1$76 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:177: printf("\r pause\n");
 	mov	a,#___str_12
 	push	acc
 	mov	a,#(___str_12 >> 8)
@@ -1773,74 +1772,26 @@ _endTurn:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$177$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:177: LED0=0;
-	clr	_LED0
-	C$LAB2ints.c$178$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:178: LED1=0;
-	clr	_LED1
-	C$LAB2ints.c$179$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:179: LED2=0;
-	clr	_LED2
-	C$LAB2ints.c$180$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:180: LED3=0;
-	clr	_LED3
-	C$LAB2ints.c$181$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:181: wait();
+	C$LAB2End23.c$178$1$76 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:178: BILED0=0;
+	clr	_BILED0
+	C$LAB2End23.c$179$1$76 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:179: wait();
 	lcall	_wait
-	C$LAB2ints.c$182$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:182: LED0=1;
-	setb	_LED0
-	C$LAB2ints.c$183$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:183: LED1=1;
-	setb	_LED1
-	C$LAB2ints.c$184$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:184: LED2=1;
-	setb	_LED2
-	C$LAB2ints.c$185$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:185: LED3=1;
-	setb	_LED3
-	C$LAB2ints.c$186$1$78 ==.
-	XG$endTurn$0$0 ==.
-	ret
-;------------------------------------------------------------
-;Allocation info for local variables in function 'Buzz'
-;------------------------------------------------------------
-	G$Buzz$0$0 ==.
-	C$LAB2ints.c$187$1$78 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:187: void Buzz(void){
-;	-----------------------------------------
-;	 function Buzz
-;	-----------------------------------------
-_Buzz:
-	C$LAB2ints.c$188$1$80 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:188: Buzzer=0;
-	clr	_Buzzer
-	C$LAB2ints.c$189$1$80 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:189: wait();
+	C$LAB2End23.c$180$1$76 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:180: BILEDOFF();
+	lcall	_BILEDOFF
+	C$LAB2End23.c$181$1$76 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:181: BILED1=0;
+	clr	_BILED1
+	C$LAB2End23.c$182$1$76 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:182: wait();
 	lcall	_wait
-	C$LAB2ints.c$190$1$80 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:190: Buzzer=1;
-	setb	_Buzzer
-	C$LAB2ints.c$191$1$80 ==.
-	XG$Buzz$0$0 ==.
-	ret
-;------------------------------------------------------------
-;Allocation info for local variables in function 'seq'
-;------------------------------------------------------------
-;led                       Allocated to registers r7 
-;------------------------------------------------------------
-	G$seq$0$0 ==.
-	C$LAB2ints.c$193$1$80 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:193: char seq(char led){
-;	-----------------------------------------
-;	 function seq
-;	-----------------------------------------
-_seq:
-	mov	r7,dpl
-	C$LAB2ints.c$194$1$82 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:194: printf("\r seq\n");
-	push	ar7
+	C$LAB2End23.c$183$1$76 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:183: BILEDOFF();
+	lcall	_BILEDOFF
+	C$LAB2End23.c$184$1$76 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:184: printf("\r end pause\n");
 	mov	a,#___str_13
 	push	acc
 	mov	a,#(___str_13 >> 8)
@@ -1851,39 +1802,21 @@ _seq:
 	dec	sp
 	dec	sp
 	dec	sp
-	pop	ar7
-	C$LAB2ints.c$195$1$82 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:195: light(led);
-	mov	dpl,r7
-	push	ar7
-	lcall	_light
-	C$LAB2ints.c$196$1$82 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:196: wait();// wait the time
-	lcall	_wait
-	pop	ar7
-	C$LAB2ints.c$197$1$82 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:197: return pushButton(led);
-	mov	dpl,r7
-	lcall	_pushButton
-	C$LAB2ints.c$198$1$82 ==.
-	XG$seq$0$0 ==.
+	C$LAB2End23.c$185$1$76 ==.
+	XG$pause$0$0 ==.
 	ret
 ;------------------------------------------------------------
-;Allocation info for local variables in function 'pushButton'
+;Allocation info for local variables in function 'endTurn'
 ;------------------------------------------------------------
-;button                    Allocated to registers r7 
-;------------------------------------------------------------
-	G$pushButton$0$0 ==.
-	C$LAB2ints.c$201$1$82 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:201: char pushButton(char button){
+	G$endTurn$0$0 ==.
+	C$LAB2End23.c$187$1$76 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:187: void endTurn(void){
 ;	-----------------------------------------
-;	 function pushButton
+;	 function endTurn
 ;	-----------------------------------------
-_pushButton:
-	mov	r7,dpl
-	C$LAB2ints.c$202$1$84 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:202: printf("\r push button\n");
-	push	ar7
+_endTurn:
+	C$LAB2End23.c$188$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:188: printf("\r endTurn\n");
 	mov	a,#___str_14
 	push	acc
 	mov	a,#(___str_14 >> 8)
@@ -1894,105 +1827,73 @@ _pushButton:
 	dec	sp
 	dec	sp
 	dec	sp
-	pop	ar7
-	C$LAB2ints.c$203$1$84 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:203: switch(button){
-	cjne	r7,#0x00,00144$
-	sjmp	00101$
-00144$:
-	cjne	r7,#0x01,00145$
-	sjmp	00105$
-00145$:
-	cjne	r7,#0x02,00146$
-	sjmp	00109$
-00146$:
-	C$LAB2ints.c$204$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:204: case 0:
-	cjne	r7,#0x03,00117$
-	sjmp	00113$
-00101$:
-	C$LAB2ints.c$205$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:205: if(PB0==0) 
-	jb	_PB0,00103$
-	C$LAB2ints.c$206$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:206: return 1;
-	mov	dpl,#0x01
-	sjmp	00118$
-00103$:
-	C$LAB2ints.c$207$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:207: else return 0;
-	mov	dpl,#0x00
-	C$LAB2ints.c$208$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:208: case 1:
-	sjmp	00118$
-00105$:
-	C$LAB2ints.c$209$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:209: if(PB1==0) 
-	jb	_PB1,00107$
-	C$LAB2ints.c$210$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:210: return 1;
-	mov	dpl,#0x01
-	sjmp	00118$
-00107$:
-	C$LAB2ints.c$211$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:211: else return 0;
-	mov	dpl,#0x00
-	C$LAB2ints.c$212$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:212: case 2:
-	sjmp	00118$
-00109$:
-	C$LAB2ints.c$213$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:213: if(PB2==0) 
-	jb	_PB2,00111$
-	C$LAB2ints.c$214$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:214: return 1;
-	mov	dpl,#0x01
-	sjmp	00118$
-00111$:
-	C$LAB2ints.c$215$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:215: else return 0;
-	mov	dpl,#0x00
-	C$LAB2ints.c$216$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:216: case 3:
-	sjmp	00118$
-00113$:
-	C$LAB2ints.c$217$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:217: if(PB3==0) 
-	jb	_PB3,00115$
-	C$LAB2ints.c$218$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:218: return 1;
-	mov	dpl,#0x01
-	sjmp	00118$
-00115$:
-	C$LAB2ints.c$219$2$85 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:219: else return 0;
-	mov	dpl,#0x00
-	C$LAB2ints.c$220$1$84 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:220: }//end switch button
-	sjmp	00118$
-00117$:
-	C$LAB2ints.c$221$1$84 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:221: return 0;
-	mov	dpl,#0x00
-00118$:
-	C$LAB2ints.c$222$1$84 ==.
-	XG$pushButton$0$0 ==.
+	C$LAB2End23.c$189$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:189: LED0=0;
+	clr	_LED0
+	C$LAB2End23.c$190$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:190: LED1=0;
+	clr	_LED1
+	C$LAB2End23.c$191$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:191: LED2=0;
+	clr	_LED2
+	C$LAB2End23.c$192$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:192: LED3=0;
+	clr	_LED3
+	C$LAB2End23.c$193$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:193: wait();
+	lcall	_wait
+	C$LAB2End23.c$194$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:194: LED0=1;
+	setb	_LED0
+	C$LAB2End23.c$195$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:195: LED1=1;
+	setb	_LED1
+	C$LAB2End23.c$196$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:196: LED2=1;
+	setb	_LED2
+	C$LAB2End23.c$197$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:197: LED3=1;
+	setb	_LED3
+	C$LAB2End23.c$198$1$78 ==.
+	XG$endTurn$0$0 ==.
 	ret
 ;------------------------------------------------------------
-;Allocation info for local variables in function 'light'
+;Allocation info for local variables in function 'Buzz'
 ;------------------------------------------------------------
-;ledW                      Allocated to registers r7 
+	G$Buzz$0$0 ==.
+	C$LAB2End23.c$199$1$78 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:199: void Buzz(void){
+;	-----------------------------------------
+;	 function Buzz
+;	-----------------------------------------
+_Buzz:
+	C$LAB2End23.c$200$1$80 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:200: Buzzer=0;
+	clr	_Buzzer
+	C$LAB2End23.c$201$1$80 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:201: wait();
+	lcall	_wait
+	C$LAB2End23.c$202$1$80 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:202: Buzzer=1;
+	setb	_Buzzer
+	C$LAB2End23.c$203$1$80 ==.
+	XG$Buzz$0$0 ==.
+	ret
 ;------------------------------------------------------------
-	G$light$0$0 ==.
-	C$LAB2ints.c$224$1$84 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:224: void light(char ledW){
+;Allocation info for local variables in function 'seq'
+;------------------------------------------------------------
+;led                       Allocated to registers r7 
+;------------------------------------------------------------
+	G$seq$0$0 ==.
+	C$LAB2End23.c$205$1$80 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:205: char seq(char led){
 ;	-----------------------------------------
-;	 function light
+;	 function seq
 ;	-----------------------------------------
-_light:
+_seq:
 	mov	r7,dpl
-	C$LAB2ints.c$225$1$87 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:225: printf("\r light\n");
+	C$LAB2End23.c$206$1$82 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:206: printf("\r seq\n");
 	push	ar7
 	mov	a,#___str_15
 	push	acc
@@ -2005,28 +1906,38 @@ _light:
 	dec	sp
 	dec	sp
 	pop	ar7
-	C$LAB2ints.c$226$1$87 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:226: LED0=1;
-	setb	_LED0
-	C$LAB2ints.c$227$1$87 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:227: LED1=1;
-	setb	_LED1
-	C$LAB2ints.c$228$1$87 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:228: LED2=1;
-	setb	_LED2
-	C$LAB2ints.c$229$1$87 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:229: LED3=1;
-	setb	_LED3
-	C$LAB2ints.c$230$1$87 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:230: printf("\r lights off, LIGHT IS %d\n", ledW);
-	mov	a,r7
-	mov	r5,a
-	rlc	a
-	subb	a,acc
-	mov	r6,a
+	C$LAB2End23.c$207$1$82 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:207: light(led);
+	mov	dpl,r7
 	push	ar7
-	push	ar5
-	push	ar6
+	lcall	_light
+	C$LAB2End23.c$208$1$82 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:208: wait();// wait the time
+	lcall	_wait
+	pop	ar7
+	C$LAB2End23.c$209$1$82 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:209: return pushButton(led);
+	mov	dpl,r7
+	lcall	_pushButton
+	C$LAB2End23.c$210$1$82 ==.
+	XG$seq$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'pushButton'
+;------------------------------------------------------------
+;button                    Allocated to registers r7 
+;------------------------------------------------------------
+	G$pushButton$0$0 ==.
+	C$LAB2End23.c$213$1$82 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:213: char pushButton(char button){
+;	-----------------------------------------
+;	 function pushButton
+;	-----------------------------------------
+_pushButton:
+	mov	r7,dpl
+	C$LAB2End23.c$214$1$84 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:214: printf("\r push button\n");
+	push	ar7
 	mov	a,#___str_16
 	push	acc
 	mov	a,#(___str_16 >> 8)
@@ -2034,31 +1945,109 @@ _light:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	mov	a,sp
-	add	a,#0xfb
-	mov	sp,a
+	dec	sp
+	dec	sp
+	dec	sp
 	pop	ar7
-	C$LAB2ints.c$231$1$87 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:231: switch(ledW){
-	cjne	r7,#0x00,00120$
+	C$LAB2End23.c$215$1$84 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:215: switch(button){
+	cjne	r7,#0x00,00144$
 	sjmp	00101$
-00120$:
-	cjne	r7,#0x01,00121$
-	sjmp	00102$
-00121$:
-	cjne	r7,#0x02,00122$
-	sjmp	00103$
-00122$:
-	C$LAB2ints.c$232$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:232: case 0:
-	cjne	r7,#0x03,00106$
-	sjmp	00104$
+00144$:
+	cjne	r7,#0x01,00145$
+	sjmp	00105$
+00145$:
+	cjne	r7,#0x02,00146$
+	sjmp	00109$
+00146$:
+	C$LAB2End23.c$216$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:216: case 0:
+	cjne	r7,#0x03,00117$
+	sjmp	00113$
 00101$:
-	C$LAB2ints.c$233$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:233: LED0=0;
-	clr	_LED0
-	C$LAB2ints.c$234$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:234: printf("\r case 0\n");
+	C$LAB2End23.c$217$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:217: if(PB0==0) 
+	jb	_PB0,00103$
+	C$LAB2End23.c$218$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:218: return 1;
+	mov	dpl,#0x01
+	sjmp	00118$
+00103$:
+	C$LAB2End23.c$219$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:219: else return 0;
+	mov	dpl,#0x00
+	C$LAB2End23.c$220$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:220: case 1:
+	sjmp	00118$
+00105$:
+	C$LAB2End23.c$221$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:221: if(PB1==0) 
+	jb	_PB1,00107$
+	C$LAB2End23.c$222$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:222: return 1;
+	mov	dpl,#0x01
+	sjmp	00118$
+00107$:
+	C$LAB2End23.c$223$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:223: else return 0;
+	mov	dpl,#0x00
+	C$LAB2End23.c$224$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:224: case 2:
+	sjmp	00118$
+00109$:
+	C$LAB2End23.c$225$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:225: if(PB2==0) 
+	jb	_PB2,00111$
+	C$LAB2End23.c$226$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:226: return 1;
+	mov	dpl,#0x01
+	sjmp	00118$
+00111$:
+	C$LAB2End23.c$227$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:227: else return 0;
+	mov	dpl,#0x00
+	C$LAB2End23.c$228$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:228: case 3:
+	sjmp	00118$
+00113$:
+	C$LAB2End23.c$229$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:229: if(PB3==0) 
+	jb	_PB3,00115$
+	C$LAB2End23.c$230$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:230: return 1;
+	mov	dpl,#0x01
+	sjmp	00118$
+00115$:
+	C$LAB2End23.c$231$2$85 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:231: else return 0;
+	mov	dpl,#0x00
+	C$LAB2End23.c$232$1$84 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:232: }//end switch button
+	sjmp	00118$
+00117$:
+	C$LAB2End23.c$233$1$84 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:233: return 0;
+	mov	dpl,#0x00
+00118$:
+	C$LAB2End23.c$234$1$84 ==.
+	XG$pushButton$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'light'
+;------------------------------------------------------------
+;ledW                      Allocated to registers r7 
+;------------------------------------------------------------
+	G$light$0$0 ==.
+	C$LAB2End23.c$236$1$84 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:236: void light(char ledW){
+;	-----------------------------------------
+;	 function light
+;	-----------------------------------------
+_light:
+	mov	r7,dpl
+	C$LAB2End23.c$237$1$87 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:237: printf("\r light\n");
+	push	ar7
 	mov	a,#___str_17
 	push	acc
 	mov	a,#(___str_17 >> 8)
@@ -2069,17 +2058,29 @@ _light:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$235$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:235: break;
-	C$LAB2ints.c$236$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:236: case 1:
-	sjmp	00106$
-00102$:
-	C$LAB2ints.c$237$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:237: LED1=0;
-	clr	_LED1
-	C$LAB2ints.c$238$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:238: printf("\r case 1\n");
+	pop	ar7
+	C$LAB2End23.c$238$1$87 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:238: LED0=1;
+	setb	_LED0
+	C$LAB2End23.c$239$1$87 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:239: LED1=1;
+	setb	_LED1
+	C$LAB2End23.c$240$1$87 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:240: LED2=1;
+	setb	_LED2
+	C$LAB2End23.c$241$1$87 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:241: LED3=1;
+	setb	_LED3
+	C$LAB2End23.c$242$1$87 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:242: printf("\r lights off, LIGHT IS %d\n", ledW);
+	mov	a,r7
+	mov	r5,a
+	rlc	a
+	subb	a,acc
+	mov	r6,a
+	push	ar7
+	push	ar5
+	push	ar6
 	mov	a,#___str_18
 	push	acc
 	mov	a,#(___str_18 >> 8)
@@ -2087,20 +2088,31 @@ _light:
 	mov	a,#0x80
 	push	acc
 	lcall	_printf
-	dec	sp
-	dec	sp
-	dec	sp
-	C$LAB2ints.c$239$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:239: break;
-	C$LAB2ints.c$240$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:240: case 2:
-	sjmp	00106$
-00103$:
-	C$LAB2ints.c$241$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:241: LED2=0;
-	clr	_LED2
-	C$LAB2ints.c$242$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:242: printf("\r c2\n");
+	mov	a,sp
+	add	a,#0xfb
+	mov	sp,a
+	pop	ar7
+	C$LAB2End23.c$243$1$87 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:243: switch(ledW){
+	cjne	r7,#0x00,00120$
+	sjmp	00101$
+00120$:
+	cjne	r7,#0x01,00121$
+	sjmp	00102$
+00121$:
+	cjne	r7,#0x02,00122$
+	sjmp	00103$
+00122$:
+	C$LAB2End23.c$244$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:244: case 0:
+	cjne	r7,#0x03,00106$
+	sjmp	00104$
+00101$:
+	C$LAB2End23.c$245$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:245: LED0=0;
+	clr	_LED0
+	C$LAB2End23.c$246$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:246: printf("\r case 0\n");
 	mov	a,#___str_19
 	push	acc
 	mov	a,#(___str_19 >> 8)
@@ -2111,17 +2123,17 @@ _light:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$243$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:243: break;
-	C$LAB2ints.c$244$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:244: case 3:
+	C$LAB2End23.c$247$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:247: break;
+	C$LAB2End23.c$248$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:248: case 1:
 	sjmp	00106$
-00104$:
-	C$LAB2ints.c$245$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:245: LED3=0;
-	clr	_LED3
-	C$LAB2ints.c$246$2$88 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:246: printf("\r c3\n");
+00102$:
+	C$LAB2End23.c$249$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:249: LED1=0;
+	clr	_LED1
+	C$LAB2End23.c$250$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:250: printf("\r case 1\n");
 	mov	a,#___str_20
 	push	acc
 	mov	a,#(___str_20 >> 8)
@@ -2132,24 +2144,17 @@ _light:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$248$1$87 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:248: }//end swich stament
-00106$:
-	C$LAB2ints.c$249$1$87 ==.
-	XG$light$0$0 ==.
-	ret
-;------------------------------------------------------------
-;Allocation info for local variables in function 'wait'
-;------------------------------------------------------------
-	G$wait$0$0 ==.
-	C$LAB2ints.c$251$1$87 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:251: void wait(void){
-;	-----------------------------------------
-;	 function wait
-;	-----------------------------------------
-_wait:
-	C$LAB2ints.c$252$1$90 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:252: printf("\rwait\n");
+	C$LAB2End23.c$251$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:251: break;
+	C$LAB2End23.c$252$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:252: case 2:
+	sjmp	00106$
+00103$:
+	C$LAB2End23.c$253$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:253: LED2=0;
+	clr	_LED2
+	C$LAB2End23.c$254$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:254: printf("\r c2\n");
 	mov	a,#___str_21
 	push	acc
 	mov	a,#(___str_21 >> 8)
@@ -2160,13 +2165,62 @@ _wait:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$LAB2ints.c$253$1$90 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:253: Counts=0;			//store starting counts
+	C$LAB2End23.c$255$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:255: break;
+	C$LAB2End23.c$256$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:256: case 3:
+	sjmp	00106$
+00104$:
+	C$LAB2End23.c$257$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:257: LED3=0;
+	clr	_LED3
+	C$LAB2End23.c$258$2$88 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:258: printf("\r c3\n");
+	mov	a,#___str_22
+	push	acc
+	mov	a,#(___str_22 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$LAB2End23.c$260$1$87 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:260: }//end swich stament
+00106$:
+	C$LAB2End23.c$261$1$87 ==.
+	XG$light$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'wait'
+;------------------------------------------------------------
+	G$wait$0$0 ==.
+	C$LAB2End23.c$263$1$87 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:263: void wait(void){
+;	-----------------------------------------
+;	 function wait
+;	-----------------------------------------
+_wait:
+	C$LAB2End23.c$264$1$90 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:264: printf("\rwait\n");
+	mov	a,#___str_23
+	push	acc
+	mov	a,#(___str_23 >> 8)
+	push	acc
+	mov	a,#0x80
+	push	acc
+	lcall	_printf
+	dec	sp
+	dec	sp
+	dec	sp
+	C$LAB2End23.c$265$1$90 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:265: Counts=0;			//store starting counts
 	clr	a
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$LAB2ints.c$254$1$90 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:254: while(Counts<338); 
+	C$LAB2End23.c$266$1$90 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:266: while(Counts<338); 
 00101$:
 	clr	c
 	mov	a,_Counts
@@ -2174,153 +2228,153 @@ _wait:
 	mov	a,(_Counts + 1)
 	subb	a,#0x01
 	jc	00101$
-	C$LAB2ints.c$256$1$90 ==.
+	C$LAB2End23.c$268$1$90 ==.
 	XG$wait$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$LAB2ints.c$280$1$90 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:280: void Port_Init(void){
+	C$LAB2End23.c$292$1$90 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:292: void Port_Init(void){
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$LAB2ints.c$282$1$92 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:282: P3MDOUT |= 0xF8; //set Port 3 output pins to push-pull mode
+	C$LAB2End23.c$294$1$92 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:294: P3MDOUT |= 0xF8; //set Port 3 output pins to push-pull mode
 	orl	_P3MDOUT,#0xF8
-	C$LAB2ints.c$283$1$92 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:283: P3MDOUT &= 0xFC; //set Port 3 input pins to open drain mode
+	C$LAB2End23.c$295$1$92 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:295: P3MDOUT &= 0xFC; //set Port 3 input pins to open drain mode
 	anl	_P3MDOUT,#0xFC
-	C$LAB2ints.c$284$1$92 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:284: P3 |= ~0xFC;     //set Port 3 input pins to high impedance state
+	C$LAB2End23.c$296$1$92 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:296: P3 |= ~0xFC;     //set Port 3 input pins to high impedance state
 	mov	r7,_P3
 	mov	a,#0x03
 	orl	a,r7
 	mov	_P3,a
-	C$LAB2ints.c$288$1$92 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:288: P2MDOUT &= 0xFE; //set Port 2 input pin to push-pull mode
+	C$LAB2End23.c$300$1$92 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:300: P2MDOUT &= 0xFE; //set Port 2 input pin to push-pull mode
 	anl	_P2MDOUT,#0xFE
-	C$LAB2ints.c$289$1$92 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:289: P2 |= ~0XFE;     //set Port 2 input pin to high impedance state
+	C$LAB2End23.c$301$1$92 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:301: P2 |= ~0XFE;     //set Port 2 input pin to high impedance state
 	mov	r7,_P2
 	mov	a,#0x01
 	orl	a,r7
 	mov	_P2,a
-	C$LAB2ints.c$291$1$92 ==.
+	C$LAB2End23.c$303$1$92 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'BILEDOFF'
 ;------------------------------------------------------------
 	G$BILEDOFF$0$0 ==.
-	C$LAB2ints.c$295$1$92 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:295: void BILEDOFF (void){
+	C$LAB2End23.c$307$1$92 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:307: void BILEDOFF (void){
 ;	-----------------------------------------
 ;	 function BILEDOFF
 ;	-----------------------------------------
 _BILEDOFF:
-	C$LAB2ints.c$296$1$94 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:296: BILED1=1;
+	C$LAB2End23.c$308$1$94 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:308: BILED1=1;
 	setb	_BILED1
-	C$LAB2ints.c$297$1$94 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:297: BILED0=1;
+	C$LAB2End23.c$309$1$94 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:309: BILED0=1;
 	setb	_BILED0
-	C$LAB2ints.c$298$1$94 ==.
+	C$LAB2End23.c$310$1$94 ==.
 	XG$BILEDOFF$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'StopAndResetTimer'
 ;------------------------------------------------------------
 	G$StopAndResetTimer$0$0 ==.
-	C$LAB2ints.c$302$1$94 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:302: void StopAndResetTimer(void) {
+	C$LAB2End23.c$314$1$94 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:314: void StopAndResetTimer(void) {
 ;	-----------------------------------------
 ;	 function StopAndResetTimer
 ;	-----------------------------------------
 _StopAndResetTimer:
-	C$LAB2ints.c$303$1$96 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:303: TR0 = 0;           	// Stop Timer0
+	C$LAB2End23.c$315$1$96 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:315: TR0 = 0;           	// Stop Timer0
 	clr	_TR0
-	C$LAB2ints.c$304$1$96 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:304: TMR0 = 0;           // Clear high & low byte of T0	
+	C$LAB2End23.c$316$1$96 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:316: TMR0 = 0;           // Clear high & low byte of T0	
 	clr	a
 	mov	((_TMR0 >> 0) & 0xFF),a
 	mov	((_TMR0 >> 8) & 0xFF),a
-	C$LAB2ints.c$305$1$96 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:305: Counts=0;			// clear counts
+	C$LAB2End23.c$317$1$96 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:317: Counts=0;			// clear counts
 	mov	_Counts,a
 	mov	(_Counts + 1),a
-	C$LAB2ints.c$306$1$96 ==.
+	C$LAB2End23.c$318$1$96 ==.
 	XG$StopAndResetTimer$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$LAB2ints.c$307$1$96 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:307: void Interrupt_Init(void) {
+	C$LAB2End23.c$319$1$96 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:319: void Interrupt_Init(void) {
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$LAB2ints.c$308$1$98 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:308: IE |= 0x02;      // enable Timer0 Interrupt request (by masking)
+	C$LAB2End23.c$320$1$98 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:320: IE |= 0x02;      // enable Timer0 Interrupt request (by masking)
 	orl	_IE,#0x02
-	C$LAB2ints.c$309$1$98 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:309: EA = 1;       // enable global interrupts (by sbit)
+	C$LAB2End23.c$321$1$98 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:321: EA = 1;       // enable global interrupts (by sbit)
 	setb	_EA
-	C$LAB2ints.c$310$1$98 ==.
+	C$LAB2End23.c$322$1$98 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer_Init'
 ;------------------------------------------------------------
 	G$Timer_Init$0$0 ==.
-	C$LAB2ints.c$312$1$98 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:312: void Timer_Init(void) {
+	C$LAB2End23.c$324$1$98 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:324: void Timer_Init(void) {
 ;	-----------------------------------------
 ;	 function Timer_Init
 ;	-----------------------------------------
 _Timer_Init:
-	C$LAB2ints.c$314$1$100 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:314: CKCON |=0x00;  // Timer0 uses SYSCLK as source
+	C$LAB2End23.c$326$1$100 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:326: CKCON |=0x00;  // Timer0 uses SYSCLK as source
 	mov	_CKCON,_CKCON
-	C$LAB2ints.c$315$1$100 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:315: TMOD &=0xF0;   	// clear the 4 least significant bits
+	C$LAB2End23.c$327$1$100 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:327: TMOD &=0xF0;   	// clear the 4 least significant bits
 	anl	_TMOD,#0xF0
-	C$LAB2ints.c$317$1$100 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:317: TR0 = 0;        // Stop Timer0
+	C$LAB2End23.c$329$1$100 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:329: TR0 = 0;        // Stop Timer0
 	clr	_TR0
-	C$LAB2ints.c$318$1$100 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:318: TMR0 = 0;       // Clear high & low byte of T0
+	C$LAB2End23.c$330$1$100 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:330: TMR0 = 0;       // Clear high & low byte of T0
 	clr	a
 	mov	((_TMR0 >> 0) & 0xFF),a
 	mov	((_TMR0 >> 8) & 0xFF),a
-	C$LAB2ints.c$320$1$100 ==.
+	C$LAB2End23.c$332$1$100 ==.
 	XG$Timer_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Analog_init'
 ;------------------------------------------------------------
 	G$Analog_init$0$0 ==.
-	C$LAB2ints.c$322$1$100 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:322: void Analog_init(void){
+	C$LAB2End23.c$334$1$100 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:334: void Analog_init(void){
 ;	-----------------------------------------
 ;	 function Analog_init
 ;	-----------------------------------------
 _Analog_init:
-	C$LAB2ints.c$323$1$102 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:323: REF0CN = 0x03; 	//Set Vref to use internal reference voltage (2.4 V)
+	C$LAB2End23.c$335$1$102 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:335: REF0CN = 0x03; 	//Set Vref to use internal reference voltage (2.4 V)
 	mov	_REF0CN,#0x03
-	C$LAB2ints.c$324$1$102 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:324: ADC1CN = 0x80;		//Enable A/D converter (ADC1) 
+	C$LAB2End23.c$336$1$102 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:336: ADC1CN = 0x80;		//Enable A/D converter (ADC1) 
 	mov	_ADC1CN,#0x80
-	C$LAB2ints.c$325$1$102 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:325: ADC1CF |= 0x01; 	//Set A/D converter gain to 1 
+	C$LAB2End23.c$337$1$102 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:337: ADC1CF |= 0x01; 	//Set A/D converter gain to 1 
 	orl	_ADC1CF,#0x01
-	C$LAB2ints.c$326$1$102 ==.
+	C$LAB2End23.c$338$1$102 ==.
 	XG$Analog_init$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2329,47 +2383,47 @@ _Analog_init:
 ;n                         Allocated to registers 
 ;------------------------------------------------------------
 	G$ReadAnalog$0$0 ==.
-	C$LAB2ints.c$328$1$102 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:328: unsigned char ReadAnalog(unsigned char n){
+	C$LAB2End23.c$340$1$102 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:340: unsigned char ReadAnalog(unsigned char n){
 ;	-----------------------------------------
 ;	 function ReadAnalog
 ;	-----------------------------------------
 _ReadAnalog:
 	mov	_AMX1SL,dpl
-	C$LAB2ints.c$330$1$104 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:330: ADC1CN = ADC1CN & ~0x20; 		//Clear the [Conversion Completed] flag 
+	C$LAB2End23.c$342$1$104 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:342: ADC1CN = ADC1CN & ~0x20; 		//Clear the [Conversion Completed] flag 
 	mov	r7,_ADC1CN
 	mov	a,#0xDF
 	anl	a,r7
 	mov	_ADC1CN,a
-	C$LAB2ints.c$331$1$104 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:331: ADC1CN = ADC1CN | 0x10; 		//Initiate A/D conversion 
+	C$LAB2End23.c$343$1$104 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:343: ADC1CN = ADC1CN | 0x10; 		//Initiate A/D conversion 
 	orl	_ADC1CN,#0x10
-	C$LAB2ints.c$332$1$104 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:332: while ((ADC1CN & 0x20) == 0x00);//Wait for conversion to complete 
+	C$LAB2End23.c$344$1$104 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:344: while ((ADC1CN & 0x20) == 0x00);//Wait for conversion to complete 
 00101$:
 	mov	a,_ADC1CN
 	jnb	acc.5,00101$
-	C$LAB2ints.c$333$1$104 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:333: return ADC1; 					//Return digital value in ADC1 register 
+	C$LAB2End23.c$345$1$104 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:345: return ADC1; 					//Return digital value in ADC1 register 
 	mov	dpl,_ADC1
-	C$LAB2ints.c$334$1$104 ==.
+	C$LAB2End23.c$346$1$104 ==.
 	XG$ReadAnalog$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer0_ISR'
 ;------------------------------------------------------------
 	G$Timer0_ISR$0$0 ==.
-	C$LAB2ints.c$337$1$104 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:337: void Timer0_ISR(void) __interrupt 1
+	C$LAB2End23.c$349$1$104 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:349: void Timer0_ISR(void) __interrupt 1
 ;	-----------------------------------------
 ;	 function Timer0_ISR
 ;	-----------------------------------------
 _Timer0_ISR:
 	push	acc
 	push	psw
-	C$LAB2ints.c$339$1$106 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:339: Counts++; //Adds 1 to Counts
+	C$LAB2End23.c$351$1$106 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:351: Counts++; //Adds 1 to Counts
 	mov	a,#0x01
 	add	a,_Counts
 	mov	_Counts,a
@@ -2378,7 +2432,7 @@ _Timer0_ISR:
 	mov	(_Counts + 1),a
 	pop	psw
 	pop	acc
-	C$LAB2ints.c$340$1$106 ==.
+	C$LAB2End23.c$352$1$106 ==.
 	XG$Timer0_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -2389,33 +2443,33 @@ _Timer0_ISR:
 ;Allocation info for local variables in function 'random'
 ;------------------------------------------------------------
 	G$random$0$0 ==.
-	C$LAB2ints.c$350$1$106 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:350: unsigned char random(void) {
+	C$LAB2End23.c$362$1$106 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:362: unsigned char random(void) {
 ;	-----------------------------------------
 ;	 function random
 ;	-----------------------------------------
 _random:
-	C$LAB2ints.c$351$1$108 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:351: return (rand()%4);  // rand returns a random number between 0 and 32767.
+	C$LAB2End23.c$363$1$108 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:363: return (rand()%4);  // rand returns a random number between 0 and 32767.
 	lcall	_rand
 	mov	__modsint_PARM_2,#0x04
 	mov	(__modsint_PARM_2 + 1),#0x00
 	lcall	__modsint
-	C$LAB2ints.c$352$1$108 ==.
+	C$LAB2End23.c$364$1$108 ==.
 	XG$random$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'randGen'
 ;------------------------------------------------------------
 	G$randGen$0$0 ==.
-	C$LAB2ints.c$372$1$108 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:372: void randGen(void) {
+	C$LAB2End23.c$384$1$108 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:384: void randGen(void) {
 ;	-----------------------------------------
 ;	 function randGen
 ;	-----------------------------------------
 _randGen:
-	C$LAB2ints.c$373$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:373: previousnum=keyinput%3;
+	C$LAB2End23.c$385$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:385: previousnum=keyinput%3;
 	mov	__modsint_PARM_2,#0x03
 	mov	(__modsint_PARM_2 + 1),#0x00
 	mov	dpl,_keyinput
@@ -2424,42 +2478,42 @@ _randGen:
 	mov	r6,dpl
 	mov	r7,dph
 	mov	_previousnum,r6
-	C$LAB2ints.c$390$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:390: randList[0]=1;
+	C$LAB2End23.c$402$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:402: randList[0]=1;
 	mov	_randList,#0x01
-	C$LAB2ints.c$391$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:391: randList[1]=1;
+	C$LAB2End23.c$403$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:403: randList[1]=1;
 	mov	(_randList + 0x0001),#0x01
-	C$LAB2ints.c$392$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:392: randList[2]=1;
+	C$LAB2End23.c$404$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:404: randList[2]=1;
 	mov	(_randList + 0x0002),#0x01
-	C$LAB2ints.c$393$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:393: randList[3]=1;
+	C$LAB2End23.c$405$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:405: randList[3]=1;
 	mov	(_randList + 0x0003),#0x01
-	C$LAB2ints.c$394$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:394: randList[4]=1;
+	C$LAB2End23.c$406$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:406: randList[4]=1;
 	mov	(_randList + 0x0004),#0x01
-	C$LAB2ints.c$395$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:395: randList[5]=1;
+	C$LAB2End23.c$407$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:407: randList[5]=1;
 	mov	(_randList + 0x0005),#0x01
-	C$LAB2ints.c$396$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:396: randList[6]=1;
+	C$LAB2End23.c$408$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:408: randList[6]=1;
 	mov	(_randList + 0x0006),#0x01
-	C$LAB2ints.c$397$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:397: randList[7]=1;
+	C$LAB2End23.c$409$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:409: randList[7]=1;
 	mov	(_randList + 0x0007),#0x01
-	C$LAB2ints.c$398$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:398: randList[8]=1;
+	C$LAB2End23.c$410$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:410: randList[8]=1;
 	mov	(_randList + 0x0008),#0x01
-	C$LAB2ints.c$399$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:399: randList[9]=1;
+	C$LAB2End23.c$411$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:411: randList[9]=1;
 	mov	(_randList + 0x0009),#0x01
-	C$LAB2ints.c$400$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:400: for(x=0;x<10;x++){
+	C$LAB2End23.c$412$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:412: for(x=0;x<10;x++){
 	mov	_x,#0x00
 00102$:
-	C$LAB2ints.c$401$2$111 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:401: printf("\rRand %d is %d\n",x,randList[x]);
+	C$LAB2End23.c$413$2$111 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:413: printf("\rRand %d is %d\n",x,randList[x]);
 	mov	a,_x
 	add	a,#_randList
 	mov	r1,a
@@ -2474,9 +2528,9 @@ _randGen:
 	push	ar6
 	push	ar4
 	push	ar5
-	mov	a,#___str_22
+	mov	a,#___str_24
 	push	acc
-	mov	a,#(___str_22 >> 8)
+	mov	a,#(___str_24 >> 8)
 	push	acc
 	mov	a,#0x80
 	push	acc
@@ -2484,37 +2538,37 @@ _randGen:
 	mov	a,sp
 	add	a,#0xf9
 	mov	sp,a
-	C$LAB2ints.c$400$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:400: for(x=0;x<10;x++){
+	C$LAB2End23.c$412$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:412: for(x=0;x<10;x++){
 	inc	_x
 	clr	c
 	mov	a,_x
 	xrl	a,#0x80
 	subb	a,#0x8a
 	jc	00102$
-	C$LAB2ints.c$404$1$110 ==.
+	C$LAB2End23.c$416$1$110 ==.
 	XG$randGen$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'resetArrays'
 ;------------------------------------------------------------
 	G$resetArrays$0$0 ==.
-	C$LAB2ints.c$406$1$110 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:406: void resetArrays(void) {
+	C$LAB2End23.c$418$1$110 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:418: void resetArrays(void) {
 ;	-----------------------------------------
 ;	 function resetArrays
 ;	-----------------------------------------
 _resetArrays:
-	C$LAB2ints.c$408$1$113 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:408: for(x=0; x<=2; x++) {
+	C$LAB2End23.c$420$1$113 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:420: for(x=0; x<=2; x++) {
 	mov	_x,#0x00
 00108$:
-	C$LAB2ints.c$409$2$114 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:409: for(y=0; y<=2; y++) {
+	C$LAB2End23.c$421$2$114 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:421: for(y=0; y<=2; y++) {
 	mov	_y,#0x00
 00106$:
-	C$LAB2ints.c$410$3$115 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:410: Points [x][y]=0;
+	C$LAB2End23.c$422$3$115 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:422: Points [x][y]=0;
 	mov	a,_x
 	mov	b,#0x03
 	mul	ab
@@ -2523,8 +2577,8 @@ _resetArrays:
 	add	a,_y
 	mov	r0,a
 	mov	@r0,#0x00
-	C$LAB2ints.c$409$2$114 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:409: for(y=0; y<=2; y++) {
+	C$LAB2End23.c$421$2$114 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:421: for(y=0; y<=2; y++) {
 	inc	_y
 	clr	c
 	mov	a,#(0x02 ^ 0x80)
@@ -2532,8 +2586,8 @@ _resetArrays:
 	xrl	b,#0x80
 	subb	a,b
 	jnc	00106$
-	C$LAB2ints.c$408$1$113 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:408: for(x=0; x<=2; x++) {
+	C$LAB2End23.c$420$1$113 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:420: for(x=0; x<=2; x++) {
 	inc	_x
 	clr	c
 	mov	a,#(0x02 ^ 0x80)
@@ -2541,11 +2595,11 @@ _resetArrays:
 	xrl	b,#0x80
 	subb	a,b
 	jnc	00108$
-	C$LAB2ints.c$413$1$113 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:413: x=0;
+	C$LAB2End23.c$425$1$113 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:425: x=0;
 	mov	_x,#0x00
-	C$LAB2ints.c$414$2$116 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:414: while(x<=9) {
+	C$LAB2End23.c$426$2$116 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:426: while(x<=9) {
 00103$:
 	clr	c
 	mov	a,#(0x09 ^ 0x80)
@@ -2553,58 +2607,58 @@ _resetArrays:
 	xrl	b,#0x80
 	subb	a,b
 	jc	00110$
-	C$LAB2ints.c$415$2$116 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:415: randList[x]=0;
+	C$LAB2End23.c$427$2$116 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:427: randList[x]=0;
 	mov	a,_x
 	add	a,#_randList
 	mov	r0,a
 	mov	@r0,#0x00
-	C$LAB2ints.c$416$2$116 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:416: x++;
+	C$LAB2End23.c$428$2$116 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:428: x++;
 	inc	_x
 	sjmp	00103$
 00110$:
-	C$LAB2ints.c$418$1$113 ==.
+	C$LAB2End23.c$430$1$113 ==.
 	XG$resetArrays$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'LEDPAT'
 ;------------------------------------------------------------
 	G$LEDPAT$0$0 ==.
-	C$LAB2ints.c$420$1$113 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:420: unsigned LEDPAT(void) {
+	C$LAB2End23.c$432$1$113 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:432: unsigned LEDPAT(void) {
 ;	-----------------------------------------
 ;	 function LEDPAT
 ;	-----------------------------------------
 _LEDPAT:
-	C$LAB2ints.c$421$1$118 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:421: resetArrays();
+	C$LAB2End23.c$433$1$118 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:433: resetArrays();
 	lcall	_resetArrays
-	C$LAB2ints.c$422$1$118 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:422: rand();
+	C$LAB2End23.c$434$1$118 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:434: rand();
 	lcall	_rand
-	C$LAB2ints.c$423$1$118 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:423: return 0;
+	C$LAB2End23.c$435$1$118 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:435: return 0;
 	mov	dptr,#0x0000
-	C$LAB2ints.c$424$1$118 ==.
+	C$LAB2End23.c$436$1$118 ==.
 	XG$LEDPAT$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'debounce'
 ;------------------------------------------------------------
 	G$debounce$0$0 ==.
-	C$LAB2ints.c$425$1$118 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:425: void debounce(void){
+	C$LAB2End23.c$437$1$118 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:437: void debounce(void){
 ;	-----------------------------------------
 ;	 function debounce
 ;	-----------------------------------------
 _debounce:
-	C$LAB2ints.c$426$1$120 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:426: countHolder=Counts;				//store starting counts
+	C$LAB2End23.c$438$1$120 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:438: countHolder=Counts;				//store starting counts
 	mov	_countHolder,_Counts
 	mov	(_countHolder + 1),(_Counts + 1)
-	C$LAB2ints.c$427$1$120 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:427: while((Counts-countHolder)<4); //wait 15ms 
+	C$LAB2End23.c$439$1$120 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:439: while((Counts-countHolder)<4); //wait 15ms 
 00101$:
 	mov	a,_Counts
 	clr	c
@@ -2619,254 +2673,266 @@ _debounce:
 	mov	a,r7
 	subb	a,#0x00
 	jc	00101$
-	C$LAB2ints.c$429$1$120 ==.
+	C$LAB2End23.c$441$1$120 ==.
 	XG$debounce$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'StartTimer'
 ;------------------------------------------------------------
 	G$StartTimer$0$0 ==.
-	C$LAB2ints.c$437$1$120 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:437: void StartTimer(void){
+	C$LAB2End23.c$449$1$120 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:449: void StartTimer(void){
 ;	-----------------------------------------
 ;	 function StartTimer
 ;	-----------------------------------------
 _StartTimer:
-	C$LAB2ints.c$438$1$122 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:438: TR0=1;
+	C$LAB2End23.c$450$1$122 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:450: TR0=1;
 	setb	_TR0
-	C$LAB2ints.c$439$1$122 ==.
+	C$LAB2End23.c$451$1$122 ==.
 	XG$StartTimer$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PauseTimer'
 ;------------------------------------------------------------
 	G$PauseTimer$0$0 ==.
-	C$LAB2ints.c$441$1$122 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:441: void PauseTimer(void){
+	C$LAB2End23.c$453$1$122 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:453: void PauseTimer(void){
 ;	-----------------------------------------
 ;	 function PauseTimer
 ;	-----------------------------------------
 _PauseTimer:
-	C$LAB2ints.c$442$1$124 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:442: TR0=0;
+	C$LAB2End23.c$454$1$124 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:454: TR0=0;
 	clr	_TR0
-	C$LAB2ints.c$443$1$124 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:443: while(SS){
+	C$LAB2End23.c$455$1$124 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:455: while(SS){
 00101$:
 	jnb	_SS,00104$
-	C$LAB2ints.c$444$2$125 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:444: BILED0=1;
+	C$LAB2End23.c$456$2$125 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:456: BILED0=1;
 	setb	_BILED0
 	sjmp	00101$
 00104$:
-	C$LAB2ints.c$448$1$124 ==.
+	C$LAB2End23.c$460$1$124 ==.
 	XG$PauseTimer$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'correct'
 ;------------------------------------------------------------
 	G$correct$0$0 ==.
-	C$LAB2ints.c$450$1$124 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:450: void correct(void){
+	C$LAB2End23.c$462$1$124 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:462: void correct(void){
 ;	-----------------------------------------
 ;	 function correct
 ;	-----------------------------------------
 _correct:
-	C$LAB2ints.c$451$1$127 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:451: BILED0 = 1;
+	C$LAB2End23.c$463$1$127 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:463: BILED0 = 1;
 	setb	_BILED0
-	C$LAB2ints.c$452$1$127 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:452: BILED1 = 0;
+	C$LAB2End23.c$464$1$127 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:464: BILED1 = 0;
 	clr	_BILED1
-	C$LAB2ints.c$453$1$127 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:453: numC++;
+	C$LAB2End23.c$465$1$127 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:465: numC++;
 	inc	_numC
-	C$LAB2ints.c$454$1$127 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:454: debounce();
+	C$LAB2End23.c$466$1$127 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:466: debounce();
 	lcall	_debounce
-	C$LAB2ints.c$455$1$127 ==.
+	C$LAB2End23.c$467$1$127 ==.
 	XG$correct$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'incorrect'
 ;------------------------------------------------------------
 	G$incorrect$0$0 ==.
-	C$LAB2ints.c$457$1$127 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:457: void incorrect(void){
+	C$LAB2End23.c$469$1$127 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:469: void incorrect(void){
 ;	-----------------------------------------
 ;	 function incorrect
 ;	-----------------------------------------
 _incorrect:
-	C$LAB2ints.c$458$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:458: BILED0 = 0;
+	C$LAB2End23.c$470$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:470: BILED0 = 0;
 	clr	_BILED0
-	C$LAB2ints.c$459$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:459: BILED1 = 1;
+	C$LAB2End23.c$471$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:471: BILED1 = 1;
 	setb	_BILED1
-	C$LAB2ints.c$460$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:460: Buzzer=0;
+	C$LAB2End23.c$472$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:472: Buzzer=0;
 	clr	_Buzzer
-	C$LAB2ints.c$461$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:461: debounce();
+	C$LAB2End23.c$473$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:473: debounce();
 	lcall	_debounce
-	C$LAB2ints.c$462$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:462: Buzzer=1;
+	C$LAB2End23.c$474$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:474: Buzzer=1;
 	setb	_Buzzer
-	C$LAB2ints.c$463$1$129 ==.
+	C$LAB2End23.c$475$1$129 ==.
 	XG$incorrect$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'ending'
 ;------------------------------------------------------------
 	G$ending$0$0 ==.
-	C$LAB2ints.c$465$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:465: void ending(void){
+	C$LAB2End23.c$477$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:477: void ending(void){
 ;	-----------------------------------------
 ;	 function ending
 ;	-----------------------------------------
 _ending:
-	C$LAB2ints.c$486$1$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.c:486: }
-	C$LAB2ints.c$486$1$129 ==.
+	C$LAB2End23.c$498$1$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\Cfiles\LAB2End23.c:498: }
+	C$LAB2End23.c$498$1$129 ==.
 	XG$ending$0$0 ==.
 	ret
 	.area CSEG    (CODE)
 	.area CONST   (CODE)
-FLAB2ints$__str_0$0$0 == .
+FLAB2End23$__str_0$0$0 == .
 ___str_0:
 	.db 0x0D
 	.ascii "Press enter to start game"
 	.db 0x0D
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_1$0$0 == .
+FLAB2End23$__str_1$0$0 == .
 ___str_1:
 	.db 0x0D
 	.ascii " Game now playing"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_2$0$0 == .
+FLAB2End23$__str_2$0$0 == .
 ___str_2:
 	.db 0x0D
 	.ascii "done randgend"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_3$0$0 == .
+FLAB2End23$__str_3$0$0 == .
 ___str_3:
 	.db 0x0D
 	.ascii " turn %d"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_4$0$0 == .
+FLAB2End23$__str_4$0$0 == .
 ___str_4:
 	.db 0x0D
 	.ascii " player %d"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_5$0$0 == .
+FLAB2End23$__str_5$0$0 == .
 ___str_5:
 	.db 0x0D
 	.ascii " !SS"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_6$0$0 == .
+FLAB2End23$__str_6$0$0 == .
 ___str_6:
 	.db 0x0D
 	.ascii "correct %i"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_7$0$0 == .
+FLAB2End23$__str_7$0$0 == .
 ___str_7:
 	.ascii "player %d score this turn was %d, total score %d"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_8$0$0 == .
+FLAB2End23$__str_8$0$0 == .
 ___str_8:
 	.db 0x0D
 	.ascii "Player 1 score %i, Player 2 score %i, Player 3 score %i"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_9$0$0 == .
+FLAB2End23$__str_9$0$0 == .
 ___str_9:
 	.db 0x0D
 	.ascii "Toggle slid switch to play again"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_10$0$0 == .
+FLAB2End23$__str_10$0$0 == .
 ___str_10:
+	.db 0x0D
+	.ascii "toggle once"
+	.db 0x0A
+	.db 0x00
+FLAB2End23$__str_11$0$0 == .
+___str_11:
+	.db 0x0D
+	.ascii "toggle twice!!"
+	.db 0x0A
+	.db 0x00
+FLAB2End23$__str_12$0$0 == .
+___str_12:
 	.db 0x0D
 	.ascii " pause"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_11$0$0 == .
-___str_11:
+FLAB2End23$__str_13$0$0 == .
+___str_13:
 	.db 0x0D
 	.ascii " end pause"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_12$0$0 == .
-___str_12:
+FLAB2End23$__str_14$0$0 == .
+___str_14:
 	.db 0x0D
 	.ascii " endTurn"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_13$0$0 == .
-___str_13:
+FLAB2End23$__str_15$0$0 == .
+___str_15:
 	.db 0x0D
 	.ascii " seq"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_14$0$0 == .
-___str_14:
+FLAB2End23$__str_16$0$0 == .
+___str_16:
 	.db 0x0D
 	.ascii " push button"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_15$0$0 == .
-___str_15:
+FLAB2End23$__str_17$0$0 == .
+___str_17:
 	.db 0x0D
 	.ascii " light"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_16$0$0 == .
-___str_16:
+FLAB2End23$__str_18$0$0 == .
+___str_18:
 	.db 0x0D
 	.ascii " lights off, LIGHT IS %d"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_17$0$0 == .
-___str_17:
+FLAB2End23$__str_19$0$0 == .
+___str_19:
 	.db 0x0D
 	.ascii " case 0"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_18$0$0 == .
-___str_18:
+FLAB2End23$__str_20$0$0 == .
+___str_20:
 	.db 0x0D
 	.ascii " case 1"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_19$0$0 == .
-___str_19:
+FLAB2End23$__str_21$0$0 == .
+___str_21:
 	.db 0x0D
 	.ascii " c2"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_20$0$0 == .
-___str_20:
+FLAB2End23$__str_22$0$0 == .
+___str_22:
 	.db 0x0D
 	.ascii " c3"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_21$0$0 == .
-___str_21:
+FLAB2End23$__str_23$0$0 == .
+___str_23:
 	.db 0x0D
 	.ascii "wait"
 	.db 0x0A
 	.db 0x00
-FLAB2ints$__str_22$0$0 == .
-___str_22:
+FLAB2End23$__str_24$0$0 == .
+___str_24:
 	.db 0x0D
 	.ascii "Rand %d is %d"
 	.db 0x0A
