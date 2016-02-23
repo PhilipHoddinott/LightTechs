@@ -1,0 +1,3 @@
++ C:\PROGRA~1\SDCC\bin\sdcpp.exe -nostdinc -Wall -I"--nogcse" -I"C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2" -obj-ext=.rel -D__SDCC_MODEL_SMALL -D__SDCC_FLOAT_REENT -D__SDCC=3_5_0 -DSDCC=350 -D__SDCC_REVISION=9253 -D__SDCC_mcs51 -D__STDC_NO_COMPLEX__ -D__STDC_NO_THREADS__ -D__STDC_NO_ATOMICS__ -D__STDC_NO_VLA__ -isystem "C:\Program Files\SDCC\bin\..\include\mcs51" -isystem "C:\Program Files\SDCC\bin\..\include"  "C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c" 
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:80: syntax error: token -> '{' ; column 17
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2draft2.c:82: error 7: Old style C declaration. IGNORED 'LED0'

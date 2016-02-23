@@ -44,7 +44,8 @@ void endTurn(void);
 
 
 void BILEDOFF(void);
-unsigned char rand(void);
+//unsigned char randGen(void);
+void randGen(void);
 unsigned LEDPAT(void)
 //-----------------------------------------------------------------------------
 // Global Variables
@@ -57,12 +58,11 @@ __sbit __at 0xB0 LED2;	 // LED2, associated with Port 3 Pin 0
 
 __sbit __at 0xA3 BILED1; // BILED0, associated with Port 2 Pin 3
 __sbit __at 0xA1 BILED0; // BILED1, associated with Port 2 Pin 1
-__sbit __at 0x96 SS;     // Slide switch, associated with Port 0 Pin 6
-__sbit __at 0x96 PB3;    // Push button 3, associated with Port 0 Pin 3
-__sbit __at 0x94 PB2;    // Push button 2, associated with Port 0 Pin 4
-__sbit __at 0x92 PB1;    // Push button 1, associated with Port 0 Pin 2
-__sbit __at 0x90 PB0;    // Push button 0, associated with Port 0 Pin 0
-__sbit __at 0xB1 PB0;    // Push button 1, associated with Port 0 Pin 1
+__sbit __at 0x96 SS;     // Slide switch, associated with Port 1 Pin 6
+__sbit __at 0x96 PB3;    // Push button 3, associated with Port 1 Pin 3
+__sbit __at 0x94 PB2;    // Push button 2, associated with Port 1 Pin 4
+__sbit __at 0x92 PB1;    // Push button 1, associated with Port 1 Pin 2
+__sbit __at 0x90 PB0;    // Push button 0, associated with Port 1 Pin 0
 __sbit __at 0xA5 Buzzer; // buzer port 2 pin 5
 unsigned int Counts=0; 
 unsigned char i=0, x=0, y=0;
@@ -71,13 +71,20 @@ unsigned char previousnum;
 unsigned char numC=0;
 unsigned char on=0;
 unsigned char off=1;
-unsigned char rand[10];
-unsigned char Points [3][3]=;
+unsigned char randList[10];
+unsigned char Points [3][3];
 //******************************************************************************************
 //main program function
 //******************************************************************************************
+int philip =1;
 void main(void) {
-	system_initilization();
+	//system_initilization();
+	Sys_Init();      			// System Initialization
+	Port_Init();     			// Initialize ports 2 and 3
+	Interrupt_Init();			//Initialize Interrupts
+	Timer_Init();				//Initialize timer 0
+	putchar(' ');    		
+	printf("\r\nStart\r\n");
 	while(1) {	
 		BILEDOFF();
 		printf("\rPlay game\n");
@@ -87,6 +94,7 @@ void main(void) {
 		int turn=0;
 		int player=0;
 		int scores[2] = {0,0,0};
+		randGen();
 
 		while(turn<3){
 			//calcualte speed each time for the players
@@ -95,8 +103,8 @@ void main(void) {
 					int k =0;
 					for (int k=0; k<=i;k++){
 						if(!SS){
-							int in=seq(rand[k]);
-							printf("\rcorrect %i\n",rand[k]);// cheat mode
+							int in=seq(randList[k]);
+							printf("\rcorrect %i\n",randList[k]);// cheat mode
 							if (in>0){
 								sum++;
 							} else{
@@ -310,9 +318,9 @@ unsigned char random(void) {
 }
 
 //***************
-
-unsigned char rand(void) {
-	previousnum=keyinput%3;
+/*
+unsigned char n(void) {
+	previousnum=kerandGeyinput%3;
 				x=0;
 				// wait 1/10s 
 	while (x<=9)
@@ -326,6 +334,25 @@ unsigned char rand(void) {
 	x++;
 	}
 }
+*/
+void randGen(void) {
+	previousnum=keyinput%3;
+	x=0;
+	// wait 1/10s 
+	while (x<=9){
+		randomnum=random();	
+			while (randomnum==previousnum)
+				{
+					randomnum = random();
+				}						
+	randList[x]=randomnum;
+	x++;
+	}
+	for(x;x<10;x++){
+		printf("\rRand %i is %i\n",x,randList[x]);
+	}
+}
+
 void resetArrays(void) {
 
 	for(x=0; x<=2; x++)
@@ -338,7 +365,7 @@ void resetArrays(void) {
 	x=0;
 	while(x<=9)
 	{
-		rand[x]=0;
+		randList[x]=0;
 	}
 }
 
