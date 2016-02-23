@@ -50,14 +50,20 @@ unsigned LEDPAT(void)
 // Global Variables
 //-----------------------------------------------------------------------------
 //add 2 more LEDs and push buttons 
-__sbit __at 0xB6 LED0;   // LED0, associated with Port 3 Pin 6
-__sbit __at 0xB5 LED1;	 // LED1, associated with Port 3 Pin 5
-__sbit __at 0xB3 BILED0; // BILED0, associated with Port 3 Pin 3
-__sbit __at 0xB4 BILED1; // BILED1, associated with Port 3 Pin 4
-__sbit __at 0xA0 SS;     // Slide switch, associated with Port 2 Pin 0
-__sbit __at 0xB0 PB1;    // Push button 0, associated with Port 3 Pin 0
-__sbit __at 0xB1 PB0;    // Push button 1, associated with Port 3 Pin 1
-__sbit __at 0xB7 Buzzer;
+__sbit __at 0xB4 LED0;   // LED0, associated with Port 3 Pin 4
+__sbit __at 0xB3 LED1;	 // LED1, associated with Port 3 Pin 3
+__sbit __at 0xB1 LED3;	 // LED3, associated with Port 3 Pin 1
+__sbit __at 0xB0 LED2;	 // LED2, associated with Port 3 Pin 0
+
+__sbit __at 0xA3 BILED1; // BILED0, associated with Port 2 Pin 3
+__sbit __at 0xA1 BILED0; // BILED1, associated with Port 2 Pin 1
+__sbit __at 0x96 SS;     // Slide switch, associated with Port 0 Pin 6
+__sbit __at 0x96 PB3;    // Push button 3, associated with Port 0 Pin 3
+__sbit __at 0x94 PB2;    // Push button 2, associated with Port 0 Pin 4
+__sbit __at 0x92 PB1;    // Push button 1, associated with Port 0 Pin 2
+__sbit __at 0x90 PB0;    // Push button 0, associated with Port 0 Pin 0
+__sbit __at 0xB1 PB0;    // Push button 1, associated with Port 0 Pin 1
+__sbit __at 0xA5 Buzzer; // buzer port 2 pin 5
 unsigned int Counts=0; 
 unsigned char i=0, x=0, y=0;
 unsigned char randomnum;
