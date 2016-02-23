@@ -34,7 +34,14 @@ void StopAndResetTimer(void);
 void StartTimer(void);
 void Pause(void);
 void ending(void);
+
 void system_initilization(void); //initalizze systems
+void Buzz(void);
+int seq(int led);
+int pushButton(int button);
+void wait(void);
+void endTurn(void);
+
 
 void BILEDOFF(void);
 unsigned char rand(void);
@@ -81,23 +88,36 @@ void main(void) {
 				for(int i=0;i<10;i++){
 					int k =0;
 					for (int k=0; k<=i;k++){
-						int in=seq(rand[k]);
-						if (in>0){
-							sum++;
-						} else{
-							//PLAY BUZZER!!!!!!!!!!!!
-							i=11;
-							break;
-						}// end ele
+						if(!SS){
+							int in=seq(rand[k]);
+							printf("\rcorrect %i\n",rand[k]);// cheat mode
+							if (in>0){
+								sum++;
+							} else{
+								Buzz();
+								i=11;
+								break;
+							}// end ele
+						}else{
+							pause();
+						}//end the slide switch toggle
 					}//end for k
-				}//end for 
+				}//end for players
 				scores[player]+=sum;
+				
+				//turn all LEDs on for a second
+				printf("player %i sore this turn was %i, total score %i\n", player, sum, scores[player]);
 				sum=0;
+				endTurn();
+
 			}//end while players
 		}//end while turn<3
+		printf("\rPlayer 1 score %i, Player 2 score %i, Player 3 score %i\n", scores[0], scores[1], scores[2]);
+
 		// dsplay socers then ask to play again
 		ending();
 		TR0 = 0;								//turn off timer
+		printf("\rToggle slid switch to play again\n;")
 		while (!SS);							//wait until the switch is turned off and back on again to loop
 		while (SS); // the toggle						
 	}	
@@ -107,8 +127,31 @@ void main(void) {
 //****************************************************************************************
 // Philip made functions, sort as you would
 //*****************************************************************************************
+void pause(void){
+	BILED0=0;
+	wait();
+	BILEDOFF();
+	BILED1=0;
+	wait();
+	BILEDOFF();
+}// end the biled pause function
 
-
+void endTurn(void){
+	LED0=0;
+	LED1=0;
+	LED2=0;
+	LED3=0;
+	wait();
+	LED0=1;
+	LED1=1;
+	LED2=1;
+	LED3=1;
+}//end turn
+void Buzz(void){
+	Buzzer=0;
+	wait();
+	Buzzzer=1;
+}
 
 int seq(int led){
 	light(led);
@@ -159,8 +202,10 @@ void light(int led){
 }
 
 void wait(void){
+	Counts=0;			//store starting counts
+	while(Counts<338); 
 	// to be worked on, this function just waits the time determined earlier
-}
+}// waits 1 second
 
 
 
