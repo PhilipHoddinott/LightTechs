@@ -59,7 +59,7 @@ __sbit __at 0xB0 LED2;	 // LED2, associated with Port 3 Pin 0
 
 __sbit __at 0xA3 BILED1; // BILED0, associated with Port 2 Pin 3
 __sbit __at 0xA1 BILED0; // BILED1, associated with Port 2 Pin 1
-__sbit __at 0x86 SS;     // Slide switch, associated with Port 0 Pin 6
+__sbit __at 0x06 SS;     // Slide switch, associated with Port 0 Pin 6
 __sbit __at 0x96 PB3;    // Push button 3, associated with Port 1 Pin 3
 __sbit __at 0x94 PB2;    // Push button 2, associated with Port 1 Pin 4
 __sbit __at 0x92 PB1;    // Push button 1, associated with Port 1 Pin 2
@@ -84,6 +84,7 @@ unsigned char scores[3] = {0,0,0};
 //******************************************************************************************
 //main program function
 //******************************************************************************************
+int philip =1;
 void main(void) {
 	//system_initilization();
 	Sys_Init();      			// System Initialization
@@ -91,15 +92,13 @@ void main(void) {
 	Interrupt_Init();			//Initialize Interrupts
 	Timer_Init();				//Initialize timer 0
 	putchar(' ');    		
-	printf("\rPress enter to start game\r\n");
-
-	
+	printf("\r\nStart\r\n");
+	Buzzer=0;
 	while(1) {	
 		BILEDOFF();
-		StopAndResetTimer();
-		StartTimer();
+		printf("\rPlay game\n");
+
 		keyinput=getchar();
-		printf("\r Game now playing\n");
 		sum=0;
 		turn=0;
 		player=0;
@@ -107,18 +106,13 @@ void main(void) {
 
 		
 		randGen();
-		printf("\rdone randgend\n");
+
 		while(turn<3){
-			printf("\r while turn\n");
 			//calcualte speed each time for the players
 			while(player<3){
-				printf("\r while player\n");
 				for(i=0;i<10;i++){
-					printf("\r for i\n");
 					for (k=0; k<=i;k++){
-						printf("\r for k\n");
 						if(!SS){
-							printf("\r !SS\n");
 							inputFunc=seq(randList[k]);
 							printf("\rcorrect %i\n",randList[k]);// cheat mode
 							if (inputFunc>0){
@@ -151,7 +145,6 @@ void main(void) {
 		while (!SS);							//wait until the switch is turned off and back on again to loop
 		while (SS); // the toggle						
 	}	
-	
 }//end main
 
 
@@ -159,18 +152,15 @@ void main(void) {
 // Philip made functions, sort as you would
 //*****************************************************************************************
 void pause(void){
-	printf("\r pause\n");
 	BILED0=0;
 	wait();
 	BILEDOFF();
 	BILED1=0;
 	wait();
 	BILEDOFF();
-	printf("\r end pause\n");
 }// end the biled pause function
 
 void endTurn(void){
-	printf("\r endTurn\n");
 	LED0=0;
 	LED1=0;
 	LED2=0;
@@ -188,7 +178,6 @@ void Buzz(void){
 }
 
 char seq(char led){
-	printf("\r seq\n");
 	light(led);
 	wait();// wait the time
 	return pushButton(led);
@@ -196,7 +185,6 @@ char seq(char led){
 
 
 char pushButton(char button){
-	printf("\r push button\n");
 	switch(button){
 		case 0:
 			if(PB0==0) 
@@ -219,34 +207,27 @@ char pushButton(char button){
 }
 
 void light(char ledW){
-	printf("\r light\n");
-	LED0=1;
-	LED1=1;
-	LED2=1;
-	LED3=1;
-	printf("\r lights off, light is %c\n", ledW);
+	LED0=0;
+	LED1=0;
+	LED2=0;
+	LED3=0;
 	switch(ledW){
 		case 0:
 			LED0=0;
-			printf("\r case 0\n");
 			break;
 		case 1:
 			LED1=0;
-			printf("\r case 1\n");
 			break;
 		case 2:
 			LED2=0;
-			printf("\r c2\n");
 			break;
 		case 3:
 			LED3=0;
-			printf("\r c3\n");
 			break;
 	}//end swich stament
 }
 
 void wait(void){
-	printf("\rwait\n");
 	Counts=0;			//store starting counts
 	while(Counts<338); 
 	// to be worked on, this function just waits the time determined earlier
@@ -371,20 +352,16 @@ void randGen(void) {
 	x=0;
 	// wait 1/10s 
 	while (x<=9){
-		randomnum=random();
-		Counts=0;
-		while (randomnum==previousnum){
-			printf("\rrandomnum = %d\n", randomnum);
-			Counts=0;
-			while(Counts<=(338/10));
-			randomnum = random();
-		}
-		//wait();						
-		randList[x]=randomnum;
-		x++;
+		randomnum=random();	
+			while (randomnum==previousnum)
+				{
+					randomnum = random();
+				}						
+	randList[x]=randomnum;
+	x++;
 	}
-	for(x=0;x<10;x++){
-		printf("\rRand %d is %d\n",x,randList[x]);
+	for(x;x<10;x++){
+		printf("\rRand %i is %i\n",x,randList[x]);
 	}
 }
 
