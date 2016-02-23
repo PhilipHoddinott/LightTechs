@@ -1,0 +1,2338 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000001  s_PSEG                          
+C:   00000001  s_XISEG                         
+C:   00000001  s_XSEG                          
+C:   00000002  l_BSEG_BYTES                    
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000006  l_ISEG                          
+C:   00000006  l_OSEG                          
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_REG_BANK_1                    
+C:   0000000A  l_BSEG                          
+C:   0000000A  l_GSINIT2                       
+C:   0000000E  s_OSEG                          
+C:   00000010  s_REG_BANK_2                    
+C:   00000011  l_HOME                          
+C:   00000011  s_GSINIT0                       
+C:   00000014  s_GSINIT1                       
+C:   00000014  s_GSINIT2                       
+C:   00000014  s_ISEG                          
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_REG_BANK_3                    
+C:   0000001E  s_GSINIT3                       
+C:   00000020  s_BSEG_BYTES                    
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+C:   00000028  l_GSINIT                        
+C:   0000002A  l_GSINIT4                       
+C:   00000040  s_GSINIT4                       
+C:   00000065  s_SSEG                          
+C:   0000006A  s_GSINIT                        
+C:   0000006A  s_GSINIT5                       
+C:   0000007A  l_DSEG                          
+C:   00000092  s_GSFINAL                       
+C:   00000095  s_CSEG                          
+C:   0000009B  l_SSEG                          
+C:   00000100  l_IRAM                          
+C:   00000199  l_CONST                         
+C:   00000D3C  l_CSEG                          
+C:   00000DD1  s_CONST                         
+C:   00000F6A  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _bp
+     00000080  G$P0$0$0                           LAB2ints
+     00000080  G$P0_0$0$0                         LAB2ints
+     00000080  _P0                                LAB2ints
+     00000080  _P0_0                              LAB2ints
+     00000081  G$P0_1$0$0                         LAB2ints
+     00000081  G$SP$0$0                           LAB2ints
+     00000081  _P0_1                              LAB2ints
+     00000081  _SP                                LAB2ints
+     00000082  G$DPL$0$0                          LAB2ints
+     00000082  G$P0_2$0$0                         LAB2ints
+     00000082  _DPL                               LAB2ints
+     00000082  _P0_2                              LAB2ints
+     00000083  G$DPH$0$0                          LAB2ints
+     00000083  G$P0_3$0$0                         LAB2ints
+     00000083  _DPH                               LAB2ints
+     00000083  _P0_3                              LAB2ints
+     00000084  G$P0_4$0$0                         LAB2ints
+     00000084  G$P4$0$0                           LAB2ints
+     00000084  _P0_4                              LAB2ints
+     00000084  _P4                                LAB2ints
+     00000085  G$P0_5$0$0                         LAB2ints
+     00000085  G$P5$0$0                           LAB2ints
+     00000085  _P0_5                              LAB2ints
+     00000085  _P5                                LAB2ints
+     00000086  G$P0_6$0$0                         LAB2ints
+     00000086  G$P6$0$0                           LAB2ints
+     00000086  G$SS$0$0                           LAB2ints
+     00000086  _P0_6                              LAB2ints
+     00000086  _P6                                LAB2ints
+     00000086  _SS                                LAB2ints
+     00000087  G$P0_7$0$0                         LAB2ints
+     00000087  G$PCON$0$0                         LAB2ints
+     00000087  _P0_7                              LAB2ints
+     00000087  _PCON                              LAB2ints
+     00000088  G$IT0$0$0                          LAB2ints
+     00000088  G$TCON$0$0                         LAB2ints
+     00000088  _IT0                               LAB2ints
+     00000088  _TCON                              LAB2ints
+     00000089  G$IE0$0$0                          LAB2ints
+     00000089  G$TMOD$0$0                         LAB2ints
+     00000089  _IE0                               LAB2ints
+     00000089  _TMOD                              LAB2ints
+     0000008A  G$IT1$0$0                          LAB2ints
+     0000008A  G$TL0$0$0                          LAB2ints
+     0000008A  _IT1                               LAB2ints
+     0000008A  _TL0                               LAB2ints
+     0000008B  G$IE1$0$0                          LAB2ints
+     0000008B  G$TL1$0$0                          LAB2ints
+     0000008B  _IE1                               LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000008B  _TL1                               LAB2ints
+     0000008C  G$TH0$0$0                          LAB2ints
+     0000008C  G$TR0$0$0                          LAB2ints
+     0000008C  _TH0                               LAB2ints
+     0000008C  _TR0                               LAB2ints
+     0000008D  G$TF0$0$0                          LAB2ints
+     0000008D  G$TH1$0$0                          LAB2ints
+     0000008D  _TF0                               LAB2ints
+     0000008D  _TH1                               LAB2ints
+     0000008E  G$CKCON$0$0                        LAB2ints
+     0000008E  G$TR1$0$0                          LAB2ints
+     0000008E  _CKCON                             LAB2ints
+     0000008E  _TR1                               LAB2ints
+     0000008F  G$PSCTL$0$0                        LAB2ints
+     0000008F  G$TF1$0$0                          LAB2ints
+     0000008F  _PSCTL                             LAB2ints
+     0000008F  _TF1                               LAB2ints
+     00000090  G$P1$0$0                           LAB2ints
+     00000090  G$P1_0$0$0                         LAB2ints
+     00000090  G$PB0$0$0                          LAB2ints
+     00000090  _P1                                LAB2ints
+     00000090  _P1_0                              LAB2ints
+     00000090  _PB0                               LAB2ints
+     00000091  G$P1_1$0$0                         LAB2ints
+     00000091  G$TMR3CN$0$0                       LAB2ints
+     00000091  _P1_1                              LAB2ints
+     00000091  _TMR3CN                            LAB2ints
+     00000092  G$P1_2$0$0                         LAB2ints
+     00000092  G$PB1$0$0                          LAB2ints
+     00000092  G$TMR3RLL$0$0                      LAB2ints
+     00000092  _P1_2                              LAB2ints
+     00000092  _PB1                               LAB2ints
+     00000092  _TMR3RLL                           LAB2ints
+     00000093  G$P1_3$0$0                         LAB2ints
+     00000093  G$TMR3RLH$0$0                      LAB2ints
+     00000093  _P1_3                              LAB2ints
+     00000093  _TMR3RLH                           LAB2ints
+     00000094  G$P1_4$0$0                         LAB2ints
+     00000094  G$PB2$0$0                          LAB2ints
+     00000094  G$TMR3L$0$0                        LAB2ints
+     00000094  _P1_4                              LAB2ints
+     00000094  _PB2                               LAB2ints
+     00000094  _TMR3L                             LAB2ints
+     00000095  G$P1_5$0$0                         LAB2ints
+     00000095  G$TMR3H$0$0                        LAB2ints
+     00000095  _P1_5                              LAB2ints
+     00000095  _TMR3H                             LAB2ints
+     00000096  G$P1_6$0$0                         LAB2ints
+     00000096  G$P7$0$0                           LAB2ints
+     00000096  G$PB3$0$0                          LAB2ints
+     00000096  _P1_6                              LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000096  _P7                                LAB2ints
+     00000096  _PB3                               LAB2ints
+     00000097  G$P1_7$0$0                         LAB2ints
+     00000097  _P1_7                              LAB2ints
+     00000098  G$RI$0$0                           LAB2ints
+     00000098  G$RI0$0$0                          LAB2ints
+     00000098  G$SCON$0$0                         LAB2ints
+     00000098  G$SCON0$0$0                        LAB2ints
+     00000098  _RI                                LAB2ints
+     00000098  _RI0                               LAB2ints
+     00000098  _SCON                              LAB2ints
+     00000098  _SCON0                             LAB2ints
+     00000099  G$SBUF$0$0                         LAB2ints
+     00000099  G$SBUF0$0$0                        LAB2ints
+     00000099  G$TI$0$0                           LAB2ints
+     00000099  G$TI0$0$0                          LAB2ints
+     00000099  _SBUF                              LAB2ints
+     00000099  _SBUF0                             LAB2ints
+     00000099  _TI                                LAB2ints
+     00000099  _TI0                               LAB2ints
+     0000009A  G$RB8$0$0                          LAB2ints
+     0000009A  G$RB80$0$0                         LAB2ints
+     0000009A  G$SPI0CFG$0$0                      LAB2ints
+     0000009A  _RB8                               LAB2ints
+     0000009A  _RB80                              LAB2ints
+     0000009A  _SPI0CFG                           LAB2ints
+     0000009B  G$SPI0DAT$0$0                      LAB2ints
+     0000009B  G$TB8$0$0                          LAB2ints
+     0000009B  G$TB80$0$0                         LAB2ints
+     0000009B  _SPI0DAT                           LAB2ints
+     0000009B  _TB8                               LAB2ints
+     0000009B  _TB80                              LAB2ints
+     0000009C  G$ADC1$0$0                         LAB2ints
+     0000009C  G$REN$0$0                          LAB2ints
+     0000009C  G$REN0$0$0                         LAB2ints
+     0000009C  _ADC1                              LAB2ints
+     0000009C  _REN                               LAB2ints
+     0000009C  _REN0                              LAB2ints
+     0000009D  G$MCE0$0$0                         LAB2ints
+     0000009D  G$SM2$0$0                          LAB2ints
+     0000009D  G$SM20$0$0                         LAB2ints
+     0000009D  G$SPI0CKR$0$0                      LAB2ints
+     0000009D  _MCE0                              LAB2ints
+     0000009D  _SM2                               LAB2ints
+     0000009D  _SM20                              LAB2ints
+     0000009D  _SPI0CKR                           LAB2ints
+     0000009E  G$CPT0CN$0$0                       LAB2ints
+     0000009E  G$SM1$0$0                          LAB2ints
+     0000009E  G$SM10$0$0                         LAB2ints
+     0000009E  _CPT0CN                            LAB2ints
+     0000009E  _SM1                               LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000009E  _SM10                              LAB2ints
+     0000009F  G$CPT1CN$0$0                       LAB2ints
+     0000009F  G$S0MODE$0$0                       LAB2ints
+     0000009F  G$SM0$0$0                          LAB2ints
+     0000009F  G$SM00$0$0                         LAB2ints
+     0000009F  _CPT1CN                            LAB2ints
+     0000009F  _S0MODE                            LAB2ints
+     0000009F  _SM0                               LAB2ints
+     0000009F  _SM00                              LAB2ints
+     000000A0  G$P2$0$0                           LAB2ints
+     000000A0  G$P2_0$0$0                         LAB2ints
+     000000A0  _P2                                LAB2ints
+     000000A0  _P2_0                              LAB2ints
+     000000A1  G$BILED0$0$0                       LAB2ints
+     000000A1  G$EMI0TC$0$0                       LAB2ints
+     000000A1  G$P2_1$0$0                         LAB2ints
+     000000A1  _BILED0                            LAB2ints
+     000000A1  _EMI0TC                            LAB2ints
+     000000A1  _P2_1                              LAB2ints
+     000000A2  G$P2_2$0$0                         LAB2ints
+     000000A2  _P2_2                              LAB2ints
+     000000A3  G$BILED1$0$0                       LAB2ints
+     000000A3  G$EMI0CF$0$0                       LAB2ints
+     000000A3  G$P2_3$0$0                         LAB2ints
+     000000A3  _BILED1                            LAB2ints
+     000000A3  _EMI0CF                            LAB2ints
+     000000A3  _P2_3                              LAB2ints
+     000000A4  G$P0MDOUT$0$0                      LAB2ints
+     000000A4  G$P2_4$0$0                         LAB2ints
+     000000A4  G$PRT0CF$0$0                       LAB2ints
+     000000A4  _P0MDOUT                           LAB2ints
+     000000A4  _P2_4                              LAB2ints
+     000000A4  _PRT0CF                            LAB2ints
+     000000A5  G$Buzzer$0$0                       LAB2ints
+     000000A5  G$P1MDOUT$0$0                      LAB2ints
+     000000A5  G$P2_5$0$0                         LAB2ints
+     000000A5  G$PRT1CF$0$0                       LAB2ints
+     000000A5  _Buzzer                            LAB2ints
+     000000A5  _P1MDOUT                           LAB2ints
+     000000A5  _P2_5                              LAB2ints
+     000000A5  _PRT1CF                            LAB2ints
+     000000A6  G$P2MDOUT$0$0                      LAB2ints
+     000000A6  G$P2_6$0$0                         LAB2ints
+     000000A6  G$PRT2CF$0$0                       LAB2ints
+     000000A6  _P2MDOUT                           LAB2ints
+     000000A6  _P2_6                              LAB2ints
+     000000A6  _PRT2CF                            LAB2ints
+     000000A7  G$P2_7$0$0                         LAB2ints
+     000000A7  G$P3MDOUT$0$0                      LAB2ints
+     000000A7  G$PRT3CF$0$0                       LAB2ints
+     000000A7  _P2_7                              LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000A7  _P3MDOUT                           LAB2ints
+     000000A7  _PRT3CF                            LAB2ints
+     000000A8  G$EX0$0$0                          LAB2ints
+     000000A8  G$IE$0$0                           LAB2ints
+     000000A8  _EX0                               LAB2ints
+     000000A8  _IE                                LAB2ints
+     000000A9  G$ET0$0$0                          LAB2ints
+     000000A9  G$SADDR0$0$0                       LAB2ints
+     000000A9  _ET0                               LAB2ints
+     000000A9  _SADDR0                            LAB2ints
+     000000AA  G$ADC1CN$0$0                       LAB2ints
+     000000AA  G$EX1$0$0                          LAB2ints
+     000000AA  _ADC1CN                            LAB2ints
+     000000AA  _EX1                               LAB2ints
+     000000AB  G$ADC1CF$0$0                       LAB2ints
+     000000AB  G$ET1$0$0                          LAB2ints
+     000000AB  _ADC1CF                            LAB2ints
+     000000AB  _ET1                               LAB2ints
+     000000AC  G$AMX1SL$0$0                       LAB2ints
+     000000AC  G$ES$0$0                           LAB2ints
+     000000AC  G$ES0$0$0                          LAB2ints
+     000000AC  _AMX1SL                            LAB2ints
+     000000AC  _ES                                LAB2ints
+     000000AC  _ES0                               LAB2ints
+     000000AD  G$ET2$0$0                          LAB2ints
+     000000AD  G$P3IF$0$0                         LAB2ints
+     000000AD  _ET2                               LAB2ints
+     000000AD  _P3IF                              LAB2ints
+     000000AE  G$SADEN1$0$0                       LAB2ints
+     000000AE  _SADEN1                            LAB2ints
+     000000AF  G$EA$0$0                           LAB2ints
+     000000AF  G$EMI0CN$0$0                       LAB2ints
+     000000AF  G$_XPAGE$0$0                       LAB2ints
+     000000AF  _EA                                LAB2ints
+     000000AF  _EMI0CN                            LAB2ints
+     000000AF  __XPAGE                            LAB2ints
+     000000B0  G$LED2$0$0                         LAB2ints
+     000000B0  G$P3$0$0                           LAB2ints
+     000000B0  G$P3_0$0$0                         LAB2ints
+     000000B0  _LED2                              LAB2ints
+     000000B0  _P3                                LAB2ints
+     000000B0  _P3_0                              LAB2ints
+     000000B1  G$LED3$0$0                         LAB2ints
+     000000B1  G$OSCXCN$0$0                       LAB2ints
+     000000B1  G$P3_1$0$0                         LAB2ints
+     000000B1  _LED3                              LAB2ints
+     000000B1  _OSCXCN                            LAB2ints
+     000000B1  _P3_1                              LAB2ints
+     000000B2  G$OSCICN$0$0                       LAB2ints
+     000000B2  G$P3_2$0$0                         LAB2ints
+     000000B2  _OSCICN                            LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000B2  _P3_2                              LAB2ints
+     000000B3  G$LED1$0$0                         LAB2ints
+     000000B3  G$P3_3$0$0                         LAB2ints
+     000000B3  _LED1                              LAB2ints
+     000000B3  _P3_3                              LAB2ints
+     000000B4  G$LED0$0$0                         LAB2ints
+     000000B4  G$P3_4$0$0                         LAB2ints
+     000000B4  _LED0                              LAB2ints
+     000000B4  _P3_4                              LAB2ints
+     000000B5  G$P3_5$0$0                         LAB2ints
+     000000B5  G$P74OUT$0$0                       LAB2ints
+     000000B5  _P3_5                              LAB2ints
+     000000B5  _P74OUT                            LAB2ints
+     000000B6  G$FLSCL$0$0                        LAB2ints
+     000000B6  G$P3_6$0$0                         LAB2ints
+     000000B6  _FLSCL                             LAB2ints
+     000000B6  _P3_6                              LAB2ints
+     000000B7  G$FLACL$0$0                        LAB2ints
+     000000B7  G$P3_7$0$0                         LAB2ints
+     000000B7  _FLACL                             LAB2ints
+     000000B7  _P3_7                              LAB2ints
+     000000B8  G$IP$0$0                           LAB2ints
+     000000B8  G$PX0$0$0                          LAB2ints
+     000000B8  _IP                                LAB2ints
+     000000B8  _PX0                               LAB2ints
+     000000B9  G$PT0$0$0                          LAB2ints
+     000000B9  G$SADEN0$0$0                       LAB2ints
+     000000B9  _PT0                               LAB2ints
+     000000B9  _SADEN0                            LAB2ints
+     000000BA  G$AMX0CF$0$0                       LAB2ints
+     000000BA  G$PX1$0$0                          LAB2ints
+     000000BA  _AMX0CF                            LAB2ints
+     000000BA  _PX1                               LAB2ints
+     000000BB  G$AMX0SL$0$0                       LAB2ints
+     000000BB  G$PT1$0$0                          LAB2ints
+     000000BB  _AMX0SL                            LAB2ints
+     000000BB  _PT1                               LAB2ints
+     000000BC  G$ADC0CF$0$0                       LAB2ints
+     000000BC  G$PS$0$0                           LAB2ints
+     000000BC  G$PS0$0$0                          LAB2ints
+     000000BC  _ADC0CF                            LAB2ints
+     000000BC  _PS                                LAB2ints
+     000000BC  _PS0                               LAB2ints
+     000000BD  G$P1MDIN$0$0                       LAB2ints
+     000000BD  G$PT2$0$0                          LAB2ints
+     000000BD  _P1MDIN                            LAB2ints
+     000000BD  _PT2                               LAB2ints
+     000000BE  G$ADC0L$0$0                        LAB2ints
+     000000BE  _ADC0L                             LAB2ints
+     000000BF  G$ADC0H$0$0                        LAB2ints
+     000000BF  _ADC0H                             LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000C0  G$SMB0CN$0$0                       LAB2ints
+     000000C0  G$SMBTOE$0$0                       LAB2ints
+     000000C0  _SMB0CN                            LAB2ints
+     000000C0  _SMBTOE                            LAB2ints
+     000000C1  G$SMB0STA$0$0                      LAB2ints
+     000000C1  G$SMBFTE$0$0                       LAB2ints
+     000000C1  _SMB0STA                           LAB2ints
+     000000C1  _SMBFTE                            LAB2ints
+     000000C2  G$AA$0$0                           LAB2ints
+     000000C2  G$SMB0DAT$0$0                      LAB2ints
+     000000C2  _AA                                LAB2ints
+     000000C2  _SMB0DAT                           LAB2ints
+     000000C3  G$SI$0$0                           LAB2ints
+     000000C3  G$SMB0ADR$0$0                      LAB2ints
+     000000C3  _SI                                LAB2ints
+     000000C3  _SMB0ADR                           LAB2ints
+     000000C4  G$ADC0GTL$0$0                      LAB2ints
+     000000C4  G$STO$0$0                          LAB2ints
+     000000C4  _ADC0GTL                           LAB2ints
+     000000C4  _STO                               LAB2ints
+     000000C5  G$ADC0GTH$0$0                      LAB2ints
+     000000C5  G$STA$0$0                          LAB2ints
+     000000C5  _ADC0GTH                           LAB2ints
+     000000C5  _STA                               LAB2ints
+     000000C6  G$ADC0LTL$0$0                      LAB2ints
+     000000C6  G$ENSMB$0$0                        LAB2ints
+     000000C6  _ADC0LTL                           LAB2ints
+     000000C6  _ENSMB                             LAB2ints
+     000000C7  G$ADC0LTH$0$0                      LAB2ints
+     000000C7  G$BUSY$0$0                         LAB2ints
+     000000C7  _ADC0LTH                           LAB2ints
+     000000C7  _BUSY                              LAB2ints
+     000000C8  G$CPRL2$0$0                        LAB2ints
+     000000C8  G$T2CON$0$0                        LAB2ints
+     000000C8  _CPRL2                             LAB2ints
+     000000C8  _T2CON                             LAB2ints
+     000000C9  G$CT2$0$0                          LAB2ints
+     000000C9  G$T4CON$0$0                        LAB2ints
+     000000C9  _CT2                               LAB2ints
+     000000C9  _T4CON                             LAB2ints
+     000000CA  G$RCAP2L$0$0                       LAB2ints
+     000000CA  G$TR2$0$0                          LAB2ints
+     000000CA  _RCAP2L                            LAB2ints
+     000000CA  _TR2                               LAB2ints
+     000000CB  G$EXEN2$0$0                        LAB2ints
+     000000CB  G$RCAP2H$0$0                       LAB2ints
+     000000CB  _EXEN2                             LAB2ints
+     000000CB  _RCAP2H                            LAB2ints
+     000000CC  G$TCLK$0$0                         LAB2ints
+     000000CC  G$TL2$0$0                          LAB2ints
+     000000CC  _TCLK                              LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000CC  _TL2                               LAB2ints
+     000000CD  G$RCLK$0$0                         LAB2ints
+     000000CD  G$TH2$0$0                          LAB2ints
+     000000CD  _RCLK                              LAB2ints
+     000000CD  _TH2                               LAB2ints
+     000000CE  G$EXF2$0$0                         LAB2ints
+     000000CE  _EXF2                              LAB2ints
+     000000CF  G$SMB0CR$0$0                       LAB2ints
+     000000CF  G$TF2$0$0                          LAB2ints
+     000000CF  _SMB0CR                            LAB2ints
+     000000CF  _TF2                               LAB2ints
+     000000D0  G$P$0$0                            LAB2ints
+     000000D0  G$PSW$0$0                          LAB2ints
+     000000D0  _P                                 LAB2ints
+     000000D0  _PSW                               LAB2ints
+     000000D1  G$F1$0$0                           LAB2ints
+     000000D1  G$REF0CN$0$0                       LAB2ints
+     000000D1  _F1                                LAB2ints
+     000000D1  _REF0CN                            LAB2ints
+     000000D2  G$DAC0L$0$0                        LAB2ints
+     000000D2  G$OV$0$0                           LAB2ints
+     000000D2  _DAC0L                             LAB2ints
+     000000D2  _OV                                LAB2ints
+     000000D3  G$DAC0H$0$0                        LAB2ints
+     000000D3  G$RS0$0$0                          LAB2ints
+     000000D3  _DAC0H                             LAB2ints
+     000000D3  _RS0                               LAB2ints
+     000000D4  G$DAC0CN$0$0                       LAB2ints
+     000000D4  G$RS1$0$0                          LAB2ints
+     000000D4  _DAC0CN                            LAB2ints
+     000000D4  _RS1                               LAB2ints
+     000000D5  G$DAC1L$0$0                        LAB2ints
+     000000D5  G$F0$0$0                           LAB2ints
+     000000D5  _DAC1L                             LAB2ints
+     000000D5  _F0                                LAB2ints
+     000000D6  G$AC$0$0                           LAB2ints
+     000000D6  G$DAC1H$0$0                        LAB2ints
+     000000D6  _AC                                LAB2ints
+     000000D6  _DAC1H                             LAB2ints
+     000000D7  G$CY$0$0                           LAB2ints
+     000000D7  G$DAC1CN$0$0                       LAB2ints
+     000000D7  _CY                                LAB2ints
+     000000D7  _DAC1CN                            LAB2ints
+     000000D8  G$CCF0$0$0                         LAB2ints
+     000000D8  G$PCA0CN$0$0                       LAB2ints
+     000000D8  _CCF0                              LAB2ints
+     000000D8  _PCA0CN                            LAB2ints
+     000000D9  G$CCF1$0$0                         LAB2ints
+     000000D9  G$PCA0MD$0$0                       LAB2ints
+     000000D9  _CCF1                              LAB2ints
+     000000D9  _PCA0MD                            LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000DA  G$CCF2$0$0                         LAB2ints
+     000000DA  G$PCA0CPM0$0$0                     LAB2ints
+     000000DA  _CCF2                              LAB2ints
+     000000DA  _PCA0CPM0                          LAB2ints
+     000000DB  G$CCF3$0$0                         LAB2ints
+     000000DB  G$PCA0CPM1$0$0                     LAB2ints
+     000000DB  _CCF3                              LAB2ints
+     000000DB  _PCA0CPM1                          LAB2ints
+     000000DC  G$CCF4$0$0                         LAB2ints
+     000000DC  G$PCA0CPM2$0$0                     LAB2ints
+     000000DC  _CCF4                              LAB2ints
+     000000DC  _PCA0CPM2                          LAB2ints
+     000000DD  G$PCA0CPM3$0$0                     LAB2ints
+     000000DD  _PCA0CPM3                          LAB2ints
+     000000DE  G$CR$0$0                           LAB2ints
+     000000DE  G$PCA0CPM4$0$0                     LAB2ints
+     000000DE  _CR                                LAB2ints
+     000000DE  _PCA0CPM4                          LAB2ints
+     000000DF  G$CF$0$0                           LAB2ints
+     000000DF  _CF                                LAB2ints
+     000000E0  G$ACC$0$0                          LAB2ints
+     000000E0  _ACC                               LAB2ints
+     000000E1  G$XBR0$0$0                         LAB2ints
+     000000E1  _XBR0                              LAB2ints
+     000000E2  G$XBR1$0$0                         LAB2ints
+     000000E2  _XBR1                              LAB2ints
+     000000E3  G$XBR2$0$0                         LAB2ints
+     000000E3  _XBR2                              LAB2ints
+     000000E4  G$RCAP4L$0$0                       LAB2ints
+     000000E4  _RCAP4L                            LAB2ints
+     000000E5  G$RCAP4H$0$0                       LAB2ints
+     000000E5  _RCAP4H                            LAB2ints
+     000000E6  G$EIE1$0$0                         LAB2ints
+     000000E6  _EIE1                              LAB2ints
+     000000E7  G$EIE2$0$0                         LAB2ints
+     000000E7  _EIE2                              LAB2ints
+     000000E8  G$AD0LJST$0$0                      LAB2ints
+     000000E8  G$ADC0CN$0$0                       LAB2ints
+     000000E8  G$ADLJST$0$0                       LAB2ints
+     000000E8  _AD0LJST                           LAB2ints
+     000000E8  _ADC0CN                            LAB2ints
+     000000E8  _ADLJST                            LAB2ints
+     000000E9  G$AD0WINT$0$0                      LAB2ints
+     000000E9  G$ADWINT$0$0                       LAB2ints
+     000000E9  G$PCA0L$0$0                        LAB2ints
+     000000E9  _AD0WINT                           LAB2ints
+     000000E9  _ADWINT                            LAB2ints
+     000000E9  _PCA0L                             LAB2ints
+     000000EA  G$AD0CM0$0$0                       LAB2ints
+     000000EA  G$ADSTM0$0$0                       LAB2ints
+     000000EA  G$PCA0CPL0$0$0                     LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000EA  _AD0CM0                            LAB2ints
+     000000EA  _ADSTM0                            LAB2ints
+     000000EA  _PCA0CPL0                          LAB2ints
+     000000EB  G$AD0CM1$0$0                       LAB2ints
+     000000EB  G$ADSTM1$0$0                       LAB2ints
+     000000EB  G$PCA0CPL1$0$0                     LAB2ints
+     000000EB  _AD0CM1                            LAB2ints
+     000000EB  _ADSTM1                            LAB2ints
+     000000EB  _PCA0CPL1                          LAB2ints
+     000000EC  G$AD0BUSY$0$0                      LAB2ints
+     000000EC  G$ADBUSY$0$0                       LAB2ints
+     000000EC  G$PCA0CPL2$0$0                     LAB2ints
+     000000EC  _AD0BUSY                           LAB2ints
+     000000EC  _ADBUSY                            LAB2ints
+     000000EC  _PCA0CPL2                          LAB2ints
+     000000ED  G$AD0INT$0$0                       LAB2ints
+     000000ED  G$ADCINT$0$0                       LAB2ints
+     000000ED  G$PCA0CPL3$0$0                     LAB2ints
+     000000ED  _AD0INT                            LAB2ints
+     000000ED  _ADCINT                            LAB2ints
+     000000ED  _PCA0CPL3                          LAB2ints
+     000000EE  G$AD0TM$0$0                        LAB2ints
+     000000EE  G$ADCTM$0$0                        LAB2ints
+     000000EE  G$PCA0CPL4$0$0                     LAB2ints
+     000000EE  _AD0TM                             LAB2ints
+     000000EE  _ADCTM                             LAB2ints
+     000000EE  _PCA0CPL4                          LAB2ints
+     000000EF  G$AD0EN$0$0                        LAB2ints
+     000000EF  G$ADCEN$0$0                        LAB2ints
+     000000EF  G$RSTSRC$0$0                       LAB2ints
+     000000EF  _AD0EN                             LAB2ints
+     000000EF  _ADCEN                             LAB2ints
+     000000EF  _RSTSRC                            LAB2ints
+     000000F0  G$B$0$0                            LAB2ints
+     000000F0  _B                                 LAB2ints
+     000000F1  G$SCON1$0$0                        LAB2ints
+     000000F1  _SCON1                             LAB2ints
+     000000F2  G$SBUF1$0$0                        LAB2ints
+     000000F2  _SBUF1                             LAB2ints
+     000000F3  G$SADDR1$0$0                       LAB2ints
+     000000F3  _SADDR1                            LAB2ints
+     000000F4  G$TL4$0$0                          LAB2ints
+     000000F4  _TL4                               LAB2ints
+     000000F5  G$TH4$0$0                          LAB2ints
+     000000F5  _B_5                               _gptrget
+     000000F5  _TH4                               LAB2ints
+     000000F6  G$EIP1$0$0                         LAB2ints
+     000000F6  _B_6                               _gptrget
+     000000F6  _EIP1                              LAB2ints
+     000000F7  G$EIP2$0$0                         LAB2ints
+     000000F7  _B_7                               _gptrget
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000F7  _EIP2                              LAB2ints
+     000000F8  G$SPI0CN$0$0                       LAB2ints
+     000000F8  G$SPIEN$0$0                        LAB2ints
+     000000F8  _SPI0CN                            LAB2ints
+     000000F8  _SPIEN                             LAB2ints
+     000000F9  G$MSTEN$0$0                        LAB2ints
+     000000F9  G$PCA0H$0$0                        LAB2ints
+     000000F9  _MSTEN                             LAB2ints
+     000000F9  _PCA0H                             LAB2ints
+     000000FA  G$PCA0CPH0$0$0                     LAB2ints
+     000000FA  G$SLVSEL$0$0                       LAB2ints
+     000000FA  _PCA0CPH0                          LAB2ints
+     000000FA  _SLVSEL                            LAB2ints
+     000000FB  G$PCA0CPH1$0$0                     LAB2ints
+     000000FB  G$TXBSY$0$0                        LAB2ints
+     000000FB  _PCA0CPH1                          LAB2ints
+     000000FB  _TXBSY                             LAB2ints
+     000000FC  G$PCA0CPH2$0$0                     LAB2ints
+     000000FC  G$RXOVRN$0$0                       LAB2ints
+     000000FC  _PCA0CPH2                          LAB2ints
+     000000FC  _RXOVRN                            LAB2ints
+     000000FD  G$MODF$0$0                         LAB2ints
+     000000FD  G$PCA0CPH3$0$0                     LAB2ints
+     000000FD  _MODF                              LAB2ints
+     000000FD  _PCA0CPH3                          LAB2ints
+     000000FE  G$PCA0CPH4$0$0                     LAB2ints
+     000000FE  G$WCOL$0$0                         LAB2ints
+     000000FE  _PCA0CPH4                          LAB2ints
+     000000FE  _WCOL                              LAB2ints
+     000000FF  G$SPIF$0$0                         LAB2ints
+     000000FF  G$WDTCN$0$0                        LAB2ints
+     000000FF  _SPIF                              LAB2ints
+     000000FF  _WDTCN                             LAB2ints
+     00008C8A  G$TMR0$0$0                         LAB2ints
+     00008C8A  _TMR0                              LAB2ints
+     00008D8B  G$TMR1$0$0                         LAB2ints
+     00008D8B  _TMR1                              LAB2ints
+     00009392  G$TMR3RL$0$0                       LAB2ints
+     00009392  _TMR3RL                            LAB2ints
+     00009594  G$TMR3$0$0                         LAB2ints
+     00009594  _TMR3                              LAB2ints
+     0000BFBE  G$ADC0$0$0                         LAB2ints
+     0000BFBE  _ADC0                              LAB2ints
+     0000C5C4  G$ADC0GT$0$0                       LAB2ints
+     0000C5C4  _ADC0GT                            LAB2ints
+     0000C7C6  G$ADC0LT$0$0                       LAB2ints
+     0000C7C6  _ADC0LT                            LAB2ints
+     0000CBCA  G$RCAP2$0$0                        LAB2ints
+     0000CBCA  _RCAP2                             LAB2ints
+     0000CDCC  G$TMR2$0$0                         LAB2ints
+     0000CDCC  _TMR2                              LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000D3D2  G$DAC0$0$0                         LAB2ints
+     0000D3D2  _DAC0                              LAB2ints
+     0000D6D5  G$DAC1$0$0                         LAB2ints
+     0000D6D5  _DAC1                              LAB2ints
+     0000E5E4  G$RCAP4$0$0                        LAB2ints
+     0000E5E4  _RCAP4                             LAB2ints
+     0000F5F4  G$TMR4$0$0                         LAB2ints
+     0000F5F4  _TMR4                              LAB2ints
+     0000F9E9  G$PCA0$0$0                         LAB2ints
+     0000F9E9  _PCA0                              LAB2ints
+     0000FAEA  G$PCA0CP0$0$0                      LAB2ints
+     0000FAEA  _PCA0CP0                           LAB2ints
+     0000FBEB  G$PCA0CP1$0$0                      LAB2ints
+     0000FBEB  _PCA0CP1                           LAB2ints
+     0000FCEC  G$PCA0CP2$0$0                      LAB2ints
+     0000FCEC  _PCA0CP2                           LAB2ints
+     0000FDED  G$PCA0CP3$0$0                      LAB2ints
+     0000FDED  _PCA0CP3                           LAB2ints
+     0000FEEE  G$PCA0CP4$0$0                      LAB2ints
+     0000FEEE  _PCA0CP4                           LAB2ints
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+BSEG_BYTES                          00000020    00000002 =           2. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    0000007A =         122. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000000C  _vprintf_PARM_2                    vprintf
+     0000000D  _bp                                _bp
+     00000022  G$keyinput$0$0                     LAB2ints
+     00000022  _keyinput                          LAB2ints
+     00000024  G$Counts$0$0                       LAB2ints
+     00000024  _Counts                            LAB2ints
+     00000026  G$countHolder$0$0                  LAB2ints
+     00000026  _countHolder                       LAB2ints
+     00000028  G$i$0$0                            LAB2ints
+     00000028  _i                                 LAB2ints
+     00000029  G$x$0$0                            LAB2ints
+     00000029  _x                                 LAB2ints
+     0000002A  G$y$0$0                            LAB2ints
+     0000002A  _y                                 LAB2ints
+     0000002B  G$randomnum$0$0                    LAB2ints
+     0000002B  _randomnum                         LAB2ints
+     0000002C  G$previousnum$0$0                  LAB2ints
+     0000002C  _previousnum                       LAB2ints
+     0000002D  G$numC$0$0                         LAB2ints
+     0000002D  _numC                              LAB2ints
+     0000002E  G$on$0$0                           LAB2ints
+     0000002E  _on                                LAB2ints
+     0000002F  G$off$0$0                          LAB2ints
+     0000002F  _off                               LAB2ints
+     00000030  G$randList$0$0                     LAB2ints
+     00000030  _randList                          LAB2ints
+     0000003A  G$Points$0$0                       LAB2ints
+     0000003A  _Points                            LAB2ints
+     00000043  G$sum$0$0                          LAB2ints
+     00000043  _sum                               LAB2ints
+     00000044  G$k$0$0                            LAB2ints
+     00000044  _k                                 LAB2ints
+     00000045  G$turn$0$0                         LAB2ints
+     00000045  _turn                              LAB2ints
+     00000046  G$player$0$0                       LAB2ints
+     00000046  _player                            LAB2ints
+     00000047  G$inputFunc$0$0                    LAB2ints
+     00000047  _inputFunc                         LAB2ints
+     00000048  G$scores$0$0                       LAB2ints
+     00000048  _scores                            LAB2ints
+     00000057  __print_format_PARM_2              printf_large
+     0000005A  __print_format_PARM_3              printf_large
+     0000005D  __print_format_PARM_4              printf_large
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+OSEG                                0000000E    00000006 =           6. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000000E  __modsint_PARM_2                   _moduint
+     0000000E  __moduint_PARM_2                   _moduint
+     0000000E  __mullong_PARM_2                   _mullong
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+ISEG                                00000014    00000006 =           6. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000065    0000009B =         155. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000065  __start__stack                     LAB2ints
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000011 =          17. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  A$LAB2ints$1062                    LAB2ints
+C:   00000003  A$LAB2ints$1063                    LAB2ints
+C:   0000000B  A$LAB2ints$1065                    LAB2ints
+C:   0000000E  A$LAB2ints$1131                    LAB2ints
+C:   0000000E  __sdcc_program_startup             LAB2ints
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000011    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000011  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             00000014    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             0000001E    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000001E  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000040    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000040  __mcs51_genRAMCLEAR                
+C:   00000046  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              0000006A    00000028 =          40. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000006A  A$LAB2ints$1081                    LAB2ints
+C:   0000006A  C$LAB2ints.c$68$1$129              LAB2ints
+C:   0000006B  A$LAB2ints$1082                    LAB2ints
+C:   0000006D  A$LAB2ints$1083                    LAB2ints
+C:   0000006F  A$LAB2ints$1086                    LAB2ints
+C:   0000006F  C$LAB2ints.c$69$1$129              LAB2ints
+C:   00000071  A$LAB2ints$1087                    LAB2ints
+C:   00000073  A$LAB2ints$1091                    LAB2ints
+C:   00000075  A$LAB2ints$1095                    LAB2ints
+C:   00000077  A$LAB2ints$1099                    LAB2ints
+C:   00000077  C$LAB2ints.c$70$1$129              LAB2ints
+C:   00000079  A$LAB2ints$1103                    LAB2ints
+C:   00000079  C$LAB2ints.c$73$1$129              LAB2ints
+C:   0000007B  A$LAB2ints$1107                    LAB2ints
+C:   0000007B  C$LAB2ints.c$74$1$129              LAB2ints
+C:   0000007D  A$LAB2ints$1110                    LAB2ints
+C:   0000007D  C$LAB2ints.c$75$1$129              LAB2ints
+C:   00000080  A$LAB2ints$1114                    LAB2ints
+C:   00000080  C$LAB2ints.c$78$1$129              LAB2ints
+C:   00000082  A$LAB2ints$1118                    LAB2ints
+C:   00000082  C$LAB2ints.c$83$1$129              LAB2ints
+C:   00000084  A$LAB2ints$1120                    LAB2ints
+C:   00000086  A$LAB2ints$1122                    LAB2ints
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             00000092    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000092  A$LAB2ints$1124                    LAB2ints
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000095  A$LAB2ints$1159                    LAB2ints
+C:   00000095  C$c8051_SDCC.h$42$0$0              LAB2ints
+C:   00000095  C$c8051_SDCC.h$46$1$2              LAB2ints
+C:   00000095  G$SYSCLK_Init$0$0                  LAB2ints
+C:   00000095  _SYSCLK_Init                       LAB2ints
+C:   00000098  A$LAB2ints$1162                    LAB2ints
+C:   00000098  C$c8051_SDCC.h$49$1$2              LAB2ints
+C:   0000009A  A$LAB2ints$1163                    LAB2ints
+C:   0000009C  A$LAB2ints$1165                    LAB2ints
+C:   0000009D  A$LAB2ints$1166                    LAB2ints
+C:   0000009F  A$LAB2ints$1167                    LAB2ints
+C:   000000A0  A$LAB2ints$1168                    LAB2ints
+C:   000000A1  A$LAB2ints$1169                    LAB2ints
+C:   000000A3  A$LAB2ints$1170                    LAB2ints
+C:   000000A4  A$LAB2ints$1171                    LAB2ints
+C:   000000A6  A$LAB2ints$1172                    LAB2ints
+C:   000000A8  A$LAB2ints$1173                    LAB2ints
+C:   000000A9  A$LAB2ints$1174                    LAB2ints
+C:   000000AA  A$LAB2ints$1175                    LAB2ints
+C:   000000AC  A$LAB2ints$1179                    LAB2ints
+C:   000000AC  C$c8051_SDCC.h$51$1$2              LAB2ints
+C:   000000AE  A$LAB2ints$1180                    LAB2ints
+C:   000000B1  A$LAB2ints$1183                    LAB2ints
+C:   000000B1  C$c8051_SDCC.h$53$1$2              LAB2ints
+C:   000000B4  A$LAB2ints$1186                    LAB2ints
+C:   000000B4  C$c8051_SDCC.h$56$1$2              LAB2ints
+C:   000000B4  XG$SYSCLK_Init$0$0                 LAB2ints
+C:   000000B5  A$LAB2ints$1199                    LAB2ints
+C:   000000B5  C$c8051_SDCC.h$64$1$2              LAB2ints
+C:   000000B5  C$c8051_SDCC.h$66$1$4              LAB2ints
+C:   000000B5  G$UART0_Init$0$0                   LAB2ints
+C:   000000B5  _UART0_Init                        LAB2ints
+C:   000000B8  A$LAB2ints$1202                    LAB2ints
+C:   000000B8  C$c8051_SDCC.h$67$1$4              LAB2ints
+C:   000000BB  A$LAB2ints$1205                    LAB2ints
+C:   000000BB  C$c8051_SDCC.h$68$1$4              LAB2ints
+C:   000000BE  A$LAB2ints$1208                    LAB2ints
+C:   000000BE  C$c8051_SDCC.h$69$1$4              LAB2ints
+C:   000000C0  A$LAB2ints$1211                    LAB2ints
+C:   000000C0  C$c8051_SDCC.h$70$1$4              LAB2ints
+C:   000000C3  A$LAB2ints$1214                    LAB2ints
+C:   000000C3  C$c8051_SDCC.h$71$1$4              LAB2ints
+C:   000000C6  A$LAB2ints$1217                    LAB2ints
+C:   000000C6  C$c8051_SDCC.h$73$1$4              LAB2ints
+C:   000000C8  A$LAB2ints$1220                    LAB2ints
+C:   000000C8  C$c8051_SDCC.h$74$1$4              LAB2ints
+C:   000000CB  A$LAB2ints$1223                    LAB2ints
+C:   000000CB  C$c8051_SDCC.h$75$1$4              LAB2ints
+C:   000000CB  XG$UART0_Init$0$0                  LAB2ints
+C:   000000CC  A$LAB2ints$1236                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000CC  C$c8051_SDCC.h$83$1$4              LAB2ints
+C:   000000CC  C$c8051_SDCC.h$85$1$6              LAB2ints
+C:   000000CC  G$Sys_Init$0$0                     LAB2ints
+C:   000000CC  _Sys_Init                          LAB2ints
+C:   000000CF  A$LAB2ints$1239                    LAB2ints
+C:   000000CF  C$c8051_SDCC.h$86$1$6              LAB2ints
+C:   000000D2  A$LAB2ints$1242                    LAB2ints
+C:   000000D2  C$c8051_SDCC.h$88$1$6              LAB2ints
+C:   000000D5  A$LAB2ints$1245                    LAB2ints
+C:   000000D5  C$c8051_SDCC.h$89$1$6              LAB2ints
+C:   000000D8  A$LAB2ints$1248                    LAB2ints
+C:   000000D8  C$c8051_SDCC.h$91$1$6              LAB2ints
+C:   000000DB  A$LAB2ints$1251                    LAB2ints
+C:   000000DB  C$c8051_SDCC.h$92$1$6              LAB2ints
+C:   000000DE  A$LAB2ints$1254                    LAB2ints
+C:   000000DE  C$c8051_SDCC.h$93$1$6              LAB2ints
+C:   000000DE  XG$Sys_Init$0$0                    LAB2ints
+C:   000000DF  A$LAB2ints$1267                    LAB2ints
+C:   000000DF  C$c8051_SDCC.h$98$1$6              LAB2ints
+C:   000000DF  G$putchar$0$0                      LAB2ints
+C:   000000DF  _putchar                           LAB2ints
+C:   000000E1  A$LAB2ints$1273                    LAB2ints
+C:   000000E1  C$c8051_SDCC.h$100$1$8             LAB2ints
+C:   000000E1  C$c8051_SDCC.h$101$1$8             LAB2ints
+C:   000000E4  A$LAB2ints$1274                    LAB2ints
+C:   000000E6  A$LAB2ints$1278                    LAB2ints
+C:   000000E6  C$c8051_SDCC.h$102$1$8             LAB2ints
+C:   000000E8  A$LAB2ints$1281                    LAB2ints
+C:   000000E8  C$c8051_SDCC.h$103$1$8             LAB2ints
+C:   000000E8  XG$putchar$0$0                     LAB2ints
+C:   000000E9  A$LAB2ints$1299                    LAB2ints
+C:   000000E9  C$c8051_SDCC.h$108$1$8             LAB2ints
+C:   000000E9  C$c8051_SDCC.h$111$1$10            LAB2ints
+C:   000000E9  C$c8051_SDCC.h$112$1$10            LAB2ints
+C:   000000E9  G$getchar$0$0                      LAB2ints
+C:   000000E9  _getchar                           LAB2ints
+C:   000000EC  A$LAB2ints$1300                    LAB2ints
+C:   000000EE  A$LAB2ints$1304                    LAB2ints
+C:   000000EE  C$c8051_SDCC.h$113$1$10            LAB2ints
+C:   000000F1  A$LAB2ints$1307                    LAB2ints
+C:   000000F1  C$c8051_SDCC.h$114$1$10            LAB2ints
+C:   000000F4  A$LAB2ints$1310                    LAB2ints
+C:   000000F4  C$c8051_SDCC.h$115$1$10            LAB2ints
+C:   000000F7  A$LAB2ints$1313                    LAB2ints
+C:   000000F7  C$c8051_SDCC.h$116$1$10            LAB2ints
+C:   000000F7  XG$getchar$0$0                     LAB2ints
+C:   000000F8  A$LAB2ints$1328                    LAB2ints
+C:   000000F8  C$c8051_SDCC.h$121$1$10            LAB2ints
+C:   000000F8  C$c8051_SDCC.h$124$1$12            LAB2ints
+C:   000000F8  G$getchar_nw$0$0                   LAB2ints
+C:   000000F8  _getchar_nw                        LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000FB  A$LAB2ints$1329                    LAB2ints
+C:   000000FE  A$LAB2ints$1330                    LAB2ints
+C:   00000100  A$LAB2ints$1334                    LAB2ints
+C:   00000100  C$c8051_SDCC.h$127$2$13            LAB2ints
+C:   00000102  A$LAB2ints$1337                    LAB2ints
+C:   00000102  C$c8051_SDCC.h$128$2$13            LAB2ints
+C:   00000105  A$LAB2ints$1340                    LAB2ints
+C:   00000105  C$c8051_SDCC.h$129$2$13            LAB2ints
+C:   00000108  A$LAB2ints$1343                    LAB2ints
+C:   00000108  C$c8051_SDCC.h$130$2$13            LAB2ints
+C:   0000010B  A$LAB2ints$1347                    LAB2ints
+C:   0000010B  C$c8051_SDCC.h$132$1$12            LAB2ints
+C:   0000010B  XG$getchar_nw$0$0                  LAB2ints
+C:   0000010C  A$LAB2ints$1360                    LAB2ints
+C:   0000010C  C$LAB2ints.c$87$1$12               LAB2ints
+C:   0000010C  C$LAB2ints.c$89$1$65               LAB2ints
+C:   0000010C  G$main$0$0                         LAB2ints
+C:   0000010C  _main                              LAB2ints
+C:   0000010F  A$LAB2ints$1363                    LAB2ints
+C:   0000010F  C$LAB2ints.c$90$1$65               LAB2ints
+C:   00000112  A$LAB2ints$1366                    LAB2ints
+C:   00000112  C$LAB2ints.c$91$1$65               LAB2ints
+C:   00000115  A$LAB2ints$1369                    LAB2ints
+C:   00000115  C$LAB2ints.c$92$1$65               LAB2ints
+C:   00000118  A$LAB2ints$1372                    LAB2ints
+C:   00000118  C$LAB2ints.c$93$1$65               LAB2ints
+C:   0000011B  A$LAB2ints$1373                    LAB2ints
+C:   0000011E  A$LAB2ints$1376                    LAB2ints
+C:   0000011E  C$LAB2ints.c$94$1$65               LAB2ints
+C:   00000120  A$LAB2ints$1377                    LAB2ints
+C:   00000122  A$LAB2ints$1378                    LAB2ints
+C:   00000124  A$LAB2ints$1379                    LAB2ints
+C:   00000126  A$LAB2ints$1380                    LAB2ints
+C:   00000128  A$LAB2ints$1381                    LAB2ints
+C:   0000012A  A$LAB2ints$1382                    LAB2ints
+C:   0000012D  A$LAB2ints$1383                    LAB2ints
+C:   0000012F  A$LAB2ints$1384                    LAB2ints
+C:   00000131  A$LAB2ints$1385                    LAB2ints
+C:   00000133  A$LAB2ints$1391                    LAB2ints
+C:   00000133  C$LAB2ints.c$97$1$65               LAB2ints
+C:   00000133  C$LAB2ints.c$98$2$66               LAB2ints
+C:   00000136  A$LAB2ints$1394                    LAB2ints
+C:   00000136  C$LAB2ints.c$99$2$66               LAB2ints
+C:   00000139  A$LAB2ints$1397                    LAB2ints
+C:   00000139  C$LAB2ints.c$100$2$66              LAB2ints
+C:   0000013C  A$LAB2ints$1400                    LAB2ints
+C:   0000013C  C$LAB2ints.c$101$2$66              LAB2ints
+C:   0000013F  A$LAB2ints$1401                    LAB2ints
+C:   00000141  A$LAB2ints$1402                    LAB2ints
+C:   00000143  A$LAB2ints$1403                    LAB2ints
+C:   00000144  A$LAB2ints$1404                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000146  A$LAB2ints$1405                    LAB2ints
+C:   00000148  A$LAB2ints$1408                    LAB2ints
+C:   00000148  C$LAB2ints.c$102$2$66              LAB2ints
+C:   0000014A  A$LAB2ints$1409                    LAB2ints
+C:   0000014C  A$LAB2ints$1410                    LAB2ints
+C:   0000014E  A$LAB2ints$1411                    LAB2ints
+C:   00000150  A$LAB2ints$1412                    LAB2ints
+C:   00000152  A$LAB2ints$1413                    LAB2ints
+C:   00000154  A$LAB2ints$1414                    LAB2ints
+C:   00000157  A$LAB2ints$1415                    LAB2ints
+C:   00000159  A$LAB2ints$1416                    LAB2ints
+C:   0000015B  A$LAB2ints$1417                    LAB2ints
+C:   0000015D  A$LAB2ints$1420                    LAB2ints
+C:   0000015D  C$LAB2ints.c$103$2$66              LAB2ints
+C:   00000160  A$LAB2ints$1423                    LAB2ints
+C:   00000160  C$LAB2ints.c$104$2$66              LAB2ints
+C:   00000163  A$LAB2ints$1426                    LAB2ints
+C:   00000163  C$LAB2ints.c$105$2$66              LAB2ints
+C:   00000166  A$LAB2ints$1429                    LAB2ints
+C:   00000166  C$LAB2ints.c$106$2$66              LAB2ints
+C:   00000169  A$LAB2ints$1432                    LAB2ints
+C:   00000169  C$LAB2ints.c$109$2$66              LAB2ints
+C:   0000016C  A$LAB2ints$1435                    LAB2ints
+C:   0000016C  C$LAB2ints.c$110$2$66              LAB2ints
+C:   0000016E  A$LAB2ints$1436                    LAB2ints
+C:   00000170  A$LAB2ints$1437                    LAB2ints
+C:   00000172  A$LAB2ints$1438                    LAB2ints
+C:   00000174  A$LAB2ints$1439                    LAB2ints
+C:   00000176  A$LAB2ints$1440                    LAB2ints
+C:   00000178  A$LAB2ints$1441                    LAB2ints
+C:   0000017B  A$LAB2ints$1442                    LAB2ints
+C:   0000017D  A$LAB2ints$1443                    LAB2ints
+C:   0000017F  A$LAB2ints$1444                    LAB2ints
+C:   00000181  A$LAB2ints$1448                    LAB2ints
+C:   00000181  C$LAB2ints.c$111$3$67              LAB2ints
+C:   00000183  A$LAB2ints$1449                    LAB2ints
+C:   00000185  A$LAB2ints$1450                    LAB2ints
+C:   00000187  A$LAB2ints$1451                    LAB2ints
+C:   0000018A  A$LAB2ints$1455                    LAB2ints
+C:   0000018A  C$LAB2ints.c$112$3$67              LAB2ints
+C:   0000018C  A$LAB2ints$1456                    LAB2ints
+C:   0000018E  A$LAB2ints$1457                    LAB2ints
+C:   00000190  A$LAB2ints$1458                    LAB2ints
+C:   00000192  A$LAB2ints$1459                    LAB2ints
+C:   00000194  A$LAB2ints$1460                    LAB2ints
+C:   00000196  A$LAB2ints$1461                    LAB2ints
+C:   00000198  A$LAB2ints$1462                    LAB2ints
+C:   0000019A  A$LAB2ints$1463                    LAB2ints
+C:   0000019C  A$LAB2ints$1464                    LAB2ints
+C:   0000019E  A$LAB2ints$1465                    LAB2ints
+C:   000001A1  A$LAB2ints$1466                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001A3  A$LAB2ints$1467                    LAB2ints
+C:   000001A5  A$LAB2ints$1468                    LAB2ints
+C:   000001A7  A$LAB2ints$1472                    LAB2ints
+C:   000001A7  C$LAB2ints.c$114$3$67              LAB2ints
+C:   000001A9  A$LAB2ints$1473                    LAB2ints
+C:   000001AB  A$LAB2ints$1474                    LAB2ints
+C:   000001AD  A$LAB2ints$1475                    LAB2ints
+C:   000001B0  A$LAB2ints$1479                    LAB2ints
+C:   000001B0  C$LAB2ints.c$115$4$68              LAB2ints
+C:   000001B2  A$LAB2ints$1480                    LAB2ints
+C:   000001B4  A$LAB2ints$1481                    LAB2ints
+C:   000001B6  A$LAB2ints$1482                    LAB2ints
+C:   000001B8  A$LAB2ints$1483                    LAB2ints
+C:   000001BA  A$LAB2ints$1484                    LAB2ints
+C:   000001BC  A$LAB2ints$1485                    LAB2ints
+C:   000001BE  A$LAB2ints$1486                    LAB2ints
+C:   000001C0  A$LAB2ints$1487                    LAB2ints
+C:   000001C2  A$LAB2ints$1488                    LAB2ints
+C:   000001C4  A$LAB2ints$1489                    LAB2ints
+C:   000001C7  A$LAB2ints$1490                    LAB2ints
+C:   000001C9  A$LAB2ints$1491                    LAB2ints
+C:   000001CB  A$LAB2ints$1492                    LAB2ints
+C:   000001CD  A$LAB2ints$1495                    LAB2ints
+C:   000001D0  A$LAB2ints$1499                    LAB2ints
+C:   000001D3  A$LAB2ints$1501                    LAB2ints
+C:   000001D4  A$LAB2ints$1502                    LAB2ints
+C:   000001D6  A$LAB2ints$1503                    LAB2ints
+C:   000001D8  A$LAB2ints$1504                    LAB2ints
+C:   000001DB  A$LAB2ints$1505                    LAB2ints
+C:   000001DE  A$LAB2ints$1506                    LAB2ints
+C:   000001E0  A$LAB2ints$1507                    LAB2ints
+C:   000001E2  A$LAB2ints$1510                    LAB2ints
+C:   000001E2  C$LAB2ints.c$120$6$70              LAB2ints
+C:   000001E5  A$LAB2ints$1513                    LAB2ints
+C:   000001E5  C$LAB2ints.c$121$7$71              LAB2ints
+C:   000001E7  A$LAB2ints$1514                    LAB2ints
+C:   000001E9  A$LAB2ints$1515                    LAB2ints
+C:   000001EB  A$LAB2ints$1516                    LAB2ints
+C:   000001ED  A$LAB2ints$1517                    LAB2ints
+C:   000001EF  A$LAB2ints$1518                    LAB2ints
+C:   000001F1  A$LAB2ints$1519                    LAB2ints
+C:   000001F4  A$LAB2ints$1520                    LAB2ints
+C:   000001F6  A$LAB2ints$1521                    LAB2ints
+C:   000001F8  A$LAB2ints$1522                    LAB2ints
+C:   000001FA  A$LAB2ints$1525                    LAB2ints
+C:   000001FA  C$LAB2ints.c$122$7$71              LAB2ints
+C:   000001FC  A$LAB2ints$1526                    LAB2ints
+C:   000001FE  A$LAB2ints$1527                    LAB2ints
+C:   000001FF  A$LAB2ints$1528                    LAB2ints
+C:   00000201  A$LAB2ints$1529                    LAB2ints
+C:   00000204  A$LAB2ints$1530                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000207  A$LAB2ints$1533                    LAB2ints
+C:   00000207  C$LAB2ints.c$123$7$71              LAB2ints
+C:   00000209  A$LAB2ints$1534                    LAB2ints
+C:   0000020B  A$LAB2ints$1535                    LAB2ints
+C:   0000020C  A$LAB2ints$1536                    LAB2ints
+C:   0000020E  A$LAB2ints$1537                    LAB2ints
+C:   00000210  A$LAB2ints$1538                    LAB2ints
+C:   00000212  A$LAB2ints$1539                    LAB2ints
+C:   00000214  A$LAB2ints$1540                    LAB2ints
+C:   00000216  A$LAB2ints$1541                    LAB2ints
+C:   00000218  A$LAB2ints$1542                    LAB2ints
+C:   0000021A  A$LAB2ints$1543                    LAB2ints
+C:   0000021C  A$LAB2ints$1544                    LAB2ints
+C:   0000021E  A$LAB2ints$1545                    LAB2ints
+C:   00000220  A$LAB2ints$1546                    LAB2ints
+C:   00000223  A$LAB2ints$1547                    LAB2ints
+C:   00000225  A$LAB2ints$1548                    LAB2ints
+C:   00000227  A$LAB2ints$1549                    LAB2ints
+C:   00000229  A$LAB2ints$1552                    LAB2ints
+C:   00000229  C$LAB2ints.c$124$7$71              LAB2ints
+C:   0000022B  A$LAB2ints$1553                    LAB2ints
+C:   0000022D  A$LAB2ints$1556                    LAB2ints
+C:   0000022D  C$LAB2ints.c$125$8$72              LAB2ints
+C:   0000022F  A$LAB2ints$1557                    LAB2ints
+C:   00000231  A$LAB2ints$1561                    LAB2ints
+C:   00000231  C$LAB2ints.c$127$8$73              LAB2ints
+C:   00000234  A$LAB2ints$1564                    LAB2ints
+C:   00000234  C$LAB2ints.c$128$8$73              LAB2ints
+C:   00000237  A$LAB2ints$1567                    LAB2ints
+C:   00000237  C$LAB2ints.c$129$8$73              LAB2ints
+C:   00000239  A$LAB2ints$1571                    LAB2ints
+C:   00000239  C$LAB2ints.c$132$7$74              LAB2ints
+C:   0000023C  A$LAB2ints$1575                    LAB2ints
+C:   0000023C  C$LAB2ints.c$118$5$69              LAB2ints
+C:   0000023E  A$LAB2ints$1576                    LAB2ints
+C:   00000240  A$LAB2ints$1580                    LAB2ints
+C:   00000240  C$LAB2ints.c$116$4$68              LAB2ints
+C:   00000242  A$LAB2ints$1581                    LAB2ints
+C:   00000243  A$LAB2ints$1582                    LAB2ints
+C:   00000245  A$LAB2ints$1583                    LAB2ints
+C:   00000247  A$LAB2ints$1584                    LAB2ints
+C:   00000249  A$LAB2ints$1585                    LAB2ints
+C:   0000024B  A$LAB2ints$1586                    LAB2ints
+C:   0000024E  A$LAB2ints$1590                    LAB2ints
+C:   0000024E  C$LAB2ints.c$136$4$68              LAB2ints
+C:   00000250  A$LAB2ints$1591                    LAB2ints
+C:   00000252  A$LAB2ints$1592                    LAB2ints
+C:   00000253  A$LAB2ints$1593                    LAB2ints
+C:   00000255  A$LAB2ints$1594                    LAB2ints
+C:   00000257  A$LAB2ints$1595                    LAB2ints
+C:   00000258  A$LAB2ints$1596                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000259  A$LAB2ints$1599                    LAB2ints
+C:   00000259  C$LAB2ints.c$137$4$68              LAB2ints
+C:   0000025B  A$LAB2ints$1602                    LAB2ints
+C:   0000025B  C$LAB2ints.c$140$4$68              LAB2ints
+C:   0000025D  A$LAB2ints$1603                    LAB2ints
+C:   0000025F  A$LAB2ints$1604                    LAB2ints
+C:   00000260  A$LAB2ints$1605                    LAB2ints
+C:   00000262  A$LAB2ints$1606                    LAB2ints
+C:   00000264  A$LAB2ints$1607                    LAB2ints
+C:   00000266  A$LAB2ints$1608                    LAB2ints
+C:   00000268  A$LAB2ints$1609                    LAB2ints
+C:   0000026A  A$LAB2ints$1610                    LAB2ints
+C:   0000026C  A$LAB2ints$1611                    LAB2ints
+C:   0000026E  A$LAB2ints$1612                    LAB2ints
+C:   00000270  A$LAB2ints$1613                    LAB2ints
+C:   00000272  A$LAB2ints$1614                    LAB2ints
+C:   00000274  A$LAB2ints$1615                    LAB2ints
+C:   00000276  A$LAB2ints$1616                    LAB2ints
+C:   00000278  A$LAB2ints$1617                    LAB2ints
+C:   0000027A  A$LAB2ints$1618                    LAB2ints
+C:   0000027C  A$LAB2ints$1619                    LAB2ints
+C:   0000027E  A$LAB2ints$1620                    LAB2ints
+C:   00000280  A$LAB2ints$1621                    LAB2ints
+C:   00000282  A$LAB2ints$1622                    LAB2ints
+C:   00000284  A$LAB2ints$1623                    LAB2ints
+C:   00000287  A$LAB2ints$1624                    LAB2ints
+C:   00000289  A$LAB2ints$1625                    LAB2ints
+C:   0000028B  A$LAB2ints$1626                    LAB2ints
+C:   0000028D  A$LAB2ints$1629                    LAB2ints
+C:   0000028D  C$LAB2ints.c$141$4$68              LAB2ints
+C:   00000290  A$LAB2ints$1632                    LAB2ints
+C:   00000290  C$LAB2ints.c$142$4$68              LAB2ints
+C:   00000293  A$LAB2ints$1633                    LAB2ints
+C:   00000296  A$LAB2ints$1637                    LAB2ints
+C:   00000296  C$LAB2ints.c$145$3$67              LAB2ints
+C:   00000299  A$LAB2ints$1640                    LAB2ints
+C:   00000299  C$LAB2ints.c$146$3$67              LAB2ints
+C:   0000029B  A$LAB2ints$1641                    LAB2ints
+C:   0000029E  A$LAB2ints$1645                    LAB2ints
+C:   0000029E  C$LAB2ints.c$148$2$66              LAB2ints
+C:   000002A0  A$LAB2ints$1646                    LAB2ints
+C:   000002A2  A$LAB2ints$1647                    LAB2ints
+C:   000002A4  A$LAB2ints$1648                    LAB2ints
+C:   000002A6  A$LAB2ints$1649                    LAB2ints
+C:   000002A8  A$LAB2ints$1650                    LAB2ints
+C:   000002AA  A$LAB2ints$1651                    LAB2ints
+C:   000002AC  A$LAB2ints$1652                    LAB2ints
+C:   000002AE  A$LAB2ints$1653                    LAB2ints
+C:   000002B0  A$LAB2ints$1654                    LAB2ints
+C:   000002B2  A$LAB2ints$1655                    LAB2ints
+C:   000002B4  A$LAB2ints$1656                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000002B6  A$LAB2ints$1657                    LAB2ints
+C:   000002B8  A$LAB2ints$1658                    LAB2ints
+C:   000002BA  A$LAB2ints$1659                    LAB2ints
+C:   000002BC  A$LAB2ints$1660                    LAB2ints
+C:   000002BE  A$LAB2ints$1661                    LAB2ints
+C:   000002C0  A$LAB2ints$1662                    LAB2ints
+C:   000002C2  A$LAB2ints$1663                    LAB2ints
+C:   000002C5  A$LAB2ints$1664                    LAB2ints
+C:   000002C7  A$LAB2ints$1665                    LAB2ints
+C:   000002C9  A$LAB2ints$1666                    LAB2ints
+C:   000002CB  A$LAB2ints$1669                    LAB2ints
+C:   000002CB  C$LAB2ints.c$151$2$66              LAB2ints
+C:   000002CE  A$LAB2ints$1672                    LAB2ints
+C:   000002CE  C$LAB2ints.c$152$2$66              LAB2ints
+C:   000002D0  A$LAB2ints$1675                    LAB2ints
+C:   000002D0  C$LAB2ints.c$153$2$66              LAB2ints
+C:   000002D2  A$LAB2ints$1676                    LAB2ints
+C:   000002D4  A$LAB2ints$1677                    LAB2ints
+C:   000002D6  A$LAB2ints$1678                    LAB2ints
+C:   000002D8  A$LAB2ints$1679                    LAB2ints
+C:   000002DA  A$LAB2ints$1680                    LAB2ints
+C:   000002DC  A$LAB2ints$1681                    LAB2ints
+C:   000002DF  A$LAB2ints$1682                    LAB2ints
+C:   000002E1  A$LAB2ints$1683                    LAB2ints
+C:   000002E3  A$LAB2ints$1684                    LAB2ints
+C:   000002E5  A$LAB2ints$1688                    LAB2ints
+C:   000002E5  C$LAB2ints.c$154$2$66              LAB2ints
+C:   000002E8  A$LAB2ints$1692                    LAB2ints
+C:   000002E8  C$LAB2ints.c$155$2$66              LAB2ints
+C:   000002EB  A$LAB2ints$1693                    LAB2ints
+C:   000002EE  A$LAB2ints$1695                    LAB2ints
+C:   000002F0  A$LAB2ints$1698                    LAB2ints
+C:   000002F0  C$LAB2ints.c$158$1$65              LAB2ints
+C:   000002F0  XG$main$0$0                        LAB2ints
+C:   000002F1  A$LAB2ints$1711                    LAB2ints
+C:   000002F1  C$LAB2ints.c$164$1$65              LAB2ints
+C:   000002F1  C$LAB2ints.c$165$1$76              LAB2ints
+C:   000002F1  G$pause$0$0                        LAB2ints
+C:   000002F1  _pause                             LAB2ints
+C:   000002F3  A$LAB2ints$1712                    LAB2ints
+C:   000002F5  A$LAB2ints$1713                    LAB2ints
+C:   000002F7  A$LAB2ints$1714                    LAB2ints
+C:   000002F9  A$LAB2ints$1715                    LAB2ints
+C:   000002FB  A$LAB2ints$1716                    LAB2ints
+C:   000002FD  A$LAB2ints$1717                    LAB2ints
+C:   00000300  A$LAB2ints$1718                    LAB2ints
+C:   00000302  A$LAB2ints$1719                    LAB2ints
+C:   00000304  A$LAB2ints$1720                    LAB2ints
+C:   00000306  A$LAB2ints$1723                    LAB2ints
+C:   00000306  C$LAB2ints.c$166$1$76              LAB2ints
+C:   00000308  A$LAB2ints$1726                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000308  C$LAB2ints.c$167$1$76              LAB2ints
+C:   0000030B  A$LAB2ints$1729                    LAB2ints
+C:   0000030B  C$LAB2ints.c$168$1$76              LAB2ints
+C:   0000030E  A$LAB2ints$1732                    LAB2ints
+C:   0000030E  C$LAB2ints.c$169$1$76              LAB2ints
+C:   00000310  A$LAB2ints$1735                    LAB2ints
+C:   00000310  C$LAB2ints.c$170$1$76              LAB2ints
+C:   00000313  A$LAB2ints$1738                    LAB2ints
+C:   00000313  C$LAB2ints.c$171$1$76              LAB2ints
+C:   00000316  A$LAB2ints$1741                    LAB2ints
+C:   00000316  C$LAB2ints.c$172$1$76              LAB2ints
+C:   00000318  A$LAB2ints$1742                    LAB2ints
+C:   0000031A  A$LAB2ints$1743                    LAB2ints
+C:   0000031C  A$LAB2ints$1744                    LAB2ints
+C:   0000031E  A$LAB2ints$1745                    LAB2ints
+C:   00000320  A$LAB2ints$1746                    LAB2ints
+C:   00000322  A$LAB2ints$1747                    LAB2ints
+C:   00000325  A$LAB2ints$1748                    LAB2ints
+C:   00000327  A$LAB2ints$1749                    LAB2ints
+C:   00000329  A$LAB2ints$1750                    LAB2ints
+C:   0000032B  A$LAB2ints$1753                    LAB2ints
+C:   0000032B  C$LAB2ints.c$173$1$76              LAB2ints
+C:   0000032B  XG$pause$0$0                       LAB2ints
+C:   0000032C  A$LAB2ints$1766                    LAB2ints
+C:   0000032C  C$LAB2ints.c$175$1$76              LAB2ints
+C:   0000032C  C$LAB2ints.c$176$1$78              LAB2ints
+C:   0000032C  G$endTurn$0$0                      LAB2ints
+C:   0000032C  _endTurn                           LAB2ints
+C:   0000032E  A$LAB2ints$1767                    LAB2ints
+C:   00000330  A$LAB2ints$1768                    LAB2ints
+C:   00000332  A$LAB2ints$1769                    LAB2ints
+C:   00000334  A$LAB2ints$1770                    LAB2ints
+C:   00000336  A$LAB2ints$1771                    LAB2ints
+C:   00000338  A$LAB2ints$1772                    LAB2ints
+C:   0000033B  A$LAB2ints$1773                    LAB2ints
+C:   0000033D  A$LAB2ints$1774                    LAB2ints
+C:   0000033F  A$LAB2ints$1775                    LAB2ints
+C:   00000341  A$LAB2ints$1778                    LAB2ints
+C:   00000341  C$LAB2ints.c$177$1$78              LAB2ints
+C:   00000343  A$LAB2ints$1781                    LAB2ints
+C:   00000343  C$LAB2ints.c$178$1$78              LAB2ints
+C:   00000345  A$LAB2ints$1784                    LAB2ints
+C:   00000345  C$LAB2ints.c$179$1$78              LAB2ints
+C:   00000347  A$LAB2ints$1787                    LAB2ints
+C:   00000347  C$LAB2ints.c$180$1$78              LAB2ints
+C:   00000349  A$LAB2ints$1790                    LAB2ints
+C:   00000349  C$LAB2ints.c$181$1$78              LAB2ints
+C:   0000034C  A$LAB2ints$1793                    LAB2ints
+C:   0000034C  C$LAB2ints.c$182$1$78              LAB2ints
+C:   0000034E  A$LAB2ints$1796                    LAB2ints
+C:   0000034E  C$LAB2ints.c$183$1$78              LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000350  A$LAB2ints$1799                    LAB2ints
+C:   00000350  C$LAB2ints.c$184$1$78              LAB2ints
+C:   00000352  A$LAB2ints$1802                    LAB2ints
+C:   00000352  C$LAB2ints.c$185$1$78              LAB2ints
+C:   00000354  A$LAB2ints$1805                    LAB2ints
+C:   00000354  C$LAB2ints.c$186$1$78              LAB2ints
+C:   00000354  XG$endTurn$0$0                     LAB2ints
+C:   00000355  A$LAB2ints$1818                    LAB2ints
+C:   00000355  C$LAB2ints.c$187$1$78              LAB2ints
+C:   00000355  C$LAB2ints.c$188$1$80              LAB2ints
+C:   00000355  G$Buzz$0$0                         LAB2ints
+C:   00000355  _Buzz                              LAB2ints
+C:   00000357  A$LAB2ints$1821                    LAB2ints
+C:   00000357  C$LAB2ints.c$189$1$80              LAB2ints
+C:   0000035A  A$LAB2ints$1824                    LAB2ints
+C:   0000035A  C$LAB2ints.c$190$1$80              LAB2ints
+C:   0000035C  A$LAB2ints$1827                    LAB2ints
+C:   0000035C  C$LAB2ints.c$191$1$80              LAB2ints
+C:   0000035C  XG$Buzz$0$0                        LAB2ints
+C:   0000035D  A$LAB2ints$1840                    LAB2ints
+C:   0000035D  C$LAB2ints.c$193$1$80              LAB2ints
+C:   0000035D  G$seq$0$0                          LAB2ints
+C:   0000035D  _seq                               LAB2ints
+C:   0000035F  A$LAB2ints$1843                    LAB2ints
+C:   0000035F  C$LAB2ints.c$194$1$82              LAB2ints
+C:   00000361  A$LAB2ints$1844                    LAB2ints
+C:   00000363  A$LAB2ints$1845                    LAB2ints
+C:   00000365  A$LAB2ints$1846                    LAB2ints
+C:   00000367  A$LAB2ints$1847                    LAB2ints
+C:   00000369  A$LAB2ints$1848                    LAB2ints
+C:   0000036B  A$LAB2ints$1849                    LAB2ints
+C:   0000036D  A$LAB2ints$1850                    LAB2ints
+C:   00000370  A$LAB2ints$1851                    LAB2ints
+C:   00000372  A$LAB2ints$1852                    LAB2ints
+C:   00000374  A$LAB2ints$1853                    LAB2ints
+C:   00000376  A$LAB2ints$1854                    LAB2ints
+C:   00000378  A$LAB2ints$1857                    LAB2ints
+C:   00000378  C$LAB2ints.c$195$1$82              LAB2ints
+C:   0000037A  A$LAB2ints$1858                    LAB2ints
+C:   0000037C  A$LAB2ints$1859                    LAB2ints
+C:   0000037F  A$LAB2ints$1862                    LAB2ints
+C:   0000037F  C$LAB2ints.c$196$1$82              LAB2ints
+C:   00000382  A$LAB2ints$1863                    LAB2ints
+C:   00000384  A$LAB2ints$1866                    LAB2ints
+C:   00000384  C$LAB2ints.c$197$1$82              LAB2ints
+C:   00000386  A$LAB2ints$1867                    LAB2ints
+C:   00000389  A$LAB2ints$1870                    LAB2ints
+C:   00000389  C$LAB2ints.c$198$1$82              LAB2ints
+C:   00000389  XG$seq$0$0                         LAB2ints
+C:   0000038A  A$LAB2ints$1883                    LAB2ints
+C:   0000038A  C$LAB2ints.c$201$1$82              LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000038A  G$pushButton$0$0                   LAB2ints
+C:   0000038A  _pushButton                        LAB2ints
+C:   0000038C  A$LAB2ints$1886                    LAB2ints
+C:   0000038C  C$LAB2ints.c$202$1$84              LAB2ints
+C:   0000038E  A$LAB2ints$1887                    LAB2ints
+C:   00000390  A$LAB2ints$1888                    LAB2ints
+C:   00000392  A$LAB2ints$1889                    LAB2ints
+C:   00000394  A$LAB2ints$1890                    LAB2ints
+C:   00000396  A$LAB2ints$1891                    LAB2ints
+C:   00000398  A$LAB2ints$1892                    LAB2ints
+C:   0000039A  A$LAB2ints$1893                    LAB2ints
+C:   0000039D  A$LAB2ints$1894                    LAB2ints
+C:   0000039F  A$LAB2ints$1895                    LAB2ints
+C:   000003A1  A$LAB2ints$1896                    LAB2ints
+C:   000003A3  A$LAB2ints$1897                    LAB2ints
+C:   000003A5  A$LAB2ints$1900                    LAB2ints
+C:   000003A5  C$LAB2ints.c$203$1$84              LAB2ints
+C:   000003A8  A$LAB2ints$1901                    LAB2ints
+C:   000003AA  A$LAB2ints$1903                    LAB2ints
+C:   000003AD  A$LAB2ints$1904                    LAB2ints
+C:   000003AF  A$LAB2ints$1906                    LAB2ints
+C:   000003B2  A$LAB2ints$1907                    LAB2ints
+C:   000003B4  A$LAB2ints$1911                    LAB2ints
+C:   000003B4  C$LAB2ints.c$204$2$85              LAB2ints
+C:   000003B7  A$LAB2ints$1912                    LAB2ints
+C:   000003B9  A$LAB2ints$1916                    LAB2ints
+C:   000003B9  C$LAB2ints.c$205$2$85              LAB2ints
+C:   000003BC  A$LAB2ints$1919                    LAB2ints
+C:   000003BC  C$LAB2ints.c$206$2$85              LAB2ints
+C:   000003BF  A$LAB2ints$1920                    LAB2ints
+C:   000003C1  A$LAB2ints$1924                    LAB2ints
+C:   000003C1  C$LAB2ints.c$207$2$85              LAB2ints
+C:   000003C4  A$LAB2ints$1927                    LAB2ints
+C:   000003C4  C$LAB2ints.c$208$2$85              LAB2ints
+C:   000003C6  A$LAB2ints$1931                    LAB2ints
+C:   000003C6  C$LAB2ints.c$209$2$85              LAB2ints
+C:   000003C9  A$LAB2ints$1934                    LAB2ints
+C:   000003C9  C$LAB2ints.c$210$2$85              LAB2ints
+C:   000003CC  A$LAB2ints$1935                    LAB2ints
+C:   000003CE  A$LAB2ints$1939                    LAB2ints
+C:   000003CE  C$LAB2ints.c$211$2$85              LAB2ints
+C:   000003D1  A$LAB2ints$1942                    LAB2ints
+C:   000003D1  C$LAB2ints.c$212$2$85              LAB2ints
+C:   000003D3  A$LAB2ints$1946                    LAB2ints
+C:   000003D3  C$LAB2ints.c$213$2$85              LAB2ints
+C:   000003D6  A$LAB2ints$1949                    LAB2ints
+C:   000003D6  C$LAB2ints.c$214$2$85              LAB2ints
+C:   000003D9  A$LAB2ints$1950                    LAB2ints
+C:   000003DB  A$LAB2ints$1954                    LAB2ints
+C:   000003DB  C$LAB2ints.c$215$2$85              LAB2ints
+C:   000003DE  A$LAB2ints$1957                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000003DE  C$LAB2ints.c$216$2$85              LAB2ints
+C:   000003E0  A$LAB2ints$1961                    LAB2ints
+C:   000003E0  C$LAB2ints.c$217$2$85              LAB2ints
+C:   000003E3  A$LAB2ints$1964                    LAB2ints
+C:   000003E3  C$LAB2ints.c$218$2$85              LAB2ints
+C:   000003E6  A$LAB2ints$1965                    LAB2ints
+C:   000003E8  A$LAB2ints$1969                    LAB2ints
+C:   000003E8  C$LAB2ints.c$219$2$85              LAB2ints
+C:   000003EB  A$LAB2ints$1972                    LAB2ints
+C:   000003EB  C$LAB2ints.c$220$1$84              LAB2ints
+C:   000003ED  A$LAB2ints$1976                    LAB2ints
+C:   000003ED  C$LAB2ints.c$221$1$84              LAB2ints
+C:   000003F0  A$LAB2ints$1980                    LAB2ints
+C:   000003F0  C$LAB2ints.c$222$1$84              LAB2ints
+C:   000003F0  XG$pushButton$0$0                  LAB2ints
+C:   000003F1  A$LAB2ints$1993                    LAB2ints
+C:   000003F1  C$LAB2ints.c$224$1$84              LAB2ints
+C:   000003F1  G$light$0$0                        LAB2ints
+C:   000003F1  _light                             LAB2ints
+C:   000003F3  A$LAB2ints$1996                    LAB2ints
+C:   000003F3  C$LAB2ints.c$225$1$87              LAB2ints
+C:   000003F5  A$LAB2ints$1997                    LAB2ints
+C:   000003F7  A$LAB2ints$1998                    LAB2ints
+C:   000003F9  A$LAB2ints$1999                    LAB2ints
+C:   000003FB  A$LAB2ints$2000                    LAB2ints
+C:   000003FD  A$LAB2ints$2001                    LAB2ints
+C:   000003FF  A$LAB2ints$2002                    LAB2ints
+C:   00000401  A$LAB2ints$2003                    LAB2ints
+C:   00000404  A$LAB2ints$2004                    LAB2ints
+C:   00000406  A$LAB2ints$2005                    LAB2ints
+C:   00000408  A$LAB2ints$2006                    LAB2ints
+C:   0000040A  A$LAB2ints$2007                    LAB2ints
+C:   0000040C  A$LAB2ints$2010                    LAB2ints
+C:   0000040C  C$LAB2ints.c$226$1$87              LAB2ints
+C:   0000040E  A$LAB2ints$2013                    LAB2ints
+C:   0000040E  C$LAB2ints.c$227$1$87              LAB2ints
+C:   00000410  A$LAB2ints$2016                    LAB2ints
+C:   00000410  C$LAB2ints.c$228$1$87              LAB2ints
+C:   00000412  A$LAB2ints$2019                    LAB2ints
+C:   00000412  C$LAB2ints.c$229$1$87              LAB2ints
+C:   00000414  A$LAB2ints$2022                    LAB2ints
+C:   00000414  C$LAB2ints.c$230$1$87              LAB2ints
+C:   00000415  A$LAB2ints$2023                    LAB2ints
+C:   00000416  A$LAB2ints$2024                    LAB2ints
+C:   00000417  A$LAB2ints$2025                    LAB2ints
+C:   00000419  A$LAB2ints$2026                    LAB2ints
+C:   0000041A  A$LAB2ints$2027                    LAB2ints
+C:   0000041C  A$LAB2ints$2028                    LAB2ints
+C:   0000041E  A$LAB2ints$2029                    LAB2ints
+C:   00000420  A$LAB2ints$2030                    LAB2ints
+C:   00000422  A$LAB2ints$2031                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 40.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000424  A$LAB2ints$2032                    LAB2ints
+C:   00000426  A$LAB2ints$2033                    LAB2ints
+C:   00000428  A$LAB2ints$2034                    LAB2ints
+C:   0000042A  A$LAB2ints$2035                    LAB2ints
+C:   0000042C  A$LAB2ints$2036                    LAB2ints
+C:   0000042F  A$LAB2ints$2037                    LAB2ints
+C:   00000431  A$LAB2ints$2038                    LAB2ints
+C:   00000433  A$LAB2ints$2039                    LAB2ints
+C:   00000435  A$LAB2ints$2040                    LAB2ints
+C:   00000437  A$LAB2ints$2043                    LAB2ints
+C:   00000437  C$LAB2ints.c$231$1$87              LAB2ints
+C:   0000043A  A$LAB2ints$2044                    LAB2ints
+C:   0000043C  A$LAB2ints$2046                    LAB2ints
+C:   0000043F  A$LAB2ints$2047                    LAB2ints
+C:   00000441  A$LAB2ints$2049                    LAB2ints
+C:   00000444  A$LAB2ints$2050                    LAB2ints
+C:   00000446  A$LAB2ints$2054                    LAB2ints
+C:   00000446  C$LAB2ints.c$232$2$88              LAB2ints
+C:   00000449  A$LAB2ints$2055                    LAB2ints
+C:   0000044B  A$LAB2ints$2059                    LAB2ints
+C:   0000044B  C$LAB2ints.c$233$2$88              LAB2ints
+C:   0000044D  A$LAB2ints$2062                    LAB2ints
+C:   0000044D  C$LAB2ints.c$234$2$88              LAB2ints
+C:   0000044F  A$LAB2ints$2063                    LAB2ints
+C:   00000451  A$LAB2ints$2064                    LAB2ints
+C:   00000453  A$LAB2ints$2065                    LAB2ints
+C:   00000455  A$LAB2ints$2066                    LAB2ints
+C:   00000457  A$LAB2ints$2067                    LAB2ints
+C:   00000459  A$LAB2ints$2068                    LAB2ints
+C:   0000045C  A$LAB2ints$2069                    LAB2ints
+C:   0000045E  A$LAB2ints$2070                    LAB2ints
+C:   00000460  A$LAB2ints$2071                    LAB2ints
+C:   00000462  A$LAB2ints$2076                    LAB2ints
+C:   00000462  C$LAB2ints.c$235$2$88              LAB2ints
+C:   00000462  C$LAB2ints.c$236$2$88              LAB2ints
+C:   00000464  A$LAB2ints$2080                    LAB2ints
+C:   00000464  C$LAB2ints.c$237$2$88              LAB2ints
+C:   00000466  A$LAB2ints$2083                    LAB2ints
+C:   00000466  C$LAB2ints.c$238$2$88              LAB2ints
+C:   00000468  A$LAB2ints$2084                    LAB2ints
+C:   0000046A  A$LAB2ints$2085                    LAB2ints
+C:   0000046C  A$LAB2ints$2086                    LAB2ints
+C:   0000046E  A$LAB2ints$2087                    LAB2ints
+C:   00000470  A$LAB2ints$2088                    LAB2ints
+C:   00000472  A$LAB2ints$2089                    LAB2ints
+C:   00000475  A$LAB2ints$2090                    LAB2ints
+C:   00000477  A$LAB2ints$2091                    LAB2ints
+C:   00000479  A$LAB2ints$2092                    LAB2ints
+C:   0000047B  A$LAB2ints$2097                    LAB2ints
+C:   0000047B  C$LAB2ints.c$239$2$88              LAB2ints
+C:   0000047B  C$LAB2ints.c$240$2$88              LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 41.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000047D  A$LAB2ints$2101                    LAB2ints
+C:   0000047D  C$LAB2ints.c$241$2$88              LAB2ints
+C:   0000047F  A$LAB2ints$2104                    LAB2ints
+C:   0000047F  C$LAB2ints.c$242$2$88              LAB2ints
+C:   00000481  A$LAB2ints$2105                    LAB2ints
+C:   00000483  A$LAB2ints$2106                    LAB2ints
+C:   00000485  A$LAB2ints$2107                    LAB2ints
+C:   00000487  A$LAB2ints$2108                    LAB2ints
+C:   00000489  A$LAB2ints$2109                    LAB2ints
+C:   0000048B  A$LAB2ints$2110                    LAB2ints
+C:   0000048E  A$LAB2ints$2111                    LAB2ints
+C:   00000490  A$LAB2ints$2112                    LAB2ints
+C:   00000492  A$LAB2ints$2113                    LAB2ints
+C:   00000494  A$LAB2ints$2118                    LAB2ints
+C:   00000494  C$LAB2ints.c$243$2$88              LAB2ints
+C:   00000494  C$LAB2ints.c$244$2$88              LAB2ints
+C:   00000496  A$LAB2ints$2122                    LAB2ints
+C:   00000496  C$LAB2ints.c$245$2$88              LAB2ints
+C:   00000498  A$LAB2ints$2125                    LAB2ints
+C:   00000498  C$LAB2ints.c$246$2$88              LAB2ints
+C:   0000049A  A$LAB2ints$2126                    LAB2ints
+C:   0000049C  A$LAB2ints$2127                    LAB2ints
+C:   0000049E  A$LAB2ints$2128                    LAB2ints
+C:   000004A0  A$LAB2ints$2129                    LAB2ints
+C:   000004A2  A$LAB2ints$2130                    LAB2ints
+C:   000004A4  A$LAB2ints$2131                    LAB2ints
+C:   000004A7  A$LAB2ints$2132                    LAB2ints
+C:   000004A9  A$LAB2ints$2133                    LAB2ints
+C:   000004AB  A$LAB2ints$2134                    LAB2ints
+C:   000004AD  A$LAB2ints$2140                    LAB2ints
+C:   000004AD  C$LAB2ints.c$248$1$87              LAB2ints
+C:   000004AD  C$LAB2ints.c$249$1$87              LAB2ints
+C:   000004AD  XG$light$0$0                       LAB2ints
+C:   000004AE  A$LAB2ints$2153                    LAB2ints
+C:   000004AE  C$LAB2ints.c$251$1$87              LAB2ints
+C:   000004AE  C$LAB2ints.c$252$1$90              LAB2ints
+C:   000004AE  G$wait$0$0                         LAB2ints
+C:   000004AE  _wait                              LAB2ints
+C:   000004B0  A$LAB2ints$2154                    LAB2ints
+C:   000004B2  A$LAB2ints$2155                    LAB2ints
+C:   000004B4  A$LAB2ints$2156                    LAB2ints
+C:   000004B6  A$LAB2ints$2157                    LAB2ints
+C:   000004B8  A$LAB2ints$2158                    LAB2ints
+C:   000004BA  A$LAB2ints$2159                    LAB2ints
+C:   000004BD  A$LAB2ints$2160                    LAB2ints
+C:   000004BF  A$LAB2ints$2161                    LAB2ints
+C:   000004C1  A$LAB2ints$2162                    LAB2ints
+C:   000004C3  A$LAB2ints$2165                    LAB2ints
+C:   000004C3  C$LAB2ints.c$253$1$90              LAB2ints
+C:   000004C4  A$LAB2ints$2166                    LAB2ints
+C:   000004C6  A$LAB2ints$2167                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 42.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000004C8  A$LAB2ints$2171                    LAB2ints
+C:   000004C8  C$LAB2ints.c$254$1$90              LAB2ints
+C:   000004C9  A$LAB2ints$2172                    LAB2ints
+C:   000004CB  A$LAB2ints$2173                    LAB2ints
+C:   000004CD  A$LAB2ints$2174                    LAB2ints
+C:   000004CF  A$LAB2ints$2175                    LAB2ints
+C:   000004D1  A$LAB2ints$2176                    LAB2ints
+C:   000004D3  A$LAB2ints$2179                    LAB2ints
+C:   000004D3  C$LAB2ints.c$256$1$90              LAB2ints
+C:   000004D3  XG$wait$0$0                        LAB2ints
+C:   000004D4  A$LAB2ints$2192                    LAB2ints
+C:   000004D4  C$LAB2ints.c$280$1$90              LAB2ints
+C:   000004D4  C$LAB2ints.c$282$1$92              LAB2ints
+C:   000004D4  G$Port_Init$0$0                    LAB2ints
+C:   000004D4  _Port_Init                         LAB2ints
+C:   000004D7  A$LAB2ints$2195                    LAB2ints
+C:   000004D7  C$LAB2ints.c$283$1$92              LAB2ints
+C:   000004DA  A$LAB2ints$2198                    LAB2ints
+C:   000004DA  C$LAB2ints.c$284$1$92              LAB2ints
+C:   000004DC  A$LAB2ints$2199                    LAB2ints
+C:   000004DE  A$LAB2ints$2200                    LAB2ints
+C:   000004DF  A$LAB2ints$2201                    LAB2ints
+C:   000004E1  A$LAB2ints$2204                    LAB2ints
+C:   000004E1  C$LAB2ints.c$288$1$92              LAB2ints
+C:   000004E4  A$LAB2ints$2207                    LAB2ints
+C:   000004E4  C$LAB2ints.c$289$1$92              LAB2ints
+C:   000004E6  A$LAB2ints$2208                    LAB2ints
+C:   000004E8  A$LAB2ints$2209                    LAB2ints
+C:   000004E9  A$LAB2ints$2210                    LAB2ints
+C:   000004EB  A$LAB2ints$2213                    LAB2ints
+C:   000004EB  C$LAB2ints.c$291$1$92              LAB2ints
+C:   000004EB  XG$Port_Init$0$0                   LAB2ints
+C:   000004EC  A$LAB2ints$2226                    LAB2ints
+C:   000004EC  C$LAB2ints.c$295$1$92              LAB2ints
+C:   000004EC  C$LAB2ints.c$296$1$94              LAB2ints
+C:   000004EC  G$BILEDOFF$0$0                     LAB2ints
+C:   000004EC  _BILEDOFF                          LAB2ints
+C:   000004EE  A$LAB2ints$2229                    LAB2ints
+C:   000004EE  C$LAB2ints.c$297$1$94              LAB2ints
+C:   000004F0  A$LAB2ints$2232                    LAB2ints
+C:   000004F0  C$LAB2ints.c$298$1$94              LAB2ints
+C:   000004F0  XG$BILEDOFF$0$0                    LAB2ints
+C:   000004F1  A$LAB2ints$2245                    LAB2ints
+C:   000004F1  C$LAB2ints.c$302$1$94              LAB2ints
+C:   000004F1  C$LAB2ints.c$303$1$96              LAB2ints
+C:   000004F1  G$StopAndResetTimer$0$0            LAB2ints
+C:   000004F1  _StopAndResetTimer                 LAB2ints
+C:   000004F3  A$LAB2ints$2248                    LAB2ints
+C:   000004F3  C$LAB2ints.c$304$1$96              LAB2ints
+C:   000004F4  A$LAB2ints$2249                    LAB2ints
+C:   000004F6  A$LAB2ints$2250                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 43.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000004F8  A$LAB2ints$2253                    LAB2ints
+C:   000004F8  C$LAB2ints.c$305$1$96              LAB2ints
+C:   000004FA  A$LAB2ints$2254                    LAB2ints
+C:   000004FC  A$LAB2ints$2257                    LAB2ints
+C:   000004FC  C$LAB2ints.c$306$1$96              LAB2ints
+C:   000004FC  XG$StopAndResetTimer$0$0           LAB2ints
+C:   000004FD  A$LAB2ints$2270                    LAB2ints
+C:   000004FD  C$LAB2ints.c$307$1$96              LAB2ints
+C:   000004FD  C$LAB2ints.c$308$1$98              LAB2ints
+C:   000004FD  G$Interrupt_Init$0$0               LAB2ints
+C:   000004FD  _Interrupt_Init                    LAB2ints
+C:   00000500  A$LAB2ints$2273                    LAB2ints
+C:   00000500  C$LAB2ints.c$309$1$98              LAB2ints
+C:   00000502  A$LAB2ints$2276                    LAB2ints
+C:   00000502  C$LAB2ints.c$310$1$98              LAB2ints
+C:   00000502  XG$Interrupt_Init$0$0              LAB2ints
+C:   00000503  A$LAB2ints$2289                    LAB2ints
+C:   00000503  C$LAB2ints.c$312$1$98              LAB2ints
+C:   00000503  C$LAB2ints.c$314$1$100             LAB2ints
+C:   00000503  G$Timer_Init$0$0                   LAB2ints
+C:   00000503  _Timer_Init                        LAB2ints
+C:   00000506  A$LAB2ints$2292                    LAB2ints
+C:   00000506  C$LAB2ints.c$315$1$100             LAB2ints
+C:   00000509  A$LAB2ints$2295                    LAB2ints
+C:   00000509  C$LAB2ints.c$317$1$100             LAB2ints
+C:   0000050B  A$LAB2ints$2298                    LAB2ints
+C:   0000050B  C$LAB2ints.c$318$1$100             LAB2ints
+C:   0000050C  A$LAB2ints$2299                    LAB2ints
+C:   0000050E  A$LAB2ints$2300                    LAB2ints
+C:   00000510  A$LAB2ints$2303                    LAB2ints
+C:   00000510  C$LAB2ints.c$320$1$100             LAB2ints
+C:   00000510  XG$Timer_Init$0$0                  LAB2ints
+C:   00000511  A$LAB2ints$2316                    LAB2ints
+C:   00000511  C$LAB2ints.c$322$1$100             LAB2ints
+C:   00000511  C$LAB2ints.c$323$1$102             LAB2ints
+C:   00000511  G$Analog_init$0$0                  LAB2ints
+C:   00000511  _Analog_init                       LAB2ints
+C:   00000514  A$LAB2ints$2319                    LAB2ints
+C:   00000514  C$LAB2ints.c$324$1$102             LAB2ints
+C:   00000517  A$LAB2ints$2322                    LAB2ints
+C:   00000517  C$LAB2ints.c$325$1$102             LAB2ints
+C:   0000051A  A$LAB2ints$2325                    LAB2ints
+C:   0000051A  C$LAB2ints.c$326$1$102             LAB2ints
+C:   0000051A  XG$Analog_init$0$0                 LAB2ints
+C:   0000051B  A$LAB2ints$2338                    LAB2ints
+C:   0000051B  C$LAB2ints.c$328$1$102             LAB2ints
+C:   0000051B  G$ReadAnalog$0$0                   LAB2ints
+C:   0000051B  _ReadAnalog                        LAB2ints
+C:   0000051E  A$LAB2ints$2341                    LAB2ints
+C:   0000051E  C$LAB2ints.c$330$1$104             LAB2ints
+C:   00000520  A$LAB2ints$2342                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 44.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000522  A$LAB2ints$2343                    LAB2ints
+C:   00000523  A$LAB2ints$2344                    LAB2ints
+C:   00000525  A$LAB2ints$2347                    LAB2ints
+C:   00000525  C$LAB2ints.c$331$1$104             LAB2ints
+C:   00000528  A$LAB2ints$2351                    LAB2ints
+C:   00000528  C$LAB2ints.c$332$1$104             LAB2ints
+C:   0000052A  A$LAB2ints$2352                    LAB2ints
+C:   0000052D  A$LAB2ints$2355                    LAB2ints
+C:   0000052D  C$LAB2ints.c$333$1$104             LAB2ints
+C:   00000530  A$LAB2ints$2358                    LAB2ints
+C:   00000530  C$LAB2ints.c$334$1$104             LAB2ints
+C:   00000530  XG$ReadAnalog$0$0                  LAB2ints
+C:   00000531  A$LAB2ints$2369                    LAB2ints
+C:   00000531  C$LAB2ints.c$337$1$104             LAB2ints
+C:   00000531  G$Timer0_ISR$0$0                   LAB2ints
+C:   00000531  _Timer0_ISR                        LAB2ints
+C:   00000533  A$LAB2ints$2370                    LAB2ints
+C:   00000535  A$LAB2ints$2373                    LAB2ints
+C:   00000535  C$LAB2ints.c$339$1$106             LAB2ints
+C:   00000537  A$LAB2ints$2374                    LAB2ints
+C:   00000539  A$LAB2ints$2375                    LAB2ints
+C:   0000053B  A$LAB2ints$2376                    LAB2ints
+C:   0000053C  A$LAB2ints$2377                    LAB2ints
+C:   0000053E  A$LAB2ints$2378                    LAB2ints
+C:   00000540  A$LAB2ints$2379                    LAB2ints
+C:   00000542  A$LAB2ints$2380                    LAB2ints
+C:   00000544  A$LAB2ints$2383                    LAB2ints
+C:   00000544  C$LAB2ints.c$340$1$106             LAB2ints
+C:   00000544  XG$Timer0_ISR$0$0                  LAB2ints
+C:   00000545  A$LAB2ints$2400                    LAB2ints
+C:   00000545  C$LAB2ints.c$350$1$106             LAB2ints
+C:   00000545  C$LAB2ints.c$351$1$108             LAB2ints
+C:   00000545  G$random$0$0                       LAB2ints
+C:   00000545  _random                            LAB2ints
+C:   00000548  A$LAB2ints$2401                    LAB2ints
+C:   0000054B  A$LAB2ints$2402                    LAB2ints
+C:   0000054E  A$LAB2ints$2403                    LAB2ints
+C:   00000551  A$LAB2ints$2406                    LAB2ints
+C:   00000551  C$LAB2ints.c$352$1$108             LAB2ints
+C:   00000551  XG$random$0$0                      LAB2ints
+C:   00000552  A$LAB2ints$2419                    LAB2ints
+C:   00000552  C$LAB2ints.c$372$1$108             LAB2ints
+C:   00000552  C$LAB2ints.c$373$1$110             LAB2ints
+C:   00000552  G$randGen$0$0                      LAB2ints
+C:   00000552  _randGen                           LAB2ints
+C:   00000555  A$LAB2ints$2420                    LAB2ints
+C:   00000558  A$LAB2ints$2421                    LAB2ints
+C:   0000055B  A$LAB2ints$2422                    LAB2ints
+C:   0000055E  A$LAB2ints$2423                    LAB2ints
+C:   00000561  A$LAB2ints$2424                    LAB2ints
+C:   00000563  A$LAB2ints$2425                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 45.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000565  A$LAB2ints$2426                    LAB2ints
+C:   00000567  A$LAB2ints$2429                    LAB2ints
+C:   00000567  C$LAB2ints.c$390$1$110             LAB2ints
+C:   0000056A  A$LAB2ints$2432                    LAB2ints
+C:   0000056A  C$LAB2ints.c$391$1$110             LAB2ints
+C:   0000056D  A$LAB2ints$2435                    LAB2ints
+C:   0000056D  C$LAB2ints.c$392$1$110             LAB2ints
+C:   00000570  A$LAB2ints$2438                    LAB2ints
+C:   00000570  C$LAB2ints.c$393$1$110             LAB2ints
+C:   00000573  A$LAB2ints$2441                    LAB2ints
+C:   00000573  C$LAB2ints.c$394$1$110             LAB2ints
+C:   00000576  A$LAB2ints$2444                    LAB2ints
+C:   00000576  C$LAB2ints.c$395$1$110             LAB2ints
+C:   00000579  A$LAB2ints$2447                    LAB2ints
+C:   00000579  C$LAB2ints.c$396$1$110             LAB2ints
+C:   0000057C  A$LAB2ints$2450                    LAB2ints
+C:   0000057C  C$LAB2ints.c$397$1$110             LAB2ints
+C:   0000057F  A$LAB2ints$2453                    LAB2ints
+C:   0000057F  C$LAB2ints.c$398$1$110             LAB2ints
+C:   00000582  A$LAB2ints$2456                    LAB2ints
+C:   00000582  C$LAB2ints.c$399$1$110             LAB2ints
+C:   00000585  A$LAB2ints$2459                    LAB2ints
+C:   00000588  A$LAB2ints$2463                    LAB2ints
+C:   00000588  C$LAB2ints.c$401$2$111             LAB2ints
+C:   0000058A  A$LAB2ints$2464                    LAB2ints
+C:   0000058C  A$LAB2ints$2465                    LAB2ints
+C:   0000058D  A$LAB2ints$2466                    LAB2ints
+C:   0000058F  A$LAB2ints$2467                    LAB2ints
+C:   00000591  A$LAB2ints$2468                    LAB2ints
+C:   00000593  A$LAB2ints$2469                    LAB2ints
+C:   00000594  A$LAB2ints$2470                    LAB2ints
+C:   00000595  A$LAB2ints$2471                    LAB2ints
+C:   00000597  A$LAB2ints$2472                    LAB2ints
+C:   00000598  A$LAB2ints$2473                    LAB2ints
+C:   0000059A  A$LAB2ints$2474                    LAB2ints
+C:   0000059C  A$LAB2ints$2475                    LAB2ints
+C:   0000059E  A$LAB2ints$2476                    LAB2ints
+C:   000005A0  A$LAB2ints$2477                    LAB2ints
+C:   000005A2  A$LAB2ints$2478                    LAB2ints
+C:   000005A4  A$LAB2ints$2479                    LAB2ints
+C:   000005A6  A$LAB2ints$2480                    LAB2ints
+C:   000005A8  A$LAB2ints$2481                    LAB2ints
+C:   000005AA  A$LAB2ints$2482                    LAB2ints
+C:   000005AC  A$LAB2ints$2483                    LAB2ints
+C:   000005AF  A$LAB2ints$2484                    LAB2ints
+C:   000005B1  A$LAB2ints$2485                    LAB2ints
+C:   000005B3  A$LAB2ints$2486                    LAB2ints
+C:   000005B5  A$LAB2ints$2489                    LAB2ints
+C:   000005B5  C$LAB2ints.c$400$1$110             LAB2ints
+C:   000005B7  A$LAB2ints$2490                    LAB2ints
+C:   000005B8  A$LAB2ints$2491                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 46.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000005BA  A$LAB2ints$2492                    LAB2ints
+C:   000005BC  A$LAB2ints$2493                    LAB2ints
+C:   000005BE  A$LAB2ints$2494                    LAB2ints
+C:   000005C0  A$LAB2ints$2497                    LAB2ints
+C:   000005C0  C$LAB2ints.c$404$1$110             LAB2ints
+C:   000005C0  XG$randGen$0$0                     LAB2ints
+C:   000005C1  A$LAB2ints$2510                    LAB2ints
+C:   000005C1  C$LAB2ints.c$406$1$110             LAB2ints
+C:   000005C1  G$resetArrays$0$0                  LAB2ints
+C:   000005C1  _resetArrays                       LAB2ints
+C:   000005C4  A$LAB2ints$2514                    LAB2ints
+C:   000005C7  A$LAB2ints$2518                    LAB2ints
+C:   000005C7  C$LAB2ints.c$410$3$115             LAB2ints
+C:   000005C9  A$LAB2ints$2519                    LAB2ints
+C:   000005CC  A$LAB2ints$2520                    LAB2ints
+C:   000005CD  A$LAB2ints$2521                    LAB2ints
+C:   000005CF  A$LAB2ints$2522                    LAB2ints
+C:   000005D0  A$LAB2ints$2523                    LAB2ints
+C:   000005D2  A$LAB2ints$2524                    LAB2ints
+C:   000005D3  A$LAB2ints$2525                    LAB2ints
+C:   000005D5  A$LAB2ints$2528                    LAB2ints
+C:   000005D5  C$LAB2ints.c$409$2$114             LAB2ints
+C:   000005D7  A$LAB2ints$2529                    LAB2ints
+C:   000005D8  A$LAB2ints$2530                    LAB2ints
+C:   000005DA  A$LAB2ints$2531                    LAB2ints
+C:   000005DD  A$LAB2ints$2532                    LAB2ints
+C:   000005E0  A$LAB2ints$2533                    LAB2ints
+C:   000005E2  A$LAB2ints$2534                    LAB2ints
+C:   000005E4  A$LAB2ints$2537                    LAB2ints
+C:   000005E4  C$LAB2ints.c$408$1$113             LAB2ints
+C:   000005E6  A$LAB2ints$2538                    LAB2ints
+C:   000005E7  A$LAB2ints$2539                    LAB2ints
+C:   000005E9  A$LAB2ints$2540                    LAB2ints
+C:   000005EC  A$LAB2ints$2541                    LAB2ints
+C:   000005EF  A$LAB2ints$2542                    LAB2ints
+C:   000005F1  A$LAB2ints$2543                    LAB2ints
+C:   000005F3  A$LAB2ints$2546                    LAB2ints
+C:   000005F3  C$LAB2ints.c$413$1$113             LAB2ints
+C:   000005F6  A$LAB2ints$2550                    LAB2ints
+C:   000005F6  C$LAB2ints.c$414$2$116             LAB2ints
+C:   000005F7  A$LAB2ints$2551                    LAB2ints
+C:   000005F9  A$LAB2ints$2552                    LAB2ints
+C:   000005FC  A$LAB2ints$2553                    LAB2ints
+C:   000005FF  A$LAB2ints$2554                    LAB2ints
+C:   00000601  A$LAB2ints$2555                    LAB2ints
+C:   00000603  A$LAB2ints$2558                    LAB2ints
+C:   00000603  C$LAB2ints.c$415$2$116             LAB2ints
+C:   00000605  A$LAB2ints$2559                    LAB2ints
+C:   00000607  A$LAB2ints$2560                    LAB2ints
+C:   00000608  A$LAB2ints$2561                    LAB2ints
+C:   0000060A  A$LAB2ints$2564                    LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 47.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000060A  C$LAB2ints.c$416$2$116             LAB2ints
+C:   0000060C  A$LAB2ints$2565                    LAB2ints
+C:   0000060E  A$LAB2ints$2569                    LAB2ints
+C:   0000060E  C$LAB2ints.c$418$1$113             LAB2ints
+C:   0000060E  XG$resetArrays$0$0                 LAB2ints
+C:   0000060F  A$LAB2ints$2582                    LAB2ints
+C:   0000060F  C$LAB2ints.c$420$1$113             LAB2ints
+C:   0000060F  C$LAB2ints.c$421$1$118             LAB2ints
+C:   0000060F  G$LEDPAT$0$0                       LAB2ints
+C:   0000060F  _LEDPAT                            LAB2ints
+C:   00000612  A$LAB2ints$2585                    LAB2ints
+C:   00000612  C$LAB2ints.c$422$1$118             LAB2ints
+C:   00000615  A$LAB2ints$2588                    LAB2ints
+C:   00000615  C$LAB2ints.c$423$1$118             LAB2ints
+C:   00000618  A$LAB2ints$2591                    LAB2ints
+C:   00000618  C$LAB2ints.c$424$1$118             LAB2ints
+C:   00000618  XG$LEDPAT$0$0                      LAB2ints
+C:   00000619  A$LAB2ints$2604                    LAB2ints
+C:   00000619  C$LAB2ints.c$425$1$118             LAB2ints
+C:   00000619  C$LAB2ints.c$426$1$120             LAB2ints
+C:   00000619  G$debounce$0$0                     LAB2ints
+C:   00000619  _debounce                          LAB2ints
+C:   0000061C  A$LAB2ints$2605                    LAB2ints
+C:   0000061F  A$LAB2ints$2609                    LAB2ints
+C:   0000061F  C$LAB2ints.c$427$1$120             LAB2ints
+C:   00000621  A$LAB2ints$2610                    LAB2ints
+C:   00000622  A$LAB2ints$2611                    LAB2ints
+C:   00000624  A$LAB2ints$2612                    LAB2ints
+C:   00000625  A$LAB2ints$2613                    LAB2ints
+C:   00000627  A$LAB2ints$2614                    LAB2ints
+C:   00000629  A$LAB2ints$2615                    LAB2ints
+C:   0000062A  A$LAB2ints$2616                    LAB2ints
+C:   0000062B  A$LAB2ints$2617                    LAB2ints
+C:   0000062C  A$LAB2ints$2618                    LAB2ints
+C:   0000062E  A$LAB2ints$2619                    LAB2ints
+C:   0000062F  A$LAB2ints$2620                    LAB2ints
+C:   00000631  A$LAB2ints$2621                    LAB2ints
+C:   00000633  A$LAB2ints$2624                    LAB2ints
+C:   00000633  C$LAB2ints.c$429$1$120             LAB2ints
+C:   00000633  XG$debounce$0$0                    LAB2ints
+C:   00000634  A$LAB2ints$2637                    LAB2ints
+C:   00000634  C$LAB2ints.c$437$1$120             LAB2ints
+C:   00000634  C$LAB2ints.c$438$1$122             LAB2ints
+C:   00000634  G$StartTimer$0$0                   LAB2ints
+C:   00000634  _StartTimer                        LAB2ints
+C:   00000636  A$LAB2ints$2640                    LAB2ints
+C:   00000636  C$LAB2ints.c$439$1$122             LAB2ints
+C:   00000636  XG$StartTimer$0$0                  LAB2ints
+C:   00000637  A$LAB2ints$2653                    LAB2ints
+C:   00000637  C$LAB2ints.c$441$1$122             LAB2ints
+C:   00000637  C$LAB2ints.c$442$1$124             LAB2ints
+ASxxxx Linker V03.00 + NoICE + sdld,  page 48.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000637  G$PauseTimer$0$0                   LAB2ints
+C:   00000637  _PauseTimer                        LAB2ints
+C:   00000639  A$LAB2ints$2657                    LAB2ints
+C:   00000639  C$LAB2ints.c$443$1$124             LAB2ints
+C:   0000063C  A$LAB2ints$2660                    LAB2ints
+C:   0000063C  C$LAB2ints.c$444$2$125             LAB2ints
+C:   0000063E  A$LAB2ints$2661                    LAB2ints
+C:   00000640  A$LAB2ints$2665                    LAB2ints
+C:   00000640  C$LAB2ints.c$448$1$124             LAB2ints
+C:   00000640  XG$PauseTimer$0$0                  LAB2ints
+C:   00000641  A$LAB2ints$2678                    LAB2ints
+C:   00000641  C$LAB2ints.c$450$1$124             LAB2ints
+C:   00000641  C$LAB2ints.c$451$1$127             LAB2ints
+C:   00000641  G$correct$0$0                      LAB2ints
+C:   00000641  _correct                           LAB2ints
+C:   00000643  A$LAB2ints$2681                    LAB2ints
+C:   00000643  C$LAB2ints.c$452$1$127             LAB2ints
+C:   00000645  A$LAB2ints$2684                    LAB2ints
+C:   00000645  C$LAB2ints.c$453$1$127             LAB2ints
+C:   00000647  A$LAB2ints$2687                    LAB2ints
+C:   00000647  C$LAB2ints.c$454$1$127             LAB2ints
+C:   0000064A  A$LAB2ints$2690                    LAB2ints
+C:   0000064A  C$LAB2ints.c$455$1$127             LAB2ints
+C:   0000064A  XG$correct$0$0                     LAB2ints
+C:   0000064B  A$LAB2ints$2703                    LAB2ints
+C:   0000064B  C$LAB2ints.c$457$1$127             LAB2ints
+C:   0000064B  C$LAB2ints.c$458$1$129             LAB2ints
+C:   0000064B  G$incorrect$0$0                    LAB2ints
+C:   0000064B  _incorrect                         LAB2ints
+C:   0000064D  A$LAB2ints$2706                    LAB2ints
+C:   0000064D  C$LAB2ints.c$459$1$129             LAB2ints
+C:   0000064F  A$LAB2ints$2709                    LAB2ints
+C:   0000064F  C$LAB2ints.c$460$1$129             LAB2ints
+C:   00000651  A$LAB2ints$2712                    LAB2ints
+C:   00000651  C$LAB2ints.c$461$1$129             LAB2ints
+C:   00000654  A$LAB2ints$2715                    LAB2ints
+C:   00000654  C$LAB2ints.c$462$1$129             LAB2ints
+C:   00000656  A$LAB2ints$2718                    LAB2ints
+C:   00000656  C$LAB2ints.c$463$1$129             LAB2ints
+C:   00000656  XG$incorrect$0$0                   LAB2ints
+C:   00000657  A$LAB2ints$2733                    LAB2ints
+C:   00000657  C$LAB2ints.c$465$1$129             LAB2ints
+C:   00000657  C$LAB2ints.c$486$1$129             LAB2ints
+C:   00000657  G$ending$0$0                       LAB2ints
+C:   00000657  XG$ending$0$0                      LAB2ints
+C:   00000657  _ending                            LAB2ints
+C:   00000658  _rand                              rand
+C:   00000694  _srand                             rand
+C:   000006A3  __mullong                          _mullong
+C:   000006A3  __mullong_dummy                    _mullong
+C:   00000711  __moduint                          _moduint
+ASxxxx Linker V03.00 + NoICE + sdld,  page 49.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    00000D3C =        3388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000769  _vprintf                           vprintf
+C:   00000782  _printf                            vprintf
+C:   00000859  __print_format                     printf_large
+C:   00000D63  _strlen                            _strlen
+C:   00000D7B  __gptrget                          _gptrget
+C:   00000D97  __modsint                          _modsint
+C:   00000DCD  __sdcc_external_startup            _startup
+ASxxxx Linker V03.00 + NoICE + sdld,  page 50.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               00000DD1    00000199 =         409. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000DD1  FLAB2ints$__str_0$0$0              LAB2ints
+C:   00000DEE  FLAB2ints$__str_1$0$0              LAB2ints
+C:   00000E02  FLAB2ints$__str_2$0$0              LAB2ints
+C:   00000E12  FLAB2ints$__str_3$0$0              LAB2ints
+C:   00000E1D  FLAB2ints$__str_4$0$0              LAB2ints
+C:   00000E2A  FLAB2ints$__str_5$0$0              LAB2ints
+C:   00000E31  FLAB2ints$__str_6$0$0              LAB2ints
+C:   00000E3E  FLAB2ints$__str_7$0$0              LAB2ints
+C:   00000E70  FLAB2ints$__str_8$0$0              LAB2ints
+C:   00000EAA  FLAB2ints$__str_9$0$0              LAB2ints
+C:   00000ECD  FLAB2ints$__str_10$0$0             LAB2ints
+C:   00000ED6  FLAB2ints$__str_11$0$0             LAB2ints
+C:   00000EE3  FLAB2ints$__str_12$0$0             LAB2ints
+C:   00000EEE  FLAB2ints$__str_13$0$0             LAB2ints
+C:   00000EF5  FLAB2ints$__str_14$0$0             LAB2ints
+C:   00000F04  FLAB2ints$__str_15$0$0             LAB2ints
+C:   00000F0D  FLAB2ints$__str_16$0$0             LAB2ints
+C:   00000F28  FLAB2ints$__str_17$0$0             LAB2ints
+C:   00000F32  FLAB2ints$__str_18$0$0             LAB2ints
+C:   00000F3C  FLAB2ints$__str_19$0$0             LAB2ints
+C:   00000F42  FLAB2ints$__str_20$0$0             LAB2ints
+C:   00000F48  FLAB2ints$__str_21$0$0             LAB2ints
+C:   00000F4F  FLAB2ints$__str_22$0$0             LAB2ints
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 51.
+
+Files Linked                              [ module(s) ]
+
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2ints.rel
+                                          [  ]
+
+
+Libraries Linked                          [ object file ]
+
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ rand.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxinit.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/liblong.lib
+                                          [ _mullong.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libint.lib
+                                          [ _moduint.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ vprintf.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ printf_large.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _strlen.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtstart.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _gptrget.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libint.lib
+                                          [ _modsint.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _startup.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _bp.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 52.
+
+User Base Address Definitions
+
+HOME = 0x0000
+XSEG = 0x0001
+PSEG = 0x0001
+ISEG = 0x0000
+BSEG = 0x0000
+
+
