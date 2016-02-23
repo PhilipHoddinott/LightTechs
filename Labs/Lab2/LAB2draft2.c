@@ -70,66 +70,32 @@ void main(void) {
 		printf("\rPlay game\n");
 
 		keyinput=getchar();
-		
-		previousnum=keyinput%3;
-		numC=0;
+		int sum=0;
+		int turn=0;
+		int player=0;
+		int scores[2] = {0,0,0};
 
-		//for get turns just get the memory working
-		for(int i=0;i<10;i++){
-			int k =0;
-			while (k<=i){
-				seq(i, rand[k]);
-			}// goes through as many tuurns to the next one
-			//i is the number of les we will be ligthing
-			//light led
-			//wait time
-			//if led is right then well done, then repert with one more 
-		}
-
-		while (i<=9) {
-			StopAndResetTimer();
-			if(!SS) {
-				StartTimer();
-				// play sequence
-				// if first was right then go on if wrong then end turn
-				
-				rand[i];	
-				if (randomnum==0) {						
-					LED0=0;					//turn it on
-					debounce(); 			
-					LED0=1; 				//turn it off
-					if (PB0==0 && PB1==1) {
-						correct();		//store correct answer;
-					} else {
-						incorrect();
-					}
-				} else if (randomnum==1) {						
-					LED1=0; 				//turn it on
-					debounce(); 			
-					LED1=1; 				//turn it off
-					if (PB0==1 && PB1==0) {
-						correct();
-					} else {
-						incorrect();
-					}	
-				} else{						//rand num is 2, light LED0 and LED1 for 1 second
-					LED0=0;
-					LED1=0;
-					debounce();
-					LED0=1;
-					LED1=1;
-					if (PB0==0 && PB1==0){
-						correct();
-					} else 	{
-						incorrect();
-					}
-				}
-				i++;									//increment i
-			} else 	{
-				Pause();
-			}
-
-		}// end while < 9	//display results
+		while(turn<3){
+			//calcualte speed each time for the players
+			while(player<3){
+				for(int i=0;i<10;i++){
+					int k =0;
+					for (int k=0; k<=i;k++){
+						int in=seq(rand[k]);
+						if (in>0){
+							sum++;
+						} else{
+							//PLAY BUZZER!!!!!!!!!!!!
+							i=11;
+							break;
+						}// end ele
+					}//end for k
+				}//end for 
+				scores[player]+=sum;
+				sum=0;
+			}//end while players
+		}//end while turn<3
+		// dsplay socers then ask to play again
 		ending();
 		TR0 = 0;								//turn off timer
 		while (!SS);							//wait until the switch is turned off and back on again to loop
@@ -144,15 +110,31 @@ void main(void) {
 
 
 
-void seq(int turns, int led){
+int seq(int led){
 	light(led);
-	//wait the time
+	wait();// wait the time
+	return pushButton(led);
+}//end sqe
 
 
-	//light led
-	//wait for button
-	//if correct light next led
-	//else break
+int pushButton(int button){
+switch(button){
+	case 0:
+		if(PB0==0) 
+			return 1;
+		else return 0;
+	case 1:
+		if(PB1==0) 
+			return 1;
+		else return 0;
+	case 2:
+		if(PB2==0) 
+			return 1;
+		else return 0;
+	case 3:
+		if(PB3==0) 
+			return 1;
+		else return 0;
 }
 
 void light(int led){
@@ -176,7 +158,9 @@ void light(int led){
 	}//end swich stament
 }
 
-
+void wait(void){
+	// to be worked on, this function just waits the time determined earlier
+}
 
 
 
