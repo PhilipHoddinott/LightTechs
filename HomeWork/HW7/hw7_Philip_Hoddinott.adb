@@ -1,4 +1,4 @@
-M:hw7_page_61_code
+M:hw7_Philip_Hoddinott
 F:G$SYSCLK_Init$0$0({2}DF,SV:S),C,0,0,0,0,0
 F:G$UART0_Init$0$0({2}DF,SV:S),C,0,0,0,0,0
 F:G$Sys_Init$0$0({2}DF,SV:S),C,0,0,0,0,0
@@ -12,8 +12,8 @@ F:G$Port_Init$0$0({2}DF,SV:S),Z,0,0,0,0,0
 F:G$Interrupt_Init$0$0({2}DF,SV:S),Z,0,0,0,0,0
 F:G$Timer_Init$0$0({2}DF,SV:S),Z,0,0,0,0,0
 F:G$Timer0_ISR$0$0({2}DF,SV:S),Z,0,0,1,1,0
-S:Lhw7_page_61_code.getchar$c$1$10({1}SC:S),R,0,0,[]
-S:Lhw7_page_61_code.getchar_nw$c$1$12({1}SC:S),R,0,0,[]
+S:Lhw7_Philip_Hoddinott.getchar$c$1$10({1}SC:S),R,0,0,[]
+S:Lhw7_Philip_Hoddinott.getchar_nw$c$1$12({1}SC:S),R,0,0,[]
 S:G$counts1$0$0({2}SI:U),E,0,0
 S:G$counts2$0$0({2}SI:U),E,0,0
 S:G$AD_value$0$0({1}SC:U),E,0,0
@@ -314,7 +314,7 @@ S:G$printf_fast$0$0({2}DF,SV:S),C,0,0
 S:G$printf_fast_f$0$0({2}DF,SV:S),C,0,0
 S:G$printf_tiny$0$0({2}DF,SV:S),C,0,0
 S:G$main$0$0({2}DF,SV:S),C,0,0
-S:Fhw7_page_61_code$__str_0$0$0({9}DA9d,SC:S),D,0,0
-S:Fhw7_page_61_code$__str_1$0$0({31}DA31d,SC:S),D,0,0
-S:Fhw7_page_61_code$__str_2$0$0({22}DA22d,SC:S),D,0,0
-S:Fhw7_page_61_code$__str_3$0$0({44}DA44d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_0$0$0({9}DA9d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_1$0$0({33}DA33d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_2$0$0({22}DA22d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_3$0$0({44}DA44d,SC:S),D,0,0

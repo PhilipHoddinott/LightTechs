@@ -55,7 +55,6 @@ unsigned char input;
 unsigned char result;
 unsigned long milivolts;
 
-
 //***************
 void main(void) {
 	Sys_Init();      // System Initialization
@@ -65,22 +64,19 @@ void main(void) {
 	Port_Init(); 
 	ADC_Init();
 
-
-
 	printf("Start \r\n");
     while (1)  {
     	//maybe put  wait in here??
-		printf("enter key to read A/D input \r\n");
+		printf("press enter to read A/D input \r\n");
 		input = getchar();
 
 		// add code necessary to complete the homework
-		//first off i just get this running
-		//lets just measure how the AD goes
-		
-		//result = read_AD_input(4);//
-		input = read_AD_input(0);//
-		//milivolts= (long) input *1000*1;// gain is 2, divide by gain
-		milivolts = ((long) 1000*input * 24) / (10*256 * 2);// from page 56
+
+
+		input = read_AD_input(4);// set port 4
+		input = input*2;// see below why this is happining
+
+		milivolts = ((long) 1000*input * 24) / (10*256 * 2);// from page 56, multiply by 1000 to get miivoles
 
 		printf("\n\rInput value is %u\r\n", input);
 		printf("\n\rIn milivots the value gain was 2 is %lu\r\n", milivolts);
@@ -93,24 +89,9 @@ void main(void) {
 // add the initialization code needed for the ADC1
 //
 void ADC_Init(void) {
-	/*
-	ADC1 |=0x02;// set bits 1-0 to 10, set gain as 2
-	//AMX1SL |= 0x04;
-	
-
-	ADC1CN = 0x80;//enable A/D converter
-	ADC1LF = ~0x01;
-	ADC1LF|=0x02;
-	*/
 	REF0CN = 0x03; //code from page 61
-
 	ADC1CN = 0x80;
-	ADC1CF |= 0x01;  //gain is 2 now
-	
-
-
-
-
+	ADC1CF |= 0x02;  //gain is 2 now
 }//end ADC INIT
 //
 // function that completes an A/D conversion
@@ -127,12 +108,9 @@ unsigned char read_AD_input(unsigned char pin_number) {
 // add Port initialization code
 //
 void Port_Init(void){
-
 	P1MDIN &= ~0x04; // Configure P1.4 as analoug input
 	P1MDOUT &= ~0x04; //  P1.4  open-drain input
 	P1 |= 0x04; // set logic 1 to P1.4
-
-
 
 }//end port init
 

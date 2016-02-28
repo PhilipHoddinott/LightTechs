@@ -55,7 +55,6 @@ unsigned char input;
 unsigned char result;
 unsigned long milivolts;
 
-
 //***************
 void main(void) {
 	Sys_Init();      // System Initialization
@@ -80,10 +79,10 @@ void main(void) {
 		//result = read_AD_input(4);//
 		input = read_AD_input(0);//
 		//milivolts= (long) input *1000*1;// gain is 2, divide by gain
-		milivolts = ((long) 1000*input * 24) / (10*256 * 2);// from page 56
+		milivolts = ((long) input * 2.4) / (256 * 2);// from page 56
 
 		printf("\n\rInput value is %u\r\n", input);
-		printf("\n\rIn milivots the value gain was 2 is %lu\r\n", milivolts);
+		printf("\n\rIn milivots the value fain was 1:1 is %lu\r\n", milivolts);
 
     }//end while loop
 }//end main
@@ -116,22 +115,32 @@ void ADC_Init(void) {
 // function that completes an A/D conversion
 //
 unsigned char read_AD_input(unsigned char pin_number) {
-	AMX1SL = pin_number;//set it to pin numer
-	ADC1CN = ADC1CN & ~0x20; // Clear “Conversion Completed” flag
-	ADC1CN = ADC1CN | 0x10; // Initiate A/D Conversion
-	while ((ADC1CN & 0x20) == 0x00); // Wait for conversion to finish
-	return ADC1; // Return digital value from ADC1
+	AMX1SL = pin_number;
+	ADC1CN = ADC1CN & ~0x20;
+	ADC1CN = ADC1CN | 0x10;
+
+	while ( (ADC1CN & 0x20)==0x00);
+
+	return ADC1;
 }//end read_AD_INPUT
 
 //
 // add Port initialization code
 //
 void Port_Init(void){
+	//P1MDIN &= 0x20;//port 1.5 analouge input
+	//P1MDOUT &= 0x20; //open drain
+	//P1 |= ~0x20;// set lgoic 1 to input pin p1.5
 
-	P1MDIN &= ~0x04; // Configure P1.4 as analoug input
-	P1MDOUT &= ~0x04; //  P1.4  open-drain input
-	P1 |= 0x04; // set logic 1 to P1.4
+	P1MDIN &= ~0x01;//port 1.5 analouge input
+	P1MDOUT &= ~0x01; //open drain
+	P1 |= 0x01;// set lgoic 1 to input pin p1.5
 
+	/*
+	P1MDIN &= ~0x08;//port 1.4 analouge input
+	P1MDOUT &= ~0x08; //open drain
+	P1 |= 0x08;// set lgoic 1 to input pin p1.4
+	*/
 
 
 }//end port init
