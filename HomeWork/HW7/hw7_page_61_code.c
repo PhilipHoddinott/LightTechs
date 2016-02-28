@@ -53,6 +53,7 @@ unsigned int counts2;
 unsigned char AD_value;
 unsigned char input;
 unsigned char result;
+unsigned long milivolts;
 
 //***************
 void main(void) {
@@ -75,10 +76,10 @@ void main(void) {
 		//lets just measure how the AD goes
 		
 		//result = read_AD_input(4);//
-		input = read_AD_input(0);//
-		AD_value= input *1000/2;// gain is 2, divide by gain
-		printf("\n\rInput value is %d\r\n", input);
-		printf("\n\rIn milivots the value is %d\r\n", AD_value);
+		input = read_AD_input(5);//
+		milivolts= input *1000/2;// gain is 2, divide by gain
+		printf("\n\rInput value is %u\r\n", input);
+		printf("\n\rIn milivots the value is %u\r\n", milivolts);
 
     }//end while loop
 }//end main
@@ -100,7 +101,8 @@ void ADC_Init(void) {
 	REF0CN = 0x03; //code from page 61
 
 	ADC1CN = 0x80;
-	ADC1CF |= 0x01;
+	ADC1CF |= 0x02;  //gain is 2 now
+	
 
 
 
@@ -114,7 +116,7 @@ unsigned char read_AD_input(unsigned char pin_number) {
 	ADC1CN = ADC1CN & ~0x20;
 	ADC1CN = ADC1CN | 0x10;
 
-	while ( (ADC1CN & 0x20)==0x20);
+	while ( (ADC1CN & 0x20)==0x00);
 
 	return ADC1;
 }//end read_AD_INPUT
@@ -123,9 +125,9 @@ unsigned char read_AD_input(unsigned char pin_number) {
 // add Port initialization code
 //
 void Port_Init(void){
-	P1MDIN &= ~0x01;//port 1.4 analouge input
-	P1MDOUT &= ~0x01; //open drain
-	P1 |= 0x01;// set lgoic 1 to input pin p1.4
+	P1MDIN &= 0x20;//port 1.5 analouge input
+	P1MDOUT &= 0x20; //open drain
+	P1 |= ~0x20;// set lgoic 1 to input pin p1.5
 
 	/*
 	P1MDIN &= ~0x08;//port 1.4 analouge input

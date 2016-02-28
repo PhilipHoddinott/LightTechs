@@ -1,6 +1,6 @@
 ;!FILE hw7_page_61_code.asm
 XH3
-H 1C areas 379 global symbols
+H 1C areas 37C global symbols
 M hw7_page_61_code
 O -mmcs51 --model-small
 S G$SPI0CN$0$0 Def0000F8
@@ -570,7 +570,8 @@ A RSEG size 0 flags 8 addr 0
 A RSEG0 size 0 flags 8 addr 0
 A RSEG1 size 0 flags 8 addr 0
 A REG_BANK_0 size 8 flags 4 addr 0
-A DSEG size 7 flags 0 addr 0
+A DSEG size B flags 0 addr 0
+S _milivolts Def000007
 S G$input$0$0 Def000005
 S _input Def000005
 S G$AD_value$0$0 Def000004
@@ -580,6 +581,7 @@ S G$counts2$0$0 Def000002
 S _counts1 Def000000
 S _counts2 Def000002
 S G$result$0$0 Def000006
+S G$milivolts$0$0 Def000007
 S _result Def000006
 A OSEG size 0 flags 4 addr 0
 A SSEG size 1 flags 0 addr 0
@@ -592,11 +594,11 @@ A XSEG size 0 flags 40 addr 0
 A XABS size 0 flags 48 addr 0
 A XISEG size 0 flags 40 addr 0
 A HOME size 11 flags 20 addr 0
-S A$hw7_page_61_code$975 Def00000E
+S A$hw7_page_61_code$957 Def00000B
+S A$hw7_page_61_code$979 Def00000E
 S __sdcc_program_startup Def00000E
-S A$hw7_page_61_code$950 Def000000
-S A$hw7_page_61_code$951 Def000003
-S A$hw7_page_61_code$953 Def00000B
+S A$hw7_page_61_code$954 Def000000
+S A$hw7_page_61_code$955 Def000003
 A GSINIT0 size 0 flags 20 addr 0
 A GSINIT1 size 0 flags 20 addr 0
 A GSINIT2 size 0 flags 20 addr 0
@@ -605,311 +607,312 @@ A GSINIT4 size 0 flags 20 addr 0
 A GSINIT5 size 0 flags 20 addr 0
 A GSINIT size 0 flags 20 addr 0
 A GSFINAL size 3 flags 20 addr 0
-S A$hw7_page_61_code$968 Def000000
-A CSEG size 188 flags 20 addr 0
-S C$hw7_page_61_code.c$78$2$36 Def0000BC
+S A$hw7_page_61_code$972 Def000000
+A CSEG size 18B flags 20 addr 0
 S C$c8051_SDCC.h$132$1$12 Def000076
 S C$c8051_SDCC.h$130$2$13 Def000073
 S C$c8051_SDCC.h$116$1$10 Def000062
-S C$hw7_page_61_code.c$79$2$36 Def0000C5
+S C$hw7_page_61_code.c$79$2$36 Def0000BC
 S C$c8051_SDCC.h$124$1$12 Def000063
 S _getchar_nw Def000063
-S XG$Port_Init$0$0 Def000158
+S XG$Port_Init$0$0 Def00015B
 S _main Def000077
 S G$Sys_Init$0$0 Def000037
 S C$c8051_SDCC.h$127$2$13 Def00006B
-S G$Timer_Init$0$0 Def00015D
+S G$Timer_Init$0$0 Def000160
 S C$c8051_SDCC.h$128$2$13 Def00006D
 S C$c8051_SDCC.h$129$2$13 Def000070
 S XG$getchar$0$0 Def000062
 S G$putchar$0$0 Def00004A
 S XG$UART0_Init$0$0 Def000036
 S XG$getchar_nw$0$0 Def000076
-S G$ADC_Init$0$0 Def000122
-S XG$main$0$0 Def000121
+S G$ADC_Init$0$0 Def00012E
+S XG$main$0$0 Def00012D
 S C$c8051_SDCC.h$100$1$8 Def00004C
-S G$Timer0_ISR$0$0 Def00016F
+S G$Timer0_ISR$0$0 Def000172
 S C$c8051_SDCC.h$101$1$8 Def00004C
 S _Sys_Init Def000037
 S C$c8051_SDCC.h$102$1$8 Def000051
-S G$Interrupt_Init$0$0 Def000159
+S G$Interrupt_Init$0$0 Def00015C
 S C$c8051_SDCC.h$103$1$8 Def000053
-S _Timer_Init Def00015D
+S _Timer_Init Def000160
 S _putchar Def00004A
 S C$c8051_SDCC.h$108$1$8 Def000054
-S _ADC_Init Def000122
+S _ADC_Init Def00012E
 S C$c8051_SDCC.h$42$0$0 Def000000
-S A$hw7_page_61_code$1010 Def000008
+S A$hw7_page_61_code$1010 Def000003
 S XG$Sys_Init$0$0 Def000049
-S _Timer0_ISR Def00016F
-S A$hw7_page_61_code$1011 Def00000A
-S C$hw7_page_61_code.c$120$1$40 Def000146
-S A$hw7_page_61_code$1300 Def000115
-S A$hw7_page_61_code$1111 Def00004A
-S A$hw7_page_61_code$1030 Def00001F
-S A$hw7_page_61_code$1012 Def00000B
-S A$hw7_page_61_code$1003 Def000000
-S XG$Timer_Init$0$0 Def00016E
+S _Timer0_ISR Def000172
+S A$hw7_page_61_code$1020 Def000011
+S A$hw7_page_61_code$1011 Def000005
+S A$hw7_page_61_code$1102 Def000049
+S A$hw7_page_61_code$1021 Def000013
+S XG$Timer_Init$0$0 Def000171
+S C$hw7_page_61_code.c$121$1$40 Def00014A
 S C$c8051_SDCC.h$51$1$2 Def000017
 S G$SYSCLK_Init$0$0 Def000000
-S _Interrupt_Init Def000159
-S A$hw7_page_61_code$1301 Def000118
-S A$hw7_page_61_code$1220 Def000089
-S A$hw7_page_61_code$1211 Def000080
-S A$hw7_page_61_code$1013 Def00000C
-S A$hw7_page_61_code$1410 Def00015C
-S A$hw7_page_61_code$1320 Def000122
-S A$hw7_page_61_code$1302 Def00011A
-S A$hw7_page_61_code$1230 Def00009B
-S A$hw7_page_61_code$1122 Def000051
-S A$hw7_page_61_code$1023 Def000017
-S A$hw7_page_61_code$1014 Def00000E
-S C$hw7_page_61_code.c$114$1$40 Def00012F
+S _Interrupt_Init Def00015C
+S A$hw7_page_61_code$1310 Def00011F
+S A$hw7_page_61_code$1301 Def00010D
+S A$hw7_page_61_code$1211 Def00007A
+S A$hw7_page_61_code$1121 Def00004C
+S A$hw7_page_61_code$1031 Def00001C
+S A$hw7_page_61_code$1022 Def000014
+S A$hw7_page_61_code$1013 Def000007
+S C$hw7_page_61_code.c$122$1$40 Def00014D
+S A$hw7_page_61_code$1311 Def000121
+S A$hw7_page_61_code$1302 Def00010F
+S A$hw7_page_61_code$1230 Def000092
+S A$hw7_page_61_code$1221 Def000086
+S A$hw7_page_61_code$1212 Def00007D
+S A$hw7_page_61_code$1122 Def00004F
+S A$hw7_page_61_code$1050 Def000023
+S A$hw7_page_61_code$1023 Def000015
+S A$hw7_page_61_code$1014 Def000008
+S C$hw7_page_61_code.c$130$1$42 Def000154
 S C$c8051_SDCC.h$53$1$2 Def00001C
-S A$hw7_page_61_code$1303 Def00011C
-S A$hw7_page_61_code$1240 Def0000A5
-S A$hw7_page_61_code$1231 Def00009D
-S A$hw7_page_61_code$1204 Def000077
-S A$hw7_page_61_code$1024 Def000019
-S A$hw7_page_61_code$1015 Def00000F
-S A$hw7_page_61_code$1006 Def000003
-S C$hw7_page_61_code.c$115$1$40 Def000136
-S G$read_AD_input$0$0 Def00012C
+S A$hw7_page_61_code$1411 Def00015C
+S A$hw7_page_61_code$1312 Def000124
+S A$hw7_page_61_code$1303 Def000111
+S A$hw7_page_61_code$1231 Def000094
+S A$hw7_page_61_code$1015 Def00000A
+S G$read_AD_input$0$0 Def000138
 S XG$putchar$0$0 Def000053
 S C$c8051_SDCC.h$70$1$4 Def00002B
-S A$hw7_page_61_code$1304 Def00011E
-S A$hw7_page_61_code$1250 Def0000B6
-S A$hw7_page_61_code$1241 Def0000A7
-S A$hw7_page_61_code$1232 Def00009F
-S A$hw7_page_61_code$1223 Def00008C
-S A$hw7_page_61_code$1214 Def000083
-S A$hw7_page_61_code$1151 Def00005C
-S A$hw7_page_61_code$1061 Def000031
-S A$hw7_page_61_code$1052 Def000029
-S A$hw7_page_61_code$1043 Def000020
-S A$hw7_page_61_code$1016 Def000011
-S A$hw7_page_61_code$1007 Def000005
-S C$hw7_page_61_code.c$125$1$40 Def000147
-S C$hw7_page_61_code.c$100$1$38 Def000122
+S A$hw7_page_61_code$1430 Def000163
+S A$hw7_page_61_code$1340 Def000137
+S A$hw7_page_61_code$1331 Def00012E
+S A$hw7_page_61_code$1313 Def000126
+S A$hw7_page_61_code$1304 Def000113
+S A$hw7_page_61_code$1250 Def0000B2
+S A$hw7_page_61_code$1232 Def000096
+S A$hw7_page_61_code$1115 Def00004A
+S A$hw7_page_61_code$1034 Def00001F
+S A$hw7_page_61_code$1016 Def00000B
+S A$hw7_page_61_code$1007 Def000000
+S C$hw7_page_61_code.c$116$1$40 Def00013B
 S C$c8051_SDCC.h$71$1$4 Def00002E
 S C$c8051_SDCC.h$64$1$2 Def000020
 S C$c8051_SDCC.h$46$1$2 Def000000
-S A$hw7_page_61_code$1323 Def000125
-S A$hw7_page_61_code$1260 Def0000C7
-S A$hw7_page_61_code$1251 Def0000B9
-S A$hw7_page_61_code$1242 Def0000A9
-S A$hw7_page_61_code$1224 Def00008E
-S A$hw7_page_61_code$1143 Def000054
-S A$hw7_page_61_code$1125 Def000053
-S A$hw7_page_61_code$1080 Def000037
-S A$hw7_page_61_code$1017 Def000013
-S C$hw7_page_61_code.c$117$1$40 Def000139
+S A$hw7_page_61_code$1314 Def000128
+S A$hw7_page_61_code$1305 Def000115
+S A$hw7_page_61_code$1260 Def0000C2
+S A$hw7_page_61_code$1251 Def0000B4
+S A$hw7_page_61_code$1242 Def0000A1
+S A$hw7_page_61_code$1233 Def000098
+S A$hw7_page_61_code$1224 Def000089
+S A$hw7_page_61_code$1215 Def000080
+S A$hw7_page_61_code$1161 Def000062
+S A$hw7_page_61_code$1152 Def000059
+S A$hw7_page_61_code$1071 Def000036
+S A$hw7_page_61_code$1062 Def00002E
+S A$hw7_page_61_code$1053 Def000026
+S A$hw7_page_61_code$1017 Def00000C
+S C$hw7_page_61_code.c$117$1$40 Def000142
+S C$hw7_page_61_code.c$110$1$38 Def000137
+S C$hw7_page_61_code.c$101$1$38 Def00012E
 S C$c8051_SDCC.h$56$1$2 Def00001F
-S A$hw7_page_61_code$1441 Def00016E
-S A$hw7_page_61_code$1432 Def000166
-S A$hw7_page_61_code$1423 Def00015D
-S A$hw7_page_61_code$1351 Def000136
-S A$hw7_page_61_code$1342 Def00012C
-S A$hw7_page_61_code$1270 Def0000E0
-S A$hw7_page_61_code$1261 Def0000C9
-S A$hw7_page_61_code$1243 Def0000AB
-S A$hw7_page_61_code$1225 Def000090
-S A$hw7_page_61_code$1207 Def00007A
-S A$hw7_page_61_code$1144 Def000057
-S A$hw7_page_61_code$1117 Def00004C
-S A$hw7_page_61_code$1027 Def00001C
-S A$hw7_page_61_code$1018 Def000014
-S A$hw7_page_61_code$1009 Def000007
-S C$hw7_page_61_code.c$102$1$38 Def000125
+S A$hw7_page_61_code$1414 Def00015F
+S A$hw7_page_61_code$1315 Def00012A
+S A$hw7_page_61_code$1306 Def000117
+S A$hw7_page_61_code$1270 Def0000D4
+S A$hw7_page_61_code$1243 Def0000A3
+S A$hw7_page_61_code$1234 Def00009B
+S A$hw7_page_61_code$1126 Def000051
+S A$hw7_page_61_code$1090 Def00003D
+S A$hw7_page_61_code$1027 Def000017
+S A$hw7_page_61_code$1018 Def00000E
+S C$hw7_page_61_code.c$150$1$44 Def000160
+S C$hw7_page_61_code.c$127$1$40 Def00014E
 S C$c8051_SDCC.h$73$1$4 Def000031
-S A$hw7_page_61_code$1307 Def000121
-S A$hw7_page_61_code$1280 Def0000F0
-S A$hw7_page_61_code$1271 Def0000E2
-S A$hw7_page_61_code$1262 Def0000CB
-S A$hw7_page_61_code$1244 Def0000AD
-S A$hw7_page_61_code$1226 Def000092
-S A$hw7_page_61_code$1217 Def000086
-S A$hw7_page_61_code$1208 Def00007D
-S A$hw7_page_61_code$1181 Def00006D
-S A$hw7_page_61_code$1172 Def000063
-S A$hw7_page_61_code$1154 Def00005F
-S A$hw7_page_61_code$1118 Def00004F
-S A$hw7_page_61_code$1064 Def000033
-S A$hw7_page_61_code$1055 Def00002B
-S A$hw7_page_61_code$1046 Def000023
-S A$hw7_page_61_code$1019 Def000015
-S C$hw7_page_61_code.c$144$1$42 Def000159
-S C$hw7_page_61_code.c$126$1$42 Def000147
-S C$hw7_page_61_code.c$119$1$40 Def000143
-S C$hw7_page_61_code.c$112$1$38 Def00012C
-S XG$ADC_Init$0$0 Def00012B
-S C$hw7_page_61_code.c$103$1$38 Def000128
+S A$hw7_page_61_code$1460 Def000176
+S A$hw7_page_61_code$1442 Def00016E
+S A$hw7_page_61_code$1433 Def000166
+S A$hw7_page_61_code$1370 Def00014A
+S A$hw7_page_61_code$1334 Def000131
+S A$hw7_page_61_code$1307 Def000119
+S A$hw7_page_61_code$1280 Def0000EB
+S A$hw7_page_61_code$1271 Def0000D7
+S A$hw7_page_61_code$1244 Def0000A5
+S A$hw7_page_61_code$1235 Def00009D
+S A$hw7_page_61_code$1208 Def000077
+S A$hw7_page_61_code$1028 Def000019
+S A$hw7_page_61_code$1019 Def00000F
+S C$hw7_page_61_code.c$119$1$40 Def000145
+S XG$ADC_Init$0$0 Def000137
+S C$hw7_page_61_code.c$103$1$38 Def000131
 S C$c8051_SDCC.h$83$1$4 Def000037
 S C$c8051_SDCC.h$74$1$4 Def000033
 S C$c8051_SDCC.h$49$1$2 Def000003
-S A$hw7_page_61_code$1452 Def00016F
-S A$hw7_page_61_code$1407 Def000159
-S A$hw7_page_61_code$1380 Def000149
-S A$hw7_page_61_code$1326 Def000128
-S A$hw7_page_61_code$1290 Def000101
-S A$hw7_page_61_code$1281 Def0000F2
-S A$hw7_page_61_code$1272 Def0000E4
-S A$hw7_page_61_code$1263 Def0000CD
-S A$hw7_page_61_code$1254 Def0000BC
-S A$hw7_page_61_code$1245 Def0000B0
-S A$hw7_page_61_code$1227 Def000094
-S A$hw7_page_61_code$1191 Def000076
-S A$hw7_page_61_code$1173 Def000066
-S A$hw7_page_61_code$1092 Def000043
-S A$hw7_page_61_code$1083 Def00003A
-S C$hw7_page_61_code.c$150$1$46 Def00015D
-S C$hw7_page_61_code.c$127$1$42 Def00014E
+S A$hw7_page_61_code$1470 Def000184
+S A$hw7_page_61_code$1461 Def000178
+S A$hw7_page_61_code$1362 Def000142
+S A$hw7_page_61_code$1353 Def000138
+S A$hw7_page_61_code$1308 Def00011B
+S A$hw7_page_61_code$1290 Def0000FA
+S A$hw7_page_61_code$1281 Def0000ED
+S A$hw7_page_61_code$1272 Def0000DA
+S A$hw7_page_61_code$1263 Def0000C5
+S A$hw7_page_61_code$1254 Def0000B6
+S A$hw7_page_61_code$1245 Def0000A7
+S A$hw7_page_61_code$1236 Def00009F
+S A$hw7_page_61_code$1227 Def00008C
+S A$hw7_page_61_code$1218 Def000083
+S A$hw7_page_61_code$1191 Def000073
+S A$hw7_page_61_code$1182 Def00006B
+S A$hw7_page_61_code$1155 Def00005C
+S A$hw7_page_61_code$1065 Def000031
+S A$hw7_page_61_code$1056 Def000029
+S A$hw7_page_61_code$1047 Def000020
+S C$hw7_page_61_code.c$104$1$38 Def000134
 S C$c8051_SDCC.h$91$1$6 Def000043
 S C$c8051_SDCC.h$75$1$4 Def000036
 S C$c8051_SDCC.h$66$1$4 Def000020
-S A$hw7_page_61_code$1453 Def000171
-S A$hw7_page_61_code$1435 Def000168
-S A$hw7_page_61_code$1426 Def000160
-S A$hw7_page_61_code$1381 Def00014B
-S A$hw7_page_61_code$1363 Def000143
-S A$hw7_page_61_code$1345 Def00012F
-S A$hw7_page_61_code$1291 Def000103
-S A$hw7_page_61_code$1282 Def0000F4
-S A$hw7_page_61_code$1273 Def0000E6
-S A$hw7_page_61_code$1264 Def0000D0
-S A$hw7_page_61_code$1255 Def0000BF
-S A$hw7_page_61_code$1246 Def0000B2
-S A$hw7_page_61_code$1228 Def000096
-S A$hw7_page_61_code$1174 Def000069
-S C$hw7_page_61_code.c$151$1$46 Def000160
-S C$hw7_page_61_code.c$137$1$42 Def000158
-S C$hw7_page_61_code.c$128$1$42 Def000155
+S A$hw7_page_61_code$1462 Def000179
+S A$hw7_page_61_code$1318 Def00012D
+S A$hw7_page_61_code$1309 Def00011D
+S A$hw7_page_61_code$1291 Def0000FC
+S A$hw7_page_61_code$1282 Def0000EE
+S A$hw7_page_61_code$1273 Def0000DD
+S A$hw7_page_61_code$1264 Def0000C7
+S A$hw7_page_61_code$1255 Def0000B9
+S A$hw7_page_61_code$1246 Def0000A9
+S A$hw7_page_61_code$1228 Def00008E
+S A$hw7_page_61_code$1147 Def000054
+S A$hw7_page_61_code$1129 Def000053
+S A$hw7_page_61_code$1093 Def000040
+S A$hw7_page_61_code$1084 Def000037
+S C$hw7_page_61_code.c$160$1$46 Def000172
+S C$hw7_page_61_code.c$146$1$42 Def00015C
+S C$hw7_page_61_code.c$128$1$42 Def00014E
+S C$hw7_page_61_code.c$114$1$38 Def000138
 S C$c8051_SDCC.h$92$1$6 Def000046
 S C$c8051_SDCC.h$67$1$4 Def000023
-S A$hw7_page_61_code$1472 Def000187
-S A$hw7_page_61_code$1463 Def00017B
-S A$hw7_page_61_code$1391 Def000155
-S A$hw7_page_61_code$1382 Def00014C
-S A$hw7_page_61_code$1355 Def000139
-S A$hw7_page_61_code$1346 Def000131
-S A$hw7_page_61_code$1292 Def000105
-S A$hw7_page_61_code$1283 Def0000F6
-S A$hw7_page_61_code$1265 Def0000D2
-S A$hw7_page_61_code$1256 Def0000C2
-S A$hw7_page_61_code$1247 Def0000B4
-S A$hw7_page_61_code$1238 Def0000A1
-S A$hw7_page_61_code$1229 Def000098
-S A$hw7_page_61_code$1184 Def000070
-S A$hw7_page_61_code$1157 Def000062
-S A$hw7_page_61_code$1148 Def000059
-S A$hw7_page_61_code$1067 Def000036
-S A$hw7_page_61_code$1058 Def00002E
-S A$hw7_page_61_code$1049 Def000026
-S XG$Timer0_ISR$0$0 Def000187
-S C$hw7_page_61_code.c$152$1$46 Def000163
-S C$hw7_page_61_code.c$145$1$44 Def000159
+S A$hw7_page_61_code$1472 Def000186
+S A$hw7_page_61_code$1463 Def00017C
+S A$hw7_page_61_code$1445 Def000171
+S A$hw7_page_61_code$1436 Def000169
+S A$hw7_page_61_code$1427 Def000160
+S A$hw7_page_61_code$1373 Def00014D
+S A$hw7_page_61_code$1337 Def000134
+S A$hw7_page_61_code$1292 Def0000FE
+S A$hw7_page_61_code$1283 Def0000F0
+S A$hw7_page_61_code$1274 Def0000E0
+S A$hw7_page_61_code$1265 Def0000C9
+S A$hw7_page_61_code$1247 Def0000AB
+S A$hw7_page_61_code$1229 Def000090
+S A$hw7_page_61_code$1148 Def000057
+S XG$Timer0_ISR$0$0 Def00018A
+S C$hw7_page_61_code.c$152$1$46 Def000160
+S C$hw7_page_61_code.c$129$1$42 Def000151
 S C$c8051_SDCC.h$93$1$6 Def000049
 S C$c8051_SDCC.h$68$1$4 Def000026
-S A$hw7_page_61_code$1464 Def00017D
+S A$hw7_page_61_code$1473 Def000188
+S A$hw7_page_61_code$1392 Def000154
 S A$hw7_page_61_code$1356 Def00013B
-S A$hw7_page_61_code$1347 Def000133
-S A$hw7_page_61_code$1329 Def00012B
-S A$hw7_page_61_code$1293 Def000107
-S A$hw7_page_61_code$1284 Def0000F8
-S A$hw7_page_61_code$1266 Def0000D4
-S A$hw7_page_61_code$1239 Def0000A3
-S A$hw7_page_61_code$1095 Def000046
-S A$hw7_page_61_code$1086 Def00003D
-S C$hw7_page_61_code.c$160$1$48 Def000173
-S C$hw7_page_61_code.c$153$1$46 Def000166
-S C$hw7_page_61_code.c$146$1$44 Def00015C
+S A$hw7_page_61_code$1293 Def000100
+S A$hw7_page_61_code$1284 Def0000F2
+S A$hw7_page_61_code$1275 Def0000E2
+S A$hw7_page_61_code$1266 Def0000CB
+S A$hw7_page_61_code$1248 Def0000AD
+S A$hw7_page_61_code$1185 Def00006D
+S A$hw7_page_61_code$1176 Def000063
+S A$hw7_page_61_code$1158 Def00005F
+S A$hw7_page_61_code$1068 Def000033
+S A$hw7_page_61_code$1059 Def00002B
+S C$hw7_page_61_code.c$153$1$46 Def000163
+S C$hw7_page_61_code.c$139$1$42 Def00015B
 S C$c8051_SDCC.h$85$1$6 Def000037
 S C$c8051_SDCC.h$69$1$4 Def000029
-S A$hw7_page_61_code$1465 Def00017E
-S A$hw7_page_61_code$1456 Def000173
-S A$hw7_page_61_code$1438 Def00016B
-S A$hw7_page_61_code$1429 Def000163
-S A$hw7_page_61_code$1366 Def000146
+S A$hw7_page_61_code$1456 Def000172
+S A$hw7_page_61_code$1393 Def000156
+S A$hw7_page_61_code$1366 Def000145
 S A$hw7_page_61_code$1357 Def00013D
-S A$hw7_page_61_code$1348 Def000134
-S A$hw7_page_61_code$1294 Def000109
-S A$hw7_page_61_code$1285 Def0000FB
-S A$hw7_page_61_code$1276 Def0000E8
-S A$hw7_page_61_code$1267 Def0000D7
-S C$hw7_page_61_code.c$161$1$48 Def00017B
-S C$hw7_page_61_code.c$154$1$46 Def000168
-S XG$Interrupt_Init$0$0 Def00015C
-S G$Port_Init$0$0 Def000147
-S C$hw7_page_61_code.c$108$1$38 Def00012B
+S A$hw7_page_61_code$1294 Def000102
+S A$hw7_page_61_code$1276 Def0000E4
+S A$hw7_page_61_code$1267 Def0000CD
+S A$hw7_page_61_code$1258 Def0000BC
+S A$hw7_page_61_code$1249 Def0000B0
+S A$hw7_page_61_code$1195 Def000076
+S A$hw7_page_61_code$1177 Def000066
+S A$hw7_page_61_code$1096 Def000043
+S A$hw7_page_61_code$1087 Def00003A
+S C$hw7_page_61_code.c$154$1$46 Def000166
+S XG$Interrupt_Init$0$0 Def00015F
+S C$hw7_page_61_code.c$147$1$44 Def00015C
+S G$Port_Init$0$0 Def00014E
 S C$c8051_SDCC.h$86$1$6 Def00003A
 S _SYSCLK_Init Def000000
-S A$hw7_page_61_code$1466 Def000181
-S A$hw7_page_61_code$1457 Def000175
+S A$hw7_page_61_code$1457 Def000174
+S A$hw7_page_61_code$1439 Def00016B
 S A$hw7_page_61_code$1394 Def000158
-S A$hw7_page_61_code$1385 Def00014E
-S A$hw7_page_61_code$1358 Def00013E
-S A$hw7_page_61_code$1295 Def00010B
-S A$hw7_page_61_code$1286 Def0000FD
-S A$hw7_page_61_code$1277 Def0000EA
-S A$hw7_page_61_code$1268 Def0000DA
-S A$hw7_page_61_code$1259 Def0000C5
-S A$hw7_page_61_code$1187 Def000073
-S A$hw7_page_61_code$1178 Def00006B
-S C$hw7_page_61_code.c$162$1$48 Def000187
-S C$hw7_page_61_code.c$155$1$46 Def00016B
-S C$hw7_page_61_code.c$148$1$44 Def00015D
-S A$hw7_page_61_code$1458 Def000176
-S A$hw7_page_61_code$1386 Def000150
-S A$hw7_page_61_code$1359 Def000141
-S A$hw7_page_61_code$1296 Def00010D
-S A$hw7_page_61_code$1287 Def0000FF
-S A$hw7_page_61_code$1278 Def0000EC
-S A$hw7_page_61_code$1269 Def0000DD
-S A$hw7_page_61_code$1098 Def000049
-S A$hw7_page_61_code$1089 Def000040
+S A$hw7_page_61_code$1367 Def000147
+S A$hw7_page_61_code$1358 Def00013F
+S A$hw7_page_61_code$1295 Def000104
+S A$hw7_page_61_code$1277 Def0000E6
+S A$hw7_page_61_code$1268 Def0000D0
+S A$hw7_page_61_code$1259 Def0000BF
+S A$hw7_page_61_code$1178 Def000069
+S C$hw7_page_61_code.c$162$1$48 Def000176
+S C$hw7_page_61_code.c$155$1$46 Def000169
+S C$hw7_page_61_code.c$148$1$44 Def00015F
+S A$hw7_page_61_code$1476 Def00018A
+S A$hw7_page_61_code$1467 Def00017E
+S A$hw7_page_61_code$1395 Def000159
+S A$hw7_page_61_code$1386 Def00014E
+S A$hw7_page_61_code$1359 Def000140
+S A$hw7_page_61_code$1296 Def000107
+S A$hw7_page_61_code$1287 Def0000F4
+S A$hw7_page_61_code$1278 Def0000E8
+S A$hw7_page_61_code$1269 Def0000D2
+S A$hw7_page_61_code$1188 Def000070
+S C$hw7_page_61_code.c$163$1$48 Def00017E
+S C$hw7_page_61_code.c$156$1$46 Def00016B
 S C$c8051_SDCC.h$88$1$6 Def00003D
-S A$hw7_page_61_code$1468 Def000183
-S A$hw7_page_61_code$1459 Def000179
-S A$hw7_page_61_code$1387 Def000152
-S A$hw7_page_61_code$1297 Def00010F
-S A$hw7_page_61_code$1279 Def0000EE
+S A$hw7_page_61_code$1468 Def000180
+S A$hw7_page_61_code$1297 Def000109
+S A$hw7_page_61_code$1288 Def0000F6
+S A$hw7_page_61_code$1279 Def0000EA
+S A$hw7_page_61_code$1099 Def000046
+S C$hw7_page_61_code.c$164$1$48 Def00018A
 S C$hw7_page_61_code.c$157$1$46 Def00016E
 S C$c8051_SDCC.h$98$1$6 Def00004A
 S C$c8051_SDCC.h$89$1$6 Def000040
-S _read_AD_input Def00012C
-S A$hw7_page_61_code$1469 Def000185
-S A$hw7_page_61_code$1388 Def000153
-S A$hw7_page_61_code$1379 Def000147
-S A$hw7_page_61_code$1298 Def000111
-S C$hw7_page_61_code.c$158$1$46 Def00016F
-S A$hw7_page_61_code$1299 Def000113
+S _read_AD_input Def000138
+S A$hw7_page_61_code$1469 Def000181
+S A$hw7_page_61_code$1298 Def00010B
+S A$hw7_page_61_code$1289 Def0000F8
+S A$hw7_page_61_code$1398 Def00015B
+S A$hw7_page_61_code$1389 Def000151
+S C$hw7_page_61_code.c$159$1$46 Def000171
 S G$getchar$0$0 Def000054
 S G$UART0_Init$0$0 Def000020
-S C$hw7_page_61_code.c$60$1$35 Def00007A
+S C$hw7_page_61_code.c$60$1$35 Def000077
 S G$getchar_nw$0$0 Def000063
-S C$hw7_page_61_code.c$61$1$35 Def000080
-S C$hw7_page_61_code.c$62$1$35 Def000083
-S C$hw7_page_61_code.c$58$1$12 Def000077
+S C$hw7_page_61_code.c$70$1$35 Def0000A1
+S C$hw7_page_61_code.c$61$1$35 Def00007A
+S C$hw7_page_61_code.c$62$1$35 Def000080
 S XG$SYSCLK_Init$0$0 Def00001F
-S _Port_Init Def000147
-S C$hw7_page_61_code.c$90$1$35 Def000122
-S C$hw7_page_61_code.c$70$2$36 Def0000A1
-S C$hw7_page_61_code.c$63$1$35 Def000086
+S _Port_Init Def00014E
+S C$hw7_page_61_code.c$63$1$35 Def000083
+S C$hw7_page_61_code.c$59$1$12 Def000077
 S G$main$0$0 Def000077
-S C$hw7_page_61_code.c$80$2$36 Def0000E8
-S C$hw7_page_61_code.c$71$2$36 Def0000B6
-S C$hw7_page_61_code.c$64$1$35 Def000089
-S XG$read_AD_input$0$0 Def000146
-S C$hw7_page_61_code.c$81$2$36 Def000101
-S C$hw7_page_61_code.c$84$1$35 Def000121
+S C$hw7_page_61_code.c$91$1$35 Def00012E
+S C$hw7_page_61_code.c$80$2$36 Def0000C5
+S C$hw7_page_61_code.c$71$2$36 Def0000A1
+S C$hw7_page_61_code.c$64$1$35 Def000086
+S XG$read_AD_input$0$0 Def00014D
+S C$hw7_page_61_code.c$81$2$36 Def0000F4
+S C$hw7_page_61_code.c$72$2$36 Def0000B6
+S C$hw7_page_61_code.c$65$1$35 Def000089
+S C$hw7_page_61_code.c$82$2$36 Def00010D
 S C$c8051_SDCC.h$111$1$10 Def000054
+S C$hw7_page_61_code.c$85$1$35 Def00012D
 S C$c8051_SDCC.h$121$1$10 Def000063
 S C$c8051_SDCC.h$112$1$10 Def000054
-S C$hw7_page_61_code.c$68$1$35 Def00008C
-S C$hw7_page_61_code.c$59$1$35 Def000077
 S C$c8051_SDCC.h$113$1$10 Def000059
 S _getchar Def000054
-S C$hw7_page_61_code.c$69$1$35 Def0000A1
+S C$hw7_page_61_code.c$69$1$35 Def00008C
 S C$c8051_SDCC.h$114$1$10 Def00005C
 S _UART0_Init Def000020
 S C$c8051_SDCC.h$115$1$10 Def00005F
@@ -946,6 +949,10 @@ T 00 00 06
 R 00 00 00 05
 T 00 00 06
 R 00 00 00 05
+T 00 00 07
+R 00 00 00 05
+T 00 00 07
+R 00 00 00 05
 T 00 00 00
 R 00 00 00 07
 T 00 00 00
@@ -956,7 +963,7 @@ T 00 00 00 02 00 00 32
 R 00 00 00 0F 02 04 02 0A
 T 00 00 04
 R 00 00 00 0F
-T 00 00 0B 02 01 6F
+T 00 00 0B 02 01 72
 R 00 00 00 0F 00 04 00 18
 T 00 00 00 02 00 0E
 R 00 00 00 17 00 04 00 0F
@@ -1028,9 +1035,9 @@ T 00 00 77
 R 00 00 00 18
 T 00 00 77 12 00 37 75 82 20 12 00 4A 12
 R 00 00 00 18 00 04 00 18 00 0A 00 18
-T 00 00 81 01 59 12 01 5D 12
+T 00 00 81 01 5C 12 01 60 12
 R 00 00 00 18 00 03 00 18 00 06 00 18
-T 00 00 87 01 47 12 01 22 74
+T 00 00 87 01 4E 12 01 2E 74
 R 00 00 00 18 00 03 00 18 00 06 00 18
 T 00 00 8D 00 00 00 C0 E0 74 00 00 00 C0 E0 74 80
 R 00 00 00 18 F1 01 03 00 19 F1 81 09 00 19
@@ -1042,9 +1049,9 @@ T 00 00 A1 74 00 00 09 C0 E0 74 00 00 09 C0 E0 74
 R 00 00 00 18 F1 01 04 00 19 F1 81 0A 00 19
 T 00 00 AA 80 C0 E0 12 00 00 15 81 15 81 15 81 12
 R 00 00 00 18 02 07 01 B7
-T 00 00 B7 00 54 85 82 00 00 05 75 82 00 12
+T 00 00 B7 00 54 85 82 00 00 05 75 82 05 12
 R 00 00 00 18 00 03 00 18 F1 21 07 00 05
-T 00 00 C0 01 2C 85 82 00 00 05 AE
+T 00 00 C0 01 38 85 82 00 00 05 AE
 R 00 00 00 18 00 03 00 18 F1 21 07 00 05
 T 00 00 C6 00 00 05 7F 00 8E 00 00 00 8F
 R 00 00 00 18 F1 21 03 00 05 F1 23 09 01 F0
@@ -1052,67 +1059,69 @@ T 00 00 CC 00 00 01 90 03 E8 C0 07 C0 06 12 00 00
 R 00 00 00 18 F1 23 03 01 F0 02 0E 00 8D
 T 00 00 D7 75 00 00 00 02 75 00 00 01 00 12
 R 00 00 00 18 F1 23 04 00 CB F1 23 09 00 CB
-T 00 00 DE 00 00 AC 82 D0 06 D0 07 8C 00 00 04 C0
-R 00 00 00 18 02 03 02 2A F1 21 0C 00 05
-T 00 00 E9 06 C0 07 74 00 00 28 C0 E0 74 00 00 28
-R 00 00 00 18 F1 01 07 00 19 F1 81 0D 00 19
-T 00 00 F2 C0 E0 74 80 C0 E0 12 00 00 E5 81 24 FB
-R 00 00 00 18 02 0A 01 B7
-T 00 00 FF F5 81 AE 00 00 04 7F 00 C0 06 C0 07 74
-R 00 00 00 18 F1 21 06 00 05
-T 00 01 0A 00 00 3E C0 E0 74 00 00 3E C0 E0 74 80
+T 00 00 DE 00 00 AC 82 AD 83 D0 06 D0 07 8C
+R 00 00 00 18 02 03 02 2A
+T 00 00 E9 00 00 07 ED F5 00 00 08 33 95 E0 F5
+R 00 00 00 18 F1 21 03 00 05 F1 21 08 00 05
+T 00 00 F1 00 00 09 F5 00 00 0A C0 06 C0 07 74
+R 00 00 00 18 F1 21 03 00 05 F1 21 07 00 05
+T 00 00 F9 00 00 28 C0 E0 74 00 00 28 C0 E0 74 80
 R 00 00 00 18 F1 01 03 00 19 F1 81 09 00 19
-T 00 01 13 C0 E0 12 00 00 E5 81 24 FB F5 81 02
+T 00 01 02 C0 E0 12 00 00 E5 81 24 FB F5 81 C0
 R 00 00 00 18 02 06 01 B7
-T 00 01 1F 00 A1 22
+T 00 01 0E 00 00 07 C0 00 00 08 C0
+R 00 00 00 18 F1 21 03 00 05 F1 21 07 00 05
+T 00 01 12 00 00 09 C0 00 00 0A 74
+R 00 00 00 18 F1 21 03 00 05 F1 21 07 00 05
+T 00 01 16 00 00 3E C0 E0 74 00 00 3E C0 E0 74 80
+R 00 00 00 18 F1 01 03 00 19 F1 81 09 00 19
+T 00 01 1F C0 E0 12 00 00 E5 81 24 F9 F5 81 02
+R 00 00 00 18 02 06 01 B7
+T 00 01 2B 00 A1 22
 R 00 00 00 18 00 03 00 18
-T 00 01 22
+T 00 01 2E
 R 00 00 00 18
-T 00 01 22 75 D1 03 75 AA 80 43 AB 01 22
+T 00 01 2E 75 D1 03 75 AA 80 43 AB 02 22
 R 00 00 00 18
-T 00 01 2C
+T 00 01 38
 R 00 00 00 18
-T 00 01 2C 85 82 AC AF AA 74 DF 5F F5 AA 43 AA 10
+T 00 01 38 85 82 AC AF AA 74 DF 5F F5 AA 43 AA 10
 R 00 00 00 18
-T 00 01 39
+T 00 01 45
 R 00 00 00 18
-T 00 01 39 74 20 55 AA FF BF 20 02 80 F6
+T 00 01 45 E5 AA 30 E5 FB 85 9C 82 22
 R 00 00 00 18
-T 00 01 43
+T 00 01 4E
 R 00 00 00 18
-T 00 01 43 85 9C 82 22
+T 00 01 4E 53 BD 20 53 A5 20 AF 90 74 DF 4F F5 90
 R 00 00 00 18
-T 00 01 47
+T 00 01 5B 22
 R 00 00 00 18
-T 00 01 47 AF BD 74 FE 5F F5 BD AF A5 74 FE 5F F5
+T 00 01 5C
 R 00 00 00 18
-T 00 01 54 A5 43 90 01 22
+T 00 01 5C 43 A8 82 22
 R 00 00 00 18
-T 00 01 59
+T 00 01 60
 R 00 00 00 18
-T 00 01 59 43 A8 82 22
+T 00 01 60 43 8E 08 53 89 F0 43 89 01 C2 8C 75 8A
 R 00 00 00 18
-T 00 01 5D
+T 00 01 6D 00 75 8C 00 22
 R 00 00 00 18
-T 00 01 5D 43 8E 08 53 89 F0 43 89 01 C2 8C 75 8A
+T 00 01 72
 R 00 00 00 18
-T 00 01 6A 00 75 8C 00 22
-R 00 00 00 18
-T 00 01 6F
-R 00 00 00 18
-T 00 01 6F C0 E0 C0 D0 05 00 00 00 E4 B5 00 00 00
+T 00 01 72 C0 E0 C0 D0 05 00 00 00 E4 B5 00 00 00
 R 00 00 00 18 F1 21 08 00 05 F1 21 0D 00 05
-T 00 01 78 02 05 00 00 01
+T 00 01 7B 02 05 00 00 01
 R 00 00 00 18 F1 21 05 00 05
-T 00 01 7B
+T 00 01 7E
 R 00 00 00 18
-T 00 01 7B 05 00 00 02 E4 B5 00 00 02 02 05
+T 00 01 7E 05 00 00 02 E4 B5 00 00 02 02 05
 R 00 00 00 18 F1 21 04 00 05 F1 21 09 00 05
-T 00 01 82 00 00 03
+T 00 01 85 00 00 03
 R 00 00 00 18 F1 21 03 00 05
-T 00 01 83
+T 00 01 86
 R 00 00 00 18
-T 00 01 83 D0 D0 D0 E0 32
+T 00 01 86 D0 D0 D0 E0 32
 R 00 00 00 18
 T 00 00 00
 R 00 00 00 19
@@ -1130,7 +1139,7 @@ T 00 00 28
 R 00 00 00 19
 T 00 00 28 0A 0D 49 6E 70 75 74 20 76 61 6C 75 65
 R 00 00 00 19
-T 00 00 35 20 69 73 20 25 64 0D 0A 00
+T 00 00 35 20 69 73 20 25 75 0D 0A 00
 R 00 00 00 19
 T 00 00 3E
 R 00 00 00 19
@@ -1138,5 +1147,5 @@ T 00 00 3E 0A 0D 49 6E 20 6D 69 6C 69 76 6F 74 73
 R 00 00 00 19
 T 00 00 4B 20 74 68 65 20 76 61 6C 75 65 20 69 73
 R 00 00 00 19
-T 00 00 58 20 25 64 0D 0A 00
+T 00 00 58 20 25 75 0D 0A 00
 R 00 00 00 19

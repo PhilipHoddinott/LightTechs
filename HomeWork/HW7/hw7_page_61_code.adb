@@ -19,6 +19,7 @@ S:G$counts2$0$0({2}SI:U),E,0,0
 S:G$AD_value$0$0({1}SC:U),E,0,0
 S:G$input$0$0({1}SC:U),E,0,0
 S:G$result$0$0({1}SC:U),E,0,0
+S:G$milivolts$0$0({4}SL:U),E,0,0
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0
 S:G$DPL$0$0({1}SC:U),I,0,0

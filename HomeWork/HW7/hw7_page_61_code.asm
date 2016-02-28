@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.5.0 #9253 (Jun 20 2015) (MINGW64)
-; This file was generated Sun Feb 28 16:25:50 2016
+; This file was generated Sun Feb 28 17:00:29 2016
 ;--------------------------------------------------------
 	.module hw7_page_61_code
 	.optsdcc -mmcs51 --model-small
@@ -293,6 +293,7 @@
 	.globl _DPL
 	.globl _SP
 	.globl _P0
+	.globl _milivolts
 	.globl _result
 	.globl _input
 	.globl _AD_value
@@ -890,6 +891,9 @@ _input::
 G$result$0$0==.
 _result::
 	.ds 1
+G$milivolts$0$0==.
+_milivolts::
+	.ds 4
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
 ;--------------------------------------------------------
@@ -1193,33 +1197,33 @@ _getchar_nw:
 ;Allocation info for local variables in function 'main'
 ;------------------------------------------------------------
 	G$main$0$0 ==.
-	C$hw7_page_61_code.c$58$1$12 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:58: void main(void) {
+	C$hw7_page_61_code.c$59$1$12 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:59: void main(void) {
 ;	-----------------------------------------
 ;	 function main
 ;	-----------------------------------------
 _main:
-	C$hw7_page_61_code.c$59$1$35 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:59: Sys_Init();      // System Initialization
-	lcall	_Sys_Init
 	C$hw7_page_61_code.c$60$1$35 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:60: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:60: Sys_Init();      // System Initialization
+	lcall	_Sys_Init
+	C$hw7_page_61_code.c$61$1$35 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:61: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
 	mov	dpl,#0x20
 	lcall	_putchar
-	C$hw7_page_61_code.c$61$1$35 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:61: Interrupt_Init();
-	lcall	_Interrupt_Init
 	C$hw7_page_61_code.c$62$1$35 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:62: Timer_Init();    // Initialize Timer 0
-	lcall	_Timer_Init
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:62: Interrupt_Init();
+	lcall	_Interrupt_Init
 	C$hw7_page_61_code.c$63$1$35 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:63: Port_Init(); 
-	lcall	_Port_Init
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:63: Timer_Init();    // Initialize Timer 0
+	lcall	_Timer_Init
 	C$hw7_page_61_code.c$64$1$35 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:64: ADC_Init();
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:64: Port_Init(); 
+	lcall	_Port_Init
+	C$hw7_page_61_code.c$65$1$35 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:65: ADC_Init();
 	lcall	_ADC_Init
-	C$hw7_page_61_code.c$68$1$35 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:68: printf("Start \r\n");
+	C$hw7_page_61_code.c$69$1$35 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:69: printf("Start \r\n");
 	mov	a,#___str_0
 	push	acc
 	mov	a,#(___str_0 >> 8)
@@ -1230,11 +1234,11 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$hw7_page_61_code.c$69$1$35 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:69: while (1)  {
+	C$hw7_page_61_code.c$70$1$35 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:70: while (1)  {
 00102$:
-	C$hw7_page_61_code.c$70$2$36 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:70: printf("enter key to read A/D input \r\n");
+	C$hw7_page_61_code.c$71$2$36 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:71: printf("enter key to read A/D input \r\n");
 	mov	a,#___str_1
 	push	acc
 	mov	a,#(___str_1 >> 8)
@@ -1245,17 +1249,17 @@ _main:
 	dec	sp
 	dec	sp
 	dec	sp
-	C$hw7_page_61_code.c$71$2$36 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:71: input = getchar();
+	C$hw7_page_61_code.c$72$2$36 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:72: input = getchar();
 	lcall	_getchar
 	mov	_input,dpl
-	C$hw7_page_61_code.c$78$2$36 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:78: input = read_AD_input(0);//
-	mov	dpl,#0x00
+	C$hw7_page_61_code.c$79$2$36 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:79: input = read_AD_input(5);//
+	mov	dpl,#0x05
 	lcall	_read_AD_input
 	mov	_input,dpl
-	C$hw7_page_61_code.c$79$2$36 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:79: AD_value= input *1000/2;// gain is 2, divide by gain
+	C$hw7_page_61_code.c$80$2$36 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:80: milivolts= input *1000/2;// gain is 2, divide by gain
 	mov	r6,_input
 	mov	r7,#0x00
 	mov	__mulint_PARM_2,r6
@@ -1268,11 +1272,18 @@ _main:
 	mov	(__divsint_PARM_2 + 1),#0x00
 	lcall	__divsint
 	mov	r4,dpl
+	mov	r5,dph
 	pop	ar6
 	pop	ar7
-	mov	_AD_value,r4
-	C$hw7_page_61_code.c$80$2$36 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:80: printf("\n\rInput value is %d\r\n", input);
+	mov	_milivolts,r4
+	mov	a,r5
+	mov	(_milivolts + 1),a
+	rlc	a
+	subb	a,acc
+	mov	(_milivolts + 2),a
+	mov	(_milivolts + 3),a
+	C$hw7_page_61_code.c$81$2$36 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:81: printf("\n\rInput value is %u\r\n", input);
 	push	ar6
 	push	ar7
 	mov	a,#___str_2
@@ -1285,12 +1296,12 @@ _main:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$hw7_page_61_code.c$81$2$36 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:81: printf("\n\rIn milivots the value is %d\r\n", AD_value);
-	mov	r6,_AD_value
-	mov	r7,#0x00
-	push	ar6
-	push	ar7
+	C$hw7_page_61_code.c$82$2$36 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:82: printf("\n\rIn milivots the value is %u\r\n", milivolts);
+	push	_milivolts
+	push	(_milivolts + 1)
+	push	(_milivolts + 2)
+	push	(_milivolts + 3)
 	mov	a,#___str_3
 	push	acc
 	mov	a,#(___str_3 >> 8)
@@ -1299,32 +1310,32 @@ _main:
 	push	acc
 	lcall	_printf
 	mov	a,sp
-	add	a,#0xfb
+	add	a,#0xf9
 	mov	sp,a
 	ljmp	00102$
-	C$hw7_page_61_code.c$84$1$35 ==.
+	C$hw7_page_61_code.c$85$1$35 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'ADC_Init'
 ;------------------------------------------------------------
 	G$ADC_Init$0$0 ==.
-	C$hw7_page_61_code.c$90$1$35 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:90: void ADC_Init(void) {
+	C$hw7_page_61_code.c$91$1$35 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:91: void ADC_Init(void) {
 ;	-----------------------------------------
 ;	 function ADC_Init
 ;	-----------------------------------------
 _ADC_Init:
-	C$hw7_page_61_code.c$100$1$38 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:100: REF0CN = 0x03; //code from page 61
+	C$hw7_page_61_code.c$101$1$38 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:101: REF0CN = 0x03; //code from page 61
 	mov	_REF0CN,#0x03
-	C$hw7_page_61_code.c$102$1$38 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:102: ADC1CN = 0x80;
-	mov	_ADC1CN,#0x80
 	C$hw7_page_61_code.c$103$1$38 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:103: ADC1CF |= 0x01;
-	orl	_ADC1CF,#0x01
-	C$hw7_page_61_code.c$108$1$38 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:103: ADC1CN = 0x80;
+	mov	_ADC1CN,#0x80
+	C$hw7_page_61_code.c$104$1$38 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:104: ADC1CF |= 0x02;  //gain is 2 now
+	orl	_ADC1CF,#0x02
+	C$hw7_page_61_code.c$110$1$38 ==.
 	XG$ADC_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -1333,133 +1344,126 @@ _ADC_Init:
 ;pin_number                Allocated to registers 
 ;------------------------------------------------------------
 	G$read_AD_input$0$0 ==.
-	C$hw7_page_61_code.c$112$1$38 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:112: unsigned char read_AD_input(unsigned char pin_number) {
+	C$hw7_page_61_code.c$114$1$38 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:114: unsigned char read_AD_input(unsigned char pin_number) {
 ;	-----------------------------------------
 ;	 function read_AD_input
 ;	-----------------------------------------
 _read_AD_input:
 	mov	_AMX1SL,dpl
-	C$hw7_page_61_code.c$114$1$40 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:114: ADC1CN = ADC1CN & ~0x20;
+	C$hw7_page_61_code.c$116$1$40 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:116: ADC1CN = ADC1CN & ~0x20;
 	mov	r7,_ADC1CN
 	mov	a,#0xDF
 	anl	a,r7
 	mov	_ADC1CN,a
-	C$hw7_page_61_code.c$115$1$40 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:115: ADC1CN = ADC1CN | 0x10;
-	orl	_ADC1CN,#0x10
 	C$hw7_page_61_code.c$117$1$40 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:117: while ( (ADC1CN & 0x20)==0x20);
-00101$:
-	mov	a,#0x20
-	anl	a,_ADC1CN
-	mov	r7,a
-	cjne	r7,#0x20,00112$
-	sjmp	00101$
-00112$:
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:117: ADC1CN = ADC1CN | 0x10;
+	orl	_ADC1CN,#0x10
 	C$hw7_page_61_code.c$119$1$40 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:119: return ADC1;
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:119: while ( (ADC1CN & 0x20)==0x00);
+00101$:
+	mov	a,_ADC1CN
+	jnb	acc.5,00101$
+	C$hw7_page_61_code.c$121$1$40 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:121: return ADC1;
 	mov	dpl,_ADC1
-	C$hw7_page_61_code.c$120$1$40 ==.
+	C$hw7_page_61_code.c$122$1$40 ==.
 	XG$read_AD_input$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$hw7_page_61_code.c$125$1$40 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:125: void Port_Init(void){
+	C$hw7_page_61_code.c$127$1$40 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:127: void Port_Init(void){
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$hw7_page_61_code.c$126$1$42 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:126: P1MDIN &= ~0x01;//port 1.4 analouge input
-	mov	r7,_P1MDIN
-	mov	a,#0xFE
-	anl	a,r7
-	mov	_P1MDIN,a
-	C$hw7_page_61_code.c$127$1$42 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:127: P1MDOUT &= ~0x01; //open drain
-	mov	r7,_P1MDOUT
-	mov	a,#0xFE
-	anl	a,r7
-	mov	_P1MDOUT,a
 	C$hw7_page_61_code.c$128$1$42 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:128: P1 |= 0x01;// set lgoic 1 to input pin p1.4
-	orl	_P1,#0x01
-	C$hw7_page_61_code.c$137$1$42 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:128: P1MDIN &= 0x20;//port 1.5 analouge input
+	anl	_P1MDIN,#0x20
+	C$hw7_page_61_code.c$129$1$42 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:129: P1MDOUT &= 0x20; //open drain
+	anl	_P1MDOUT,#0x20
+	C$hw7_page_61_code.c$130$1$42 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:130: P1 |= ~0x20;// set lgoic 1 to input pin p1.5
+	mov	r7,_P1
+	mov	a,#0xDF
+	orl	a,r7
+	mov	_P1,a
+	C$hw7_page_61_code.c$139$1$42 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$hw7_page_61_code.c$144$1$42 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:144: void Interrupt_Init(void){
+	C$hw7_page_61_code.c$146$1$42 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:146: void Interrupt_Init(void){
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$hw7_page_61_code.c$145$1$44 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:145: IE |= 0x82;      // enable Timer0 Interrupt request
+	C$hw7_page_61_code.c$147$1$44 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:147: IE |= 0x82;      // enable Timer0 Interrupt request
 	orl	_IE,#0x82
-	C$hw7_page_61_code.c$146$1$44 ==.
+	C$hw7_page_61_code.c$148$1$44 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer_Init'
 ;------------------------------------------------------------
 	G$Timer_Init$0$0 ==.
-	C$hw7_page_61_code.c$148$1$44 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:148: void Timer_Init(void){
+	C$hw7_page_61_code.c$150$1$44 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:150: void Timer_Init(void){
 ;	-----------------------------------------
 ;	 function Timer_Init
 ;	-----------------------------------------
 _Timer_Init:
-	C$hw7_page_61_code.c$150$1$46 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:150: CKCON |= 0x08;  // Timer0 uses SYSCLK 
-	orl	_CKCON,#0x08
-	C$hw7_page_61_code.c$151$1$46 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:151: TMOD &= 0xF0;   // clear the 4 least significant bits
-	anl	_TMOD,#0xF0
 	C$hw7_page_61_code.c$152$1$46 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:152: TMOD |= 0x01;   // Timer0 mode 16
-	orl	_TMOD,#0x01
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:152: CKCON |= 0x08;  // Timer0 uses SYSCLK 
+	orl	_CKCON,#0x08
 	C$hw7_page_61_code.c$153$1$46 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:153: TR0 = 0;        // Stop Timer0
-	clr	_TR0
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:153: TMOD &= 0xF0;   // clear the 4 least significant bits
+	anl	_TMOD,#0xF0
 	C$hw7_page_61_code.c$154$1$46 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:154: TL0 = 0;        // Clear low byte of register T0
-	mov	_TL0,#0x00
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:154: TMOD |= 0x01;   // Timer0 mode 16
+	orl	_TMOD,#0x01
 	C$hw7_page_61_code.c$155$1$46 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:155: TH0 = 0;        // Clear high byte of register T0
-	mov	_TH0,#0x00
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:155: TR0 = 0;        // Stop Timer0
+	clr	_TR0
+	C$hw7_page_61_code.c$156$1$46 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:156: TL0 = 0;        // Clear low byte of register T0
+	mov	_TL0,#0x00
 	C$hw7_page_61_code.c$157$1$46 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:157: TH0 = 0;        // Clear high byte of register T0
+	mov	_TH0,#0x00
+	C$hw7_page_61_code.c$159$1$46 ==.
 	XG$Timer_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Timer0_ISR'
 ;------------------------------------------------------------
 	G$Timer0_ISR$0$0 ==.
-	C$hw7_page_61_code.c$158$1$46 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:158: void Timer0_ISR(void) __interrupt 1
+	C$hw7_page_61_code.c$160$1$46 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:160: void Timer0_ISR(void) __interrupt 1
 ;	-----------------------------------------
 ;	 function Timer0_ISR
 ;	-----------------------------------------
 _Timer0_ISR:
 	push	acc
 	push	psw
-	C$hw7_page_61_code.c$160$1$48 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:160: counts1++;
+	C$hw7_page_61_code.c$162$1$48 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:162: counts1++;
 	inc	_counts1
 	clr	a
 	cjne	a,_counts1,00103$
 	inc	(_counts1 + 1)
 00103$:
-	C$hw7_page_61_code.c$161$1$48 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:161: counts2++;
+	C$hw7_page_61_code.c$163$1$48 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:163: counts2++;
 	inc	_counts2
 	clr	a
 	cjne	a,_counts2,00104$
@@ -1467,7 +1471,7 @@ _Timer0_ISR:
 00104$:
 	pop	psw
 	pop	acc
-	C$hw7_page_61_code.c$162$1$48 ==.
+	C$hw7_page_61_code.c$164$1$48 ==.
 	XG$Timer0_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -1492,7 +1496,7 @@ Fhw7_page_61_code$__str_2$0$0 == .
 ___str_2:
 	.db 0x0A
 	.db 0x0D
-	.ascii "Input value is %d"
+	.ascii "Input value is %u"
 	.db 0x0D
 	.db 0x0A
 	.db 0x00
@@ -1500,7 +1504,7 @@ Fhw7_page_61_code$__str_3$0$0 == .
 ___str_3:
 	.db 0x0A
 	.db 0x0D
-	.ascii "In milivots the value is %d"
+	.ascii "In milivots the value is %u"
 	.db 0x0D
 	.db 0x0A
 	.db 0x00
