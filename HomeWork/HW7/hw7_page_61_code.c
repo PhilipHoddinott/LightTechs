@@ -75,12 +75,10 @@ void main(void) {
 		//lets just measure how the AD goes
 		
 		//result = read_AD_input(4);//
-		result = read_AD_input(0);//
-		printf("\n\rResult = %c", result);
-
-
-		printf("appropriate comment here");	// print statement as required by homework
-		printf("appropriate comment here");	// print statement as required by homework
+		input = read_AD_input(0);//
+		AD_value= input *1000/2;// gain is 2, divide by gain
+		printf("\n\rInput value is %d\r\n", input);
+		printf("\n\rIn milivots the value is %d\r\n", AD_value);
 
     }//end while loop
 }//end main

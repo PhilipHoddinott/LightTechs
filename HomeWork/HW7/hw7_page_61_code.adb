@@ -315,5 +315,5 @@ S:G$printf_tiny$0$0({2}DF,SV:S),C,0,0
 S:G$main$0$0({2}DF,SV:S),C,0,0
 S:Fhw7_page_61_code$__str_0$0$0({9}DA9d,SC:S),D,0,0
 S:Fhw7_page_61_code$__str_1$0$0({31}DA31d,SC:S),D,0,0
-S:Fhw7_page_61_code$__str_2$0$0({14}DA14d,SC:S),D,0,0
-S:Fhw7_page_61_code$__str_3$0$0({25}DA25d,SC:S),D,0,0
+S:Fhw7_page_61_code$__str_2$0$0({22}DA22d,SC:S),D,0,0
+S:Fhw7_page_61_code$__str_3$0$0({32}DA32d,SC:S),D,0,0

@@ -876,20 +876,20 @@
                                     876 ;--------------------------------------------------------
                                     877 	.area DSEG    (DATA)
                            000000   878 G$counts1$0$0==.
-      000000                        879 _counts1::
-      000000                        880 	.ds 2
+      000008                        879 _counts1::
+      000008                        880 	.ds 2
                            000002   881 G$counts2$0$0==.
-      000002                        882 _counts2::
-      000002                        883 	.ds 2
+      00000A                        882 _counts2::
+      00000A                        883 	.ds 2
                            000004   884 G$AD_value$0$0==.
-      000004                        885 _AD_value::
-      000004                        886 	.ds 1
+      00000C                        885 _AD_value::
+      00000C                        886 	.ds 1
                            000005   887 G$input$0$0==.
-      000005                        888 _input::
-      000005                        889 	.ds 1
+      00000D                        888 _input::
+      00000D                        889 	.ds 1
                            000006   890 G$result$0$0==.
-      000006                        891 _result::
-      000006                        892 	.ds 1
+      00000E                        891 _result::
+      00000E                        892 	.ds 1
                                     893 ;--------------------------------------------------------
                                     894 ; overlayable items in internal ram 
                                     895 ;--------------------------------------------------------
@@ -900,8 +900,8 @@
                                     900 ; Stack segment in internal ram 
                                     901 ;--------------------------------------------------------
                                     902 	.area	SSEG
-      000000                        903 __start__stack:
-      000000                        904 	.ds	1
+      00003C                        903 __start__stack:
+      00003C                        904 	.ds	1
                                     905 
                                     906 ;--------------------------------------------------------
                                     907 ; indirectly addressable internal ram data
@@ -947,10 +947,10 @@
                                     947 ;--------------------------------------------------------
                                     948 	.area HOME    (CODE)
       000000                        949 __interrupt_vect:
-      000000 02r00r00         [24]  950 	ljmp	__sdcc_gsinit_startup
+      000000 02 00 11         [24]  950 	ljmp	__sdcc_gsinit_startup
       000003 32               [24]  951 	reti
       000004                        952 	.ds	7
-      00000B 02r01r6F         [24]  953 	ljmp	_Timer0_ISR
+      00000B 02 01 DC         [24]  953 	ljmp	_Timer0_ISR
                                     954 ;--------------------------------------------------------
                                     955 ; global & static initialisations
                                     956 ;--------------------------------------------------------
@@ -965,14 +965,14 @@
                                     965 	.globl __mcs51_genXRAMCLEAR
                                     966 	.globl __mcs51_genRAMCLEAR
                                     967 	.area GSFINAL (CODE)
-      000000 02r00r0E         [24]  968 	ljmp	__sdcc_program_startup
+      00006A 02 00 0E         [24]  968 	ljmp	__sdcc_program_startup
                                     969 ;--------------------------------------------------------
                                     970 ; Home
                                     971 ;--------------------------------------------------------
                                     972 	.area HOME    (CODE)
                                     973 	.area HOME    (CODE)
       00000E                        974 __sdcc_program_startup:
-      00000E 02r00r77         [24]  975 	ljmp	_main
+      00000E 02 00 E4         [24]  975 	ljmp	_main
                                     976 ;	return from main will return to caller
                                     977 ;--------------------------------------------------------
                                     978 ; code
@@ -989,7 +989,7 @@
                                     989 ;	-----------------------------------------
                                     990 ;	 function SYSCLK_Init
                                     991 ;	-----------------------------------------
-      000000                        992 _SYSCLK_Init:
+      00006D                        992 _SYSCLK_Init:
                            000007   993 	ar7 = 0x07
                            000006   994 	ar6 = 0x06
                            000005   995 	ar5 = 0x05
@@ -1000,34 +1000,34 @@
                            000000  1000 	ar0 = 0x00
                            000000  1001 	C$c8051_SDCC.h$46$1$2 ==.
                                    1002 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:46: OSCXCN = 0x67;                      // start external oscillator with
-      000000 75 B1 67         [24] 1003 	mov	_OSCXCN,#0x67
+      00006D 75 B1 67         [24] 1003 	mov	_OSCXCN,#0x67
                            000003  1004 	C$c8051_SDCC.h$49$1$2 ==.
                                    1005 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:49: for (i=0; i < 256; i++);            // wait for oscillator to start
-      000003 7E 00            [12] 1006 	mov	r6,#0x00
-      000005 7F 01            [12] 1007 	mov	r7,#0x01
-      000007                       1008 00107$:
-      000007 EE               [12] 1009 	mov	a,r6
-      000008 24 FF            [12] 1010 	add	a,#0xFF
-      00000A FC               [12] 1011 	mov	r4,a
-      00000B EF               [12] 1012 	mov	a,r7
-      00000C 34 FF            [12] 1013 	addc	a,#0xFF
-      00000E FD               [12] 1014 	mov	r5,a
-      00000F 8C 06            [24] 1015 	mov	ar6,r4
-      000011 8D 07            [24] 1016 	mov	ar7,r5
-      000013 EC               [12] 1017 	mov	a,r4
-      000014 4D               [12] 1018 	orl	a,r5
-      000015 70 F0            [24] 1019 	jnz	00107$
+      000070 7E 00            [12] 1006 	mov	r6,#0x00
+      000072 7F 01            [12] 1007 	mov	r7,#0x01
+      000074                       1008 00107$:
+      000074 EE               [12] 1009 	mov	a,r6
+      000075 24 FF            [12] 1010 	add	a,#0xFF
+      000077 FC               [12] 1011 	mov	r4,a
+      000078 EF               [12] 1012 	mov	a,r7
+      000079 34 FF            [12] 1013 	addc	a,#0xFF
+      00007B FD               [12] 1014 	mov	r5,a
+      00007C 8C 06            [24] 1015 	mov	ar6,r4
+      00007E 8D 07            [24] 1016 	mov	ar7,r5
+      000080 EC               [12] 1017 	mov	a,r4
+      000081 4D               [12] 1018 	orl	a,r5
+      000082 70 F0            [24] 1019 	jnz	00107$
                            000017  1020 	C$c8051_SDCC.h$51$1$2 ==.
                                    1021 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:51: while (!(OSCXCN & 0x80));           // Wait for crystal osc. to settle
-      000017                       1022 00102$:
-      000017 E5 B1            [12] 1023 	mov	a,_OSCXCN
-      000019 30 E7 FB         [24] 1024 	jnb	acc.7,00102$
+      000084                       1022 00102$:
+      000084 E5 B1            [12] 1023 	mov	a,_OSCXCN
+      000086 30 E7 FB         [24] 1024 	jnb	acc.7,00102$
                            00001C  1025 	C$c8051_SDCC.h$53$1$2 ==.
                                    1026 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:53: OSCICN = 0x88;                      // select external oscillator as SYSCLK
-      00001C 75 B2 88         [24] 1027 	mov	_OSCICN,#0x88
+      000089 75 B2 88         [24] 1027 	mov	_OSCICN,#0x88
                            00001F  1028 	C$c8051_SDCC.h$56$1$2 ==.
                            00001F  1029 	XG$SYSCLK_Init$0$0 ==.
-      00001F 22               [24] 1030 	ret
+      00008C 22               [24] 1030 	ret
                                    1031 ;------------------------------------------------------------
                                    1032 ;Allocation info for local variables in function 'UART0_Init'
                                    1033 ;------------------------------------------------------------
@@ -1037,34 +1037,34 @@
                                    1037 ;	-----------------------------------------
                                    1038 ;	 function UART0_Init
                                    1039 ;	-----------------------------------------
-      000020                       1040 _UART0_Init:
+      00008D                       1040 _UART0_Init:
                            000020  1041 	C$c8051_SDCC.h$66$1$4 ==.
                                    1042 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:66: SCON0  = 0x50;                      // SCON0: mode 1, 8-bit UART, enable RX
-      000020 75 98 50         [24] 1043 	mov	_SCON0,#0x50
+      00008D 75 98 50         [24] 1043 	mov	_SCON0,#0x50
                            000023  1044 	C$c8051_SDCC.h$67$1$4 ==.
                                    1045 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:67: TMOD   = 0x20;                      // TMOD: timer 1, mode 2, 8-bit reload
-      000023 75 89 20         [24] 1046 	mov	_TMOD,#0x20
+      000090 75 89 20         [24] 1046 	mov	_TMOD,#0x20
                            000026  1047 	C$c8051_SDCC.h$68$1$4 ==.
                                    1048 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:68: TH1    = 0xFF&-(SYSCLK/BAUDRATE/16);     // set Timer1 reload value for baudrate
-      000026 75 8D DC         [24] 1049 	mov	_TH1,#0xDC
+      000093 75 8D DC         [24] 1049 	mov	_TH1,#0xDC
                            000029  1050 	C$c8051_SDCC.h$69$1$4 ==.
                                    1051 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:69: TR1    = 1;                         // start Timer1
-      000029 D2 8E            [12] 1052 	setb	_TR1
+      000096 D2 8E            [12] 1052 	setb	_TR1
                            00002B  1053 	C$c8051_SDCC.h$70$1$4 ==.
                                    1054 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:70: CKCON |= 0x10;                      // Timer1 uses SYSCLK as time base
-      00002B 43 8E 10         [24] 1055 	orl	_CKCON,#0x10
+      000098 43 8E 10         [24] 1055 	orl	_CKCON,#0x10
                            00002E  1056 	C$c8051_SDCC.h$71$1$4 ==.
                                    1057 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:71: PCON  |= 0x80;                      // SMOD00 = 1 (disable baud rate 
-      00002E 43 87 80         [24] 1058 	orl	_PCON,#0x80
+      00009B 43 87 80         [24] 1058 	orl	_PCON,#0x80
                            000031  1059 	C$c8051_SDCC.h$73$1$4 ==.
                                    1060 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:73: TI0    = 1;                         // Indicate TX0 ready
-      000031 D2 99            [12] 1061 	setb	_TI0
+      00009E D2 99            [12] 1061 	setb	_TI0
                            000033  1062 	C$c8051_SDCC.h$74$1$4 ==.
                                    1063 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:74: P0MDOUT |= 0x01;                    // Set TX0 to push/pull
-      000033 43 A4 01         [24] 1064 	orl	_P0MDOUT,#0x01
+      0000A0 43 A4 01         [24] 1064 	orl	_P0MDOUT,#0x01
                            000036  1065 	C$c8051_SDCC.h$75$1$4 ==.
                            000036  1066 	XG$UART0_Init$0$0 ==.
-      000036 22               [24] 1067 	ret
+      0000A3 22               [24] 1067 	ret
                                    1068 ;------------------------------------------------------------
                                    1069 ;Allocation info for local variables in function 'Sys_Init'
                                    1070 ;------------------------------------------------------------
@@ -1074,28 +1074,28 @@
                                    1074 ;	-----------------------------------------
                                    1075 ;	 function Sys_Init
                                    1076 ;	-----------------------------------------
-      000037                       1077 _Sys_Init:
+      0000A4                       1077 _Sys_Init:
                            000037  1078 	C$c8051_SDCC.h$85$1$6 ==.
                                    1079 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:85: WDTCN = 0xde;			// disable watchdog timer
-      000037 75 FF DE         [24] 1080 	mov	_WDTCN,#0xDE
+      0000A4 75 FF DE         [24] 1080 	mov	_WDTCN,#0xDE
                            00003A  1081 	C$c8051_SDCC.h$86$1$6 ==.
                                    1082 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:86: WDTCN = 0xad;
-      00003A 75 FF AD         [24] 1083 	mov	_WDTCN,#0xAD
+      0000A7 75 FF AD         [24] 1083 	mov	_WDTCN,#0xAD
                            00003D  1084 	C$c8051_SDCC.h$88$1$6 ==.
                                    1085 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:88: SYSCLK_Init();			// initialize oscillator
-      00003D 12r00r00         [24] 1086 	lcall	_SYSCLK_Init
+      0000AA 12 00 6D         [24] 1086 	lcall	_SYSCLK_Init
                            000040  1087 	C$c8051_SDCC.h$89$1$6 ==.
                                    1088 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:89: UART0_Init();			// initialize UART0
-      000040 12r00r20         [24] 1089 	lcall	_UART0_Init
+      0000AD 12 00 8D         [24] 1089 	lcall	_UART0_Init
                            000043  1090 	C$c8051_SDCC.h$91$1$6 ==.
                                    1091 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:91: XBR0 |= 0x04;
-      000043 43 E1 04         [24] 1092 	orl	_XBR0,#0x04
+      0000B0 43 E1 04         [24] 1092 	orl	_XBR0,#0x04
                            000046  1093 	C$c8051_SDCC.h$92$1$6 ==.
                                    1094 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:92: XBR2 |= 0x40;                    	// Enable crossbar and weak pull-ups
-      000046 43 E3 40         [24] 1095 	orl	_XBR2,#0x40
+      0000B3 43 E3 40         [24] 1095 	orl	_XBR2,#0x40
                            000049  1096 	C$c8051_SDCC.h$93$1$6 ==.
                            000049  1097 	XG$Sys_Init$0$0 ==.
-      000049 22               [24] 1098 	ret
+      0000B6 22               [24] 1098 	ret
                                    1099 ;------------------------------------------------------------
                                    1100 ;Allocation info for local variables in function 'putchar'
                                    1101 ;------------------------------------------------------------
@@ -1107,22 +1107,22 @@
                                    1107 ;	-----------------------------------------
                                    1108 ;	 function putchar
                                    1109 ;	-----------------------------------------
-      00004A                       1110 _putchar:
-      00004A AF 82            [24] 1111 	mov	r7,dpl
+      0000B7                       1110 _putchar:
+      0000B7 AF 82            [24] 1111 	mov	r7,dpl
                            00004C  1112 	C$c8051_SDCC.h$100$1$8 ==.
                                    1113 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:100: while (!TI0); 
-      00004C                       1114 00101$:
+      0000B9                       1114 00101$:
                            00004C  1115 	C$c8051_SDCC.h$101$1$8 ==.
                                    1116 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:101: TI0 = 0;
-      00004C 10 99 02         [24] 1117 	jbc	_TI0,00112$
-      00004F 80 FB            [24] 1118 	sjmp	00101$
-      000051                       1119 00112$:
+      0000B9 10 99 02         [24] 1117 	jbc	_TI0,00112$
+      0000BC 80 FB            [24] 1118 	sjmp	00101$
+      0000BE                       1119 00112$:
                            000051  1120 	C$c8051_SDCC.h$102$1$8 ==.
                                    1121 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:102: SBUF0 = c;
-      000051 8F 99            [24] 1122 	mov	_SBUF0,r7
+      0000BE 8F 99            [24] 1122 	mov	_SBUF0,r7
                            000053  1123 	C$c8051_SDCC.h$103$1$8 ==.
                            000053  1124 	XG$putchar$0$0 ==.
-      000053 22               [24] 1125 	ret
+      0000C0 22               [24] 1125 	ret
                                    1126 ;------------------------------------------------------------
                                    1127 ;Allocation info for local variables in function 'getchar'
                                    1128 ;------------------------------------------------------------
@@ -1134,27 +1134,27 @@
                                    1134 ;	-----------------------------------------
                                    1135 ;	 function getchar
                                    1136 ;	-----------------------------------------
-      000054                       1137 _getchar:
+      0000C1                       1137 _getchar:
                            000054  1138 	C$c8051_SDCC.h$111$1$10 ==.
                                    1139 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:111: while (!RI0);
-      000054                       1140 00101$:
+      0000C1                       1140 00101$:
                            000054  1141 	C$c8051_SDCC.h$112$1$10 ==.
                                    1142 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:112: RI0 = 0;
-      000054 10 98 02         [24] 1143 	jbc	_RI0,00112$
-      000057 80 FB            [24] 1144 	sjmp	00101$
-      000059                       1145 00112$:
+      0000C1 10 98 02         [24] 1143 	jbc	_RI0,00112$
+      0000C4 80 FB            [24] 1144 	sjmp	00101$
+      0000C6                       1145 00112$:
                            000059  1146 	C$c8051_SDCC.h$113$1$10 ==.
                                    1147 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:113: c = SBUF0;
-      000059 85 99 82         [24] 1148 	mov	dpl,_SBUF0
+      0000C6 85 99 82         [24] 1148 	mov	dpl,_SBUF0
                            00005C  1149 	C$c8051_SDCC.h$114$1$10 ==.
                                    1150 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:114: putchar(c);                          // echo to terminal
-      00005C 12r00r4A         [24] 1151 	lcall	_putchar
+      0000C9 12 00 B7         [24] 1151 	lcall	_putchar
                            00005F  1152 	C$c8051_SDCC.h$115$1$10 ==.
                                    1153 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:115: return SBUF0;
-      00005F 85 99 82         [24] 1154 	mov	dpl,_SBUF0
+      0000CC 85 99 82         [24] 1154 	mov	dpl,_SBUF0
                            000062  1155 	C$c8051_SDCC.h$116$1$10 ==.
                            000062  1156 	XG$getchar$0$0 ==.
-      000062 22               [24] 1157 	ret
+      0000CF 22               [24] 1157 	ret
                                    1158 ;------------------------------------------------------------
                                    1159 ;Allocation info for local variables in function 'getchar_nw'
                                    1160 ;------------------------------------------------------------
@@ -1166,29 +1166,29 @@
                                    1166 ;	-----------------------------------------
                                    1167 ;	 function getchar_nw
                                    1168 ;	-----------------------------------------
-      000063                       1169 _getchar_nw:
+      0000D0                       1169 _getchar_nw:
                            000063  1170 	C$c8051_SDCC.h$124$1$12 ==.
                                    1171 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:124: if (!RI0) return 0xFF;
-      000063 20 98 05         [24] 1172 	jb	_RI0,00102$
-      000066 75 82 FF         [24] 1173 	mov	dpl,#0xFF
-      000069 80 0B            [24] 1174 	sjmp	00104$
-      00006B                       1175 00102$:
+      0000D0 20 98 05         [24] 1172 	jb	_RI0,00102$
+      0000D3 75 82 FF         [24] 1173 	mov	dpl,#0xFF
+      0000D6 80 0B            [24] 1174 	sjmp	00104$
+      0000D8                       1175 00102$:
                            00006B  1176 	C$c8051_SDCC.h$127$2$13 ==.
                                    1177 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:127: RI0 = 0;
-      00006B C2 98            [12] 1178 	clr	_RI0
+      0000D8 C2 98            [12] 1178 	clr	_RI0
                            00006D  1179 	C$c8051_SDCC.h$128$2$13 ==.
                                    1180 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:128: c = SBUF0;
-      00006D 85 99 82         [24] 1181 	mov	dpl,_SBUF0
+      0000DA 85 99 82         [24] 1181 	mov	dpl,_SBUF0
                            000070  1182 	C$c8051_SDCC.h$129$2$13 ==.
                                    1183 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:129: putchar(c);                          // echo to terminal
-      000070 12r00r4A         [24] 1184 	lcall	_putchar
+      0000DD 12 00 B7         [24] 1184 	lcall	_putchar
                            000073  1185 	C$c8051_SDCC.h$130$2$13 ==.
                                    1186 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:130: return SBUF0;
-      000073 85 99 82         [24] 1187 	mov	dpl,_SBUF0
-      000076                       1188 00104$:
+      0000E0 85 99 82         [24] 1187 	mov	dpl,_SBUF0
+      0000E3                       1188 00104$:
                            000076  1189 	C$c8051_SDCC.h$132$1$12 ==.
                            000076  1190 	XG$getchar_nw$0$0 ==.
-      000076 22               [24] 1191 	ret
+      0000E3 22               [24] 1191 	ret
                                    1192 ;------------------------------------------------------------
                                    1193 ;Allocation info for local variables in function 'main'
                                    1194 ;------------------------------------------------------------
@@ -1198,113 +1198,113 @@
                                    1198 ;	-----------------------------------------
                                    1199 ;	 function main
                                    1200 ;	-----------------------------------------
-      000077                       1201 _main:
+      0000E4                       1201 _main:
                            000077  1202 	C$hw7_page_61_code.c$59$1$35 ==.
                                    1203 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:59: Sys_Init();      // System Initialization
-      000077 12r00r37         [24] 1204 	lcall	_Sys_Init
+      0000E4 12 00 A4         [24] 1204 	lcall	_Sys_Init
                            00007A  1205 	C$hw7_page_61_code.c$60$1$35 ==.
                                    1206 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:60: putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
-      00007A 75 82 20         [24] 1207 	mov	dpl,#0x20
-      00007D 12r00r4A         [24] 1208 	lcall	_putchar
+      0000E7 75 82 20         [24] 1207 	mov	dpl,#0x20
+      0000EA 12 00 B7         [24] 1208 	lcall	_putchar
                            000080  1209 	C$hw7_page_61_code.c$61$1$35 ==.
                                    1210 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:61: Interrupt_Init();
-      000080 12r01r59         [24] 1211 	lcall	_Interrupt_Init
+      0000ED 12 01 C6         [24] 1211 	lcall	_Interrupt_Init
                            000083  1212 	C$hw7_page_61_code.c$62$1$35 ==.
                                    1213 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:62: Timer_Init();    // Initialize Timer 0
-      000083 12r01r5D         [24] 1214 	lcall	_Timer_Init
+      0000F0 12 01 CA         [24] 1214 	lcall	_Timer_Init
                            000086  1215 	C$hw7_page_61_code.c$63$1$35 ==.
                                    1216 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:63: Port_Init(); 
-      000086 12r01r47         [24] 1217 	lcall	_Port_Init
+      0000F3 12 01 B4         [24] 1217 	lcall	_Port_Init
                            000089  1218 	C$hw7_page_61_code.c$64$1$35 ==.
                                    1219 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:64: ADC_Init();
-      000089 12r01r22         [24] 1220 	lcall	_ADC_Init
+      0000F6 12 01 8F         [24] 1220 	lcall	_ADC_Init
                            00008C  1221 	C$hw7_page_61_code.c$68$1$35 ==.
                                    1222 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:68: printf("Start \r\n");
-      00008C 74r00            [12] 1223 	mov	a,#___str_0
-      00008E C0 E0            [24] 1224 	push	acc
-      000090 74s00            [12] 1225 	mov	a,#(___str_0 >> 8)
-      000092 C0 E0            [24] 1226 	push	acc
-      000094 74 80            [12] 1227 	mov	a,#0x80
-      000096 C0 E0            [24] 1228 	push	acc
-      000098 12r00r00         [24] 1229 	lcall	_printf
-      00009B 15 81            [12] 1230 	dec	sp
-      00009D 15 81            [12] 1231 	dec	sp
-      00009F 15 81            [12] 1232 	dec	sp
+      0000F9 74 B0            [12] 1223 	mov	a,#___str_0
+      0000FB C0 E0            [24] 1224 	push	acc
+      0000FD 74 08            [12] 1225 	mov	a,#(___str_0 >> 8)
+      0000FF C0 E0            [24] 1226 	push	acc
+      000101 74 80            [12] 1227 	mov	a,#0x80
+      000103 C0 E0            [24] 1228 	push	acc
+      000105 12 02 5F         [24] 1229 	lcall	_printf
+      000108 15 81            [12] 1230 	dec	sp
+      00010A 15 81            [12] 1231 	dec	sp
+      00010C 15 81            [12] 1232 	dec	sp
                            0000A1  1233 	C$hw7_page_61_code.c$69$1$35 ==.
                                    1234 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:69: while (1)  {
-      0000A1                       1235 00102$:
+      00010E                       1235 00102$:
                            0000A1  1236 	C$hw7_page_61_code.c$70$2$36 ==.
                                    1237 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:70: printf("enter key to read A/D input \r\n");
-      0000A1 74r09            [12] 1238 	mov	a,#___str_1
-      0000A3 C0 E0            [24] 1239 	push	acc
-      0000A5 74s00            [12] 1240 	mov	a,#(___str_1 >> 8)
-      0000A7 C0 E0            [24] 1241 	push	acc
-      0000A9 74 80            [12] 1242 	mov	a,#0x80
-      0000AB C0 E0            [24] 1243 	push	acc
-      0000AD 12r00r00         [24] 1244 	lcall	_printf
-      0000B0 15 81            [12] 1245 	dec	sp
-      0000B2 15 81            [12] 1246 	dec	sp
-      0000B4 15 81            [12] 1247 	dec	sp
+      00010E 74 B9            [12] 1238 	mov	a,#___str_1
+      000110 C0 E0            [24] 1239 	push	acc
+      000112 74 08            [12] 1240 	mov	a,#(___str_1 >> 8)
+      000114 C0 E0            [24] 1241 	push	acc
+      000116 74 80            [12] 1242 	mov	a,#0x80
+      000118 C0 E0            [24] 1243 	push	acc
+      00011A 12 02 5F         [24] 1244 	lcall	_printf
+      00011D 15 81            [12] 1245 	dec	sp
+      00011F 15 81            [12] 1246 	dec	sp
+      000121 15 81            [12] 1247 	dec	sp
                            0000B6  1248 	C$hw7_page_61_code.c$71$2$36 ==.
                                    1249 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:71: input = getchar();
-      0000B6 12r00r54         [24] 1250 	lcall	_getchar
-      0000B9 85 82*05         [24] 1251 	mov	_input,dpl
+      000123 12 00 C1         [24] 1250 	lcall	_getchar
+      000126 85 82 0D         [24] 1251 	mov	_input,dpl
                            0000BC  1252 	C$hw7_page_61_code.c$78$2$36 ==.
                                    1253 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:78: input = read_AD_input(0);//
-      0000BC 75 82 00         [24] 1254 	mov	dpl,#0x00
-      0000BF 12r01r2C         [24] 1255 	lcall	_read_AD_input
-      0000C2 85 82*05         [24] 1256 	mov	_input,dpl
+      000129 75 82 00         [24] 1254 	mov	dpl,#0x00
+      00012C 12 01 99         [24] 1255 	lcall	_read_AD_input
+      00012F 85 82 0D         [24] 1256 	mov	_input,dpl
                            0000C5  1257 	C$hw7_page_61_code.c$79$2$36 ==.
                                    1258 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:79: AD_value= input *1000/2;// gain is 2, divide by gain
-      0000C5 AE*05            [24] 1259 	mov	r6,_input
-      0000C7 7F 00            [12] 1260 	mov	r7,#0x00
-      0000C9 8E*00            [24] 1261 	mov	__mulint_PARM_2,r6
-      0000CB 8F*01            [24] 1262 	mov	(__mulint_PARM_2 + 1),r7
-      0000CD 90 03 E8         [24] 1263 	mov	dptr,#0x03E8
-      0000D0 C0 07            [24] 1264 	push	ar7
-      0000D2 C0 06            [24] 1265 	push	ar6
-      0000D4 12r00r00         [24] 1266 	lcall	__mulint
-      0000D7 75*00 02         [24] 1267 	mov	__divsint_PARM_2,#0x02
-      0000DA 75*01 00         [24] 1268 	mov	(__divsint_PARM_2 + 1),#0x00
-      0000DD 12r00r00         [24] 1269 	lcall	__divsint
-      0000E0 AC 82            [24] 1270 	mov	r4,dpl
-      0000E2 D0 06            [24] 1271 	pop	ar6
-      0000E4 D0 07            [24] 1272 	pop	ar7
-      0000E6 8C*04            [24] 1273 	mov	_AD_value,r4
+      000132 AE 0D            [24] 1259 	mov	r6,_input
+      000134 7F 00            [12] 1260 	mov	r7,#0x00
+      000136 8E 11            [24] 1261 	mov	__mulint_PARM_2,r6
+      000138 8F 12            [24] 1262 	mov	(__mulint_PARM_2 + 1),r7
+      00013A 90 03 E8         [24] 1263 	mov	dptr,#0x03E8
+      00013D C0 07            [24] 1264 	push	ar7
+      00013F C0 06            [24] 1265 	push	ar6
+      000141 12 01 F5         [24] 1266 	lcall	__mulint
+      000144 75 11 02         [24] 1267 	mov	__divsint_PARM_2,#0x02
+      000147 75 12 00         [24] 1268 	mov	(__divsint_PARM_2 + 1),#0x00
+      00014A 12 08 74         [24] 1269 	lcall	__divsint
+      00014D AC 82            [24] 1270 	mov	r4,dpl
+      00014F D0 06            [24] 1271 	pop	ar6
+      000151 D0 07            [24] 1272 	pop	ar7
+      000153 8C 0C            [24] 1273 	mov	_AD_value,r4
                            0000E8  1274 	C$hw7_page_61_code.c$80$2$36 ==.
                                    1275 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:80: printf("\n\rInput value is %d\r\n", input);
-      0000E8 C0 06            [24] 1276 	push	ar6
-      0000EA C0 07            [24] 1277 	push	ar7
-      0000EC 74r28            [12] 1278 	mov	a,#___str_2
-      0000EE C0 E0            [24] 1279 	push	acc
-      0000F0 74s00            [12] 1280 	mov	a,#(___str_2 >> 8)
-      0000F2 C0 E0            [24] 1281 	push	acc
-      0000F4 74 80            [12] 1282 	mov	a,#0x80
-      0000F6 C0 E0            [24] 1283 	push	acc
-      0000F8 12r00r00         [24] 1284 	lcall	_printf
-      0000FB E5 81            [12] 1285 	mov	a,sp
-      0000FD 24 FB            [12] 1286 	add	a,#0xfb
-      0000FF F5 81            [12] 1287 	mov	sp,a
+      000155 C0 06            [24] 1276 	push	ar6
+      000157 C0 07            [24] 1277 	push	ar7
+      000159 74 D8            [12] 1278 	mov	a,#___str_2
+      00015B C0 E0            [24] 1279 	push	acc
+      00015D 74 08            [12] 1280 	mov	a,#(___str_2 >> 8)
+      00015F C0 E0            [24] 1281 	push	acc
+      000161 74 80            [12] 1282 	mov	a,#0x80
+      000163 C0 E0            [24] 1283 	push	acc
+      000165 12 02 5F         [24] 1284 	lcall	_printf
+      000168 E5 81            [12] 1285 	mov	a,sp
+      00016A 24 FB            [12] 1286 	add	a,#0xfb
+      00016C F5 81            [12] 1287 	mov	sp,a
                            000101  1288 	C$hw7_page_61_code.c$81$2$36 ==.
                                    1289 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:81: printf("\n\rIn milivots the value is %d\r\n", AD_value);
-      000101 AE*04            [24] 1290 	mov	r6,_AD_value
-      000103 7F 00            [12] 1291 	mov	r7,#0x00
-      000105 C0 06            [24] 1292 	push	ar6
-      000107 C0 07            [24] 1293 	push	ar7
-      000109 74r3E            [12] 1294 	mov	a,#___str_3
-      00010B C0 E0            [24] 1295 	push	acc
-      00010D 74s00            [12] 1296 	mov	a,#(___str_3 >> 8)
-      00010F C0 E0            [24] 1297 	push	acc
-      000111 74 80            [12] 1298 	mov	a,#0x80
-      000113 C0 E0            [24] 1299 	push	acc
-      000115 12r00r00         [24] 1300 	lcall	_printf
-      000118 E5 81            [12] 1301 	mov	a,sp
-      00011A 24 FB            [12] 1302 	add	a,#0xfb
-      00011C F5 81            [12] 1303 	mov	sp,a
-      00011E 02r00rA1         [24] 1304 	ljmp	00102$
+      00016E AE 0C            [24] 1290 	mov	r6,_AD_value
+      000170 7F 00            [12] 1291 	mov	r7,#0x00
+      000172 C0 06            [24] 1292 	push	ar6
+      000174 C0 07            [24] 1293 	push	ar7
+      000176 74 EE            [12] 1294 	mov	a,#___str_3
+      000178 C0 E0            [24] 1295 	push	acc
+      00017A 74 08            [12] 1296 	mov	a,#(___str_3 >> 8)
+      00017C C0 E0            [24] 1297 	push	acc
+      00017E 74 80            [12] 1298 	mov	a,#0x80
+      000180 C0 E0            [24] 1299 	push	acc
+      000182 12 02 5F         [24] 1300 	lcall	_printf
+      000185 E5 81            [12] 1301 	mov	a,sp
+      000187 24 FB            [12] 1302 	add	a,#0xfb
+      000189 F5 81            [12] 1303 	mov	sp,a
+      00018B 02 01 0E         [24] 1304 	ljmp	00102$
                            000121  1305 	C$hw7_page_61_code.c$84$1$35 ==.
                            000121  1306 	XG$main$0$0 ==.
-      000121 22               [24] 1307 	ret
+      00018E 22               [24] 1307 	ret
                                    1308 ;------------------------------------------------------------
                                    1309 ;Allocation info for local variables in function 'ADC_Init'
                                    1310 ;------------------------------------------------------------
@@ -1314,19 +1314,19 @@
                                    1314 ;	-----------------------------------------
                                    1315 ;	 function ADC_Init
                                    1316 ;	-----------------------------------------
-      000122                       1317 _ADC_Init:
+      00018F                       1317 _ADC_Init:
                            000122  1318 	C$hw7_page_61_code.c$100$1$38 ==.
                                    1319 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:100: REF0CN = 0x03; //code from page 61
-      000122 75 D1 03         [24] 1320 	mov	_REF0CN,#0x03
+      00018F 75 D1 03         [24] 1320 	mov	_REF0CN,#0x03
                            000125  1321 	C$hw7_page_61_code.c$102$1$38 ==.
                                    1322 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:102: ADC1CN = 0x80;
-      000125 75 AA 80         [24] 1323 	mov	_ADC1CN,#0x80
+      000192 75 AA 80         [24] 1323 	mov	_ADC1CN,#0x80
                            000128  1324 	C$hw7_page_61_code.c$103$1$38 ==.
                                    1325 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:103: ADC1CF |= 0x01;
-      000128 43 AB 01         [24] 1326 	orl	_ADC1CF,#0x01
+      000195 43 AB 01         [24] 1326 	orl	_ADC1CF,#0x01
                            00012B  1327 	C$hw7_page_61_code.c$108$1$38 ==.
                            00012B  1328 	XG$ADC_Init$0$0 ==.
-      00012B 22               [24] 1329 	ret
+      000198 22               [24] 1329 	ret
                                    1330 ;------------------------------------------------------------
                                    1331 ;Allocation info for local variables in function 'read_AD_input'
                                    1332 ;------------------------------------------------------------
@@ -1338,32 +1338,32 @@
                                    1338 ;	-----------------------------------------
                                    1339 ;	 function read_AD_input
                                    1340 ;	-----------------------------------------
-      00012C                       1341 _read_AD_input:
-      00012C 85 82 AC         [24] 1342 	mov	_AMX1SL,dpl
+      000199                       1341 _read_AD_input:
+      000199 85 82 AC         [24] 1342 	mov	_AMX1SL,dpl
                            00012F  1343 	C$hw7_page_61_code.c$114$1$40 ==.
                                    1344 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:114: ADC1CN = ADC1CN & ~0x20;
-      00012F AF AA            [24] 1345 	mov	r7,_ADC1CN
-      000131 74 DF            [12] 1346 	mov	a,#0xDF
-      000133 5F               [12] 1347 	anl	a,r7
-      000134 F5 AA            [12] 1348 	mov	_ADC1CN,a
+      00019C AF AA            [24] 1345 	mov	r7,_ADC1CN
+      00019E 74 DF            [12] 1346 	mov	a,#0xDF
+      0001A0 5F               [12] 1347 	anl	a,r7
+      0001A1 F5 AA            [12] 1348 	mov	_ADC1CN,a
                            000136  1349 	C$hw7_page_61_code.c$115$1$40 ==.
                                    1350 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:115: ADC1CN = ADC1CN | 0x10;
-      000136 43 AA 10         [24] 1351 	orl	_ADC1CN,#0x10
+      0001A3 43 AA 10         [24] 1351 	orl	_ADC1CN,#0x10
                            000139  1352 	C$hw7_page_61_code.c$117$1$40 ==.
                                    1353 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:117: while ( (ADC1CN & 0x20)==0x20);
-      000139                       1354 00101$:
-      000139 74 20            [12] 1355 	mov	a,#0x20
-      00013B 55 AA            [12] 1356 	anl	a,_ADC1CN
-      00013D FF               [12] 1357 	mov	r7,a
-      00013E BF 20 02         [24] 1358 	cjne	r7,#0x20,00112$
-      000141 80 F6            [24] 1359 	sjmp	00101$
-      000143                       1360 00112$:
+      0001A6                       1354 00101$:
+      0001A6 74 20            [12] 1355 	mov	a,#0x20
+      0001A8 55 AA            [12] 1356 	anl	a,_ADC1CN
+      0001AA FF               [12] 1357 	mov	r7,a
+      0001AB BF 20 02         [24] 1358 	cjne	r7,#0x20,00112$
+      0001AE 80 F6            [24] 1359 	sjmp	00101$
+      0001B0                       1360 00112$:
                            000143  1361 	C$hw7_page_61_code.c$119$1$40 ==.
                                    1362 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:119: return ADC1;
-      000143 85 9C 82         [24] 1363 	mov	dpl,_ADC1
+      0001B0 85 9C 82         [24] 1363 	mov	dpl,_ADC1
                            000146  1364 	C$hw7_page_61_code.c$120$1$40 ==.
                            000146  1365 	XG$read_AD_input$0$0 ==.
-      000146 22               [24] 1366 	ret
+      0001B3 22               [24] 1366 	ret
                                    1367 ;------------------------------------------------------------
                                    1368 ;Allocation info for local variables in function 'Port_Init'
                                    1369 ;------------------------------------------------------------
@@ -1373,25 +1373,25 @@
                                    1373 ;	-----------------------------------------
                                    1374 ;	 function Port_Init
                                    1375 ;	-----------------------------------------
-      000147                       1376 _Port_Init:
+      0001B4                       1376 _Port_Init:
                            000147  1377 	C$hw7_page_61_code.c$126$1$42 ==.
                                    1378 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:126: P1MDIN &= ~0x01;//port 1.4 analouge input
-      000147 AF BD            [24] 1379 	mov	r7,_P1MDIN
-      000149 74 FE            [12] 1380 	mov	a,#0xFE
-      00014B 5F               [12] 1381 	anl	a,r7
-      00014C F5 BD            [12] 1382 	mov	_P1MDIN,a
+      0001B4 AF BD            [24] 1379 	mov	r7,_P1MDIN
+      0001B6 74 FE            [12] 1380 	mov	a,#0xFE
+      0001B8 5F               [12] 1381 	anl	a,r7
+      0001B9 F5 BD            [12] 1382 	mov	_P1MDIN,a
                            00014E  1383 	C$hw7_page_61_code.c$127$1$42 ==.
                                    1384 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:127: P1MDOUT &= ~0x01; //open drain
-      00014E AF A5            [24] 1385 	mov	r7,_P1MDOUT
-      000150 74 FE            [12] 1386 	mov	a,#0xFE
-      000152 5F               [12] 1387 	anl	a,r7
-      000153 F5 A5            [12] 1388 	mov	_P1MDOUT,a
+      0001BB AF A5            [24] 1385 	mov	r7,_P1MDOUT
+      0001BD 74 FE            [12] 1386 	mov	a,#0xFE
+      0001BF 5F               [12] 1387 	anl	a,r7
+      0001C0 F5 A5            [12] 1388 	mov	_P1MDOUT,a
                            000155  1389 	C$hw7_page_61_code.c$128$1$42 ==.
                                    1390 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:128: P1 |= 0x01;// set lgoic 1 to input pin p1.4
-      000155 43 90 01         [24] 1391 	orl	_P1,#0x01
+      0001C2 43 90 01         [24] 1391 	orl	_P1,#0x01
                            000158  1392 	C$hw7_page_61_code.c$137$1$42 ==.
                            000158  1393 	XG$Port_Init$0$0 ==.
-      000158 22               [24] 1394 	ret
+      0001C5 22               [24] 1394 	ret
                                    1395 ;------------------------------------------------------------
                                    1396 ;Allocation info for local variables in function 'Interrupt_Init'
                                    1397 ;------------------------------------------------------------
@@ -1401,13 +1401,13 @@
                                    1401 ;	-----------------------------------------
                                    1402 ;	 function Interrupt_Init
                                    1403 ;	-----------------------------------------
-      000159                       1404 _Interrupt_Init:
+      0001C6                       1404 _Interrupt_Init:
                            000159  1405 	C$hw7_page_61_code.c$145$1$44 ==.
                                    1406 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:145: IE |= 0x82;      // enable Timer0 Interrupt request
-      000159 43 A8 82         [24] 1407 	orl	_IE,#0x82
+      0001C6 43 A8 82         [24] 1407 	orl	_IE,#0x82
                            00015C  1408 	C$hw7_page_61_code.c$146$1$44 ==.
                            00015C  1409 	XG$Interrupt_Init$0$0 ==.
-      00015C 22               [24] 1410 	ret
+      0001C9 22               [24] 1410 	ret
                                    1411 ;------------------------------------------------------------
                                    1412 ;Allocation info for local variables in function 'Timer_Init'
                                    1413 ;------------------------------------------------------------
@@ -1417,28 +1417,28 @@
                                    1417 ;	-----------------------------------------
                                    1418 ;	 function Timer_Init
                                    1419 ;	-----------------------------------------
-      00015D                       1420 _Timer_Init:
+      0001CA                       1420 _Timer_Init:
                            00015D  1421 	C$hw7_page_61_code.c$150$1$46 ==.
                                    1422 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:150: CKCON |= 0x08;  // Timer0 uses SYSCLK 
-      00015D 43 8E 08         [24] 1423 	orl	_CKCON,#0x08
+      0001CA 43 8E 08         [24] 1423 	orl	_CKCON,#0x08
                            000160  1424 	C$hw7_page_61_code.c$151$1$46 ==.
                                    1425 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:151: TMOD &= 0xF0;   // clear the 4 least significant bits
-      000160 53 89 F0         [24] 1426 	anl	_TMOD,#0xF0
+      0001CD 53 89 F0         [24] 1426 	anl	_TMOD,#0xF0
                            000163  1427 	C$hw7_page_61_code.c$152$1$46 ==.
                                    1428 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:152: TMOD |= 0x01;   // Timer0 mode 16
-      000163 43 89 01         [24] 1429 	orl	_TMOD,#0x01
+      0001D0 43 89 01         [24] 1429 	orl	_TMOD,#0x01
                            000166  1430 	C$hw7_page_61_code.c$153$1$46 ==.
                                    1431 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:153: TR0 = 0;        // Stop Timer0
-      000166 C2 8C            [12] 1432 	clr	_TR0
+      0001D3 C2 8C            [12] 1432 	clr	_TR0
                            000168  1433 	C$hw7_page_61_code.c$154$1$46 ==.
                                    1434 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:154: TL0 = 0;        // Clear low byte of register T0
-      000168 75 8A 00         [24] 1435 	mov	_TL0,#0x00
+      0001D5 75 8A 00         [24] 1435 	mov	_TL0,#0x00
                            00016B  1436 	C$hw7_page_61_code.c$155$1$46 ==.
                                    1437 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:155: TH0 = 0;        // Clear high byte of register T0
-      00016B 75 8C 00         [24] 1438 	mov	_TH0,#0x00
+      0001D8 75 8C 00         [24] 1438 	mov	_TH0,#0x00
                            00016E  1439 	C$hw7_page_61_code.c$157$1$46 ==.
                            00016E  1440 	XG$Timer_Init$0$0 ==.
-      00016E 22               [24] 1441 	ret
+      0001DB 22               [24] 1441 	ret
                                    1442 ;------------------------------------------------------------
                                    1443 ;Allocation info for local variables in function 'Timer0_ISR'
                                    1444 ;------------------------------------------------------------
@@ -1448,28 +1448,28 @@
                                    1448 ;	-----------------------------------------
                                    1449 ;	 function Timer0_ISR
                                    1450 ;	-----------------------------------------
-      00016F                       1451 _Timer0_ISR:
-      00016F C0 E0            [24] 1452 	push	acc
-      000171 C0 D0            [24] 1453 	push	psw
+      0001DC                       1451 _Timer0_ISR:
+      0001DC C0 E0            [24] 1452 	push	acc
+      0001DE C0 D0            [24] 1453 	push	psw
                            000173  1454 	C$hw7_page_61_code.c$160$1$48 ==.
                                    1455 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:160: counts1++;
-      000173 05*00            [12] 1456 	inc	_counts1
-      000175 E4               [12] 1457 	clr	a
-      000176 B5*00 02         [24] 1458 	cjne	a,_counts1,00103$
-      000179 05*01            [12] 1459 	inc	(_counts1 + 1)
-      00017B                       1460 00103$:
+      0001E0 05 08            [12] 1456 	inc	_counts1
+      0001E2 E4               [12] 1457 	clr	a
+      0001E3 B5 08 02         [24] 1458 	cjne	a,_counts1,00103$
+      0001E6 05 09            [12] 1459 	inc	(_counts1 + 1)
+      0001E8                       1460 00103$:
                            00017B  1461 	C$hw7_page_61_code.c$161$1$48 ==.
                                    1462 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_page_61_code.c:161: counts2++;
-      00017B 05*02            [12] 1463 	inc	_counts2
-      00017D E4               [12] 1464 	clr	a
-      00017E B5*02 02         [24] 1465 	cjne	a,_counts2,00104$
-      000181 05*03            [12] 1466 	inc	(_counts2 + 1)
-      000183                       1467 00104$:
-      000183 D0 D0            [24] 1468 	pop	psw
-      000185 D0 E0            [24] 1469 	pop	acc
+      0001E8 05 0A            [12] 1463 	inc	_counts2
+      0001EA E4               [12] 1464 	clr	a
+      0001EB B5 0A 02         [24] 1465 	cjne	a,_counts2,00104$
+      0001EE 05 0B            [12] 1466 	inc	(_counts2 + 1)
+      0001F0                       1467 00104$:
+      0001F0 D0 D0            [24] 1468 	pop	psw
+      0001F2 D0 E0            [24] 1469 	pop	acc
                            000187  1470 	C$hw7_page_61_code.c$162$1$48 ==.
                            000187  1471 	XG$Timer0_ISR$0$0 ==.
-      000187 32               [24] 1472 	reti
+      0001F4 32               [24] 1472 	reti
                                    1473 ;	eliminated unneeded mov psw,# (no regs used in bank)
                                    1474 ;	eliminated unneeded push/pop dpl
                                    1475 ;	eliminated unneeded push/pop dph
@@ -1477,40 +1477,40 @@
                                    1477 	.area CSEG    (CODE)
                                    1478 	.area CONST   (CODE)
                            000000  1479 Fhw7_page_61_code$__str_0$0$0 == .
-      000000                       1480 ___str_0:
-      000000 53 74 61 72 74 20     1481 	.ascii "Start "
-      000006 0D                    1482 	.db 0x0D
-      000007 0A                    1483 	.db 0x0A
-      000008 00                    1484 	.db 0x00
+      0008B0                       1480 ___str_0:
+      0008B0 53 74 61 72 74 20     1481 	.ascii "Start "
+      0008B6 0D                    1482 	.db 0x0D
+      0008B7 0A                    1483 	.db 0x0A
+      0008B8 00                    1484 	.db 0x00
                            000009  1485 Fhw7_page_61_code$__str_1$0$0 == .
-      000009                       1486 ___str_1:
-      000009 65 6E 74 65 72 20 6B  1487 	.ascii "enter key to read A/D input "
+      0008B9                       1486 ___str_1:
+      0008B9 65 6E 74 65 72 20 6B  1487 	.ascii "enter key to read A/D input "
              65 79 20 74 6F 20 72
              65 61 64 20 41 2F 44
              20 69 6E 70 75 74 20
-      000025 0D                    1488 	.db 0x0D
-      000026 0A                    1489 	.db 0x0A
-      000027 00                    1490 	.db 0x00
+      0008D5 0D                    1488 	.db 0x0D
+      0008D6 0A                    1489 	.db 0x0A
+      0008D7 00                    1490 	.db 0x00
                            000028  1491 Fhw7_page_61_code$__str_2$0$0 == .
-      000028                       1492 ___str_2:
-      000028 0A                    1493 	.db 0x0A
-      000029 0D                    1494 	.db 0x0D
-      00002A 49 6E 70 75 74 20 76  1495 	.ascii "Input value is %d"
+      0008D8                       1492 ___str_2:
+      0008D8 0A                    1493 	.db 0x0A
+      0008D9 0D                    1494 	.db 0x0D
+      0008DA 49 6E 70 75 74 20 76  1495 	.ascii "Input value is %d"
              61 6C 75 65 20 69 73
              20 25 64
-      00003B 0D                    1496 	.db 0x0D
-      00003C 0A                    1497 	.db 0x0A
-      00003D 00                    1498 	.db 0x00
+      0008EB 0D                    1496 	.db 0x0D
+      0008EC 0A                    1497 	.db 0x0A
+      0008ED 00                    1498 	.db 0x00
                            00003E  1499 Fhw7_page_61_code$__str_3$0$0 == .
-      00003E                       1500 ___str_3:
-      00003E 0A                    1501 	.db 0x0A
-      00003F 0D                    1502 	.db 0x0D
-      000040 49 6E 20 6D 69 6C 69  1503 	.ascii "In milivots the value is %d"
+      0008EE                       1500 ___str_3:
+      0008EE 0A                    1501 	.db 0x0A
+      0008EF 0D                    1502 	.db 0x0D
+      0008F0 49 6E 20 6D 69 6C 69  1503 	.ascii "In milivots the value is %d"
              76 6F 74 73 20 74 68
              65 20 76 61 6C 75 65
              20 69 73 20 25 64
-      00005B 0D                    1504 	.db 0x0D
-      00005C 0A                    1505 	.db 0x0A
-      00005D 00                    1506 	.db 0x00
+      00090B 0D                    1504 	.db 0x0D
+      00090C 0A                    1505 	.db 0x0A
+      00090D 00                    1506 	.db 0x00
                                    1507 	.area XINIT   (CODE)
                                    1508 	.area CABS    (ABS,CODE)

@@ -62,7 +62,6 @@ void main(void) {
 	Port_Init(); 
 	ADC_Init();
 
-	unsigned char result;
 
 	printf("Start \r\n");
     while (1)  {
@@ -73,12 +72,13 @@ void main(void) {
 		//first off i just get this running
 		//lets just measure how the AD goes
 		
-		result = read_AD_input(4);//
+		input = read_AD_input(4);//
+		AD_value= input *1000/2;// gain is 2, divide by gain
+		printf("\n\rInput value is %c", input);
+		printf("\n\rIn milivots the value is %c", AD_value);
+		// numtiply result by 2000 to get to milivoltes
+		getchar();
 
-
-
-		printf("appropriate comment here");	// print statement as required by homework
-		printf("appropriate comment here");	// print statement as required by homework
 
     }//end while loop
 }//end main
