@@ -1,0 +1,164 @@
+/*	Name: Philip Hoddinott
+	Section: 4
+	Side: A
+	Date: 2/28/2016
+
+	Gain:
+	Port pin:
+
+	File name: hw7.c
+	Description: 
+Your code needs to read an analog input, print the digital value of the A/D conversion and print the input voltage. The specific requirements are:
+
+Read the analog input on Port 1.4
+Set a gain value of 2
+Print the A/D value
+Print the input voltage in millivolts (as an integer). Remember to include the gain term when calculating voltage.
+You may want to build your own test circuit (refer to worksheet 6) before submitting your code. Resistors are available in the cabinet on the center table.
+
+This homework is due prior to the start of class on the due date for your section. The assignment is individual.
+
+When you are finished, edit the name of your c-file code to include your name, for example HW7_Russ_Kraft.c and upload the c-file using the link below.
+
+Do NOT click the Submit button before you are finished uploading your code. You will lose your assignment if you do so.
+
+ REF0CN = 0x03;
+
+
+page 59, for gain of 2 adc1 bits 1-0 do gain 2
+*/
+
+#include <c8051_SDCC.h>// include files. This file is available online
+#include <stdio.h>
+
+
+//-----------------------------------------------------------------------------
+// Function Prototypes
+//-----------------------------------------------------------------------------
+void Timer_Init(void);     // Initialize Timer 0 
+void Interrupt_Init(void); //Initialize interrupts
+void Timer0_ISR(void) __interrupt 1;
+void ADC_Init(void);
+void Port_Init(void);
+unsigned char read_AD_input(unsigned char pin_number);
+
+
+
+//-----------------------------------------------------------------------------
+// Global Variables
+//-----------------------------------------------------------------------------
+
+unsigned int counts1;
+unsigned int counts2;
+unsigned char AD_value;
+unsigned char input;
+unsigned char result;
+
+//***************
+void main(void) {
+	Sys_Init();      // System Initialization
+	putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
+	Interrupt_Init();
+	Timer_Init();    // Initialize Timer 0
+	Port_Init(); 
+	ADC_Init();
+
+
+
+	printf("Start \r\n");
+    while (1)  {
+		printf("enter key to read A/D input \r\n");
+		input = getchar();
+
+		// add code necessary to complete the homework
+		//first off i just get this running
+		//lets just measure how the AD goes
+		
+		//result = read_AD_input(4);//
+		result = read_AD_input(0);//
+		printf("\n\rResult = %c", result);
+
+
+		printf("appropriate comment here");	// print statement as required by homework
+		printf("appropriate comment here");	// print statement as required by homework
+
+    }//end while loop
+}//end main
+
+
+//
+// add the initialization code needed for the ADC1
+//
+void ADC_Init(void) {
+	/*
+	ADC1 |=0x02;// set bits 1-0 to 10, set gain as 2
+	//AMX1SL |= 0x04;
+	
+
+	ADC1CN = 0x80;//enable A/D converter
+	ADC1LF = ~0x01;
+	ADC1LF|=0x02;
+	*/
+	REF0CN = 0x03; //code from page 61
+
+	ADC1CN = 0x80;
+	ADC1CF |= 0x01;
+
+
+
+
+}//end ADC INIT
+//
+// function that completes an A/D conversion
+//
+unsigned char read_AD_input(unsigned char pin_number) {
+	AMX1SL = pin_number;
+	ADC1CN = ADC1CN & ~0x20;
+	ADC1CN = ADC1CN | 0x10;
+
+	while ( (ADC1CN & 0x20)==0x20);
+
+	return ADC1;
+}//end read_AD_INPUT
+
+//
+// add Port initialization code
+//
+void Port_Init(void){
+	P1MDIN &= ~0x01;//port 1.4 analouge input
+	P1MDOUT &= ~0x01; //open drain
+	P1 |= 0x01;// set lgoic 1 to input pin p1.4
+
+	/*
+	P1MDIN &= ~0x08;//port 1.4 analouge input
+	P1MDOUT &= ~0x08; //open drain
+	P1 |= 0x08;// set lgoic 1 to input pin p1.4
+	*/
+
+
+}//end port init
+
+
+//
+// the following functions can be used if needed, no edits required
+//
+
+void Interrupt_Init(void){
+	IE |= 0x82;      // enable Timer0 Interrupt request
+}//end inerupt init
+
+void Timer_Init(void){
+	
+	CKCON |= 0x08;  // Timer0 uses SYSCLK 
+	TMOD &= 0xF0;   // clear the 4 least significant bits
+	TMOD |= 0x01;   // Timer0 mode 16
+	TR0 = 0;        // Stop Timer0
+	TL0 = 0;        // Clear low byte of register T0
+	TH0 = 0;        // Clear high byte of register T0
+
+}//end timer init
+void Timer0_ISR(void) __interrupt 1
+{
+	counts1++;
+	counts2++;
+}//end timer0 
