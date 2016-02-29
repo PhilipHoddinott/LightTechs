@@ -91,7 +91,7 @@ void main(void) {
 void ADC_Init(void) {
 	REF0CN = 0x03; //code from page 61
 	ADC1CN = 0x80;
-	ADC1CF |= 0x01;  //gain is 2 now
+	ADC1CF |= 0x02;  //gain is 2 now
 }//end ADC INIT
 //
 // function that completes an A/D conversion

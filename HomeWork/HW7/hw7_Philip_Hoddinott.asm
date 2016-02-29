@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.5.0 #9253 (Jun 20 2015) (MINGW64)
-; This file was generated Sun Feb 28 18:18:40 2016
+; This file was generated Mon Feb 29 18:15:14 2016
 ;--------------------------------------------------------
 	.module hw7_Philip_Hoddinott
 	.optsdcc -mmcs51 --model-small
@@ -1257,11 +1257,7 @@ _main:
 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_Philip_Hoddinott.c:76: input = read_AD_input(4);// set port 4
 	mov	dpl,#0x04
 	lcall	_read_AD_input
-	C$hw7_Philip_Hoddinott.c$77$2$36 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_Philip_Hoddinott.c:77: input = input*2;// see below why this is happining
-	mov	a,dpl
-	add	a,dpl
-	mov	_input,a
+	mov	_input,dpl
 	C$hw7_Philip_Hoddinott.c$79$2$36 ==.
 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_Philip_Hoddinott.c:79: milivolts = ((long) 1000*input * 24) / (10*256 * 2);// from page 56, multiply by 1000 to get miivoles
 	mov	__mullong_PARM_2,_input
@@ -1307,7 +1303,7 @@ _main:
 	add	a,#0xfb
 	mov	sp,a
 	C$hw7_Philip_Hoddinott.c$82$2$36 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_Philip_Hoddinott.c:82: printf("\n\rIn milivots the value gain was 2 is %lu\r\n", milivolts);
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_Philip_Hoddinott.c:82: printf("\n\rIn milivolts the value is %lu (remember gain is 2)\r\n", milivolts);
 	push	_milivolts
 	push	(_milivolts + 1)
 	push	(_milivolts + 2)
@@ -1343,8 +1339,8 @@ _ADC_Init:
 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_Philip_Hoddinott.c:93: ADC1CN = 0x80;
 	mov	_ADC1CN,#0x80
 	C$hw7_Philip_Hoddinott.c$94$1$38 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_Philip_Hoddinott.c:94: ADC1CF |= 0x01;  //gain is 2 now
-	orl	_ADC1CF,#0x01
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW7\hw7_Philip_Hoddinott.c:94: ADC1CF |= 0x02;  //gain is 2 now
+	orl	_ADC1CF,#0x02
 	C$hw7_Philip_Hoddinott.c$95$1$38 ==.
 	XG$ADC_Init$0$0 ==.
 	ret
@@ -1517,7 +1513,7 @@ Fhw7_Philip_Hoddinott$__str_3$0$0 == .
 ___str_3:
 	.db 0x0A
 	.db 0x0D
-	.ascii "In milivots the value gain was 2 is %lu"
+	.ascii "In milivolts the value is %lu (remember gain is 2)"
 	.db 0x0D
 	.db 0x0A
 	.db 0x00

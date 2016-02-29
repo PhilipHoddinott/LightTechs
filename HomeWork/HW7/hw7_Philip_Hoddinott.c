@@ -1,3 +1,7 @@
+// COMMENT FULLY<, 
+//WRITE DESCRIPTION 
+//ENSURE IT WORKS TO WHAT DESCRIPTION WANTS
+
 /*	Name: Philip Hoddinott
 	Section: 4
 	Side: A
@@ -66,20 +70,15 @@ void main(void) {
 
 	printf("Start \r\n");
     while (1)  {
-    	//maybe put  wait in here??
 		printf("press enter to read A/D input \r\n");
 		input = getchar();
 
-		// add code necessary to complete the homework
-
-
 		input = read_AD_input(4);// set port 4
-		input = input*2;// see below why this is happining
-
+		
 		milivolts = ((long) 1000*input * 24) / (10*256 * 2);// from page 56, multiply by 1000 to get miivoles
 
 		printf("\n\rInput value is %u\r\n", input);
-		printf("\n\rIn milivots the value gain was 2 is %lu\r\n", milivolts);
+		printf("\n\rIn milivolts the value is %lu (remember gain is 2)\r\n", milivolts);
 
     }//end while loop
 }//end main
@@ -91,7 +90,7 @@ void main(void) {
 void ADC_Init(void) {
 	REF0CN = 0x03; //code from page 61
 	ADC1CN = 0x80;
-	ADC1CF |= 0x01;  //gain is 2 now
+	ADC1CF |= 0x02;  //gain is 2 
 }//end ADC INIT
 //
 // function that completes an A/D conversion

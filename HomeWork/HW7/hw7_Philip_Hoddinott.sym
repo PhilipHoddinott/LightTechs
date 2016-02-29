@@ -97,121 +97,119 @@ Symbol Table
  18 A$hw7_Philip_Hoddinott$1255                                    0000B9 GR
  18 A$hw7_Philip_Hoddinott$1258                                    0000BC GR
  18 A$hw7_Philip_Hoddinott$1259                                    0000BF GR
- 18 A$hw7_Philip_Hoddinott$1262                                    0000C2 GR
- 18 A$hw7_Philip_Hoddinott$1263                                    0000C4 GR
- 18 A$hw7_Philip_Hoddinott$1264                                    0000C6 GR
- 18 A$hw7_Philip_Hoddinott$1267                                    0000C8 GR
- 18 A$hw7_Philip_Hoddinott$1268                                    0000CB GR
- 18 A$hw7_Philip_Hoddinott$1269                                    0000CE GR
- 18 A$hw7_Philip_Hoddinott$1270                                    0000D1 GR
- 18 A$hw7_Philip_Hoddinott$1271                                    0000D4 GR
- 18 A$hw7_Philip_Hoddinott$1272                                    0000D7 GR
- 18 A$hw7_Philip_Hoddinott$1273                                    0000D8 GR
- 18 A$hw7_Philip_Hoddinott$1274                                    0000DA GR
- 18 A$hw7_Philip_Hoddinott$1275                                    0000DD GR
- 18 A$hw7_Philip_Hoddinott$1276                                    0000DF GR
- 18 A$hw7_Philip_Hoddinott$1277                                    0000E1 GR
- 18 A$hw7_Philip_Hoddinott$1278                                    0000E3 GR
- 18 A$hw7_Philip_Hoddinott$1279                                    0000E4 GR
- 18 A$hw7_Philip_Hoddinott$1280                                    0000E5 GR
- 18 A$hw7_Philip_Hoddinott$1281                                    0000E7 GR
- 18 A$hw7_Philip_Hoddinott$1282                                    0000EA GR
- 18 A$hw7_Philip_Hoddinott$1283                                    0000EC GR
- 18 A$hw7_Philip_Hoddinott$1284                                    0000EE GR
+ 18 A$hw7_Philip_Hoddinott$1260                                    0000C2 GR
+ 18 A$hw7_Philip_Hoddinott$1263                                    0000C5 GR
+ 18 A$hw7_Philip_Hoddinott$1264                                    0000C8 GR
+ 18 A$hw7_Philip_Hoddinott$1265                                    0000CB GR
+ 18 A$hw7_Philip_Hoddinott$1266                                    0000CE GR
+ 18 A$hw7_Philip_Hoddinott$1267                                    0000D1 GR
+ 18 A$hw7_Philip_Hoddinott$1268                                    0000D4 GR
+ 18 A$hw7_Philip_Hoddinott$1269                                    0000D5 GR
+ 18 A$hw7_Philip_Hoddinott$1270                                    0000D7 GR
+ 18 A$hw7_Philip_Hoddinott$1271                                    0000DA GR
+ 18 A$hw7_Philip_Hoddinott$1272                                    0000DC GR
+ 18 A$hw7_Philip_Hoddinott$1273                                    0000DE GR
+ 18 A$hw7_Philip_Hoddinott$1274                                    0000E0 GR
+ 18 A$hw7_Philip_Hoddinott$1275                                    0000E1 GR
+ 18 A$hw7_Philip_Hoddinott$1276                                    0000E2 GR
+ 18 A$hw7_Philip_Hoddinott$1277                                    0000E4 GR
+ 18 A$hw7_Philip_Hoddinott$1278                                    0000E7 GR
+ 18 A$hw7_Philip_Hoddinott$1279                                    0000E9 GR
+ 18 A$hw7_Philip_Hoddinott$1280                                    0000EB GR
+ 18 A$hw7_Philip_Hoddinott$1281                                    0000ED GR
+ 18 A$hw7_Philip_Hoddinott$1282                                    0000EF GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 3.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$hw7_Philip_Hoddinott$1285                                    0000F0 GR
- 18 A$hw7_Philip_Hoddinott$1286                                    0000F2 GR
- 18 A$hw7_Philip_Hoddinott$1287                                    0000F4 GR
- 18 A$hw7_Philip_Hoddinott$1288                                    0000F5 GR
- 18 A$hw7_Philip_Hoddinott$1289                                    0000F8 GR
- 18 A$hw7_Philip_Hoddinott$1290                                    0000FB GR
- 18 A$hw7_Philip_Hoddinott$1291                                    0000FE GR
- 18 A$hw7_Philip_Hoddinott$1292                                    000101 GR
- 18 A$hw7_Philip_Hoddinott$1295                                    000103 GR
- 18 A$hw7_Philip_Hoddinott$1296                                    000105 GR
- 18 A$hw7_Philip_Hoddinott$1297                                    000107 GR
- 18 A$hw7_Philip_Hoddinott$1298                                    000109 GR
- 18 A$hw7_Philip_Hoddinott$1299                                    00010B GR
- 18 A$hw7_Philip_Hoddinott$1300                                    00010D GR
- 18 A$hw7_Philip_Hoddinott$1301                                    00010F GR
- 18 A$hw7_Philip_Hoddinott$1302                                    000111 GR
- 18 A$hw7_Philip_Hoddinott$1303                                    000113 GR
- 18 A$hw7_Philip_Hoddinott$1304                                    000115 GR
- 18 A$hw7_Philip_Hoddinott$1305                                    000117 GR
- 18 A$hw7_Philip_Hoddinott$1306                                    00011A GR
- 18 A$hw7_Philip_Hoddinott$1307                                    00011C GR
- 18 A$hw7_Philip_Hoddinott$1308                                    00011E GR
- 18 A$hw7_Philip_Hoddinott$1311                                    000120 GR
- 18 A$hw7_Philip_Hoddinott$1312                                    000122 GR
- 18 A$hw7_Philip_Hoddinott$1313                                    000124 GR
- 18 A$hw7_Philip_Hoddinott$1314                                    000126 GR
- 18 A$hw7_Philip_Hoddinott$1315                                    000128 GR
- 18 A$hw7_Philip_Hoddinott$1316                                    00012A GR
- 18 A$hw7_Philip_Hoddinott$1317                                    00012C GR
- 18 A$hw7_Philip_Hoddinott$1318                                    00012E GR
- 18 A$hw7_Philip_Hoddinott$1319                                    000130 GR
- 18 A$hw7_Philip_Hoddinott$1320                                    000132 GR
- 18 A$hw7_Philip_Hoddinott$1321                                    000134 GR
- 18 A$hw7_Philip_Hoddinott$1322                                    000137 GR
- 18 A$hw7_Philip_Hoddinott$1323                                    000139 GR
- 18 A$hw7_Philip_Hoddinott$1324                                    00013B GR
- 18 A$hw7_Philip_Hoddinott$1325                                    00013D GR
- 18 A$hw7_Philip_Hoddinott$1328                                    000140 GR
- 18 A$hw7_Philip_Hoddinott$1341                                    000141 GR
- 18 A$hw7_Philip_Hoddinott$1344                                    000144 GR
- 18 A$hw7_Philip_Hoddinott$1347                                    000147 GR
- 18 A$hw7_Philip_Hoddinott$1350                                    00014A GR
- 18 A$hw7_Philip_Hoddinott$1363                                    00014B GR
- 18 A$hw7_Philip_Hoddinott$1366                                    00014E GR
- 18 A$hw7_Philip_Hoddinott$1367                                    000150 GR
+ 18 A$hw7_Philip_Hoddinott$1283                                    0000F1 GR
+ 18 A$hw7_Philip_Hoddinott$1284                                    0000F2 GR
+ 18 A$hw7_Philip_Hoddinott$1285                                    0000F5 GR
+ 18 A$hw7_Philip_Hoddinott$1286                                    0000F8 GR
+ 18 A$hw7_Philip_Hoddinott$1287                                    0000FB GR
+ 18 A$hw7_Philip_Hoddinott$1288                                    0000FE GR
+ 18 A$hw7_Philip_Hoddinott$1291                                    000100 GR
+ 18 A$hw7_Philip_Hoddinott$1292                                    000102 GR
+ 18 A$hw7_Philip_Hoddinott$1293                                    000104 GR
+ 18 A$hw7_Philip_Hoddinott$1294                                    000106 GR
+ 18 A$hw7_Philip_Hoddinott$1295                                    000108 GR
+ 18 A$hw7_Philip_Hoddinott$1296                                    00010A GR
+ 18 A$hw7_Philip_Hoddinott$1297                                    00010C GR
+ 18 A$hw7_Philip_Hoddinott$1298                                    00010E GR
+ 18 A$hw7_Philip_Hoddinott$1299                                    000110 GR
+ 18 A$hw7_Philip_Hoddinott$1300                                    000112 GR
+ 18 A$hw7_Philip_Hoddinott$1301                                    000114 GR
+ 18 A$hw7_Philip_Hoddinott$1302                                    000117 GR
+ 18 A$hw7_Philip_Hoddinott$1303                                    000119 GR
+ 18 A$hw7_Philip_Hoddinott$1304                                    00011B GR
+ 18 A$hw7_Philip_Hoddinott$1307                                    00011D GR
+ 18 A$hw7_Philip_Hoddinott$1308                                    00011F GR
+ 18 A$hw7_Philip_Hoddinott$1309                                    000121 GR
+ 18 A$hw7_Philip_Hoddinott$1310                                    000123 GR
+ 18 A$hw7_Philip_Hoddinott$1311                                    000125 GR
+ 18 A$hw7_Philip_Hoddinott$1312                                    000127 GR
+ 18 A$hw7_Philip_Hoddinott$1313                                    000129 GR
+ 18 A$hw7_Philip_Hoddinott$1314                                    00012B GR
+ 18 A$hw7_Philip_Hoddinott$1315                                    00012D GR
+ 18 A$hw7_Philip_Hoddinott$1316                                    00012F GR
+ 18 A$hw7_Philip_Hoddinott$1317                                    000131 GR
+ 18 A$hw7_Philip_Hoddinott$1318                                    000134 GR
+ 18 A$hw7_Philip_Hoddinott$1319                                    000136 GR
+ 18 A$hw7_Philip_Hoddinott$1320                                    000138 GR
+ 18 A$hw7_Philip_Hoddinott$1321                                    00013A GR
+ 18 A$hw7_Philip_Hoddinott$1324                                    00013D GR
+ 18 A$hw7_Philip_Hoddinott$1337                                    00013E GR
+ 18 A$hw7_Philip_Hoddinott$1340                                    000141 GR
+ 18 A$hw7_Philip_Hoddinott$1343                                    000144 GR
+ 18 A$hw7_Philip_Hoddinott$1346                                    000147 GR
+ 18 A$hw7_Philip_Hoddinott$1359                                    000148 GR
+ 18 A$hw7_Philip_Hoddinott$1362                                    00014B GR
+ 18 A$hw7_Philip_Hoddinott$1363                                    00014D GR
+ 18 A$hw7_Philip_Hoddinott$1364                                    00014F GR
+ 18 A$hw7_Philip_Hoddinott$1365                                    000150 GR
  18 A$hw7_Philip_Hoddinott$1368                                    000152 GR
- 18 A$hw7_Philip_Hoddinott$1369                                    000153 GR
  18 A$hw7_Philip_Hoddinott$1372                                    000155 GR
- 18 A$hw7_Philip_Hoddinott$1376                                    000158 GR
- 18 A$hw7_Philip_Hoddinott$1377                                    00015A GR
- 18 A$hw7_Philip_Hoddinott$1380                                    00015D GR
- 18 A$hw7_Philip_Hoddinott$1383                                    000160 GR
- 18 A$hw7_Philip_Hoddinott$1396                                    000161 GR
- 18 A$hw7_Philip_Hoddinott$1397                                    000163 GR
+ 18 A$hw7_Philip_Hoddinott$1373                                    000157 GR
+ 18 A$hw7_Philip_Hoddinott$1376                                    00015A GR
+ 18 A$hw7_Philip_Hoddinott$1379                                    00015D GR
+ 18 A$hw7_Philip_Hoddinott$1392                                    00015E GR
+ 18 A$hw7_Philip_Hoddinott$1393                                    000160 GR
+ 18 A$hw7_Philip_Hoddinott$1394                                    000162 GR
+ 18 A$hw7_Philip_Hoddinott$1395                                    000163 GR
  18 A$hw7_Philip_Hoddinott$1398                                    000165 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 4.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 A$hw7_Philip_Hoddinott$1399                                    000166 GR
- 18 A$hw7_Philip_Hoddinott$1402                                    000168 GR
- 18 A$hw7_Philip_Hoddinott$1403                                    00016A GR
+ 18 A$hw7_Philip_Hoddinott$1399                                    000167 GR
+ 18 A$hw7_Philip_Hoddinott$1400                                    000169 GR
+ 18 A$hw7_Philip_Hoddinott$1401                                    00016A GR
  18 A$hw7_Philip_Hoddinott$1404                                    00016C GR
- 18 A$hw7_Philip_Hoddinott$1405                                    00016D GR
- 18 A$hw7_Philip_Hoddinott$1408                                    00016F GR
- 18 A$hw7_Philip_Hoddinott$1411                                    000172 GR
- 18 A$hw7_Philip_Hoddinott$1424                                    000173 GR
- 18 A$hw7_Philip_Hoddinott$1427                                    000176 GR
- 18 A$hw7_Philip_Hoddinott$1440                                    000177 GR
- 18 A$hw7_Philip_Hoddinott$1443                                    00017A GR
- 18 A$hw7_Philip_Hoddinott$1446                                    00017D GR
- 18 A$hw7_Philip_Hoddinott$1449                                    000180 GR
- 18 A$hw7_Philip_Hoddinott$1452                                    000182 GR
- 18 A$hw7_Philip_Hoddinott$1455                                    000185 GR
- 18 A$hw7_Philip_Hoddinott$1458                                    000188 GR
- 18 A$hw7_Philip_Hoddinott$1469                                    000189 GR
- 18 A$hw7_Philip_Hoddinott$1470                                    00018B GR
- 18 A$hw7_Philip_Hoddinott$1473                                    00018D GR
- 18 A$hw7_Philip_Hoddinott$1474                                    00018F GR
- 18 A$hw7_Philip_Hoddinott$1475                                    000190 GR
- 18 A$hw7_Philip_Hoddinott$1476                                    000193 GR
- 18 A$hw7_Philip_Hoddinott$1480                                    000195 GR
- 18 A$hw7_Philip_Hoddinott$1481                                    000197 GR
- 18 A$hw7_Philip_Hoddinott$1482                                    000198 GR
- 18 A$hw7_Philip_Hoddinott$1483                                    00019B GR
- 18 A$hw7_Philip_Hoddinott$1485                                    00019D GR
- 18 A$hw7_Philip_Hoddinott$1486                                    00019F GR
- 18 A$hw7_Philip_Hoddinott$1489                                    0001A1 GR
+ 18 A$hw7_Philip_Hoddinott$1407                                    00016F GR
+ 18 A$hw7_Philip_Hoddinott$1420                                    000170 GR
+ 18 A$hw7_Philip_Hoddinott$1423                                    000173 GR
+ 18 A$hw7_Philip_Hoddinott$1436                                    000174 GR
+ 18 A$hw7_Philip_Hoddinott$1439                                    000177 GR
+ 18 A$hw7_Philip_Hoddinott$1442                                    00017A GR
+ 18 A$hw7_Philip_Hoddinott$1445                                    00017D GR
+ 18 A$hw7_Philip_Hoddinott$1448                                    00017F GR
+ 18 A$hw7_Philip_Hoddinott$1451                                    000182 GR
+ 18 A$hw7_Philip_Hoddinott$1454                                    000185 GR
+ 18 A$hw7_Philip_Hoddinott$1465                                    000186 GR
+ 18 A$hw7_Philip_Hoddinott$1466                                    000188 GR
+ 18 A$hw7_Philip_Hoddinott$1469                                    00018A GR
+ 18 A$hw7_Philip_Hoddinott$1470                                    00018C GR
+ 18 A$hw7_Philip_Hoddinott$1471                                    00018D GR
+ 18 A$hw7_Philip_Hoddinott$1472                                    000190 GR
+ 18 A$hw7_Philip_Hoddinott$1476                                    000192 GR
+ 18 A$hw7_Philip_Hoddinott$1477                                    000194 GR
+ 18 A$hw7_Philip_Hoddinott$1478                                    000195 GR
+ 18 A$hw7_Philip_Hoddinott$1479                                    000198 GR
+ 18 A$hw7_Philip_Hoddinott$1481                                    00019A GR
+ 18 A$hw7_Philip_Hoddinott$1482                                    00019C GR
+ 18 A$hw7_Philip_Hoddinott$1485                                    00019E GR
   F A$hw7_Philip_Hoddinott$954                                     000000 GR
   F A$hw7_Philip_Hoddinott$955                                     000003 GR
   F A$hw7_Philip_Hoddinott$957                                     00000B GR
@@ -238,13 +236,13 @@ Symbol Table
     B                                                           =  0000F0 L
     B.0                                                         =  0000F0 L
     B.1                                                         =  0000F1 L
+    B.2                                                         =  0000F2 L
+    B.3                                                         =  0000F3 L
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 5.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    B.2                                                         =  0000F2 L
-    B.3                                                         =  0000F3 L
     B.4                                                         =  0000F4 L
     B.5                                                         =  0000F5 L
     B.6                                                         =  0000F6 L
@@ -292,36 +290,36 @@ Symbol Table
  18 C$c8051_SDCC.h$92$1$6                                       =  000046 GR
  18 C$c8051_SDCC.h$93$1$6                                       =  000049 GR
  18 C$c8051_SDCC.h$98$1$6                                       =  00004A GR
- 18 C$hw7_Philip_Hoddinott.c$101$1$40                           =  00014E GR
- 18 C$hw7_Philip_Hoddinott.c$102$1$40                           =  000155 GR
- 18 C$hw7_Philip_Hoddinott.c$103$1$40                           =  000158 GR
- 18 C$hw7_Philip_Hoddinott.c$104$1$40                           =  00015D GR
- 18 C$hw7_Philip_Hoddinott.c$105$1$40                           =  000160 GR
- 18 C$hw7_Philip_Hoddinott.c$110$1$40                           =  000161 GR
+ 18 C$hw7_Philip_Hoddinott.c$101$1$40                           =  00014B GR
+ 18 C$hw7_Philip_Hoddinott.c$102$1$40                           =  000152 GR
+ 18 C$hw7_Philip_Hoddinott.c$103$1$40                           =  000155 GR
+ 18 C$hw7_Philip_Hoddinott.c$104$1$40                           =  00015A GR
+ 18 C$hw7_Philip_Hoddinott.c$105$1$40                           =  00015D GR
+ 18 C$hw7_Philip_Hoddinott.c$110$1$40                           =  00015E GR
+ 18 C$hw7_Philip_Hoddinott.c$111$1$42                           =  00015E GR
+ 18 C$hw7_Philip_Hoddinott.c$112$1$42                           =  000165 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 6.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 C$hw7_Philip_Hoddinott.c$111$1$42                           =  000161 GR
- 18 C$hw7_Philip_Hoddinott.c$112$1$42                           =  000168 GR
- 18 C$hw7_Philip_Hoddinott.c$113$1$42                           =  00016F GR
- 18 C$hw7_Philip_Hoddinott.c$115$1$42                           =  000172 GR
- 18 C$hw7_Philip_Hoddinott.c$122$1$42                           =  000173 GR
- 18 C$hw7_Philip_Hoddinott.c$123$1$44                           =  000173 GR
- 18 C$hw7_Philip_Hoddinott.c$124$1$44                           =  000176 GR
- 18 C$hw7_Philip_Hoddinott.c$126$1$44                           =  000177 GR
- 18 C$hw7_Philip_Hoddinott.c$128$1$46                           =  000177 GR
- 18 C$hw7_Philip_Hoddinott.c$129$1$46                           =  00017A GR
- 18 C$hw7_Philip_Hoddinott.c$130$1$46                           =  00017D GR
- 18 C$hw7_Philip_Hoddinott.c$131$1$46                           =  000180 GR
- 18 C$hw7_Philip_Hoddinott.c$132$1$46                           =  000182 GR
- 18 C$hw7_Philip_Hoddinott.c$133$1$46                           =  000185 GR
- 18 C$hw7_Philip_Hoddinott.c$135$1$46                           =  000188 GR
- 18 C$hw7_Philip_Hoddinott.c$136$1$46                           =  000189 GR
- 18 C$hw7_Philip_Hoddinott.c$138$1$48                           =  00018D GR
- 18 C$hw7_Philip_Hoddinott.c$139$1$48                           =  000195 GR
- 18 C$hw7_Philip_Hoddinott.c$140$1$48                           =  0001A1 GR
+ 18 C$hw7_Philip_Hoddinott.c$113$1$42                           =  00016C GR
+ 18 C$hw7_Philip_Hoddinott.c$115$1$42                           =  00016F GR
+ 18 C$hw7_Philip_Hoddinott.c$122$1$42                           =  000170 GR
+ 18 C$hw7_Philip_Hoddinott.c$123$1$44                           =  000170 GR
+ 18 C$hw7_Philip_Hoddinott.c$124$1$44                           =  000173 GR
+ 18 C$hw7_Philip_Hoddinott.c$126$1$44                           =  000174 GR
+ 18 C$hw7_Philip_Hoddinott.c$128$1$46                           =  000174 GR
+ 18 C$hw7_Philip_Hoddinott.c$129$1$46                           =  000177 GR
+ 18 C$hw7_Philip_Hoddinott.c$130$1$46                           =  00017A GR
+ 18 C$hw7_Philip_Hoddinott.c$131$1$46                           =  00017D GR
+ 18 C$hw7_Philip_Hoddinott.c$132$1$46                           =  00017F GR
+ 18 C$hw7_Philip_Hoddinott.c$133$1$46                           =  000182 GR
+ 18 C$hw7_Philip_Hoddinott.c$135$1$46                           =  000185 GR
+ 18 C$hw7_Philip_Hoddinott.c$136$1$46                           =  000186 GR
+ 18 C$hw7_Philip_Hoddinott.c$138$1$48                           =  00018A GR
+ 18 C$hw7_Philip_Hoddinott.c$139$1$48                           =  000192 GR
+ 18 C$hw7_Philip_Hoddinott.c$140$1$48                           =  00019E GR
  18 C$hw7_Philip_Hoddinott.c$59$1$12                            =  000077 GR
  18 C$hw7_Philip_Hoddinott.c$60$1$35                            =  000077 GR
  18 C$hw7_Philip_Hoddinott.c$61$1$35                            =  00007A GR
@@ -334,17 +332,16 @@ Symbol Table
  18 C$hw7_Philip_Hoddinott.c$70$2$36                            =  0000A1 GR
  18 C$hw7_Philip_Hoddinott.c$71$2$36                            =  0000B6 GR
  18 C$hw7_Philip_Hoddinott.c$76$2$36                            =  0000BC GR
- 18 C$hw7_Philip_Hoddinott.c$77$2$36                            =  0000C2 GR
- 18 C$hw7_Philip_Hoddinott.c$79$2$36                            =  0000C8 GR
- 18 C$hw7_Philip_Hoddinott.c$81$2$36                            =  000103 GR
- 18 C$hw7_Philip_Hoddinott.c$82$2$36                            =  000120 GR
- 18 C$hw7_Philip_Hoddinott.c$85$1$35                            =  000140 GR
- 18 C$hw7_Philip_Hoddinott.c$91$1$35                            =  000141 GR
- 18 C$hw7_Philip_Hoddinott.c$92$1$38                            =  000141 GR
- 18 C$hw7_Philip_Hoddinott.c$93$1$38                            =  000144 GR
- 18 C$hw7_Philip_Hoddinott.c$94$1$38                            =  000147 GR
- 18 C$hw7_Philip_Hoddinott.c$95$1$38                            =  00014A GR
- 18 C$hw7_Philip_Hoddinott.c$99$1$38                            =  00014B GR
+ 18 C$hw7_Philip_Hoddinott.c$79$2$36                            =  0000C5 GR
+ 18 C$hw7_Philip_Hoddinott.c$81$2$36                            =  000100 GR
+ 18 C$hw7_Philip_Hoddinott.c$82$2$36                            =  00011D GR
+ 18 C$hw7_Philip_Hoddinott.c$85$1$35                            =  00013D GR
+ 18 C$hw7_Philip_Hoddinott.c$91$1$35                            =  00013E GR
+ 18 C$hw7_Philip_Hoddinott.c$92$1$38                            =  00013E GR
+ 18 C$hw7_Philip_Hoddinott.c$93$1$38                            =  000141 GR
+ 18 C$hw7_Philip_Hoddinott.c$94$1$38                            =  000144 GR
+ 18 C$hw7_Philip_Hoddinott.c$95$1$38                            =  000147 GR
+ 18 C$hw7_Philip_Hoddinott.c$99$1$38                            =  000148 GR
     CPRL2                                                       =  0000C8 L
     CT2                                                         =  0000C9 L
     CY                                                          =  0000D7 L
@@ -358,14 +355,14 @@ Symbol Table
     EX0                                                         =  0000A8 L
     EX1                                                         =  0000AA L
     EXEN2                                                       =  0000CB L
+    EXF2                                                        =  0000CE L
+    F0                                                          =  0000D5 L
+ 19 Fhw7_Philip_Hoddinott$__str_0$0$0                           =  000000 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 7.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    EXF2                                                        =  0000CE L
-    F0                                                          =  0000D5 L
- 19 Fhw7_Philip_Hoddinott$__str_0$0$0                           =  000000 GR
  19 Fhw7_Philip_Hoddinott$__str_1$0$0                           =  000009 GR
  19 Fhw7_Philip_Hoddinott$__str_2$0$0                           =  00002A GR
  19 Fhw7_Philip_Hoddinott$__str_3$0$0                           =  000040 GR
@@ -398,7 +395,7 @@ Symbol Table
     G$ADCEN$0$0                                                 =  0000EF G
     G$ADCINT$0$0                                                =  0000ED G
     G$ADCTM$0$0                                                 =  0000EE G
- 18 G$ADC_Init$0$0                                              =  000141 GR
+ 18 G$ADC_Init$0$0                                              =  00013E GR
     G$ADLJST$0$0                                                =  0000E8 G
     G$ADSTM0$0$0                                                =  0000EA G
     G$ADSTM1$0$0                                                =  0000EB G
@@ -418,14 +415,14 @@ Symbol Table
     G$CKCON$0$0                                                 =  00008E G
     G$CPRL2$0$0                                                 =  0000C8 G
     G$CPT0CN$0$0                                                =  00009E G
+    G$CPT1CN$0$0                                                =  00009F G
+    G$CR$0$0                                                    =  0000DE G
+    G$CT2$0$0                                                   =  0000C9 G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 8.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    G$CPT1CN$0$0                                                =  00009F G
-    G$CR$0$0                                                    =  0000DE G
-    G$CT2$0$0                                                   =  0000C9 G
     G$CY$0$0                                                    =  0000D7 G
     G$DAC0$0$0                                                  =  00D3D2 G
     G$DAC0CN$0$0                                                =  0000D4 G
@@ -465,7 +462,7 @@ Symbol Table
     G$IP$0$0                                                    =  0000B8 G
     G$IT0$0$0                                                   =  000088 G
     G$IT1$0$0                                                   =  00008A G
- 18 G$Interrupt_Init$0$0                                        =  000173 GR
+ 18 G$Interrupt_Init$0$0                                        =  000170 GR
     G$MCE0$0$0                                                  =  00009D G
     G$MODF$0$0                                                  =  0000FD G
     G$MSTEN$0$0                                                 =  0000F9 G
@@ -478,14 +475,14 @@ Symbol Table
     G$P0_0$0$0                                                  =  000080 G
     G$P0_1$0$0                                                  =  000081 G
     G$P0_2$0$0                                                  =  000082 G
+    G$P0_3$0$0                                                  =  000083 G
+    G$P0_4$0$0                                                  =  000084 G
+    G$P0_5$0$0                                                  =  000085 G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 9.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    G$P0_3$0$0                                                  =  000083 G
-    G$P0_4$0$0                                                  =  000084 G
-    G$P0_5$0$0                                                  =  000085 G
     G$P0_6$0$0                                                  =  000086 G
     G$P0_7$0$0                                                  =  000087 G
     G$P1$0$0                                                    =  000090 G
@@ -538,14 +535,14 @@ Symbol Table
     G$PCA0CPH3$0$0                                              =  0000FD G
     G$PCA0CPH4$0$0                                              =  0000FE G
     G$PCA0CPL0$0$0                                              =  0000EA G
+    G$PCA0CPL1$0$0                                              =  0000EB G
+    G$PCA0CPL2$0$0                                              =  0000EC G
+    G$PCA0CPL3$0$0                                              =  0000ED G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 10.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    G$PCA0CPL1$0$0                                              =  0000EB G
-    G$PCA0CPL2$0$0                                              =  0000EC G
-    G$PCA0CPL3$0$0                                              =  0000ED G
     G$PCA0CPL4$0$0                                              =  0000EE G
     G$PCA0CPM0$0$0                                              =  0000DA G
     G$PCA0CPM1$0$0                                              =  0000DB G
@@ -569,7 +566,7 @@ Symbol Table
     G$PT2$0$0                                                   =  0000BD G
     G$PX0$0$0                                                   =  0000B8 G
     G$PX1$0$0                                                   =  0000BA G
- 18 G$Port_Init$0$0                                             =  000161 GR
+ 18 G$Port_Init$0$0                                             =  00015E GR
     G$RB8$0$0                                                   =  00009A G
     G$RB80$0$0                                                  =  00009A G
     G$RCAP2$0$0                                                 =  00CBCA G
@@ -598,14 +595,14 @@ Symbol Table
     G$SBUF1$0$0                                                 =  0000F2 G
     G$SCON$0$0                                                  =  000098 G
     G$SCON0$0$0                                                 =  000098 G
+    G$SCON1$0$0                                                 =  0000F1 G
+    G$SI$0$0                                                    =  0000C3 G
+    G$SLVSEL$0$0                                                =  0000FA G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 11.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    G$SCON1$0$0                                                 =  0000F1 G
-    G$SI$0$0                                                    =  0000C3 G
-    G$SLVSEL$0$0                                                =  0000FA G
     G$SM0$0$0                                                   =  00009F G
     G$SM00$0$0                                                  =  00009F G
     G$SM1$0$0                                                   =  00009E G
@@ -658,20 +655,20 @@ Symbol Table
     G$TMR3H$0$0                                                 =  000095 G
     G$TMR3L$0$0                                                 =  000094 G
     G$TMR3RL$0$0                                                =  009392 G
+    G$TMR3RLH$0$0                                               =  000093 G
+    G$TMR3RLL$0$0                                               =  000092 G
+    G$TMR4$0$0                                                  =  00F5F4 G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 12.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    G$TMR3RLH$0$0                                               =  000093 G
-    G$TMR3RLL$0$0                                               =  000092 G
-    G$TMR4$0$0                                                  =  00F5F4 G
     G$TR0$0$0                                                   =  00008C G
     G$TR1$0$0                                                   =  00008E G
     G$TR2$0$0                                                   =  0000CA G
     G$TXBSY$0$0                                                 =  0000FB G
- 18 G$Timer0_ISR$0$0                                            =  000189 GR
- 18 G$Timer_Init$0$0                                            =  000177 GR
+ 18 G$Timer0_ISR$0$0                                            =  000186 GR
+ 18 G$Timer_Init$0$0                                            =  000174 GR
  18 G$UART0_Init$0$0                                            =  000020 GR
     G$WCOL$0$0                                                  =  0000FE G
     G$WDTCN$0$0                                                 =  0000FF G
@@ -687,7 +684,7 @@ Symbol Table
  18 G$main$0$0                                                  =  000077 GR
   5 G$milivolts$0$0                                             =  000007 GR
  18 G$putchar$0$0                                               =  00004A GR
- 18 G$read_AD_input$0$0                                         =  00014B GR
+ 18 G$read_AD_input$0$0                                         =  000148 GR
   5 G$result$0$0                                                =  000006 GR
     IE                                                          =  0000A8 L
     IE.0                                                        =  0000A8 L
@@ -718,14 +715,14 @@ Symbol Table
     P0.2                                                        =  000082 L
     P0.3                                                        =  000083 L
     P0.4                                                        =  000084 L
+    P0.5                                                        =  000085 L
+    P0.6                                                        =  000086 L
+    P0.7                                                        =  000087 L
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 13.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    P0.5                                                        =  000085 L
-    P0.6                                                        =  000086 L
-    P0.7                                                        =  000087 L
     P1                                                          =  000090 L
     P1.0                                                        =  000090 L
     P1.1                                                        =  000091 L
@@ -778,14 +775,14 @@ Symbol Table
     RS0                                                         =  0000D3 L
     RS1                                                         =  0000D4 L
     RXD                                                         =  0000B0 L
+    SBUF                                                        =  000099 L
+    SCON                                                        =  000098 L
+    SCON.0                                                      =  000098 L
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 14.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    SBUF                                                        =  000099 L
-    SCON                                                        =  000098 L
-    SCON.0                                                      =  000098 L
     SCON.1                                                      =  000099 L
     SCON.2                                                      =  00009A L
     SCON.3                                                      =  00009B L
@@ -832,24 +829,24 @@ Symbol Table
     TR1                                                         =  00008E L
     TR2                                                         =  0000CA L
     TXD                                                         =  0000B1 L
- 18 XG$ADC_Init$0$0                                             =  00014A GR
- 18 XG$Interrupt_Init$0$0                                       =  000176 GR
- 18 XG$Port_Init$0$0                                            =  000172 GR
+ 18 XG$ADC_Init$0$0                                             =  000147 GR
+ 18 XG$Interrupt_Init$0$0                                       =  000173 GR
+ 18 XG$Port_Init$0$0                                            =  00016F GR
  18 XG$SYSCLK_Init$0$0                                          =  00001F GR
  18 XG$Sys_Init$0$0                                             =  000049 GR
- 18 XG$Timer0_ISR$0$0                                           =  0001A1 GR
+ 18 XG$Timer0_ISR$0$0                                           =  00019E GR
+ 18 XG$Timer_Init$0$0                                           =  000185 GR
+ 18 XG$UART0_Init$0$0                                           =  000036 GR
+ 18 XG$getchar$0$0                                              =  000062 GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 15.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
- 18 XG$Timer_Init$0$0                                           =  000188 GR
- 18 XG$UART0_Init$0$0                                           =  000036 GR
- 18 XG$getchar$0$0                                              =  000062 GR
  18 XG$getchar_nw$0$0                                           =  000076 GR
- 18 XG$main$0$0                                                 =  000140 GR
+ 18 XG$main$0$0                                                 =  00013D GR
  18 XG$putchar$0$0                                              =  000053 GR
- 18 XG$read_AD_input$0$0                                        =  000160 GR
+ 18 XG$read_AD_input$0$0                                        =  00015D GR
     _AA                                                         =  0000C2 G
     _AC                                                         =  0000D6 G
     _ACC                                                        =  0000E0 G
@@ -879,7 +876,7 @@ Symbol Table
     _ADCEN                                                      =  0000EF G
     _ADCINT                                                     =  0000ED G
     _ADCTM                                                      =  0000EE G
- 18 _ADC_Init                                                      000141 GR
+ 18 _ADC_Init                                                      00013E GR
     _ADLJST                                                     =  0000E8 G
     _ADSTM0                                                     =  0000EA G
     _ADSTM1                                                     =  0000EB G
@@ -898,14 +895,14 @@ Symbol Table
     _CF                                                         =  0000DF G
     _CKCON                                                      =  00008E G
     _CPRL2                                                      =  0000C8 G
+    _CPT0CN                                                     =  00009E G
+    _CPT1CN                                                     =  00009F G
+    _CR                                                         =  0000DE G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 16.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _CPT0CN                                                     =  00009E G
-    _CPT1CN                                                     =  00009F G
-    _CR                                                         =  0000DE G
     _CT2                                                        =  0000C9 G
     _CY                                                         =  0000D7 G
     _DAC0                                                       =  00D3D2 G
@@ -946,7 +943,7 @@ Symbol Table
     _IP                                                         =  0000B8 G
     _IT0                                                        =  000088 G
     _IT1                                                        =  00008A G
- 18 _Interrupt_Init                                                000173 GR
+ 18 _Interrupt_Init                                                000170 GR
     _MCE0                                                       =  00009D G
     _MODF                                                       =  0000FD G
     _MSTEN                                                      =  0000F9 G
@@ -958,14 +955,14 @@ Symbol Table
     _P0MDOUT                                                    =  0000A4 G
     _P0_0                                                       =  000080 G
     _P0_1                                                       =  000081 G
+    _P0_2                                                       =  000082 G
+    _P0_3                                                       =  000083 G
+    _P0_4                                                       =  000084 G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _P0_2                                                       =  000082 G
-    _P0_3                                                       =  000083 G
-    _P0_4                                                       =  000084 G
     _P0_5                                                       =  000085 G
     _P0_6                                                       =  000086 G
     _P0_7                                                       =  000087 G
@@ -1018,14 +1015,14 @@ Symbol Table
     _PCA0CPH2                                                   =  0000FC G
     _PCA0CPH3                                                   =  0000FD G
     _PCA0CPH4                                                   =  0000FE G
+    _PCA0CPL0                                                   =  0000EA G
+    _PCA0CPL1                                                   =  0000EB G
+    _PCA0CPL2                                                   =  0000EC G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 18.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _PCA0CPL0                                                   =  0000EA G
-    _PCA0CPL1                                                   =  0000EB G
-    _PCA0CPL2                                                   =  0000EC G
     _PCA0CPL3                                                   =  0000ED G
     _PCA0CPL4                                                   =  0000EE G
     _PCA0CPM0                                                   =  0000DA G
@@ -1050,7 +1047,7 @@ Symbol Table
     _PT2                                                        =  0000BD G
     _PX0                                                        =  0000B8 G
     _PX1                                                        =  0000BA G
- 18 _Port_Init                                                     000161 GR
+ 18 _Port_Init                                                     00015E GR
     _RB8                                                        =  00009A G
     _RB80                                                       =  00009A G
     _RCAP2                                                      =  00CBCA G
@@ -1078,14 +1075,14 @@ Symbol Table
     _SBUF0                                                      =  000099 G
     _SBUF1                                                      =  0000F2 G
     _SCON                                                       =  000098 G
+    _SCON0                                                      =  000098 G
+    _SCON1                                                      =  0000F1 G
+    _SI                                                         =  0000C3 G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _SCON0                                                      =  000098 G
-    _SCON1                                                      =  0000F1 G
-    _SI                                                         =  0000C3 G
     _SLVSEL                                                     =  0000FA G
     _SM0                                                        =  00009F G
     _SM00                                                       =  00009F G
@@ -1138,21 +1135,21 @@ Symbol Table
     _TMR3CN                                                     =  000091 G
     _TMR3H                                                      =  000095 G
     _TMR3L                                                      =  000094 G
+    _TMR3RL                                                     =  009392 G
+    _TMR3RLH                                                    =  000093 G
+    _TMR3RLL                                                    =  000092 G
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 20.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    _TMR3RL                                                     =  009392 G
-    _TMR3RLH                                                    =  000093 G
-    _TMR3RLL                                                    =  000092 G
     _TMR4                                                       =  00F5F4 G
     _TR0                                                        =  00008C G
     _TR1                                                        =  00008E G
     _TR2                                                        =  0000CA G
     _TXBSY                                                      =  0000FB G
- 18 _Timer0_ISR                                                    000189 GR
- 18 _Timer_Init                                                    000177 GR
+ 18 _Timer0_ISR                                                    000186 GR
+ 18 _Timer_Init                                                    000174 GR
  18 _UART0_Init                                                    000020 GR
     _WCOL                                                       =  0000FE G
     _WDTCN                                                      =  0000FF G
@@ -1184,7 +1181,7 @@ Symbol Table
   5 _milivolts                                                     000007 GR
     _printf                                                        ****** GX
  18 _putchar                                                       00004A GR
- 18 _read_AD_input                                                 00014B GR
+ 18 _read_AD_input                                                 000148 GR
   5 _result                                                        000006 GR
     a                                                           =  0000E0 L
     a.0                                                         =  0000E0 L
@@ -1198,14 +1195,14 @@ Symbol Table
     ac                                                          =  0000D6 L
     acc                                                         =  0000E0 L
     acc.0                                                       =  0000E0 L
+    acc.1                                                       =  0000E1 L
+    acc.2                                                       =  0000E2 L
+    acc.3                                                       =  0000E3 L
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    acc.1                                                       =  0000E1 L
-    acc.2                                                       =  0000E2 L
-    acc.3                                                       =  0000E3 L
     acc.4                                                       =  0000E4 L
     acc.5                                                       =  0000E5 L
     acc.6                                                       =  0000E6 L
@@ -1258,14 +1255,14 @@ Symbol Table
     ip.0                                                        =  0000B8 L
     ip.1                                                        =  0000B9 L
     ip.2                                                        =  0000BA L
+    ip.3                                                        =  0000BB L
+    ip.4                                                        =  0000BC L
+    ip.5                                                        =  0000BD L
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    ip.3                                                        =  0000BB L
-    ip.4                                                        =  0000BC L
-    ip.5                                                        =  0000BD L
     it0                                                         =  000088 L
     it1                                                         =  00008A L
     ov                                                          =  0000D2 L
@@ -1318,14 +1315,14 @@ Symbol Table
     psw.6                                                       =  0000D6 L
     psw.7                                                       =  0000D7 L
     pt0                                                         =  0000B9 L
+    pt1                                                         =  0000BB L
+    pt2                                                         =  0000BD L
+    px0                                                         =  0000B8 L
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    pt1                                                         =  0000BB L
-    pt2                                                         =  0000BD L
-    px0                                                         =  0000B8 L
     px1                                                         =  0000BA L
     rb8                                                         =  00009A L
     rcap2h                                                      =  0000CB L
@@ -1378,14 +1375,14 @@ Symbol Table
     th2                                                         =  0000CD L
     ti                                                          =  000099 L
     tl0                                                         =  00008A L
+    tl1                                                         =  00008B L
+    tl2                                                         =  0000CC L
+    tmod                                                        =  000089 L
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
 Hexadecimal [24-Bits]
 
 Symbol Table
 
-    tl1                                                         =  00008B L
-    tl2                                                         =  0000CC L
-    tmod                                                        =  000089 L
     tr0                                                         =  00008C L
     tr1                                                         =  00008E L
     tr2                                                         =  0000CA L
@@ -1420,8 +1417,8 @@ Area Table
   15 GSINIT5                                    size      0   flags   20
   16 GSINIT                                     size      0   flags   20
   17 GSFINAL                                    size      3   flags   20
-  18 CSEG                                       size    1A2   flags   20
-  19 CONST                                      size     6C   flags   20
+  18 CSEG                                       size    19F   flags   20
+  19 CONST                                      size     77   flags   20
   1A XINIT                                      size      0   flags   20
   1B CABS                                       size      0   flags   28
 
