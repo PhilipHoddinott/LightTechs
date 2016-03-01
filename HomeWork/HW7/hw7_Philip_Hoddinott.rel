@@ -1,6 +1,6 @@
 ;!FILE hw7_Philip_Hoddinott.asm
 XH3
-H 1C areas 385 global symbols
+H 1C areas 3B9 global symbols
 M hw7_Philip_Hoddinott
 O -mmcs51 --model-small
 S G$SPI0CN$0$0 Def0000F8
@@ -571,17 +571,17 @@ A RSEG0 size 0 flags 8 addr 0
 A RSEG1 size 0 flags 8 addr 0
 A REG_BANK_0 size 8 flags 4 addr 0
 A DSEG size B flags 0 addr 0
-S _milivolts Def000007
 S G$input$0$0 Def000005
 S _input Def000005
 S G$AD_value$0$0 Def000004
 S G$counts1$0$0 Def000000
 S _AD_value Def000004
 S G$counts2$0$0 Def000002
+S G$millivolts$0$0 Def000007
 S _counts1 Def000000
 S _counts2 Def000002
+S _millivolts Def000007
 S G$result$0$0 Def000006
-S G$milivolts$0$0 Def000007
 S _result Def000006
 A OSEG size 0 flags 4 addr 0
 A SSEG size 1 flags 0 addr 0
@@ -608,10 +608,15 @@ A GSINIT5 size 0 flags 20 addr 0
 A GSINIT size 0 flags 20 addr 0
 A GSFINAL size 3 flags 20 addr 0
 S A$hw7_Philip_Hoddinott$972 Def000000
-A CSEG size 19F flags 20 addr 0
-S A$hw7_Philip_Hoddinott$1465 Def000186
-S A$hw7_Philip_Hoddinott$1393 Def000160
-S A$hw7_Philip_Hoddinott$1294 Def000106
+A CSEG size 1F9 flags 20 addr 0
+S A$hw7_Philip_Hoddinott$1519 Def0001E0
+S A$hw7_Philip_Hoddinott$1474 Def0001CA
+S A$hw7_Philip_Hoddinott$1447 Def0001BA
+S A$hw7_Philip_Hoddinott$1375 Def000194
+S A$hw7_Philip_Hoddinott$1366 Def000181
+S A$hw7_Philip_Hoddinott$1357 Def000173
+S A$hw7_Philip_Hoddinott$1348 Def000160
+S A$hw7_Philip_Hoddinott$1339 Def000154
 S A$hw7_Philip_Hoddinott$1285 Def0000F5
 S A$hw7_Philip_Hoddinott$1276 Def0000E2
 S A$hw7_Philip_Hoddinott$1267 Def0000D1
@@ -621,105 +626,114 @@ S A$hw7_Philip_Hoddinott$1195 Def000076
 S A$hw7_Philip_Hoddinott$1177 Def000066
 S A$hw7_Philip_Hoddinott$1096 Def000043
 S A$hw7_Philip_Hoddinott$1087 Def00003A
-S C$hw7_Philip_Hoddinott.c$136$1$46 Def000186
+S C$hw7_Philip_Hoddinott.c$117$1$47 Def0001E0
 S C$c8051_SDCC.h$132$1$12 Def000076
 S C$c8051_SDCC.h$130$2$13 Def000073
 S C$c8051_SDCC.h$116$1$10 Def000062
-S A$hw7_Philip_Hoddinott$1466 Def000188
-S A$hw7_Philip_Hoddinott$1448 Def00017F
-S A$hw7_Philip_Hoddinott$1439 Def000177
-S A$hw7_Philip_Hoddinott$1394 Def000162
-S A$hw7_Philip_Hoddinott$1376 Def00015A
-S A$hw7_Philip_Hoddinott$1295 Def000108
+S A$hw7_Philip_Hoddinott$1493 Def0001D1
+S A$hw7_Philip_Hoddinott$1448 Def0001BC
+S A$hw7_Philip_Hoddinott$1394 Def00019B
+S A$hw7_Philip_Hoddinott$1367 Def000183
+S A$hw7_Philip_Hoddinott$1358 Def000175
+S A$hw7_Philip_Hoddinott$1349 Def000162
 S A$hw7_Philip_Hoddinott$1286 Def0000F8
 S A$hw7_Philip_Hoddinott$1277 Def0000E4
 S A$hw7_Philip_Hoddinott$1268 Def0000D4
 S A$hw7_Philip_Hoddinott$1259 Def0000BF
 S A$hw7_Philip_Hoddinott$1178 Def000069
-S C$hw7_Philip_Hoddinott.c$128$1$46 Def000174
 S C$c8051_SDCC.h$124$1$12 Def000063
 S _getchar_nw Def000063
-S A$hw7_Philip_Hoddinott$1485 Def00019E
-S A$hw7_Philip_Hoddinott$1476 Def000192
-S A$hw7_Philip_Hoddinott$1395 Def000163
-S A$hw7_Philip_Hoddinott$1368 Def000152
-S A$hw7_Philip_Hoddinott$1359 Def000148
-S A$hw7_Philip_Hoddinott$1296 Def00010A
+S A$hw7_Philip_Hoddinott$1539 Def0001F8
+S A$hw7_Philip_Hoddinott$1458 Def0001C6
+S A$hw7_Philip_Hoddinott$1449 Def0001BD
+S A$hw7_Philip_Hoddinott$1368 Def000185
+S A$hw7_Philip_Hoddinott$1296 Def000106
 S A$hw7_Philip_Hoddinott$1287 Def0000FB
 S A$hw7_Philip_Hoddinott$1278 Def0000E7
 S A$hw7_Philip_Hoddinott$1269 Def0000D5
 S A$hw7_Philip_Hoddinott$1188 Def000070
-S C$hw7_Philip_Hoddinott.c$129$1$46 Def000177
-S A$hw7_Philip_Hoddinott$1477 Def000194
-S A$hw7_Philip_Hoddinott$1297 Def00010C
+S A$hw7_Philip_Hoddinott$1477 Def0001CD
+S A$hw7_Philip_Hoddinott$1378 Def000197
+S A$hw7_Philip_Hoddinott$1369 Def000187
+S A$hw7_Philip_Hoddinott$1297 Def000108
 S A$hw7_Philip_Hoddinott$1288 Def0000FE
 S A$hw7_Philip_Hoddinott$1279 Def0000E9
 S A$hw7_Philip_Hoddinott$1099 Def000046
-S XG$Port_Init$0$0 Def00016F
-S A$hw7_Philip_Hoddinott$1478 Def000195
-S A$hw7_Philip_Hoddinott$1469 Def00018A
-S A$hw7_Philip_Hoddinott$1379 Def00015D
-S A$hw7_Philip_Hoddinott$1298 Def00010E
-S C$hw7_Philip_Hoddinott.c$138$1$48 Def00018A
+S XG$Port_Init$0$0 Def0001C9
+S A$hw7_Philip_Hoddinott$1496 Def0001D4
+S A$hw7_Philip_Hoddinott$1397 Def00019E
+S A$hw7_Philip_Hoddinott$1298 Def00010A
+S C$hw7_Philip_Hoddinott.c$119$1$49 Def0001E4
 S _main Def000077
-S A$hw7_Philip_Hoddinott$1479 Def000198
-S A$hw7_Philip_Hoddinott$1398 Def000165
-S A$hw7_Philip_Hoddinott$1299 Def000110
-S C$hw7_Philip_Hoddinott.c$139$1$48 Def000192
+S A$hw7_Philip_Hoddinott$1299 Def00010C
 S G$Sys_Init$0$0 Def000037
-S A$hw7_Philip_Hoddinott$1399 Def000167
 S C$c8051_SDCC.h$127$2$13 Def00006B
-S G$Timer_Init$0$0 Def000174
+S A$hw7_Philip_Hoddinott$1499 Def0001D7
+S G$Timer_Init$0$0 Def0001CE
 S C$c8051_SDCC.h$128$2$13 Def00006D
+S C$hw7_Philip_Hoddinott.c$45$1$12 Def000077
 S C$c8051_SDCC.h$129$2$13 Def000070
+S C$hw7_Philip_Hoddinott.c$50$1$35 Def000086
 S XG$getchar$0$0 Def000062
-S C$hw7_Philip_Hoddinott.c$60$1$35 Def000077
+S C$hw7_Philip_Hoddinott.c$90$1$41 Def0001B4
+S C$hw7_Philip_Hoddinott.c$51$1$35 Def000089
 S G$putchar$0$0 Def00004A
 S XG$UART0_Init$0$0 Def000036
-S C$hw7_Philip_Hoddinott.c$61$1$35 Def00007A
-S C$hw7_Philip_Hoddinott.c$62$1$35 Def000080
-S C$hw7_Philip_Hoddinott.c$70$2$36 Def0000A1
-S C$hw7_Philip_Hoddinott.c$63$1$35 Def000083
-S C$hw7_Philip_Hoddinott.c$59$1$12 Def000077
+S C$hw7_Philip_Hoddinott.c$91$1$41 Def0001B7
+S C$hw7_Philip_Hoddinott.c$71$1$35 Def000197
+S C$hw7_Philip_Hoddinott.c$53$1$35 Def00008C
+S C$hw7_Philip_Hoddinott.c$61$2$36 Def000100
+S C$hw7_Philip_Hoddinott.c$54$1$35 Def0000A1
 S XG$getchar_nw$0$0 Def000076
-S C$hw7_Philip_Hoddinott.c$91$1$35 Def00013E
-S G$ADC_Init$0$0 Def00013E
-S C$hw7_Philip_Hoddinott.c$71$2$36 Def0000B6
-S C$hw7_Philip_Hoddinott.c$64$1$35 Def000086
-S C$hw7_Philip_Hoddinott.c$81$2$36 Def000100
-S C$hw7_Philip_Hoddinott.c$65$1$35 Def000089
-S XG$main$0$0 Def00013D
-S C$hw7_Philip_Hoddinott.c$82$2$36 Def00011D
+S G$ADC_Init$0$0 Def000198
+S C$hw7_Philip_Hoddinott.c$46$1$35 Def000077
+S C$hw7_Philip_Hoddinott.c$47$1$35 Def00007A
+S C$hw7_Philip_Hoddinott.c$96$1$41 Def0001B8
+S C$hw7_Philip_Hoddinott.c$87$1$41 Def0001A5
+S C$hw7_Philip_Hoddinott.c$80$1$39 Def0001A1
+S XG$main$0$0 Def000197
+S C$hw7_Philip_Hoddinott.c$62$3$37 Def000106
+S C$hw7_Philip_Hoddinott.c$55$2$36 Def0000A1
+S C$hw7_Philip_Hoddinott.c$48$1$35 Def000080
 S C$c8051_SDCC.h$100$1$8 Def00004C
-S G$Timer0_ISR$0$0 Def000186
-S C$hw7_Philip_Hoddinott.c$85$1$35 Def00013D
-S C$hw7_Philip_Hoddinott.c$67$1$35 Def00008C
+S G$Timer0_ISR$0$0 Def0001E0
+S C$hw7_Philip_Hoddinott.c$88$1$41 Def0001AC
+S C$hw7_Philip_Hoddinott.c$76$1$35 Def000198
+S C$hw7_Philip_Hoddinott.c$63$3$37 Def00011B
+S C$hw7_Philip_Hoddinott.c$56$2$36 Def0000B6
+S C$hw7_Philip_Hoddinott.c$49$1$35 Def000083
 S C$c8051_SDCC.h$101$1$8 Def00004C
 S _Sys_Init Def000037
-S C$hw7_Philip_Hoddinott.c$92$1$38 Def00013E
-S C$hw7_Philip_Hoddinott.c$68$1$35 Def0000A1
+S C$hw7_Philip_Hoddinott.c$89$1$41 Def0001AF
+S C$hw7_Philip_Hoddinott.c$64$3$37 Def000130
 S C$c8051_SDCC.h$102$1$8 Def000051
-S G$Interrupt_Init$0$0 Def000170
-S C$hw7_Philip_Hoddinott.c$93$1$38 Def000141
-S C$hw7_Philip_Hoddinott.c$76$2$36 Def0000BC
+S G$Interrupt_Init$0$0 Def0001CA
+S C$hw7_Philip_Hoddinott.c$97$1$43 Def0001B8
+S C$hw7_Philip_Hoddinott.c$65$3$37 Def000145
+S C$hw7_Philip_Hoddinott.c$58$2$36 Def0000BC
 S C$c8051_SDCC.h$103$1$8 Def000053
-S _Timer_Init Def000174
-S C$hw7_Philip_Hoddinott.c$94$1$38 Def000144
-S C$hw7_Philip_Hoddinott.c$95$1$38 Def000147
-S C$hw7_Philip_Hoddinott.c$79$2$36 Def0000C5
+S _Timer_Init Def0001CE
+S C$hw7_Philip_Hoddinott.c$98$1$43 Def0001BF
+S C$hw7_Philip_Hoddinott.c$68$2$36 Def00015A
+S C$hw7_Philip_Hoddinott.c$59$2$36 Def0000C5
+S C$hw7_Philip_Hoddinott.c$99$1$43 Def0001C6
+S C$hw7_Philip_Hoddinott.c$85$1$39 Def0001A2
+S C$hw7_Philip_Hoddinott.c$69$2$36 Def000177
+S C$hw7_Philip_Hoddinott.c$77$1$39 Def000198
 S _putchar Def00004A
+S C$hw7_Philip_Hoddinott.c$78$1$39 Def00019B
+S C$hw7_Philip_Hoddinott.c$79$1$39 Def00019E
 S C$c8051_SDCC.h$108$1$8 Def000054
-S C$hw7_Philip_Hoddinott.c$99$1$38 Def000148
-S _ADC_Init Def00013E
+S _ADC_Init Def000198
 S C$c8051_SDCC.h$42$0$0 Def000000
 S XG$Sys_Init$0$0 Def000049
-S _Timer0_ISR Def000186
-S XG$Timer_Init$0$0 Def000185
+S _Timer0_ISR Def0001E0
+S XG$Timer_Init$0$0 Def0001DF
 S C$c8051_SDCC.h$51$1$2 Def000017
 S G$SYSCLK_Init$0$0 Def000000
-S _Interrupt_Init Def000170
+S _Interrupt_Init Def0001CA
 S C$c8051_SDCC.h$53$1$2 Def00001C
-S G$read_AD_input$0$0 Def000148
+S G$read_AD_input$0$0 Def0001A2
 S XG$putchar$0$0 Def000053
 S C$c8051_SDCC.h$70$1$4 Def00002B
 S C$c8051_SDCC.h$71$1$4 Def00002E
@@ -727,7 +741,7 @@ S C$c8051_SDCC.h$64$1$2 Def000020
 S C$c8051_SDCC.h$46$1$2 Def000000
 S C$c8051_SDCC.h$56$1$2 Def00001F
 S C$c8051_SDCC.h$73$1$4 Def000031
-S XG$ADC_Init$0$0 Def000147
+S XG$ADC_Init$0$0 Def0001A1
 S C$c8051_SDCC.h$83$1$4 Def000037
 S C$c8051_SDCC.h$74$1$4 Def000033
 S C$c8051_SDCC.h$49$1$2 Def000003
@@ -736,46 +750,40 @@ S C$c8051_SDCC.h$75$1$4 Def000036
 S C$c8051_SDCC.h$66$1$4 Def000020
 S C$c8051_SDCC.h$92$1$6 Def000046
 S C$c8051_SDCC.h$67$1$4 Def000023
-S XG$Timer0_ISR$0$0 Def00019E
+S XG$Timer0_ISR$0$0 Def0001F8
 S C$c8051_SDCC.h$93$1$6 Def000049
 S C$c8051_SDCC.h$68$1$4 Def000026
 S C$c8051_SDCC.h$85$1$6 Def000037
 S C$c8051_SDCC.h$69$1$4 Def000029
-S XG$Interrupt_Init$0$0 Def000173
-S G$Port_Init$0$0 Def00015E
+S XG$Interrupt_Init$0$0 Def0001CD
+S G$Port_Init$0$0 Def0001B8
 S C$c8051_SDCC.h$86$1$6 Def00003A
 S _SYSCLK_Init Def000000
 S C$c8051_SDCC.h$88$1$6 Def00003D
 S C$c8051_SDCC.h$98$1$6 Def00004A
 S C$c8051_SDCC.h$89$1$6 Def000040
-S _read_AD_input Def000148
+S _read_AD_input Def0001A2
 S G$getchar$0$0 Def000054
 S A$hw7_Philip_Hoddinott$1010 Def000003
-S C$hw7_Philip_Hoddinott.c$110$1$40 Def00015E
-S C$hw7_Philip_Hoddinott.c$101$1$40 Def00014B
 S G$UART0_Init$0$0 Def000020
 S A$hw7_Philip_Hoddinott$1020 Def000011
 S A$hw7_Philip_Hoddinott$1011 Def000005
-S C$hw7_Philip_Hoddinott.c$102$1$40 Def000152
-S A$hw7_Philip_Hoddinott$1300 Def000112
+S A$hw7_Philip_Hoddinott$1300 Def00010E
 S A$hw7_Philip_Hoddinott$1102 Def000049
 S A$hw7_Philip_Hoddinott$1021 Def000013
-S C$hw7_Philip_Hoddinott.c$103$1$40 Def000155
-S A$hw7_Philip_Hoddinott$1400 Def000169
-S A$hw7_Philip_Hoddinott$1310 Def000123
-S A$hw7_Philip_Hoddinott$1301 Def000114
+S C$hw7_Philip_Hoddinott.c$100$1$43 Def0001C9
+S A$hw7_Philip_Hoddinott$1400 Def0001A1
+S A$hw7_Philip_Hoddinott$1310 Def00011F
+S A$hw7_Philip_Hoddinott$1301 Def000110
 S A$hw7_Philip_Hoddinott$1211 Def00007A
 S A$hw7_Philip_Hoddinott$1121 Def00004C
 S A$hw7_Philip_Hoddinott$1031 Def00001C
 S A$hw7_Philip_Hoddinott$1022 Def000014
 S A$hw7_Philip_Hoddinott$1013 Def000007
-S C$hw7_Philip_Hoddinott.c$111$1$42 Def00015E
-S C$hw7_Philip_Hoddinott.c$104$1$40 Def00015A
 S G$getchar_nw$0$0 Def000063
-S A$hw7_Philip_Hoddinott$1401 Def00016A
-S A$hw7_Philip_Hoddinott$1320 Def000138
-S A$hw7_Philip_Hoddinott$1311 Def000125
-S A$hw7_Philip_Hoddinott$1302 Def000117
+S A$hw7_Philip_Hoddinott$1320 Def000130
+S A$hw7_Philip_Hoddinott$1311 Def000121
+S A$hw7_Philip_Hoddinott$1302 Def000112
 S A$hw7_Philip_Hoddinott$1230 Def000092
 S A$hw7_Philip_Hoddinott$1221 Def000086
 S A$hw7_Philip_Hoddinott$1212 Def00007D
@@ -783,21 +791,20 @@ S A$hw7_Philip_Hoddinott$1122 Def00004F
 S A$hw7_Philip_Hoddinott$1050 Def000023
 S A$hw7_Philip_Hoddinott$1023 Def000015
 S A$hw7_Philip_Hoddinott$1014 Def000008
-S C$hw7_Philip_Hoddinott.c$112$1$42 Def000165
-S C$hw7_Philip_Hoddinott.c$105$1$40 Def00015D
-S A$hw7_Philip_Hoddinott$1420 Def000170
-S A$hw7_Philip_Hoddinott$1321 Def00013A
-S A$hw7_Philip_Hoddinott$1312 Def000127
-S A$hw7_Philip_Hoddinott$1303 Def000119
+S A$hw7_Philip_Hoddinott$1321 Def000132
+S A$hw7_Philip_Hoddinott$1312 Def000123
+S A$hw7_Philip_Hoddinott$1303 Def000115
 S A$hw7_Philip_Hoddinott$1231 Def000094
 S A$hw7_Philip_Hoddinott$1015 Def00000A
-S C$hw7_Philip_Hoddinott.c$122$1$42 Def000170
-S C$hw7_Philip_Hoddinott.c$113$1$42 Def00016C
 S XG$SYSCLK_Init$0$0 Def00001F
-S _Port_Init Def00015E
-S A$hw7_Philip_Hoddinott$1340 Def000141
-S A$hw7_Philip_Hoddinott$1313 Def000129
-S A$hw7_Philip_Hoddinott$1304 Def00011B
+S _Port_Init Def0001B8
+S A$hw7_Philip_Hoddinott$1520 Def0001E2
+S A$hw7_Philip_Hoddinott$1502 Def0001D9
+S A$hw7_Philip_Hoddinott$1430 Def0001B4
+S A$hw7_Philip_Hoddinott$1340 Def000156
+S A$hw7_Philip_Hoddinott$1322 Def000134
+S A$hw7_Philip_Hoddinott$1313 Def000125
+S A$hw7_Philip_Hoddinott$1304 Def000117
 S A$hw7_Philip_Hoddinott$1250 Def0000B2
 S A$hw7_Philip_Hoddinott$1232 Def000096
 S A$hw7_Philip_Hoddinott$1115 Def00004A
@@ -805,8 +812,15 @@ S A$hw7_Philip_Hoddinott$1034 Def00001F
 S A$hw7_Philip_Hoddinott$1016 Def00000B
 S A$hw7_Philip_Hoddinott$1007 Def000000
 S G$main$0$0 Def000077
-S A$hw7_Philip_Hoddinott$1404 Def00016C
-S A$hw7_Philip_Hoddinott$1314 Def00012B
+S A$hw7_Philip_Hoddinott$1530 Def0001EC
+S A$hw7_Philip_Hoddinott$1422 Def0001AC
+S A$hw7_Philip_Hoddinott$1413 Def0001A2
+S A$hw7_Philip_Hoddinott$1350 Def000164
+S A$hw7_Philip_Hoddinott$1341 Def000158
+S A$hw7_Philip_Hoddinott$1332 Def000145
+S A$hw7_Philip_Hoddinott$1323 Def000136
+S A$hw7_Philip_Hoddinott$1314 Def000127
+S A$hw7_Philip_Hoddinott$1305 Def000119
 S A$hw7_Philip_Hoddinott$1260 Def0000C2
 S A$hw7_Philip_Hoddinott$1251 Def0000B4
 S A$hw7_Philip_Hoddinott$1242 Def0000A1
@@ -819,10 +833,12 @@ S A$hw7_Philip_Hoddinott$1071 Def000036
 S A$hw7_Philip_Hoddinott$1062 Def00002E
 S A$hw7_Philip_Hoddinott$1053 Def000026
 S A$hw7_Philip_Hoddinott$1017 Def00000C
-S C$hw7_Philip_Hoddinott.c$115$1$42 Def00016F
-S A$hw7_Philip_Hoddinott$1423 Def000173
-S A$hw7_Philip_Hoddinott$1324 Def00013D
-S A$hw7_Philip_Hoddinott$1315 Def00012D
+S C$hw7_Philip_Hoddinott.c$110$1$47 Def0001CE
+S A$hw7_Philip_Hoddinott$1531 Def0001EE
+S A$hw7_Philip_Hoddinott$1351 Def000166
+S A$hw7_Philip_Hoddinott$1333 Def000147
+S A$hw7_Philip_Hoddinott$1324 Def000138
+S A$hw7_Philip_Hoddinott$1315 Def00012A
 S A$hw7_Philip_Hoddinott$1270 Def0000D7
 S A$hw7_Philip_Hoddinott$1243 Def0000A3
 S A$hw7_Philip_Hoddinott$1234 Def00009B
@@ -830,14 +846,19 @@ S A$hw7_Philip_Hoddinott$1126 Def000051
 S A$hw7_Philip_Hoddinott$1090 Def00003D
 S A$hw7_Philip_Hoddinott$1027 Def000017
 S A$hw7_Philip_Hoddinott$1018 Def00000E
-S C$hw7_Philip_Hoddinott.c$130$1$46 Def00017A
-S C$hw7_Philip_Hoddinott.c$123$1$44 Def000170
-S XG$read_AD_input$0$0 Def00015D
-S A$hw7_Philip_Hoddinott$1451 Def000182
-S A$hw7_Philip_Hoddinott$1442 Def00017A
-S A$hw7_Philip_Hoddinott$1343 Def000144
-S A$hw7_Philip_Hoddinott$1316 Def00012F
-S A$hw7_Philip_Hoddinott$1307 Def00011D
+S C$hw7_Philip_Hoddinott.c$111$1$47 Def0001D1
+S C$hw7_Philip_Hoddinott.c$106$1$43 Def0001CA
+S XG$read_AD_input$0$0 Def0001B7
+S A$hw7_Philip_Hoddinott$1532 Def0001EF
+S A$hw7_Philip_Hoddinott$1523 Def0001E4
+S A$hw7_Philip_Hoddinott$1505 Def0001DC
+S A$hw7_Philip_Hoddinott$1433 Def0001B7
+S A$hw7_Philip_Hoddinott$1370 Def000189
+S A$hw7_Philip_Hoddinott$1361 Def000177
+S A$hw7_Philip_Hoddinott$1352 Def000168
+S A$hw7_Philip_Hoddinott$1334 Def000149
+S A$hw7_Philip_Hoddinott$1325 Def00013A
+S A$hw7_Philip_Hoddinott$1316 Def00012C
 S A$hw7_Philip_Hoddinott$1280 Def0000EB
 S A$hw7_Philip_Hoddinott$1271 Def0000DA
 S A$hw7_Philip_Hoddinott$1244 Def0000A5
@@ -845,14 +866,20 @@ S A$hw7_Philip_Hoddinott$1235 Def00009D
 S A$hw7_Philip_Hoddinott$1208 Def000077
 S A$hw7_Philip_Hoddinott$1028 Def000019
 S A$hw7_Philip_Hoddinott$1019 Def00000F
-S C$hw7_Philip_Hoddinott.c$131$1$46 Def00017D
-S C$hw7_Philip_Hoddinott.c$124$1$44 Def000173
+S C$hw7_Philip_Hoddinott.c$112$1$47 Def0001D4
 S C$c8051_SDCC.h$111$1$10 Def000054
-S A$hw7_Philip_Hoddinott$1470 Def00018C
-S A$hw7_Philip_Hoddinott$1407 Def00016F
-S A$hw7_Philip_Hoddinott$1362 Def00014B
-S A$hw7_Philip_Hoddinott$1317 Def000131
-S A$hw7_Philip_Hoddinott$1308 Def00011F
+S A$hw7_Philip_Hoddinott$1533 Def0001F2
+S A$hw7_Philip_Hoddinott$1524 Def0001E6
+S A$hw7_Philip_Hoddinott$1461 Def0001C9
+S A$hw7_Philip_Hoddinott$1452 Def0001BF
+S A$hw7_Philip_Hoddinott$1416 Def0001A5
+S A$hw7_Philip_Hoddinott$1371 Def00018B
+S A$hw7_Philip_Hoddinott$1362 Def000179
+S A$hw7_Philip_Hoddinott$1353 Def00016A
+S A$hw7_Philip_Hoddinott$1335 Def00014B
+S A$hw7_Philip_Hoddinott$1326 Def00013C
+S A$hw7_Philip_Hoddinott$1317 Def00012E
+S A$hw7_Philip_Hoddinott$1308 Def00011B
 S A$hw7_Philip_Hoddinott$1281 Def0000ED
 S A$hw7_Philip_Hoddinott$1272 Def0000DC
 S A$hw7_Philip_Hoddinott$1263 Def0000C5
@@ -867,14 +894,21 @@ S A$hw7_Philip_Hoddinott$1155 Def00005C
 S A$hw7_Philip_Hoddinott$1065 Def000031
 S A$hw7_Philip_Hoddinott$1056 Def000029
 S A$hw7_Philip_Hoddinott$1047 Def000020
-S C$hw7_Philip_Hoddinott.c$132$1$46 Def00017F
+S C$hw7_Philip_Hoddinott.c$120$1$49 Def0001EC
+S C$hw7_Philip_Hoddinott.c$113$1$47 Def0001D7
 S C$c8051_SDCC.h$121$1$10 Def000063
 S C$c8051_SDCC.h$112$1$10 Def000054
-S A$hw7_Philip_Hoddinott$1471 Def00018D
-S A$hw7_Philip_Hoddinott$1372 Def000155
-S A$hw7_Philip_Hoddinott$1363 Def00014D
-S A$hw7_Philip_Hoddinott$1318 Def000134
-S A$hw7_Philip_Hoddinott$1309 Def000121
+S A$hw7_Philip_Hoddinott$1525 Def0001E7
+S A$hw7_Philip_Hoddinott$1453 Def0001C1
+S A$hw7_Philip_Hoddinott$1426 Def0001AF
+S A$hw7_Philip_Hoddinott$1417 Def0001A7
+S A$hw7_Philip_Hoddinott$1372 Def00018E
+S A$hw7_Philip_Hoddinott$1363 Def00017B
+S A$hw7_Philip_Hoddinott$1354 Def00016C
+S A$hw7_Philip_Hoddinott$1345 Def00015A
+S A$hw7_Philip_Hoddinott$1336 Def00014D
+S A$hw7_Philip_Hoddinott$1327 Def00013F
+S A$hw7_Philip_Hoddinott$1309 Def00011D
 S A$hw7_Philip_Hoddinott$1291 Def000100
 S A$hw7_Philip_Hoddinott$1282 Def0000EF
 S A$hw7_Philip_Hoddinott$1273 Def0000DE
@@ -886,21 +920,25 @@ S A$hw7_Philip_Hoddinott$1147 Def000054
 S A$hw7_Philip_Hoddinott$1129 Def000053
 S A$hw7_Philip_Hoddinott$1093 Def000040
 S A$hw7_Philip_Hoddinott$1084 Def000037
-S C$hw7_Philip_Hoddinott.c$140$1$48 Def00019E
-S C$hw7_Philip_Hoddinott.c$133$1$46 Def000182
-S C$hw7_Philip_Hoddinott.c$126$1$44 Def000174
+S C$hw7_Philip_Hoddinott.c$121$1$49 Def0001F8
+S C$hw7_Philip_Hoddinott.c$114$1$47 Def0001D9
+S C$hw7_Philip_Hoddinott.c$107$1$45 Def0001CA
 S C$c8051_SDCC.h$113$1$10 Def000059
 S _getchar Def000054
-S A$hw7_Philip_Hoddinott$1481 Def00019A
-S A$hw7_Philip_Hoddinott$1472 Def000190
-S A$hw7_Philip_Hoddinott$1454 Def000185
-S A$hw7_Philip_Hoddinott$1445 Def00017D
-S A$hw7_Philip_Hoddinott$1436 Def000174
-S A$hw7_Philip_Hoddinott$1373 Def000157
-S A$hw7_Philip_Hoddinott$1364 Def00014F
-S A$hw7_Philip_Hoddinott$1346 Def000147
-S A$hw7_Philip_Hoddinott$1337 Def00013E
-S A$hw7_Philip_Hoddinott$1319 Def000136
+S A$hw7_Philip_Hoddinott$1535 Def0001F4
+S A$hw7_Philip_Hoddinott$1526 Def0001EA
+S A$hw7_Philip_Hoddinott$1508 Def0001DF
+S A$hw7_Philip_Hoddinott$1490 Def0001CE
+S A$hw7_Philip_Hoddinott$1454 Def0001C3
+S A$hw7_Philip_Hoddinott$1427 Def0001B1
+S A$hw7_Philip_Hoddinott$1418 Def0001A9
+S A$hw7_Philip_Hoddinott$1391 Def000198
+S A$hw7_Philip_Hoddinott$1373 Def000190
+S A$hw7_Philip_Hoddinott$1364 Def00017D
+S A$hw7_Philip_Hoddinott$1355 Def00016E
+S A$hw7_Philip_Hoddinott$1346 Def00015C
+S A$hw7_Philip_Hoddinott$1337 Def00014F
+S A$hw7_Philip_Hoddinott$1328 Def000141
 S A$hw7_Philip_Hoddinott$1292 Def000102
 S A$hw7_Philip_Hoddinott$1283 Def0000F1
 S A$hw7_Philip_Hoddinott$1274 Def0000E0
@@ -908,11 +946,20 @@ S A$hw7_Philip_Hoddinott$1265 Def0000CB
 S A$hw7_Philip_Hoddinott$1247 Def0000AB
 S A$hw7_Philip_Hoddinott$1229 Def000090
 S A$hw7_Philip_Hoddinott$1148 Def000057
+S C$hw7_Philip_Hoddinott.c$115$1$47 Def0001DC
+S C$hw7_Philip_Hoddinott.c$108$1$45 Def0001CD
 S C$c8051_SDCC.h$114$1$10 Def00005C
 S _UART0_Init Def000020
-S A$hw7_Philip_Hoddinott$1482 Def00019C
-S A$hw7_Philip_Hoddinott$1392 Def00015E
-S A$hw7_Philip_Hoddinott$1365 Def000150
+S A$hw7_Philip_Hoddinott$1536 Def0001F6
+S A$hw7_Philip_Hoddinott$1455 Def0001C4
+S A$hw7_Philip_Hoddinott$1446 Def0001B8
+S A$hw7_Philip_Hoddinott$1419 Def0001AA
+S A$hw7_Philip_Hoddinott$1374 Def000192
+S A$hw7_Philip_Hoddinott$1365 Def00017F
+S A$hw7_Philip_Hoddinott$1356 Def000171
+S A$hw7_Philip_Hoddinott$1347 Def00015E
+S A$hw7_Philip_Hoddinott$1338 Def000151
+S A$hw7_Philip_Hoddinott$1329 Def000143
 S A$hw7_Philip_Hoddinott$1293 Def000104
 S A$hw7_Philip_Hoddinott$1284 Def0000F2
 S A$hw7_Philip_Hoddinott$1275 Def0000E1
@@ -923,13 +970,18 @@ S A$hw7_Philip_Hoddinott$1176 Def000063
 S A$hw7_Philip_Hoddinott$1158 Def00005F
 S A$hw7_Philip_Hoddinott$1068 Def000033
 S A$hw7_Philip_Hoddinott$1059 Def00002B
-S C$hw7_Philip_Hoddinott.c$135$1$46 Def000185
+S C$hw7_Philip_Hoddinott.c$116$1$47 Def0001DF
+S C$hw7_Philip_Hoddinott.c$109$1$45 Def0001CE
 S C$c8051_SDCC.h$115$1$10 Def00005F
-A CONST size 77 flags 20 addr 0
+A CONST size 17A flags 20 addr 0
 S Fhw7_Philip_Hoddinott$__str_0$0$0 Def000000
 S Fhw7_Philip_Hoddinott$__str_1$0$0 Def000009
 S Fhw7_Philip_Hoddinott$__str_2$0$0 Def00002A
-S Fhw7_Philip_Hoddinott$__str_3$0$0 Def000040
+S Fhw7_Philip_Hoddinott$__str_3$0$0 Def00006E
+S Fhw7_Philip_Hoddinott$__str_4$0$0 Def0000AA
+S Fhw7_Philip_Hoddinott$__str_5$0$0 Def0000F3
+S Fhw7_Philip_Hoddinott$__str_6$0$0 Def00012C
+S Fhw7_Philip_Hoddinott$__str_7$0$0 Def000142
 A XINIT size 0 flags 20 addr 0
 A CABS size 0 flags 28 addr 0
 T 00 00 00
@@ -972,7 +1024,7 @@ T 00 00 00 02 00 00 32
 R 00 00 00 0F 02 04 02 0A
 T 00 00 04
 R 00 00 00 0F
-T 00 00 0B 02 01 86
+T 00 00 0B 02 01 E0
 R 00 00 00 0F 00 04 00 18
 T 00 00 00 02 00 0E
 R 00 00 00 17 00 04 00 0F
@@ -1044,9 +1096,9 @@ T 00 00 77
 R 00 00 00 18
 T 00 00 77 12 00 37 75 82 20 12 00 4A 12
 R 00 00 00 18 00 04 00 18 00 0A 00 18
-T 00 00 81 01 70 12 01 74 12
+T 00 00 81 01 CA 12 01 CE 12
 R 00 00 00 18 00 03 00 18 00 06 00 18
-T 00 00 87 01 5E 12 01 3E 74
+T 00 00 87 01 B8 12 01 98 74
 R 00 00 00 18 00 03 00 18 00 06 00 18
 T 00 00 8D 00 00 00 C0 E0 74 00 00 00 C0 E0 74 80
 R 00 00 00 18 F1 01 03 00 19 F1 81 09 00 19
@@ -1060,7 +1112,7 @@ T 00 00 AA 80 C0 E0 12 00 00 15 81 15 81 15 81 12
 R 00 00 00 18 02 07 01 B8
 T 00 00 B7 00 54 85 82 00 00 05 75 82 04 12
 R 00 00 00 18 00 03 00 18 F1 21 07 00 05
-T 00 00 C0 01 48 85 82 00 00 05 85
+T 00 00 C0 01 A2 85 82 00 00 05 85
 R 00 00 00 18 00 03 00 18 F1 21 07 00 05
 T 00 00 C6 00 00 05 00 00 00 75
 R 00 00 00 18 F1 21 03 00 05 F1 23 06 00 AF
@@ -1076,65 +1128,87 @@ T 00 00 EA 00 00 03 8C 82 8D 83 8E F0 EF 12 00 00
 R 00 00 00 18 F1 23 03 00 19 02 0E 01 04
 T 00 00 F5 85 82 00 00 07 85 83 00 00 08 85 F0
 R 00 00 00 18 F1 21 05 00 05 F1 21 0A 00 05
-T 00 00 FD 00 00 09 F5 00 00 0A AE
+T 00 00 FD 00 00 09 F5 00 00 0A 74 06 25
 R 00 00 00 18 F1 21 03 00 05 F1 21 07 00 05
-T 00 01 01 00 00 05 7F 00 C0 06 C0 07 74 00 00 2A
-R 00 00 00 18 F1 21 03 00 05 F1 01 0D 00 19
-T 00 01 0A C0 E0 74 00 00 2A C0 E0 74 80 C0 E0 12
-R 00 00 00 18 F1 81 06 00 19
-T 00 01 15 00 00 E5 81 24 FB F5 81 C0 00 00 07 C0
-R 00 00 00 18 02 03 01 B8 F1 21 0C 00 05
-T 00 01 20 00 00 08 C0 00 00 09 C0
-R 00 00 00 18 F1 21 03 00 05 F1 21 07 00 05
-T 00 01 24 00 00 0A 74 00 00 40 C0 E0 74
-R 00 00 00 18 F1 21 03 00 05 F1 01 07 00 19
-T 00 01 2A 00 00 40 C0 E0 74 80 C0 E0 12 00 00 E5
+T 00 01 03 00 00 05 50 54 74 00 00 2A C0 E0 74
+R 00 00 00 18 F1 21 03 00 05 F1 01 09 00 19
+T 00 01 0B 00 00 2A C0 E0 74 80 C0 E0 12 00 00 15
 R 00 00 00 18 F1 81 03 00 19 02 0D 01 B8
-T 00 01 35 81 24 F9 F5 81 02 00 A1 22
-R 00 00 00 18 00 09 00 18
-T 00 01 3E
+T 00 01 16 81 15 81 15 81 74 00 00 6E C0 E0 74
+R 00 00 00 18 F1 01 09 00 19
+T 00 01 20 00 00 6E C0 E0 74 80 C0 E0 12 00 00 15
+R 00 00 00 18 F1 81 03 00 19 02 0D 01 B8
+T 00 01 2B 81 15 81 15 81 74 00 00 AA C0 E0 74
+R 00 00 00 18 F1 01 09 00 19
+T 00 01 35 00 00 AA C0 E0 74 80 C0 E0 12 00 00 15
+R 00 00 00 18 F1 81 03 00 19 02 0D 01 B8
+T 00 01 40 81 15 81 15 81 74 00 00 F3 C0 E0 74
+R 00 00 00 18 F1 01 09 00 19
+T 00 01 4A 00 00 F3 C0 E0 74 80 C0 E0 12 00 00 15
+R 00 00 00 18 F1 81 03 00 19 02 0D 01 B8
+T 00 01 55 81 15 81 15 81
 R 00 00 00 18
-T 00 01 3E 75 D1 03 75 AA 80 43 AB 02 22
+T 00 01 5A
 R 00 00 00 18
-T 00 01 48
+T 00 01 5A AE 00 00 05 7F 00 C0 06 C0 07 74
+R 00 00 00 18 F1 21 04 00 05
+T 00 01 63 00 01 2C C0 E0 74 00 01 2C C0 E0 74 80
+R 00 00 00 18 F1 01 03 00 19 F1 81 09 00 19
+T 00 01 6C C0 E0 12 00 00 E5 81 24 FB F5 81 C0
+R 00 00 00 18 02 06 01 B8
+T 00 01 78 00 00 07 C0 00 00 08 C0
+R 00 00 00 18 F1 21 03 00 05 F1 21 07 00 05
+T 00 01 7C 00 00 09 C0 00 00 0A 74
+R 00 00 00 18 F1 21 03 00 05 F1 21 07 00 05
+T 00 01 80 00 01 42 C0 E0 74 00 01 42 C0 E0 74 80
+R 00 00 00 18 F1 01 03 00 19 F1 81 09 00 19
+T 00 01 89 C0 E0 12 00 00 E5 81 24 F9 F5 81 02
+R 00 00 00 18 02 06 01 B8
+T 00 01 95 00 A1 22
+R 00 00 00 18 00 03 00 18
+T 00 01 98
 R 00 00 00 18
-T 00 01 48 85 82 AC AF AA 74 DF 5F F5 AA 43 AA 10
+T 00 01 98 75 D1 03 75 AA 80 43 AB 02 22
 R 00 00 00 18
-T 00 01 55
+T 00 01 A2
 R 00 00 00 18
-T 00 01 55 E5 AA 30 E5 FB 85 9C 82 22
+T 00 01 A2 85 82 AC AF AA 74 DF 5F F5 AA 43 AA 10
 R 00 00 00 18
-T 00 01 5E
+T 00 01 AF
 R 00 00 00 18
-T 00 01 5E AF BD 74 FB 5F F5 BD AF A5 74 FB 5F F5
+T 00 01 AF E5 AA 30 E5 FB 85 9C 82 22
 R 00 00 00 18
-T 00 01 6B A5 43 90 04 22
+T 00 01 B8
 R 00 00 00 18
-T 00 01 70
+T 00 01 B8 AF BD 74 FB 5F F5 BD AF A5 74 FB 5F F5
 R 00 00 00 18
-T 00 01 70 43 A8 82 22
+T 00 01 C5 A5 43 90 04 22
 R 00 00 00 18
-T 00 01 74
+T 00 01 CA
 R 00 00 00 18
-T 00 01 74 43 8E 08 53 89 F0 43 89 01 C2 8C 75 8A
+T 00 01 CA 43 A8 82 22
 R 00 00 00 18
-T 00 01 81 00 75 8C 00 22
+T 00 01 CE
 R 00 00 00 18
-T 00 01 86
+T 00 01 CE 43 8E 08 53 89 F0 43 89 01 C2 8C 75 8A
 R 00 00 00 18
-T 00 01 86 C0 E0 C0 D0 05 00 00 00 E4 B5 00 00 00
+T 00 01 DB 00 75 8C 00 22
+R 00 00 00 18
+T 00 01 E0
+R 00 00 00 18
+T 00 01 E0 C0 E0 C0 D0 05 00 00 00 E4 B5 00 00 00
 R 00 00 00 18 F1 21 08 00 05 F1 21 0D 00 05
-T 00 01 8F 02 05 00 00 01
+T 00 01 E9 02 05 00 00 01
 R 00 00 00 18 F1 21 05 00 05
-T 00 01 92
+T 00 01 EC
 R 00 00 00 18
-T 00 01 92 05 00 00 02 E4 B5 00 00 02 02 05
+T 00 01 EC 05 00 00 02 E4 B5 00 00 02 02 05
 R 00 00 00 18 F1 21 04 00 05 F1 21 09 00 05
-T 00 01 99 00 00 03
+T 00 01 F3 00 00 03
 R 00 00 00 18 F1 21 03 00 05
-T 00 01 9A
+T 00 01 F4
 R 00 00 00 18
-T 00 01 9A D0 D0 D0 E0 32
+T 00 01 F4 D0 D0 D0 E0 32
 R 00 00 00 18
 T 00 00 00
 R 00 00 00 19
@@ -1150,19 +1224,71 @@ T 00 00 23 70 75 74 20 0D 0A 00
 R 00 00 00 19
 T 00 00 2A
 R 00 00 00 19
-T 00 00 2A 0A 0D 49 6E 70 75 74 20 76 61 6C 75 65
+T 00 00 2A 0A 57 41 52 4E 49 4E 47 21 20 54 68 69
 R 00 00 00 19
-T 00 00 37 20 69 73 20 25 75 0D 0A 00
+T 00 00 37 73 20 63 69 72 63 75 74 20 63 61 6E 6E
 R 00 00 00 19
-T 00 00 40
+T 00 00 44 6F 74 20 68 61 6E 64 6C 65 20 6D 6F 72
 R 00 00 00 19
-T 00 00 40 0A 0D 49 6E 20 6D 69 6C 69 76 6F 6C 74
+T 00 00 51 65 20 74 68 61 6E 20 32 2E 34 20 76 6F
 R 00 00 00 19
-T 00 00 4D 73 20 74 68 65 20 76 61 6C 75 65 20 69
+T 00 00 5E 6C 74 73 20 6F 66 20 69 6E 70 75 74 2E
 R 00 00 00 19
-T 00 00 5A 73 20 25 6C 75 20 28 72 65 6D 65 6D 62
+T 00 00 6B 0D 0A 00
 R 00 00 00 19
-T 00 00 67 65 72 20 67 61 69 6E 20 69 73 20 32 29
+T 00 00 6E
 R 00 00 00 19
-T 00 00 74 0D 0A 00
+T 00 00 6E 50 72 6F 67 72 61 6D 20 68 61 73 20 64
+R 00 00 00 19
+T 00 00 7B 65 74 65 63 74 65 64 20 74 68 61 74 20
+R 00 00 00 19
+T 00 00 88 63 69 72 63 75 74 20 69 73 20 61 74 20
+R 00 00 00 19
+T 00 00 95 6F 72 20 6F 76 65 72 20 32 2E 34 20 76
+R 00 00 00 19
+T 00 00 A2 6F 6C 74 73 2E 0D 0A 00
+R 00 00 00 19
+T 00 00 AA
+R 00 00 00 19
+T 00 00 AA 54 68 65 20 67 61 69 6E 20 69 73 20 32
+R 00 00 00 19
+T 00 00 B7 20 73 6F 20 70 72 6F 67 72 61 6D 20 63
+R 00 00 00 19
+T 00 00 C4 61 6E 6E 6F 74 20 68 61 6E 64 6C 65 20
+R 00 00 00 19
+T 00 00 D1 61 6E 20 69 6E 70 75 74 20 76 61 6C 75
+R 00 00 00 19
+T 00 00 DE 65 20 6F 66 20 6D 6F 72 65 74 68 61 6E
+R 00 00 00 19
+T 00 00 EB 20 31 2E 32 56 0D 0A 00
+R 00 00 00 19
+T 00 00 F3
+R 00 00 00 19
+T 00 00 F3 54 68 65 20 66 6F 6C 6C 6F 77 69 6E 67
+R 00 00 00 19
+T 00 01 00 20 76 61 6C 75 65 73 20 6D 61 79 20 62
+R 00 00 00 19
+T 00 01 0D 65 20 69 6E 63 6F 72 72 65 63 74 20 64
+R 00 00 00 19
+T 00 01 1A 75 65 20 74 6F 20 6F 76 65 72 66 6C 6F
+R 00 00 00 19
+T 00 01 27 77 2E 0D 0A 00
+R 00 00 00 19
+T 00 01 2C
+R 00 00 00 19
+T 00 01 2C 0A 0D 49 6E 70 75 74 20 76 61 6C 75 65
+R 00 00 00 19
+T 00 01 39 20 69 73 20 25 75 0D 0A 00
+R 00 00 00 19
+T 00 01 42
+R 00 00 00 19
+T 00 01 42 0A 0D 49 6E 20 6D 69 6C 6C 69 76 6F 6C
+R 00 00 00 19
+T 00 01 4F 74 73 20 74 68 65 20 76 61 6C 75 65 20
+R 00 00 00 19
+T 00 01 5C 69 73 20 25 6C 75 20 28 72 65 6D 65 6D
+R 00 00 00 19
+T 00 01 69 62 65 72 20 67 61 69 6E 20 69 73 20 32
+R 00 00 00 19
+T 00 01 76 29 0D 0A 00
 R 00 00 00 19

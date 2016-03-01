@@ -1,35 +1,19 @@
-// COMMENT FULLY<, 
-//WRITE DESCRIPTION 
-//ENSURE IT WORKS TO WHAT DESCRIPTION WANTS
-
 /*	Name: Philip Hoddinott
 	Section: 4
 	Side: A
-	Date: 2/28/2016
-
-	Gain:
-	Port pin:
+	Date: 2/29/2016
+	Gain: 2
+	Port pin: 1.4
 
 	File name: hw7.c
-	Description: 
-Your code needs to read an analog input, print the digital value of the A/D conversion and print the input voltage. The specific requirements are:
-
-Read the analog input on Port 1.4
-Set a gain value of 2
-Print the A/D value
-Print the input voltage in millivolts (as an integer). Remember to include the gain term when calculating voltage.
-You may want to build your own test circuit (refer to worksheet 6) before submitting your code. Resistors are available in the cabinet on the center table.
-
-This homework is due prior to the start of class on the due date for your section. The assignment is individual.
-
-When you are finished, edit the name of your c-file code to include your name, for example HW7_Russ_Kraft.c and upload the c-file using the link below.
-
-Do NOT click the Submit button before you are finished uploading your code. You will lose your assignment if you do so.
-
- REF0CN = 0x03;
-
-
-page 59, for gain of 2 adc1 bits 1-0 do gain 2
+	Description: This program reads an analog input, it prints the digital value of the A/D conversion and print the input voltage (in millivolts). 
+	The gain is 2, so the max voltage it can measure is 1.2 volts. It has an if statment that warns the user if they are approching an overflow value
+	
+	The specific requirements are:
+		Read the analog input on Port 1.4
+		Set a gain value of 2
+		Print the A/D value
+		Print the input voltage in millivolts (as an integer). Remember to include the gain term when calculating voltage.
 */
 
 #include <c8051_SDCC.h>// include files. This file is available online
@@ -41,57 +25,60 @@ page 59, for gain of 2 adc1 bits 1-0 do gain 2
 //-----------------------------------------------------------------------------
 void Timer_Init(void);     // Initialize Timer 0 
 void Interrupt_Init(void); //Initialize interrupts
-void Timer0_ISR(void) __interrupt 1;
-void ADC_Init(void);
-void Port_Init(void);
-unsigned char read_AD_input(unsigned char pin_number);
-
-
+void Timer0_ISR(void) __interrupt 1; //Initalize interupts
+void ADC_Init(void);//Initalize ADC
+void Port_Init(void);//Initalize Ports
+unsigned char read_AD_input(unsigned char pin_number);//reads AD input
 
 //-----------------------------------------------------------------------------
 // Global Variables
 //-----------------------------------------------------------------------------
 
-unsigned int counts1;
-unsigned int counts2;
-unsigned char AD_value;
-unsigned char input;
-unsigned char result;
-unsigned long milivolts;
+unsigned int counts1;//given not used
+unsigned int counts2;//given not used
+unsigned char AD_value;//AD value
+unsigned char input;//used in main for AD value
+unsigned char result;//Given, not used
+unsigned long millivolts;//used in main to display milivolts
 
 //***************
 void main(void) {
 	Sys_Init();      // System Initialization
 	putchar(' ');    // the quote fonts may not copy correctly into SiLabs IDE
-	Interrupt_Init();
+	Interrupt_Init();//Initalize interurrupt
 	Timer_Init();    // Initialize Timer 0
-	Port_Init(); 
-	ADC_Init();
+	Port_Init(); 	//Initalzie ports
+	ADC_Init();		//Initalize ADC stuff
 
 	printf("Start \r\n");
     while (1)  {
 		printf("press enter to read A/D input \r\n");
-		input = getchar();
+		input = getchar();//user presses enter to check voltage
 
 		input = read_AD_input(4);// set port 4
+		millivolts = ((long) 1000*input * 24) / (10*256 * 2);// from page 56, multiply by 1000 to get miivoles
 		
-		milivolts = ((long) 1000*input * 24) / (10*256 * 2);// from page 56, multiply by 1000 to get miivoles
+		if(input>=250){
+			printf("\nWARNING! This circut cannot handle more than 2.4 volts of input.\r\n");
+			printf("Program has detected that circut is at or over 2.4 volts.\r\n");
+			printf("The gain is 2 so program cannot handle an input value of morethan 1.2V\r\n");
+			printf("The following values may be incorrect due to overflow.\r\n");
+		}//end if overflow starment 
 
 		printf("\n\rInput value is %u\r\n", input);
-		printf("\n\rIn milivolts the value is %lu (remember gain is 2)\r\n", milivolts);
-
+		printf("\n\rIn millivolts the value is %lu (remember gain is 2)\r\n", millivolts);//Print statments to display AD input and voltage
     }//end while loop
 }//end main
 
-
 //
-// add the initialization code needed for the ADC1
+//  the initialization code needed for the ADC1
 //
 void ADC_Init(void) {
 	REF0CN = 0x03; //code from page 61
-	ADC1CN = 0x80;
+	ADC1CN = 0x80; //code from page 61 in book
 	ADC1CF |= 0x02;  //gain is 2 
 }//end ADC INIT
+
 //
 // function that completes an A/D conversion
 //
@@ -104,33 +91,28 @@ unsigned char read_AD_input(unsigned char pin_number) {
 }//end read_AD_INPUT
 
 //
-// add Port initialization code
+//  Port initialization code
 //
 void Port_Init(void){
 	P1MDIN &= ~0x04; // Configure P1.4 as analoug input
 	P1MDOUT &= ~0x04; //  P1.4  open-drain input
 	P1 |= 0x04; // set logic 1 to P1.4
-
 }//end port init
-
 
 //
 // the following functions can be used if needed, no edits required
-//
+// They are not used in the program
 
 void Interrupt_Init(void){
 	IE |= 0x82;      // enable Timer0 Interrupt request
 }//end inerupt init
-
 void Timer_Init(void){
-	
 	CKCON |= 0x08;  // Timer0 uses SYSCLK 
 	TMOD &= 0xF0;   // clear the 4 least significant bits
 	TMOD |= 0x01;   // Timer0 mode 16
 	TR0 = 0;        // Stop Timer0
 	TL0 = 0;        // Clear low byte of register T0
 	TH0 = 0;        // Clear high byte of register T0
-
 }//end timer init
 void Timer0_ISR(void) __interrupt 1
 {

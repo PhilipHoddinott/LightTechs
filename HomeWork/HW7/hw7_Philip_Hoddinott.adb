@@ -19,7 +19,7 @@ S:G$counts2$0$0({2}SI:U),E,0,0
 S:G$AD_value$0$0({1}SC:U),E,0,0
 S:G$input$0$0({1}SC:U),E,0,0
 S:G$result$0$0({1}SC:U),E,0,0
-S:G$milivolts$0$0({4}SL:U),E,0,0
+S:G$millivolts$0$0({4}SL:U),E,0,0
 S:G$P0$0$0({1}SC:U),I,0,0
 S:G$SP$0$0({1}SC:U),I,0,0
 S:G$DPL$0$0({1}SC:U),I,0,0
@@ -316,5 +316,9 @@ S:G$printf_tiny$0$0({2}DF,SV:S),C,0,0
 S:G$main$0$0({2}DF,SV:S),C,0,0
 S:Fhw7_Philip_Hoddinott$__str_0$0$0({9}DA9d,SC:S),D,0,0
 S:Fhw7_Philip_Hoddinott$__str_1$0$0({33}DA33d,SC:S),D,0,0
-S:Fhw7_Philip_Hoddinott$__str_2$0$0({22}DA22d,SC:S),D,0,0
-S:Fhw7_Philip_Hoddinott$__str_3$0$0({55}DA55d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_2$0$0({68}DA68d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_3$0$0({60}DA60d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_4$0$0({73}DA73d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_5$0$0({57}DA57d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_6$0$0({22}DA22d,SC:S),D,0,0
+S:Fhw7_Philip_Hoddinott$__str_7$0$0({56}DA56d,SC:S),D,0,0
