@@ -77,7 +77,6 @@ void main(void) {
 		printf("\n\rInput value is %c", input);
 		printf("\n\rIn milivots the value is %c", AD_value);
 		// numtiply result by 2000 to get to milivoltes
-		getchar();
 
 
     }//end while loop
