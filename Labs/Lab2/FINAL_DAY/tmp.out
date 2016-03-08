@@ -1,0 +1,5 @@
++ C:\PROGRA~1\SDCC\bin\sdcpp.exe -nostdinc -Wall -I"--nogcse" -I"C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\FINAL_DAY" -obj-ext=.rel -D__SDCC_MODEL_SMALL -D__SDCC_FLOAT_REENT -D__SDCC=3_5_0 -DSDCC=350 -D__SDCC_REVISION=9253 -D__SDCC_mcs51 -D__STDC_NO_COMPLEX__ -D__STDC_NO_THREADS__ -D__STDC_NO_ATOMICS__ -D__STDC_NO_VLA__ -isystem "C:\Program Files\SDCC\bin\..\include\mcs51" -isystem "C:\Program Files\SDCC\bin\..\include"  "C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\FINAL_DAY\LAB2RE2.c" 
++ C:\PROGRA~1\SDCC\bin\sdas8051.exe -plosgffwy "LAB2RE2.rel" "LAB2RE2".asm
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\FINAL_DAY\LAB2RE2.c:311: warning 94: comparison is always false due to limited range of data type
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\FINAL_DAY\LAB2RE2.c:319: warning 94: comparison is always false due to limited range of data type
+C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\FINAL_DAY\LAB2RE2.c:307: warning 85: in function player_turn unreferenced function argument : 'player'

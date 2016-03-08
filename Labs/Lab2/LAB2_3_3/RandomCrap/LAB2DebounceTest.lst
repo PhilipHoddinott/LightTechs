@@ -1,0 +1,2691 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ANSI-C Compiler
+                                      3 ; Version 3.5.0 #9253 (Jun 20 2015) (MINGW64)
+                                      4 ; This file was generated Thu Mar 03 18:44:33 2016
+                                      5 ;--------------------------------------------------------
+                                      6 	.module LAB2DebounceTest
+                                      7 	.optsdcc -mmcs51 --model-small
+                                      8 	
+                                      9 ;--------------------------------------------------------
+                                     10 ; Public variables in this module
+                                     11 ;--------------------------------------------------------
+                                     12 	.globl _ReadAnalog
+                                     13 	.globl _pause
+                                     14 	.globl _main
+                                     15 	.globl _rand
+                                     16 	.globl _putchar
+                                     17 	.globl _printf
+                                     18 	.globl _getchar_nw
+                                     19 	.globl _Sys_Init
+                                     20 	.globl _UART0_Init
+                                     21 	.globl _SYSCLK_Init
+                                     22 	.globl _LED2
+                                     23 	.globl _LED3
+                                     24 	.globl _PB2
+                                     25 	.globl _PB3
+                                     26 	.globl _BILED0
+                                     27 	.globl _BILED1
+                                     28 	.globl _SS
+                                     29 	.globl _Buzzer
+                                     30 	.globl _LED1
+                                     31 	.globl _LED0
+                                     32 	.globl _PB0
+                                     33 	.globl _PB1
+                                     34 	.globl _SPIF
+                                     35 	.globl _WCOL
+                                     36 	.globl _MODF
+                                     37 	.globl _RXOVRN
+                                     38 	.globl _TXBSY
+                                     39 	.globl _SLVSEL
+                                     40 	.globl _MSTEN
+                                     41 	.globl _SPIEN
+                                     42 	.globl _AD0EN
+                                     43 	.globl _ADCEN
+                                     44 	.globl _AD0TM
+                                     45 	.globl _ADCTM
+                                     46 	.globl _AD0INT
+                                     47 	.globl _ADCINT
+                                     48 	.globl _AD0BUSY
+                                     49 	.globl _ADBUSY
+                                     50 	.globl _AD0CM1
+                                     51 	.globl _ADSTM1
+                                     52 	.globl _AD0CM0
+                                     53 	.globl _ADSTM0
+                                     54 	.globl _AD0WINT
+                                     55 	.globl _ADWINT
+                                     56 	.globl _AD0LJST
+                                     57 	.globl _ADLJST
+                                     58 	.globl _CF
+                                     59 	.globl _CR
+                                     60 	.globl _CCF4
+                                     61 	.globl _CCF3
+                                     62 	.globl _CCF2
+                                     63 	.globl _CCF1
+                                     64 	.globl _CCF0
+                                     65 	.globl _CY
+                                     66 	.globl _AC
+                                     67 	.globl _F0
+                                     68 	.globl _RS1
+                                     69 	.globl _RS0
+                                     70 	.globl _OV
+                                     71 	.globl _F1
+                                     72 	.globl _P
+                                     73 	.globl _TF2
+                                     74 	.globl _EXF2
+                                     75 	.globl _RCLK
+                                     76 	.globl _TCLK
+                                     77 	.globl _EXEN2
+                                     78 	.globl _TR2
+                                     79 	.globl _CT2
+                                     80 	.globl _CPRL2
+                                     81 	.globl _BUSY
+                                     82 	.globl _ENSMB
+                                     83 	.globl _STA
+                                     84 	.globl _STO
+                                     85 	.globl _SI
+                                     86 	.globl _AA
+                                     87 	.globl _SMBFTE
+                                     88 	.globl _SMBTOE
+                                     89 	.globl _PT2
+                                     90 	.globl _PS
+                                     91 	.globl _PS0
+                                     92 	.globl _PT1
+                                     93 	.globl _PX1
+                                     94 	.globl _PT0
+                                     95 	.globl _PX0
+                                     96 	.globl _P3_7
+                                     97 	.globl _P3_6
+                                     98 	.globl _P3_5
+                                     99 	.globl _P3_4
+                                    100 	.globl _P3_3
+                                    101 	.globl _P3_2
+                                    102 	.globl _P3_1
+                                    103 	.globl _P3_0
+                                    104 	.globl _EA
+                                    105 	.globl _ET2
+                                    106 	.globl _ES
+                                    107 	.globl _ES0
+                                    108 	.globl _ET1
+                                    109 	.globl _EX1
+                                    110 	.globl _ET0
+                                    111 	.globl _EX0
+                                    112 	.globl _P2_7
+                                    113 	.globl _P2_6
+                                    114 	.globl _P2_5
+                                    115 	.globl _P2_4
+                                    116 	.globl _P2_3
+                                    117 	.globl _P2_2
+                                    118 	.globl _P2_1
+                                    119 	.globl _P2_0
+                                    120 	.globl _S0MODE
+                                    121 	.globl _SM00
+                                    122 	.globl _SM0
+                                    123 	.globl _SM10
+                                    124 	.globl _SM1
+                                    125 	.globl _MCE0
+                                    126 	.globl _SM20
+                                    127 	.globl _SM2
+                                    128 	.globl _REN0
+                                    129 	.globl _REN
+                                    130 	.globl _TB80
+                                    131 	.globl _TB8
+                                    132 	.globl _RB80
+                                    133 	.globl _RB8
+                                    134 	.globl _TI0
+                                    135 	.globl _TI
+                                    136 	.globl _RI0
+                                    137 	.globl _RI
+                                    138 	.globl _P1_7
+                                    139 	.globl _P1_6
+                                    140 	.globl _P1_5
+                                    141 	.globl _P1_4
+                                    142 	.globl _P1_3
+                                    143 	.globl _P1_2
+                                    144 	.globl _P1_1
+                                    145 	.globl _P1_0
+                                    146 	.globl _TF1
+                                    147 	.globl _TR1
+                                    148 	.globl _TF0
+                                    149 	.globl _TR0
+                                    150 	.globl _IE1
+                                    151 	.globl _IT1
+                                    152 	.globl _IE0
+                                    153 	.globl _IT0
+                                    154 	.globl _P0_7
+                                    155 	.globl _P0_6
+                                    156 	.globl _P0_5
+                                    157 	.globl _P0_4
+                                    158 	.globl _P0_3
+                                    159 	.globl _P0_2
+                                    160 	.globl _P0_1
+                                    161 	.globl _P0_0
+                                    162 	.globl _PCA0CP4
+                                    163 	.globl _PCA0CP3
+                                    164 	.globl _PCA0CP2
+                                    165 	.globl _PCA0CP1
+                                    166 	.globl _PCA0CP0
+                                    167 	.globl _PCA0
+                                    168 	.globl _DAC1
+                                    169 	.globl _DAC0
+                                    170 	.globl _ADC0LT
+                                    171 	.globl _ADC0GT
+                                    172 	.globl _ADC0
+                                    173 	.globl _RCAP4
+                                    174 	.globl _TMR4
+                                    175 	.globl _TMR3RL
+                                    176 	.globl _TMR3
+                                    177 	.globl _RCAP2
+                                    178 	.globl _TMR2
+                                    179 	.globl _TMR1
+                                    180 	.globl _TMR0
+                                    181 	.globl _WDTCN
+                                    182 	.globl _PCA0CPH4
+                                    183 	.globl _PCA0CPH3
+                                    184 	.globl _PCA0CPH2
+                                    185 	.globl _PCA0CPH1
+                                    186 	.globl _PCA0CPH0
+                                    187 	.globl _PCA0H
+                                    188 	.globl _SPI0CN
+                                    189 	.globl _EIP2
+                                    190 	.globl _EIP1
+                                    191 	.globl _TH4
+                                    192 	.globl _TL4
+                                    193 	.globl _SADDR1
+                                    194 	.globl _SBUF1
+                                    195 	.globl _SCON1
+                                    196 	.globl _B
+                                    197 	.globl _RSTSRC
+                                    198 	.globl _PCA0CPL4
+                                    199 	.globl _PCA0CPL3
+                                    200 	.globl _PCA0CPL2
+                                    201 	.globl _PCA0CPL1
+                                    202 	.globl _PCA0CPL0
+                                    203 	.globl _PCA0L
+                                    204 	.globl _ADC0CN
+                                    205 	.globl _EIE2
+                                    206 	.globl _EIE1
+                                    207 	.globl _RCAP4H
+                                    208 	.globl _RCAP4L
+                                    209 	.globl _XBR2
+                                    210 	.globl _XBR1
+                                    211 	.globl _XBR0
+                                    212 	.globl _ACC
+                                    213 	.globl _PCA0CPM4
+                                    214 	.globl _PCA0CPM3
+                                    215 	.globl _PCA0CPM2
+                                    216 	.globl _PCA0CPM1
+                                    217 	.globl _PCA0CPM0
+                                    218 	.globl _PCA0MD
+                                    219 	.globl _PCA0CN
+                                    220 	.globl _DAC1CN
+                                    221 	.globl _DAC1H
+                                    222 	.globl _DAC1L
+                                    223 	.globl _DAC0CN
+                                    224 	.globl _DAC0H
+                                    225 	.globl _DAC0L
+                                    226 	.globl _REF0CN
+                                    227 	.globl _PSW
+                                    228 	.globl _SMB0CR
+                                    229 	.globl _TH2
+                                    230 	.globl _TL2
+                                    231 	.globl _RCAP2H
+                                    232 	.globl _RCAP2L
+                                    233 	.globl _T4CON
+                                    234 	.globl _T2CON
+                                    235 	.globl _ADC0LTH
+                                    236 	.globl _ADC0LTL
+                                    237 	.globl _ADC0GTH
+                                    238 	.globl _ADC0GTL
+                                    239 	.globl _SMB0ADR
+                                    240 	.globl _SMB0DAT
+                                    241 	.globl _SMB0STA
+                                    242 	.globl _SMB0CN
+                                    243 	.globl _ADC0H
+                                    244 	.globl _ADC0L
+                                    245 	.globl _P1MDIN
+                                    246 	.globl _ADC0CF
+                                    247 	.globl _AMX0SL
+                                    248 	.globl _AMX0CF
+                                    249 	.globl _SADEN0
+                                    250 	.globl _IP
+                                    251 	.globl _FLACL
+                                    252 	.globl _FLSCL
+                                    253 	.globl _P74OUT
+                                    254 	.globl _OSCICN
+                                    255 	.globl _OSCXCN
+                                    256 	.globl _P3
+                                    257 	.globl __XPAGE
+                                    258 	.globl _EMI0CN
+                                    259 	.globl _SADEN1
+                                    260 	.globl _P3IF
+                                    261 	.globl _AMX1SL
+                                    262 	.globl _ADC1CF
+                                    263 	.globl _ADC1CN
+                                    264 	.globl _SADDR0
+                                    265 	.globl _IE
+                                    266 	.globl _P3MDOUT
+                                    267 	.globl _PRT3CF
+                                    268 	.globl _P2MDOUT
+                                    269 	.globl _PRT2CF
+                                    270 	.globl _P1MDOUT
+                                    271 	.globl _PRT1CF
+                                    272 	.globl _P0MDOUT
+                                    273 	.globl _PRT0CF
+                                    274 	.globl _EMI0CF
+                                    275 	.globl _EMI0TC
+                                    276 	.globl _P2
+                                    277 	.globl _CPT1CN
+                                    278 	.globl _CPT0CN
+                                    279 	.globl _SPI0CKR
+                                    280 	.globl _ADC1
+                                    281 	.globl _SPI0DAT
+                                    282 	.globl _SPI0CFG
+                                    283 	.globl _SBUF0
+                                    284 	.globl _SBUF
+                                    285 	.globl _SCON0
+                                    286 	.globl _SCON
+                                    287 	.globl _P7
+                                    288 	.globl _TMR3H
+                                    289 	.globl _TMR3L
+                                    290 	.globl _TMR3RLH
+                                    291 	.globl _TMR3RLL
+                                    292 	.globl _TMR3CN
+                                    293 	.globl _P1
+                                    294 	.globl _PSCTL
+                                    295 	.globl _CKCON
+                                    296 	.globl _TH1
+                                    297 	.globl _TH0
+                                    298 	.globl _TL1
+                                    299 	.globl _TL0
+                                    300 	.globl _TMOD
+                                    301 	.globl _TCON
+                                    302 	.globl _PCON
+                                    303 	.globl _P6
+                                    304 	.globl _P5
+                                    305 	.globl _P4
+                                    306 	.globl _DPH
+                                    307 	.globl _DPL
+                                    308 	.globl _SP
+                                    309 	.globl _P0
+                                    310 	.globl _sum_of_butt
+                                    311 	.globl _break_the_hard_way
+                                    312 	.globl _player
+                                    313 	.globl _scores
+                                    314 	.globl _turn
+                                    315 	.globl _g
+                                    316 	.globl _k
+                                    317 	.globl _i
+                                    318 	.globl _rand_seq
+                                    319 	.globl _off_time
+                                    320 	.globl _on_time
+                                    321 	.globl _AD_value
+                                    322 	.globl _pin_number
+                                    323 	.globl _inputFunc
+                                    324 	.globl _sum
+                                    325 	.globl _Points
+                                    326 	.globl _randList
+                                    327 	.globl _off
+                                    328 	.globl _on
+                                    329 	.globl _numC
+                                    330 	.globl _previousnum
+                                    331 	.globl _randomnum
+                                    332 	.globl _y
+                                    333 	.globl _x
+                                    334 	.globl _pcounts
+                                    335 	.globl _Counts15
+                                    336 	.globl _Counts
+                                    337 	.globl _keyinput
+                                    338 	.globl _bounce_back
+                                    339 	.globl _new_push_buttons
+                                    340 	.globl _debounce
+                                    341 	.globl _push_buttons
+                                    342 	.globl _light
+                                    343 	.globl _Buzz
+                                    344 	.globl _wait
+                                    345 	.globl _Port_Init
+                                    346 	.globl _BILEDOFF
+                                    347 	.globl _StopAndResetTimer
+                                    348 	.globl _Interrupt_Init
+                                    349 	.globl _Timer_Init
+                                    350 	.globl _Analog_Init
+                                    351 	.globl _Timer0_ISR
+                                    352 	.globl _random
+                                    353 	.globl _randGen
+                                    354 	.globl _resetArrays
+                                    355 	.globl _StartTimer
+                                    356 	.globl _PauseTimer
+                                    357 	.globl _On
+                                    358 	.globl _Off
+                                    359 	.globl _lightson
+                                    360 	.globl _lightsoff
+                                    361 ;--------------------------------------------------------
+                                    362 ; special function registers
+                                    363 ;--------------------------------------------------------
+                                    364 	.area RSEG    (ABS,DATA)
+      000000                        365 	.org 0x0000
+                           000080   366 G$P0$0$0 == 0x0080
+                           000080   367 _P0	=	0x0080
+                           000081   368 G$SP$0$0 == 0x0081
+                           000081   369 _SP	=	0x0081
+                           000082   370 G$DPL$0$0 == 0x0082
+                           000082   371 _DPL	=	0x0082
+                           000083   372 G$DPH$0$0 == 0x0083
+                           000083   373 _DPH	=	0x0083
+                           000084   374 G$P4$0$0 == 0x0084
+                           000084   375 _P4	=	0x0084
+                           000085   376 G$P5$0$0 == 0x0085
+                           000085   377 _P5	=	0x0085
+                           000086   378 G$P6$0$0 == 0x0086
+                           000086   379 _P6	=	0x0086
+                           000087   380 G$PCON$0$0 == 0x0087
+                           000087   381 _PCON	=	0x0087
+                           000088   382 G$TCON$0$0 == 0x0088
+                           000088   383 _TCON	=	0x0088
+                           000089   384 G$TMOD$0$0 == 0x0089
+                           000089   385 _TMOD	=	0x0089
+                           00008A   386 G$TL0$0$0 == 0x008a
+                           00008A   387 _TL0	=	0x008a
+                           00008B   388 G$TL1$0$0 == 0x008b
+                           00008B   389 _TL1	=	0x008b
+                           00008C   390 G$TH0$0$0 == 0x008c
+                           00008C   391 _TH0	=	0x008c
+                           00008D   392 G$TH1$0$0 == 0x008d
+                           00008D   393 _TH1	=	0x008d
+                           00008E   394 G$CKCON$0$0 == 0x008e
+                           00008E   395 _CKCON	=	0x008e
+                           00008F   396 G$PSCTL$0$0 == 0x008f
+                           00008F   397 _PSCTL	=	0x008f
+                           000090   398 G$P1$0$0 == 0x0090
+                           000090   399 _P1	=	0x0090
+                           000091   400 G$TMR3CN$0$0 == 0x0091
+                           000091   401 _TMR3CN	=	0x0091
+                           000092   402 G$TMR3RLL$0$0 == 0x0092
+                           000092   403 _TMR3RLL	=	0x0092
+                           000093   404 G$TMR3RLH$0$0 == 0x0093
+                           000093   405 _TMR3RLH	=	0x0093
+                           000094   406 G$TMR3L$0$0 == 0x0094
+                           000094   407 _TMR3L	=	0x0094
+                           000095   408 G$TMR3H$0$0 == 0x0095
+                           000095   409 _TMR3H	=	0x0095
+                           000096   410 G$P7$0$0 == 0x0096
+                           000096   411 _P7	=	0x0096
+                           000098   412 G$SCON$0$0 == 0x0098
+                           000098   413 _SCON	=	0x0098
+                           000098   414 G$SCON0$0$0 == 0x0098
+                           000098   415 _SCON0	=	0x0098
+                           000099   416 G$SBUF$0$0 == 0x0099
+                           000099   417 _SBUF	=	0x0099
+                           000099   418 G$SBUF0$0$0 == 0x0099
+                           000099   419 _SBUF0	=	0x0099
+                           00009A   420 G$SPI0CFG$0$0 == 0x009a
+                           00009A   421 _SPI0CFG	=	0x009a
+                           00009B   422 G$SPI0DAT$0$0 == 0x009b
+                           00009B   423 _SPI0DAT	=	0x009b
+                           00009C   424 G$ADC1$0$0 == 0x009c
+                           00009C   425 _ADC1	=	0x009c
+                           00009D   426 G$SPI0CKR$0$0 == 0x009d
+                           00009D   427 _SPI0CKR	=	0x009d
+                           00009E   428 G$CPT0CN$0$0 == 0x009e
+                           00009E   429 _CPT0CN	=	0x009e
+                           00009F   430 G$CPT1CN$0$0 == 0x009f
+                           00009F   431 _CPT1CN	=	0x009f
+                           0000A0   432 G$P2$0$0 == 0x00a0
+                           0000A0   433 _P2	=	0x00a0
+                           0000A1   434 G$EMI0TC$0$0 == 0x00a1
+                           0000A1   435 _EMI0TC	=	0x00a1
+                           0000A3   436 G$EMI0CF$0$0 == 0x00a3
+                           0000A3   437 _EMI0CF	=	0x00a3
+                           0000A4   438 G$PRT0CF$0$0 == 0x00a4
+                           0000A4   439 _PRT0CF	=	0x00a4
+                           0000A4   440 G$P0MDOUT$0$0 == 0x00a4
+                           0000A4   441 _P0MDOUT	=	0x00a4
+                           0000A5   442 G$PRT1CF$0$0 == 0x00a5
+                           0000A5   443 _PRT1CF	=	0x00a5
+                           0000A5   444 G$P1MDOUT$0$0 == 0x00a5
+                           0000A5   445 _P1MDOUT	=	0x00a5
+                           0000A6   446 G$PRT2CF$0$0 == 0x00a6
+                           0000A6   447 _PRT2CF	=	0x00a6
+                           0000A6   448 G$P2MDOUT$0$0 == 0x00a6
+                           0000A6   449 _P2MDOUT	=	0x00a6
+                           0000A7   450 G$PRT3CF$0$0 == 0x00a7
+                           0000A7   451 _PRT3CF	=	0x00a7
+                           0000A7   452 G$P3MDOUT$0$0 == 0x00a7
+                           0000A7   453 _P3MDOUT	=	0x00a7
+                           0000A8   454 G$IE$0$0 == 0x00a8
+                           0000A8   455 _IE	=	0x00a8
+                           0000A9   456 G$SADDR0$0$0 == 0x00a9
+                           0000A9   457 _SADDR0	=	0x00a9
+                           0000AA   458 G$ADC1CN$0$0 == 0x00aa
+                           0000AA   459 _ADC1CN	=	0x00aa
+                           0000AB   460 G$ADC1CF$0$0 == 0x00ab
+                           0000AB   461 _ADC1CF	=	0x00ab
+                           0000AC   462 G$AMX1SL$0$0 == 0x00ac
+                           0000AC   463 _AMX1SL	=	0x00ac
+                           0000AD   464 G$P3IF$0$0 == 0x00ad
+                           0000AD   465 _P3IF	=	0x00ad
+                           0000AE   466 G$SADEN1$0$0 == 0x00ae
+                           0000AE   467 _SADEN1	=	0x00ae
+                           0000AF   468 G$EMI0CN$0$0 == 0x00af
+                           0000AF   469 _EMI0CN	=	0x00af
+                           0000AF   470 G$_XPAGE$0$0 == 0x00af
+                           0000AF   471 __XPAGE	=	0x00af
+                           0000B0   472 G$P3$0$0 == 0x00b0
+                           0000B0   473 _P3	=	0x00b0
+                           0000B1   474 G$OSCXCN$0$0 == 0x00b1
+                           0000B1   475 _OSCXCN	=	0x00b1
+                           0000B2   476 G$OSCICN$0$0 == 0x00b2
+                           0000B2   477 _OSCICN	=	0x00b2
+                           0000B5   478 G$P74OUT$0$0 == 0x00b5
+                           0000B5   479 _P74OUT	=	0x00b5
+                           0000B6   480 G$FLSCL$0$0 == 0x00b6
+                           0000B6   481 _FLSCL	=	0x00b6
+                           0000B7   482 G$FLACL$0$0 == 0x00b7
+                           0000B7   483 _FLACL	=	0x00b7
+                           0000B8   484 G$IP$0$0 == 0x00b8
+                           0000B8   485 _IP	=	0x00b8
+                           0000B9   486 G$SADEN0$0$0 == 0x00b9
+                           0000B9   487 _SADEN0	=	0x00b9
+                           0000BA   488 G$AMX0CF$0$0 == 0x00ba
+                           0000BA   489 _AMX0CF	=	0x00ba
+                           0000BB   490 G$AMX0SL$0$0 == 0x00bb
+                           0000BB   491 _AMX0SL	=	0x00bb
+                           0000BC   492 G$ADC0CF$0$0 == 0x00bc
+                           0000BC   493 _ADC0CF	=	0x00bc
+                           0000BD   494 G$P1MDIN$0$0 == 0x00bd
+                           0000BD   495 _P1MDIN	=	0x00bd
+                           0000BE   496 G$ADC0L$0$0 == 0x00be
+                           0000BE   497 _ADC0L	=	0x00be
+                           0000BF   498 G$ADC0H$0$0 == 0x00bf
+                           0000BF   499 _ADC0H	=	0x00bf
+                           0000C0   500 G$SMB0CN$0$0 == 0x00c0
+                           0000C0   501 _SMB0CN	=	0x00c0
+                           0000C1   502 G$SMB0STA$0$0 == 0x00c1
+                           0000C1   503 _SMB0STA	=	0x00c1
+                           0000C2   504 G$SMB0DAT$0$0 == 0x00c2
+                           0000C2   505 _SMB0DAT	=	0x00c2
+                           0000C3   506 G$SMB0ADR$0$0 == 0x00c3
+                           0000C3   507 _SMB0ADR	=	0x00c3
+                           0000C4   508 G$ADC0GTL$0$0 == 0x00c4
+                           0000C4   509 _ADC0GTL	=	0x00c4
+                           0000C5   510 G$ADC0GTH$0$0 == 0x00c5
+                           0000C5   511 _ADC0GTH	=	0x00c5
+                           0000C6   512 G$ADC0LTL$0$0 == 0x00c6
+                           0000C6   513 _ADC0LTL	=	0x00c6
+                           0000C7   514 G$ADC0LTH$0$0 == 0x00c7
+                           0000C7   515 _ADC0LTH	=	0x00c7
+                           0000C8   516 G$T2CON$0$0 == 0x00c8
+                           0000C8   517 _T2CON	=	0x00c8
+                           0000C9   518 G$T4CON$0$0 == 0x00c9
+                           0000C9   519 _T4CON	=	0x00c9
+                           0000CA   520 G$RCAP2L$0$0 == 0x00ca
+                           0000CA   521 _RCAP2L	=	0x00ca
+                           0000CB   522 G$RCAP2H$0$0 == 0x00cb
+                           0000CB   523 _RCAP2H	=	0x00cb
+                           0000CC   524 G$TL2$0$0 == 0x00cc
+                           0000CC   525 _TL2	=	0x00cc
+                           0000CD   526 G$TH2$0$0 == 0x00cd
+                           0000CD   527 _TH2	=	0x00cd
+                           0000CF   528 G$SMB0CR$0$0 == 0x00cf
+                           0000CF   529 _SMB0CR	=	0x00cf
+                           0000D0   530 G$PSW$0$0 == 0x00d0
+                           0000D0   531 _PSW	=	0x00d0
+                           0000D1   532 G$REF0CN$0$0 == 0x00d1
+                           0000D1   533 _REF0CN	=	0x00d1
+                           0000D2   534 G$DAC0L$0$0 == 0x00d2
+                           0000D2   535 _DAC0L	=	0x00d2
+                           0000D3   536 G$DAC0H$0$0 == 0x00d3
+                           0000D3   537 _DAC0H	=	0x00d3
+                           0000D4   538 G$DAC0CN$0$0 == 0x00d4
+                           0000D4   539 _DAC0CN	=	0x00d4
+                           0000D5   540 G$DAC1L$0$0 == 0x00d5
+                           0000D5   541 _DAC1L	=	0x00d5
+                           0000D6   542 G$DAC1H$0$0 == 0x00d6
+                           0000D6   543 _DAC1H	=	0x00d6
+                           0000D7   544 G$DAC1CN$0$0 == 0x00d7
+                           0000D7   545 _DAC1CN	=	0x00d7
+                           0000D8   546 G$PCA0CN$0$0 == 0x00d8
+                           0000D8   547 _PCA0CN	=	0x00d8
+                           0000D9   548 G$PCA0MD$0$0 == 0x00d9
+                           0000D9   549 _PCA0MD	=	0x00d9
+                           0000DA   550 G$PCA0CPM0$0$0 == 0x00da
+                           0000DA   551 _PCA0CPM0	=	0x00da
+                           0000DB   552 G$PCA0CPM1$0$0 == 0x00db
+                           0000DB   553 _PCA0CPM1	=	0x00db
+                           0000DC   554 G$PCA0CPM2$0$0 == 0x00dc
+                           0000DC   555 _PCA0CPM2	=	0x00dc
+                           0000DD   556 G$PCA0CPM3$0$0 == 0x00dd
+                           0000DD   557 _PCA0CPM3	=	0x00dd
+                           0000DE   558 G$PCA0CPM4$0$0 == 0x00de
+                           0000DE   559 _PCA0CPM4	=	0x00de
+                           0000E0   560 G$ACC$0$0 == 0x00e0
+                           0000E0   561 _ACC	=	0x00e0
+                           0000E1   562 G$XBR0$0$0 == 0x00e1
+                           0000E1   563 _XBR0	=	0x00e1
+                           0000E2   564 G$XBR1$0$0 == 0x00e2
+                           0000E2   565 _XBR1	=	0x00e2
+                           0000E3   566 G$XBR2$0$0 == 0x00e3
+                           0000E3   567 _XBR2	=	0x00e3
+                           0000E4   568 G$RCAP4L$0$0 == 0x00e4
+                           0000E4   569 _RCAP4L	=	0x00e4
+                           0000E5   570 G$RCAP4H$0$0 == 0x00e5
+                           0000E5   571 _RCAP4H	=	0x00e5
+                           0000E6   572 G$EIE1$0$0 == 0x00e6
+                           0000E6   573 _EIE1	=	0x00e6
+                           0000E7   574 G$EIE2$0$0 == 0x00e7
+                           0000E7   575 _EIE2	=	0x00e7
+                           0000E8   576 G$ADC0CN$0$0 == 0x00e8
+                           0000E8   577 _ADC0CN	=	0x00e8
+                           0000E9   578 G$PCA0L$0$0 == 0x00e9
+                           0000E9   579 _PCA0L	=	0x00e9
+                           0000EA   580 G$PCA0CPL0$0$0 == 0x00ea
+                           0000EA   581 _PCA0CPL0	=	0x00ea
+                           0000EB   582 G$PCA0CPL1$0$0 == 0x00eb
+                           0000EB   583 _PCA0CPL1	=	0x00eb
+                           0000EC   584 G$PCA0CPL2$0$0 == 0x00ec
+                           0000EC   585 _PCA0CPL2	=	0x00ec
+                           0000ED   586 G$PCA0CPL3$0$0 == 0x00ed
+                           0000ED   587 _PCA0CPL3	=	0x00ed
+                           0000EE   588 G$PCA0CPL4$0$0 == 0x00ee
+                           0000EE   589 _PCA0CPL4	=	0x00ee
+                           0000EF   590 G$RSTSRC$0$0 == 0x00ef
+                           0000EF   591 _RSTSRC	=	0x00ef
+                           0000F0   592 G$B$0$0 == 0x00f0
+                           0000F0   593 _B	=	0x00f0
+                           0000F1   594 G$SCON1$0$0 == 0x00f1
+                           0000F1   595 _SCON1	=	0x00f1
+                           0000F2   596 G$SBUF1$0$0 == 0x00f2
+                           0000F2   597 _SBUF1	=	0x00f2
+                           0000F3   598 G$SADDR1$0$0 == 0x00f3
+                           0000F3   599 _SADDR1	=	0x00f3
+                           0000F4   600 G$TL4$0$0 == 0x00f4
+                           0000F4   601 _TL4	=	0x00f4
+                           0000F5   602 G$TH4$0$0 == 0x00f5
+                           0000F5   603 _TH4	=	0x00f5
+                           0000F6   604 G$EIP1$0$0 == 0x00f6
+                           0000F6   605 _EIP1	=	0x00f6
+                           0000F7   606 G$EIP2$0$0 == 0x00f7
+                           0000F7   607 _EIP2	=	0x00f7
+                           0000F8   608 G$SPI0CN$0$0 == 0x00f8
+                           0000F8   609 _SPI0CN	=	0x00f8
+                           0000F9   610 G$PCA0H$0$0 == 0x00f9
+                           0000F9   611 _PCA0H	=	0x00f9
+                           0000FA   612 G$PCA0CPH0$0$0 == 0x00fa
+                           0000FA   613 _PCA0CPH0	=	0x00fa
+                           0000FB   614 G$PCA0CPH1$0$0 == 0x00fb
+                           0000FB   615 _PCA0CPH1	=	0x00fb
+                           0000FC   616 G$PCA0CPH2$0$0 == 0x00fc
+                           0000FC   617 _PCA0CPH2	=	0x00fc
+                           0000FD   618 G$PCA0CPH3$0$0 == 0x00fd
+                           0000FD   619 _PCA0CPH3	=	0x00fd
+                           0000FE   620 G$PCA0CPH4$0$0 == 0x00fe
+                           0000FE   621 _PCA0CPH4	=	0x00fe
+                           0000FF   622 G$WDTCN$0$0 == 0x00ff
+                           0000FF   623 _WDTCN	=	0x00ff
+                           008C8A   624 G$TMR0$0$0 == 0x8c8a
+                           008C8A   625 _TMR0	=	0x8c8a
+                           008D8B   626 G$TMR1$0$0 == 0x8d8b
+                           008D8B   627 _TMR1	=	0x8d8b
+                           00CDCC   628 G$TMR2$0$0 == 0xcdcc
+                           00CDCC   629 _TMR2	=	0xcdcc
+                           00CBCA   630 G$RCAP2$0$0 == 0xcbca
+                           00CBCA   631 _RCAP2	=	0xcbca
+                           009594   632 G$TMR3$0$0 == 0x9594
+                           009594   633 _TMR3	=	0x9594
+                           009392   634 G$TMR3RL$0$0 == 0x9392
+                           009392   635 _TMR3RL	=	0x9392
+                           00F5F4   636 G$TMR4$0$0 == 0xf5f4
+                           00F5F4   637 _TMR4	=	0xf5f4
+                           00E5E4   638 G$RCAP4$0$0 == 0xe5e4
+                           00E5E4   639 _RCAP4	=	0xe5e4
+                           00BFBE   640 G$ADC0$0$0 == 0xbfbe
+                           00BFBE   641 _ADC0	=	0xbfbe
+                           00C5C4   642 G$ADC0GT$0$0 == 0xc5c4
+                           00C5C4   643 _ADC0GT	=	0xc5c4
+                           00C7C6   644 G$ADC0LT$0$0 == 0xc7c6
+                           00C7C6   645 _ADC0LT	=	0xc7c6
+                           00D3D2   646 G$DAC0$0$0 == 0xd3d2
+                           00D3D2   647 _DAC0	=	0xd3d2
+                           00D6D5   648 G$DAC1$0$0 == 0xd6d5
+                           00D6D5   649 _DAC1	=	0xd6d5
+                           00F9E9   650 G$PCA0$0$0 == 0xf9e9
+                           00F9E9   651 _PCA0	=	0xf9e9
+                           00FAEA   652 G$PCA0CP0$0$0 == 0xfaea
+                           00FAEA   653 _PCA0CP0	=	0xfaea
+                           00FBEB   654 G$PCA0CP1$0$0 == 0xfbeb
+                           00FBEB   655 _PCA0CP1	=	0xfbeb
+                           00FCEC   656 G$PCA0CP2$0$0 == 0xfcec
+                           00FCEC   657 _PCA0CP2	=	0xfcec
+                           00FDED   658 G$PCA0CP3$0$0 == 0xfded
+                           00FDED   659 _PCA0CP3	=	0xfded
+                           00FEEE   660 G$PCA0CP4$0$0 == 0xfeee
+                           00FEEE   661 _PCA0CP4	=	0xfeee
+                                    662 ;--------------------------------------------------------
+                                    663 ; special function bits
+                                    664 ;--------------------------------------------------------
+                                    665 	.area RSEG    (ABS,DATA)
+      000000                        666 	.org 0x0000
+                           000080   667 G$P0_0$0$0 == 0x0080
+                           000080   668 _P0_0	=	0x0080
+                           000081   669 G$P0_1$0$0 == 0x0081
+                           000081   670 _P0_1	=	0x0081
+                           000082   671 G$P0_2$0$0 == 0x0082
+                           000082   672 _P0_2	=	0x0082
+                           000083   673 G$P0_3$0$0 == 0x0083
+                           000083   674 _P0_3	=	0x0083
+                           000084   675 G$P0_4$0$0 == 0x0084
+                           000084   676 _P0_4	=	0x0084
+                           000085   677 G$P0_5$0$0 == 0x0085
+                           000085   678 _P0_5	=	0x0085
+                           000086   679 G$P0_6$0$0 == 0x0086
+                           000086   680 _P0_6	=	0x0086
+                           000087   681 G$P0_7$0$0 == 0x0087
+                           000087   682 _P0_7	=	0x0087
+                           000088   683 G$IT0$0$0 == 0x0088
+                           000088   684 _IT0	=	0x0088
+                           000089   685 G$IE0$0$0 == 0x0089
+                           000089   686 _IE0	=	0x0089
+                           00008A   687 G$IT1$0$0 == 0x008a
+                           00008A   688 _IT1	=	0x008a
+                           00008B   689 G$IE1$0$0 == 0x008b
+                           00008B   690 _IE1	=	0x008b
+                           00008C   691 G$TR0$0$0 == 0x008c
+                           00008C   692 _TR0	=	0x008c
+                           00008D   693 G$TF0$0$0 == 0x008d
+                           00008D   694 _TF0	=	0x008d
+                           00008E   695 G$TR1$0$0 == 0x008e
+                           00008E   696 _TR1	=	0x008e
+                           00008F   697 G$TF1$0$0 == 0x008f
+                           00008F   698 _TF1	=	0x008f
+                           000090   699 G$P1_0$0$0 == 0x0090
+                           000090   700 _P1_0	=	0x0090
+                           000091   701 G$P1_1$0$0 == 0x0091
+                           000091   702 _P1_1	=	0x0091
+                           000092   703 G$P1_2$0$0 == 0x0092
+                           000092   704 _P1_2	=	0x0092
+                           000093   705 G$P1_3$0$0 == 0x0093
+                           000093   706 _P1_3	=	0x0093
+                           000094   707 G$P1_4$0$0 == 0x0094
+                           000094   708 _P1_4	=	0x0094
+                           000095   709 G$P1_5$0$0 == 0x0095
+                           000095   710 _P1_5	=	0x0095
+                           000096   711 G$P1_6$0$0 == 0x0096
+                           000096   712 _P1_6	=	0x0096
+                           000097   713 G$P1_7$0$0 == 0x0097
+                           000097   714 _P1_7	=	0x0097
+                           000098   715 G$RI$0$0 == 0x0098
+                           000098   716 _RI	=	0x0098
+                           000098   717 G$RI0$0$0 == 0x0098
+                           000098   718 _RI0	=	0x0098
+                           000099   719 G$TI$0$0 == 0x0099
+                           000099   720 _TI	=	0x0099
+                           000099   721 G$TI0$0$0 == 0x0099
+                           000099   722 _TI0	=	0x0099
+                           00009A   723 G$RB8$0$0 == 0x009a
+                           00009A   724 _RB8	=	0x009a
+                           00009A   725 G$RB80$0$0 == 0x009a
+                           00009A   726 _RB80	=	0x009a
+                           00009B   727 G$TB8$0$0 == 0x009b
+                           00009B   728 _TB8	=	0x009b
+                           00009B   729 G$TB80$0$0 == 0x009b
+                           00009B   730 _TB80	=	0x009b
+                           00009C   731 G$REN$0$0 == 0x009c
+                           00009C   732 _REN	=	0x009c
+                           00009C   733 G$REN0$0$0 == 0x009c
+                           00009C   734 _REN0	=	0x009c
+                           00009D   735 G$SM2$0$0 == 0x009d
+                           00009D   736 _SM2	=	0x009d
+                           00009D   737 G$SM20$0$0 == 0x009d
+                           00009D   738 _SM20	=	0x009d
+                           00009D   739 G$MCE0$0$0 == 0x009d
+                           00009D   740 _MCE0	=	0x009d
+                           00009E   741 G$SM1$0$0 == 0x009e
+                           00009E   742 _SM1	=	0x009e
+                           00009E   743 G$SM10$0$0 == 0x009e
+                           00009E   744 _SM10	=	0x009e
+                           00009F   745 G$SM0$0$0 == 0x009f
+                           00009F   746 _SM0	=	0x009f
+                           00009F   747 G$SM00$0$0 == 0x009f
+                           00009F   748 _SM00	=	0x009f
+                           00009F   749 G$S0MODE$0$0 == 0x009f
+                           00009F   750 _S0MODE	=	0x009f
+                           0000A0   751 G$P2_0$0$0 == 0x00a0
+                           0000A0   752 _P2_0	=	0x00a0
+                           0000A1   753 G$P2_1$0$0 == 0x00a1
+                           0000A1   754 _P2_1	=	0x00a1
+                           0000A2   755 G$P2_2$0$0 == 0x00a2
+                           0000A2   756 _P2_2	=	0x00a2
+                           0000A3   757 G$P2_3$0$0 == 0x00a3
+                           0000A3   758 _P2_3	=	0x00a3
+                           0000A4   759 G$P2_4$0$0 == 0x00a4
+                           0000A4   760 _P2_4	=	0x00a4
+                           0000A5   761 G$P2_5$0$0 == 0x00a5
+                           0000A5   762 _P2_5	=	0x00a5
+                           0000A6   763 G$P2_6$0$0 == 0x00a6
+                           0000A6   764 _P2_6	=	0x00a6
+                           0000A7   765 G$P2_7$0$0 == 0x00a7
+                           0000A7   766 _P2_7	=	0x00a7
+                           0000A8   767 G$EX0$0$0 == 0x00a8
+                           0000A8   768 _EX0	=	0x00a8
+                           0000A9   769 G$ET0$0$0 == 0x00a9
+                           0000A9   770 _ET0	=	0x00a9
+                           0000AA   771 G$EX1$0$0 == 0x00aa
+                           0000AA   772 _EX1	=	0x00aa
+                           0000AB   773 G$ET1$0$0 == 0x00ab
+                           0000AB   774 _ET1	=	0x00ab
+                           0000AC   775 G$ES0$0$0 == 0x00ac
+                           0000AC   776 _ES0	=	0x00ac
+                           0000AC   777 G$ES$0$0 == 0x00ac
+                           0000AC   778 _ES	=	0x00ac
+                           0000AD   779 G$ET2$0$0 == 0x00ad
+                           0000AD   780 _ET2	=	0x00ad
+                           0000AF   781 G$EA$0$0 == 0x00af
+                           0000AF   782 _EA	=	0x00af
+                           0000B0   783 G$P3_0$0$0 == 0x00b0
+                           0000B0   784 _P3_0	=	0x00b0
+                           0000B1   785 G$P3_1$0$0 == 0x00b1
+                           0000B1   786 _P3_1	=	0x00b1
+                           0000B2   787 G$P3_2$0$0 == 0x00b2
+                           0000B2   788 _P3_2	=	0x00b2
+                           0000B3   789 G$P3_3$0$0 == 0x00b3
+                           0000B3   790 _P3_3	=	0x00b3
+                           0000B4   791 G$P3_4$0$0 == 0x00b4
+                           0000B4   792 _P3_4	=	0x00b4
+                           0000B5   793 G$P3_5$0$0 == 0x00b5
+                           0000B5   794 _P3_5	=	0x00b5
+                           0000B6   795 G$P3_6$0$0 == 0x00b6
+                           0000B6   796 _P3_6	=	0x00b6
+                           0000B7   797 G$P3_7$0$0 == 0x00b7
+                           0000B7   798 _P3_7	=	0x00b7
+                           0000B8   799 G$PX0$0$0 == 0x00b8
+                           0000B8   800 _PX0	=	0x00b8
+                           0000B9   801 G$PT0$0$0 == 0x00b9
+                           0000B9   802 _PT0	=	0x00b9
+                           0000BA   803 G$PX1$0$0 == 0x00ba
+                           0000BA   804 _PX1	=	0x00ba
+                           0000BB   805 G$PT1$0$0 == 0x00bb
+                           0000BB   806 _PT1	=	0x00bb
+                           0000BC   807 G$PS0$0$0 == 0x00bc
+                           0000BC   808 _PS0	=	0x00bc
+                           0000BC   809 G$PS$0$0 == 0x00bc
+                           0000BC   810 _PS	=	0x00bc
+                           0000BD   811 G$PT2$0$0 == 0x00bd
+                           0000BD   812 _PT2	=	0x00bd
+                           0000C0   813 G$SMBTOE$0$0 == 0x00c0
+                           0000C0   814 _SMBTOE	=	0x00c0
+                           0000C1   815 G$SMBFTE$0$0 == 0x00c1
+                           0000C1   816 _SMBFTE	=	0x00c1
+                           0000C2   817 G$AA$0$0 == 0x00c2
+                           0000C2   818 _AA	=	0x00c2
+                           0000C3   819 G$SI$0$0 == 0x00c3
+                           0000C3   820 _SI	=	0x00c3
+                           0000C4   821 G$STO$0$0 == 0x00c4
+                           0000C4   822 _STO	=	0x00c4
+                           0000C5   823 G$STA$0$0 == 0x00c5
+                           0000C5   824 _STA	=	0x00c5
+                           0000C6   825 G$ENSMB$0$0 == 0x00c6
+                           0000C6   826 _ENSMB	=	0x00c6
+                           0000C7   827 G$BUSY$0$0 == 0x00c7
+                           0000C7   828 _BUSY	=	0x00c7
+                           0000C8   829 G$CPRL2$0$0 == 0x00c8
+                           0000C8   830 _CPRL2	=	0x00c8
+                           0000C9   831 G$CT2$0$0 == 0x00c9
+                           0000C9   832 _CT2	=	0x00c9
+                           0000CA   833 G$TR2$0$0 == 0x00ca
+                           0000CA   834 _TR2	=	0x00ca
+                           0000CB   835 G$EXEN2$0$0 == 0x00cb
+                           0000CB   836 _EXEN2	=	0x00cb
+                           0000CC   837 G$TCLK$0$0 == 0x00cc
+                           0000CC   838 _TCLK	=	0x00cc
+                           0000CD   839 G$RCLK$0$0 == 0x00cd
+                           0000CD   840 _RCLK	=	0x00cd
+                           0000CE   841 G$EXF2$0$0 == 0x00ce
+                           0000CE   842 _EXF2	=	0x00ce
+                           0000CF   843 G$TF2$0$0 == 0x00cf
+                           0000CF   844 _TF2	=	0x00cf
+                           0000D0   845 G$P$0$0 == 0x00d0
+                           0000D0   846 _P	=	0x00d0
+                           0000D1   847 G$F1$0$0 == 0x00d1
+                           0000D1   848 _F1	=	0x00d1
+                           0000D2   849 G$OV$0$0 == 0x00d2
+                           0000D2   850 _OV	=	0x00d2
+                           0000D3   851 G$RS0$0$0 == 0x00d3
+                           0000D3   852 _RS0	=	0x00d3
+                           0000D4   853 G$RS1$0$0 == 0x00d4
+                           0000D4   854 _RS1	=	0x00d4
+                           0000D5   855 G$F0$0$0 == 0x00d5
+                           0000D5   856 _F0	=	0x00d5
+                           0000D6   857 G$AC$0$0 == 0x00d6
+                           0000D6   858 _AC	=	0x00d6
+                           0000D7   859 G$CY$0$0 == 0x00d7
+                           0000D7   860 _CY	=	0x00d7
+                           0000D8   861 G$CCF0$0$0 == 0x00d8
+                           0000D8   862 _CCF0	=	0x00d8
+                           0000D9   863 G$CCF1$0$0 == 0x00d9
+                           0000D9   864 _CCF1	=	0x00d9
+                           0000DA   865 G$CCF2$0$0 == 0x00da
+                           0000DA   866 _CCF2	=	0x00da
+                           0000DB   867 G$CCF3$0$0 == 0x00db
+                           0000DB   868 _CCF3	=	0x00db
+                           0000DC   869 G$CCF4$0$0 == 0x00dc
+                           0000DC   870 _CCF4	=	0x00dc
+                           0000DE   871 G$CR$0$0 == 0x00de
+                           0000DE   872 _CR	=	0x00de
+                           0000DF   873 G$CF$0$0 == 0x00df
+                           0000DF   874 _CF	=	0x00df
+                           0000E8   875 G$ADLJST$0$0 == 0x00e8
+                           0000E8   876 _ADLJST	=	0x00e8
+                           0000E8   877 G$AD0LJST$0$0 == 0x00e8
+                           0000E8   878 _AD0LJST	=	0x00e8
+                           0000E9   879 G$ADWINT$0$0 == 0x00e9
+                           0000E9   880 _ADWINT	=	0x00e9
+                           0000E9   881 G$AD0WINT$0$0 == 0x00e9
+                           0000E9   882 _AD0WINT	=	0x00e9
+                           0000EA   883 G$ADSTM0$0$0 == 0x00ea
+                           0000EA   884 _ADSTM0	=	0x00ea
+                           0000EA   885 G$AD0CM0$0$0 == 0x00ea
+                           0000EA   886 _AD0CM0	=	0x00ea
+                           0000EB   887 G$ADSTM1$0$0 == 0x00eb
+                           0000EB   888 _ADSTM1	=	0x00eb
+                           0000EB   889 G$AD0CM1$0$0 == 0x00eb
+                           0000EB   890 _AD0CM1	=	0x00eb
+                           0000EC   891 G$ADBUSY$0$0 == 0x00ec
+                           0000EC   892 _ADBUSY	=	0x00ec
+                           0000EC   893 G$AD0BUSY$0$0 == 0x00ec
+                           0000EC   894 _AD0BUSY	=	0x00ec
+                           0000ED   895 G$ADCINT$0$0 == 0x00ed
+                           0000ED   896 _ADCINT	=	0x00ed
+                           0000ED   897 G$AD0INT$0$0 == 0x00ed
+                           0000ED   898 _AD0INT	=	0x00ed
+                           0000EE   899 G$ADCTM$0$0 == 0x00ee
+                           0000EE   900 _ADCTM	=	0x00ee
+                           0000EE   901 G$AD0TM$0$0 == 0x00ee
+                           0000EE   902 _AD0TM	=	0x00ee
+                           0000EF   903 G$ADCEN$0$0 == 0x00ef
+                           0000EF   904 _ADCEN	=	0x00ef
+                           0000EF   905 G$AD0EN$0$0 == 0x00ef
+                           0000EF   906 _AD0EN	=	0x00ef
+                           0000F8   907 G$SPIEN$0$0 == 0x00f8
+                           0000F8   908 _SPIEN	=	0x00f8
+                           0000F9   909 G$MSTEN$0$0 == 0x00f9
+                           0000F9   910 _MSTEN	=	0x00f9
+                           0000FA   911 G$SLVSEL$0$0 == 0x00fa
+                           0000FA   912 _SLVSEL	=	0x00fa
+                           0000FB   913 G$TXBSY$0$0 == 0x00fb
+                           0000FB   914 _TXBSY	=	0x00fb
+                           0000FC   915 G$RXOVRN$0$0 == 0x00fc
+                           0000FC   916 _RXOVRN	=	0x00fc
+                           0000FD   917 G$MODF$0$0 == 0x00fd
+                           0000FD   918 _MODF	=	0x00fd
+                           0000FE   919 G$WCOL$0$0 == 0x00fe
+                           0000FE   920 _WCOL	=	0x00fe
+                           0000FF   921 G$SPIF$0$0 == 0x00ff
+                           0000FF   922 _SPIF	=	0x00ff
+                           0000B5   923 G$PB1$0$0 == 0x00b5
+                           0000B5   924 _PB1	=	0x00b5
+                           0000B0   925 G$PB0$0$0 == 0x00b0
+                           0000B0   926 _PB0	=	0x00b0
+                           0000A0   927 G$LED0$0$0 == 0x00a0
+                           0000A0   928 _LED0	=	0x00a0
+                           0000A1   929 G$LED1$0$0 == 0x00a1
+                           0000A1   930 _LED1	=	0x00a1
+                           0000A3   931 G$Buzzer$0$0 == 0x00a3
+                           0000A3   932 _Buzzer	=	0x00a3
+                           0000A4   933 G$SS$0$0 == 0x00a4
+                           0000A4   934 _SS	=	0x00a4
+                           000090   935 G$BILED1$0$0 == 0x0090
+                           000090   936 _BILED1	=	0x0090
+                           000092   937 G$BILED0$0$0 == 0x0092
+                           000092   938 _BILED0	=	0x0092
+                           000085   939 G$PB3$0$0 == 0x0085
+                           000085   940 _PB3	=	0x0085
+                           000083   941 G$PB2$0$0 == 0x0083
+                           000083   942 _PB2	=	0x0083
+                           000087   943 G$LED3$0$0 == 0x0087
+                           000087   944 _LED3	=	0x0087
+                           000082   945 G$LED2$0$0 == 0x0082
+                           000082   946 _LED2	=	0x0082
+                                    947 ;--------------------------------------------------------
+                                    948 ; overlayable register banks
+                                    949 ;--------------------------------------------------------
+                                    950 	.area REG_BANK_0	(REL,OVR,DATA)
+      000000                        951 	.ds 8
+                                    952 ;--------------------------------------------------------
+                                    953 ; internal ram data
+                                    954 ;--------------------------------------------------------
+                                    955 	.area DSEG    (DATA)
+                           000000   956 G$keyinput$0$0==.
+      000000                        957 _keyinput::
+      000000                        958 	.ds 2
+                           000002   959 G$Counts$0$0==.
+      000002                        960 _Counts::
+      000002                        961 	.ds 2
+                           000004   962 G$Counts15$0$0==.
+      000004                        963 _Counts15::
+      000004                        964 	.ds 2
+                           000006   965 G$pcounts$0$0==.
+      000006                        966 _pcounts::
+      000006                        967 	.ds 2
+                           000008   968 G$x$0$0==.
+      000008                        969 _x::
+      000008                        970 	.ds 1
+                           000009   971 G$y$0$0==.
+      000009                        972 _y::
+      000009                        973 	.ds 1
+                           00000A   974 G$randomnum$0$0==.
+      00000A                        975 _randomnum::
+      00000A                        976 	.ds 1
+                           00000B   977 G$previousnum$0$0==.
+      00000B                        978 _previousnum::
+      00000B                        979 	.ds 1
+                           00000C   980 G$numC$0$0==.
+      00000C                        981 _numC::
+      00000C                        982 	.ds 1
+                           00000D   983 G$on$0$0==.
+      00000D                        984 _on::
+      00000D                        985 	.ds 1
+                           00000E   986 G$off$0$0==.
+      00000E                        987 _off::
+      00000E                        988 	.ds 1
+                           00000F   989 G$randList$0$0==.
+      00000F                        990 _randList::
+      00000F                        991 	.ds 10
+                           000019   992 G$Points$0$0==.
+      000019                        993 _Points::
+      000019                        994 	.ds 9
+                           000022   995 G$sum$0$0==.
+      000022                        996 _sum::
+      000022                        997 	.ds 1
+                           000023   998 G$inputFunc$0$0==.
+      000023                        999 _inputFunc::
+      000023                       1000 	.ds 1
+                           000024  1001 G$pin_number$0$0==.
+      000024                       1002 _pin_number::
+      000024                       1003 	.ds 1
+                           000025  1004 G$AD_value$0$0==.
+      000025                       1005 _AD_value::
+      000025                       1006 	.ds 2
+                           000027  1007 G$on_time$0$0==.
+      000027                       1008 _on_time::
+      000027                       1009 	.ds 2
+                           000029  1010 G$off_time$0$0==.
+      000029                       1011 _off_time::
+      000029                       1012 	.ds 2
+                           00002B  1013 G$rand_seq$0$0==.
+      00002B                       1014 _rand_seq::
+      00002B                       1015 	.ds 10
+                           000035  1016 G$i$0$0==.
+      000035                       1017 _i::
+      000035                       1018 	.ds 1
+                           000036  1019 G$k$0$0==.
+      000036                       1020 _k::
+      000036                       1021 	.ds 1
+                           000037  1022 G$g$0$0==.
+      000037                       1023 _g::
+      000037                       1024 	.ds 1
+                           000038  1025 G$turn$0$0==.
+      000038                       1026 _turn::
+      000038                       1027 	.ds 1
+                           000039  1028 G$scores$0$0==.
+      000039                       1029 _scores::
+      000039                       1030 	.ds 3
+                           00003C  1031 G$player$0$0==.
+      00003C                       1032 _player::
+      00003C                       1033 	.ds 1
+                           00003D  1034 G$break_the_hard_way$0$0==.
+      00003D                       1035 _break_the_hard_way::
+      00003D                       1036 	.ds 1
+                           00003E  1037 G$sum_of_butt$0$0==.
+      00003E                       1038 _sum_of_butt::
+      00003E                       1039 	.ds 1
+                                   1040 ;--------------------------------------------------------
+                                   1041 ; overlayable items in internal ram 
+                                   1042 ;--------------------------------------------------------
+                                   1043 	.area	OSEG    (OVR,DATA)
+                                   1044 	.area	OSEG    (OVR,DATA)
+                                   1045 	.area	OSEG    (OVR,DATA)
+                                   1046 	.area	OSEG    (OVR,DATA)
+                                   1047 ;--------------------------------------------------------
+                                   1048 ; Stack segment in internal ram 
+                                   1049 ;--------------------------------------------------------
+                                   1050 	.area	SSEG
+      000000                       1051 __start__stack:
+      000000                       1052 	.ds	1
+                                   1053 
+                                   1054 ;--------------------------------------------------------
+                                   1055 ; indirectly addressable internal ram data
+                                   1056 ;--------------------------------------------------------
+                                   1057 	.area ISEG    (DATA)
+                                   1058 ;--------------------------------------------------------
+                                   1059 ; absolute internal ram data
+                                   1060 ;--------------------------------------------------------
+                                   1061 	.area IABS    (ABS,DATA)
+                                   1062 	.area IABS    (ABS,DATA)
+                                   1063 ;--------------------------------------------------------
+                                   1064 ; bit data
+                                   1065 ;--------------------------------------------------------
+                                   1066 	.area BSEG    (BIT)
+                                   1067 ;--------------------------------------------------------
+                                   1068 ; paged external ram data
+                                   1069 ;--------------------------------------------------------
+                                   1070 	.area PSEG    (PAG,XDATA)
+                                   1071 ;--------------------------------------------------------
+                                   1072 ; external ram data
+                                   1073 ;--------------------------------------------------------
+                                   1074 	.area XSEG    (XDATA)
+                                   1075 ;--------------------------------------------------------
+                                   1076 ; absolute external ram data
+                                   1077 ;--------------------------------------------------------
+                                   1078 	.area XABS    (ABS,XDATA)
+                                   1079 ;--------------------------------------------------------
+                                   1080 ; external initialized ram data
+                                   1081 ;--------------------------------------------------------
+                                   1082 	.area XISEG   (XDATA)
+                                   1083 	.area HOME    (CODE)
+                                   1084 	.area GSINIT0 (CODE)
+                                   1085 	.area GSINIT1 (CODE)
+                                   1086 	.area GSINIT2 (CODE)
+                                   1087 	.area GSINIT3 (CODE)
+                                   1088 	.area GSINIT4 (CODE)
+                                   1089 	.area GSINIT5 (CODE)
+                                   1090 	.area GSINIT  (CODE)
+                                   1091 	.area GSFINAL (CODE)
+                                   1092 	.area CSEG    (CODE)
+                                   1093 ;--------------------------------------------------------
+                                   1094 ; interrupt vector 
+                                   1095 ;--------------------------------------------------------
+                                   1096 	.area HOME    (CODE)
+      000000                       1097 __interrupt_vect:
+      000000 02r00r00         [24] 1098 	ljmp	__sdcc_gsinit_startup
+      000003 32               [24] 1099 	reti
+      000004                       1100 	.ds	7
+      00000B 02r03r18         [24] 1101 	ljmp	_Timer0_ISR
+                                   1102 ;--------------------------------------------------------
+                                   1103 ; global & static initialisations
+                                   1104 ;--------------------------------------------------------
+                                   1105 	.area HOME    (CODE)
+                                   1106 	.area GSINIT  (CODE)
+                                   1107 	.area GSFINAL (CODE)
+                                   1108 	.area GSINIT  (CODE)
+                                   1109 	.globl __sdcc_gsinit_startup
+                                   1110 	.globl __sdcc_program_startup
+                                   1111 	.globl __start__stack
+                                   1112 	.globl __mcs51_genXINIT
+                                   1113 	.globl __mcs51_genXRAMCLEAR
+                                   1114 	.globl __mcs51_genRAMCLEAR
+                           000000  1115 	C$LAB2DebounceTest.c$83$1$146 ==.
+                                   1116 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:83: volatile unsigned int Counts=0; 
+      000000 E4               [12] 1117 	clr	a
+      000001 F5*02            [12] 1118 	mov	_Counts,a
+      000003 F5*03            [12] 1119 	mov	(_Counts + 1),a
+                           000005  1120 	C$LAB2DebounceTest.c$84$1$146 ==.
+                                   1121 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:84: volatile unsigned int Counts15=0;
+      000005 F5*04            [12] 1122 	mov	_Counts15,a
+      000007 F5*05            [12] 1123 	mov	(_Counts15 + 1),a
+                           000009  1124 	C$LAB2DebounceTest.c$85$1$146 ==.
+                                   1125 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:85: volatile unsigned int pcounts=0;
+      000009 F5*06            [12] 1126 	mov	_pcounts,a
+      00000B F5*07            [12] 1127 	mov	(_pcounts + 1),a
+                           00000D  1128 	C$LAB2DebounceTest.c$86$1$146 ==.
+                                   1129 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:86: signed char x=0, y=0;
+                                   1130 ;	1-genFromRTrack replaced	mov	_x,#0x00
+      00000D F5*08            [12] 1131 	mov	_x,a
+                           00000F  1132 	C$LAB2DebounceTest.c$86$1$146 ==.
+                                   1133 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:86: unsigned char randomnum;
+                                   1134 ;	1-genFromRTrack replaced	mov	_y,#0x00
+      00000F F5*09            [12] 1135 	mov	_y,a
+                           000011  1136 	C$LAB2DebounceTest.c$89$1$146 ==.
+                                   1137 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:89: unsigned char numC=0;
+                                   1138 ;	1-genFromRTrack replaced	mov	_numC,#0x00
+      000011 F5*0C            [12] 1139 	mov	_numC,a
+                           000013  1140 	C$LAB2DebounceTest.c$90$1$146 ==.
+                                   1141 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:90: unsigned char on=0;
+                                   1142 ;	1-genFromRTrack replaced	mov	_on,#0x00
+      000013 F5*0D            [12] 1143 	mov	_on,a
+                           000015  1144 	C$LAB2DebounceTest.c$91$1$146 ==.
+                                   1145 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:91: unsigned char off=1;
+      000015 75*0E 01         [24] 1146 	mov	_off,#0x01
+                           000018  1147 	C$LAB2DebounceTest.c$94$1$146 ==.
+                                   1148 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:94: unsigned char sum=0;
+                                   1149 ;	1-genFromRTrack replaced	mov	_sum,#0x00
+      000018 F5*22            [12] 1150 	mov	_sum,a
+                           00001A  1151 	C$LAB2DebounceTest.c$104$1$146 ==.
+                                   1152 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:104: unsigned char i=0, k=0, g=0, turn=0;// count varilbes
+                                   1153 ;	1-genFromRTrack replaced	mov	_i,#0x00
+      00001A F5*35            [12] 1154 	mov	_i,a
+                           00001C  1155 	C$LAB2DebounceTest.c$104$1$146 ==.
+                                   1156 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:104: 
+                                   1157 ;	1-genFromRTrack replaced	mov	_k,#0x00
+      00001C F5*36            [12] 1158 	mov	_k,a
+                           00001E  1159 	C$LAB2DebounceTest.c$104$1$146 ==.
+                                   1160 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:104: unsigned char i=0, k=0, g=0, turn=0;// count varilbes
+                                   1161 ;	1-genFromRTrack replaced	mov	_g,#0x00
+      00001E F5*37            [12] 1162 	mov	_g,a
+                           000020  1163 	C$LAB2DebounceTest.c$104$1$146 ==.
+                                   1164 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:104: 
+                                   1165 ;	1-genFromRTrack replaced	mov	_turn,#0x00
+      000020 F5*38            [12] 1166 	mov	_turn,a
+                           000022  1167 	C$LAB2DebounceTest.c$106$1$146 ==.
+                                   1168 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:106: unsigned char scores[3];
+                                   1169 ;	1-genFromRTrack replaced	mov	_scores,#0x00
+      000022 F5*39            [12] 1170 	mov	_scores,a
+                                   1171 ;	1-genFromRTrack replaced	mov	(_scores + 0x0001),#0x00
+      000024 F5*3A            [12] 1172 	mov	(_scores + 0x0001),a
+                                   1173 ;	1-genFromRTrack replaced	mov	(_scores + 0x0002),#0x00
+      000026 F5*3B            [12] 1174 	mov	(_scores + 0x0002),a
+                           000028  1175 	C$LAB2DebounceTest.c$107$1$146 ==.
+                                   1176 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:107: unsigned char player=0;
+                                   1177 ;	1-genFromRTrack replaced	mov	_player,#0x00
+      000028 F5*3C            [12] 1178 	mov	_player,a
+                           00002A  1179 	C$LAB2DebounceTest.c$108$1$146 ==.
+                                   1180 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:108: unsigned char break_the_hard_way=0;
+                                   1181 ;	1-genFromRTrack replaced	mov	_break_the_hard_way,#0x00
+      00002A F5*3D            [12] 1182 	mov	_break_the_hard_way,a
+                           00002C  1183 	C$LAB2DebounceTest.c$113$1$146 ==.
+                                   1184 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:113: unsigned char sum_of_butt=0;
+                                   1185 ;	1-genFromRTrack replaced	mov	_sum_of_butt,#0x00
+      00002C F5*3E            [12] 1186 	mov	_sum_of_butt,a
+                                   1187 	.area GSFINAL (CODE)
+      000000 02r00r0E         [24] 1188 	ljmp	__sdcc_program_startup
+                                   1189 ;--------------------------------------------------------
+                                   1190 ; Home
+                                   1191 ;--------------------------------------------------------
+                                   1192 	.area HOME    (CODE)
+                                   1193 	.area HOME    (CODE)
+      00000E                       1194 __sdcc_program_startup:
+      00000E 02r00r77         [24] 1195 	ljmp	_main
+                                   1196 ;	return from main will return to caller
+                                   1197 ;--------------------------------------------------------
+                                   1198 ; code
+                                   1199 ;--------------------------------------------------------
+                                   1200 	.area CSEG    (CODE)
+                                   1201 ;------------------------------------------------------------
+                                   1202 ;Allocation info for local variables in function 'SYSCLK_Init'
+                                   1203 ;------------------------------------------------------------
+                                   1204 ;i                         Allocated to registers r6 r7 
+                                   1205 ;------------------------------------------------------------
+                           000000  1206 	G$SYSCLK_Init$0$0 ==.
+                           000000  1207 	C$c8051_SDCC.h$42$0$0 ==.
+                                   1208 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:42: void SYSCLK_Init(void)
+                                   1209 ;	-----------------------------------------
+                                   1210 ;	 function SYSCLK_Init
+                                   1211 ;	-----------------------------------------
+      000000                       1212 _SYSCLK_Init:
+                           000007  1213 	ar7 = 0x07
+                           000006  1214 	ar6 = 0x06
+                           000005  1215 	ar5 = 0x05
+                           000004  1216 	ar4 = 0x04
+                           000003  1217 	ar3 = 0x03
+                           000002  1218 	ar2 = 0x02
+                           000001  1219 	ar1 = 0x01
+                           000000  1220 	ar0 = 0x00
+                           000000  1221 	C$c8051_SDCC.h$46$1$2 ==.
+                                   1222 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:46: OSCXCN = 0x67;                      // start external oscillator with
+      000000 75 B1 67         [24] 1223 	mov	_OSCXCN,#0x67
+                           000003  1224 	C$c8051_SDCC.h$49$1$2 ==.
+                                   1225 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:49: for (i=0; i < 256; i++);            // wait for oscillator to start
+      000003 7E 00            [12] 1226 	mov	r6,#0x00
+      000005 7F 01            [12] 1227 	mov	r7,#0x01
+      000007                       1228 00107$:
+      000007 EE               [12] 1229 	mov	a,r6
+      000008 24 FF            [12] 1230 	add	a,#0xFF
+      00000A FC               [12] 1231 	mov	r4,a
+      00000B EF               [12] 1232 	mov	a,r7
+      00000C 34 FF            [12] 1233 	addc	a,#0xFF
+      00000E FD               [12] 1234 	mov	r5,a
+      00000F 8C 06            [24] 1235 	mov	ar6,r4
+      000011 8D 07            [24] 1236 	mov	ar7,r5
+      000013 EC               [12] 1237 	mov	a,r4
+      000014 4D               [12] 1238 	orl	a,r5
+      000015 70 F0            [24] 1239 	jnz	00107$
+                           000017  1240 	C$c8051_SDCC.h$51$1$2 ==.
+                                   1241 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:51: while (!(OSCXCN & 0x80));           // Wait for crystal osc. to settle
+      000017                       1242 00102$:
+      000017 E5 B1            [12] 1243 	mov	a,_OSCXCN
+      000019 30 E7 FB         [24] 1244 	jnb	acc.7,00102$
+                           00001C  1245 	C$c8051_SDCC.h$53$1$2 ==.
+                                   1246 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:53: OSCICN = 0x88;                      // select external oscillator as SYSCLK
+      00001C 75 B2 88         [24] 1247 	mov	_OSCICN,#0x88
+                           00001F  1248 	C$c8051_SDCC.h$56$1$2 ==.
+                           00001F  1249 	XG$SYSCLK_Init$0$0 ==.
+      00001F 22               [24] 1250 	ret
+                                   1251 ;------------------------------------------------------------
+                                   1252 ;Allocation info for local variables in function 'UART0_Init'
+                                   1253 ;------------------------------------------------------------
+                           000020  1254 	G$UART0_Init$0$0 ==.
+                           000020  1255 	C$c8051_SDCC.h$64$1$2 ==.
+                                   1256 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:64: void UART0_Init(void)
+                                   1257 ;	-----------------------------------------
+                                   1258 ;	 function UART0_Init
+                                   1259 ;	-----------------------------------------
+      000020                       1260 _UART0_Init:
+                           000020  1261 	C$c8051_SDCC.h$66$1$4 ==.
+                                   1262 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:66: SCON0  = 0x50;                      // SCON0: mode 1, 8-bit UART, enable RX
+      000020 75 98 50         [24] 1263 	mov	_SCON0,#0x50
+                           000023  1264 	C$c8051_SDCC.h$67$1$4 ==.
+                                   1265 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:67: TMOD   = 0x20;                      // TMOD: timer 1, mode 2, 8-bit reload
+      000023 75 89 20         [24] 1266 	mov	_TMOD,#0x20
+                           000026  1267 	C$c8051_SDCC.h$68$1$4 ==.
+                                   1268 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:68: TH1    = 0xFF&-(SYSCLK/BAUDRATE/16);     // set Timer1 reload value for baudrate
+      000026 75 8D DC         [24] 1269 	mov	_TH1,#0xDC
+                           000029  1270 	C$c8051_SDCC.h$69$1$4 ==.
+                                   1271 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:69: TR1    = 1;                         // start Timer1
+      000029 D2 8E            [12] 1272 	setb	_TR1
+                           00002B  1273 	C$c8051_SDCC.h$70$1$4 ==.
+                                   1274 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:70: CKCON |= 0x10;                      // Timer1 uses SYSCLK as time base
+      00002B 43 8E 10         [24] 1275 	orl	_CKCON,#0x10
+                           00002E  1276 	C$c8051_SDCC.h$71$1$4 ==.
+                                   1277 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:71: PCON  |= 0x80;                      // SMOD00 = 1 (disable baud rate 
+      00002E 43 87 80         [24] 1278 	orl	_PCON,#0x80
+                           000031  1279 	C$c8051_SDCC.h$73$1$4 ==.
+                                   1280 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:73: TI0    = 1;                         // Indicate TX0 ready
+      000031 D2 99            [12] 1281 	setb	_TI0
+                           000033  1282 	C$c8051_SDCC.h$74$1$4 ==.
+                                   1283 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:74: P0MDOUT |= 0x01;                    // Set TX0 to push/pull
+      000033 43 A4 01         [24] 1284 	orl	_P0MDOUT,#0x01
+                           000036  1285 	C$c8051_SDCC.h$75$1$4 ==.
+                           000036  1286 	XG$UART0_Init$0$0 ==.
+      000036 22               [24] 1287 	ret
+                                   1288 ;------------------------------------------------------------
+                                   1289 ;Allocation info for local variables in function 'Sys_Init'
+                                   1290 ;------------------------------------------------------------
+                           000037  1291 	G$Sys_Init$0$0 ==.
+                           000037  1292 	C$c8051_SDCC.h$83$1$4 ==.
+                                   1293 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:83: void Sys_Init(void)
+                                   1294 ;	-----------------------------------------
+                                   1295 ;	 function Sys_Init
+                                   1296 ;	-----------------------------------------
+      000037                       1297 _Sys_Init:
+                           000037  1298 	C$c8051_SDCC.h$85$1$6 ==.
+                                   1299 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:85: WDTCN = 0xde;			// disable watchdog timer
+      000037 75 FF DE         [24] 1300 	mov	_WDTCN,#0xDE
+                           00003A  1301 	C$c8051_SDCC.h$86$1$6 ==.
+                                   1302 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:86: WDTCN = 0xad;
+      00003A 75 FF AD         [24] 1303 	mov	_WDTCN,#0xAD
+                           00003D  1304 	C$c8051_SDCC.h$88$1$6 ==.
+                                   1305 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:88: SYSCLK_Init();			// initialize oscillator
+      00003D 12r00r00         [24] 1306 	lcall	_SYSCLK_Init
+                           000040  1307 	C$c8051_SDCC.h$89$1$6 ==.
+                                   1308 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:89: UART0_Init();			// initialize UART0
+      000040 12r00r20         [24] 1309 	lcall	_UART0_Init
+                           000043  1310 	C$c8051_SDCC.h$91$1$6 ==.
+                                   1311 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:91: XBR0 |= 0x04;
+      000043 43 E1 04         [24] 1312 	orl	_XBR0,#0x04
+                           000046  1313 	C$c8051_SDCC.h$92$1$6 ==.
+                                   1314 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:92: XBR2 |= 0x40;                    	// Enable crossbar and weak pull-ups
+      000046 43 E3 40         [24] 1315 	orl	_XBR2,#0x40
+                           000049  1316 	C$c8051_SDCC.h$93$1$6 ==.
+                           000049  1317 	XG$Sys_Init$0$0 ==.
+      000049 22               [24] 1318 	ret
+                                   1319 ;------------------------------------------------------------
+                                   1320 ;Allocation info for local variables in function 'putchar'
+                                   1321 ;------------------------------------------------------------
+                                   1322 ;c                         Allocated to registers r7 
+                                   1323 ;------------------------------------------------------------
+                           00004A  1324 	G$putchar$0$0 ==.
+                           00004A  1325 	C$c8051_SDCC.h$98$1$6 ==.
+                                   1326 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:98: void putchar(char c)
+                                   1327 ;	-----------------------------------------
+                                   1328 ;	 function putchar
+                                   1329 ;	-----------------------------------------
+      00004A                       1330 _putchar:
+      00004A AF 82            [24] 1331 	mov	r7,dpl
+                           00004C  1332 	C$c8051_SDCC.h$100$1$8 ==.
+                                   1333 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:100: while (!TI0); 
+      00004C                       1334 00101$:
+                           00004C  1335 	C$c8051_SDCC.h$101$1$8 ==.
+                                   1336 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:101: TI0 = 0;
+      00004C 10 99 02         [24] 1337 	jbc	_TI0,00112$
+      00004F 80 FB            [24] 1338 	sjmp	00101$
+      000051                       1339 00112$:
+                           000051  1340 	C$c8051_SDCC.h$102$1$8 ==.
+                                   1341 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:102: SBUF0 = c;
+      000051 8F 99            [24] 1342 	mov	_SBUF0,r7
+                           000053  1343 	C$c8051_SDCC.h$103$1$8 ==.
+                           000053  1344 	XG$putchar$0$0 ==.
+      000053 22               [24] 1345 	ret
+                                   1346 ;------------------------------------------------------------
+                                   1347 ;Allocation info for local variables in function 'getchar'
+                                   1348 ;------------------------------------------------------------
+                                   1349 ;c                         Allocated to registers 
+                                   1350 ;------------------------------------------------------------
+                           000054  1351 	G$getchar$0$0 ==.
+                           000054  1352 	C$c8051_SDCC.h$108$1$8 ==.
+                                   1353 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:108: char getchar(void)
+                                   1354 ;	-----------------------------------------
+                                   1355 ;	 function getchar
+                                   1356 ;	-----------------------------------------
+      000054                       1357 _getchar:
+                           000054  1358 	C$c8051_SDCC.h$111$1$10 ==.
+                                   1359 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:111: while (!RI0);
+      000054                       1360 00101$:
+                           000054  1361 	C$c8051_SDCC.h$112$1$10 ==.
+                                   1362 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:112: RI0 = 0;
+      000054 10 98 02         [24] 1363 	jbc	_RI0,00112$
+      000057 80 FB            [24] 1364 	sjmp	00101$
+      000059                       1365 00112$:
+                           000059  1366 	C$c8051_SDCC.h$113$1$10 ==.
+                                   1367 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:113: c = SBUF0;
+      000059 85 99 82         [24] 1368 	mov	dpl,_SBUF0
+                           00005C  1369 	C$c8051_SDCC.h$114$1$10 ==.
+                                   1370 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:114: putchar(c);                          // echo to terminal
+      00005C 12r00r4A         [24] 1371 	lcall	_putchar
+                           00005F  1372 	C$c8051_SDCC.h$115$1$10 ==.
+                                   1373 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:115: return SBUF0;
+      00005F 85 99 82         [24] 1374 	mov	dpl,_SBUF0
+                           000062  1375 	C$c8051_SDCC.h$116$1$10 ==.
+                           000062  1376 	XG$getchar$0$0 ==.
+      000062 22               [24] 1377 	ret
+                                   1378 ;------------------------------------------------------------
+                                   1379 ;Allocation info for local variables in function 'getchar_nw'
+                                   1380 ;------------------------------------------------------------
+                                   1381 ;c                         Allocated to registers 
+                                   1382 ;------------------------------------------------------------
+                           000063  1383 	G$getchar_nw$0$0 ==.
+                           000063  1384 	C$c8051_SDCC.h$121$1$10 ==.
+                                   1385 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:121: char getchar_nw(void)
+                                   1386 ;	-----------------------------------------
+                                   1387 ;	 function getchar_nw
+                                   1388 ;	-----------------------------------------
+      000063                       1389 _getchar_nw:
+                           000063  1390 	C$c8051_SDCC.h$124$1$12 ==.
+                                   1391 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:124: if (!RI0) return 0xFF;
+      000063 20 98 05         [24] 1392 	jb	_RI0,00102$
+      000066 75 82 FF         [24] 1393 	mov	dpl,#0xFF
+      000069 80 0B            [24] 1394 	sjmp	00104$
+      00006B                       1395 00102$:
+                           00006B  1396 	C$c8051_SDCC.h$127$2$13 ==.
+                                   1397 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:127: RI0 = 0;
+      00006B C2 98            [12] 1398 	clr	_RI0
+                           00006D  1399 	C$c8051_SDCC.h$128$2$13 ==.
+                                   1400 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:128: c = SBUF0;
+      00006D 85 99 82         [24] 1401 	mov	dpl,_SBUF0
+                           000070  1402 	C$c8051_SDCC.h$129$2$13 ==.
+                                   1403 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:129: putchar(c);                          // echo to terminal
+      000070 12r00r4A         [24] 1404 	lcall	_putchar
+                           000073  1405 	C$c8051_SDCC.h$130$2$13 ==.
+                                   1406 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:130: return SBUF0;
+      000073 85 99 82         [24] 1407 	mov	dpl,_SBUF0
+      000076                       1408 00104$:
+                           000076  1409 	C$c8051_SDCC.h$132$1$12 ==.
+                           000076  1410 	XG$getchar_nw$0$0 ==.
+      000076 22               [24] 1411 	ret
+                                   1412 ;------------------------------------------------------------
+                                   1413 ;Allocation info for local variables in function 'main'
+                                   1414 ;------------------------------------------------------------
+                           000077  1415 	G$main$0$0 ==.
+                           000077  1416 	C$LAB2DebounceTest.c$118$1$12 ==.
+                                   1417 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:118: void main(void) 
+                                   1418 ;	-----------------------------------------
+                                   1419 ;	 function main
+                                   1420 ;	-----------------------------------------
+      000077                       1421 _main:
+                           000077  1422 	C$LAB2DebounceTest.c$121$1$75 ==.
+                                   1423 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:121: Sys_Init();      			// System Initialization
+      000077 12r00r37         [24] 1424 	lcall	_Sys_Init
+                           00007A  1425 	C$LAB2DebounceTest.c$122$1$75 ==.
+                                   1426 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:122: Port_Init();    			// Initialize ports 2 and 3
+      00007A 12r02r9D         [24] 1427 	lcall	_Port_Init
+                           00007D  1428 	C$LAB2DebounceTest.c$123$1$75 ==.
+                                   1429 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:123: Interrupt_Init();			//Initialize Interrupts
+      00007D 12r02rE1         [24] 1430 	lcall	_Interrupt_Init
+                           000080  1431 	C$LAB2DebounceTest.c$124$1$75 ==.
+                                   1432 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:124: Timer_Init();				//Initialize timer 0
+      000080 12r02rE7         [24] 1433 	lcall	_Timer_Init
+                           000083  1434 	C$LAB2DebounceTest.c$125$1$75 ==.
+                                   1435 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:125: putchar(' ');    		
+      000083 75 82 20         [24] 1436 	mov	dpl,#0x20
+      000086 12r00r4A         [24] 1437 	lcall	_putchar
+                           000089  1438 	C$LAB2DebounceTest.c$126$1$75 ==.
+                                   1439 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:126: Analog_Init();
+      000089 12r02rF8         [24] 1440 	lcall	_Analog_Init
+                           00008C  1441 	C$LAB2DebounceTest.c$129$1$75 ==.
+                                   1442 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:129: while(1) 
+      00008C                       1443 00102$:
+                           00008C  1444 	C$LAB2DebounceTest.c$131$2$76 ==.
+                                   1445 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:131: resetArrays();
+      00008C 12r03rC4         [24] 1446 	lcall	_resetArrays
+                           00008F  1447 	C$LAB2DebounceTest.c$132$2$76 ==.
+                                   1448 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:132: BILEDOFF();
+      00008F 12r02rD0         [24] 1449 	lcall	_BILEDOFF
+                           000092  1450 	C$LAB2DebounceTest.c$133$2$76 ==.
+                                   1451 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:133: StopAndResetTimer();
+      000092 12r02rD5         [24] 1452 	lcall	_StopAndResetTimer
+                           000095  1453 	C$LAB2DebounceTest.c$134$2$76 ==.
+                                   1454 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:134: StartTimer();
+      000095 12r04r12         [24] 1455 	lcall	_StartTimer
+                           000098  1456 	C$LAB2DebounceTest.c$137$2$76 ==.
+                                   1457 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:137: printf("\r\nButton 0");
+      000098 74r00            [12] 1458 	mov	a,#___str_0
+      00009A C0 E0            [24] 1459 	push	acc
+      00009C 74s00            [12] 1460 	mov	a,#(___str_0 >> 8)
+      00009E C0 E0            [24] 1461 	push	acc
+      0000A0 74 80            [12] 1462 	mov	a,#0x80
+      0000A2 C0 E0            [24] 1463 	push	acc
+      0000A4 12r00r00         [24] 1464 	lcall	_printf
+      0000A7 15 81            [12] 1465 	dec	sp
+      0000A9 15 81            [12] 1466 	dec	sp
+      0000AB 15 81            [12] 1467 	dec	sp
+                           0000AD  1468 	C$LAB2DebounceTest.c$139$2$76 ==.
+                                   1469 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:139: bounce_back(0);
+      0000AD 75 82 00         [24] 1470 	mov	dpl,#0x00
+      0000B0 12r01r07         [24] 1471 	lcall	_bounce_back
+                           0000B3  1472 	C$LAB2DebounceTest.c$140$2$76 ==.
+                                   1473 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:140: printf("\r\nButton 1");
+      0000B3 74r0B            [12] 1474 	mov	a,#___str_1
+      0000B5 C0 E0            [24] 1475 	push	acc
+      0000B7 74s00            [12] 1476 	mov	a,#(___str_1 >> 8)
+      0000B9 C0 E0            [24] 1477 	push	acc
+      0000BB 74 80            [12] 1478 	mov	a,#0x80
+      0000BD C0 E0            [24] 1479 	push	acc
+      0000BF 12r00r00         [24] 1480 	lcall	_printf
+      0000C2 15 81            [12] 1481 	dec	sp
+      0000C4 15 81            [12] 1482 	dec	sp
+      0000C6 15 81            [12] 1483 	dec	sp
+                           0000C8  1484 	C$LAB2DebounceTest.c$141$2$76 ==.
+                                   1485 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:141: bounce_back(1);
+      0000C8 75 82 01         [24] 1486 	mov	dpl,#0x01
+      0000CB 12r01r07         [24] 1487 	lcall	_bounce_back
+                           0000CE  1488 	C$LAB2DebounceTest.c$142$2$76 ==.
+                                   1489 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:142: printf("\r\nButton 2");
+      0000CE 74r16            [12] 1490 	mov	a,#___str_2
+      0000D0 C0 E0            [24] 1491 	push	acc
+      0000D2 74s00            [12] 1492 	mov	a,#(___str_2 >> 8)
+      0000D4 C0 E0            [24] 1493 	push	acc
+      0000D6 74 80            [12] 1494 	mov	a,#0x80
+      0000D8 C0 E0            [24] 1495 	push	acc
+      0000DA 12r00r00         [24] 1496 	lcall	_printf
+      0000DD 15 81            [12] 1497 	dec	sp
+      0000DF 15 81            [12] 1498 	dec	sp
+      0000E1 15 81            [12] 1499 	dec	sp
+                           0000E3  1500 	C$LAB2DebounceTest.c$143$2$76 ==.
+                                   1501 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:143: bounce_back(2);
+      0000E3 75 82 02         [24] 1502 	mov	dpl,#0x02
+      0000E6 12r01r07         [24] 1503 	lcall	_bounce_back
+                           0000E9  1504 	C$LAB2DebounceTest.c$144$2$76 ==.
+                                   1505 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:144: printf("\r\nButton 3");
+      0000E9 74r21            [12] 1506 	mov	a,#___str_3
+      0000EB C0 E0            [24] 1507 	push	acc
+      0000ED 74s00            [12] 1508 	mov	a,#(___str_3 >> 8)
+      0000EF C0 E0            [24] 1509 	push	acc
+      0000F1 74 80            [12] 1510 	mov	a,#0x80
+      0000F3 C0 E0            [24] 1511 	push	acc
+      0000F5 12r00r00         [24] 1512 	lcall	_printf
+      0000F8 15 81            [12] 1513 	dec	sp
+      0000FA 15 81            [12] 1514 	dec	sp
+      0000FC 15 81            [12] 1515 	dec	sp
+                           0000FE  1516 	C$LAB2DebounceTest.c$145$2$76 ==.
+                                   1517 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:145: bounce_back(3);
+      0000FE 75 82 03         [24] 1518 	mov	dpl,#0x03
+      000101 12r01r07         [24] 1519 	lcall	_bounce_back
+      000104 80 86            [24] 1520 	sjmp	00102$
+                           000106  1521 	C$LAB2DebounceTest.c$268$1$75 ==.
+                           000106  1522 	XG$main$0$0 ==.
+      000106 22               [24] 1523 	ret
+                                   1524 ;------------------------------------------------------------
+                                   1525 ;Allocation info for local variables in function 'bounce_back'
+                                   1526 ;------------------------------------------------------------
+                                   1527 ;button_should_be_pushed   Allocated to registers r7 
+                                   1528 ;------------------------------------------------------------
+                           000107  1529 	G$bounce_back$0$0 ==.
+                           000107  1530 	C$LAB2DebounceTest.c$270$1$75 ==.
+                                   1531 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:270: unsigned char bounce_back(unsigned char button_should_be_pushed){
+                                   1532 ;	-----------------------------------------
+                                   1533 ;	 function bounce_back
+                                   1534 ;	-----------------------------------------
+      000107                       1535 _bounce_back:
+      000107 AF 82            [24] 1536 	mov	r7,dpl
+                           000109  1537 	C$LAB2DebounceTest.c$271$1$78 ==.
+                                   1538 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:271: Counts15=0;
+      000109 E4               [12] 1539 	clr	a
+      00010A F5*04            [12] 1540 	mov	_Counts15,a
+      00010C F5*05            [12] 1541 	mov	(_Counts15 + 1),a
+                           00010E  1542 	C$LAB2DebounceTest.c$272$1$78 ==.
+                                   1543 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:272: while(Counts15<600){//~about 2 
+      00010E                       1544 00104$:
+      00010E C3               [12] 1545 	clr	c
+      00010F E5*04            [12] 1546 	mov	a,_Counts15
+      000111 94 58            [12] 1547 	subb	a,#0x58
+      000113 E5*05            [12] 1548 	mov	a,(_Counts15 + 1)
+      000115 94 02            [12] 1549 	subb	a,#0x02
+      000117 50 1D            [24] 1550 	jnc	00106$
+                           000119  1551 	C$LAB2DebounceTest.c$273$2$79 ==.
+                                   1552 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:273: sum_of_butt+=new_push_buttons(button_should_be_pushed);
+      000119 8F 82            [24] 1553 	mov	dpl,r7
+      00011B C0 07            [24] 1554 	push	ar7
+      00011D 12r01r3A         [24] 1555 	lcall	_new_push_buttons
+      000120 AE 82            [24] 1556 	mov	r6,dpl
+      000122 D0 07            [24] 1557 	pop	ar7
+      000124 EE               [12] 1558 	mov	a,r6
+      000125 25*3E            [12] 1559 	add	a,_sum_of_butt
+                           000127  1560 	C$LAB2DebounceTest.c$274$2$79 ==.
+                                   1561 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:274: if (sum_of_butt>0){
+      000127 F5*3E            [12] 1562 	mov	_sum_of_butt,a
+      000129 60 07            [24] 1563 	jz	00102$
+                           00012B  1564 	C$LAB2DebounceTest.c$275$3$80 ==.
+                                   1565 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:275: sum_of_butt=0;//change in a bit
+      00012B 75*3E 00         [24] 1566 	mov	_sum_of_butt,#0x00
+                           00012E  1567 	C$LAB2DebounceTest.c$276$3$80 ==.
+                                   1568 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:276: BILED0=0;
+      00012E C2 92            [12] 1569 	clr	_BILED0
+      000130 80 DC            [24] 1570 	sjmp	00104$
+      000132                       1571 00102$:
+                           000132  1572 	C$LAB2DebounceTest.c$278$3$81 ==.
+                                   1573 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:278: BILED0=1;
+      000132 D2 92            [12] 1574 	setb	_BILED0
+      000134 80 D8            [24] 1575 	sjmp	00104$
+      000136                       1576 00106$:
+                           000136  1577 	C$LAB2DebounceTest.c$281$1$78 ==.
+                                   1578 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:281: return sum_of_butt;
+      000136 85*3E 82         [24] 1579 	mov	dpl,_sum_of_butt
+                           000139  1580 	C$LAB2DebounceTest.c$282$1$78 ==.
+                           000139  1581 	XG$bounce_back$0$0 ==.
+      000139 22               [24] 1582 	ret
+                                   1583 ;------------------------------------------------------------
+                                   1584 ;Allocation info for local variables in function 'new_push_buttons'
+                                   1585 ;------------------------------------------------------------
+                                   1586 ;correct_button            Allocated to registers r7 
+                                   1587 ;------------------------------------------------------------
+                           00013A  1588 	G$new_push_buttons$0$0 ==.
+                           00013A  1589 	C$LAB2DebounceTest.c$285$1$78 ==.
+                                   1590 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:285: unsigned char new_push_buttons(unsigned char correct_button){//returns 1 if correct button pused, 0 if not
+                                   1591 ;	-----------------------------------------
+                                   1592 ;	 function new_push_buttons
+                                   1593 ;	-----------------------------------------
+      00013A                       1594 _new_push_buttons:
+                           00013A  1595 	C$LAB2DebounceTest.c$286$1$83 ==.
+                                   1596 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:286: switch(correct_button){
+      00013A E5 82            [12] 1597 	mov	a,dpl
+      00013C FF               [12] 1598 	mov	r7,a
+      00013D 24 FC            [12] 1599 	add	a,#0xff - 0x03
+      00013F 40 47            [24] 1600 	jc	00117$
+      000141 EF               [12] 1601 	mov	a,r7
+      000142 2F               [12] 1602 	add	a,r7
+      000143 2F               [12] 1603 	add	a,r7
+      000144 90r01r48         [24] 1604 	mov	dptr,#00136$
+      000147 73               [24] 1605 	jmp	@a+dptr
+      000148                       1606 00136$:
+      000148 02r01r54         [24] 1607 	ljmp	00101$
+      00014B 02r01r61         [24] 1608 	ljmp	00105$
+      00014E 02r01r6E         [24] 1609 	ljmp	00109$
+      000151 02r01r7B         [24] 1610 	ljmp	00113$
+                           000154  1611 	C$LAB2DebounceTest.c$287$2$84 ==.
+                                   1612 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:287: case 0:
+      000154                       1613 00101$:
+                           000154  1614 	C$LAB2DebounceTest.c$288$2$84 ==.
+                                   1615 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:288: if(!PB0) return 1;
+      000154 20 B0 05         [24] 1616 	jb	_PB0,00103$
+      000157 75 82 01         [24] 1617 	mov	dpl,#0x01
+      00015A 80 2F            [24] 1618 	sjmp	00118$
+      00015C                       1619 00103$:
+                           00015C  1620 	C$LAB2DebounceTest.c$289$2$84 ==.
+                                   1621 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:289: else return 0;
+      00015C 75 82 00         [24] 1622 	mov	dpl,#0x00
+                           00015F  1623 	C$LAB2DebounceTest.c$290$2$84 ==.
+                                   1624 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:290: case 1:
+      00015F 80 2A            [24] 1625 	sjmp	00118$
+      000161                       1626 00105$:
+                           000161  1627 	C$LAB2DebounceTest.c$291$2$84 ==.
+                                   1628 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:291: if(!PB1) return 1;
+      000161 20 B5 05         [24] 1629 	jb	_PB1,00107$
+      000164 75 82 01         [24] 1630 	mov	dpl,#0x01
+      000167 80 22            [24] 1631 	sjmp	00118$
+      000169                       1632 00107$:
+                           000169  1633 	C$LAB2DebounceTest.c$292$2$84 ==.
+                                   1634 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:292: else return 0;
+      000169 75 82 00         [24] 1635 	mov	dpl,#0x00
+                           00016C  1636 	C$LAB2DebounceTest.c$293$2$84 ==.
+                                   1637 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:293: case 2:
+      00016C 80 1D            [24] 1638 	sjmp	00118$
+      00016E                       1639 00109$:
+                           00016E  1640 	C$LAB2DebounceTest.c$294$2$84 ==.
+                                   1641 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:294: if(!PB2) return 1;
+      00016E 20 83 05         [24] 1642 	jb	_PB2,00111$
+      000171 75 82 01         [24] 1643 	mov	dpl,#0x01
+      000174 80 15            [24] 1644 	sjmp	00118$
+      000176                       1645 00111$:
+                           000176  1646 	C$LAB2DebounceTest.c$295$2$84 ==.
+                                   1647 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:295: else return 0;
+      000176 75 82 00         [24] 1648 	mov	dpl,#0x00
+                           000179  1649 	C$LAB2DebounceTest.c$296$2$84 ==.
+                                   1650 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:296: case 3:
+      000179 80 10            [24] 1651 	sjmp	00118$
+      00017B                       1652 00113$:
+                           00017B  1653 	C$LAB2DebounceTest.c$297$2$84 ==.
+                                   1654 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:297: if(!PB3) return 1;
+      00017B 20 85 05         [24] 1655 	jb	_PB3,00115$
+      00017E 75 82 01         [24] 1656 	mov	dpl,#0x01
+      000181 80 08            [24] 1657 	sjmp	00118$
+      000183                       1658 00115$:
+                           000183  1659 	C$LAB2DebounceTest.c$298$2$84 ==.
+                                   1660 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:298: else return 0;
+      000183 75 82 00         [24] 1661 	mov	dpl,#0x00
+                           000186  1662 	C$LAB2DebounceTest.c$299$1$83 ==.
+                                   1663 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:299: }//end switch 
+      000186 80 03            [24] 1664 	sjmp	00118$
+      000188                       1665 00117$:
+                           000188  1666 	C$LAB2DebounceTest.c$300$1$83 ==.
+                                   1667 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:300: return 0;
+      000188 75 82 00         [24] 1668 	mov	dpl,#0x00
+      00018B                       1669 00118$:
+                           00018B  1670 	C$LAB2DebounceTest.c$301$1$83 ==.
+                           00018B  1671 	XG$new_push_buttons$0$0 ==.
+      00018B 22               [24] 1672 	ret
+                                   1673 ;------------------------------------------------------------
+                                   1674 ;Allocation info for local variables in function 'debounce'
+                                   1675 ;------------------------------------------------------------
+                           00018C  1676 	G$debounce$0$0 ==.
+                           00018C  1677 	C$LAB2DebounceTest.c$303$1$83 ==.
+                                   1678 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:303: void debounce(void)
+                                   1679 ;	-----------------------------------------
+                                   1680 ;	 function debounce
+                                   1681 ;	-----------------------------------------
+      00018C                       1682 _debounce:
+                           00018C  1683 	C$LAB2DebounceTest.c$305$1$86 ==.
+                                   1684 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:305: Counts15=0;
+      00018C E4               [12] 1685 	clr	a
+      00018D F5*04            [12] 1686 	mov	_Counts15,a
+      00018F F5*05            [12] 1687 	mov	(_Counts15 + 1),a
+                           000191  1688 	C$LAB2DebounceTest.c$306$1$86 ==.
+                                   1689 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:306: while(Counts15<5); //waits ~ 15 milliseconds
+      000191                       1690 00101$:
+      000191 C3               [12] 1691 	clr	c
+      000192 E5*04            [12] 1692 	mov	a,_Counts15
+      000194 94 05            [12] 1693 	subb	a,#0x05
+      000196 E5*05            [12] 1694 	mov	a,(_Counts15 + 1)
+      000198 94 00            [12] 1695 	subb	a,#0x00
+      00019A 40 F5            [24] 1696 	jc	00101$
+                           00019C  1697 	C$LAB2DebounceTest.c$307$1$86 ==.
+                           00019C  1698 	XG$debounce$0$0 ==.
+      00019C 22               [24] 1699 	ret
+                                   1700 ;------------------------------------------------------------
+                                   1701 ;Allocation info for local variables in function 'push_buttons'
+                                   1702 ;------------------------------------------------------------
+                                   1703 ;correct_button            Allocated to registers r7 
+                                   1704 ;------------------------------------------------------------
+                           00019D  1705 	G$push_buttons$0$0 ==.
+                           00019D  1706 	C$LAB2DebounceTest.c$309$1$86 ==.
+                                   1707 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:309: unsigned char push_buttons(char correct_button){//returns 1 if correct button pused, 0 if not
+                                   1708 ;	-----------------------------------------
+                                   1709 ;	 function push_buttons
+                                   1710 ;	-----------------------------------------
+      00019D                       1711 _push_buttons:
+      00019D AF 82            [24] 1712 	mov	r7,dpl
+                           00019F  1713 	C$LAB2DebounceTest.c$310$1$88 ==.
+                                   1714 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:310: switch(correct_button){
+      00019F BF 00 02         [24] 1715 	cjne	r7,#0x00,00144$
+      0001A2 80 0F            [24] 1716 	sjmp	00101$
+      0001A4                       1717 00144$:
+      0001A4 BF 01 02         [24] 1718 	cjne	r7,#0x01,00145$
+      0001A7 80 1A            [24] 1719 	sjmp	00105$
+      0001A9                       1720 00145$:
+      0001A9 BF 02 02         [24] 1721 	cjne	r7,#0x02,00146$
+      0001AC 80 25            [24] 1722 	sjmp	00109$
+      0001AE                       1723 00146$:
+                           0001AE  1724 	C$LAB2DebounceTest.c$311$2$89 ==.
+                                   1725 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:311: case 0:
+      0001AE BF 03 42         [24] 1726 	cjne	r7,#0x03,00117$
+      0001B1 80 30            [24] 1727 	sjmp	00113$
+      0001B3                       1728 00101$:
+                           0001B3  1729 	C$LAB2DebounceTest.c$312$2$89 ==.
+                                   1730 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:312: if(!PB0) {
+      0001B3 20 B0 08         [24] 1731 	jb	_PB0,00103$
+                           0001B6  1732 	C$LAB2DebounceTest.c$313$3$90 ==.
+                                   1733 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:313: debounce();
+      0001B6 12r01r8C         [24] 1734 	lcall	_debounce
+                           0001B9  1735 	C$LAB2DebounceTest.c$314$3$90 ==.
+                                   1736 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:314: return 1;}
+      0001B9 75 82 01         [24] 1737 	mov	dpl,#0x01
+      0001BC 80 38            [24] 1738 	sjmp	00118$
+      0001BE                       1739 00103$:
+                           0001BE  1740 	C$LAB2DebounceTest.c$315$2$89 ==.
+                                   1741 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:315: else return 0;
+      0001BE 75 82 00         [24] 1742 	mov	dpl,#0x00
+                           0001C1  1743 	C$LAB2DebounceTest.c$316$2$89 ==.
+                                   1744 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:316: case 1:
+      0001C1 80 33            [24] 1745 	sjmp	00118$
+      0001C3                       1746 00105$:
+                           0001C3  1747 	C$LAB2DebounceTest.c$317$2$89 ==.
+                                   1748 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:317: if(!PB1) {
+      0001C3 20 B5 08         [24] 1749 	jb	_PB1,00107$
+                           0001C6  1750 	C$LAB2DebounceTest.c$318$3$91 ==.
+                                   1751 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:318: debounce();
+      0001C6 12r01r8C         [24] 1752 	lcall	_debounce
+                           0001C9  1753 	C$LAB2DebounceTest.c$319$3$91 ==.
+                                   1754 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:319: return 1;}
+      0001C9 75 82 01         [24] 1755 	mov	dpl,#0x01
+      0001CC 80 28            [24] 1756 	sjmp	00118$
+      0001CE                       1757 00107$:
+                           0001CE  1758 	C$LAB2DebounceTest.c$320$2$89 ==.
+                                   1759 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:320: else return 0;
+      0001CE 75 82 00         [24] 1760 	mov	dpl,#0x00
+                           0001D1  1761 	C$LAB2DebounceTest.c$321$2$89 ==.
+                                   1762 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:321: case 2:
+      0001D1 80 23            [24] 1763 	sjmp	00118$
+      0001D3                       1764 00109$:
+                           0001D3  1765 	C$LAB2DebounceTest.c$322$2$89 ==.
+                                   1766 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:322: if(!PB2) {
+      0001D3 20 83 08         [24] 1767 	jb	_PB2,00111$
+                           0001D6  1768 	C$LAB2DebounceTest.c$323$3$92 ==.
+                                   1769 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:323: debounce();
+      0001D6 12r01r8C         [24] 1770 	lcall	_debounce
+                           0001D9  1771 	C$LAB2DebounceTest.c$324$3$92 ==.
+                                   1772 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:324: return 1;}
+      0001D9 75 82 01         [24] 1773 	mov	dpl,#0x01
+      0001DC 80 18            [24] 1774 	sjmp	00118$
+      0001DE                       1775 00111$:
+                           0001DE  1776 	C$LAB2DebounceTest.c$325$2$89 ==.
+                                   1777 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:325: else return 0;
+      0001DE 75 82 00         [24] 1778 	mov	dpl,#0x00
+                           0001E1  1779 	C$LAB2DebounceTest.c$326$2$89 ==.
+                                   1780 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:326: case 3:
+      0001E1 80 13            [24] 1781 	sjmp	00118$
+      0001E3                       1782 00113$:
+                           0001E3  1783 	C$LAB2DebounceTest.c$327$2$89 ==.
+                                   1784 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:327: if(!PB3) {
+      0001E3 20 85 08         [24] 1785 	jb	_PB3,00115$
+                           0001E6  1786 	C$LAB2DebounceTest.c$328$3$93 ==.
+                                   1787 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:328: debounce();
+      0001E6 12r01r8C         [24] 1788 	lcall	_debounce
+                           0001E9  1789 	C$LAB2DebounceTest.c$329$3$93 ==.
+                                   1790 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:329: return 1;}
+      0001E9 75 82 01         [24] 1791 	mov	dpl,#0x01
+      0001EC 80 08            [24] 1792 	sjmp	00118$
+      0001EE                       1793 00115$:
+                           0001EE  1794 	C$LAB2DebounceTest.c$330$2$89 ==.
+                                   1795 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:330: else return 0;
+      0001EE 75 82 00         [24] 1796 	mov	dpl,#0x00
+                           0001F1  1797 	C$LAB2DebounceTest.c$331$1$88 ==.
+                                   1798 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:331: }//end switch 
+      0001F1 80 03            [24] 1799 	sjmp	00118$
+      0001F3                       1800 00117$:
+                           0001F3  1801 	C$LAB2DebounceTest.c$332$1$88 ==.
+                                   1802 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:332: return 0;
+      0001F3 75 82 00         [24] 1803 	mov	dpl,#0x00
+      0001F6                       1804 00118$:
+                           0001F6  1805 	C$LAB2DebounceTest.c$333$1$88 ==.
+                           0001F6  1806 	XG$push_buttons$0$0 ==.
+      0001F6 22               [24] 1807 	ret
+                                   1808 ;------------------------------------------------------------
+                                   1809 ;Allocation info for local variables in function 'light'
+                                   1810 ;------------------------------------------------------------
+                                   1811 ;ledW                      Allocated to registers r7 
+                                   1812 ;------------------------------------------------------------
+                           0001F7  1813 	G$light$0$0 ==.
+                           0001F7  1814 	C$LAB2DebounceTest.c$335$1$88 ==.
+                                   1815 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:335: void light(char ledW)
+                                   1816 ;	-----------------------------------------
+                                   1817 ;	 function light
+                                   1818 ;	-----------------------------------------
+      0001F7                       1819 _light:
+      0001F7 AF 82            [24] 1820 	mov	r7,dpl
+                           0001F9  1821 	C$LAB2DebounceTest.c$337$1$95 ==.
+                                   1822 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:337: printf("\r light\r\n");
+      0001F9 C0 07            [24] 1823 	push	ar7
+      0001FB 74r2C            [12] 1824 	mov	a,#___str_4
+      0001FD C0 E0            [24] 1825 	push	acc
+      0001FF 74s00            [12] 1826 	mov	a,#(___str_4 >> 8)
+      000201 C0 E0            [24] 1827 	push	acc
+      000203 74 80            [12] 1828 	mov	a,#0x80
+      000205 C0 E0            [24] 1829 	push	acc
+      000207 12r00r00         [24] 1830 	lcall	_printf
+      00020A 15 81            [12] 1831 	dec	sp
+      00020C 15 81            [12] 1832 	dec	sp
+      00020E 15 81            [12] 1833 	dec	sp
+      000210 D0 07            [24] 1834 	pop	ar7
+                           000212  1835 	C$LAB2DebounceTest.c$338$1$95 ==.
+                                   1836 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:338: LED0=1;
+      000212 D2 A0            [12] 1837 	setb	_LED0
+                           000214  1838 	C$LAB2DebounceTest.c$339$1$95 ==.
+                                   1839 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:339: LED1=1;
+      000214 D2 A1            [12] 1840 	setb	_LED1
+                           000216  1841 	C$LAB2DebounceTest.c$340$1$95 ==.
+                                   1842 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:340: LED2=1;
+      000216 D2 82            [12] 1843 	setb	_LED2
+                           000218  1844 	C$LAB2DebounceTest.c$341$1$95 ==.
+                                   1845 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:341: LED3=1;
+      000218 D2 87            [12] 1846 	setb	_LED3
+                           00021A  1847 	C$LAB2DebounceTest.c$342$1$95 ==.
+                                   1848 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:342: if (ledW==0)
+      00021A EF               [12] 1849 	mov	a,r7
+      00021B 70 07            [24] 1850 	jnz	00108$
+                           00021D  1851 	C$LAB2DebounceTest.c$344$2$96 ==.
+                                   1852 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:344: LED0=0;
+      00021D C2 A0            [12] 1853 	clr	_LED0
+                           00021F  1854 	C$LAB2DebounceTest.c$345$2$96 ==.
+                                   1855 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:345: lightson();
+      00021F 12r04r93         [24] 1856 	lcall	_lightson
+      000222 80 19            [24] 1857 	sjmp	00109$
+      000224                       1858 00108$:
+                           000224  1859 	C$LAB2DebounceTest.c$347$1$95 ==.
+                                   1860 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:347: else if(ledW==1)
+      000224 BF 01 07         [24] 1861 	cjne	r7,#0x01,00105$
+                           000227  1862 	C$LAB2DebounceTest.c$349$2$97 ==.
+                                   1863 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:349: LED1=0;
+      000227 C2 A1            [12] 1864 	clr	_LED1
+                           000229  1865 	C$LAB2DebounceTest.c$350$2$97 ==.
+                                   1866 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:350: lightson();
+      000229 12r04r93         [24] 1867 	lcall	_lightson
+      00022C 80 0F            [24] 1868 	sjmp	00109$
+      00022E                       1869 00105$:
+                           00022E  1870 	C$LAB2DebounceTest.c$352$1$95 ==.
+                                   1871 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:352: else if(ledW==2)
+      00022E BF 02 07         [24] 1872 	cjne	r7,#0x02,00102$
+                           000231  1873 	C$LAB2DebounceTest.c$354$2$98 ==.
+                                   1874 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:354: LED2=0;
+      000231 C2 82            [12] 1875 	clr	_LED2
+                           000233  1876 	C$LAB2DebounceTest.c$355$2$98 ==.
+                                   1877 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:355: lightson();
+      000233 12r04r93         [24] 1878 	lcall	_lightson
+      000236 80 05            [24] 1879 	sjmp	00109$
+      000238                       1880 00102$:
+                           000238  1881 	C$LAB2DebounceTest.c$359$2$99 ==.
+                                   1882 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:359: LED3=0;
+      000238 C2 87            [12] 1883 	clr	_LED3
+                           00023A  1884 	C$LAB2DebounceTest.c$360$2$99 ==.
+                                   1885 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:360: lightson();
+      00023A 12r04r93         [24] 1886 	lcall	_lightson
+      00023D                       1887 00109$:
+                           00023D  1888 	C$LAB2DebounceTest.c$362$1$95 ==.
+                                   1889 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:362: LED0=1;
+      00023D D2 A0            [12] 1890 	setb	_LED0
+                           00023F  1891 	C$LAB2DebounceTest.c$363$1$95 ==.
+                                   1892 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:363: LED1=1;
+      00023F D2 A1            [12] 1893 	setb	_LED1
+                           000241  1894 	C$LAB2DebounceTest.c$364$1$95 ==.
+                                   1895 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:364: LED2=1;
+      000241 D2 82            [12] 1896 	setb	_LED2
+                           000243  1897 	C$LAB2DebounceTest.c$365$1$95 ==.
+                                   1898 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:365: LED3=1;
+      000243 D2 87            [12] 1899 	setb	_LED3
+                           000245  1900 	C$LAB2DebounceTest.c$366$1$95 ==.
+                                   1901 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:366: lightsoff();
+      000245 12r04rA4         [24] 1902 	lcall	_lightsoff
+                           000248  1903 	C$LAB2DebounceTest.c$367$1$95 ==.
+                           000248  1904 	XG$light$0$0 ==.
+      000248 22               [24] 1905 	ret
+                                   1906 ;------------------------------------------------------------
+                                   1907 ;Allocation info for local variables in function 'pause'
+                                   1908 ;------------------------------------------------------------
+                           000249  1909 	G$pause$0$0 ==.
+                           000249  1910 	C$LAB2DebounceTest.c$415$1$95 ==.
+                                   1911 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:415: void pause(void)
+                                   1912 ;	-----------------------------------------
+                                   1913 ;	 function pause
+                                   1914 ;	-----------------------------------------
+      000249                       1915 _pause:
+                           000249  1916 	C$LAB2DebounceTest.c$417$1$101 ==.
+                                   1917 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:417: printf("\r pause\n");
+      000249 74r36            [12] 1918 	mov	a,#___str_5
+      00024B C0 E0            [24] 1919 	push	acc
+      00024D 74s00            [12] 1920 	mov	a,#(___str_5 >> 8)
+      00024F C0 E0            [24] 1921 	push	acc
+      000251 74 80            [12] 1922 	mov	a,#0x80
+      000253 C0 E0            [24] 1923 	push	acc
+      000255 12r00r00         [24] 1924 	lcall	_printf
+      000258 15 81            [12] 1925 	dec	sp
+      00025A 15 81            [12] 1926 	dec	sp
+      00025C 15 81            [12] 1927 	dec	sp
+                           00025E  1928 	C$LAB2DebounceTest.c$418$1$101 ==.
+                                   1929 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:418: BILED0=0;
+      00025E C2 92            [12] 1930 	clr	_BILED0
+                           000260  1931 	C$LAB2DebounceTest.c$419$1$101 ==.
+                                   1932 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:419: wait();
+      000260 12r02r8C         [24] 1933 	lcall	_wait
+                           000263  1934 	C$LAB2DebounceTest.c$420$1$101 ==.
+                                   1935 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:420: BILEDOFF();
+      000263 12r02rD0         [24] 1936 	lcall	_BILEDOFF
+                           000266  1937 	C$LAB2DebounceTest.c$421$1$101 ==.
+                                   1938 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:421: BILED1=0;
+      000266 C2 90            [12] 1939 	clr	_BILED1
+                           000268  1940 	C$LAB2DebounceTest.c$422$1$101 ==.
+                                   1941 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:422: wait();
+      000268 12r02r8C         [24] 1942 	lcall	_wait
+                           00026B  1943 	C$LAB2DebounceTest.c$423$1$101 ==.
+                                   1944 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:423: BILEDOFF();
+      00026B 12r02rD0         [24] 1945 	lcall	_BILEDOFF
+                           00026E  1946 	C$LAB2DebounceTest.c$424$1$101 ==.
+                                   1947 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:424: printf("\r end pause\n");
+      00026E 74r3F            [12] 1948 	mov	a,#___str_6
+      000270 C0 E0            [24] 1949 	push	acc
+      000272 74s00            [12] 1950 	mov	a,#(___str_6 >> 8)
+      000274 C0 E0            [24] 1951 	push	acc
+      000276 74 80            [12] 1952 	mov	a,#0x80
+      000278 C0 E0            [24] 1953 	push	acc
+      00027A 12r00r00         [24] 1954 	lcall	_printf
+      00027D 15 81            [12] 1955 	dec	sp
+      00027F 15 81            [12] 1956 	dec	sp
+      000281 15 81            [12] 1957 	dec	sp
+                           000283  1958 	C$LAB2DebounceTest.c$425$1$101 ==.
+                           000283  1959 	XG$pause$0$0 ==.
+      000283 22               [24] 1960 	ret
+                                   1961 ;------------------------------------------------------------
+                                   1962 ;Allocation info for local variables in function 'Buzz'
+                                   1963 ;------------------------------------------------------------
+                           000284  1964 	G$Buzz$0$0 ==.
+                           000284  1965 	C$LAB2DebounceTest.c$442$1$101 ==.
+                                   1966 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:442: void Buzz(void)
+                                   1967 ;	-----------------------------------------
+                                   1968 ;	 function Buzz
+                                   1969 ;	-----------------------------------------
+      000284                       1970 _Buzz:
+                           000284  1971 	C$LAB2DebounceTest.c$444$1$103 ==.
+                                   1972 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:444: Buzzer=0;
+      000284 C2 A3            [12] 1973 	clr	_Buzzer
+                           000286  1974 	C$LAB2DebounceTest.c$445$1$103 ==.
+                                   1975 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:445: wait();
+      000286 12r02r8C         [24] 1976 	lcall	_wait
+                           000289  1977 	C$LAB2DebounceTest.c$446$1$103 ==.
+                                   1978 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:446: Buzzer=1;
+      000289 D2 A3            [12] 1979 	setb	_Buzzer
+                           00028B  1980 	C$LAB2DebounceTest.c$447$1$103 ==.
+                           00028B  1981 	XG$Buzz$0$0 ==.
+      00028B 22               [24] 1982 	ret
+                                   1983 ;------------------------------------------------------------
+                                   1984 ;Allocation info for local variables in function 'wait'
+                                   1985 ;------------------------------------------------------------
+                           00028C  1986 	G$wait$0$0 ==.
+                           00028C  1987 	C$LAB2DebounceTest.c$491$1$103 ==.
+                                   1988 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:491: void wait(void)
+                                   1989 ;	-----------------------------------------
+                                   1990 ;	 function wait
+                                   1991 ;	-----------------------------------------
+      00028C                       1992 _wait:
+                           00028C  1993 	C$LAB2DebounceTest.c$494$1$105 ==.
+                                   1994 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:494: Counts=0;			//store starting counts
+      00028C E4               [12] 1995 	clr	a
+      00028D F5*02            [12] 1996 	mov	_Counts,a
+      00028F F5*03            [12] 1997 	mov	(_Counts + 1),a
+                           000291  1998 	C$LAB2DebounceTest.c$495$1$105 ==.
+                                   1999 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:495: while(Counts<338);
+      000291                       2000 00101$:
+      000291 C3               [12] 2001 	clr	c
+      000292 E5*02            [12] 2002 	mov	a,_Counts
+      000294 94 52            [12] 2003 	subb	a,#0x52
+      000296 E5*03            [12] 2004 	mov	a,(_Counts + 1)
+      000298 94 01            [12] 2005 	subb	a,#0x01
+      00029A 40 F5            [24] 2006 	jc	00101$
+                           00029C  2007 	C$LAB2DebounceTest.c$497$1$105 ==.
+                           00029C  2008 	XG$wait$0$0 ==.
+      00029C 22               [24] 2009 	ret
+                                   2010 ;------------------------------------------------------------
+                                   2011 ;Allocation info for local variables in function 'Port_Init'
+                                   2012 ;------------------------------------------------------------
+                           00029D  2013 	G$Port_Init$0$0 ==.
+                           00029D  2014 	C$LAB2DebounceTest.c$508$1$105 ==.
+                                   2015 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:508: void Port_Init(void)
+                                   2016 ;	-----------------------------------------
+                                   2017 ;	 function Port_Init
+                                   2018 ;	-----------------------------------------
+      00029D                       2019 _Port_Init:
+                           00029D  2020 	C$LAB2DebounceTest.c$511$1$107 ==.
+                                   2021 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:511: P3MDOUT |= 0xF8; //set Port 3 output pins to push-pull mode
+      00029D 43 A7 F8         [24] 2022 	orl	_P3MDOUT,#0xF8
+                           0002A0  2023 	C$LAB2DebounceTest.c$512$1$107 ==.
+                                   2024 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:512: P3MDOUT &= 0xDE; //set Port 3 input pins to open drain mode
+      0002A0 53 A7 DE         [24] 2025 	anl	_P3MDOUT,#0xDE
+                           0002A3  2026 	C$LAB2DebounceTest.c$513$1$107 ==.
+                                   2027 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:513: P3 |= ~0xDE;     //set Port 3 input pins to high impedance state
+      0002A3 AF B0            [24] 2028 	mov	r7,_P3
+      0002A5 74 21            [12] 2029 	mov	a,#0x21
+      0002A7 4F               [12] 2030 	orl	a,r7
+      0002A8 F5 B0            [12] 2031 	mov	_P3,a
+                           0002AA  2032 	C$LAB2DebounceTest.c$515$1$107 ==.
+                                   2033 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:515: P2MDOUT |= 0xF8; //set Port 2 input pin to push-pull mode
+      0002AA 43 A6 F8         [24] 2034 	orl	_P2MDOUT,#0xF8
+                           0002AD  2035 	C$LAB2DebounceTest.c$516$1$107 ==.
+                                   2036 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:516: P2MDOUT &= ~0x10; // set port 2 in
+      0002AD AF A6            [24] 2037 	mov	r7,_P2MDOUT
+      0002AF 74 EF            [12] 2038 	mov	a,#0xEF
+      0002B1 5F               [12] 2039 	anl	a,r7
+      0002B2 F5 A6            [12] 2040 	mov	_P2MDOUT,a
+                           0002B4  2041 	C$LAB2DebounceTest.c$517$1$107 ==.
+                                   2042 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:517: P2 |= ~0XFE;     //set Port 2 input pin to high impedance state
+      0002B4 AF A0            [24] 2043 	mov	r7,_P2
+      0002B6 74 01            [12] 2044 	mov	a,#0x01
+      0002B8 4F               [12] 2045 	orl	a,r7
+      0002B9 F5 A0            [12] 2046 	mov	_P2,a
+                           0002BB  2047 	C$LAB2DebounceTest.c$519$1$107 ==.
+                                   2048 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:519: P1MDOUT |=0xF8; //1 to push pull
+      0002BB 43 A5 F8         [24] 2049 	orl	_P1MDOUT,#0xF8
+                           0002BE  2050 	C$LAB2DebounceTest.c$520$1$107 ==.
+                                   2051 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:520: P1MDIN &= ~0x20; //1.5 analog input
+      0002BE AF BD            [24] 2052 	mov	r7,_P1MDIN
+      0002C0 74 DF            [12] 2053 	mov	a,#0xDF
+      0002C2 5F               [12] 2054 	anl	a,r7
+      0002C3 F5 BD            [12] 2055 	mov	_P1MDIN,a
+                           0002C5  2056 	C$LAB2DebounceTest.c$521$1$107 ==.
+                                   2057 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:521: P1MDOUT &= ~0x20;// 1.5 to open drain 
+      0002C5 AF A5            [24] 2058 	mov	r7,_P1MDOUT
+      0002C7 74 DF            [12] 2059 	mov	a,#0xDF
+      0002C9 5F               [12] 2060 	anl	a,r7
+      0002CA F5 A5            [12] 2061 	mov	_P1MDOUT,a
+                           0002CC  2062 	C$LAB2DebounceTest.c$522$1$107 ==.
+                                   2063 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:522: P1|= 0x20; 
+      0002CC 43 90 20         [24] 2064 	orl	_P1,#0x20
+                           0002CF  2065 	C$LAB2DebounceTest.c$525$1$107 ==.
+                           0002CF  2066 	XG$Port_Init$0$0 ==.
+      0002CF 22               [24] 2067 	ret
+                                   2068 ;------------------------------------------------------------
+                                   2069 ;Allocation info for local variables in function 'BILEDOFF'
+                                   2070 ;------------------------------------------------------------
+                           0002D0  2071 	G$BILEDOFF$0$0 ==.
+                           0002D0  2072 	C$LAB2DebounceTest.c$529$1$107 ==.
+                                   2073 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:529: void BILEDOFF (void)
+                                   2074 ;	-----------------------------------------
+                                   2075 ;	 function BILEDOFF
+                                   2076 ;	-----------------------------------------
+      0002D0                       2077 _BILEDOFF:
+                           0002D0  2078 	C$LAB2DebounceTest.c$531$1$109 ==.
+                                   2079 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:531: BILED1=1;
+      0002D0 D2 90            [12] 2080 	setb	_BILED1
+                           0002D2  2081 	C$LAB2DebounceTest.c$532$1$109 ==.
+                                   2082 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:532: BILED0=1;
+      0002D2 D2 92            [12] 2083 	setb	_BILED0
+                           0002D4  2084 	C$LAB2DebounceTest.c$533$1$109 ==.
+                           0002D4  2085 	XG$BILEDOFF$0$0 ==.
+      0002D4 22               [24] 2086 	ret
+                                   2087 ;------------------------------------------------------------
+                                   2088 ;Allocation info for local variables in function 'StopAndResetTimer'
+                                   2089 ;------------------------------------------------------------
+                           0002D5  2090 	G$StopAndResetTimer$0$0 ==.
+                           0002D5  2091 	C$LAB2DebounceTest.c$537$1$109 ==.
+                                   2092 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:537: void StopAndResetTimer(void) 
+                                   2093 ;	-----------------------------------------
+                                   2094 ;	 function StopAndResetTimer
+                                   2095 ;	-----------------------------------------
+      0002D5                       2096 _StopAndResetTimer:
+                           0002D5  2097 	C$LAB2DebounceTest.c$539$1$111 ==.
+                                   2098 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:539: TR0 = 0;           	// Stop Timer0
+      0002D5 C2 8C            [12] 2099 	clr	_TR0
+                           0002D7  2100 	C$LAB2DebounceTest.c$540$1$111 ==.
+                                   2101 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:540: TMR0 = 0;           // Clear high & low byte of T0	
+      0002D7 E4               [12] 2102 	clr	a
+      0002D8 F5 8A            [12] 2103 	mov	((_TMR0 >> 0) & 0xFF),a
+      0002DA F5 8C            [12] 2104 	mov	((_TMR0 >> 8) & 0xFF),a
+                           0002DC  2105 	C$LAB2DebounceTest.c$541$1$111 ==.
+                                   2106 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:541: Counts=0;			// clear counts
+      0002DC F5*02            [12] 2107 	mov	_Counts,a
+      0002DE F5*03            [12] 2108 	mov	(_Counts + 1),a
+                           0002E0  2109 	C$LAB2DebounceTest.c$542$1$111 ==.
+                           0002E0  2110 	XG$StopAndResetTimer$0$0 ==.
+      0002E0 22               [24] 2111 	ret
+                                   2112 ;------------------------------------------------------------
+                                   2113 ;Allocation info for local variables in function 'Interrupt_Init'
+                                   2114 ;------------------------------------------------------------
+                           0002E1  2115 	G$Interrupt_Init$0$0 ==.
+                           0002E1  2116 	C$LAB2DebounceTest.c$543$1$111 ==.
+                                   2117 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:543: void Interrupt_Init(void) 
+                                   2118 ;	-----------------------------------------
+                                   2119 ;	 function Interrupt_Init
+                                   2120 ;	-----------------------------------------
+      0002E1                       2121 _Interrupt_Init:
+                           0002E1  2122 	C$LAB2DebounceTest.c$545$1$113 ==.
+                                   2123 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:545: IE |= 0x02;      // enable Timer0 Interrupt request (by masking)
+      0002E1 43 A8 02         [24] 2124 	orl	_IE,#0x02
+                           0002E4  2125 	C$LAB2DebounceTest.c$546$1$113 ==.
+                                   2126 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:546: EA = 1;       // enable global interrupts (by sbit)
+      0002E4 D2 AF            [12] 2127 	setb	_EA
+                           0002E6  2128 	C$LAB2DebounceTest.c$547$1$113 ==.
+                           0002E6  2129 	XG$Interrupt_Init$0$0 ==.
+      0002E6 22               [24] 2130 	ret
+                                   2131 ;------------------------------------------------------------
+                                   2132 ;Allocation info for local variables in function 'Timer_Init'
+                                   2133 ;------------------------------------------------------------
+                           0002E7  2134 	G$Timer_Init$0$0 ==.
+                           0002E7  2135 	C$LAB2DebounceTest.c$549$1$113 ==.
+                                   2136 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:549: void Timer_Init(void) 
+                                   2137 ;	-----------------------------------------
+                                   2138 ;	 function Timer_Init
+                                   2139 ;	-----------------------------------------
+      0002E7                       2140 _Timer_Init:
+                           0002E7  2141 	C$LAB2DebounceTest.c$551$1$115 ==.
+                                   2142 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:551: CKCON |=0x08;  // Timer0 uses SYSCLK as source
+      0002E7 43 8E 08         [24] 2143 	orl	_CKCON,#0x08
+                           0002EA  2144 	C$LAB2DebounceTest.c$552$1$115 ==.
+                                   2145 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:552: TMOD &=0xF0;   	// clear the 4 least significant bits
+      0002EA 53 89 F0         [24] 2146 	anl	_TMOD,#0xF0
+                           0002ED  2147 	C$LAB2DebounceTest.c$553$1$115 ==.
+                                   2148 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:553: TMOD |= 0x01;	// Timer0 in mode 1
+      0002ED 43 89 01         [24] 2149 	orl	_TMOD,#0x01
+                           0002F0  2150 	C$LAB2DebounceTest.c$554$1$115 ==.
+                                   2151 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:554: TR0 = 0;        // Stop Timer0
+      0002F0 C2 8C            [12] 2152 	clr	_TR0
+                           0002F2  2153 	C$LAB2DebounceTest.c$555$1$115 ==.
+                                   2154 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:555: TMR0 = 0;       // Clear high & low byte of T0
+      0002F2 E4               [12] 2155 	clr	a
+      0002F3 F5 8A            [12] 2156 	mov	((_TMR0 >> 0) & 0xFF),a
+      0002F5 F5 8C            [12] 2157 	mov	((_TMR0 >> 8) & 0xFF),a
+                           0002F7  2158 	C$LAB2DebounceTest.c$557$1$115 ==.
+                           0002F7  2159 	XG$Timer_Init$0$0 ==.
+      0002F7 22               [24] 2160 	ret
+                                   2161 ;------------------------------------------------------------
+                                   2162 ;Allocation info for local variables in function 'Analog_Init'
+                                   2163 ;------------------------------------------------------------
+                           0002F8  2164 	G$Analog_Init$0$0 ==.
+                           0002F8  2165 	C$LAB2DebounceTest.c$561$1$115 ==.
+                                   2166 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:561: void Analog_Init(void)
+                                   2167 ;	-----------------------------------------
+                                   2168 ;	 function Analog_Init
+                                   2169 ;	-----------------------------------------
+      0002F8                       2170 _Analog_Init:
+                           0002F8  2171 	C$LAB2DebounceTest.c$563$1$117 ==.
+                                   2172 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:563: REF0CN = 0x03; 	//Set Vref to use internal reference voltage (2.4 V)
+      0002F8 75 D1 03         [24] 2173 	mov	_REF0CN,#0x03
+                           0002FB  2174 	C$LAB2DebounceTest.c$564$1$117 ==.
+                                   2175 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:564: ADC1CN = 0x80;		//Enable A/D converter (ADC1) 
+      0002FB 75 AA 80         [24] 2176 	mov	_ADC1CN,#0x80
+                           0002FE  2177 	C$LAB2DebounceTest.c$565$1$117 ==.
+                                   2178 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:565: ADC1CF |= 0x01; 	//Set A/D converter gain to 1 //does it have to be IDK
+      0002FE 43 AB 01         [24] 2179 	orl	_ADC1CF,#0x01
+                           000301  2180 	C$LAB2DebounceTest.c$566$1$117 ==.
+                           000301  2181 	XG$Analog_Init$0$0 ==.
+      000301 22               [24] 2182 	ret
+                                   2183 ;------------------------------------------------------------
+                                   2184 ;Allocation info for local variables in function 'ReadAnalog'
+                                   2185 ;------------------------------------------------------------
+                                   2186 ;n                         Allocated to registers 
+                                   2187 ;------------------------------------------------------------
+                           000302  2188 	G$ReadAnalog$0$0 ==.
+                           000302  2189 	C$LAB2DebounceTest.c$568$1$117 ==.
+                                   2190 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:568: unsigned char ReadAnalog(unsigned char n)
+                                   2191 ;	-----------------------------------------
+                                   2192 ;	 function ReadAnalog
+                                   2193 ;	-----------------------------------------
+      000302                       2194 _ReadAnalog:
+      000302 85 82 AC         [24] 2195 	mov	_AMX1SL,dpl
+                           000305  2196 	C$LAB2DebounceTest.c$571$1$119 ==.
+                                   2197 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:571: ADC1CN = ADC1CN & ~0x20; 		//Clear the [Conversion Completed] flag 
+      000305 AF AA            [24] 2198 	mov	r7,_ADC1CN
+      000307 74 DF            [12] 2199 	mov	a,#0xDF
+      000309 5F               [12] 2200 	anl	a,r7
+      00030A F5 AA            [12] 2201 	mov	_ADC1CN,a
+                           00030C  2202 	C$LAB2DebounceTest.c$572$1$119 ==.
+                                   2203 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:572: ADC1CN = ADC1CN | 0x10; 		//Initiate A/D conversion 
+      00030C 43 AA 10         [24] 2204 	orl	_ADC1CN,#0x10
+                           00030F  2205 	C$LAB2DebounceTest.c$573$1$119 ==.
+                                   2206 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:573: while ((ADC1CN & 0x20) == 0x00);//Wait for conversion to complete 
+      00030F                       2207 00101$:
+      00030F E5 AA            [12] 2208 	mov	a,_ADC1CN
+      000311 30 E5 FB         [24] 2209 	jnb	acc.5,00101$
+                           000314  2210 	C$LAB2DebounceTest.c$574$1$119 ==.
+                                   2211 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:574: return ADC1; 					//Return digital value in ADC1 register 
+      000314 85 9C 82         [24] 2212 	mov	dpl,_ADC1
+                           000317  2213 	C$LAB2DebounceTest.c$575$1$119 ==.
+                           000317  2214 	XG$ReadAnalog$0$0 ==.
+      000317 22               [24] 2215 	ret
+                                   2216 ;------------------------------------------------------------
+                                   2217 ;Allocation info for local variables in function 'Timer0_ISR'
+                                   2218 ;------------------------------------------------------------
+                           000318  2219 	G$Timer0_ISR$0$0 ==.
+                           000318  2220 	C$LAB2DebounceTest.c$578$1$119 ==.
+                                   2221 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:578: void Timer0_ISR(void) __interrupt 1
+                                   2222 ;	-----------------------------------------
+                                   2223 ;	 function Timer0_ISR
+                                   2224 ;	-----------------------------------------
+      000318                       2225 _Timer0_ISR:
+      000318 C0 E0            [24] 2226 	push	acc
+      00031A C0 D0            [24] 2227 	push	psw
+                           00031C  2228 	C$LAB2DebounceTest.c$580$1$121 ==.
+                                   2229 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:580: Counts++; //Adds 1 to Counts
+      00031C 74 01            [12] 2230 	mov	a,#0x01
+      00031E 25*02            [12] 2231 	add	a,_Counts
+      000320 F5*02            [12] 2232 	mov	_Counts,a
+      000322 E4               [12] 2233 	clr	a
+      000323 35*03            [12] 2234 	addc	a,(_Counts + 1)
+      000325 F5*03            [12] 2235 	mov	(_Counts + 1),a
+                           000327  2236 	C$LAB2DebounceTest.c$581$1$121 ==.
+                                   2237 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:581: Counts15++;
+      000327 74 01            [12] 2238 	mov	a,#0x01
+      000329 25*04            [12] 2239 	add	a,_Counts15
+      00032B F5*04            [12] 2240 	mov	_Counts15,a
+      00032D E4               [12] 2241 	clr	a
+      00032E 35*05            [12] 2242 	addc	a,(_Counts15 + 1)
+      000330 F5*05            [12] 2243 	mov	(_Counts15 + 1),a
+                           000332  2244 	C$LAB2DebounceTest.c$582$1$121 ==.
+                                   2245 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:582: pcounts++;
+      000332 74 01            [12] 2246 	mov	a,#0x01
+      000334 25*06            [12] 2247 	add	a,_pcounts
+      000336 F5*06            [12] 2248 	mov	_pcounts,a
+      000338 E4               [12] 2249 	clr	a
+      000339 35*07            [12] 2250 	addc	a,(_pcounts + 1)
+      00033B F5*07            [12] 2251 	mov	(_pcounts + 1),a
+      00033D D0 D0            [24] 2252 	pop	psw
+      00033F D0 E0            [24] 2253 	pop	acc
+                           000341  2254 	C$LAB2DebounceTest.c$583$1$121 ==.
+                           000341  2255 	XG$Timer0_ISR$0$0 ==.
+      000341 32               [24] 2256 	reti
+                                   2257 ;	eliminated unneeded mov psw,# (no regs used in bank)
+                                   2258 ;	eliminated unneeded push/pop dpl
+                                   2259 ;	eliminated unneeded push/pop dph
+                                   2260 ;	eliminated unneeded push/pop b
+                                   2261 ;------------------------------------------------------------
+                                   2262 ;Allocation info for local variables in function 'random'
+                                   2263 ;------------------------------------------------------------
+                           000342  2264 	G$random$0$0 ==.
+                           000342  2265 	C$LAB2DebounceTest.c$593$1$121 ==.
+                                   2266 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:593: unsigned char random(void) 
+                                   2267 ;	-----------------------------------------
+                                   2268 ;	 function random
+                                   2269 ;	-----------------------------------------
+      000342                       2270 _random:
+                           000342  2271 	C$LAB2DebounceTest.c$595$1$123 ==.
+                                   2272 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:595: return (rand()%4);  // rand returns a random number between 0 and 32767.
+      000342 12r00r00         [24] 2273 	lcall	_rand
+      000345 75*00 04         [24] 2274 	mov	__modsint_PARM_2,#0x04
+      000348 75*01 00         [24] 2275 	mov	(__modsint_PARM_2 + 1),#0x00
+      00034B 12r00r00         [24] 2276 	lcall	__modsint
+                           00034E  2277 	C$LAB2DebounceTest.c$596$1$123 ==.
+                           00034E  2278 	XG$random$0$0 ==.
+      00034E 22               [24] 2279 	ret
+                                   2280 ;------------------------------------------------------------
+                                   2281 ;Allocation info for local variables in function 'randGen'
+                                   2282 ;------------------------------------------------------------
+                           00034F  2283 	G$randGen$0$0 ==.
+                           00034F  2284 	C$LAB2DebounceTest.c$598$1$123 ==.
+                                   2285 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:598: void randGen(void) 
+                                   2286 ;	-----------------------------------------
+                                   2287 ;	 function randGen
+                                   2288 ;	-----------------------------------------
+      00034F                       2289 _randGen:
+                           00034F  2290 	C$LAB2DebounceTest.c$600$1$125 ==.
+                                   2291 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:600: previousnum=0;
+      00034F 75*0B 00         [24] 2292 	mov	_previousnum,#0x00
+                           000352  2293 	C$LAB2DebounceTest.c$601$1$125 ==.
+                                   2294 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:601: x=0;
+      000352 75*08 00         [24] 2295 	mov	_x,#0x00
+                           000355  2296 	C$LAB2DebounceTest.c$602$2$126 ==.
+                                   2297 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:602: while (x<=9)
+      000355                       2298 00104$:
+      000355 C3               [12] 2299 	clr	c
+      000356 74 89            [12] 2300 	mov	a,#(0x09 ^ 0x80)
+      000358 85*08 F0         [24] 2301 	mov	b,_x
+      00035B 63 F0 80         [24] 2302 	xrl	b,#0x80
+      00035E 95 F0            [12] 2303 	subb	a,b
+      000360 40 26            [24] 2304 	jc	00106$
+                           000362  2305 	C$LAB2DebounceTest.c$604$2$126 ==.
+                                   2306 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:604: randomnum=random();
+      000362 12r03r42         [24] 2307 	lcall	_random
+      000365 85 82*0A         [24] 2308 	mov	_randomnum,dpl
+                           000368  2309 	C$LAB2DebounceTest.c$605$2$126 ==.
+                                   2310 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:605: Counts=0;
+      000368 E4               [12] 2311 	clr	a
+      000369 F5*02            [12] 2312 	mov	_Counts,a
+      00036B F5*03            [12] 2313 	mov	(_Counts + 1),a
+                           00036D  2314 	C$LAB2DebounceTest.c$606$2$126 ==.
+                                   2315 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:606: while (randomnum==previousnum)
+      00036D                       2316 00101$:
+      00036D E5*0B            [12] 2317 	mov	a,_previousnum
+      00036F B5*0A 08         [24] 2318 	cjne	a,_randomnum,00103$
+                           000372  2319 	C$LAB2DebounceTest.c$608$3$127 ==.
+                                   2320 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:608: randomnum = random();
+      000372 12r03r42         [24] 2321 	lcall	_random
+      000375 85 82*0A         [24] 2322 	mov	_randomnum,dpl
+      000378 80 F3            [24] 2323 	sjmp	00101$
+      00037A                       2324 00103$:
+                           00037A  2325 	C$LAB2DebounceTest.c$610$2$126 ==.
+                                   2326 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:610: previousnum=randomnum;
+      00037A 85*0A*0B         [24] 2327 	mov	_previousnum,_randomnum
+                           00037D  2328 	C$LAB2DebounceTest.c$612$2$126 ==.
+                                   2329 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:612: randList[x]=randomnum;
+      00037D E5*08            [12] 2330 	mov	a,_x
+      00037F 24r0F            [12] 2331 	add	a,#_randList
+      000381 F8               [12] 2332 	mov	r0,a
+      000382 A6*0A            [24] 2333 	mov	@r0,_randomnum
+                           000384  2334 	C$LAB2DebounceTest.c$613$2$126 ==.
+                                   2335 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:613: x++;
+      000384 05*08            [12] 2336 	inc	_x
+      000386 80 CD            [24] 2337 	sjmp	00104$
+      000388                       2338 00106$:
+                           000388  2339 	C$LAB2DebounceTest.c$615$1$125 ==.
+                                   2340 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:615: for(x=0;x<10;x++)
+      000388 75*08 00         [24] 2341 	mov	_x,#0x00
+      00038B                       2342 00108$:
+                           00038B  2343 	C$LAB2DebounceTest.c$617$2$128 ==.
+                                   2344 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:617: printf("\rRand %d is %d\n",x,randList[x]);
+      00038B E5*08            [12] 2345 	mov	a,_x
+      00038D 24r0F            [12] 2346 	add	a,#_randList
+      00038F F9               [12] 2347 	mov	r1,a
+      000390 87 07            [24] 2348 	mov	ar7,@r1
+      000392 7E 00            [12] 2349 	mov	r6,#0x00
+      000394 E5*08            [12] 2350 	mov	a,_x
+      000396 FC               [12] 2351 	mov	r4,a
+      000397 33               [12] 2352 	rlc	a
+      000398 95 E0            [12] 2353 	subb	a,acc
+      00039A FD               [12] 2354 	mov	r5,a
+      00039B C0 07            [24] 2355 	push	ar7
+      00039D C0 06            [24] 2356 	push	ar6
+      00039F C0 04            [24] 2357 	push	ar4
+      0003A1 C0 05            [24] 2358 	push	ar5
+      0003A3 74r4C            [12] 2359 	mov	a,#___str_7
+      0003A5 C0 E0            [24] 2360 	push	acc
+      0003A7 74s00            [12] 2361 	mov	a,#(___str_7 >> 8)
+      0003A9 C0 E0            [24] 2362 	push	acc
+      0003AB 74 80            [12] 2363 	mov	a,#0x80
+      0003AD C0 E0            [24] 2364 	push	acc
+      0003AF 12r00r00         [24] 2365 	lcall	_printf
+      0003B2 E5 81            [12] 2366 	mov	a,sp
+      0003B4 24 F9            [12] 2367 	add	a,#0xf9
+      0003B6 F5 81            [12] 2368 	mov	sp,a
+                           0003B8  2369 	C$LAB2DebounceTest.c$615$1$125 ==.
+                                   2370 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:615: for(x=0;x<10;x++)
+      0003B8 05*08            [12] 2371 	inc	_x
+      0003BA C3               [12] 2372 	clr	c
+      0003BB E5*08            [12] 2373 	mov	a,_x
+      0003BD 64 80            [12] 2374 	xrl	a,#0x80
+      0003BF 94 8A            [12] 2375 	subb	a,#0x8a
+      0003C1 40 C8            [24] 2376 	jc	00108$
+                           0003C3  2377 	C$LAB2DebounceTest.c$620$1$125 ==.
+                           0003C3  2378 	XG$randGen$0$0 ==.
+      0003C3 22               [24] 2379 	ret
+                                   2380 ;------------------------------------------------------------
+                                   2381 ;Allocation info for local variables in function 'resetArrays'
+                                   2382 ;------------------------------------------------------------
+                           0003C4  2383 	G$resetArrays$0$0 ==.
+                           0003C4  2384 	C$LAB2DebounceTest.c$622$1$125 ==.
+                                   2385 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:622: void resetArrays(void) 
+                                   2386 ;	-----------------------------------------
+                                   2387 ;	 function resetArrays
+                                   2388 ;	-----------------------------------------
+      0003C4                       2389 _resetArrays:
+                           0003C4  2390 	C$LAB2DebounceTest.c$625$1$130 ==.
+                                   2391 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:625: for(x=0; x<=2; x++) 
+      0003C4 75*08 00         [24] 2392 	mov	_x,#0x00
+      0003C7                       2393 00108$:
+                           0003C7  2394 	C$LAB2DebounceTest.c$628$2$131 ==.
+                                   2395 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:628: for(y=0; y<=2; y++) 
+      0003C7 75*09 00         [24] 2396 	mov	_y,#0x00
+      0003CA                       2397 00106$:
+                           0003CA  2398 	C$LAB2DebounceTest.c$630$3$132 ==.
+                                   2399 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:630: Points [x][y]=0;
+      0003CA E5*08            [12] 2400 	mov	a,_x
+      0003CC 75 F0 03         [24] 2401 	mov	b,#0x03
+      0003CF A4               [48] 2402 	mul	ab
+      0003D0 24r19            [12] 2403 	add	a,#_Points
+      0003D2 FF               [12] 2404 	mov	r7,a
+      0003D3 25*09            [12] 2405 	add	a,_y
+      0003D5 F8               [12] 2406 	mov	r0,a
+      0003D6 76 00            [12] 2407 	mov	@r0,#0x00
+                           0003D8  2408 	C$LAB2DebounceTest.c$628$2$131 ==.
+                                   2409 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:628: for(y=0; y<=2; y++) 
+      0003D8 05*09            [12] 2410 	inc	_y
+      0003DA C3               [12] 2411 	clr	c
+      0003DB 74 82            [12] 2412 	mov	a,#(0x02 ^ 0x80)
+      0003DD 85*09 F0         [24] 2413 	mov	b,_y
+      0003E0 63 F0 80         [24] 2414 	xrl	b,#0x80
+      0003E3 95 F0            [12] 2415 	subb	a,b
+      0003E5 50 E3            [24] 2416 	jnc	00106$
+                           0003E7  2417 	C$LAB2DebounceTest.c$625$1$130 ==.
+                                   2418 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:625: for(x=0; x<=2; x++) 
+      0003E7 05*08            [12] 2419 	inc	_x
+      0003E9 C3               [12] 2420 	clr	c
+      0003EA 74 82            [12] 2421 	mov	a,#(0x02 ^ 0x80)
+      0003EC 85*08 F0         [24] 2422 	mov	b,_x
+      0003EF 63 F0 80         [24] 2423 	xrl	b,#0x80
+      0003F2 95 F0            [12] 2424 	subb	a,b
+      0003F4 50 D1            [24] 2425 	jnc	00108$
+                           0003F6  2426 	C$LAB2DebounceTest.c$633$1$130 ==.
+                                   2427 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:633: x=0;
+      0003F6 75*08 00         [24] 2428 	mov	_x,#0x00
+                           0003F9  2429 	C$LAB2DebounceTest.c$634$2$133 ==.
+                                   2430 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:634: while(x<=9) 
+      0003F9                       2431 00103$:
+      0003F9 C3               [12] 2432 	clr	c
+      0003FA 74 89            [12] 2433 	mov	a,#(0x09 ^ 0x80)
+      0003FC 85*08 F0         [24] 2434 	mov	b,_x
+      0003FF 63 F0 80         [24] 2435 	xrl	b,#0x80
+      000402 95 F0            [12] 2436 	subb	a,b
+      000404 40 0B            [24] 2437 	jc	00110$
+                           000406  2438 	C$LAB2DebounceTest.c$636$2$133 ==.
+                                   2439 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:636: randList[x]=0;
+      000406 E5*08            [12] 2440 	mov	a,_x
+      000408 24r0F            [12] 2441 	add	a,#_randList
+      00040A F8               [12] 2442 	mov	r0,a
+      00040B 76 00            [12] 2443 	mov	@r0,#0x00
+                           00040D  2444 	C$LAB2DebounceTest.c$637$2$133 ==.
+                                   2445 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:637: x++;
+      00040D 05*08            [12] 2446 	inc	_x
+      00040F 80 E8            [24] 2447 	sjmp	00103$
+      000411                       2448 00110$:
+                           000411  2449 	C$LAB2DebounceTest.c$639$1$130 ==.
+                           000411  2450 	XG$resetArrays$0$0 ==.
+      000411 22               [24] 2451 	ret
+                                   2452 ;------------------------------------------------------------
+                                   2453 ;Allocation info for local variables in function 'StartTimer'
+                                   2454 ;------------------------------------------------------------
+                           000412  2455 	G$StartTimer$0$0 ==.
+                           000412  2456 	C$LAB2DebounceTest.c$640$1$130 ==.
+                                   2457 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:640: void StartTimer(void)
+                                   2458 ;	-----------------------------------------
+                                   2459 ;	 function StartTimer
+                                   2460 ;	-----------------------------------------
+      000412                       2461 _StartTimer:
+                           000412  2462 	C$LAB2DebounceTest.c$642$1$135 ==.
+                                   2463 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:642: TR0=1;
+      000412 D2 8C            [12] 2464 	setb	_TR0
+                           000414  2465 	C$LAB2DebounceTest.c$643$1$135 ==.
+                           000414  2466 	XG$StartTimer$0$0 ==.
+      000414 22               [24] 2467 	ret
+                                   2468 ;------------------------------------------------------------
+                                   2469 ;Allocation info for local variables in function 'PauseTimer'
+                                   2470 ;------------------------------------------------------------
+                           000415  2471 	G$PauseTimer$0$0 ==.
+                           000415  2472 	C$LAB2DebounceTest.c$645$1$135 ==.
+                                   2473 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:645: void PauseTimer(void)
+                                   2474 ;	-----------------------------------------
+                                   2475 ;	 function PauseTimer
+                                   2476 ;	-----------------------------------------
+      000415                       2477 _PauseTimer:
+                           000415  2478 	C$LAB2DebounceTest.c$647$1$137 ==.
+                                   2479 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:647: TR0=0;
+      000415 C2 8C            [12] 2480 	clr	_TR0
+                           000417  2481 	C$LAB2DebounceTest.c$648$1$137 ==.
+                                   2482 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:648: while(SS)
+      000417                       2483 00101$:
+      000417 30 A4 04         [24] 2484 	jnb	_SS,00104$
+                           00041A  2485 	C$LAB2DebounceTest.c$650$2$138 ==.
+                                   2486 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:650: BILED0=1;
+      00041A D2 92            [12] 2487 	setb	_BILED0
+      00041C 80 F9            [24] 2488 	sjmp	00101$
+      00041E                       2489 00104$:
+                           00041E  2490 	C$LAB2DebounceTest.c$652$1$137 ==.
+                           00041E  2491 	XG$PauseTimer$0$0 ==.
+      00041E 22               [24] 2492 	ret
+                                   2493 ;------------------------------------------------------------
+                                   2494 ;Allocation info for local variables in function 'On'
+                                   2495 ;------------------------------------------------------------
+                           00041F  2496 	G$On$0$0 ==.
+                           00041F  2497 	C$LAB2DebounceTest.c$658$1$137 ==.
+                                   2498 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:658: void On(void)
+                                   2499 ;	-----------------------------------------
+                                   2500 ;	 function On
+                                   2501 ;	-----------------------------------------
+      00041F                       2502 _On:
+                           00041F  2503 	C$LAB2DebounceTest.c$660$1$140 ==.
+                                   2504 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:660: AD_value = ReadAnalog(5);
+      00041F 75 82 05         [24] 2505 	mov	dpl,#0x05
+      000422 12r03r02         [24] 2506 	lcall	_ReadAnalog
+      000425 AF 82            [24] 2507 	mov	r7,dpl
+      000427 8F*25            [24] 2508 	mov	_AD_value,r7
+      000429 75*26 00         [24] 2509 	mov	(_AD_value + 1),#0x00
+                           00042C  2510 	C$LAB2DebounceTest.c$661$1$140 ==.
+                                   2511 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:661: on_time = (AD_value* 5+ 200)*.001*338; 
+      00042C 85*25*00         [24] 2512 	mov	__mulint_PARM_2,_AD_value
+      00042F 85*26*01         [24] 2513 	mov	(__mulint_PARM_2 + 1),(_AD_value + 1)
+      000432 90 00 05         [24] 2514 	mov	dptr,#0x0005
+      000435 12r00r00         [24] 2515 	lcall	__mulint
+      000438 E5 82            [12] 2516 	mov	a,dpl
+      00043A 85 83 F0         [24] 2517 	mov	b,dph
+      00043D 24 C8            [12] 2518 	add	a,#0xC8
+      00043F F5 82            [12] 2519 	mov	dpl,a
+      000441 E4               [12] 2520 	clr	a
+      000442 35 F0            [12] 2521 	addc	a,b
+      000444 F5 83            [12] 2522 	mov	dph,a
+      000446 12r00r00         [24] 2523 	lcall	___uint2fs
+      000449 AC 82            [24] 2524 	mov	r4,dpl
+      00044B AD 83            [24] 2525 	mov	r5,dph
+      00044D AE F0            [24] 2526 	mov	r6,b
+      00044F FF               [12] 2527 	mov	r7,a
+      000450 C0 04            [24] 2528 	push	ar4
+      000452 C0 05            [24] 2529 	push	ar5
+      000454 C0 06            [24] 2530 	push	ar6
+      000456 C0 07            [24] 2531 	push	ar7
+      000458 90 0E 56         [24] 2532 	mov	dptr,#0x0E56
+      00045B 75 F0 AD         [24] 2533 	mov	b,#0xAD
+      00045E 74 3E            [12] 2534 	mov	a,#0x3E
+      000460 12r00r00         [24] 2535 	lcall	___fsmul
+      000463 AC 82            [24] 2536 	mov	r4,dpl
+      000465 AD 83            [24] 2537 	mov	r5,dph
+      000467 AE F0            [24] 2538 	mov	r6,b
+      000469 FF               [12] 2539 	mov	r7,a
+      00046A E5 81            [12] 2540 	mov	a,sp
+      00046C 24 FC            [12] 2541 	add	a,#0xfc
+      00046E F5 81            [12] 2542 	mov	sp,a
+      000470 8C 82            [24] 2543 	mov	dpl,r4
+      000472 8D 83            [24] 2544 	mov	dph,r5
+      000474 8E F0            [24] 2545 	mov	b,r6
+      000476 EF               [12] 2546 	mov	a,r7
+      000477 12r00r00         [24] 2547 	lcall	___fs2uint
+      00047A 85 82*27         [24] 2548 	mov	_on_time,dpl
+      00047D 85 83*28         [24] 2549 	mov	(_on_time + 1),dph
+                           000480  2550 	C$LAB2DebounceTest.c$662$1$140 ==.
+                           000480  2551 	XG$On$0$0 ==.
+      000480 22               [24] 2552 	ret
+                                   2553 ;------------------------------------------------------------
+                                   2554 ;Allocation info for local variables in function 'Off'
+                                   2555 ;------------------------------------------------------------
+                           000481  2556 	G$Off$0$0 ==.
+                           000481  2557 	C$LAB2DebounceTest.c$663$1$140 ==.
+                                   2558 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:663: void Off(void)
+                                   2559 ;	-----------------------------------------
+                                   2560 ;	 function Off
+                                   2561 ;	-----------------------------------------
+      000481                       2562 _Off:
+                           000481  2563 	C$LAB2DebounceTest.c$665$1$142 ==.
+                                   2564 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:665: On();
+      000481 12r04r1F         [24] 2565 	lcall	_On
+                           000484  2566 	C$LAB2DebounceTest.c$666$1$142 ==.
+                                   2567 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:666: off_time =(on_time/2);
+      000484 85*27*29         [24] 2568 	mov	_off_time,_on_time
+      000487 E5*28            [12] 2569 	mov	a,(_on_time + 1)
+      000489 C3               [12] 2570 	clr	c
+      00048A 13               [12] 2571 	rrc	a
+      00048B C5*29            [12] 2572 	xch	a,_off_time
+      00048D 13               [12] 2573 	rrc	a
+      00048E C5*29            [12] 2574 	xch	a,_off_time
+      000490 F5*2A            [12] 2575 	mov	(_off_time + 1),a
+                           000492  2576 	C$LAB2DebounceTest.c$667$1$142 ==.
+                           000492  2577 	XG$Off$0$0 ==.
+      000492 22               [24] 2578 	ret
+                                   2579 ;------------------------------------------------------------
+                                   2580 ;Allocation info for local variables in function 'lightson'
+                                   2581 ;------------------------------------------------------------
+                           000493  2582 	G$lightson$0$0 ==.
+                           000493  2583 	C$LAB2DebounceTest.c$668$1$142 ==.
+                                   2584 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:668: void lightson(void)
+                                   2585 ;	-----------------------------------------
+                                   2586 ;	 function lightson
+                                   2587 ;	-----------------------------------------
+      000493                       2588 _lightson:
+                           000493  2589 	C$LAB2DebounceTest.c$670$1$144 ==.
+                                   2590 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:670: Counts=0;
+      000493 E4               [12] 2591 	clr	a
+      000494 F5*02            [12] 2592 	mov	_Counts,a
+      000496 F5*03            [12] 2593 	mov	(_Counts + 1),a
+                           000498  2594 	C$LAB2DebounceTest.c$671$1$144 ==.
+                                   2595 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:671: while(Counts<=on_time);
+      000498                       2596 00101$:
+      000498 C3               [12] 2597 	clr	c
+      000499 E5*27            [12] 2598 	mov	a,_on_time
+      00049B 95*02            [12] 2599 	subb	a,_Counts
+      00049D E5*28            [12] 2600 	mov	a,(_on_time + 1)
+      00049F 95*03            [12] 2601 	subb	a,(_Counts + 1)
+      0004A1 50 F5            [24] 2602 	jnc	00101$
+                           0004A3  2603 	C$LAB2DebounceTest.c$672$1$144 ==.
+                           0004A3  2604 	XG$lightson$0$0 ==.
+      0004A3 22               [24] 2605 	ret
+                                   2606 ;------------------------------------------------------------
+                                   2607 ;Allocation info for local variables in function 'lightsoff'
+                                   2608 ;------------------------------------------------------------
+                           0004A4  2609 	G$lightsoff$0$0 ==.
+                           0004A4  2610 	C$LAB2DebounceTest.c$673$1$144 ==.
+                                   2611 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:673: void lightsoff(void)
+                                   2612 ;	-----------------------------------------
+                                   2613 ;	 function lightsoff
+                                   2614 ;	-----------------------------------------
+      0004A4                       2615 _lightsoff:
+                           0004A4  2616 	C$LAB2DebounceTest.c$675$1$146 ==.
+                                   2617 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:675: Counts=0;
+      0004A4 E4               [12] 2618 	clr	a
+      0004A5 F5*02            [12] 2619 	mov	_Counts,a
+      0004A7 F5*03            [12] 2620 	mov	(_Counts + 1),a
+                           0004A9  2621 	C$LAB2DebounceTest.c$676$1$146 ==.
+                                   2622 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab2\LAB2_3_3\RandomCrap\LAB2DebounceTest.c:676: while(Counts<=off_time);
+      0004A9                       2623 00101$:
+      0004A9 C3               [12] 2624 	clr	c
+      0004AA E5*29            [12] 2625 	mov	a,_off_time
+      0004AC 95*02            [12] 2626 	subb	a,_Counts
+      0004AE E5*2A            [12] 2627 	mov	a,(_off_time + 1)
+      0004B0 95*03            [12] 2628 	subb	a,(_Counts + 1)
+      0004B2 50 F5            [24] 2629 	jnc	00101$
+                           0004B4  2630 	C$LAB2DebounceTest.c$677$1$146 ==.
+                           0004B4  2631 	XG$lightsoff$0$0 ==.
+      0004B4 22               [24] 2632 	ret
+                                   2633 	.area CSEG    (CODE)
+                                   2634 	.area CONST   (CODE)
+                           000000  2635 FLAB2DebounceTest$__str_0$0$0 == .
+      000000                       2636 ___str_0:
+      000000 0D                    2637 	.db 0x0D
+      000001 0A                    2638 	.db 0x0A
+      000002 42 75 74 74 6F 6E 20  2639 	.ascii "Button 0"
+             30
+      00000A 00                    2640 	.db 0x00
+                           00000B  2641 FLAB2DebounceTest$__str_1$0$0 == .
+      00000B                       2642 ___str_1:
+      00000B 0D                    2643 	.db 0x0D
+      00000C 0A                    2644 	.db 0x0A
+      00000D 42 75 74 74 6F 6E 20  2645 	.ascii "Button 1"
+             31
+      000015 00                    2646 	.db 0x00
+                           000016  2647 FLAB2DebounceTest$__str_2$0$0 == .
+      000016                       2648 ___str_2:
+      000016 0D                    2649 	.db 0x0D
+      000017 0A                    2650 	.db 0x0A
+      000018 42 75 74 74 6F 6E 20  2651 	.ascii "Button 2"
+             32
+      000020 00                    2652 	.db 0x00
+                           000021  2653 FLAB2DebounceTest$__str_3$0$0 == .
+      000021                       2654 ___str_3:
+      000021 0D                    2655 	.db 0x0D
+      000022 0A                    2656 	.db 0x0A
+      000023 42 75 74 74 6F 6E 20  2657 	.ascii "Button 3"
+             33
+      00002B 00                    2658 	.db 0x00
+                           00002C  2659 FLAB2DebounceTest$__str_4$0$0 == .
+      00002C                       2660 ___str_4:
+      00002C 0D                    2661 	.db 0x0D
+      00002D 20 6C 69 67 68 74     2662 	.ascii " light"
+      000033 0D                    2663 	.db 0x0D
+      000034 0A                    2664 	.db 0x0A
+      000035 00                    2665 	.db 0x00
+                           000036  2666 FLAB2DebounceTest$__str_5$0$0 == .
+      000036                       2667 ___str_5:
+      000036 0D                    2668 	.db 0x0D
+      000037 20 70 61 75 73 65     2669 	.ascii " pause"
+      00003D 0A                    2670 	.db 0x0A
+      00003E 00                    2671 	.db 0x00
+                           00003F  2672 FLAB2DebounceTest$__str_6$0$0 == .
+      00003F                       2673 ___str_6:
+      00003F 0D                    2674 	.db 0x0D
+      000040 20 65 6E 64 20 70 61  2675 	.ascii " end pause"
+             75 73 65
+      00004A 0A                    2676 	.db 0x0A
+      00004B 00                    2677 	.db 0x00
+                           00004C  2678 FLAB2DebounceTest$__str_7$0$0 == .
+      00004C                       2679 ___str_7:
+      00004C 0D                    2680 	.db 0x0D
+      00004D 52 61 6E 64 20 25 64  2681 	.ascii "Rand %d is %d"
+             20 69 73 20 25 64
+      00005A 0A                    2682 	.db 0x0A
+      00005B 00                    2683 	.db 0x00
+                                   2684 	.area XINIT   (CODE)
+                                   2685 	.area CABS    (ABS,CODE)
