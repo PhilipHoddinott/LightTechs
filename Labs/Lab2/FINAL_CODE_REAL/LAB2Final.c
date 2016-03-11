@@ -36,7 +36,7 @@ void ending(void);	//Displays ending sequanece
 void Buzz(void); //Buzzer
 char seq(char led); //Runs light sequence
 char pushButton(char button);
-void wait(void);	//Wait function
+void wait(void);	//Wait 1 second function
 void endTurn(void);	//End turn sequanece
 void light(char ledw);
 
@@ -135,13 +135,13 @@ void main(void) {
 		printf("\r Game now playing\n");	//Prints to show game has started
 		sum=0;
 		turn=0;
-		player=0;
+		player=0; might be redundant//
 		inputFunc=1;	//Sets all varibles to starting postion
 
 
 		while(!SS);
-		while(SS);
-		while(turn<3) //change later
+		while(SS);//Toggle Pause for whole game
+		while(turn<3) change later//Was it supposed to be 3?
 		{
 			printf("\r\nTurn %u begins... \r\n", turn);
 			printf("\r Please set game speed by turning the potentiometer... you have five seconds to do so\r\n\n");
@@ -151,13 +151,13 @@ void main(void) {
 				wait();
 			}
 			
-				On();
-				Off();
-			printf("\r\nYou selected on_time as: %u milliseconds\r\n", on_time/338*1000);	
-			wait();
-			printf("\r\nTurn is %u\r\n", turn);		//calcualte speed each time for the players
+			On();
+			Off(); brian this does the AD right?//
+			printf("\r\nYou selected on_time as: %u milliseconds\r\n", on_time/338*1000);	//calcualte speed each time for the players and dispaly
+			wait();	//wait
+			printf("\r\nTurn is %u\r\n", turn);	//Displays with active turn it is
 		
-			player=0;
+			player=0;	//Sets player to 0
 			
 			while(player<3)
 			{ 	
@@ -165,40 +165,40 @@ void main(void) {
 
 				printf("\r\nPlayer %u, get ready...\r\n",player);
 				break_the_hard_way=0;
-				resetArrays();
-				randGen();
+				resetArrays();	//Resets all arrays
+				randGen();	//randoly generates arrays
 
 				if(!SS){
-					player_turn(player);
+					player_turn(player);	//Runs the player turn function
 
 				}else{
 					while(SS){
 						biled_blink();
 					}
 					player_turn(player);
-				}
+				}//end else if for toggle pause
 			
-				scores[player]+=sum;
+				scores[player]+=sum;	//Add score to total player score
 				printf("player %d score this turn was %d, total score %d\n", player, sum, scores[player]);
-				sum=0;
+				sum=0;	//Reset sum
 					
 				player++;
 				printf("\r\n 									INCREMENTED BILED SET");
 				biledset++;
 				printf("\r\n 							BILED SET = %d\n", biledset);
-
+					Those lines above might be redundant
 				for(i=0;i<6;i++)
 				{
 				wait();
-				}
+				}//End for loop that waits 6 seconds
 
 			}//end while players
-			turn++;
+			turn++;		//Increments turn
 			biledset=0;
-			all_blink();
-			//BLINK FUNC
+			all_blink();	//Bink LEDS
 			
 			//endTurn();
+			note end turn is commented out. should we remove it?
 		}//end while turn<3
 	
 		printf("\rPlayer 1 score %d, Player 2 score %d, Player 3 score %d\n", scores[0], scores[1], scores[2]);
@@ -209,54 +209,35 @@ void main(void) {
 		printf("\r\n Toggle ss to start next round");
 		while (SS);
 		
-	}	
+	}//end infinite loop
 	
 }//end main
 
 
-void all_blink(){
-	LED0=0;
-	LED1=0;
-	LED2=0;
-	LED3=0;
+void all_blink(){//Turns all LEDS on-off, on-off
+	LED0=0;	LED1=0;	LED2=0;	LED3=0;
 	Counts=0;			//store starting counts
 	while(Counts<100);
-	LED0=1;
-	LED1=1;
-	LED2=1;
-	LED3=1;
+	LED0=1;	LED1=1;	LED2=1;	LED3=1;
 	Counts=0;			//store starting counts
 	while(Counts<100);
-	LED0=0;
-	LED1=0;
-	LED2=0;
-	LED3=0;
+	LED0=0;	LED1=0;	LED2=0;	LED3=0;
 	Counts=0;			//store starting counts
 	while(Counts<100);
-	LED0=1;
-	LED1=1;
-	LED2=1;
-	LED3=1;
+	LED0=1;	LED1=1;	LED2=1;	LED3=1;
 	Counts=0;	
-}
+}//end all blink
 
-void biled_blink(void)
-{
-	
-	//{
-		BILED0=1;
-		BILED1=0;
-		wait();
-		BILED0=0;
-		BILED1=1;
-		wait();
-	//}
-	
-}
+void biled_blink(void){//Blinks BILED, changing every second
+	BILED0=1;	BILED1=0;
+	wait();
+	BILED0=0;	BILED1=1;
+	wait();
+}//end BILED blink
 
 //add something to main code that increments biledset
 //add note that tells players which color they are (off, red, green)
-void biled_set(unsigned char biledset)
+void biled_set(unsigned char biledset)	//Sets BILED status. Used so that we do not have to type 2 lines of code all the time
 {
 	printf("\r\n 							BILED IS %d", biledset);
 	if(biledset == 0)
@@ -281,7 +262,7 @@ void biled_set(unsigned char biledset)
 	{
 		printf("\r\nError, something is wrong with variable: biledset");//debugging print statement 
 	}
-}
+}//end BILED_SEt
 
 
 //****************************************************************************************
@@ -289,26 +270,18 @@ void biled_set(unsigned char biledset)
 //*****************************************************************************************
 
 
-void player_turn(unsigned char player)
+void player_turn(unsigned char player)	//Main Turn function
 {
 	for(i=0;i<10;i++)
 	{//seqence of LEDs
-		//BILED0=0;
-		//BILED1=1;
+
 		for(k=0;k<=i;k++)
 		{
-		//	printf("\r\n Light k %d Light i %d \n",k,i );
 			light(randList[k]);//lightes up the lEDS in rand_seq
 		}//goes as high as i
 
-		//BILED0=1;
-		//BILED1=0;
 		for(k=0;k<=i;k++)
 		{//button press sequence
-		//	printf("\r\n k= %d i %d\n",k,i );
-
-		//	pcounts=0;
-		//	while(pcounts<=670);
 
 			if(bounce_back(randList[k], k)!=0)
 			{
