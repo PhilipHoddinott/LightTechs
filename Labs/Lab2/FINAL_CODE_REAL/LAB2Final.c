@@ -5,6 +5,13 @@ File name: Lab 2
 Program description:
 	PHILIP DESCRPTION!!!!!!!!!!!!!!!
 */
+
+
+what is on 
+ewhat is offwhat is light on
+what is light off
+unsiged char bounce back with the print coutns function
+
 //----------------------------------------------------------------------------
 //File Inclusions
 //----------------------------------------------------------------------------
@@ -273,101 +280,89 @@ void biled_set(unsigned char biledset)	//Sets BILED status. Used so that we do n
 void player_turn(unsigned char player)	//Main Turn function
 {
 	for(i=0;i<10;i++)
-	{//seqence of LEDs
-
-		for(k=0;k<=i;k++)
+	{
+		for(k=0;k<=i;k++)	//Displays light sequence
 		{
 			light(randList[k]);//lightes up the lEDS in rand_seq
 		}//goes as high as i
 
-		for(k=0;k<=i;k++)
-		{//button press sequence
-
-			if(bounce_back(randList[k], k)!=0)
+		for(k=0;k<=i;k++)	//button press sequence
+		{
+			if(bounce_back(randList[k], k)!=0)//right button was pressed
 			{
-				printf("\r\n NICE!!\r\n");
-				//scores[player]++;
-				sum++;
-			//while(bounce_back(randList[k]!=0));
-				//printf("\r\n not stuck!!\r\n");
-				debounce(); 
+				printf("\r\n NICE!!\r\n");	//display right button pressed
+				sum++;	//increment score
+				debounce(); //Debounce to ensure only 1 button input was gotten
 			}
-			else 
+			else //Wrong button pressed
 			{
-				Buzz();
-				printf("\r\nSORRY =[\r\n");
-				//should we have an error seqeunce?
+				Buzz();	//Buzzer buzzes
+				printf("\r\nSORRY =[\r\n");	//Print wrong button pressed
 				break_the_hard_way=1;
 				break;
 				
 			}//end if else
-		}//goes as high as i
+		}//end for that goes as high as i
 	
 	
-		wait();
-			if(break_the_hard_way==1)
-			{
-			break;
-			}				// i think this break wthe har dway will work now
-//printf("you stupid 1\n");
+		wait();	//Waits between sequences
+		if(break_the_hard_way==1)
+		{
+			break;	//Fully breaks out of loop
+		}//end IF 
 	}//end for loop
+}//End function player turn that runs each turn
 
-}//runs each turn
-void light(char ledW)
+void light(char ledW)//Function that will light up LED given a LED to light up
 {
-	//printf("\r light\r\n");
-	LED0=1;
-	LED1=1;
-	LED2=1;
-	LED3=1;
-	if (ledW==0)
+	LED0=1;	LED1=1;	LED2=1;	LED3=1;
+	if (ledW==0)//Lightes LED0
 	{
-	 LED0=0;
- 	lightson();
+		LED0=0;
+ 		lightson();
 	}
-	else if(ledW==1)
+	else if(ledW==1)//lights LED1
 	{
 		LED1=0;
 		lightson();
 	}
-	else if(ledW==2)
+	else if(ledW==2)//LIGHTS LED2
 	{
 		LED2=0;
 		lightson();
 	}
-	else 
+	else //LIGHTS LED3
 	{
 		LED3=0;
 		lightson();
 	}
-	LED0=1;
-	LED1=1;
-	LED2=1;
-	LED3=1;
+	LED0=1;	LED1=1;	LED2=1;	LED3=1;
 	lightsoff();
-}
-unsigned char bounce_back(unsigned char button_should_be_pushed, unsigned char button_num){
+}//END function ligth
+
+
+unsigned char bounce_back(unsigned char button_should_be_pushed, unsigned char button_num){//function that allows button pressed to be recoreded at any time period
 	Counts15=0; 
-	rVal = 0;
-	printf("\r\nYou should press button %d", button_should_be_pushed);
-	while(Counts15<(2*338*(button_num+1)) && rVal==0){//~about 2 seconds
-		if(real_PB(button_should_be_pushed)==1){
-			rVal=1;
-			printf("\r\nButton %d pressed correctly", button_should_be_pushed);
-		} else if(real_PB(button_should_be_pushed==25)){
-			rVal=30;
-			printf("\r\nBad button press");
+	rVal = 0;	//set varibles to 0
+	//printf("\r\nYou should press button %d", button_should_be_pushed);
+	comment out pting statmets
+	while(Counts15<(2*338*(button_num+1)) && rVal==0){// while timer has not run out and no buttons have been pressed
+		if(real_PB(button_should_be_pushed)==1){//Correct button has been pressed
+			rVal=1;	//Set return value
+			printf("\r\nButton %d pressed correctly", button_should_be_pushed);	//Print correct button pressed
+		} else if(real_PB(button_should_be_pushed==25)){//Incorrect button pressed
+			rVal=30;//set return value
+			printf("\r\nBad button press");//print wrong button pressed
 		}
-		printf("\r\nCount = %d", Counts15);
+		printf("\r\nCount = %d", Counts15);	//Prints timer Note this seems to slow it down so we can run normally
 	}//~waits a seconds
-	if(rVal==30) rVal=0;
-	return rVal;
-}
+	if(rVal==30) rVal=0;//sets Return bad value to 0
+	return rVal;//returns value
+}//end function bounce back
 
 unsigned char real_PB(unsigned char correct_button){
-	
 	unsigned char check_buttons = new_push_buttons(correct_button)+ new_push_buttons(0)+new_push_buttons(1)+new_push_buttons(2)+new_push_buttons(3);
-
+	//the above line gets the status of all 4 push buttons plus the correct push button. If a push button is pressed it returns 1
 	if (check_buttons==2){ //correct button is pressed return true and break
 		rVal=1;
 	}else if (check_buttons==0){ //no buttons pressed, return 1
