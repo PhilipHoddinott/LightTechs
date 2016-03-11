@@ -360,23 +360,24 @@ unsigned char bounce_back(unsigned char button_should_be_pushed, unsigned char b
 	return rVal;//returns value
 }//end function bounce back
 
-unsigned char real_PB(unsigned char correct_button){
+unsigned char real_PB(unsigned char correct_button){	//function that returns the status of the push buttons
 	unsigned char check_buttons = new_push_buttons(correct_button)+ new_push_buttons(0)+new_push_buttons(1)+new_push_buttons(2)+new_push_buttons(3);
-	//the above line gets the status of all 4 push buttons plus the correct push button. If a push button is pressed it returns 1
+	//the above line gets the status of all 4 push buttons plus the correct push button. If a push button is pressed it returns 1, else 0
+	//If the correct button is pressed the reutrn value will be 2 (correct button is coutned twice)
+	//If the wrong button is pressed, the input will be 1
+	//else if non pressed it will be 0. This allows us to detect no button spressed, worng button, or the right button at any time
 	if (check_buttons==2){ //correct button is pressed return true and break
 		rVal=1;
 	}else if (check_buttons==0){ //no buttons pressed, return 1
 		rVal=0;
 	} else { // they have pressed the wrong button or they have [pressed multiple buttons]
 		rVal=25;
-	}
-
-
+	}//end if else
 	return rVal;
 }//end real PB
 
 unsigned char new_push_buttons(unsigned char correct_button){//returns 1 if correct button pused, 0 if not
-	switch(correct_button){
+	switch(correct_button){//given a varible to inidace which button it returns the status of said button
 		case 0:
 			if(!PB0){
 				printf("\n\rPB0");
@@ -401,7 +402,10 @@ unsigned char new_push_buttons(unsigned char correct_button){//returns 1 if corr
 	return 0;
 }//end puch buttons
 
-void pause(void)
+void pause(void)//ask brinan whats going on
+sadsa
+birian whats withthe BILEDS=0?
+
 {
 	printf("\r pause\n");
 	BILED0=0;
@@ -412,14 +416,14 @@ void pause(void)
 	BILEDOFF();
 	printf("\r end pause\n");
 }// end the biled pause function
-void Buzz(void)
+void Buzz(void)//runs busser for 1 second
 {
 	Buzzer=0;
 	wait();
 	Buzzer=1;
 }
 
-void wait(void)
+void wait(void)	//waits 1 second
 {
 
 	Counts=0;			//store starting counts
@@ -427,7 +431,7 @@ void wait(void)
 	// to be worked on, this function just waits the time determined earlier
 }// waits 1 second
 
-void debounce(void)
+void debounce(void)//debounce function
 {
 	Counts15=0;
 	while(Counts15<45); //waits ~ 15 milliseconds
@@ -440,9 +444,8 @@ void debounce(void)
 
 // re initialize the ports depending on the setup 
 
-void Port_Init(void)
+void Port_Init(void)//Initalizes ports
 {
-		// Port 3
 	P3MDOUT |= 0xF8; //set Port 3 output pins to push-pull mode
 	P3MDOUT &= 0xDE; //set Port 3 input pins to open drain mode
 	P3 |= ~0xDE;     //set Port 3 input pins to high impedance state
@@ -455,20 +458,20 @@ void Port_Init(void)
 	P1MDIN &= ~0x20; //1.5 analog input
 	P1MDOUT &= ~0x20;// 1.5 to open drain 
 	P1|= 0x20; 
-	
+}//end init
 
-}
 //******************************************************************************************
 //LED Functions
 //******************************************************************************************
-void BILEDOFF (void)
+void BILEDOFF (void)//turns BILED off
 {
 	BILED1=1;
 	BILED0=1;
-}
+}//end BILED off
 //******************************************************************************************
 //Timer Function
 //******************************************************************************************
+
 void StopAndResetTimer(void) 
 {
     TR0 = 0;           	// Stop Timer0
@@ -488,7 +491,6 @@ void Timer_Init(void)
 	TMOD |= 0x01;	// Timer0 in mode 1
     TR0 = 0;        // Stop Timer0
     TMR0 = 0;       // Clear high & low byte of T0
-
 }
 //******************************************************************************************
 //ADC
@@ -547,12 +549,11 @@ void randGen(void)
 		randList[x]=randomnum;
 		x++;
 	}
-		for(x=0;x<10;x++)
-		{
-			printf("\rRand %d is %d\n",x,randList[x]);
-		}
-
-}
+	for(x=0;x<10;x++)
+	{
+		printf("\rRand %d is %d\n",x,randList[x]);
+	}
+}//end rand Gen
 
 void resetArrays(void) 
 {
@@ -571,7 +572,7 @@ void resetArrays(void)
 		randList[x]=0;
 		x++;
 	}
-}
+}//end reset Arrays
 void StartTimer(void)
 {
 	TR0=1;
