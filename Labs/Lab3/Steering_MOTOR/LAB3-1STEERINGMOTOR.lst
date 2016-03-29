@@ -1,0 +1,2554 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ANSI-C Compiler
+                                      3 ; Version 3.5.0 #9253 (Jun 20 2015) (MINGW64)
+                                      4 ; This file was generated Sun Mar 27 15:18:59 2016
+                                      5 ;--------------------------------------------------------
+                                      6 	.module LAB3_1STEERINGMOTOR
+                                      7 	.optsdcc -mmcs51 --model-small
+                                      8 	
+                                      9 ;--------------------------------------------------------
+                                     10 ; Public variables in this module
+                                     11 ;--------------------------------------------------------
+                                     12 	.globl _main
+                                     13 	.globl _putchar
+                                     14 	.globl _getchar
+                                     15 	.globl _printf
+                                     16 	.globl _getchar_nw
+                                     17 	.globl _Sys_Init
+                                     18 	.globl _UART0_Init
+                                     19 	.globl _SYSCLK_Init
+                                     20 	.globl _SPIF
+                                     21 	.globl _WCOL
+                                     22 	.globl _MODF
+                                     23 	.globl _RXOVRN
+                                     24 	.globl _TXBSY
+                                     25 	.globl _SLVSEL
+                                     26 	.globl _MSTEN
+                                     27 	.globl _SPIEN
+                                     28 	.globl _AD0EN
+                                     29 	.globl _ADCEN
+                                     30 	.globl _AD0TM
+                                     31 	.globl _ADCTM
+                                     32 	.globl _AD0INT
+                                     33 	.globl _ADCINT
+                                     34 	.globl _AD0BUSY
+                                     35 	.globl _ADBUSY
+                                     36 	.globl _AD0CM1
+                                     37 	.globl _ADSTM1
+                                     38 	.globl _AD0CM0
+                                     39 	.globl _ADSTM0
+                                     40 	.globl _AD0WINT
+                                     41 	.globl _ADWINT
+                                     42 	.globl _AD0LJST
+                                     43 	.globl _ADLJST
+                                     44 	.globl _CF
+                                     45 	.globl _CR
+                                     46 	.globl _CCF4
+                                     47 	.globl _CCF3
+                                     48 	.globl _CCF2
+                                     49 	.globl _CCF1
+                                     50 	.globl _CCF0
+                                     51 	.globl _CY
+                                     52 	.globl _AC
+                                     53 	.globl _F0
+                                     54 	.globl _RS1
+                                     55 	.globl _RS0
+                                     56 	.globl _OV
+                                     57 	.globl _F1
+                                     58 	.globl _P
+                                     59 	.globl _TF2
+                                     60 	.globl _EXF2
+                                     61 	.globl _RCLK
+                                     62 	.globl _TCLK
+                                     63 	.globl _EXEN2
+                                     64 	.globl _TR2
+                                     65 	.globl _CT2
+                                     66 	.globl _CPRL2
+                                     67 	.globl _BUSY
+                                     68 	.globl _ENSMB
+                                     69 	.globl _STA
+                                     70 	.globl _STO
+                                     71 	.globl _SI
+                                     72 	.globl _AA
+                                     73 	.globl _SMBFTE
+                                     74 	.globl _SMBTOE
+                                     75 	.globl _PT2
+                                     76 	.globl _PS
+                                     77 	.globl _PS0
+                                     78 	.globl _PT1
+                                     79 	.globl _PX1
+                                     80 	.globl _PT0
+                                     81 	.globl _PX0
+                                     82 	.globl _P3_7
+                                     83 	.globl _P3_6
+                                     84 	.globl _P3_5
+                                     85 	.globl _P3_4
+                                     86 	.globl _P3_3
+                                     87 	.globl _P3_2
+                                     88 	.globl _P3_1
+                                     89 	.globl _P3_0
+                                     90 	.globl _EA
+                                     91 	.globl _ET2
+                                     92 	.globl _ES
+                                     93 	.globl _ES0
+                                     94 	.globl _ET1
+                                     95 	.globl _EX1
+                                     96 	.globl _ET0
+                                     97 	.globl _EX0
+                                     98 	.globl _P2_7
+                                     99 	.globl _P2_6
+                                    100 	.globl _P2_5
+                                    101 	.globl _P2_4
+                                    102 	.globl _P2_3
+                                    103 	.globl _P2_2
+                                    104 	.globl _P2_1
+                                    105 	.globl _P2_0
+                                    106 	.globl _S0MODE
+                                    107 	.globl _SM00
+                                    108 	.globl _SM0
+                                    109 	.globl _SM10
+                                    110 	.globl _SM1
+                                    111 	.globl _MCE0
+                                    112 	.globl _SM20
+                                    113 	.globl _SM2
+                                    114 	.globl _REN0
+                                    115 	.globl _REN
+                                    116 	.globl _TB80
+                                    117 	.globl _TB8
+                                    118 	.globl _RB80
+                                    119 	.globl _RB8
+                                    120 	.globl _TI0
+                                    121 	.globl _TI
+                                    122 	.globl _RI0
+                                    123 	.globl _RI
+                                    124 	.globl _P1_7
+                                    125 	.globl _P1_6
+                                    126 	.globl _P1_5
+                                    127 	.globl _P1_4
+                                    128 	.globl _P1_3
+                                    129 	.globl _P1_2
+                                    130 	.globl _P1_1
+                                    131 	.globl _P1_0
+                                    132 	.globl _TF1
+                                    133 	.globl _TR1
+                                    134 	.globl _TF0
+                                    135 	.globl _TR0
+                                    136 	.globl _IE1
+                                    137 	.globl _IT1
+                                    138 	.globl _IE0
+                                    139 	.globl _IT0
+                                    140 	.globl _P0_7
+                                    141 	.globl _P0_6
+                                    142 	.globl _P0_5
+                                    143 	.globl _P0_4
+                                    144 	.globl _P0_3
+                                    145 	.globl _P0_2
+                                    146 	.globl _P0_1
+                                    147 	.globl _P0_0
+                                    148 	.globl _PCA0CP4
+                                    149 	.globl _PCA0CP3
+                                    150 	.globl _PCA0CP2
+                                    151 	.globl _PCA0CP1
+                                    152 	.globl _PCA0CP0
+                                    153 	.globl _PCA0
+                                    154 	.globl _DAC1
+                                    155 	.globl _DAC0
+                                    156 	.globl _ADC0LT
+                                    157 	.globl _ADC0GT
+                                    158 	.globl _ADC0
+                                    159 	.globl _RCAP4
+                                    160 	.globl _TMR4
+                                    161 	.globl _TMR3RL
+                                    162 	.globl _TMR3
+                                    163 	.globl _RCAP2
+                                    164 	.globl _TMR2
+                                    165 	.globl _TMR1
+                                    166 	.globl _TMR0
+                                    167 	.globl _WDTCN
+                                    168 	.globl _PCA0CPH4
+                                    169 	.globl _PCA0CPH3
+                                    170 	.globl _PCA0CPH2
+                                    171 	.globl _PCA0CPH1
+                                    172 	.globl _PCA0CPH0
+                                    173 	.globl _PCA0H
+                                    174 	.globl _SPI0CN
+                                    175 	.globl _EIP2
+                                    176 	.globl _EIP1
+                                    177 	.globl _TH4
+                                    178 	.globl _TL4
+                                    179 	.globl _SADDR1
+                                    180 	.globl _SBUF1
+                                    181 	.globl _SCON1
+                                    182 	.globl _B
+                                    183 	.globl _RSTSRC
+                                    184 	.globl _PCA0CPL4
+                                    185 	.globl _PCA0CPL3
+                                    186 	.globl _PCA0CPL2
+                                    187 	.globl _PCA0CPL1
+                                    188 	.globl _PCA0CPL0
+                                    189 	.globl _PCA0L
+                                    190 	.globl _ADC0CN
+                                    191 	.globl _EIE2
+                                    192 	.globl _EIE1
+                                    193 	.globl _RCAP4H
+                                    194 	.globl _RCAP4L
+                                    195 	.globl _XBR2
+                                    196 	.globl _XBR1
+                                    197 	.globl _XBR0
+                                    198 	.globl _ACC
+                                    199 	.globl _PCA0CPM4
+                                    200 	.globl _PCA0CPM3
+                                    201 	.globl _PCA0CPM2
+                                    202 	.globl _PCA0CPM1
+                                    203 	.globl _PCA0CPM0
+                                    204 	.globl _PCA0MD
+                                    205 	.globl _PCA0CN
+                                    206 	.globl _DAC1CN
+                                    207 	.globl _DAC1H
+                                    208 	.globl _DAC1L
+                                    209 	.globl _DAC0CN
+                                    210 	.globl _DAC0H
+                                    211 	.globl _DAC0L
+                                    212 	.globl _REF0CN
+                                    213 	.globl _PSW
+                                    214 	.globl _SMB0CR
+                                    215 	.globl _TH2
+                                    216 	.globl _TL2
+                                    217 	.globl _RCAP2H
+                                    218 	.globl _RCAP2L
+                                    219 	.globl _T4CON
+                                    220 	.globl _T2CON
+                                    221 	.globl _ADC0LTH
+                                    222 	.globl _ADC0LTL
+                                    223 	.globl _ADC0GTH
+                                    224 	.globl _ADC0GTL
+                                    225 	.globl _SMB0ADR
+                                    226 	.globl _SMB0DAT
+                                    227 	.globl _SMB0STA
+                                    228 	.globl _SMB0CN
+                                    229 	.globl _ADC0H
+                                    230 	.globl _ADC0L
+                                    231 	.globl _P1MDIN
+                                    232 	.globl _ADC0CF
+                                    233 	.globl _AMX0SL
+                                    234 	.globl _AMX0CF
+                                    235 	.globl _SADEN0
+                                    236 	.globl _IP
+                                    237 	.globl _FLACL
+                                    238 	.globl _FLSCL
+                                    239 	.globl _P74OUT
+                                    240 	.globl _OSCICN
+                                    241 	.globl _OSCXCN
+                                    242 	.globl _P3
+                                    243 	.globl __XPAGE
+                                    244 	.globl _EMI0CN
+                                    245 	.globl _SADEN1
+                                    246 	.globl _P3IF
+                                    247 	.globl _AMX1SL
+                                    248 	.globl _ADC1CF
+                                    249 	.globl _ADC1CN
+                                    250 	.globl _SADDR0
+                                    251 	.globl _IE
+                                    252 	.globl _P3MDOUT
+                                    253 	.globl _PRT3CF
+                                    254 	.globl _P2MDOUT
+                                    255 	.globl _PRT2CF
+                                    256 	.globl _P1MDOUT
+                                    257 	.globl _PRT1CF
+                                    258 	.globl _P0MDOUT
+                                    259 	.globl _PRT0CF
+                                    260 	.globl _EMI0CF
+                                    261 	.globl _EMI0TC
+                                    262 	.globl _P2
+                                    263 	.globl _CPT1CN
+                                    264 	.globl _CPT0CN
+                                    265 	.globl _SPI0CKR
+                                    266 	.globl _ADC1
+                                    267 	.globl _SPI0DAT
+                                    268 	.globl _SPI0CFG
+                                    269 	.globl _SBUF0
+                                    270 	.globl _SBUF
+                                    271 	.globl _SCON0
+                                    272 	.globl _SCON
+                                    273 	.globl _P7
+                                    274 	.globl _TMR3H
+                                    275 	.globl _TMR3L
+                                    276 	.globl _TMR3RLH
+                                    277 	.globl _TMR3RLL
+                                    278 	.globl _TMR3CN
+                                    279 	.globl _P1
+                                    280 	.globl _PSCTL
+                                    281 	.globl _CKCON
+                                    282 	.globl _TH1
+                                    283 	.globl _TH0
+                                    284 	.globl _TL1
+                                    285 	.globl _TL0
+                                    286 	.globl _TMOD
+                                    287 	.globl _TCON
+                                    288 	.globl _PCON
+                                    289 	.globl _P6
+                                    290 	.globl _P5
+                                    291 	.globl _P4
+                                    292 	.globl _DPH
+                                    293 	.globl _DPL
+                                    294 	.globl _SP
+                                    295 	.globl _P0
+                                    296 	.globl _input
+                                    297 	.globl _count
+                                    298 	.globl _f
+                                    299 	.globl _PW
+                                    300 	.globl _MOTOR_PW
+                                    301 	.globl _PW_CENTER
+                                    302 	.globl _PW_MIN
+                                    303 	.globl _PW_MAX
+                                    304 	.globl _Port_Init
+                                    305 	.globl _XBR0_Init
+                                    306 	.globl _PCA_Init
+                                    307 	.globl _PCA_ISR
+                                    308 	.globl _SteeringServo_DriveMotor
+                                    309 	.globl _Calibration
+                                    310 	.globl _turnwheel
+                                    311 	.globl _left_turn_calibration
+                                    312 	.globl _right_turn_calibration
+                                    313 	.globl _center_calibration
+                                    314 ;--------------------------------------------------------
+                                    315 ; special function registers
+                                    316 ;--------------------------------------------------------
+                                    317 	.area RSEG    (ABS,DATA)
+      000000                        318 	.org 0x0000
+                           000080   319 G$P0$0$0 == 0x0080
+                           000080   320 _P0	=	0x0080
+                           000081   321 G$SP$0$0 == 0x0081
+                           000081   322 _SP	=	0x0081
+                           000082   323 G$DPL$0$0 == 0x0082
+                           000082   324 _DPL	=	0x0082
+                           000083   325 G$DPH$0$0 == 0x0083
+                           000083   326 _DPH	=	0x0083
+                           000084   327 G$P4$0$0 == 0x0084
+                           000084   328 _P4	=	0x0084
+                           000085   329 G$P5$0$0 == 0x0085
+                           000085   330 _P5	=	0x0085
+                           000086   331 G$P6$0$0 == 0x0086
+                           000086   332 _P6	=	0x0086
+                           000087   333 G$PCON$0$0 == 0x0087
+                           000087   334 _PCON	=	0x0087
+                           000088   335 G$TCON$0$0 == 0x0088
+                           000088   336 _TCON	=	0x0088
+                           000089   337 G$TMOD$0$0 == 0x0089
+                           000089   338 _TMOD	=	0x0089
+                           00008A   339 G$TL0$0$0 == 0x008a
+                           00008A   340 _TL0	=	0x008a
+                           00008B   341 G$TL1$0$0 == 0x008b
+                           00008B   342 _TL1	=	0x008b
+                           00008C   343 G$TH0$0$0 == 0x008c
+                           00008C   344 _TH0	=	0x008c
+                           00008D   345 G$TH1$0$0 == 0x008d
+                           00008D   346 _TH1	=	0x008d
+                           00008E   347 G$CKCON$0$0 == 0x008e
+                           00008E   348 _CKCON	=	0x008e
+                           00008F   349 G$PSCTL$0$0 == 0x008f
+                           00008F   350 _PSCTL	=	0x008f
+                           000090   351 G$P1$0$0 == 0x0090
+                           000090   352 _P1	=	0x0090
+                           000091   353 G$TMR3CN$0$0 == 0x0091
+                           000091   354 _TMR3CN	=	0x0091
+                           000092   355 G$TMR3RLL$0$0 == 0x0092
+                           000092   356 _TMR3RLL	=	0x0092
+                           000093   357 G$TMR3RLH$0$0 == 0x0093
+                           000093   358 _TMR3RLH	=	0x0093
+                           000094   359 G$TMR3L$0$0 == 0x0094
+                           000094   360 _TMR3L	=	0x0094
+                           000095   361 G$TMR3H$0$0 == 0x0095
+                           000095   362 _TMR3H	=	0x0095
+                           000096   363 G$P7$0$0 == 0x0096
+                           000096   364 _P7	=	0x0096
+                           000098   365 G$SCON$0$0 == 0x0098
+                           000098   366 _SCON	=	0x0098
+                           000098   367 G$SCON0$0$0 == 0x0098
+                           000098   368 _SCON0	=	0x0098
+                           000099   369 G$SBUF$0$0 == 0x0099
+                           000099   370 _SBUF	=	0x0099
+                           000099   371 G$SBUF0$0$0 == 0x0099
+                           000099   372 _SBUF0	=	0x0099
+                           00009A   373 G$SPI0CFG$0$0 == 0x009a
+                           00009A   374 _SPI0CFG	=	0x009a
+                           00009B   375 G$SPI0DAT$0$0 == 0x009b
+                           00009B   376 _SPI0DAT	=	0x009b
+                           00009C   377 G$ADC1$0$0 == 0x009c
+                           00009C   378 _ADC1	=	0x009c
+                           00009D   379 G$SPI0CKR$0$0 == 0x009d
+                           00009D   380 _SPI0CKR	=	0x009d
+                           00009E   381 G$CPT0CN$0$0 == 0x009e
+                           00009E   382 _CPT0CN	=	0x009e
+                           00009F   383 G$CPT1CN$0$0 == 0x009f
+                           00009F   384 _CPT1CN	=	0x009f
+                           0000A0   385 G$P2$0$0 == 0x00a0
+                           0000A0   386 _P2	=	0x00a0
+                           0000A1   387 G$EMI0TC$0$0 == 0x00a1
+                           0000A1   388 _EMI0TC	=	0x00a1
+                           0000A3   389 G$EMI0CF$0$0 == 0x00a3
+                           0000A3   390 _EMI0CF	=	0x00a3
+                           0000A4   391 G$PRT0CF$0$0 == 0x00a4
+                           0000A4   392 _PRT0CF	=	0x00a4
+                           0000A4   393 G$P0MDOUT$0$0 == 0x00a4
+                           0000A4   394 _P0MDOUT	=	0x00a4
+                           0000A5   395 G$PRT1CF$0$0 == 0x00a5
+                           0000A5   396 _PRT1CF	=	0x00a5
+                           0000A5   397 G$P1MDOUT$0$0 == 0x00a5
+                           0000A5   398 _P1MDOUT	=	0x00a5
+                           0000A6   399 G$PRT2CF$0$0 == 0x00a6
+                           0000A6   400 _PRT2CF	=	0x00a6
+                           0000A6   401 G$P2MDOUT$0$0 == 0x00a6
+                           0000A6   402 _P2MDOUT	=	0x00a6
+                           0000A7   403 G$PRT3CF$0$0 == 0x00a7
+                           0000A7   404 _PRT3CF	=	0x00a7
+                           0000A7   405 G$P3MDOUT$0$0 == 0x00a7
+                           0000A7   406 _P3MDOUT	=	0x00a7
+                           0000A8   407 G$IE$0$0 == 0x00a8
+                           0000A8   408 _IE	=	0x00a8
+                           0000A9   409 G$SADDR0$0$0 == 0x00a9
+                           0000A9   410 _SADDR0	=	0x00a9
+                           0000AA   411 G$ADC1CN$0$0 == 0x00aa
+                           0000AA   412 _ADC1CN	=	0x00aa
+                           0000AB   413 G$ADC1CF$0$0 == 0x00ab
+                           0000AB   414 _ADC1CF	=	0x00ab
+                           0000AC   415 G$AMX1SL$0$0 == 0x00ac
+                           0000AC   416 _AMX1SL	=	0x00ac
+                           0000AD   417 G$P3IF$0$0 == 0x00ad
+                           0000AD   418 _P3IF	=	0x00ad
+                           0000AE   419 G$SADEN1$0$0 == 0x00ae
+                           0000AE   420 _SADEN1	=	0x00ae
+                           0000AF   421 G$EMI0CN$0$0 == 0x00af
+                           0000AF   422 _EMI0CN	=	0x00af
+                           0000AF   423 G$_XPAGE$0$0 == 0x00af
+                           0000AF   424 __XPAGE	=	0x00af
+                           0000B0   425 G$P3$0$0 == 0x00b0
+                           0000B0   426 _P3	=	0x00b0
+                           0000B1   427 G$OSCXCN$0$0 == 0x00b1
+                           0000B1   428 _OSCXCN	=	0x00b1
+                           0000B2   429 G$OSCICN$0$0 == 0x00b2
+                           0000B2   430 _OSCICN	=	0x00b2
+                           0000B5   431 G$P74OUT$0$0 == 0x00b5
+                           0000B5   432 _P74OUT	=	0x00b5
+                           0000B6   433 G$FLSCL$0$0 == 0x00b6
+                           0000B6   434 _FLSCL	=	0x00b6
+                           0000B7   435 G$FLACL$0$0 == 0x00b7
+                           0000B7   436 _FLACL	=	0x00b7
+                           0000B8   437 G$IP$0$0 == 0x00b8
+                           0000B8   438 _IP	=	0x00b8
+                           0000B9   439 G$SADEN0$0$0 == 0x00b9
+                           0000B9   440 _SADEN0	=	0x00b9
+                           0000BA   441 G$AMX0CF$0$0 == 0x00ba
+                           0000BA   442 _AMX0CF	=	0x00ba
+                           0000BB   443 G$AMX0SL$0$0 == 0x00bb
+                           0000BB   444 _AMX0SL	=	0x00bb
+                           0000BC   445 G$ADC0CF$0$0 == 0x00bc
+                           0000BC   446 _ADC0CF	=	0x00bc
+                           0000BD   447 G$P1MDIN$0$0 == 0x00bd
+                           0000BD   448 _P1MDIN	=	0x00bd
+                           0000BE   449 G$ADC0L$0$0 == 0x00be
+                           0000BE   450 _ADC0L	=	0x00be
+                           0000BF   451 G$ADC0H$0$0 == 0x00bf
+                           0000BF   452 _ADC0H	=	0x00bf
+                           0000C0   453 G$SMB0CN$0$0 == 0x00c0
+                           0000C0   454 _SMB0CN	=	0x00c0
+                           0000C1   455 G$SMB0STA$0$0 == 0x00c1
+                           0000C1   456 _SMB0STA	=	0x00c1
+                           0000C2   457 G$SMB0DAT$0$0 == 0x00c2
+                           0000C2   458 _SMB0DAT	=	0x00c2
+                           0000C3   459 G$SMB0ADR$0$0 == 0x00c3
+                           0000C3   460 _SMB0ADR	=	0x00c3
+                           0000C4   461 G$ADC0GTL$0$0 == 0x00c4
+                           0000C4   462 _ADC0GTL	=	0x00c4
+                           0000C5   463 G$ADC0GTH$0$0 == 0x00c5
+                           0000C5   464 _ADC0GTH	=	0x00c5
+                           0000C6   465 G$ADC0LTL$0$0 == 0x00c6
+                           0000C6   466 _ADC0LTL	=	0x00c6
+                           0000C7   467 G$ADC0LTH$0$0 == 0x00c7
+                           0000C7   468 _ADC0LTH	=	0x00c7
+                           0000C8   469 G$T2CON$0$0 == 0x00c8
+                           0000C8   470 _T2CON	=	0x00c8
+                           0000C9   471 G$T4CON$0$0 == 0x00c9
+                           0000C9   472 _T4CON	=	0x00c9
+                           0000CA   473 G$RCAP2L$0$0 == 0x00ca
+                           0000CA   474 _RCAP2L	=	0x00ca
+                           0000CB   475 G$RCAP2H$0$0 == 0x00cb
+                           0000CB   476 _RCAP2H	=	0x00cb
+                           0000CC   477 G$TL2$0$0 == 0x00cc
+                           0000CC   478 _TL2	=	0x00cc
+                           0000CD   479 G$TH2$0$0 == 0x00cd
+                           0000CD   480 _TH2	=	0x00cd
+                           0000CF   481 G$SMB0CR$0$0 == 0x00cf
+                           0000CF   482 _SMB0CR	=	0x00cf
+                           0000D0   483 G$PSW$0$0 == 0x00d0
+                           0000D0   484 _PSW	=	0x00d0
+                           0000D1   485 G$REF0CN$0$0 == 0x00d1
+                           0000D1   486 _REF0CN	=	0x00d1
+                           0000D2   487 G$DAC0L$0$0 == 0x00d2
+                           0000D2   488 _DAC0L	=	0x00d2
+                           0000D3   489 G$DAC0H$0$0 == 0x00d3
+                           0000D3   490 _DAC0H	=	0x00d3
+                           0000D4   491 G$DAC0CN$0$0 == 0x00d4
+                           0000D4   492 _DAC0CN	=	0x00d4
+                           0000D5   493 G$DAC1L$0$0 == 0x00d5
+                           0000D5   494 _DAC1L	=	0x00d5
+                           0000D6   495 G$DAC1H$0$0 == 0x00d6
+                           0000D6   496 _DAC1H	=	0x00d6
+                           0000D7   497 G$DAC1CN$0$0 == 0x00d7
+                           0000D7   498 _DAC1CN	=	0x00d7
+                           0000D8   499 G$PCA0CN$0$0 == 0x00d8
+                           0000D8   500 _PCA0CN	=	0x00d8
+                           0000D9   501 G$PCA0MD$0$0 == 0x00d9
+                           0000D9   502 _PCA0MD	=	0x00d9
+                           0000DA   503 G$PCA0CPM0$0$0 == 0x00da
+                           0000DA   504 _PCA0CPM0	=	0x00da
+                           0000DB   505 G$PCA0CPM1$0$0 == 0x00db
+                           0000DB   506 _PCA0CPM1	=	0x00db
+                           0000DC   507 G$PCA0CPM2$0$0 == 0x00dc
+                           0000DC   508 _PCA0CPM2	=	0x00dc
+                           0000DD   509 G$PCA0CPM3$0$0 == 0x00dd
+                           0000DD   510 _PCA0CPM3	=	0x00dd
+                           0000DE   511 G$PCA0CPM4$0$0 == 0x00de
+                           0000DE   512 _PCA0CPM4	=	0x00de
+                           0000E0   513 G$ACC$0$0 == 0x00e0
+                           0000E0   514 _ACC	=	0x00e0
+                           0000E1   515 G$XBR0$0$0 == 0x00e1
+                           0000E1   516 _XBR0	=	0x00e1
+                           0000E2   517 G$XBR1$0$0 == 0x00e2
+                           0000E2   518 _XBR1	=	0x00e2
+                           0000E3   519 G$XBR2$0$0 == 0x00e3
+                           0000E3   520 _XBR2	=	0x00e3
+                           0000E4   521 G$RCAP4L$0$0 == 0x00e4
+                           0000E4   522 _RCAP4L	=	0x00e4
+                           0000E5   523 G$RCAP4H$0$0 == 0x00e5
+                           0000E5   524 _RCAP4H	=	0x00e5
+                           0000E6   525 G$EIE1$0$0 == 0x00e6
+                           0000E6   526 _EIE1	=	0x00e6
+                           0000E7   527 G$EIE2$0$0 == 0x00e7
+                           0000E7   528 _EIE2	=	0x00e7
+                           0000E8   529 G$ADC0CN$0$0 == 0x00e8
+                           0000E8   530 _ADC0CN	=	0x00e8
+                           0000E9   531 G$PCA0L$0$0 == 0x00e9
+                           0000E9   532 _PCA0L	=	0x00e9
+                           0000EA   533 G$PCA0CPL0$0$0 == 0x00ea
+                           0000EA   534 _PCA0CPL0	=	0x00ea
+                           0000EB   535 G$PCA0CPL1$0$0 == 0x00eb
+                           0000EB   536 _PCA0CPL1	=	0x00eb
+                           0000EC   537 G$PCA0CPL2$0$0 == 0x00ec
+                           0000EC   538 _PCA0CPL2	=	0x00ec
+                           0000ED   539 G$PCA0CPL3$0$0 == 0x00ed
+                           0000ED   540 _PCA0CPL3	=	0x00ed
+                           0000EE   541 G$PCA0CPL4$0$0 == 0x00ee
+                           0000EE   542 _PCA0CPL4	=	0x00ee
+                           0000EF   543 G$RSTSRC$0$0 == 0x00ef
+                           0000EF   544 _RSTSRC	=	0x00ef
+                           0000F0   545 G$B$0$0 == 0x00f0
+                           0000F0   546 _B	=	0x00f0
+                           0000F1   547 G$SCON1$0$0 == 0x00f1
+                           0000F1   548 _SCON1	=	0x00f1
+                           0000F2   549 G$SBUF1$0$0 == 0x00f2
+                           0000F2   550 _SBUF1	=	0x00f2
+                           0000F3   551 G$SADDR1$0$0 == 0x00f3
+                           0000F3   552 _SADDR1	=	0x00f3
+                           0000F4   553 G$TL4$0$0 == 0x00f4
+                           0000F4   554 _TL4	=	0x00f4
+                           0000F5   555 G$TH4$0$0 == 0x00f5
+                           0000F5   556 _TH4	=	0x00f5
+                           0000F6   557 G$EIP1$0$0 == 0x00f6
+                           0000F6   558 _EIP1	=	0x00f6
+                           0000F7   559 G$EIP2$0$0 == 0x00f7
+                           0000F7   560 _EIP2	=	0x00f7
+                           0000F8   561 G$SPI0CN$0$0 == 0x00f8
+                           0000F8   562 _SPI0CN	=	0x00f8
+                           0000F9   563 G$PCA0H$0$0 == 0x00f9
+                           0000F9   564 _PCA0H	=	0x00f9
+                           0000FA   565 G$PCA0CPH0$0$0 == 0x00fa
+                           0000FA   566 _PCA0CPH0	=	0x00fa
+                           0000FB   567 G$PCA0CPH1$0$0 == 0x00fb
+                           0000FB   568 _PCA0CPH1	=	0x00fb
+                           0000FC   569 G$PCA0CPH2$0$0 == 0x00fc
+                           0000FC   570 _PCA0CPH2	=	0x00fc
+                           0000FD   571 G$PCA0CPH3$0$0 == 0x00fd
+                           0000FD   572 _PCA0CPH3	=	0x00fd
+                           0000FE   573 G$PCA0CPH4$0$0 == 0x00fe
+                           0000FE   574 _PCA0CPH4	=	0x00fe
+                           0000FF   575 G$WDTCN$0$0 == 0x00ff
+                           0000FF   576 _WDTCN	=	0x00ff
+                           008C8A   577 G$TMR0$0$0 == 0x8c8a
+                           008C8A   578 _TMR0	=	0x8c8a
+                           008D8B   579 G$TMR1$0$0 == 0x8d8b
+                           008D8B   580 _TMR1	=	0x8d8b
+                           00CDCC   581 G$TMR2$0$0 == 0xcdcc
+                           00CDCC   582 _TMR2	=	0xcdcc
+                           00CBCA   583 G$RCAP2$0$0 == 0xcbca
+                           00CBCA   584 _RCAP2	=	0xcbca
+                           009594   585 G$TMR3$0$0 == 0x9594
+                           009594   586 _TMR3	=	0x9594
+                           009392   587 G$TMR3RL$0$0 == 0x9392
+                           009392   588 _TMR3RL	=	0x9392
+                           00F5F4   589 G$TMR4$0$0 == 0xf5f4
+                           00F5F4   590 _TMR4	=	0xf5f4
+                           00E5E4   591 G$RCAP4$0$0 == 0xe5e4
+                           00E5E4   592 _RCAP4	=	0xe5e4
+                           00BFBE   593 G$ADC0$0$0 == 0xbfbe
+                           00BFBE   594 _ADC0	=	0xbfbe
+                           00C5C4   595 G$ADC0GT$0$0 == 0xc5c4
+                           00C5C4   596 _ADC0GT	=	0xc5c4
+                           00C7C6   597 G$ADC0LT$0$0 == 0xc7c6
+                           00C7C6   598 _ADC0LT	=	0xc7c6
+                           00D3D2   599 G$DAC0$0$0 == 0xd3d2
+                           00D3D2   600 _DAC0	=	0xd3d2
+                           00D6D5   601 G$DAC1$0$0 == 0xd6d5
+                           00D6D5   602 _DAC1	=	0xd6d5
+                           00F9E9   603 G$PCA0$0$0 == 0xf9e9
+                           00F9E9   604 _PCA0	=	0xf9e9
+                           00FAEA   605 G$PCA0CP0$0$0 == 0xfaea
+                           00FAEA   606 _PCA0CP0	=	0xfaea
+                           00FBEB   607 G$PCA0CP1$0$0 == 0xfbeb
+                           00FBEB   608 _PCA0CP1	=	0xfbeb
+                           00FCEC   609 G$PCA0CP2$0$0 == 0xfcec
+                           00FCEC   610 _PCA0CP2	=	0xfcec
+                           00FDED   611 G$PCA0CP3$0$0 == 0xfded
+                           00FDED   612 _PCA0CP3	=	0xfded
+                           00FEEE   613 G$PCA0CP4$0$0 == 0xfeee
+                           00FEEE   614 _PCA0CP4	=	0xfeee
+                                    615 ;--------------------------------------------------------
+                                    616 ; special function bits
+                                    617 ;--------------------------------------------------------
+                                    618 	.area RSEG    (ABS,DATA)
+      000000                        619 	.org 0x0000
+                           000080   620 G$P0_0$0$0 == 0x0080
+                           000080   621 _P0_0	=	0x0080
+                           000081   622 G$P0_1$0$0 == 0x0081
+                           000081   623 _P0_1	=	0x0081
+                           000082   624 G$P0_2$0$0 == 0x0082
+                           000082   625 _P0_2	=	0x0082
+                           000083   626 G$P0_3$0$0 == 0x0083
+                           000083   627 _P0_3	=	0x0083
+                           000084   628 G$P0_4$0$0 == 0x0084
+                           000084   629 _P0_4	=	0x0084
+                           000085   630 G$P0_5$0$0 == 0x0085
+                           000085   631 _P0_5	=	0x0085
+                           000086   632 G$P0_6$0$0 == 0x0086
+                           000086   633 _P0_6	=	0x0086
+                           000087   634 G$P0_7$0$0 == 0x0087
+                           000087   635 _P0_7	=	0x0087
+                           000088   636 G$IT0$0$0 == 0x0088
+                           000088   637 _IT0	=	0x0088
+                           000089   638 G$IE0$0$0 == 0x0089
+                           000089   639 _IE0	=	0x0089
+                           00008A   640 G$IT1$0$0 == 0x008a
+                           00008A   641 _IT1	=	0x008a
+                           00008B   642 G$IE1$0$0 == 0x008b
+                           00008B   643 _IE1	=	0x008b
+                           00008C   644 G$TR0$0$0 == 0x008c
+                           00008C   645 _TR0	=	0x008c
+                           00008D   646 G$TF0$0$0 == 0x008d
+                           00008D   647 _TF0	=	0x008d
+                           00008E   648 G$TR1$0$0 == 0x008e
+                           00008E   649 _TR1	=	0x008e
+                           00008F   650 G$TF1$0$0 == 0x008f
+                           00008F   651 _TF1	=	0x008f
+                           000090   652 G$P1_0$0$0 == 0x0090
+                           000090   653 _P1_0	=	0x0090
+                           000091   654 G$P1_1$0$0 == 0x0091
+                           000091   655 _P1_1	=	0x0091
+                           000092   656 G$P1_2$0$0 == 0x0092
+                           000092   657 _P1_2	=	0x0092
+                           000093   658 G$P1_3$0$0 == 0x0093
+                           000093   659 _P1_3	=	0x0093
+                           000094   660 G$P1_4$0$0 == 0x0094
+                           000094   661 _P1_4	=	0x0094
+                           000095   662 G$P1_5$0$0 == 0x0095
+                           000095   663 _P1_5	=	0x0095
+                           000096   664 G$P1_6$0$0 == 0x0096
+                           000096   665 _P1_6	=	0x0096
+                           000097   666 G$P1_7$0$0 == 0x0097
+                           000097   667 _P1_7	=	0x0097
+                           000098   668 G$RI$0$0 == 0x0098
+                           000098   669 _RI	=	0x0098
+                           000098   670 G$RI0$0$0 == 0x0098
+                           000098   671 _RI0	=	0x0098
+                           000099   672 G$TI$0$0 == 0x0099
+                           000099   673 _TI	=	0x0099
+                           000099   674 G$TI0$0$0 == 0x0099
+                           000099   675 _TI0	=	0x0099
+                           00009A   676 G$RB8$0$0 == 0x009a
+                           00009A   677 _RB8	=	0x009a
+                           00009A   678 G$RB80$0$0 == 0x009a
+                           00009A   679 _RB80	=	0x009a
+                           00009B   680 G$TB8$0$0 == 0x009b
+                           00009B   681 _TB8	=	0x009b
+                           00009B   682 G$TB80$0$0 == 0x009b
+                           00009B   683 _TB80	=	0x009b
+                           00009C   684 G$REN$0$0 == 0x009c
+                           00009C   685 _REN	=	0x009c
+                           00009C   686 G$REN0$0$0 == 0x009c
+                           00009C   687 _REN0	=	0x009c
+                           00009D   688 G$SM2$0$0 == 0x009d
+                           00009D   689 _SM2	=	0x009d
+                           00009D   690 G$SM20$0$0 == 0x009d
+                           00009D   691 _SM20	=	0x009d
+                           00009D   692 G$MCE0$0$0 == 0x009d
+                           00009D   693 _MCE0	=	0x009d
+                           00009E   694 G$SM1$0$0 == 0x009e
+                           00009E   695 _SM1	=	0x009e
+                           00009E   696 G$SM10$0$0 == 0x009e
+                           00009E   697 _SM10	=	0x009e
+                           00009F   698 G$SM0$0$0 == 0x009f
+                           00009F   699 _SM0	=	0x009f
+                           00009F   700 G$SM00$0$0 == 0x009f
+                           00009F   701 _SM00	=	0x009f
+                           00009F   702 G$S0MODE$0$0 == 0x009f
+                           00009F   703 _S0MODE	=	0x009f
+                           0000A0   704 G$P2_0$0$0 == 0x00a0
+                           0000A0   705 _P2_0	=	0x00a0
+                           0000A1   706 G$P2_1$0$0 == 0x00a1
+                           0000A1   707 _P2_1	=	0x00a1
+                           0000A2   708 G$P2_2$0$0 == 0x00a2
+                           0000A2   709 _P2_2	=	0x00a2
+                           0000A3   710 G$P2_3$0$0 == 0x00a3
+                           0000A3   711 _P2_3	=	0x00a3
+                           0000A4   712 G$P2_4$0$0 == 0x00a4
+                           0000A4   713 _P2_4	=	0x00a4
+                           0000A5   714 G$P2_5$0$0 == 0x00a5
+                           0000A5   715 _P2_5	=	0x00a5
+                           0000A6   716 G$P2_6$0$0 == 0x00a6
+                           0000A6   717 _P2_6	=	0x00a6
+                           0000A7   718 G$P2_7$0$0 == 0x00a7
+                           0000A7   719 _P2_7	=	0x00a7
+                           0000A8   720 G$EX0$0$0 == 0x00a8
+                           0000A8   721 _EX0	=	0x00a8
+                           0000A9   722 G$ET0$0$0 == 0x00a9
+                           0000A9   723 _ET0	=	0x00a9
+                           0000AA   724 G$EX1$0$0 == 0x00aa
+                           0000AA   725 _EX1	=	0x00aa
+                           0000AB   726 G$ET1$0$0 == 0x00ab
+                           0000AB   727 _ET1	=	0x00ab
+                           0000AC   728 G$ES0$0$0 == 0x00ac
+                           0000AC   729 _ES0	=	0x00ac
+                           0000AC   730 G$ES$0$0 == 0x00ac
+                           0000AC   731 _ES	=	0x00ac
+                           0000AD   732 G$ET2$0$0 == 0x00ad
+                           0000AD   733 _ET2	=	0x00ad
+                           0000AF   734 G$EA$0$0 == 0x00af
+                           0000AF   735 _EA	=	0x00af
+                           0000B0   736 G$P3_0$0$0 == 0x00b0
+                           0000B0   737 _P3_0	=	0x00b0
+                           0000B1   738 G$P3_1$0$0 == 0x00b1
+                           0000B1   739 _P3_1	=	0x00b1
+                           0000B2   740 G$P3_2$0$0 == 0x00b2
+                           0000B2   741 _P3_2	=	0x00b2
+                           0000B3   742 G$P3_3$0$0 == 0x00b3
+                           0000B3   743 _P3_3	=	0x00b3
+                           0000B4   744 G$P3_4$0$0 == 0x00b4
+                           0000B4   745 _P3_4	=	0x00b4
+                           0000B5   746 G$P3_5$0$0 == 0x00b5
+                           0000B5   747 _P3_5	=	0x00b5
+                           0000B6   748 G$P3_6$0$0 == 0x00b6
+                           0000B6   749 _P3_6	=	0x00b6
+                           0000B7   750 G$P3_7$0$0 == 0x00b7
+                           0000B7   751 _P3_7	=	0x00b7
+                           0000B8   752 G$PX0$0$0 == 0x00b8
+                           0000B8   753 _PX0	=	0x00b8
+                           0000B9   754 G$PT0$0$0 == 0x00b9
+                           0000B9   755 _PT0	=	0x00b9
+                           0000BA   756 G$PX1$0$0 == 0x00ba
+                           0000BA   757 _PX1	=	0x00ba
+                           0000BB   758 G$PT1$0$0 == 0x00bb
+                           0000BB   759 _PT1	=	0x00bb
+                           0000BC   760 G$PS0$0$0 == 0x00bc
+                           0000BC   761 _PS0	=	0x00bc
+                           0000BC   762 G$PS$0$0 == 0x00bc
+                           0000BC   763 _PS	=	0x00bc
+                           0000BD   764 G$PT2$0$0 == 0x00bd
+                           0000BD   765 _PT2	=	0x00bd
+                           0000C0   766 G$SMBTOE$0$0 == 0x00c0
+                           0000C0   767 _SMBTOE	=	0x00c0
+                           0000C1   768 G$SMBFTE$0$0 == 0x00c1
+                           0000C1   769 _SMBFTE	=	0x00c1
+                           0000C2   770 G$AA$0$0 == 0x00c2
+                           0000C2   771 _AA	=	0x00c2
+                           0000C3   772 G$SI$0$0 == 0x00c3
+                           0000C3   773 _SI	=	0x00c3
+                           0000C4   774 G$STO$0$0 == 0x00c4
+                           0000C4   775 _STO	=	0x00c4
+                           0000C5   776 G$STA$0$0 == 0x00c5
+                           0000C5   777 _STA	=	0x00c5
+                           0000C6   778 G$ENSMB$0$0 == 0x00c6
+                           0000C6   779 _ENSMB	=	0x00c6
+                           0000C7   780 G$BUSY$0$0 == 0x00c7
+                           0000C7   781 _BUSY	=	0x00c7
+                           0000C8   782 G$CPRL2$0$0 == 0x00c8
+                           0000C8   783 _CPRL2	=	0x00c8
+                           0000C9   784 G$CT2$0$0 == 0x00c9
+                           0000C9   785 _CT2	=	0x00c9
+                           0000CA   786 G$TR2$0$0 == 0x00ca
+                           0000CA   787 _TR2	=	0x00ca
+                           0000CB   788 G$EXEN2$0$0 == 0x00cb
+                           0000CB   789 _EXEN2	=	0x00cb
+                           0000CC   790 G$TCLK$0$0 == 0x00cc
+                           0000CC   791 _TCLK	=	0x00cc
+                           0000CD   792 G$RCLK$0$0 == 0x00cd
+                           0000CD   793 _RCLK	=	0x00cd
+                           0000CE   794 G$EXF2$0$0 == 0x00ce
+                           0000CE   795 _EXF2	=	0x00ce
+                           0000CF   796 G$TF2$0$0 == 0x00cf
+                           0000CF   797 _TF2	=	0x00cf
+                           0000D0   798 G$P$0$0 == 0x00d0
+                           0000D0   799 _P	=	0x00d0
+                           0000D1   800 G$F1$0$0 == 0x00d1
+                           0000D1   801 _F1	=	0x00d1
+                           0000D2   802 G$OV$0$0 == 0x00d2
+                           0000D2   803 _OV	=	0x00d2
+                           0000D3   804 G$RS0$0$0 == 0x00d3
+                           0000D3   805 _RS0	=	0x00d3
+                           0000D4   806 G$RS1$0$0 == 0x00d4
+                           0000D4   807 _RS1	=	0x00d4
+                           0000D5   808 G$F0$0$0 == 0x00d5
+                           0000D5   809 _F0	=	0x00d5
+                           0000D6   810 G$AC$0$0 == 0x00d6
+                           0000D6   811 _AC	=	0x00d6
+                           0000D7   812 G$CY$0$0 == 0x00d7
+                           0000D7   813 _CY	=	0x00d7
+                           0000D8   814 G$CCF0$0$0 == 0x00d8
+                           0000D8   815 _CCF0	=	0x00d8
+                           0000D9   816 G$CCF1$0$0 == 0x00d9
+                           0000D9   817 _CCF1	=	0x00d9
+                           0000DA   818 G$CCF2$0$0 == 0x00da
+                           0000DA   819 _CCF2	=	0x00da
+                           0000DB   820 G$CCF3$0$0 == 0x00db
+                           0000DB   821 _CCF3	=	0x00db
+                           0000DC   822 G$CCF4$0$0 == 0x00dc
+                           0000DC   823 _CCF4	=	0x00dc
+                           0000DE   824 G$CR$0$0 == 0x00de
+                           0000DE   825 _CR	=	0x00de
+                           0000DF   826 G$CF$0$0 == 0x00df
+                           0000DF   827 _CF	=	0x00df
+                           0000E8   828 G$ADLJST$0$0 == 0x00e8
+                           0000E8   829 _ADLJST	=	0x00e8
+                           0000E8   830 G$AD0LJST$0$0 == 0x00e8
+                           0000E8   831 _AD0LJST	=	0x00e8
+                           0000E9   832 G$ADWINT$0$0 == 0x00e9
+                           0000E9   833 _ADWINT	=	0x00e9
+                           0000E9   834 G$AD0WINT$0$0 == 0x00e9
+                           0000E9   835 _AD0WINT	=	0x00e9
+                           0000EA   836 G$ADSTM0$0$0 == 0x00ea
+                           0000EA   837 _ADSTM0	=	0x00ea
+                           0000EA   838 G$AD0CM0$0$0 == 0x00ea
+                           0000EA   839 _AD0CM0	=	0x00ea
+                           0000EB   840 G$ADSTM1$0$0 == 0x00eb
+                           0000EB   841 _ADSTM1	=	0x00eb
+                           0000EB   842 G$AD0CM1$0$0 == 0x00eb
+                           0000EB   843 _AD0CM1	=	0x00eb
+                           0000EC   844 G$ADBUSY$0$0 == 0x00ec
+                           0000EC   845 _ADBUSY	=	0x00ec
+                           0000EC   846 G$AD0BUSY$0$0 == 0x00ec
+                           0000EC   847 _AD0BUSY	=	0x00ec
+                           0000ED   848 G$ADCINT$0$0 == 0x00ed
+                           0000ED   849 _ADCINT	=	0x00ed
+                           0000ED   850 G$AD0INT$0$0 == 0x00ed
+                           0000ED   851 _AD0INT	=	0x00ed
+                           0000EE   852 G$ADCTM$0$0 == 0x00ee
+                           0000EE   853 _ADCTM	=	0x00ee
+                           0000EE   854 G$AD0TM$0$0 == 0x00ee
+                           0000EE   855 _AD0TM	=	0x00ee
+                           0000EF   856 G$ADCEN$0$0 == 0x00ef
+                           0000EF   857 _ADCEN	=	0x00ef
+                           0000EF   858 G$AD0EN$0$0 == 0x00ef
+                           0000EF   859 _AD0EN	=	0x00ef
+                           0000F8   860 G$SPIEN$0$0 == 0x00f8
+                           0000F8   861 _SPIEN	=	0x00f8
+                           0000F9   862 G$MSTEN$0$0 == 0x00f9
+                           0000F9   863 _MSTEN	=	0x00f9
+                           0000FA   864 G$SLVSEL$0$0 == 0x00fa
+                           0000FA   865 _SLVSEL	=	0x00fa
+                           0000FB   866 G$TXBSY$0$0 == 0x00fb
+                           0000FB   867 _TXBSY	=	0x00fb
+                           0000FC   868 G$RXOVRN$0$0 == 0x00fc
+                           0000FC   869 _RXOVRN	=	0x00fc
+                           0000FD   870 G$MODF$0$0 == 0x00fd
+                           0000FD   871 _MODF	=	0x00fd
+                           0000FE   872 G$WCOL$0$0 == 0x00fe
+                           0000FE   873 _WCOL	=	0x00fe
+                           0000FF   874 G$SPIF$0$0 == 0x00ff
+                           0000FF   875 _SPIF	=	0x00ff
+                                    876 ;--------------------------------------------------------
+                                    877 ; overlayable register banks
+                                    878 ;--------------------------------------------------------
+                                    879 	.area REG_BANK_0	(REL,OVR,DATA)
+      000000                        880 	.ds 8
+                                    881 ;--------------------------------------------------------
+                                    882 ; internal ram data
+                                    883 ;--------------------------------------------------------
+                                    884 	.area DSEG    (DATA)
+                           000000   885 G$PW_MAX$0$0==.
+      000000                        886 _PW_MAX::
+      000000                        887 	.ds 2
+                           000002   888 G$PW_MIN$0$0==.
+      000002                        889 _PW_MIN::
+      000002                        890 	.ds 2
+                           000004   891 G$PW_CENTER$0$0==.
+      000004                        892 _PW_CENTER::
+      000004                        893 	.ds 2
+                           000006   894 G$MOTOR_PW$0$0==.
+      000006                        895 _MOTOR_PW::
+      000006                        896 	.ds 2
+                           000008   897 G$PW$0$0==.
+      000008                        898 _PW::
+      000008                        899 	.ds 2
+                           00000A   900 G$f$0$0==.
+      00000A                        901 _f::
+      00000A                        902 	.ds 1
+                           00000B   903 G$count$0$0==.
+      00000B                        904 _count::
+      00000B                        905 	.ds 2
+                           00000D   906 G$input$0$0==.
+      00000D                        907 _input::
+      00000D                        908 	.ds 1
+                                    909 ;--------------------------------------------------------
+                                    910 ; overlayable items in internal ram 
+                                    911 ;--------------------------------------------------------
+                                    912 	.area	OSEG    (OVR,DATA)
+                                    913 	.area	OSEG    (OVR,DATA)
+                                    914 ;--------------------------------------------------------
+                                    915 ; Stack segment in internal ram 
+                                    916 ;--------------------------------------------------------
+                                    917 	.area	SSEG
+      000000                        918 __start__stack:
+      000000                        919 	.ds	1
+                                    920 
+                                    921 ;--------------------------------------------------------
+                                    922 ; indirectly addressable internal ram data
+                                    923 ;--------------------------------------------------------
+                                    924 	.area ISEG    (DATA)
+                                    925 ;--------------------------------------------------------
+                                    926 ; absolute internal ram data
+                                    927 ;--------------------------------------------------------
+                                    928 	.area IABS    (ABS,DATA)
+                                    929 	.area IABS    (ABS,DATA)
+                                    930 ;--------------------------------------------------------
+                                    931 ; bit data
+                                    932 ;--------------------------------------------------------
+                                    933 	.area BSEG    (BIT)
+                                    934 ;--------------------------------------------------------
+                                    935 ; paged external ram data
+                                    936 ;--------------------------------------------------------
+                                    937 	.area PSEG    (PAG,XDATA)
+                                    938 ;--------------------------------------------------------
+                                    939 ; external ram data
+                                    940 ;--------------------------------------------------------
+                                    941 	.area XSEG    (XDATA)
+                                    942 ;--------------------------------------------------------
+                                    943 ; absolute external ram data
+                                    944 ;--------------------------------------------------------
+                                    945 	.area XABS    (ABS,XDATA)
+                                    946 ;--------------------------------------------------------
+                                    947 ; external initialized ram data
+                                    948 ;--------------------------------------------------------
+                                    949 	.area XISEG   (XDATA)
+                                    950 	.area HOME    (CODE)
+                                    951 	.area GSINIT0 (CODE)
+                                    952 	.area GSINIT1 (CODE)
+                                    953 	.area GSINIT2 (CODE)
+                                    954 	.area GSINIT3 (CODE)
+                                    955 	.area GSINIT4 (CODE)
+                                    956 	.area GSINIT5 (CODE)
+                                    957 	.area GSINIT  (CODE)
+                                    958 	.area GSFINAL (CODE)
+                                    959 	.area CSEG    (CODE)
+                                    960 ;--------------------------------------------------------
+                                    961 ; interrupt vector 
+                                    962 ;--------------------------------------------------------
+                                    963 	.area HOME    (CODE)
+      000000                        964 __interrupt_vect:
+      000000 02r00r00         [24]  965 	ljmp	__sdcc_gsinit_startup
+      000003 32               [24]  966 	reti
+      000004                        967 	.ds	7
+      00000B 32               [24]  968 	reti
+      00000C                        969 	.ds	7
+      000013 32               [24]  970 	reti
+      000014                        971 	.ds	7
+      00001B 32               [24]  972 	reti
+      00001C                        973 	.ds	7
+      000023 32               [24]  974 	reti
+      000024                        975 	.ds	7
+      00002B 32               [24]  976 	reti
+      00002C                        977 	.ds	7
+      000033 32               [24]  978 	reti
+      000034                        979 	.ds	7
+      00003B 32               [24]  980 	reti
+      00003C                        981 	.ds	7
+      000043 32               [24]  982 	reti
+      000044                        983 	.ds	7
+      00004B 02r01r57         [24]  984 	ljmp	_PCA_ISR
+                                    985 ;--------------------------------------------------------
+                                    986 ; global & static initialisations
+                                    987 ;--------------------------------------------------------
+                                    988 	.area HOME    (CODE)
+                                    989 	.area GSINIT  (CODE)
+                                    990 	.area GSFINAL (CODE)
+                                    991 	.area GSINIT  (CODE)
+                                    992 	.globl __sdcc_gsinit_startup
+                                    993 	.globl __sdcc_program_startup
+                                    994 	.globl __start__stack
+                                    995 	.globl __mcs51_genXINIT
+                                    996 	.globl __mcs51_genXRAMCLEAR
+                                    997 	.globl __mcs51_genRAMCLEAR
+                           000000   998 	C$LAB3_1STEERINGMOTOR.c$63$1$87 ==.
+                                    999 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:63: unsigned int PW_MAX =3335;
+      000000 75*00 07         [24] 1000 	mov	_PW_MAX,#0x07
+      000003 75*01 0D         [24] 1001 	mov	(_PW_MAX + 1),#0x0D
+                           000006  1002 	C$LAB3_1STEERINGMOTOR.c$64$1$87 ==.
+                                   1003 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:64: unsigned int PW_MIN =2345;
+      000006 75*02 29         [24] 1004 	mov	_PW_MIN,#0x29
+      000009 75*03 09         [24] 1005 	mov	(_PW_MIN + 1),#0x09
+                           00000C  1006 	C$LAB3_1STEERINGMOTOR.c$65$1$87 ==.
+                                   1007 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:65: unsigned int PW_CENTER =2760;
+      00000C 75*04 C8         [24] 1008 	mov	_PW_CENTER,#0xC8
+      00000F 75*05 0A         [24] 1009 	mov	(_PW_CENTER + 1),#0x0A
+                           000012  1010 	C$LAB3_1STEERINGMOTOR.c$66$1$87 ==.
+                                   1011 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:66: unsigned int MOTOR_PW = 0;
+      000012 E4               [12] 1012 	clr	a
+      000013 F5*06            [12] 1013 	mov	_MOTOR_PW,a
+      000015 F5*07            [12] 1014 	mov	(_MOTOR_PW + 1),a
+                           000017  1015 	C$LAB3_1STEERINGMOTOR.c$67$1$87 ==.
+                                   1016 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:67: unsigned int PW = 0;
+      000017 F5*08            [12] 1017 	mov	_PW,a
+      000019 F5*09            [12] 1018 	mov	(_PW + 1),a
+                           00001B  1019 	C$LAB3_1STEERINGMOTOR.c$68$1$87 ==.
+                                   1020 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:68: unsigned char f=0;
+                                   1021 ;	1-genFromRTrack replaced	mov	_f,#0x00
+      00001B F5*0A            [12] 1022 	mov	_f,a
+                           00001D  1023 	C$LAB3_1STEERINGMOTOR.c$69$1$87 ==.
+                                   1024 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:69: volatile unsigned int count=0;
+      00001D F5*0B            [12] 1025 	mov	_count,a
+      00001F F5*0C            [12] 1026 	mov	(_count + 1),a
+                                   1027 	.area GSFINAL (CODE)
+      000000 02r00r4E         [24] 1028 	ljmp	__sdcc_program_startup
+                                   1029 ;--------------------------------------------------------
+                                   1030 ; Home
+                                   1031 ;--------------------------------------------------------
+                                   1032 	.area HOME    (CODE)
+                                   1033 	.area HOME    (CODE)
+      00004E                       1034 __sdcc_program_startup:
+      00004E 02r00r77         [24] 1035 	ljmp	_main
+                                   1036 ;	return from main will return to caller
+                                   1037 ;--------------------------------------------------------
+                                   1038 ; code
+                                   1039 ;--------------------------------------------------------
+                                   1040 	.area CSEG    (CODE)
+                                   1041 ;------------------------------------------------------------
+                                   1042 ;Allocation info for local variables in function 'SYSCLK_Init'
+                                   1043 ;------------------------------------------------------------
+                                   1044 ;i                         Allocated to registers r6 r7 
+                                   1045 ;------------------------------------------------------------
+                           000000  1046 	G$SYSCLK_Init$0$0 ==.
+                           000000  1047 	C$c8051_SDCC.h$42$0$0 ==.
+                                   1048 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:42: void SYSCLK_Init(void)
+                                   1049 ;	-----------------------------------------
+                                   1050 ;	 function SYSCLK_Init
+                                   1051 ;	-----------------------------------------
+      000000                       1052 _SYSCLK_Init:
+                           000007  1053 	ar7 = 0x07
+                           000006  1054 	ar6 = 0x06
+                           000005  1055 	ar5 = 0x05
+                           000004  1056 	ar4 = 0x04
+                           000003  1057 	ar3 = 0x03
+                           000002  1058 	ar2 = 0x02
+                           000001  1059 	ar1 = 0x01
+                           000000  1060 	ar0 = 0x00
+                           000000  1061 	C$c8051_SDCC.h$46$1$2 ==.
+                                   1062 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:46: OSCXCN = 0x67;                      // start external oscillator with
+      000000 75 B1 67         [24] 1063 	mov	_OSCXCN,#0x67
+                           000003  1064 	C$c8051_SDCC.h$49$1$2 ==.
+                                   1065 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:49: for (i=0; i < 256; i++);            // wait for oscillator to start
+      000003 7E 00            [12] 1066 	mov	r6,#0x00
+      000005 7F 01            [12] 1067 	mov	r7,#0x01
+      000007                       1068 00107$:
+      000007 EE               [12] 1069 	mov	a,r6
+      000008 24 FF            [12] 1070 	add	a,#0xFF
+      00000A FC               [12] 1071 	mov	r4,a
+      00000B EF               [12] 1072 	mov	a,r7
+      00000C 34 FF            [12] 1073 	addc	a,#0xFF
+      00000E FD               [12] 1074 	mov	r5,a
+      00000F 8C 06            [24] 1075 	mov	ar6,r4
+      000011 8D 07            [24] 1076 	mov	ar7,r5
+      000013 EC               [12] 1077 	mov	a,r4
+      000014 4D               [12] 1078 	orl	a,r5
+      000015 70 F0            [24] 1079 	jnz	00107$
+                           000017  1080 	C$c8051_SDCC.h$51$1$2 ==.
+                                   1081 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:51: while (!(OSCXCN & 0x80));           // Wait for crystal osc. to settle
+      000017                       1082 00102$:
+      000017 E5 B1            [12] 1083 	mov	a,_OSCXCN
+      000019 30 E7 FB         [24] 1084 	jnb	acc.7,00102$
+                           00001C  1085 	C$c8051_SDCC.h$53$1$2 ==.
+                                   1086 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:53: OSCICN = 0x88;                      // select external oscillator as SYSCLK
+      00001C 75 B2 88         [24] 1087 	mov	_OSCICN,#0x88
+                           00001F  1088 	C$c8051_SDCC.h$56$1$2 ==.
+                           00001F  1089 	XG$SYSCLK_Init$0$0 ==.
+      00001F 22               [24] 1090 	ret
+                                   1091 ;------------------------------------------------------------
+                                   1092 ;Allocation info for local variables in function 'UART0_Init'
+                                   1093 ;------------------------------------------------------------
+                           000020  1094 	G$UART0_Init$0$0 ==.
+                           000020  1095 	C$c8051_SDCC.h$64$1$2 ==.
+                                   1096 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:64: void UART0_Init(void)
+                                   1097 ;	-----------------------------------------
+                                   1098 ;	 function UART0_Init
+                                   1099 ;	-----------------------------------------
+      000020                       1100 _UART0_Init:
+                           000020  1101 	C$c8051_SDCC.h$66$1$4 ==.
+                                   1102 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:66: SCON0  = 0x50;                      // SCON0: mode 1, 8-bit UART, enable RX
+      000020 75 98 50         [24] 1103 	mov	_SCON0,#0x50
+                           000023  1104 	C$c8051_SDCC.h$67$1$4 ==.
+                                   1105 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:67: TMOD   = 0x20;                      // TMOD: timer 1, mode 2, 8-bit reload
+      000023 75 89 20         [24] 1106 	mov	_TMOD,#0x20
+                           000026  1107 	C$c8051_SDCC.h$68$1$4 ==.
+                                   1108 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:68: TH1    = 0xFF&-(SYSCLK/BAUDRATE/16);     // set Timer1 reload value for baudrate
+      000026 75 8D DC         [24] 1109 	mov	_TH1,#0xDC
+                           000029  1110 	C$c8051_SDCC.h$69$1$4 ==.
+                                   1111 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:69: TR1    = 1;                         // start Timer1
+      000029 D2 8E            [12] 1112 	setb	_TR1
+                           00002B  1113 	C$c8051_SDCC.h$70$1$4 ==.
+                                   1114 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:70: CKCON |= 0x10;                      // Timer1 uses SYSCLK as time base
+      00002B 43 8E 10         [24] 1115 	orl	_CKCON,#0x10
+                           00002E  1116 	C$c8051_SDCC.h$71$1$4 ==.
+                                   1117 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:71: PCON  |= 0x80;                      // SMOD00 = 1 (disable baud rate 
+      00002E 43 87 80         [24] 1118 	orl	_PCON,#0x80
+                           000031  1119 	C$c8051_SDCC.h$73$1$4 ==.
+                                   1120 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:73: TI0    = 1;                         // Indicate TX0 ready
+      000031 D2 99            [12] 1121 	setb	_TI0
+                           000033  1122 	C$c8051_SDCC.h$74$1$4 ==.
+                                   1123 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:74: P0MDOUT |= 0x01;                    // Set TX0 to push/pull
+      000033 43 A4 01         [24] 1124 	orl	_P0MDOUT,#0x01
+                           000036  1125 	C$c8051_SDCC.h$75$1$4 ==.
+                           000036  1126 	XG$UART0_Init$0$0 ==.
+      000036 22               [24] 1127 	ret
+                                   1128 ;------------------------------------------------------------
+                                   1129 ;Allocation info for local variables in function 'Sys_Init'
+                                   1130 ;------------------------------------------------------------
+                           000037  1131 	G$Sys_Init$0$0 ==.
+                           000037  1132 	C$c8051_SDCC.h$83$1$4 ==.
+                                   1133 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:83: void Sys_Init(void)
+                                   1134 ;	-----------------------------------------
+                                   1135 ;	 function Sys_Init
+                                   1136 ;	-----------------------------------------
+      000037                       1137 _Sys_Init:
+                           000037  1138 	C$c8051_SDCC.h$85$1$6 ==.
+                                   1139 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:85: WDTCN = 0xde;			// disable watchdog timer
+      000037 75 FF DE         [24] 1140 	mov	_WDTCN,#0xDE
+                           00003A  1141 	C$c8051_SDCC.h$86$1$6 ==.
+                                   1142 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:86: WDTCN = 0xad;
+      00003A 75 FF AD         [24] 1143 	mov	_WDTCN,#0xAD
+                           00003D  1144 	C$c8051_SDCC.h$88$1$6 ==.
+                                   1145 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:88: SYSCLK_Init();			// initialize oscillator
+      00003D 12r00r00         [24] 1146 	lcall	_SYSCLK_Init
+                           000040  1147 	C$c8051_SDCC.h$89$1$6 ==.
+                                   1148 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:89: UART0_Init();			// initialize UART0
+      000040 12r00r20         [24] 1149 	lcall	_UART0_Init
+                           000043  1150 	C$c8051_SDCC.h$91$1$6 ==.
+                                   1151 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:91: XBR0 |= 0x04;
+      000043 43 E1 04         [24] 1152 	orl	_XBR0,#0x04
+                           000046  1153 	C$c8051_SDCC.h$92$1$6 ==.
+                                   1154 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:92: XBR2 |= 0x40;                    	// Enable crossbar and weak pull-ups
+      000046 43 E3 40         [24] 1155 	orl	_XBR2,#0x40
+                           000049  1156 	C$c8051_SDCC.h$93$1$6 ==.
+                           000049  1157 	XG$Sys_Init$0$0 ==.
+      000049 22               [24] 1158 	ret
+                                   1159 ;------------------------------------------------------------
+                                   1160 ;Allocation info for local variables in function 'putchar'
+                                   1161 ;------------------------------------------------------------
+                                   1162 ;c                         Allocated to registers r7 
+                                   1163 ;------------------------------------------------------------
+                           00004A  1164 	G$putchar$0$0 ==.
+                           00004A  1165 	C$c8051_SDCC.h$98$1$6 ==.
+                                   1166 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:98: void putchar(char c)
+                                   1167 ;	-----------------------------------------
+                                   1168 ;	 function putchar
+                                   1169 ;	-----------------------------------------
+      00004A                       1170 _putchar:
+      00004A AF 82            [24] 1171 	mov	r7,dpl
+                           00004C  1172 	C$c8051_SDCC.h$100$1$8 ==.
+                                   1173 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:100: while (!TI0); 
+      00004C                       1174 00101$:
+                           00004C  1175 	C$c8051_SDCC.h$101$1$8 ==.
+                                   1176 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:101: TI0 = 0;
+      00004C 10 99 02         [24] 1177 	jbc	_TI0,00112$
+      00004F 80 FB            [24] 1178 	sjmp	00101$
+      000051                       1179 00112$:
+                           000051  1180 	C$c8051_SDCC.h$102$1$8 ==.
+                                   1181 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:102: SBUF0 = c;
+      000051 8F 99            [24] 1182 	mov	_SBUF0,r7
+                           000053  1183 	C$c8051_SDCC.h$103$1$8 ==.
+                           000053  1184 	XG$putchar$0$0 ==.
+      000053 22               [24] 1185 	ret
+                                   1186 ;------------------------------------------------------------
+                                   1187 ;Allocation info for local variables in function 'getchar'
+                                   1188 ;------------------------------------------------------------
+                                   1189 ;c                         Allocated to registers 
+                                   1190 ;------------------------------------------------------------
+                           000054  1191 	G$getchar$0$0 ==.
+                           000054  1192 	C$c8051_SDCC.h$108$1$8 ==.
+                                   1193 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:108: char getchar(void)
+                                   1194 ;	-----------------------------------------
+                                   1195 ;	 function getchar
+                                   1196 ;	-----------------------------------------
+      000054                       1197 _getchar:
+                           000054  1198 	C$c8051_SDCC.h$111$1$10 ==.
+                                   1199 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:111: while (!RI0);
+      000054                       1200 00101$:
+                           000054  1201 	C$c8051_SDCC.h$112$1$10 ==.
+                                   1202 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:112: RI0 = 0;
+      000054 10 98 02         [24] 1203 	jbc	_RI0,00112$
+      000057 80 FB            [24] 1204 	sjmp	00101$
+      000059                       1205 00112$:
+                           000059  1206 	C$c8051_SDCC.h$113$1$10 ==.
+                                   1207 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:113: c = SBUF0;
+      000059 85 99 82         [24] 1208 	mov	dpl,_SBUF0
+                           00005C  1209 	C$c8051_SDCC.h$114$1$10 ==.
+                                   1210 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:114: putchar(c);                          // echo to terminal
+      00005C 12r00r4A         [24] 1211 	lcall	_putchar
+                           00005F  1212 	C$c8051_SDCC.h$115$1$10 ==.
+                                   1213 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:115: return SBUF0;
+      00005F 85 99 82         [24] 1214 	mov	dpl,_SBUF0
+                           000062  1215 	C$c8051_SDCC.h$116$1$10 ==.
+                           000062  1216 	XG$getchar$0$0 ==.
+      000062 22               [24] 1217 	ret
+                                   1218 ;------------------------------------------------------------
+                                   1219 ;Allocation info for local variables in function 'getchar_nw'
+                                   1220 ;------------------------------------------------------------
+                                   1221 ;c                         Allocated to registers 
+                                   1222 ;------------------------------------------------------------
+                           000063  1223 	G$getchar_nw$0$0 ==.
+                           000063  1224 	C$c8051_SDCC.h$121$1$10 ==.
+                                   1225 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:121: char getchar_nw(void)
+                                   1226 ;	-----------------------------------------
+                                   1227 ;	 function getchar_nw
+                                   1228 ;	-----------------------------------------
+      000063                       1229 _getchar_nw:
+                           000063  1230 	C$c8051_SDCC.h$124$1$12 ==.
+                                   1231 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:124: if (!RI0) return 0xFF;
+      000063 20 98 05         [24] 1232 	jb	_RI0,00102$
+      000066 75 82 FF         [24] 1233 	mov	dpl,#0xFF
+      000069 80 0B            [24] 1234 	sjmp	00104$
+      00006B                       1235 00102$:
+                           00006B  1236 	C$c8051_SDCC.h$127$2$13 ==.
+                                   1237 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:127: RI0 = 0;
+      00006B C2 98            [12] 1238 	clr	_RI0
+                           00006D  1239 	C$c8051_SDCC.h$128$2$13 ==.
+                                   1240 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:128: c = SBUF0;
+      00006D 85 99 82         [24] 1241 	mov	dpl,_SBUF0
+                           000070  1242 	C$c8051_SDCC.h$129$2$13 ==.
+                                   1243 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:129: putchar(c);                          // echo to terminal
+      000070 12r00r4A         [24] 1244 	lcall	_putchar
+                           000073  1245 	C$c8051_SDCC.h$130$2$13 ==.
+                                   1246 ;	C:/Program Files/SDCC/bin/../include/mcs51/c8051_SDCC.h:130: return SBUF0;
+      000073 85 99 82         [24] 1247 	mov	dpl,_SBUF0
+      000076                       1248 00104$:
+                           000076  1249 	C$c8051_SDCC.h$132$1$12 ==.
+                           000076  1250 	XG$getchar_nw$0$0 ==.
+      000076 22               [24] 1251 	ret
+                                   1252 ;------------------------------------------------------------
+                                   1253 ;Allocation info for local variables in function 'main'
+                                   1254 ;------------------------------------------------------------
+                           000077  1255 	G$main$0$0 ==.
+                           000077  1256 	C$LAB3_1STEERINGMOTOR.c$75$1$12 ==.
+                                   1257 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:75: void main(void)
+                                   1258 ;	-----------------------------------------
+                                   1259 ;	 function main
+                                   1260 ;	-----------------------------------------
+      000077                       1261 _main:
+                           000077  1262 	C$LAB3_1STEERINGMOTOR.c$78$1$55 ==.
+                                   1263 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:78: Sys_Init();
+      000077 12r00r37         [24] 1264 	lcall	_Sys_Init
+                           00007A  1265 	C$LAB3_1STEERINGMOTOR.c$79$1$55 ==.
+                                   1266 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:79: putchar(' ');
+      00007A 75 82 20         [24] 1267 	mov	dpl,#0x20
+      00007D 12r00r4A         [24] 1268 	lcall	_putchar
+                           000080  1269 	C$LAB3_1STEERINGMOTOR.c$80$1$55 ==.
+                                   1270 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:80: Port_Init();
+      000080 12r01r3D         [24] 1271 	lcall	_Port_Init
+                           000083  1272 	C$LAB3_1STEERINGMOTOR.c$81$1$55 ==.
+                                   1273 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:81: XBR0_Init();
+      000083 12r01r41         [24] 1274 	lcall	_XBR0_Init
+                           000086  1275 	C$LAB3_1STEERINGMOTOR.c$82$1$55 ==.
+                                   1276 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:82: PCA_Init();
+      000086 12r01r45         [24] 1277 	lcall	_PCA_Init
+                           000089  1278 	C$LAB3_1STEERINGMOTOR.c$83$1$55 ==.
+                                   1279 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:83: Calibration();
+      000089 12r02rA0         [24] 1280 	lcall	_Calibration
+                           00008C  1281 	C$LAB3_1STEERINGMOTOR.c$84$1$55 ==.
+                                   1282 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:84: MOTOR_PW = PW_NEUT;    //set initial value
+      00008C 75*06 DC         [24] 1283 	mov	_MOTOR_PW,#0xDC
+      00008F 75*07 05         [24] 1284 	mov	(_MOTOR_PW + 1),#0x05
+                           000092  1285 	C$LAB3_1STEERINGMOTOR.c$85$1$55 ==.
+                                   1286 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:85: printf("\n\r1 second Motor calibration will now begin. Expect loud noise");
+      000092 74r00            [12] 1287 	mov	a,#___str_0
+      000094 C0 E0            [24] 1288 	push	acc
+      000096 74s00            [12] 1289 	mov	a,#(___str_0 >> 8)
+      000098 C0 E0            [24] 1290 	push	acc
+      00009A 74 80            [12] 1291 	mov	a,#0x80
+      00009C C0 E0            [24] 1292 	push	acc
+      00009E 12r00r00         [24] 1293 	lcall	_printf
+      0000A1 15 81            [12] 1294 	dec	sp
+      0000A3 15 81            [12] 1295 	dec	sp
+      0000A5 15 81            [12] 1296 	dec	sp
+                           0000A7  1297 	C$LAB3_1STEERINGMOTOR.c$86$1$55 ==.
+                                   1298 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:86: count =0;
+      0000A7 E4               [12] 1299 	clr	a
+      0000A8 F5*0B            [12] 1300 	mov	_count,a
+      0000AA F5*0C            [12] 1301 	mov	(_count + 1),a
+                           0000AC  1302 	C$LAB3_1STEERINGMOTOR.c$87$1$55 ==.
+                                   1303 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:87: while(count<=27);//add code to set the servo motor in neutral for one second
+      0000AC                       1304 00101$:
+      0000AC C3               [12] 1305 	clr	c
+      0000AD 74 1B            [12] 1306 	mov	a,#0x1B
+      0000AF 95*0B            [12] 1307 	subb	a,_count
+      0000B1 E4               [12] 1308 	clr	a
+      0000B2 95*0C            [12] 1309 	subb	a,(_count + 1)
+      0000B4 50 F6            [24] 1310 	jnc	00101$
+                           0000B6  1311 	C$LAB3_1STEERINGMOTOR.c$89$1$55 ==.
+                                   1312 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:89: printf("\r\nCalibrations complete! User can now control speed and direction.");
+      0000B6 74r3F            [12] 1313 	mov	a,#___str_1
+      0000B8 C0 E0            [24] 1314 	push	acc
+      0000BA 74s00            [12] 1315 	mov	a,#(___str_1 >> 8)
+      0000BC C0 E0            [24] 1316 	push	acc
+      0000BE 74 80            [12] 1317 	mov	a,#0x80
+      0000C0 C0 E0            [24] 1318 	push	acc
+      0000C2 12r00r00         [24] 1319 	lcall	_printf
+      0000C5 15 81            [12] 1320 	dec	sp
+      0000C7 15 81            [12] 1321 	dec	sp
+      0000C9 15 81            [12] 1322 	dec	sp
+                           0000CB  1323 	C$LAB3_1STEERINGMOTOR.c$90$1$55 ==.
+                                   1324 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:90: printf("\r\nPress the 'r' key to turn wheels right.");
+      0000CB 74r82            [12] 1325 	mov	a,#___str_2
+      0000CD C0 E0            [24] 1326 	push	acc
+      0000CF 74s00            [12] 1327 	mov	a,#(___str_2 >> 8)
+      0000D1 C0 E0            [24] 1328 	push	acc
+      0000D3 74 80            [12] 1329 	mov	a,#0x80
+      0000D5 C0 E0            [24] 1330 	push	acc
+      0000D7 12r00r00         [24] 1331 	lcall	_printf
+      0000DA 15 81            [12] 1332 	dec	sp
+      0000DC 15 81            [12] 1333 	dec	sp
+      0000DE 15 81            [12] 1334 	dec	sp
+                           0000E0  1335 	C$LAB3_1STEERINGMOTOR.c$91$1$55 ==.
+                                   1336 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:91: printf("\r\nPress the 'l' key to turn wheels left.");
+      0000E0 74rAC            [12] 1337 	mov	a,#___str_3
+      0000E2 C0 E0            [24] 1338 	push	acc
+      0000E4 74s00            [12] 1339 	mov	a,#(___str_3 >> 8)
+      0000E6 C0 E0            [24] 1340 	push	acc
+      0000E8 74 80            [12] 1341 	mov	a,#0x80
+      0000EA C0 E0            [24] 1342 	push	acc
+      0000EC 12r00r00         [24] 1343 	lcall	_printf
+      0000EF 15 81            [12] 1344 	dec	sp
+      0000F1 15 81            [12] 1345 	dec	sp
+      0000F3 15 81            [12] 1346 	dec	sp
+                           0000F5  1347 	C$LAB3_1STEERINGMOTOR.c$92$1$55 ==.
+                                   1348 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:92: printf("\r\nPress the 'f' key to make the car go faster.");
+      0000F5 74rD5            [12] 1349 	mov	a,#___str_4
+      0000F7 C0 E0            [24] 1350 	push	acc
+      0000F9 74s00            [12] 1351 	mov	a,#(___str_4 >> 8)
+      0000FB C0 E0            [24] 1352 	push	acc
+      0000FD 74 80            [12] 1353 	mov	a,#0x80
+      0000FF C0 E0            [24] 1354 	push	acc
+      000101 12r00r00         [24] 1355 	lcall	_printf
+      000104 15 81            [12] 1356 	dec	sp
+      000106 15 81            [12] 1357 	dec	sp
+      000108 15 81            [12] 1358 	dec	sp
+                           00010A  1359 	C$LAB3_1STEERINGMOTOR.c$93$1$55 ==.
+                                   1360 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:93: printf("\r\nPress the 's' key to make the car go slower.");
+      00010A 74r04            [12] 1361 	mov	a,#___str_5
+      00010C C0 E0            [24] 1362 	push	acc
+      00010E 74s01            [12] 1363 	mov	a,#(___str_5 >> 8)
+      000110 C0 E0            [24] 1364 	push	acc
+      000112 74 80            [12] 1365 	mov	a,#0x80
+      000114 C0 E0            [24] 1366 	push	acc
+      000116 12r00r00         [24] 1367 	lcall	_printf
+      000119 15 81            [12] 1368 	dec	sp
+      00011B 15 81            [12] 1369 	dec	sp
+      00011D 15 81            [12] 1370 	dec	sp
+                           00011F  1371 	C$LAB3_1STEERINGMOTOR.c$94$1$55 ==.
+                                   1372 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:94: printf("\r\n\nNote that continuing to press 's' after car is stationary will result in reverse direction.");
+      00011F 74r33            [12] 1373 	mov	a,#___str_6
+      000121 C0 E0            [24] 1374 	push	acc
+      000123 74s01            [12] 1375 	mov	a,#(___str_6 >> 8)
+      000125 C0 E0            [24] 1376 	push	acc
+      000127 74 80            [12] 1377 	mov	a,#0x80
+      000129 C0 E0            [24] 1378 	push	acc
+      00012B 12r00r00         [24] 1379 	lcall	_printf
+      00012E 15 81            [12] 1380 	dec	sp
+      000130 15 81            [12] 1381 	dec	sp
+      000132 15 81            [12] 1382 	dec	sp
+                           000134  1383 	C$LAB3_1STEERINGMOTOR.c$96$1$55 ==.
+                                   1384 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:96: turnwheel();
+      000134 12r03r03         [24] 1385 	lcall	_turnwheel
+                           000137  1386 	C$LAB3_1STEERINGMOTOR.c$97$1$55 ==.
+                                   1387 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:97: while(1)
+      000137                       1388 00105$:
+                           000137  1389 	C$LAB3_1STEERINGMOTOR.c$101$2$56 ==.
+                                   1390 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:101: SteeringServo_DriveMotor();
+      000137 12r01r79         [24] 1391 	lcall	_SteeringServo_DriveMotor
+      00013A 80 FB            [24] 1392 	sjmp	00105$
+                           00013C  1393 	C$LAB3_1STEERINGMOTOR.c$103$1$55 ==.
+                           00013C  1394 	XG$main$0$0 ==.
+      00013C 22               [24] 1395 	ret
+                                   1396 ;------------------------------------------------------------
+                                   1397 ;Allocation info for local variables in function 'Port_Init'
+                                   1398 ;------------------------------------------------------------
+                           00013D  1399 	G$Port_Init$0$0 ==.
+                           00013D  1400 	C$LAB3_1STEERINGMOTOR.c$109$1$55 ==.
+                                   1401 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:109: void Port_Init()
+                                   1402 ;	-----------------------------------------
+                                   1403 ;	 function Port_Init
+                                   1404 ;	-----------------------------------------
+      00013D                       1405 _Port_Init:
+                           00013D  1406 	C$LAB3_1STEERINGMOTOR.c$111$1$57 ==.
+                                   1407 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:111: P1MDOUT |= 0x03;  //set output pin for CEX0 or CEX2 in push-pull mode
+      00013D 43 A5 03         [24] 1408 	orl	_P1MDOUT,#0x03
+                           000140  1409 	C$LAB3_1STEERINGMOTOR.c$112$1$57 ==.
+                           000140  1410 	XG$Port_Init$0$0 ==.
+      000140 22               [24] 1411 	ret
+                                   1412 ;------------------------------------------------------------
+                                   1413 ;Allocation info for local variables in function 'XBR0_Init'
+                                   1414 ;------------------------------------------------------------
+                           000141  1415 	G$XBR0_Init$0$0 ==.
+                           000141  1416 	C$LAB3_1STEERINGMOTOR.c$116$1$57 ==.
+                                   1417 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:116: void XBR0_Init()
+                                   1418 ;	-----------------------------------------
+                                   1419 ;	 function XBR0_Init
+                                   1420 ;	-----------------------------------------
+      000141                       1421 _XBR0_Init:
+                           000141  1422 	C$LAB3_1STEERINGMOTOR.c$118$1$58 ==.
+                                   1423 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:118: XBR0 = 0x27;  //configure crossbar as directed in the laboratory
+      000141 75 E1 27         [24] 1424 	mov	_XBR0,#0x27
+                           000144  1425 	C$LAB3_1STEERINGMOTOR.c$119$1$58 ==.
+                           000144  1426 	XG$XBR0_Init$0$0 ==.
+      000144 22               [24] 1427 	ret
+                                   1428 ;------------------------------------------------------------
+                                   1429 ;Allocation info for local variables in function 'PCA_Init'
+                                   1430 ;------------------------------------------------------------
+                           000145  1431 	G$PCA_Init$0$0 ==.
+                           000145  1432 	C$LAB3_1STEERINGMOTOR.c$123$1$58 ==.
+                                   1433 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:123: void PCA_Init(void)
+                                   1434 ;	-----------------------------------------
+                                   1435 ;	 function PCA_Init
+                                   1436 ;	-----------------------------------------
+      000145                       1437 _PCA_Init:
+                           000145  1438 	C$LAB3_1STEERINGMOTOR.c$125$1$60 ==.
+                                   1439 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:125: PCA0MD=0x81;	//SYSCLK/12, enable CF interrupts, suspend when idle	
+      000145 75 D9 81         [24] 1440 	mov	_PCA0MD,#0x81
+                           000148  1441 	C$LAB3_1STEERINGMOTOR.c$126$1$60 ==.
+                                   1442 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:126: PCA0CPM0 =0xC2;	//16 bit, enable compare, enable PWM				
+      000148 75 DA C2         [24] 1443 	mov	_PCA0CPM0,#0xC2
+                           00014B  1444 	C$LAB3_1STEERINGMOTOR.c$127$1$60 ==.
+                                   1445 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:127: PCA0CPM2 =0xC2;	//16 bit, enable compare, enable PWM				
+      00014B 75 DC C2         [24] 1446 	mov	_PCA0CPM2,#0xC2
+                           00014E  1447 	C$LAB3_1STEERINGMOTOR.c$128$1$60 ==.
+                                   1448 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:128: PCA0CN |=0x40;	//enable the PCA
+      00014E 43 D8 40         [24] 1449 	orl	_PCA0CN,#0x40
+                           000151  1450 	C$LAB3_1STEERINGMOTOR.c$129$1$60 ==.
+                                   1451 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:129: EIE1 |= 0x08;	//enable PCA interrupt
+      000151 43 E6 08         [24] 1452 	orl	_EIE1,#0x08
+                           000154  1453 	C$LAB3_1STEERINGMOTOR.c$130$1$60 ==.
+                                   1454 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:130: EA = 1;			//enable global interrupts
+      000154 D2 AF            [12] 1455 	setb	_EA
+                           000156  1456 	C$LAB3_1STEERINGMOTOR.c$131$1$60 ==.
+                           000156  1457 	XG$PCA_Init$0$0 ==.
+      000156 22               [24] 1458 	ret
+                                   1459 ;------------------------------------------------------------
+                                   1460 ;Allocation info for local variables in function 'PCA_ISR'
+                                   1461 ;------------------------------------------------------------
+                           000157  1462 	G$PCA_ISR$0$0 ==.
+                           000157  1463 	C$LAB3_1STEERINGMOTOR.c$135$1$60 ==.
+                                   1464 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:135: void PCA_ISR ( void ) __interrupt 9
+                                   1465 ;	-----------------------------------------
+                                   1466 ;	 function PCA_ISR
+                                   1467 ;	-----------------------------------------
+      000157                       1468 _PCA_ISR:
+      000157 C0 E0            [24] 1469 	push	acc
+      000159 C0 D0            [24] 1470 	push	psw
+                           00015B  1471 	C$LAB3_1STEERINGMOTOR.c$137$1$62 ==.
+                                   1472 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:137: count ++;//count varible for the delays
+      00015B 74 01            [12] 1473 	mov	a,#0x01
+      00015D 25*0B            [12] 1474 	add	a,_count
+      00015F F5*0B            [12] 1475 	mov	_count,a
+      000161 E4               [12] 1476 	clr	a
+      000162 35*0C            [12] 1477 	addc	a,(_count + 1)
+      000164 F5*0C            [12] 1478 	mov	(_count + 1),a
+                           000166  1479 	C$LAB3_1STEERINGMOTOR.c$138$1$62 ==.
+                                   1480 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:138: if (CF)
+                           000166  1481 	C$LAB3_1STEERINGMOTOR.c$140$2$63 ==.
+                                   1482 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:140: CF=0;	//clear overflow flag
+      000166 10 DF 02         [24] 1483 	jbc	_CF,00108$
+      000169 80 06            [24] 1484 	sjmp	00102$
+      00016B                       1485 00108$:
+                           00016B  1486 	C$LAB3_1STEERINGMOTOR.c$141$2$63 ==.
+                                   1487 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:141: PCA0=28672; //Not sure if this has the same effect?
+      00016B 75 E9 00         [24] 1488 	mov	((_PCA0 >> 0) & 0xFF),#0x00
+      00016E 75 F9 70         [24] 1489 	mov	((_PCA0 >> 8) & 0xFF),#0x70
+      000171                       1490 00102$:
+                           000171  1491 	C$LAB3_1STEERINGMOTOR.c$144$1$62 ==.
+                                   1492 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:144: PCA0CN &=0xC0;						  
+      000171 53 D8 C0         [24] 1493 	anl	_PCA0CN,#0xC0
+      000174 D0 D0            [24] 1494 	pop	psw
+      000176 D0 E0            [24] 1495 	pop	acc
+                           000178  1496 	C$LAB3_1STEERINGMOTOR.c$145$1$62 ==.
+                           000178  1497 	XG$PCA_ISR$0$0 ==.
+      000178 32               [24] 1498 	reti
+                                   1499 ;	eliminated unneeded mov psw,# (no regs used in bank)
+                                   1500 ;	eliminated unneeded push/pop dpl
+                                   1501 ;	eliminated unneeded push/pop dph
+                                   1502 ;	eliminated unneeded push/pop b
+                                   1503 ;------------------------------------------------------------
+                                   1504 ;Allocation info for local variables in function 'SteeringServo_DriveMotor'
+                                   1505 ;------------------------------------------------------------
+                           000179  1506 	G$SteeringServo_DriveMotor$0$0 ==.
+                           000179  1507 	C$LAB3_1STEERINGMOTOR.c$147$1$62 ==.
+                                   1508 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:147: void SteeringServo_DriveMotor()
+                                   1509 ;	-----------------------------------------
+                                   1510 ;	 function SteeringServo_DriveMotor
+                                   1511 ;	-----------------------------------------
+      000179                       1512 _SteeringServo_DriveMotor:
+                           000179  1513 	C$LAB3_1STEERINGMOTOR.c$149$1$64 ==.
+                                   1514 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:149: input = getchar();//wait for a key to be pressed
+      000179 12r00r54         [24] 1515 	lcall	_getchar
+      00017C 85 82*0D         [24] 1516 	mov	_input,dpl
+                           00017F  1517 	C$LAB3_1STEERINGMOTOR.c$150$1$64 ==.
+                                   1518 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:150: if(input == 'l')  // single character input to decrease the pulsewidth
+      00017F 74 6C            [12] 1519 	mov	a,#0x6C
+      000181 B5*0D 29         [24] 1520 	cjne	a,_input,00118$
+                           000184  1521 	C$LAB3_1STEERINGMOTOR.c$152$2$65 ==.
+                                   1522 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:152: if(PW < (PW_MIN +10) ) // check if less than pulsewidth minimum
+      000184 74 0A            [12] 1523 	mov	a,#0x0A
+      000186 25*02            [12] 1524 	add	a,_PW_MIN
+      000188 FE               [12] 1525 	mov	r6,a
+      000189 E4               [12] 1526 	clr	a
+      00018A 35*03            [12] 1527 	addc	a,(_PW_MIN + 1)
+      00018C FF               [12] 1528 	mov	r7,a
+      00018D C3               [12] 1529 	clr	c
+      00018E E5*08            [12] 1530 	mov	a,_PW
+      000190 9E               [12] 1531 	subb	a,r6
+      000191 E5*09            [12] 1532 	mov	a,(_PW + 1)
+      000193 9F               [12] 1533 	subb	a,r7
+      000194 50 09            [24] 1534 	jnc	00102$
+                           000196  1535 	C$LAB3_1STEERINGMOTOR.c$153$2$65 ==.
+                                   1536 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:153: PW = PW_MIN; // set SERVO_PW to a minimum value 
+      000196 85*02*08         [24] 1537 	mov	_PW,_PW_MIN
+      000199 85*03*09         [24] 1538 	mov	(_PW + 1),(_PW_MIN + 1)
+      00019C 02r02r12         [24] 1539 	ljmp	00119$
+      00019F                       1540 00102$:
+                           00019F  1541 	C$LAB3_1STEERINGMOTOR.c$155$2$65 ==.
+                                   1542 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:155: PW-=10; //decrease pulsewidth by 10
+      00019F E5*08            [12] 1543 	mov	a,_PW
+      0001A1 24 F6            [12] 1544 	add	a,#0xF6
+      0001A3 F5*08            [12] 1545 	mov	_PW,a
+      0001A5 E5*09            [12] 1546 	mov	a,(_PW + 1)
+      0001A7 34 FF            [12] 1547 	addc	a,#0xFF
+      0001A9 F5*09            [12] 1548 	mov	(_PW + 1),a
+      0001AB 80 65            [24] 1549 	sjmp	00119$
+      0001AD                       1550 00118$:
+                           0001AD  1551 	C$LAB3_1STEERINGMOTOR.c$157$1$64 ==.
+                                   1552 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:157: else if(input == 'r')  // single character input to increase the pulsewidth
+      0001AD 74 72            [12] 1553 	mov	a,#0x72
+      0001AF B5*0D 27         [24] 1554 	cjne	a,_input,00115$
+                           0001B2  1555 	C$LAB3_1STEERINGMOTOR.c$159$2$66 ==.
+                                   1556 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:159: if(PW+10 > PW_MAX)  // check if pulsewidth maximum exceeded
+      0001B2 74 0A            [12] 1557 	mov	a,#0x0A
+      0001B4 25*08            [12] 1558 	add	a,_PW
+      0001B6 FE               [12] 1559 	mov	r6,a
+      0001B7 E4               [12] 1560 	clr	a
+      0001B8 35*09            [12] 1561 	addc	a,(_PW + 1)
+      0001BA FF               [12] 1562 	mov	r7,a
+      0001BB C3               [12] 1563 	clr	c
+      0001BC E5*00            [12] 1564 	mov	a,_PW_MAX
+      0001BE 9E               [12] 1565 	subb	a,r6
+      0001BF E5*01            [12] 1566 	mov	a,(_PW_MAX + 1)
+      0001C1 9F               [12] 1567 	subb	a,r7
+      0001C2 50 08            [24] 1568 	jnc	00105$
+                           0001C4  1569 	C$LAB3_1STEERINGMOTOR.c$160$2$66 ==.
+                                   1570 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:160: PW = PW_MAX;// set PW to a maximum value 
+      0001C4 85*00*08         [24] 1571 	mov	_PW,_PW_MAX
+      0001C7 85*01*09         [24] 1572 	mov	(_PW + 1),(_PW_MAX + 1)
+      0001CA 80 46            [24] 1573 	sjmp	00119$
+      0001CC                       1574 00105$:
+                           0001CC  1575 	C$LAB3_1STEERINGMOTOR.c$162$2$66 ==.
+                                   1576 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:162: PW+=10; //increment pulsewidth by 10
+      0001CC 74 0A            [12] 1577 	mov	a,#0x0A
+      0001CE 25*08            [12] 1578 	add	a,_PW
+      0001D0 F5*08            [12] 1579 	mov	_PW,a
+      0001D2 E4               [12] 1580 	clr	a
+      0001D3 35*09            [12] 1581 	addc	a,(_PW + 1)
+      0001D5 F5*09            [12] 1582 	mov	(_PW + 1),a
+      0001D7 80 39            [24] 1583 	sjmp	00119$
+      0001D9                       1584 00115$:
+                           0001D9  1585 	C$LAB3_1STEERINGMOTOR.c$164$1$64 ==.
+                                   1586 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:164: else if( (input == 'f') && (MOTOR_PW < PW_MAXmm) )//if 'f' is pressed by the user
+      0001D9 74 66            [12] 1587 	mov	a,#0x66
+      0001DB B5*0D 18         [24] 1588 	cjne	a,_input,00111$
+      0001DE C3               [12] 1589 	clr	c
+      0001DF E5*06            [12] 1590 	mov	a,_MOTOR_PW
+      0001E1 94 6C            [12] 1591 	subb	a,#0x6C
+      0001E3 E5*07            [12] 1592 	mov	a,(_MOTOR_PW + 1)
+      0001E5 94 07            [12] 1593 	subb	a,#0x07
+      0001E7 50 0D            [24] 1594 	jnc	00111$
+                           0001E9  1595 	C$LAB3_1STEERINGMOTOR.c$166$2$67 ==.
+                                   1596 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:166: MOTOR_PW = MOTOR_PW + 10; //increase the steering pulsewidth by 10
+      0001E9 74 0A            [12] 1597 	mov	a,#0x0A
+      0001EB 25*06            [12] 1598 	add	a,_MOTOR_PW
+      0001ED F5*06            [12] 1599 	mov	_MOTOR_PW,a
+      0001EF E4               [12] 1600 	clr	a
+      0001F0 35*07            [12] 1601 	addc	a,(_MOTOR_PW + 1)
+      0001F2 F5*07            [12] 1602 	mov	(_MOTOR_PW + 1),a
+      0001F4 80 1C            [24] 1603 	sjmp	00119$
+      0001F6                       1604 00111$:
+                           0001F6  1605 	C$LAB3_1STEERINGMOTOR.c$168$1$64 ==.
+                                   1606 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:168: else if( (input == 's') &&(MOTOR_PW > PW_MINmm) )//if 's' is pressed by the user
+      0001F6 74 73            [12] 1607 	mov	a,#0x73
+      0001F8 B5*0D 17         [24] 1608 	cjne	a,_input,00119$
+      0001FB C3               [12] 1609 	clr	c
+      0001FC 74 4C            [12] 1610 	mov	a,#0x4C
+      0001FE 95*06            [12] 1611 	subb	a,_MOTOR_PW
+      000200 74 04            [12] 1612 	mov	a,#0x04
+      000202 95*07            [12] 1613 	subb	a,(_MOTOR_PW + 1)
+      000204 50 0C            [24] 1614 	jnc	00119$
+                           000206  1615 	C$LAB3_1STEERINGMOTOR.c$170$2$68 ==.
+                                   1616 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:170: MOTOR_PW = MOTOR_PW - 10; //decrease the steering pulsewidth by 10
+      000206 E5*06            [12] 1617 	mov	a,_MOTOR_PW
+      000208 24 F6            [12] 1618 	add	a,#0xF6
+      00020A F5*06            [12] 1619 	mov	_MOTOR_PW,a
+      00020C E5*07            [12] 1620 	mov	a,(_MOTOR_PW + 1)
+      00020E 34 FF            [12] 1621 	addc	a,#0xFF
+      000210 F5*07            [12] 1622 	mov	(_MOTOR_PW + 1),a
+      000212                       1623 00119$:
+                           000212  1624 	C$LAB3_1STEERINGMOTOR.c$172$1$64 ==.
+                                   1625 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:172: PCA0CPL2 = 0xFFFF - MOTOR_PW;
+      000212 AF*06            [24] 1626 	mov	r7,_MOTOR_PW
+      000214 74 FF            [12] 1627 	mov	a,#0xFF
+      000216 C3               [12] 1628 	clr	c
+      000217 9F               [12] 1629 	subb	a,r7
+      000218 F5 EC            [12] 1630 	mov	_PCA0CPL2,a
+                           00021A  1631 	C$LAB3_1STEERINGMOTOR.c$173$1$64 ==.
+                                   1632 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:173: PCA0CPH2 = (0xFFFF - MOTOR_PW) >> 8;
+      00021A 74 FF            [12] 1633 	mov	a,#0xFF
+      00021C C3               [12] 1634 	clr	c
+      00021D 95*06            [12] 1635 	subb	a,_MOTOR_PW
+      00021F 74 FF            [12] 1636 	mov	a,#0xFF
+      000221 95*07            [12] 1637 	subb	a,(_MOTOR_PW + 1)
+      000223 FF               [12] 1638 	mov	r7,a
+      000224 8F FC            [24] 1639 	mov	_PCA0CPH2,r7
+                           000226  1640 	C$LAB3_1STEERINGMOTOR.c$174$1$64 ==.
+                                   1641 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:174: printf("pulsewidth = %d\r\n",MOTOR_PW);
+      000226 C0*06            [24] 1642 	push	_MOTOR_PW
+      000228 C0*07            [24] 1643 	push	(_MOTOR_PW + 1)
+      00022A 74r92            [12] 1644 	mov	a,#___str_7
+      00022C C0 E0            [24] 1645 	push	acc
+      00022E 74s01            [12] 1646 	mov	a,#(___str_7 >> 8)
+      000230 C0 E0            [24] 1647 	push	acc
+      000232 74 80            [12] 1648 	mov	a,#0x80
+      000234 C0 E0            [24] 1649 	push	acc
+      000236 12r00r00         [24] 1650 	lcall	_printf
+      000239 E5 81            [12] 1651 	mov	a,sp
+      00023B 24 FB            [12] 1652 	add	a,#0xfb
+      00023D F5 81            [12] 1653 	mov	sp,a
+                           00023F  1654 	C$LAB3_1STEERINGMOTOR.c$175$1$64 ==.
+                                   1655 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:175: printf("\r\nPW_MIN: %u, PW_MAX: %u, PW: %u\n", PW_MIN, PW_MAX, PW);
+      00023F C0*08            [24] 1656 	push	_PW
+      000241 C0*09            [24] 1657 	push	(_PW + 1)
+      000243 C0*00            [24] 1658 	push	_PW_MAX
+      000245 C0*01            [24] 1659 	push	(_PW_MAX + 1)
+      000247 C0*02            [24] 1660 	push	_PW_MIN
+      000249 C0*03            [24] 1661 	push	(_PW_MIN + 1)
+      00024B 74rA4            [12] 1662 	mov	a,#___str_8
+      00024D C0 E0            [24] 1663 	push	acc
+      00024F 74s01            [12] 1664 	mov	a,#(___str_8 >> 8)
+      000251 C0 E0            [24] 1665 	push	acc
+      000253 74 80            [12] 1666 	mov	a,#0x80
+      000255 C0 E0            [24] 1667 	push	acc
+      000257 12r00r00         [24] 1668 	lcall	_printf
+      00025A E5 81            [12] 1669 	mov	a,sp
+      00025C 24 F7            [12] 1670 	add	a,#0xf7
+      00025E F5 81            [12] 1671 	mov	sp,a
+                           000260  1672 	C$LAB3_1STEERINGMOTOR.c$176$1$64 ==.
+                                   1673 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:176: printf("\r\nPL2 = %x, PH2 = %x", (0xFFFF-MOTOR_PW), ((0xFFFF - MOTOR_PW) >> 8));
+      000260 74 FF            [12] 1674 	mov	a,#0xFF
+      000262 C3               [12] 1675 	clr	c
+      000263 95*06            [12] 1676 	subb	a,_MOTOR_PW
+      000265 FE               [12] 1677 	mov	r6,a
+      000266 74 FF            [12] 1678 	mov	a,#0xFF
+      000268 95*07            [12] 1679 	subb	a,(_MOTOR_PW + 1)
+      00026A FF               [12] 1680 	mov	r7,a
+      00026B FC               [12] 1681 	mov	r4,a
+      00026C 7D 00            [12] 1682 	mov	r5,#0x00
+      00026E C0 04            [24] 1683 	push	ar4
+      000270 C0 05            [24] 1684 	push	ar5
+      000272 C0 06            [24] 1685 	push	ar6
+      000274 C0 07            [24] 1686 	push	ar7
+      000276 74rC6            [12] 1687 	mov	a,#___str_9
+      000278 C0 E0            [24] 1688 	push	acc
+      00027A 74s01            [12] 1689 	mov	a,#(___str_9 >> 8)
+      00027C C0 E0            [24] 1690 	push	acc
+      00027E 74 80            [12] 1691 	mov	a,#0x80
+      000280 C0 E0            [24] 1692 	push	acc
+      000282 12r00r00         [24] 1693 	lcall	_printf
+      000285 E5 81            [12] 1694 	mov	a,sp
+      000287 24 F9            [12] 1695 	add	a,#0xf9
+      000289 F5 81            [12] 1696 	mov	sp,a
+                           00028B  1697 	C$LAB3_1STEERINGMOTOR.c$177$1$64 ==.
+                                   1698 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:177: PCA0CPL0 = 0xFFFF - PW;
+      00028B AF*08            [24] 1699 	mov	r7,_PW
+      00028D 74 FF            [12] 1700 	mov	a,#0xFF
+      00028F C3               [12] 1701 	clr	c
+      000290 9F               [12] 1702 	subb	a,r7
+      000291 F5 EA            [12] 1703 	mov	_PCA0CPL0,a
+                           000293  1704 	C$LAB3_1STEERINGMOTOR.c$178$1$64 ==.
+                                   1705 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:178: PCA0CPH0 = (0xFFFF - PW) >> 8;
+      000293 74 FF            [12] 1706 	mov	a,#0xFF
+      000295 C3               [12] 1707 	clr	c
+      000296 95*08            [12] 1708 	subb	a,_PW
+      000298 74 FF            [12] 1709 	mov	a,#0xFF
+      00029A 95*09            [12] 1710 	subb	a,(_PW + 1)
+      00029C FF               [12] 1711 	mov	r7,a
+      00029D 8F FA            [24] 1712 	mov	_PCA0CPH0,r7
+                           00029F  1713 	C$LAB3_1STEERINGMOTOR.c$179$1$64 ==.
+                           00029F  1714 	XG$SteeringServo_DriveMotor$0$0 ==.
+      00029F 22               [24] 1715 	ret
+                                   1716 ;------------------------------------------------------------
+                                   1717 ;Allocation info for local variables in function 'Calibration'
+                                   1718 ;------------------------------------------------------------
+                           0002A0  1719 	G$Calibration$0$0 ==.
+                           0002A0  1720 	C$LAB3_1STEERINGMOTOR.c$183$1$64 ==.
+                                   1721 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:183: void Calibration(void)	
+                                   1722 ;	-----------------------------------------
+                                   1723 ;	 function Calibration
+                                   1724 ;	-----------------------------------------
+      0002A0                       1725 _Calibration:
+                           0002A0  1726 	C$LAB3_1STEERINGMOTOR.c$185$1$70 ==.
+                                   1727 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:185: printf("Embedded Control Steering Calibration\n");        //print beginning message
+      0002A0 74rDB            [12] 1728 	mov	a,#___str_10
+      0002A2 C0 E0            [24] 1729 	push	acc
+      0002A4 74s01            [12] 1730 	mov	a,#(___str_10 >> 8)
+      0002A6 C0 E0            [24] 1731 	push	acc
+      0002A8 74 80            [12] 1732 	mov	a,#0x80
+      0002AA C0 E0            [24] 1733 	push	acc
+      0002AC 12r00r00         [24] 1734 	lcall	_printf
+      0002AF 15 81            [12] 1735 	dec	sp
+      0002B1 15 81            [12] 1736 	dec	sp
+      0002B3 15 81            [12] 1737 	dec	sp
+                           0002B5  1738 	C$LAB3_1STEERINGMOTOR.c$186$1$70 ==.
+                                   1739 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:186: PW = PW_CENTER;
+      0002B5 85*04*08         [24] 1740 	mov	_PW,_PW_CENTER
+      0002B8 85*05*09         [24] 1741 	mov	(_PW + 1),(_PW_CENTER + 1)
+                           0002BB  1742 	C$LAB3_1STEERINGMOTOR.c$187$1$70 ==.
+                                   1743 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:187: PCA0CPL0 = 0xFFFF - PW;
+      0002BB AF*08            [24] 1744 	mov	r7,_PW
+      0002BD 74 FF            [12] 1745 	mov	a,#0xFF
+      0002BF C3               [12] 1746 	clr	c
+      0002C0 9F               [12] 1747 	subb	a,r7
+      0002C1 F5 EA            [12] 1748 	mov	_PCA0CPL0,a
+                           0002C3  1749 	C$LAB3_1STEERINGMOTOR.c$188$1$70 ==.
+                                   1750 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:188: PCA0CPH0 = (0xFFFF - PW) >> 8;
+      0002C3 74 FF            [12] 1751 	mov	a,#0xFF
+      0002C5 C3               [12] 1752 	clr	c
+      0002C6 95*08            [12] 1753 	subb	a,_PW
+      0002C8 74 FF            [12] 1754 	mov	a,#0xFF
+      0002CA 95*09            [12] 1755 	subb	a,(_PW + 1)
+      0002CC FF               [12] 1756 	mov	r7,a
+      0002CD 8F FA            [24] 1757 	mov	_PCA0CPH0,r7
+                           0002CF  1758 	C$LAB3_1STEERINGMOTOR.c$189$1$70 ==.
+                                   1759 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:189: printf("\r\n This calibration procedure will walk you through the calibration of the steering servo on your car. This calibration is important to ensure no damage occurs from oversteering your car while in use. You will be prompted to turn left and right, until the steering linakage appears to be close to binding. If at any point you have gone too far, you may decrease the steering angle before storing the value");
+      0002CF 74r02            [12] 1760 	mov	a,#___str_11
+      0002D1 C0 E0            [24] 1761 	push	acc
+      0002D3 74s02            [12] 1762 	mov	a,#(___str_11 >> 8)
+      0002D5 C0 E0            [24] 1763 	push	acc
+      0002D7 74 80            [12] 1764 	mov	a,#0x80
+      0002D9 C0 E0            [24] 1765 	push	acc
+      0002DB 12r00r00         [24] 1766 	lcall	_printf
+      0002DE 15 81            [12] 1767 	dec	sp
+      0002E0 15 81            [12] 1768 	dec	sp
+      0002E2 15 81            [12] 1769 	dec	sp
+                           0002E4  1770 	C$LAB3_1STEERINGMOTOR.c$191$1$70 ==.
+                                   1771 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:191: left_turn_calibration();
+      0002E4 12r03r1C         [24] 1772 	lcall	_left_turn_calibration
+                           0002E7  1773 	C$LAB3_1STEERINGMOTOR.c$192$1$70 ==.
+                                   1774 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:192: right_turn_calibration();
+      0002E7 12r03rD8         [24] 1775 	lcall	_right_turn_calibration
+                           0002EA  1776 	C$LAB3_1STEERINGMOTOR.c$193$1$70 ==.
+                                   1777 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:193: center_calibration();
+      0002EA 12r04r76         [24] 1778 	lcall	_center_calibration
+                           0002ED  1779 	C$LAB3_1STEERINGMOTOR.c$194$1$70 ==.
+                                   1780 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:194: printf("\r\n\n\n Calibration is complete. Steer using the 'r' and 'l' keys.");
+      0002ED 74r98            [12] 1781 	mov	a,#___str_12
+      0002EF C0 E0            [24] 1782 	push	acc
+      0002F1 74s03            [12] 1783 	mov	a,#(___str_12 >> 8)
+      0002F3 C0 E0            [24] 1784 	push	acc
+      0002F5 74 80            [12] 1785 	mov	a,#0x80
+      0002F7 C0 E0            [24] 1786 	push	acc
+      0002F9 12r00r00         [24] 1787 	lcall	_printf
+      0002FC 15 81            [12] 1788 	dec	sp
+      0002FE 15 81            [12] 1789 	dec	sp
+      000300 15 81            [12] 1790 	dec	sp
+                           000302  1791 	C$LAB3_1STEERINGMOTOR.c$195$1$70 ==.
+                           000302  1792 	XG$Calibration$0$0 ==.
+      000302 22               [24] 1793 	ret
+                                   1794 ;------------------------------------------------------------
+                                   1795 ;Allocation info for local variables in function 'turnwheel'
+                                   1796 ;------------------------------------------------------------
+                           000303  1797 	G$turnwheel$0$0 ==.
+                           000303  1798 	C$LAB3_1STEERINGMOTOR.c$202$1$70 ==.
+                                   1799 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:202: void turnwheel(void)
+                                   1800 ;	-----------------------------------------
+                                   1801 ;	 function turnwheel
+                                   1802 ;	-----------------------------------------
+      000303                       1803 _turnwheel:
+                           000303  1804 	C$LAB3_1STEERINGMOTOR.c$204$1$72 ==.
+                                   1805 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:204: count=0;
+      000303 E4               [12] 1806 	clr	a
+      000304 F5*0B            [12] 1807 	mov	_count,a
+      000306 F5*0C            [12] 1808 	mov	(_count + 1),a
+                           000308  1809 	C$LAB3_1STEERINGMOTOR.c$205$1$72 ==.
+                                   1810 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:205: while(count<100)
+      000308                       1811 00101$:
+      000308 C3               [12] 1812 	clr	c
+      000309 E5*0B            [12] 1813 	mov	a,_count
+      00030B 94 64            [12] 1814 	subb	a,#0x64
+      00030D E5*0C            [12] 1815 	mov	a,(_count + 1)
+      00030F 94 00            [12] 1816 	subb	a,#0x00
+      000311 50 08            [24] 1817 	jnc	00104$
+                           000313  1818 	C$LAB3_1STEERINGMOTOR.c$207$2$73 ==.
+                                   1819 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:207: MOTOR_PW = 1700;
+      000313 75*06 A4         [24] 1820 	mov	_MOTOR_PW,#0xA4
+      000316 75*07 06         [24] 1821 	mov	(_MOTOR_PW + 1),#0x06
+      000319 80 ED            [24] 1822 	sjmp	00101$
+      00031B                       1823 00104$:
+                           00031B  1824 	C$LAB3_1STEERINGMOTOR.c$209$1$72 ==.
+                           00031B  1825 	XG$turnwheel$0$0 ==.
+      00031B 22               [24] 1826 	ret
+                                   1827 ;------------------------------------------------------------
+                                   1828 ;Allocation info for local variables in function 'left_turn_calibration'
+                                   1829 ;------------------------------------------------------------
+                           00031C  1830 	G$left_turn_calibration$0$0 ==.
+                           00031C  1831 	C$LAB3_1STEERINGMOTOR.c$211$1$72 ==.
+                                   1832 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:211: void left_turn_calibration(void)
+                                   1833 ;	-----------------------------------------
+                                   1834 ;	 function left_turn_calibration
+                                   1835 ;	-----------------------------------------
+      00031C                       1836 _left_turn_calibration:
+                           00031C  1837 	C$LAB3_1STEERINGMOTOR.c$214$1$75 ==.
+                                   1838 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:214: printf("\r\n\n Please turn left by pressing the 'l' key until the steering linkage is at its maximum, without binding. If you pass this point, press 'r' to turn back to the right. Press 'f' when finished");
+      00031C 74rD8            [12] 1839 	mov	a,#___str_13
+      00031E C0 E0            [24] 1840 	push	acc
+      000320 74s03            [12] 1841 	mov	a,#(___str_13 >> 8)
+      000322 C0 E0            [24] 1842 	push	acc
+      000324 74 80            [12] 1843 	mov	a,#0x80
+      000326 C0 E0            [24] 1844 	push	acc
+      000328 12r00r00         [24] 1845 	lcall	_printf
+      00032B 15 81            [12] 1846 	dec	sp
+      00032D 15 81            [12] 1847 	dec	sp
+      00032F 15 81            [12] 1848 	dec	sp
+                           000331  1849 	C$LAB3_1STEERINGMOTOR.c$215$2$76 ==.
+                                   1850 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:215: while (f==0)	//While the user is not done calibrating
+      000331                       1851 00108$:
+      000331 E5*0A            [12] 1852 	mov	a,_f
+      000333 60 03            [24] 1853 	jz	00128$
+      000335 02r03rB4         [24] 1854 	ljmp	00110$
+      000338                       1855 00128$:
+                           000338  1856 	C$LAB3_1STEERINGMOTOR.c$217$2$76 ==.
+                                   1857 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:217: input = getchar();//wait for a key to be pressed
+      000338 12r00r54         [24] 1858 	lcall	_getchar
+      00033B 85 82*0D         [24] 1859 	mov	_input,dpl
+                           00033E  1860 	C$LAB3_1STEERINGMOTOR.c$218$2$76 ==.
+                                   1861 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:218: printf("pressed");
+      00033E 74r99            [12] 1862 	mov	a,#___str_14
+      000340 C0 E0            [24] 1863 	push	acc
+      000342 74s04            [12] 1864 	mov	a,#(___str_14 >> 8)
+      000344 C0 E0            [24] 1865 	push	acc
+      000346 74 80            [12] 1866 	mov	a,#0x80
+      000348 C0 E0            [24] 1867 	push	acc
+      00034A 12r00r00         [24] 1868 	lcall	_printf
+      00034D 15 81            [12] 1869 	dec	sp
+      00034F 15 81            [12] 1870 	dec	sp
+      000351 15 81            [12] 1871 	dec	sp
+                           000353  1872 	C$LAB3_1STEERINGMOTOR.c$219$2$76 ==.
+                                   1873 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:219: if(input == 'l')  // single character input to decrease the pulsewidth
+      000353 74 6C            [12] 1874 	mov	a,#0x6C
+      000355 B5*0D 0E         [24] 1875 	cjne	a,_input,00104$
+                           000358  1876 	C$LAB3_1STEERINGMOTOR.c$221$3$77 ==.
+                                   1877 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:221: PW=(PW-10);	//decrease pulsewidth by 10
+      000358 E5*08            [12] 1878 	mov	a,_PW
+      00035A 24 F6            [12] 1879 	add	a,#0xF6
+      00035C F5*08            [12] 1880 	mov	_PW,a
+      00035E E5*09            [12] 1881 	mov	a,(_PW + 1)
+      000360 34 FF            [12] 1882 	addc	a,#0xFF
+      000362 F5*09            [12] 1883 	mov	(_PW + 1),a
+      000364 80 10            [24] 1884 	sjmp	00105$
+      000366                       1885 00104$:
+                           000366  1886 	C$LAB3_1STEERINGMOTOR.c$223$2$76 ==.
+                                   1887 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:223: else if(input == 'r')  // single character input to increase PW
+      000366 74 72            [12] 1888 	mov	a,#0x72
+      000368 B5*0D 0B         [24] 1889 	cjne	a,_input,00105$
+                           00036B  1890 	C$LAB3_1STEERINGMOTOR.c$225$3$78 ==.
+                                   1891 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:225: PW=(PW+10);  //increment pulsewidth by 10
+      00036B 74 0A            [12] 1892 	mov	a,#0x0A
+      00036D 25*08            [12] 1893 	add	a,_PW
+      00036F F5*08            [12] 1894 	mov	_PW,a
+      000371 E4               [12] 1895 	clr	a
+      000372 35*09            [12] 1896 	addc	a,(_PW + 1)
+      000374 F5*09            [12] 1897 	mov	(_PW + 1),a
+      000376                       1898 00105$:
+                           000376  1899 	C$LAB3_1STEERINGMOTOR.c$227$2$76 ==.
+                                   1900 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:227: printf("\r\nPW: %u\n", PW);
+      000376 C0*08            [24] 1901 	push	_PW
+      000378 C0*09            [24] 1902 	push	(_PW + 1)
+      00037A 74rA1            [12] 1903 	mov	a,#___str_15
+      00037C C0 E0            [24] 1904 	push	acc
+      00037E 74s04            [12] 1905 	mov	a,#(___str_15 >> 8)
+      000380 C0 E0            [24] 1906 	push	acc
+      000382 74 80            [12] 1907 	mov	a,#0x80
+      000384 C0 E0            [24] 1908 	push	acc
+      000386 12r00r00         [24] 1909 	lcall	_printf
+      000389 E5 81            [12] 1910 	mov	a,sp
+      00038B 24 FB            [12] 1911 	add	a,#0xfb
+      00038D F5 81            [12] 1912 	mov	sp,a
+                           00038F  1913 	C$LAB3_1STEERINGMOTOR.c$228$2$76 ==.
+                                   1914 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:228: PCA0CPL0 = 0xFFFF - PW;
+      00038F AF*08            [24] 1915 	mov	r7,_PW
+      000391 74 FF            [12] 1916 	mov	a,#0xFF
+      000393 C3               [12] 1917 	clr	c
+      000394 9F               [12] 1918 	subb	a,r7
+      000395 F5 EA            [12] 1919 	mov	_PCA0CPL0,a
+                           000397  1920 	C$LAB3_1STEERINGMOTOR.c$229$2$76 ==.
+                                   1921 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:229: PCA0CPH0 = (0xFFFF - PW) >> 8;
+      000397 74 FF            [12] 1922 	mov	a,#0xFF
+      000399 C3               [12] 1923 	clr	c
+      00039A 95*08            [12] 1924 	subb	a,_PW
+      00039C FE               [12] 1925 	mov	r6,a
+      00039D 74 FF            [12] 1926 	mov	a,#0xFF
+      00039F 95*09            [12] 1927 	subb	a,(_PW + 1)
+      0003A1 FF               [12] 1928 	mov	r7,a
+      0003A2 8F FA            [24] 1929 	mov	_PCA0CPH0,r7
+                           0003A4  1930 	C$LAB3_1STEERINGMOTOR.c$230$2$76 ==.
+                                   1931 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:230: if (input== 'f')
+      0003A4 74 66            [12] 1932 	mov	a,#0x66
+      0003A6 B5*0D 02         [24] 1933 	cjne	a,_input,00133$
+      0003A9 80 03            [24] 1934 	sjmp	00134$
+      0003AB                       1935 00133$:
+      0003AB 02r03r31         [24] 1936 	ljmp	00108$
+      0003AE                       1937 00134$:
+                           0003AE  1938 	C$LAB3_1STEERINGMOTOR.c$232$3$79 ==.
+                                   1939 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:232: f=1;	//exit left calibration and store value
+      0003AE 75*0A 01         [24] 1940 	mov	_f,#0x01
+      0003B1 02r03r31         [24] 1941 	ljmp	00108$
+      0003B4                       1942 00110$:
+                           0003B4  1943 	C$LAB3_1STEERINGMOTOR.c$236$1$75 ==.
+                                   1944 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:236: PW_MIN=PW;	//store the calibration value for left turn
+      0003B4 85*08*02         [24] 1945 	mov	_PW_MIN,_PW
+      0003B7 85*09*03         [24] 1946 	mov	(_PW_MIN + 1),(_PW + 1)
+                           0003BA  1947 	C$LAB3_1STEERINGMOTOR.c$237$1$75 ==.
+                                   1948 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:237: PW=PW_CENTER;	//Set the steering back to straight
+      0003BA 85*04*08         [24] 1949 	mov	_PW,_PW_CENTER
+      0003BD 85*05*09         [24] 1950 	mov	(_PW + 1),(_PW_CENTER + 1)
+                           0003C0  1951 	C$LAB3_1STEERINGMOTOR.c$238$1$75 ==.
+                                   1952 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:238: PCA0CPL0 = 0xFFFF - PW;
+      0003C0 AF*08            [24] 1953 	mov	r7,_PW
+      0003C2 74 FF            [12] 1954 	mov	a,#0xFF
+      0003C4 C3               [12] 1955 	clr	c
+      0003C5 9F               [12] 1956 	subb	a,r7
+      0003C6 F5 EA            [12] 1957 	mov	_PCA0CPL0,a
+                           0003C8  1958 	C$LAB3_1STEERINGMOTOR.c$239$1$75 ==.
+                                   1959 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:239: PCA0CPH0 = (0xFFFF - PW) >> 8;
+      0003C8 74 FF            [12] 1960 	mov	a,#0xFF
+      0003CA C3               [12] 1961 	clr	c
+      0003CB 95*08            [12] 1962 	subb	a,_PW
+      0003CD 74 FF            [12] 1963 	mov	a,#0xFF
+      0003CF 95*09            [12] 1964 	subb	a,(_PW + 1)
+      0003D1 FF               [12] 1965 	mov	r7,a
+      0003D2 8F FA            [24] 1966 	mov	_PCA0CPH0,r7
+                           0003D4  1967 	C$LAB3_1STEERINGMOTOR.c$240$1$75 ==.
+                                   1968 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:240: f=0;
+      0003D4 75*0A 00         [24] 1969 	mov	_f,#0x00
+                           0003D7  1970 	C$LAB3_1STEERINGMOTOR.c$241$1$75 ==.
+                           0003D7  1971 	XG$left_turn_calibration$0$0 ==.
+      0003D7 22               [24] 1972 	ret
+                                   1973 ;------------------------------------------------------------
+                                   1974 ;Allocation info for local variables in function 'right_turn_calibration'
+                                   1975 ;------------------------------------------------------------
+                           0003D8  1976 	G$right_turn_calibration$0$0 ==.
+                           0003D8  1977 	C$LAB3_1STEERINGMOTOR.c$245$1$75 ==.
+                                   1978 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:245: void right_turn_calibration(void)
+                                   1979 ;	-----------------------------------------
+                                   1980 ;	 function right_turn_calibration
+                                   1981 ;	-----------------------------------------
+      0003D8                       1982 _right_turn_calibration:
+                           0003D8  1983 	C$LAB3_1STEERINGMOTOR.c$247$1$81 ==.
+                                   1984 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:247: printf("\r\n\n Please turn right by pressing the 'r' key until the steering linkage is at its maximum, without binding. If you pass this point, press 'l' to turn back to the left. Press 'f' when finished");
+      0003D8 74rAB            [12] 1985 	mov	a,#___str_16
+      0003DA C0 E0            [24] 1986 	push	acc
+      0003DC 74s04            [12] 1987 	mov	a,#(___str_16 >> 8)
+      0003DE C0 E0            [24] 1988 	push	acc
+      0003E0 74 80            [12] 1989 	mov	a,#0x80
+      0003E2 C0 E0            [24] 1990 	push	acc
+      0003E4 12r00r00         [24] 1991 	lcall	_printf
+      0003E7 15 81            [12] 1992 	dec	sp
+      0003E9 15 81            [12] 1993 	dec	sp
+      0003EB 15 81            [12] 1994 	dec	sp
+                           0003ED  1995 	C$LAB3_1STEERINGMOTOR.c$248$2$82 ==.
+                                   1996 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:248: while (f==0)	//While the user is not done calibrating
+      0003ED                       1997 00108$:
+      0003ED E5*0A            [12] 1998 	mov	a,_f
+      0003EF 70 61            [24] 1999 	jnz	00110$
+                           0003F1  2000 	C$LAB3_1STEERINGMOTOR.c$250$2$82 ==.
+                                   2001 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:250: input = getchar();//wait for a key to be pressed
+      0003F1 12r00r54         [24] 2002 	lcall	_getchar
+      0003F4 85 82*0D         [24] 2003 	mov	_input,dpl
+                           0003F7  2004 	C$LAB3_1STEERINGMOTOR.c$251$2$82 ==.
+                                   2005 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:251: if(input == 'l')  // single character input to decrease the pulsewidth
+      0003F7 74 6C            [12] 2006 	mov	a,#0x6C
+      0003F9 B5*0D 0E         [24] 2007 	cjne	a,_input,00104$
+                           0003FC  2008 	C$LAB3_1STEERINGMOTOR.c$253$3$83 ==.
+                                   2009 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:253: PW=(PW-10);	//decrease pulsewidth by 10
+      0003FC E5*08            [12] 2010 	mov	a,_PW
+      0003FE 24 F6            [12] 2011 	add	a,#0xF6
+      000400 F5*08            [12] 2012 	mov	_PW,a
+      000402 E5*09            [12] 2013 	mov	a,(_PW + 1)
+      000404 34 FF            [12] 2014 	addc	a,#0xFF
+      000406 F5*09            [12] 2015 	mov	(_PW + 1),a
+      000408 80 10            [24] 2016 	sjmp	00105$
+      00040A                       2017 00104$:
+                           00040A  2018 	C$LAB3_1STEERINGMOTOR.c$255$2$82 ==.
+                                   2019 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:255: else if(input == 'r')  // single character input to increase PW
+      00040A 74 72            [12] 2020 	mov	a,#0x72
+      00040C B5*0D 0B         [24] 2021 	cjne	a,_input,00105$
+                           00040F  2022 	C$LAB3_1STEERINGMOTOR.c$257$3$84 ==.
+                                   2023 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:257: PW=(PW+10);  //increment pulsewidth by 10
+      00040F 74 0A            [12] 2024 	mov	a,#0x0A
+      000411 25*08            [12] 2025 	add	a,_PW
+      000413 F5*08            [12] 2026 	mov	_PW,a
+      000415 E4               [12] 2027 	clr	a
+      000416 35*09            [12] 2028 	addc	a,(_PW + 1)
+      000418 F5*09            [12] 2029 	mov	(_PW + 1),a
+      00041A                       2030 00105$:
+                           00041A  2031 	C$LAB3_1STEERINGMOTOR.c$259$2$82 ==.
+                                   2032 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:259: printf("\r\nPW: %u\n", PW);
+      00041A C0*08            [24] 2033 	push	_PW
+      00041C C0*09            [24] 2034 	push	(_PW + 1)
+      00041E 74rA1            [12] 2035 	mov	a,#___str_15
+      000420 C0 E0            [24] 2036 	push	acc
+      000422 74s04            [12] 2037 	mov	a,#(___str_15 >> 8)
+      000424 C0 E0            [24] 2038 	push	acc
+      000426 74 80            [12] 2039 	mov	a,#0x80
+      000428 C0 E0            [24] 2040 	push	acc
+      00042A 12r00r00         [24] 2041 	lcall	_printf
+      00042D E5 81            [12] 2042 	mov	a,sp
+      00042F 24 FB            [12] 2043 	add	a,#0xfb
+      000431 F5 81            [12] 2044 	mov	sp,a
+                           000433  2045 	C$LAB3_1STEERINGMOTOR.c$261$2$82 ==.
+                                   2046 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:261: PCA0CPL0 = 0xFFFF - PW;
+      000433 AF*08            [24] 2047 	mov	r7,_PW
+      000435 74 FF            [12] 2048 	mov	a,#0xFF
+      000437 C3               [12] 2049 	clr	c
+      000438 9F               [12] 2050 	subb	a,r7
+      000439 F5 EA            [12] 2051 	mov	_PCA0CPL0,a
+                           00043B  2052 	C$LAB3_1STEERINGMOTOR.c$262$2$82 ==.
+                                   2053 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:262: PCA0CPH0 = (0xFFFF - PW) >> 8;
+      00043B 74 FF            [12] 2054 	mov	a,#0xFF
+      00043D C3               [12] 2055 	clr	c
+      00043E 95*08            [12] 2056 	subb	a,_PW
+      000440 FE               [12] 2057 	mov	r6,a
+      000441 74 FF            [12] 2058 	mov	a,#0xFF
+      000443 95*09            [12] 2059 	subb	a,(_PW + 1)
+      000445 FF               [12] 2060 	mov	r7,a
+      000446 8F FA            [24] 2061 	mov	_PCA0CPH0,r7
+                           000448  2062 	C$LAB3_1STEERINGMOTOR.c$263$2$82 ==.
+                                   2063 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:263: if (input == 'f')
+      000448 74 66            [12] 2064 	mov	a,#0x66
+      00044A B5*0D A0         [24] 2065 	cjne	a,_input,00108$
+                           00044D  2066 	C$LAB3_1STEERINGMOTOR.c$265$3$85 ==.
+                                   2067 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:265: f=1;	//exit right calibration and store value
+      00044D 75*0A 01         [24] 2068 	mov	_f,#0x01
+      000450 80 9B            [24] 2069 	sjmp	00108$
+      000452                       2070 00110$:
+                           000452  2071 	C$LAB3_1STEERINGMOTOR.c$268$1$81 ==.
+                                   2072 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:268: f = 0;
+      000452 75*0A 00         [24] 2073 	mov	_f,#0x00
+                           000455  2074 	C$LAB3_1STEERINGMOTOR.c$269$1$81 ==.
+                                   2075 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:269: PW_MAX=PW;	//store the calibration value for left turn
+      000455 85*08*00         [24] 2076 	mov	_PW_MAX,_PW
+      000458 85*09*01         [24] 2077 	mov	(_PW_MAX + 1),(_PW + 1)
+                           00045B  2078 	C$LAB3_1STEERINGMOTOR.c$271$1$81 ==.
+                                   2079 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:271: PW=PW_CENTER;	//Set the steering back to straight
+      00045B 85*04*08         [24] 2080 	mov	_PW,_PW_CENTER
+      00045E 85*05*09         [24] 2081 	mov	(_PW + 1),(_PW_CENTER + 1)
+                           000461  2082 	C$LAB3_1STEERINGMOTOR.c$272$1$81 ==.
+                                   2083 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:272: PCA0CPL0 = 0xFFFF - PW;
+      000461 AF*08            [24] 2084 	mov	r7,_PW
+      000463 74 FF            [12] 2085 	mov	a,#0xFF
+      000465 C3               [12] 2086 	clr	c
+      000466 9F               [12] 2087 	subb	a,r7
+      000467 F5 EA            [12] 2088 	mov	_PCA0CPL0,a
+                           000469  2089 	C$LAB3_1STEERINGMOTOR.c$273$1$81 ==.
+                                   2090 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:273: PCA0CPH0 = (0xFFFF - PW) >> 8;
+      000469 74 FF            [12] 2091 	mov	a,#0xFF
+      00046B C3               [12] 2092 	clr	c
+      00046C 95*08            [12] 2093 	subb	a,_PW
+      00046E 74 FF            [12] 2094 	mov	a,#0xFF
+      000470 95*09            [12] 2095 	subb	a,(_PW + 1)
+      000472 FF               [12] 2096 	mov	r7,a
+      000473 8F FA            [24] 2097 	mov	_PCA0CPH0,r7
+                           000475  2098 	C$LAB3_1STEERINGMOTOR.c$274$1$81 ==.
+                           000475  2099 	XG$right_turn_calibration$0$0 ==.
+      000475 22               [24] 2100 	ret
+                                   2101 ;------------------------------------------------------------
+                                   2102 ;Allocation info for local variables in function 'center_calibration'
+                                   2103 ;------------------------------------------------------------
+                           000476  2104 	G$center_calibration$0$0 ==.
+                           000476  2105 	C$LAB3_1STEERINGMOTOR.c$279$1$81 ==.
+                                   2106 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:279: void center_calibration(void)
+                                   2107 ;	-----------------------------------------
+                                   2108 ;	 function center_calibration
+                                   2109 ;	-----------------------------------------
+      000476                       2110 _center_calibration:
+                           000476  2111 	C$LAB3_1STEERINGMOTOR.c$281$1$87 ==.
+                                   2112 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:281: printf("\r\n\n Please turn right by pressing the 'r' key, or turn left using the 'l' key, until the steering linkage is Centered. Press 'f' when finished");
+      000476 74r6C            [12] 2113 	mov	a,#___str_17
+      000478 C0 E0            [24] 2114 	push	acc
+      00047A 74s05            [12] 2115 	mov	a,#(___str_17 >> 8)
+      00047C C0 E0            [24] 2116 	push	acc
+      00047E 74 80            [12] 2117 	mov	a,#0x80
+      000480 C0 E0            [24] 2118 	push	acc
+      000482 12r00r00         [24] 2119 	lcall	_printf
+      000485 15 81            [12] 2120 	dec	sp
+      000487 15 81            [12] 2121 	dec	sp
+      000489 15 81            [12] 2122 	dec	sp
+                           00048B  2123 	C$LAB3_1STEERINGMOTOR.c$282$2$88 ==.
+                                   2124 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:282: while (f==0)	//While the user is not done calibrating
+      00048B                       2125 00108$:
+      00048B E5*0A            [12] 2126 	mov	a,_f
+      00048D 70 61            [24] 2127 	jnz	00110$
+                           00048F  2128 	C$LAB3_1STEERINGMOTOR.c$284$2$88 ==.
+                                   2129 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:284: input = getchar();//wait for a key to be pressed
+      00048F 12r00r54         [24] 2130 	lcall	_getchar
+      000492 85 82*0D         [24] 2131 	mov	_input,dpl
+                           000495  2132 	C$LAB3_1STEERINGMOTOR.c$285$2$88 ==.
+                                   2133 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:285: if(input == 'l')  // single character input to decrease the pulsewidth
+      000495 74 6C            [12] 2134 	mov	a,#0x6C
+      000497 B5*0D 0E         [24] 2135 	cjne	a,_input,00104$
+                           00049A  2136 	C$LAB3_1STEERINGMOTOR.c$287$3$89 ==.
+                                   2137 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:287: PW=(PW-10);	//decrease pulsewidth by 10
+      00049A E5*08            [12] 2138 	mov	a,_PW
+      00049C 24 F6            [12] 2139 	add	a,#0xF6
+      00049E F5*08            [12] 2140 	mov	_PW,a
+      0004A0 E5*09            [12] 2141 	mov	a,(_PW + 1)
+      0004A2 34 FF            [12] 2142 	addc	a,#0xFF
+      0004A4 F5*09            [12] 2143 	mov	(_PW + 1),a
+      0004A6 80 10            [24] 2144 	sjmp	00105$
+      0004A8                       2145 00104$:
+                           0004A8  2146 	C$LAB3_1STEERINGMOTOR.c$289$2$88 ==.
+                                   2147 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:289: else if(input == 'r')  // single character input to increase PW
+      0004A8 74 72            [12] 2148 	mov	a,#0x72
+      0004AA B5*0D 0B         [24] 2149 	cjne	a,_input,00105$
+                           0004AD  2150 	C$LAB3_1STEERINGMOTOR.c$291$3$90 ==.
+                                   2151 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:291: PW=(PW+10);  //increment pulsewidth by 10
+      0004AD 74 0A            [12] 2152 	mov	a,#0x0A
+      0004AF 25*08            [12] 2153 	add	a,_PW
+      0004B1 F5*08            [12] 2154 	mov	_PW,a
+      0004B3 E4               [12] 2155 	clr	a
+      0004B4 35*09            [12] 2156 	addc	a,(_PW + 1)
+      0004B6 F5*09            [12] 2157 	mov	(_PW + 1),a
+      0004B8                       2158 00105$:
+                           0004B8  2159 	C$LAB3_1STEERINGMOTOR.c$293$2$88 ==.
+                                   2160 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:293: printf("\r\nPW: %u\n", PW);
+      0004B8 C0*08            [24] 2161 	push	_PW
+      0004BA C0*09            [24] 2162 	push	(_PW + 1)
+      0004BC 74rA1            [12] 2163 	mov	a,#___str_15
+      0004BE C0 E0            [24] 2164 	push	acc
+      0004C0 74s04            [12] 2165 	mov	a,#(___str_15 >> 8)
+      0004C2 C0 E0            [24] 2166 	push	acc
+      0004C4 74 80            [12] 2167 	mov	a,#0x80
+      0004C6 C0 E0            [24] 2168 	push	acc
+      0004C8 12r00r00         [24] 2169 	lcall	_printf
+      0004CB E5 81            [12] 2170 	mov	a,sp
+      0004CD 24 FB            [12] 2171 	add	a,#0xfb
+      0004CF F5 81            [12] 2172 	mov	sp,a
+                           0004D1  2173 	C$LAB3_1STEERINGMOTOR.c$295$2$88 ==.
+                                   2174 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:295: PCA0CPL0 = 0xFFFF - PW;
+      0004D1 AF*08            [24] 2175 	mov	r7,_PW
+      0004D3 74 FF            [12] 2176 	mov	a,#0xFF
+      0004D5 C3               [12] 2177 	clr	c
+      0004D6 9F               [12] 2178 	subb	a,r7
+      0004D7 F5 EA            [12] 2179 	mov	_PCA0CPL0,a
+                           0004D9  2180 	C$LAB3_1STEERINGMOTOR.c$296$2$88 ==.
+                                   2181 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:296: PCA0CPH0 = (0xFFFF - PW) >> 8;
+      0004D9 74 FF            [12] 2182 	mov	a,#0xFF
+      0004DB C3               [12] 2183 	clr	c
+      0004DC 95*08            [12] 2184 	subb	a,_PW
+      0004DE FE               [12] 2185 	mov	r6,a
+      0004DF 74 FF            [12] 2186 	mov	a,#0xFF
+      0004E1 95*09            [12] 2187 	subb	a,(_PW + 1)
+      0004E3 FF               [12] 2188 	mov	r7,a
+      0004E4 8F FA            [24] 2189 	mov	_PCA0CPH0,r7
+                           0004E6  2190 	C$LAB3_1STEERINGMOTOR.c$297$2$88 ==.
+                                   2191 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:297: if (input== 'f')
+      0004E6 74 66            [12] 2192 	mov	a,#0x66
+      0004E8 B5*0D A0         [24] 2193 	cjne	a,_input,00108$
+                           0004EB  2194 	C$LAB3_1STEERINGMOTOR.c$299$3$91 ==.
+                                   2195 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:299: f=1;	//exit left calibration and store value
+      0004EB 75*0A 01         [24] 2196 	mov	_f,#0x01
+      0004EE 80 9B            [24] 2197 	sjmp	00108$
+      0004F0                       2198 00110$:
+                           0004F0  2199 	C$LAB3_1STEERINGMOTOR.c$303$1$87 ==.
+                                   2200 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:303: PW_CENTER=PW;	//store the calibration value for left turn
+                           0004F0  2201 	C$LAB3_1STEERINGMOTOR.c$304$1$87 ==.
+                                   2202 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:304: PW=PW_CENTER;	//Set the steering back to straight
+      0004F0 85*08*04         [24] 2203 	mov	_PW_CENTER,_PW
+      0004F3 85*09*05         [24] 2204 	mov  (_PW_CENTER + 1),(_PW + 1)
+                           0004F6  2205 	C$LAB3_1STEERINGMOTOR.c$305$1$87 ==.
+                                   2206 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:305: PCA0CPL0 = 0xFFFF - PW;
+      0004F6 AF*08            [24] 2207 	mov	r7,_PW
+      0004F8 74 FF            [12] 2208 	mov	a,#0xFF
+      0004FA C3               [12] 2209 	clr	c
+      0004FB 9F               [12] 2210 	subb	a,r7
+      0004FC F5 EA            [12] 2211 	mov	_PCA0CPL0,a
+                           0004FE  2212 	C$LAB3_1STEERINGMOTOR.c$306$1$87 ==.
+                                   2213 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:306: PCA0CPH0 = (0xFFFF - PW) >> 8;
+      0004FE 74 FF            [12] 2214 	mov	a,#0xFF
+      000500 C3               [12] 2215 	clr	c
+      000501 95*08            [12] 2216 	subb	a,_PW
+      000503 74 FF            [12] 2217 	mov	a,#0xFF
+      000505 95*09            [12] 2218 	subb	a,(_PW + 1)
+      000507 FF               [12] 2219 	mov	r7,a
+      000508 8F FA            [24] 2220 	mov	_PCA0CPH0,r7
+                           00050A  2221 	C$LAB3_1STEERINGMOTOR.c$307$1$87 ==.
+                                   2222 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Steering_MOTOR\LAB3-1STEERINGMOTOR.c:307: f=0;
+      00050A 75*0A 00         [24] 2223 	mov	_f,#0x00
+                           00050D  2224 	C$LAB3_1STEERINGMOTOR.c$308$1$87 ==.
+                           00050D  2225 	XG$center_calibration$0$0 ==.
+      00050D 22               [24] 2226 	ret
+                                   2227 	.area CSEG    (CODE)
+                                   2228 	.area CONST   (CODE)
+                           000000  2229 FLAB3_1STEERINGMOTOR$__str_0$0$0 == .
+      000000                       2230 ___str_0:
+      000000 0A                    2231 	.db 0x0A
+      000001 0D                    2232 	.db 0x0D
+      000002 31 20 73 65 63 6F 6E  2233 	.ascii "1 second Motor calibration will now begin. Expect loud noi"
+             64 20 4D 6F 74 6F 72
+             20 63 61 6C 69 62 72
+             61 74 69 6F 6E 20 77
+             69 6C 6C 20 6E 6F 77
+             20 62 65 67 69 6E 2E
+             20 45 78 70 65 63 74
+             20 6C 6F 75 64 20 6E
+             6F 69
+      00003C 73 65                 2234 	.ascii "se"
+      00003E 00                    2235 	.db 0x00
+                           00003F  2236 FLAB3_1STEERINGMOTOR$__str_1$0$0 == .
+      00003F                       2237 ___str_1:
+      00003F 0D                    2238 	.db 0x0D
+      000040 0A                    2239 	.db 0x0A
+      000041 43 61 6C 69 62 72 61  2240 	.ascii "Calibrations complete! User can now control speed and dire"
+             74 69 6F 6E 73 20 63
+             6F 6D 70 6C 65 74 65
+             21 20 55 73 65 72 20
+             63 61 6E 20 6E 6F 77
+             20 63 6F 6E 74 72 6F
+             6C 20 73 70 65 65 64
+             20 61 6E 64 20 64 69
+             72 65
+      00007B 63 74 69 6F 6E 2E     2241 	.ascii "ction."
+      000081 00                    2242 	.db 0x00
+                           000082  2243 FLAB3_1STEERINGMOTOR$__str_2$0$0 == .
+      000082                       2244 ___str_2:
+      000082 0D                    2245 	.db 0x0D
+      000083 0A                    2246 	.db 0x0A
+      000084 50 72 65 73 73 20 74  2247 	.ascii "Press the 'r' key to turn wheels right."
+             68 65 20 27 72 27 20
+             6B 65 79 20 74 6F 20
+             74 75 72 6E 20 77 68
+             65 65 6C 73 20 72 69
+             67 68 74 2E
+      0000AB 00                    2248 	.db 0x00
+                           0000AC  2249 FLAB3_1STEERINGMOTOR$__str_3$0$0 == .
+      0000AC                       2250 ___str_3:
+      0000AC 0D                    2251 	.db 0x0D
+      0000AD 0A                    2252 	.db 0x0A
+      0000AE 50 72 65 73 73 20 74  2253 	.ascii "Press the 'l' key to turn wheels left."
+             68 65 20 27 6C 27 20
+             6B 65 79 20 74 6F 20
+             74 75 72 6E 20 77 68
+             65 65 6C 73 20 6C 65
+             66 74 2E
+      0000D4 00                    2254 	.db 0x00
+                           0000D5  2255 FLAB3_1STEERINGMOTOR$__str_4$0$0 == .
+      0000D5                       2256 ___str_4:
+      0000D5 0D                    2257 	.db 0x0D
+      0000D6 0A                    2258 	.db 0x0A
+      0000D7 50 72 65 73 73 20 74  2259 	.ascii "Press the 'f' key to make the car go faster."
+             68 65 20 27 66 27 20
+             6B 65 79 20 74 6F 20
+             6D 61 6B 65 20 74 68
+             65 20 63 61 72 20 67
+             6F 20 66 61 73 74 65
+             72 2E
+      000103 00                    2260 	.db 0x00
+                           000104  2261 FLAB3_1STEERINGMOTOR$__str_5$0$0 == .
+      000104                       2262 ___str_5:
+      000104 0D                    2263 	.db 0x0D
+      000105 0A                    2264 	.db 0x0A
+      000106 50 72 65 73 73 20 74  2265 	.ascii "Press the 's' key to make the car go slower."
+             68 65 20 27 73 27 20
+             6B 65 79 20 74 6F 20
+             6D 61 6B 65 20 74 68
+             65 20 63 61 72 20 67
+             6F 20 73 6C 6F 77 65
+             72 2E
+      000132 00                    2266 	.db 0x00
+                           000133  2267 FLAB3_1STEERINGMOTOR$__str_6$0$0 == .
+      000133                       2268 ___str_6:
+      000133 0D                    2269 	.db 0x0D
+      000134 0A                    2270 	.db 0x0A
+      000135 0A                    2271 	.db 0x0A
+      000136 4E 6F 74 65 20 74 68  2272 	.ascii "Note that continuing to press 's' after car is stationary"
+             61 74 20 63 6F 6E 74
+             69 6E 75 69 6E 67 20
+             74 6F 20 70 72 65 73
+             73 20 27 73 27 20 61
+             66 74 65 72 20 63 61
+             72 20 69 73 20 73 74
+             61 74 69 6F 6E 61 72
+             79
+      00016F 20 77 69 6C 6C 20 72  2273 	.ascii " will result in reverse direction."
+             65 73 75 6C 74 20 69
+             6E 20 72 65 76 65 72
+             73 65 20 64 69 72 65
+             63 74 69 6F 6E 2E
+      000191 00                    2274 	.db 0x00
+                           000192  2275 FLAB3_1STEERINGMOTOR$__str_7$0$0 == .
+      000192                       2276 ___str_7:
+      000192 70 75 6C 73 65 77 69  2277 	.ascii "pulsewidth = %d"
+             64 74 68 20 3D 20 25
+             64
+      0001A1 0D                    2278 	.db 0x0D
+      0001A2 0A                    2279 	.db 0x0A
+      0001A3 00                    2280 	.db 0x00
+                           0001A4  2281 FLAB3_1STEERINGMOTOR$__str_8$0$0 == .
+      0001A4                       2282 ___str_8:
+      0001A4 0D                    2283 	.db 0x0D
+      0001A5 0A                    2284 	.db 0x0A
+      0001A6 50 57 5F 4D 49 4E 3A  2285 	.ascii "PW_MIN: %u, PW_MAX: %u, PW: %u"
+             20 25 75 2C 20 50 57
+             5F 4D 41 58 3A 20 25
+             75 2C 20 50 57 3A 20
+             25 75
+      0001C4 0A                    2286 	.db 0x0A
+      0001C5 00                    2287 	.db 0x00
+                           0001C6  2288 FLAB3_1STEERINGMOTOR$__str_9$0$0 == .
+      0001C6                       2289 ___str_9:
+      0001C6 0D                    2290 	.db 0x0D
+      0001C7 0A                    2291 	.db 0x0A
+      0001C8 50 4C 32 20 3D 20 25  2292 	.ascii "PL2 = %x, PH2 = %x"
+             78 2C 20 50 48 32 20
+             3D 20 25 78
+      0001DA 00                    2293 	.db 0x00
+                           0001DB  2294 FLAB3_1STEERINGMOTOR$__str_10$0$0 == .
+      0001DB                       2295 ___str_10:
+      0001DB 45 6D 62 65 64 64 65  2296 	.ascii "Embedded Control Steering Calibration"
+             64 20 43 6F 6E 74 72
+             6F 6C 20 53 74 65 65
+             72 69 6E 67 20 43 61
+             6C 69 62 72 61 74 69
+             6F 6E
+      000200 0A                    2297 	.db 0x0A
+      000201 00                    2298 	.db 0x00
+                           000202  2299 FLAB3_1STEERINGMOTOR$__str_11$0$0 == .
+      000202                       2300 ___str_11:
+      000202 0D                    2301 	.db 0x0D
+      000203 0A                    2302 	.db 0x0A
+      000204 20 54 68 69 73 20 63  2303 	.ascii " This calibration procedure will walk you through the cali"
+             61 6C 69 62 72 61 74
+             69 6F 6E 20 70 72 6F
+             63 65 64 75 72 65 20
+             77 69 6C 6C 20 77 61
+             6C 6B 20 79 6F 75 20
+             74 68 72 6F 75 67 68
+             20 74 68 65 20 63 61
+             6C 69
+      00023E 62 72 61 74 69 6F 6E  2304 	.ascii "bration of the steering servo on your car. This calibration "
+             20 6F 66 20 74 68 65
+             20 73 74 65 65 72 69
+             6E 67 20 73 65 72 76
+             6F 20 6F 6E 20 79 6F
+             75 72 20 63 61 72 2E
+             20 54 68 69 73 20 63
+             61 6C 69 62 72 61 74
+             69 6F 6E 20
+      00027A 69 73 20 69 6D 70 6F  2305 	.ascii "is important to ensure no damage occurs from oversteering yo"
+             72 74 61 6E 74 20 74
+             6F 20 65 6E 73 75 72
+             65 20 6E 6F 20 64 61
+             6D 61 67 65 20 6F 63
+             63 75 72 73 20 66 72
+             6F 6D 20 6F 76 65 72
+             73 74 65 65 72 69 6E
+             67 20 79 6F
+      0002B6 75 72 20 63 61 72 20  2306 	.ascii "ur car while in use. You will be prompted to turn left and r"
+             77 68 69 6C 65 20 69
+             6E 20 75 73 65 2E 20
+             59 6F 75 20 77 69 6C
+             6C 20 62 65 20 70 72
+             6F 6D 70 74 65 64 20
+             74 6F 20 74 75 72 6E
+             20 6C 65 66 74 20 61
+             6E 64 20 72
+      0002F2 69 67 68 74 2C 20 75  2307 	.ascii "ight, until the steering linakage appears to be close to bin"
+             6E 74 69 6C 20 74 68
+             65 20 73 74 65 65 72
+             69 6E 67 20 6C 69 6E
+             61 6B 61 67 65 20 61
+             70 70 65 61 72 73 20
+             74 6F 20 62 65 20 63
+             6C 6F 73 65 20 74 6F
+             20 62 69 6E
+      00032E 64 69 6E 67 2E 20 49  2308 	.ascii "ding. If at any point you have gone too far, you may decreas"
+             66 20 61 74 20 61 6E
+             79 20 70 6F 69 6E 74
+             20 79 6F 75 20 68 61
+             76 65 20 67 6F 6E 65
+             20 74 6F 6F 20 66 61
+             72 2C 20 79 6F 75 20
+             6D 61 79 20 64 65 63
+             72 65 61 73
+      00036A 65 20 74 68 65 20 73  2309 	.ascii "e the steering angle before storing the value"
+             74 65 65 72 69 6E 67
+             20 61 6E 67 6C 65 20
+             62 65 66 6F 72 65 20
+             73 74 6F 72 69 6E 67
+             20 74 68 65 20 76 61
+             6C 75 65
+      000397 00                    2310 	.db 0x00
+                           000398  2311 FLAB3_1STEERINGMOTOR$__str_12$0$0 == .
+      000398                       2312 ___str_12:
+      000398 0D                    2313 	.db 0x0D
+      000399 0A                    2314 	.db 0x0A
+      00039A 0A                    2315 	.db 0x0A
+      00039B 0A                    2316 	.db 0x0A
+      00039C 20 43 61 6C 69 62 72  2317 	.ascii " Calibration is complete. Steer using the 'r' and 'l' ke"
+             61 74 69 6F 6E 20 69
+             73 20 63 6F 6D 70 6C
+             65 74 65 2E 20 53 74
+             65 65 72 20 75 73 69
+             6E 67 20 74 68 65 20
+             27 72 27 20 61 6E 64
+             20 27 6C 27 20 6B 65
+      0003D4 79 73 2E              2318 	.ascii "ys."
+      0003D7 00                    2319 	.db 0x00
+                           0003D8  2320 FLAB3_1STEERINGMOTOR$__str_13$0$0 == .
+      0003D8                       2321 ___str_13:
+      0003D8 0D                    2322 	.db 0x0D
+      0003D9 0A                    2323 	.db 0x0A
+      0003DA 0A                    2324 	.db 0x0A
+      0003DB 20 50 6C 65 61 73 65  2325 	.ascii " Please turn left by pressing the 'l' key until the steer"
+             20 74 75 72 6E 20 6C
+             65 66 74 20 62 79 20
+             70 72 65 73 73 69 6E
+             67 20 74 68 65 20 27
+             6C 27 20 6B 65 79 20
+             75 6E 74 69 6C 20 74
+             68 65 20 73 74 65 65
+             72
+      000414 69 6E 67 20 6C 69 6E  2326 	.ascii "ing linkage is at its maximum, without binding. If you pass "
+             6B 61 67 65 20 69 73
+             20 61 74 20 69 74 73
+             20 6D 61 78 69 6D 75
+             6D 2C 20 77 69 74 68
+             6F 75 74 20 62 69 6E
+             64 69 6E 67 2E 20 49
+             66 20 79 6F 75 20 70
+             61 73 73 20
+      000450 74 68 69 73 20 70 6F  2327 	.ascii "this point, press 'r' to turn back to the right. Press 'f' w"
+             69 6E 74 2C 20 70 72
+             65 73 73 20 27 72 27
+             20 74 6F 20 74 75 72
+             6E 20 62 61 63 6B 20
+             74 6F 20 74 68 65 20
+             72 69 67 68 74 2E 20
+             50 72 65 73 73 20 27
+             66 27 20 77
+      00048C 68 65 6E 20 66 69 6E  2328 	.ascii "hen finished"
+             69 73 68 65 64
+      000498 00                    2329 	.db 0x00
+                           000499  2330 FLAB3_1STEERINGMOTOR$__str_14$0$0 == .
+      000499                       2331 ___str_14:
+      000499 70 72 65 73 73 65 64  2332 	.ascii "pressed"
+      0004A0 00                    2333 	.db 0x00
+                           0004A1  2334 FLAB3_1STEERINGMOTOR$__str_15$0$0 == .
+      0004A1                       2335 ___str_15:
+      0004A1 0D                    2336 	.db 0x0D
+      0004A2 0A                    2337 	.db 0x0A
+      0004A3 50 57 3A 20 25 75     2338 	.ascii "PW: %u"
+      0004A9 0A                    2339 	.db 0x0A
+      0004AA 00                    2340 	.db 0x00
+                           0004AB  2341 FLAB3_1STEERINGMOTOR$__str_16$0$0 == .
+      0004AB                       2342 ___str_16:
+      0004AB 0D                    2343 	.db 0x0D
+      0004AC 0A                    2344 	.db 0x0A
+      0004AD 0A                    2345 	.db 0x0A
+      0004AE 20 50 6C 65 61 73 65  2346 	.ascii " Please turn right by pressing the 'r' key until the stee"
+             20 74 75 72 6E 20 72
+             69 67 68 74 20 62 79
+             20 70 72 65 73 73 69
+             6E 67 20 74 68 65 20
+             27 72 27 20 6B 65 79
+             20 75 6E 74 69 6C 20
+             74 68 65 20 73 74 65
+             65
+      0004E7 72 69 6E 67 20 6C 69  2347 	.ascii "ring linkage is at its maximum, without binding. If you pass"
+             6E 6B 61 67 65 20 69
+             73 20 61 74 20 69 74
+             73 20 6D 61 78 69 6D
+             75 6D 2C 20 77 69 74
+             68 6F 75 74 20 62 69
+             6E 64 69 6E 67 2E 20
+             49 66 20 79 6F 75 20
+             70 61 73 73
+      000523 20 74 68 69 73 20 70  2348 	.ascii " this point, press 'l' to turn back to the left. Press 'f' w"
+             6F 69 6E 74 2C 20 70
+             72 65 73 73 20 27 6C
+             27 20 74 6F 20 74 75
+             72 6E 20 62 61 63 6B
+             20 74 6F 20 74 68 65
+             20 6C 65 66 74 2E 20
+             50 72 65 73 73 20 27
+             66 27 20 77
+      00055F 68 65 6E 20 66 69 6E  2349 	.ascii "hen finished"
+             69 73 68 65 64
+      00056B 00                    2350 	.db 0x00
+                           00056C  2351 FLAB3_1STEERINGMOTOR$__str_17$0$0 == .
+      00056C                       2352 ___str_17:
+      00056C 0D                    2353 	.db 0x0D
+      00056D 0A                    2354 	.db 0x0A
+      00056E 0A                    2355 	.db 0x0A
+      00056F 20 50 6C 65 61 73 65  2356 	.ascii " Please turn right by pressing the 'r' key, or turn left "
+             20 74 75 72 6E 20 72
+             69 67 68 74 20 62 79
+             20 70 72 65 73 73 69
+             6E 67 20 74 68 65 20
+             27 72 27 20 6B 65 79
+             2C 20 6F 72 20 74 75
+             72 6E 20 6C 65 66 74
+             20
+      0005A8 75 73 69 6E 67 20 74  2357 	.ascii "using the 'l' key, until the steering linkage is Centered. P"
+             68 65 20 27 6C 27 20
+             6B 65 79 2C 20 75 6E
+             74 69 6C 20 74 68 65
+             20 73 74 65 65 72 69
+             6E 67 20 6C 69 6E 6B
+             61 67 65 20 69 73 20
+             43 65 6E 74 65 72 65
+             64 2E 20 50
+      0005E4 72 65 73 73 20 27 66  2358 	.ascii "ress 'f' when finished"
+             27 20 77 68 65 6E 20
+             66 69 6E 69 73 68 65
+             64
+      0005FA 00                    2359 	.db 0x00
+                                   2360 	.area XINIT   (CODE)
+                                   2361 	.area CABS    (ABS,CODE)

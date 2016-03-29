@@ -1,0 +1,353 @@
+/* Sample code for Lab 3.1. This code provides a basic start. */
+/*	SURGESSTED STEPS
+1) Build the circuit.
+This circuit is very straightforward. At this point, you should be familiar with the 74365
+Buffer chip (including remembering the Output Enable pins). Use the XBR0 setting to identify
+the appropriate Port Pin for input to a buffer gate.
+	//DONE
+
+2) Copy the requisite Initialization routines from Laboratory 2 and edit them for Laboratory 3.
+With the exception of Timer0, you will use all the current initializations routines in the coming
+Laboratories. A/D conversion is not used in Laboratory 3, but will be in Laboratory 5 and
+6.
+	//DONE
+
+3) Add the PCA and XBR0 initializations.
+Refer to the Laboratory description for the appropriate settings. Recall, the motors operate at
+a 50 Hz or 20 ms cycle.
+	//DONE
+
+4) Code a CCM threshold value and verify that the appropriate Port Pin has a pulsed output.
+Print both the Start value of the PCA and the Pulsewidth. Use the logic probe to check for
+pulsed output.
+
+5) Write a subroutine that can be used to calibrate the lower and upper bounds of the Pulsewidth for
+your option (Speed controller or Servo motor).
+This routine should respond to user input for calibration. Use a getchar() command to
+read one character from the keyboard (refer to homework1.c)
+	//DONE
+6) Write a subroutine that can be used to manually steer or drive the car.
+This routine should be a minor revision of your calibration routine, with the Pulsewidth limits
+embedded in the code. 
+
+*/
+#include <c8051_SDCC.h>
+#include <stdio.h>
+#include <stdlib.h>
+//#define PW_CENTER  2760
+//#define PW_MIN  2345
+//#define PW_MAX  3335
+#define PW_MINmm  1100
+#define PW_MAXmm  1900
+#define PW_NEUT  1500
+//-----------------------------------------------------------------------------
+// Function Prototypes
+//-----------------------------------------------------------------------------
+void Port_Init(void);
+void PCA_Init (void);
+void XBR0_Init();
+void Steering_Servo(void);
+void PCA_ISR ( void ) __interrupt 9;
+void Calibration(void);
+void left_turn_calibration(void);
+void right_turn_calibration(void);
+void center_calibration(void);
+void SteeringServo_DriveMotor(void);
+void Drive_Motor(void);
+
+//for debugging purposes:
+void turnwheel(void);
+//-----------------------------------------------------------------------------
+// Global Variables
+//-----------------------------------------------------------------------------
+unsigned int PW_MAX =3335;
+unsigned int PW_MIN =2345;
+unsigned int PW_CENTER =2760;
+unsigned int MOTOR_PW = 0;
+unsigned int PW = 0;
+unsigned char f=0;
+volatile unsigned int count=0;
+char input;
+
+//-----------------------------------------------------------------------------
+// Main Function
+//-----------------------------------------------------------------------------
+void main(void)
+{ 
+    // initialize board
+    Sys_Init();
+    putchar(' ');
+    Port_Init();
+    XBR0_Init();
+    PCA_Init();
+    Calibration();
+	MOTOR_PW = PW_NEUT;    //set initial value
+	printf("\n\r1 second Motor calibration will now begin. Expect loud noise");
+    count =0;
+    while(count<=27);//add code to set the servo motor in neutral for one second
+                    //Note: overflow every 35.5555555 milliseconds, so 28.125, round down
+    printf("\r\nCalibrations complete! User can now control speed and direction.");
+	printf("\r\nPress the 'r' key to turn wheels right.");
+	printf("\r\nPress the 'l' key to turn wheels left.");
+	printf("\r\nPress the 'f' key to make the car go faster.");
+	printf("\r\nPress the 's' key to make the car go slower.");
+	printf("\r\n\nNote that continuing to press 's' after car is stationary will result in reverse direction.");
+
+	turnwheel();
+    while(1)
+	{
+//		Drive_Motor();	
+//		Steering_Servo();
+		SteeringServo_DriveMotor();
+	}//end Inf while
+}//end the main while loop
+
+//-----------------------------------------------------------------------------
+// Port_Init
+//-----------------------------------------------------------------------------
+
+void Port_Init()
+{
+    P1MDOUT |= 0x03;  //set output pin for CEX0 or CEX2 in push-pull mode
+}//end Port Init
+//-----------------------------------------------------------------------------
+// XBR0_Init
+//-----------------------------------------------------------------------------
+void XBR0_Init()
+{
+    XBR0 = 0x27;  //configure crossbar as directed in the laboratory
+}//end XBR0 init
+//-----------------------------------------------------------------------------
+// PCA_Init
+//-----------------------------------------------------------------------------
+void PCA_Init(void)
+{
+    PCA0MD=0x81;	//SYSCLK/12, enable CF interrupts, suspend when idle	
+    PCA0CPM0 =0xC2;	//16 bit, enable compare, enable PWM				
+    PCA0CN |=0x40;	//enable the PCA
+    EIE1 |= 0x08;	//enable PCA interrupt
+    EA = 1;			//enable global interrupts
+}//end PCA init
+//-----------------------------------------------------------------------------
+// PCA_ISR
+//-----------------------------------------------------------------------------
+void PCA_ISR ( void ) __interrupt 9
+{
+	count ++;//count varible for the delays
+   	if (CF)
+	{
+		CF=0;	//clear overflow flag
+		PCA0=28672; //Not sure if this has the same effect?
+		//PCA0L = 28672;		//PCA0H = 28672 >> 8;
+	}//end if CF
+	PCA0CN &=0xC0;						  
+}//end PCA_ISR
+
+void SteeringServo_DriveMotor()
+{
+    input = getchar();//wait for a key to be pressed
+    if(input == 'l')  // single character input to decrease the pulsewidth
+    {
+        if(PW < (PW_MIN +10) ) // check if less than pulsewidth minimum
+			PW = PW_MIN; // set SERVO_PW to a minimum value 
+		else			//if not yet min
+			PW-=10; //decrease pulsewidth by 10
+    }//end if input = l
+    else if(input == 'r')  // single character input to increase the pulsewidth
+    {
+        if(PW+10 > PW_MAX)  // check if pulsewidth maximum exceeded
+			PW = PW_MAX;// set PW to a maximum value 
+		else			//if not yet at max	
+			PW+=10; //increment pulsewidth by 10
+    }
+    else if( (input == 'f') && (MOTOR_PW < PW_MAXmm) )//if 'f' is pressed by the user
+    {
+		MOTOR_PW = MOTOR_PW + 10; //increase the steering pulsewidth by 10
+    }
+    else if( (input == 's') &&(MOTOR_PW > PW_MINmm) )//if 's' is pressed by the user
+    {
+		MOTOR_PW = MOTOR_PW - 10; //decrease the steering pulsewidth by 10
+    }
+    PCA0CP2 = 0xFFFF - MOTOR_PW;
+    printf("pulsewidth = %d\r\n",MOTOR_PW);
+	printf("\r\nPW_MIN: %u, PW_MAX: %u, PW: %u\n", PW_MIN, PW_MAX, PW);
+	PCA0CPL0 = 0xFFFF - PW;
+	PCA0CPH0 = (0xFFFF - PW) >> 8;
+}//end Drive motor
+
+
+
+void Calibration(void)	
+{
+   	printf("Embedded Control Steering Calibration\n");        //print beginning message
+    PW = PW_CENTER;
+	PCA0CPL0 = 0xFFFF - PW;
+	PCA0CPH0 = (0xFFFF - PW) >> 8;
+	printf("\r\n This calibration procedure will walk you through the calibration of the steering servo on your car. This calibration is important to ensure no damage occurs from oversteering your car while in use. You will be prompted to turn left and right, until the steering linakage appears to be close to binding. If at any point you have gone too far, you may decrease the steering angle before storing the value");
+	//do the calibration procedure
+	left_turn_calibration();
+	right_turn_calibration();
+	center_calibration();
+	printf("\r\n\n\n Calibration is complete. Steer using the 'r' and 'l' keys.");
+}//end calibration
+//*******************************************************************************
+//left turn calibration
+//*******************************************************************************
+
+//for debugging purposes:
+
+void turnwheel(void)
+{
+	count=0;
+	while(count<100)
+	{
+		MOTOR_PW = 1700;
+	}
+}
+	
+void left_turn_calibration(void)
+{
+
+	printf("\r\n\n Please turn left by pressing the 'l' key until the steering linkage is at its maximum, without binding. If you pass this point, press 'r' to turn back to the right. Press 'f' when finished");
+	while (f==0)	//While the user is not done calibrating
+	{
+	    input = getchar();//wait for a key to be pressed
+		printf("pressed");
+	    if(input == 'l')  // single character input to decrease the pulsewidth
+	    {
+	        PW=(PW-10);	//decrease pulsewidth by 10
+	    }//end if input =l
+	    else if(input == 'r')  // single character input to increase PW
+	    {
+	        PW=(PW+10);  //increment pulsewidth by 10
+	    }//end else if input = r
+	    printf("\r\nPW: %u\n", PW);
+	    PCA0CPL0 = 0xFFFF - PW;
+		PCA0CPH0 = (0xFFFF - PW) >> 8;
+		if (input== 'f')
+		{
+			f=1;	//exit left calibration and store value
+		}//end if input = f
+	}//end while f=0
+
+	PW_MIN=PW;	//store the calibration value for left turn
+	PW=PW_CENTER;	//Set the steering back to straight
+	PCA0CPL0 = 0xFFFF - PW;
+	PCA0CPH0 = (0xFFFF - PW) >> 8;
+	f=0;
+}
+//********************************************************************************
+//right turn calibration
+//********************************************************************************
+void right_turn_calibration(void)
+{
+	printf("\r\n\n Please turn right by pressing the 'r' key until the steering linkage is at its maximum, without binding. If you pass this point, press 'l' to turn back to the left. Press 'f' when finished");
+	while (f==0)	//While the user is not done calibrating
+	{
+	    input = getchar();//wait for a key to be pressed
+	    if(input == 'l')  // single character input to decrease the pulsewidth
+	    {
+	        PW=(PW-10);	//decrease pulsewidth by 10
+	    }//end input =l
+	    else if(input == 'r')  // single character input to increase PW
+	    {
+	        PW=(PW+10);  //increment pulsewidth by 10
+	    }//end else if input = r
+	    printf("\r\nPW: %u\n", PW);
+	    //PCA0CP0 = 0xFFFF - PW;	//store a value for the desired pulsewidth
+		PCA0CPL0 = 0xFFFF - PW;
+		PCA0CPH0 = (0xFFFF - PW) >> 8;
+		if (input == 'f')
+		{
+			f=1;	//exit right calibration and store value
+		}//end if input = f
+	}//end while f =0
+	f = 0;
+	PW_MAX=PW;	//store the calibration value for left turn
+
+	PW=PW_CENTER;	//Set the steering back to straight
+	PCA0CPL0 = 0xFFFF - PW;
+	PCA0CPH0 = (0xFFFF - PW) >> 8;
+}//end right calibration
+
+//********************************************************************************
+//Center calibration
+//********************************************************************************
+void center_calibration(void)
+{
+	printf("\r\n\n Please turn right by pressing the 'r' key, or turn left using the 'l' key, until the steering linkage is Centered. Press 'f' when finished");
+	while (f==0)	//While the user is not done calibrating
+	{
+	    input = getchar();//wait for a key to be pressed
+	    if(input == 'l')  // single character input to decrease the pulsewidth
+	    {
+	        PW=(PW-10);	//decrease pulsewidth by 10
+	    }//end input = l
+	    else if(input == 'r')  // single character input to increase PW
+	    {
+	        PW=(PW+10);  //increment pulsewidth by 10
+	    }//end else if input = r
+	    printf("\r\nPW: %u\n", PW);
+	    //PCA0CP0 = 0xFFFF - PW;	//store a value for the desired pulsewidth
+		PCA0CPL0 = 0xFFFF - PW;
+		PCA0CPH0 = (0xFFFF - PW) >> 8;
+		if (input== 'f')
+		{
+			f=1;	//exit left calibration and store value
+		}//end if input =f
+	}//end while f=0
+
+	PW_CENTER=PW;	//store the calibration value for left turn
+	PW=PW_CENTER;	//Set the steering back to straight
+	PCA0CPL0 = 0xFFFF - PW;
+	PCA0CPH0 = (0xFFFF - PW) >> 8;
+	f=0;
+}//end center caliration
+
+
+
+//******************************************************************************
+//Steering servo function
+//******************************************************************************
+
+
+/*void Steering_Servo()
+{
+    input = getchar();//wait for a key to be pressed
+    if(input == 'l')  // single character input to decrease the pulsewidth
+    {
+        if(PW-10 < PW_MIN)  // check if less than pulsewidth minimum
+        	{PW = PW_MIN;}    // set SERVO_PW to a minimum value
+		else			//if not yet min
+			{PW-=10;}	//decrease pulsewidth by 10
+    }
+    else if(input == 'r')  // single character input to increase the pulsewidth
+    {
+        if(PW+10 > PW_MAX)  // check if pulsewidth maximum exceeded
+        	{PW = PW_MAX;}  // set PW to a maximum value 
+		else			//if not yet at max
+			{PW+=10;}  //increment pulsewidth by 10
+    }
+    printf("\r\nPW_MIN: %u, PW_MAX: %u, PW: %u\n", PW_MIN, PW_MAX, PW);
+	PCA0CPL0 = 0xFFFF - PW;
+	PCA0CPH0 = (0xFFFF - PW) >> 8;
+}//end steering servo
+
+	
+void Drive_Motor()
+{
+    input = getchar();    //wait for a key to be pressed
+    if(input == 'f') //if 'f' is pressed by the user
+    {
+        if(MOTOR_PW < PW_MAXm)
+            {MOTOR_PW = MOTOR_PW + 10;} //increase the steering pulsewidth by 10
+    }
+    else if(input == 's') //if 's' is pressed by the user
+    {
+        if(MOTOR_PW > PW_MINm)
+            {MOTOR_PW = MOTOR_PW - 10;} //decrease the steering pulsewidth by 10
+    }
+    PCA0CP2 = 0xFFFF - MOTOR_PW;
+    printf("pulsewidth = %d\r\n",MOTOR_PW);
+}//end Drive motor
+*/

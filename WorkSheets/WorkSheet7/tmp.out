@@ -1,0 +1,3 @@
+?ASlink-Error-<cannot open> : "C:\Users\hoddip\Documents\GitHub\LightTechs\Labs\Lab3\Part2\LAB3_2RangerCompass_V3.rel"
++ C:\PROGRA~1\SDCC\bin\sdld.exe -nf "C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet7\Lab3steeringmotor.lk"
++ C:\PROGRA~1\SDCC\bin\sdld.exe -nf "C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet7\Lab3steeringmotor.lk" returned errorcode 3

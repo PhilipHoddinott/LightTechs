@@ -1,0 +1,2085 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 1.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  002710 L
+    .__.ABS.                                                    =  000000 G
+    .__.CPU.                                                    =  000000 L
+    .__.H$L.                                                    =  000001 L
+    A                                                           =  0000E0 L
+ 16 A$LAB3-1STEERINGMOTOR$1000                                     000000 GR
+ 16 A$LAB3-1STEERINGMOTOR$1001                                     000003 GR
+ 16 A$LAB3-1STEERINGMOTOR$1004                                     000006 GR
+ 16 A$LAB3-1STEERINGMOTOR$1005                                     000009 GR
+ 16 A$LAB3-1STEERINGMOTOR$1008                                     00000C GR
+ 16 A$LAB3-1STEERINGMOTOR$1009                                     00000F GR
+ 16 A$LAB3-1STEERINGMOTOR$1012                                     000012 GR
+ 16 A$LAB3-1STEERINGMOTOR$1013                                     000013 GR
+ 16 A$LAB3-1STEERINGMOTOR$1014                                     000015 GR
+ 16 A$LAB3-1STEERINGMOTOR$1017                                     000017 GR
+ 16 A$LAB3-1STEERINGMOTOR$1018                                     000019 GR
+ 16 A$LAB3-1STEERINGMOTOR$1022                                     00001B GR
+ 16 A$LAB3-1STEERINGMOTOR$1025                                     00001D GR
+ 16 A$LAB3-1STEERINGMOTOR$1026                                     00001F GR
+ 17 A$LAB3-1STEERINGMOTOR$1028                                     000000 GR
+  F A$LAB3-1STEERINGMOTOR$1035                                     00004E GR
+ 18 A$LAB3-1STEERINGMOTOR$1063                                     000000 GR
+ 18 A$LAB3-1STEERINGMOTOR$1066                                     000003 GR
+ 18 A$LAB3-1STEERINGMOTOR$1067                                     000005 GR
+ 18 A$LAB3-1STEERINGMOTOR$1069                                     000007 GR
+ 18 A$LAB3-1STEERINGMOTOR$1070                                     000008 GR
+ 18 A$LAB3-1STEERINGMOTOR$1071                                     00000A GR
+ 18 A$LAB3-1STEERINGMOTOR$1072                                     00000B GR
+ 18 A$LAB3-1STEERINGMOTOR$1073                                     00000C GR
+ 18 A$LAB3-1STEERINGMOTOR$1074                                     00000E GR
+ 18 A$LAB3-1STEERINGMOTOR$1075                                     00000F GR
+ 18 A$LAB3-1STEERINGMOTOR$1076                                     000011 GR
+ 18 A$LAB3-1STEERINGMOTOR$1077                                     000013 GR
+ 18 A$LAB3-1STEERINGMOTOR$1078                                     000014 GR
+ 18 A$LAB3-1STEERINGMOTOR$1079                                     000015 GR
+ 18 A$LAB3-1STEERINGMOTOR$1083                                     000017 GR
+ 18 A$LAB3-1STEERINGMOTOR$1084                                     000019 GR
+ 18 A$LAB3-1STEERINGMOTOR$1087                                     00001C GR
+ 18 A$LAB3-1STEERINGMOTOR$1090                                     00001F GR
+ 18 A$LAB3-1STEERINGMOTOR$1103                                     000020 GR
+ 18 A$LAB3-1STEERINGMOTOR$1106                                     000023 GR
+ 18 A$LAB3-1STEERINGMOTOR$1109                                     000026 GR
+ 18 A$LAB3-1STEERINGMOTOR$1112                                     000029 GR
+ 18 A$LAB3-1STEERINGMOTOR$1115                                     00002B GR
+ 18 A$LAB3-1STEERINGMOTOR$1118                                     00002E GR
+ 18 A$LAB3-1STEERINGMOTOR$1121                                     000031 GR
+ 18 A$LAB3-1STEERINGMOTOR$1124                                     000033 GR
+ 18 A$LAB3-1STEERINGMOTOR$1127                                     000036 GR
+ 18 A$LAB3-1STEERINGMOTOR$1140                                     000037 GR
+ 18 A$LAB3-1STEERINGMOTOR$1143                                     00003A GR
+ 18 A$LAB3-1STEERINGMOTOR$1146                                     00003D GR
+ 18 A$LAB3-1STEERINGMOTOR$1149                                     000040 GR
+ 18 A$LAB3-1STEERINGMOTOR$1152                                     000043 GR
+ 18 A$LAB3-1STEERINGMOTOR$1155                                     000046 GR
+ 18 A$LAB3-1STEERINGMOTOR$1158                                     000049 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 2.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$1171                                     00004A GR
+ 18 A$LAB3-1STEERINGMOTOR$1177                                     00004C GR
+ 18 A$LAB3-1STEERINGMOTOR$1178                                     00004F GR
+ 18 A$LAB3-1STEERINGMOTOR$1182                                     000051 GR
+ 18 A$LAB3-1STEERINGMOTOR$1185                                     000053 GR
+ 18 A$LAB3-1STEERINGMOTOR$1203                                     000054 GR
+ 18 A$LAB3-1STEERINGMOTOR$1204                                     000057 GR
+ 18 A$LAB3-1STEERINGMOTOR$1208                                     000059 GR
+ 18 A$LAB3-1STEERINGMOTOR$1211                                     00005C GR
+ 18 A$LAB3-1STEERINGMOTOR$1214                                     00005F GR
+ 18 A$LAB3-1STEERINGMOTOR$1217                                     000062 GR
+ 18 A$LAB3-1STEERINGMOTOR$1232                                     000063 GR
+ 18 A$LAB3-1STEERINGMOTOR$1233                                     000066 GR
+ 18 A$LAB3-1STEERINGMOTOR$1234                                     000069 GR
+ 18 A$LAB3-1STEERINGMOTOR$1238                                     00006B GR
+ 18 A$LAB3-1STEERINGMOTOR$1241                                     00006D GR
+ 18 A$LAB3-1STEERINGMOTOR$1244                                     000070 GR
+ 18 A$LAB3-1STEERINGMOTOR$1247                                     000073 GR
+ 18 A$LAB3-1STEERINGMOTOR$1251                                     000076 GR
+ 18 A$LAB3-1STEERINGMOTOR$1264                                     000077 GR
+ 18 A$LAB3-1STEERINGMOTOR$1267                                     00007A GR
+ 18 A$LAB3-1STEERINGMOTOR$1268                                     00007D GR
+ 18 A$LAB3-1STEERINGMOTOR$1271                                     000080 GR
+ 18 A$LAB3-1STEERINGMOTOR$1274                                     000083 GR
+ 18 A$LAB3-1STEERINGMOTOR$1277                                     000086 GR
+ 18 A$LAB3-1STEERINGMOTOR$1280                                     000089 GR
+ 18 A$LAB3-1STEERINGMOTOR$1283                                     00008C GR
+ 18 A$LAB3-1STEERINGMOTOR$1284                                     00008F GR
+ 18 A$LAB3-1STEERINGMOTOR$1287                                     000092 GR
+ 18 A$LAB3-1STEERINGMOTOR$1288                                     000094 GR
+ 18 A$LAB3-1STEERINGMOTOR$1289                                     000096 GR
+ 18 A$LAB3-1STEERINGMOTOR$1290                                     000098 GR
+ 18 A$LAB3-1STEERINGMOTOR$1291                                     00009A GR
+ 18 A$LAB3-1STEERINGMOTOR$1292                                     00009C GR
+ 18 A$LAB3-1STEERINGMOTOR$1293                                     00009E GR
+ 18 A$LAB3-1STEERINGMOTOR$1294                                     0000A1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1295                                     0000A3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1296                                     0000A5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1299                                     0000A7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1300                                     0000A8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1301                                     0000AA GR
+ 18 A$LAB3-1STEERINGMOTOR$1305                                     0000AC GR
+ 18 A$LAB3-1STEERINGMOTOR$1306                                     0000AD GR
+ 18 A$LAB3-1STEERINGMOTOR$1307                                     0000AF GR
+ 18 A$LAB3-1STEERINGMOTOR$1308                                     0000B1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1309                                     0000B2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1310                                     0000B4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1313                                     0000B6 GR
+ 18 A$LAB3-1STEERINGMOTOR$1314                                     0000B8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1315                                     0000BA GR
+ 18 A$LAB3-1STEERINGMOTOR$1316                                     0000BC GR
+ 18 A$LAB3-1STEERINGMOTOR$1317                                     0000BE GR
+ 18 A$LAB3-1STEERINGMOTOR$1318                                     0000C0 GR
+ 18 A$LAB3-1STEERINGMOTOR$1319                                     0000C2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1320                                     0000C5 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 3.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$1321                                     0000C7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1322                                     0000C9 GR
+ 18 A$LAB3-1STEERINGMOTOR$1325                                     0000CB GR
+ 18 A$LAB3-1STEERINGMOTOR$1326                                     0000CD GR
+ 18 A$LAB3-1STEERINGMOTOR$1327                                     0000CF GR
+ 18 A$LAB3-1STEERINGMOTOR$1328                                     0000D1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1329                                     0000D3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1330                                     0000D5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1331                                     0000D7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1332                                     0000DA GR
+ 18 A$LAB3-1STEERINGMOTOR$1333                                     0000DC GR
+ 18 A$LAB3-1STEERINGMOTOR$1334                                     0000DE GR
+ 18 A$LAB3-1STEERINGMOTOR$1337                                     0000E0 GR
+ 18 A$LAB3-1STEERINGMOTOR$1338                                     0000E2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1339                                     0000E4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1340                                     0000E6 GR
+ 18 A$LAB3-1STEERINGMOTOR$1341                                     0000E8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1342                                     0000EA GR
+ 18 A$LAB3-1STEERINGMOTOR$1343                                     0000EC GR
+ 18 A$LAB3-1STEERINGMOTOR$1344                                     0000EF GR
+ 18 A$LAB3-1STEERINGMOTOR$1345                                     0000F1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1346                                     0000F3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1349                                     0000F5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1350                                     0000F7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1351                                     0000F9 GR
+ 18 A$LAB3-1STEERINGMOTOR$1352                                     0000FB GR
+ 18 A$LAB3-1STEERINGMOTOR$1353                                     0000FD GR
+ 18 A$LAB3-1STEERINGMOTOR$1354                                     0000FF GR
+ 18 A$LAB3-1STEERINGMOTOR$1355                                     000101 GR
+ 18 A$LAB3-1STEERINGMOTOR$1356                                     000104 GR
+ 18 A$LAB3-1STEERINGMOTOR$1357                                     000106 GR
+ 18 A$LAB3-1STEERINGMOTOR$1358                                     000108 GR
+ 18 A$LAB3-1STEERINGMOTOR$1361                                     00010A GR
+ 18 A$LAB3-1STEERINGMOTOR$1362                                     00010C GR
+ 18 A$LAB3-1STEERINGMOTOR$1363                                     00010E GR
+ 18 A$LAB3-1STEERINGMOTOR$1364                                     000110 GR
+ 18 A$LAB3-1STEERINGMOTOR$1365                                     000112 GR
+ 18 A$LAB3-1STEERINGMOTOR$1366                                     000114 GR
+ 18 A$LAB3-1STEERINGMOTOR$1367                                     000116 GR
+ 18 A$LAB3-1STEERINGMOTOR$1368                                     000119 GR
+ 18 A$LAB3-1STEERINGMOTOR$1369                                     00011B GR
+ 18 A$LAB3-1STEERINGMOTOR$1370                                     00011D GR
+ 18 A$LAB3-1STEERINGMOTOR$1373                                     00011F GR
+ 18 A$LAB3-1STEERINGMOTOR$1374                                     000121 GR
+ 18 A$LAB3-1STEERINGMOTOR$1375                                     000123 GR
+ 18 A$LAB3-1STEERINGMOTOR$1376                                     000125 GR
+ 18 A$LAB3-1STEERINGMOTOR$1377                                     000127 GR
+ 18 A$LAB3-1STEERINGMOTOR$1378                                     000129 GR
+ 18 A$LAB3-1STEERINGMOTOR$1379                                     00012B GR
+ 18 A$LAB3-1STEERINGMOTOR$1380                                     00012E GR
+ 18 A$LAB3-1STEERINGMOTOR$1381                                     000130 GR
+ 18 A$LAB3-1STEERINGMOTOR$1382                                     000132 GR
+ 18 A$LAB3-1STEERINGMOTOR$1385                                     000134 GR
+ 18 A$LAB3-1STEERINGMOTOR$1391                                     000137 GR
+ 18 A$LAB3-1STEERINGMOTOR$1392                                     00013A GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 4.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$1395                                     00013C GR
+ 18 A$LAB3-1STEERINGMOTOR$1408                                     00013D GR
+ 18 A$LAB3-1STEERINGMOTOR$1411                                     000140 GR
+ 18 A$LAB3-1STEERINGMOTOR$1424                                     000141 GR
+ 18 A$LAB3-1STEERINGMOTOR$1427                                     000144 GR
+ 18 A$LAB3-1STEERINGMOTOR$1440                                     000145 GR
+ 18 A$LAB3-1STEERINGMOTOR$1443                                     000148 GR
+ 18 A$LAB3-1STEERINGMOTOR$1446                                     00014B GR
+ 18 A$LAB3-1STEERINGMOTOR$1449                                     00014E GR
+ 18 A$LAB3-1STEERINGMOTOR$1452                                     000151 GR
+ 18 A$LAB3-1STEERINGMOTOR$1455                                     000154 GR
+ 18 A$LAB3-1STEERINGMOTOR$1458                                     000156 GR
+ 18 A$LAB3-1STEERINGMOTOR$1469                                     000157 GR
+ 18 A$LAB3-1STEERINGMOTOR$1470                                     000159 GR
+ 18 A$LAB3-1STEERINGMOTOR$1473                                     00015B GR
+ 18 A$LAB3-1STEERINGMOTOR$1474                                     00015D GR
+ 18 A$LAB3-1STEERINGMOTOR$1475                                     00015F GR
+ 18 A$LAB3-1STEERINGMOTOR$1476                                     000161 GR
+ 18 A$LAB3-1STEERINGMOTOR$1477                                     000162 GR
+ 18 A$LAB3-1STEERINGMOTOR$1478                                     000164 GR
+ 18 A$LAB3-1STEERINGMOTOR$1483                                     000166 GR
+ 18 A$LAB3-1STEERINGMOTOR$1484                                     000169 GR
+ 18 A$LAB3-1STEERINGMOTOR$1488                                     00016B GR
+ 18 A$LAB3-1STEERINGMOTOR$1489                                     00016E GR
+ 18 A$LAB3-1STEERINGMOTOR$1493                                     000171 GR
+ 18 A$LAB3-1STEERINGMOTOR$1494                                     000174 GR
+ 18 A$LAB3-1STEERINGMOTOR$1495                                     000176 GR
+ 18 A$LAB3-1STEERINGMOTOR$1498                                     000178 GR
+ 18 A$LAB3-1STEERINGMOTOR$1515                                     000179 GR
+ 18 A$LAB3-1STEERINGMOTOR$1516                                     00017C GR
+ 18 A$LAB3-1STEERINGMOTOR$1519                                     00017F GR
+ 18 A$LAB3-1STEERINGMOTOR$1520                                     000181 GR
+ 18 A$LAB3-1STEERINGMOTOR$1523                                     000184 GR
+ 18 A$LAB3-1STEERINGMOTOR$1524                                     000186 GR
+ 18 A$LAB3-1STEERINGMOTOR$1525                                     000188 GR
+ 18 A$LAB3-1STEERINGMOTOR$1526                                     000189 GR
+ 18 A$LAB3-1STEERINGMOTOR$1527                                     00018A GR
+ 18 A$LAB3-1STEERINGMOTOR$1528                                     00018C GR
+ 18 A$LAB3-1STEERINGMOTOR$1529                                     00018D GR
+ 18 A$LAB3-1STEERINGMOTOR$1530                                     00018E GR
+ 18 A$LAB3-1STEERINGMOTOR$1531                                     000190 GR
+ 18 A$LAB3-1STEERINGMOTOR$1532                                     000191 GR
+ 18 A$LAB3-1STEERINGMOTOR$1533                                     000193 GR
+ 18 A$LAB3-1STEERINGMOTOR$1534                                     000194 GR
+ 18 A$LAB3-1STEERINGMOTOR$1537                                     000196 GR
+ 18 A$LAB3-1STEERINGMOTOR$1538                                     000199 GR
+ 18 A$LAB3-1STEERINGMOTOR$1539                                     00019C GR
+ 18 A$LAB3-1STEERINGMOTOR$1543                                     00019F GR
+ 18 A$LAB3-1STEERINGMOTOR$1544                                     0001A1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1545                                     0001A3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1546                                     0001A5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1547                                     0001A7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1548                                     0001A9 GR
+ 18 A$LAB3-1STEERINGMOTOR$1549                                     0001AB GR
+ 18 A$LAB3-1STEERINGMOTOR$1553                                     0001AD GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 5.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$1554                                     0001AF GR
+ 18 A$LAB3-1STEERINGMOTOR$1557                                     0001B2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1558                                     0001B4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1559                                     0001B6 GR
+ 18 A$LAB3-1STEERINGMOTOR$1560                                     0001B7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1561                                     0001B8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1562                                     0001BA GR
+ 18 A$LAB3-1STEERINGMOTOR$1563                                     0001BB GR
+ 18 A$LAB3-1STEERINGMOTOR$1564                                     0001BC GR
+ 18 A$LAB3-1STEERINGMOTOR$1565                                     0001BE GR
+ 18 A$LAB3-1STEERINGMOTOR$1566                                     0001BF GR
+ 18 A$LAB3-1STEERINGMOTOR$1567                                     0001C1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1568                                     0001C2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1571                                     0001C4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1572                                     0001C7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1573                                     0001CA GR
+ 18 A$LAB3-1STEERINGMOTOR$1577                                     0001CC GR
+ 18 A$LAB3-1STEERINGMOTOR$1578                                     0001CE GR
+ 18 A$LAB3-1STEERINGMOTOR$1579                                     0001D0 GR
+ 18 A$LAB3-1STEERINGMOTOR$1580                                     0001D2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1581                                     0001D3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1582                                     0001D5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1583                                     0001D7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1587                                     0001D9 GR
+ 18 A$LAB3-1STEERINGMOTOR$1588                                     0001DB GR
+ 18 A$LAB3-1STEERINGMOTOR$1589                                     0001DE GR
+ 18 A$LAB3-1STEERINGMOTOR$1590                                     0001DF GR
+ 18 A$LAB3-1STEERINGMOTOR$1591                                     0001E1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1592                                     0001E3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1593                                     0001E5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1594                                     0001E7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1597                                     0001E9 GR
+ 18 A$LAB3-1STEERINGMOTOR$1598                                     0001EB GR
+ 18 A$LAB3-1STEERINGMOTOR$1599                                     0001ED GR
+ 18 A$LAB3-1STEERINGMOTOR$1600                                     0001EF GR
+ 18 A$LAB3-1STEERINGMOTOR$1601                                     0001F0 GR
+ 18 A$LAB3-1STEERINGMOTOR$1602                                     0001F2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1603                                     0001F4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1607                                     0001F6 GR
+ 18 A$LAB3-1STEERINGMOTOR$1608                                     0001F8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1609                                     0001FB GR
+ 18 A$LAB3-1STEERINGMOTOR$1610                                     0001FC GR
+ 18 A$LAB3-1STEERINGMOTOR$1611                                     0001FE GR
+ 18 A$LAB3-1STEERINGMOTOR$1612                                     000200 GR
+ 18 A$LAB3-1STEERINGMOTOR$1613                                     000202 GR
+ 18 A$LAB3-1STEERINGMOTOR$1614                                     000204 GR
+ 18 A$LAB3-1STEERINGMOTOR$1617                                     000206 GR
+ 18 A$LAB3-1STEERINGMOTOR$1618                                     000208 GR
+ 18 A$LAB3-1STEERINGMOTOR$1619                                     00020A GR
+ 18 A$LAB3-1STEERINGMOTOR$1620                                     00020C GR
+ 18 A$LAB3-1STEERINGMOTOR$1621                                     00020E GR
+ 18 A$LAB3-1STEERINGMOTOR$1622                                     000210 GR
+ 18 A$LAB3-1STEERINGMOTOR$1626                                     000212 GR
+ 18 A$LAB3-1STEERINGMOTOR$1627                                     000214 GR
+ 18 A$LAB3-1STEERINGMOTOR$1628                                     000216 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 6.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$1629                                     000217 GR
+ 18 A$LAB3-1STEERINGMOTOR$1630                                     000218 GR
+ 18 A$LAB3-1STEERINGMOTOR$1633                                     00021A GR
+ 18 A$LAB3-1STEERINGMOTOR$1634                                     00021C GR
+ 18 A$LAB3-1STEERINGMOTOR$1635                                     00021D GR
+ 18 A$LAB3-1STEERINGMOTOR$1636                                     00021F GR
+ 18 A$LAB3-1STEERINGMOTOR$1637                                     000221 GR
+ 18 A$LAB3-1STEERINGMOTOR$1638                                     000223 GR
+ 18 A$LAB3-1STEERINGMOTOR$1639                                     000224 GR
+ 18 A$LAB3-1STEERINGMOTOR$1642                                     000226 GR
+ 18 A$LAB3-1STEERINGMOTOR$1643                                     000228 GR
+ 18 A$LAB3-1STEERINGMOTOR$1644                                     00022A GR
+ 18 A$LAB3-1STEERINGMOTOR$1645                                     00022C GR
+ 18 A$LAB3-1STEERINGMOTOR$1646                                     00022E GR
+ 18 A$LAB3-1STEERINGMOTOR$1647                                     000230 GR
+ 18 A$LAB3-1STEERINGMOTOR$1648                                     000232 GR
+ 18 A$LAB3-1STEERINGMOTOR$1649                                     000234 GR
+ 18 A$LAB3-1STEERINGMOTOR$1650                                     000236 GR
+ 18 A$LAB3-1STEERINGMOTOR$1651                                     000239 GR
+ 18 A$LAB3-1STEERINGMOTOR$1652                                     00023B GR
+ 18 A$LAB3-1STEERINGMOTOR$1653                                     00023D GR
+ 18 A$LAB3-1STEERINGMOTOR$1656                                     00023F GR
+ 18 A$LAB3-1STEERINGMOTOR$1657                                     000241 GR
+ 18 A$LAB3-1STEERINGMOTOR$1658                                     000243 GR
+ 18 A$LAB3-1STEERINGMOTOR$1659                                     000245 GR
+ 18 A$LAB3-1STEERINGMOTOR$1660                                     000247 GR
+ 18 A$LAB3-1STEERINGMOTOR$1661                                     000249 GR
+ 18 A$LAB3-1STEERINGMOTOR$1662                                     00024B GR
+ 18 A$LAB3-1STEERINGMOTOR$1663                                     00024D GR
+ 18 A$LAB3-1STEERINGMOTOR$1664                                     00024F GR
+ 18 A$LAB3-1STEERINGMOTOR$1665                                     000251 GR
+ 18 A$LAB3-1STEERINGMOTOR$1666                                     000253 GR
+ 18 A$LAB3-1STEERINGMOTOR$1667                                     000255 GR
+ 18 A$LAB3-1STEERINGMOTOR$1668                                     000257 GR
+ 18 A$LAB3-1STEERINGMOTOR$1669                                     00025A GR
+ 18 A$LAB3-1STEERINGMOTOR$1670                                     00025C GR
+ 18 A$LAB3-1STEERINGMOTOR$1671                                     00025E GR
+ 18 A$LAB3-1STEERINGMOTOR$1674                                     000260 GR
+ 18 A$LAB3-1STEERINGMOTOR$1675                                     000262 GR
+ 18 A$LAB3-1STEERINGMOTOR$1676                                     000263 GR
+ 18 A$LAB3-1STEERINGMOTOR$1677                                     000265 GR
+ 18 A$LAB3-1STEERINGMOTOR$1678                                     000266 GR
+ 18 A$LAB3-1STEERINGMOTOR$1679                                     000268 GR
+ 18 A$LAB3-1STEERINGMOTOR$1680                                     00026A GR
+ 18 A$LAB3-1STEERINGMOTOR$1681                                     00026B GR
+ 18 A$LAB3-1STEERINGMOTOR$1682                                     00026C GR
+ 18 A$LAB3-1STEERINGMOTOR$1683                                     00026E GR
+ 18 A$LAB3-1STEERINGMOTOR$1684                                     000270 GR
+ 18 A$LAB3-1STEERINGMOTOR$1685                                     000272 GR
+ 18 A$LAB3-1STEERINGMOTOR$1686                                     000274 GR
+ 18 A$LAB3-1STEERINGMOTOR$1687                                     000276 GR
+ 18 A$LAB3-1STEERINGMOTOR$1688                                     000278 GR
+ 18 A$LAB3-1STEERINGMOTOR$1689                                     00027A GR
+ 18 A$LAB3-1STEERINGMOTOR$1690                                     00027C GR
+ 18 A$LAB3-1STEERINGMOTOR$1691                                     00027E GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 7.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$1692                                     000280 GR
+ 18 A$LAB3-1STEERINGMOTOR$1693                                     000282 GR
+ 18 A$LAB3-1STEERINGMOTOR$1694                                     000285 GR
+ 18 A$LAB3-1STEERINGMOTOR$1695                                     000287 GR
+ 18 A$LAB3-1STEERINGMOTOR$1696                                     000289 GR
+ 18 A$LAB3-1STEERINGMOTOR$1699                                     00028B GR
+ 18 A$LAB3-1STEERINGMOTOR$1700                                     00028D GR
+ 18 A$LAB3-1STEERINGMOTOR$1701                                     00028F GR
+ 18 A$LAB3-1STEERINGMOTOR$1702                                     000290 GR
+ 18 A$LAB3-1STEERINGMOTOR$1703                                     000291 GR
+ 18 A$LAB3-1STEERINGMOTOR$1706                                     000293 GR
+ 18 A$LAB3-1STEERINGMOTOR$1707                                     000295 GR
+ 18 A$LAB3-1STEERINGMOTOR$1708                                     000296 GR
+ 18 A$LAB3-1STEERINGMOTOR$1709                                     000298 GR
+ 18 A$LAB3-1STEERINGMOTOR$1710                                     00029A GR
+ 18 A$LAB3-1STEERINGMOTOR$1711                                     00029C GR
+ 18 A$LAB3-1STEERINGMOTOR$1712                                     00029D GR
+ 18 A$LAB3-1STEERINGMOTOR$1715                                     00029F GR
+ 18 A$LAB3-1STEERINGMOTOR$1728                                     0002A0 GR
+ 18 A$LAB3-1STEERINGMOTOR$1729                                     0002A2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1730                                     0002A4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1731                                     0002A6 GR
+ 18 A$LAB3-1STEERINGMOTOR$1732                                     0002A8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1733                                     0002AA GR
+ 18 A$LAB3-1STEERINGMOTOR$1734                                     0002AC GR
+ 18 A$LAB3-1STEERINGMOTOR$1735                                     0002AF GR
+ 18 A$LAB3-1STEERINGMOTOR$1736                                     0002B1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1737                                     0002B3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1740                                     0002B5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1741                                     0002B8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1744                                     0002BB GR
+ 18 A$LAB3-1STEERINGMOTOR$1745                                     0002BD GR
+ 18 A$LAB3-1STEERINGMOTOR$1746                                     0002BF GR
+ 18 A$LAB3-1STEERINGMOTOR$1747                                     0002C0 GR
+ 18 A$LAB3-1STEERINGMOTOR$1748                                     0002C1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1751                                     0002C3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1752                                     0002C5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1753                                     0002C6 GR
+ 18 A$LAB3-1STEERINGMOTOR$1754                                     0002C8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1755                                     0002CA GR
+ 18 A$LAB3-1STEERINGMOTOR$1756                                     0002CC GR
+ 18 A$LAB3-1STEERINGMOTOR$1757                                     0002CD GR
+ 18 A$LAB3-1STEERINGMOTOR$1760                                     0002CF GR
+ 18 A$LAB3-1STEERINGMOTOR$1761                                     0002D1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1762                                     0002D3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1763                                     0002D5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1764                                     0002D7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1765                                     0002D9 GR
+ 18 A$LAB3-1STEERINGMOTOR$1766                                     0002DB GR
+ 18 A$LAB3-1STEERINGMOTOR$1767                                     0002DE GR
+ 18 A$LAB3-1STEERINGMOTOR$1768                                     0002E0 GR
+ 18 A$LAB3-1STEERINGMOTOR$1769                                     0002E2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1772                                     0002E4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1775                                     0002E7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1778                                     0002EA GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 8.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$1781                                     0002ED GR
+ 18 A$LAB3-1STEERINGMOTOR$1782                                     0002EF GR
+ 18 A$LAB3-1STEERINGMOTOR$1783                                     0002F1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1784                                     0002F3 GR
+ 18 A$LAB3-1STEERINGMOTOR$1785                                     0002F5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1786                                     0002F7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1787                                     0002F9 GR
+ 18 A$LAB3-1STEERINGMOTOR$1788                                     0002FC GR
+ 18 A$LAB3-1STEERINGMOTOR$1789                                     0002FE GR
+ 18 A$LAB3-1STEERINGMOTOR$1790                                     000300 GR
+ 18 A$LAB3-1STEERINGMOTOR$1793                                     000302 GR
+ 18 A$LAB3-1STEERINGMOTOR$1806                                     000303 GR
+ 18 A$LAB3-1STEERINGMOTOR$1807                                     000304 GR
+ 18 A$LAB3-1STEERINGMOTOR$1808                                     000306 GR
+ 18 A$LAB3-1STEERINGMOTOR$1812                                     000308 GR
+ 18 A$LAB3-1STEERINGMOTOR$1813                                     000309 GR
+ 18 A$LAB3-1STEERINGMOTOR$1814                                     00030B GR
+ 18 A$LAB3-1STEERINGMOTOR$1815                                     00030D GR
+ 18 A$LAB3-1STEERINGMOTOR$1816                                     00030F GR
+ 18 A$LAB3-1STEERINGMOTOR$1817                                     000311 GR
+ 18 A$LAB3-1STEERINGMOTOR$1820                                     000313 GR
+ 18 A$LAB3-1STEERINGMOTOR$1821                                     000316 GR
+ 18 A$LAB3-1STEERINGMOTOR$1822                                     000319 GR
+ 18 A$LAB3-1STEERINGMOTOR$1826                                     00031B GR
+ 18 A$LAB3-1STEERINGMOTOR$1839                                     00031C GR
+ 18 A$LAB3-1STEERINGMOTOR$1840                                     00031E GR
+ 18 A$LAB3-1STEERINGMOTOR$1841                                     000320 GR
+ 18 A$LAB3-1STEERINGMOTOR$1842                                     000322 GR
+ 18 A$LAB3-1STEERINGMOTOR$1843                                     000324 GR
+ 18 A$LAB3-1STEERINGMOTOR$1844                                     000326 GR
+ 18 A$LAB3-1STEERINGMOTOR$1845                                     000328 GR
+ 18 A$LAB3-1STEERINGMOTOR$1846                                     00032B GR
+ 18 A$LAB3-1STEERINGMOTOR$1847                                     00032D GR
+ 18 A$LAB3-1STEERINGMOTOR$1848                                     00032F GR
+ 18 A$LAB3-1STEERINGMOTOR$1852                                     000331 GR
+ 18 A$LAB3-1STEERINGMOTOR$1853                                     000333 GR
+ 18 A$LAB3-1STEERINGMOTOR$1854                                     000335 GR
+ 18 A$LAB3-1STEERINGMOTOR$1858                                     000338 GR
+ 18 A$LAB3-1STEERINGMOTOR$1859                                     00033B GR
+ 18 A$LAB3-1STEERINGMOTOR$1862                                     00033E GR
+ 18 A$LAB3-1STEERINGMOTOR$1863                                     000340 GR
+ 18 A$LAB3-1STEERINGMOTOR$1864                                     000342 GR
+ 18 A$LAB3-1STEERINGMOTOR$1865                                     000344 GR
+ 18 A$LAB3-1STEERINGMOTOR$1866                                     000346 GR
+ 18 A$LAB3-1STEERINGMOTOR$1867                                     000348 GR
+ 18 A$LAB3-1STEERINGMOTOR$1868                                     00034A GR
+ 18 A$LAB3-1STEERINGMOTOR$1869                                     00034D GR
+ 18 A$LAB3-1STEERINGMOTOR$1870                                     00034F GR
+ 18 A$LAB3-1STEERINGMOTOR$1871                                     000351 GR
+ 18 A$LAB3-1STEERINGMOTOR$1874                                     000353 GR
+ 18 A$LAB3-1STEERINGMOTOR$1875                                     000355 GR
+ 18 A$LAB3-1STEERINGMOTOR$1878                                     000358 GR
+ 18 A$LAB3-1STEERINGMOTOR$1879                                     00035A GR
+ 18 A$LAB3-1STEERINGMOTOR$1880                                     00035C GR
+ 18 A$LAB3-1STEERINGMOTOR$1881                                     00035E GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 9.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$1882                                     000360 GR
+ 18 A$LAB3-1STEERINGMOTOR$1883                                     000362 GR
+ 18 A$LAB3-1STEERINGMOTOR$1884                                     000364 GR
+ 18 A$LAB3-1STEERINGMOTOR$1888                                     000366 GR
+ 18 A$LAB3-1STEERINGMOTOR$1889                                     000368 GR
+ 18 A$LAB3-1STEERINGMOTOR$1892                                     00036B GR
+ 18 A$LAB3-1STEERINGMOTOR$1893                                     00036D GR
+ 18 A$LAB3-1STEERINGMOTOR$1894                                     00036F GR
+ 18 A$LAB3-1STEERINGMOTOR$1895                                     000371 GR
+ 18 A$LAB3-1STEERINGMOTOR$1896                                     000372 GR
+ 18 A$LAB3-1STEERINGMOTOR$1897                                     000374 GR
+ 18 A$LAB3-1STEERINGMOTOR$1901                                     000376 GR
+ 18 A$LAB3-1STEERINGMOTOR$1902                                     000378 GR
+ 18 A$LAB3-1STEERINGMOTOR$1903                                     00037A GR
+ 18 A$LAB3-1STEERINGMOTOR$1904                                     00037C GR
+ 18 A$LAB3-1STEERINGMOTOR$1905                                     00037E GR
+ 18 A$LAB3-1STEERINGMOTOR$1906                                     000380 GR
+ 18 A$LAB3-1STEERINGMOTOR$1907                                     000382 GR
+ 18 A$LAB3-1STEERINGMOTOR$1908                                     000384 GR
+ 18 A$LAB3-1STEERINGMOTOR$1909                                     000386 GR
+ 18 A$LAB3-1STEERINGMOTOR$1910                                     000389 GR
+ 18 A$LAB3-1STEERINGMOTOR$1911                                     00038B GR
+ 18 A$LAB3-1STEERINGMOTOR$1912                                     00038D GR
+ 18 A$LAB3-1STEERINGMOTOR$1915                                     00038F GR
+ 18 A$LAB3-1STEERINGMOTOR$1916                                     000391 GR
+ 18 A$LAB3-1STEERINGMOTOR$1917                                     000393 GR
+ 18 A$LAB3-1STEERINGMOTOR$1918                                     000394 GR
+ 18 A$LAB3-1STEERINGMOTOR$1919                                     000395 GR
+ 18 A$LAB3-1STEERINGMOTOR$1922                                     000397 GR
+ 18 A$LAB3-1STEERINGMOTOR$1923                                     000399 GR
+ 18 A$LAB3-1STEERINGMOTOR$1924                                     00039A GR
+ 18 A$LAB3-1STEERINGMOTOR$1925                                     00039C GR
+ 18 A$LAB3-1STEERINGMOTOR$1926                                     00039D GR
+ 18 A$LAB3-1STEERINGMOTOR$1927                                     00039F GR
+ 18 A$LAB3-1STEERINGMOTOR$1928                                     0003A1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1929                                     0003A2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1932                                     0003A4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1933                                     0003A6 GR
+ 18 A$LAB3-1STEERINGMOTOR$1934                                     0003A9 GR
+ 18 A$LAB3-1STEERINGMOTOR$1936                                     0003AB GR
+ 18 A$LAB3-1STEERINGMOTOR$1940                                     0003AE GR
+ 18 A$LAB3-1STEERINGMOTOR$1941                                     0003B1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1945                                     0003B4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1946                                     0003B7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1949                                     0003BA GR
+ 18 A$LAB3-1STEERINGMOTOR$1950                                     0003BD GR
+ 18 A$LAB3-1STEERINGMOTOR$1953                                     0003C0 GR
+ 18 A$LAB3-1STEERINGMOTOR$1954                                     0003C2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1955                                     0003C4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1956                                     0003C5 GR
+ 18 A$LAB3-1STEERINGMOTOR$1957                                     0003C6 GR
+ 18 A$LAB3-1STEERINGMOTOR$1960                                     0003C8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1961                                     0003CA GR
+ 18 A$LAB3-1STEERINGMOTOR$1962                                     0003CB GR
+ 18 A$LAB3-1STEERINGMOTOR$1963                                     0003CD GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 10.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$1964                                     0003CF GR
+ 18 A$LAB3-1STEERINGMOTOR$1965                                     0003D1 GR
+ 18 A$LAB3-1STEERINGMOTOR$1966                                     0003D2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1969                                     0003D4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1972                                     0003D7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1985                                     0003D8 GR
+ 18 A$LAB3-1STEERINGMOTOR$1986                                     0003DA GR
+ 18 A$LAB3-1STEERINGMOTOR$1987                                     0003DC GR
+ 18 A$LAB3-1STEERINGMOTOR$1988                                     0003DE GR
+ 18 A$LAB3-1STEERINGMOTOR$1989                                     0003E0 GR
+ 18 A$LAB3-1STEERINGMOTOR$1990                                     0003E2 GR
+ 18 A$LAB3-1STEERINGMOTOR$1991                                     0003E4 GR
+ 18 A$LAB3-1STEERINGMOTOR$1992                                     0003E7 GR
+ 18 A$LAB3-1STEERINGMOTOR$1993                                     0003E9 GR
+ 18 A$LAB3-1STEERINGMOTOR$1994                                     0003EB GR
+ 18 A$LAB3-1STEERINGMOTOR$1998                                     0003ED GR
+ 18 A$LAB3-1STEERINGMOTOR$1999                                     0003EF GR
+ 18 A$LAB3-1STEERINGMOTOR$2002                                     0003F1 GR
+ 18 A$LAB3-1STEERINGMOTOR$2003                                     0003F4 GR
+ 18 A$LAB3-1STEERINGMOTOR$2006                                     0003F7 GR
+ 18 A$LAB3-1STEERINGMOTOR$2007                                     0003F9 GR
+ 18 A$LAB3-1STEERINGMOTOR$2010                                     0003FC GR
+ 18 A$LAB3-1STEERINGMOTOR$2011                                     0003FE GR
+ 18 A$LAB3-1STEERINGMOTOR$2012                                     000400 GR
+ 18 A$LAB3-1STEERINGMOTOR$2013                                     000402 GR
+ 18 A$LAB3-1STEERINGMOTOR$2014                                     000404 GR
+ 18 A$LAB3-1STEERINGMOTOR$2015                                     000406 GR
+ 18 A$LAB3-1STEERINGMOTOR$2016                                     000408 GR
+ 18 A$LAB3-1STEERINGMOTOR$2020                                     00040A GR
+ 18 A$LAB3-1STEERINGMOTOR$2021                                     00040C GR
+ 18 A$LAB3-1STEERINGMOTOR$2024                                     00040F GR
+ 18 A$LAB3-1STEERINGMOTOR$2025                                     000411 GR
+ 18 A$LAB3-1STEERINGMOTOR$2026                                     000413 GR
+ 18 A$LAB3-1STEERINGMOTOR$2027                                     000415 GR
+ 18 A$LAB3-1STEERINGMOTOR$2028                                     000416 GR
+ 18 A$LAB3-1STEERINGMOTOR$2029                                     000418 GR
+ 18 A$LAB3-1STEERINGMOTOR$2033                                     00041A GR
+ 18 A$LAB3-1STEERINGMOTOR$2034                                     00041C GR
+ 18 A$LAB3-1STEERINGMOTOR$2035                                     00041E GR
+ 18 A$LAB3-1STEERINGMOTOR$2036                                     000420 GR
+ 18 A$LAB3-1STEERINGMOTOR$2037                                     000422 GR
+ 18 A$LAB3-1STEERINGMOTOR$2038                                     000424 GR
+ 18 A$LAB3-1STEERINGMOTOR$2039                                     000426 GR
+ 18 A$LAB3-1STEERINGMOTOR$2040                                     000428 GR
+ 18 A$LAB3-1STEERINGMOTOR$2041                                     00042A GR
+ 18 A$LAB3-1STEERINGMOTOR$2042                                     00042D GR
+ 18 A$LAB3-1STEERINGMOTOR$2043                                     00042F GR
+ 18 A$LAB3-1STEERINGMOTOR$2044                                     000431 GR
+ 18 A$LAB3-1STEERINGMOTOR$2047                                     000433 GR
+ 18 A$LAB3-1STEERINGMOTOR$2048                                     000435 GR
+ 18 A$LAB3-1STEERINGMOTOR$2049                                     000437 GR
+ 18 A$LAB3-1STEERINGMOTOR$2050                                     000438 GR
+ 18 A$LAB3-1STEERINGMOTOR$2051                                     000439 GR
+ 18 A$LAB3-1STEERINGMOTOR$2054                                     00043B GR
+ 18 A$LAB3-1STEERINGMOTOR$2055                                     00043D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 11.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$2056                                     00043E GR
+ 18 A$LAB3-1STEERINGMOTOR$2057                                     000440 GR
+ 18 A$LAB3-1STEERINGMOTOR$2058                                     000441 GR
+ 18 A$LAB3-1STEERINGMOTOR$2059                                     000443 GR
+ 18 A$LAB3-1STEERINGMOTOR$2060                                     000445 GR
+ 18 A$LAB3-1STEERINGMOTOR$2061                                     000446 GR
+ 18 A$LAB3-1STEERINGMOTOR$2064                                     000448 GR
+ 18 A$LAB3-1STEERINGMOTOR$2065                                     00044A GR
+ 18 A$LAB3-1STEERINGMOTOR$2068                                     00044D GR
+ 18 A$LAB3-1STEERINGMOTOR$2069                                     000450 GR
+ 18 A$LAB3-1STEERINGMOTOR$2073                                     000452 GR
+ 18 A$LAB3-1STEERINGMOTOR$2076                                     000455 GR
+ 18 A$LAB3-1STEERINGMOTOR$2077                                     000458 GR
+ 18 A$LAB3-1STEERINGMOTOR$2080                                     00045B GR
+ 18 A$LAB3-1STEERINGMOTOR$2081                                     00045E GR
+ 18 A$LAB3-1STEERINGMOTOR$2084                                     000461 GR
+ 18 A$LAB3-1STEERINGMOTOR$2085                                     000463 GR
+ 18 A$LAB3-1STEERINGMOTOR$2086                                     000465 GR
+ 18 A$LAB3-1STEERINGMOTOR$2087                                     000466 GR
+ 18 A$LAB3-1STEERINGMOTOR$2088                                     000467 GR
+ 18 A$LAB3-1STEERINGMOTOR$2091                                     000469 GR
+ 18 A$LAB3-1STEERINGMOTOR$2092                                     00046B GR
+ 18 A$LAB3-1STEERINGMOTOR$2093                                     00046C GR
+ 18 A$LAB3-1STEERINGMOTOR$2094                                     00046E GR
+ 18 A$LAB3-1STEERINGMOTOR$2095                                     000470 GR
+ 18 A$LAB3-1STEERINGMOTOR$2096                                     000472 GR
+ 18 A$LAB3-1STEERINGMOTOR$2097                                     000473 GR
+ 18 A$LAB3-1STEERINGMOTOR$2100                                     000475 GR
+ 18 A$LAB3-1STEERINGMOTOR$2113                                     000476 GR
+ 18 A$LAB3-1STEERINGMOTOR$2114                                     000478 GR
+ 18 A$LAB3-1STEERINGMOTOR$2115                                     00047A GR
+ 18 A$LAB3-1STEERINGMOTOR$2116                                     00047C GR
+ 18 A$LAB3-1STEERINGMOTOR$2117                                     00047E GR
+ 18 A$LAB3-1STEERINGMOTOR$2118                                     000480 GR
+ 18 A$LAB3-1STEERINGMOTOR$2119                                     000482 GR
+ 18 A$LAB3-1STEERINGMOTOR$2120                                     000485 GR
+ 18 A$LAB3-1STEERINGMOTOR$2121                                     000487 GR
+ 18 A$LAB3-1STEERINGMOTOR$2122                                     000489 GR
+ 18 A$LAB3-1STEERINGMOTOR$2126                                     00048B GR
+ 18 A$LAB3-1STEERINGMOTOR$2127                                     00048D GR
+ 18 A$LAB3-1STEERINGMOTOR$2130                                     00048F GR
+ 18 A$LAB3-1STEERINGMOTOR$2131                                     000492 GR
+ 18 A$LAB3-1STEERINGMOTOR$2134                                     000495 GR
+ 18 A$LAB3-1STEERINGMOTOR$2135                                     000497 GR
+ 18 A$LAB3-1STEERINGMOTOR$2138                                     00049A GR
+ 18 A$LAB3-1STEERINGMOTOR$2139                                     00049C GR
+ 18 A$LAB3-1STEERINGMOTOR$2140                                     00049E GR
+ 18 A$LAB3-1STEERINGMOTOR$2141                                     0004A0 GR
+ 18 A$LAB3-1STEERINGMOTOR$2142                                     0004A2 GR
+ 18 A$LAB3-1STEERINGMOTOR$2143                                     0004A4 GR
+ 18 A$LAB3-1STEERINGMOTOR$2144                                     0004A6 GR
+ 18 A$LAB3-1STEERINGMOTOR$2148                                     0004A8 GR
+ 18 A$LAB3-1STEERINGMOTOR$2149                                     0004AA GR
+ 18 A$LAB3-1STEERINGMOTOR$2152                                     0004AD GR
+ 18 A$LAB3-1STEERINGMOTOR$2153                                     0004AF GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 12.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 A$LAB3-1STEERINGMOTOR$2154                                     0004B1 GR
+ 18 A$LAB3-1STEERINGMOTOR$2155                                     0004B3 GR
+ 18 A$LAB3-1STEERINGMOTOR$2156                                     0004B4 GR
+ 18 A$LAB3-1STEERINGMOTOR$2157                                     0004B6 GR
+ 18 A$LAB3-1STEERINGMOTOR$2161                                     0004B8 GR
+ 18 A$LAB3-1STEERINGMOTOR$2162                                     0004BA GR
+ 18 A$LAB3-1STEERINGMOTOR$2163                                     0004BC GR
+ 18 A$LAB3-1STEERINGMOTOR$2164                                     0004BE GR
+ 18 A$LAB3-1STEERINGMOTOR$2165                                     0004C0 GR
+ 18 A$LAB3-1STEERINGMOTOR$2166                                     0004C2 GR
+ 18 A$LAB3-1STEERINGMOTOR$2167                                     0004C4 GR
+ 18 A$LAB3-1STEERINGMOTOR$2168                                     0004C6 GR
+ 18 A$LAB3-1STEERINGMOTOR$2169                                     0004C8 GR
+ 18 A$LAB3-1STEERINGMOTOR$2170                                     0004CB GR
+ 18 A$LAB3-1STEERINGMOTOR$2171                                     0004CD GR
+ 18 A$LAB3-1STEERINGMOTOR$2172                                     0004CF GR
+ 18 A$LAB3-1STEERINGMOTOR$2175                                     0004D1 GR
+ 18 A$LAB3-1STEERINGMOTOR$2176                                     0004D3 GR
+ 18 A$LAB3-1STEERINGMOTOR$2177                                     0004D5 GR
+ 18 A$LAB3-1STEERINGMOTOR$2178                                     0004D6 GR
+ 18 A$LAB3-1STEERINGMOTOR$2179                                     0004D7 GR
+ 18 A$LAB3-1STEERINGMOTOR$2182                                     0004D9 GR
+ 18 A$LAB3-1STEERINGMOTOR$2183                                     0004DB GR
+ 18 A$LAB3-1STEERINGMOTOR$2184                                     0004DC GR
+ 18 A$LAB3-1STEERINGMOTOR$2185                                     0004DE GR
+ 18 A$LAB3-1STEERINGMOTOR$2186                                     0004DF GR
+ 18 A$LAB3-1STEERINGMOTOR$2187                                     0004E1 GR
+ 18 A$LAB3-1STEERINGMOTOR$2188                                     0004E3 GR
+ 18 A$LAB3-1STEERINGMOTOR$2189                                     0004E4 GR
+ 18 A$LAB3-1STEERINGMOTOR$2192                                     0004E6 GR
+ 18 A$LAB3-1STEERINGMOTOR$2193                                     0004E8 GR
+ 18 A$LAB3-1STEERINGMOTOR$2196                                     0004EB GR
+ 18 A$LAB3-1STEERINGMOTOR$2197                                     0004EE GR
+ 18 A$LAB3-1STEERINGMOTOR$2203                                     0004F0 GR
+ 18 A$LAB3-1STEERINGMOTOR$2204                                     0004F3 GR
+ 18 A$LAB3-1STEERINGMOTOR$2207                                     0004F6 GR
+ 18 A$LAB3-1STEERINGMOTOR$2208                                     0004F8 GR
+ 18 A$LAB3-1STEERINGMOTOR$2209                                     0004FA GR
+ 18 A$LAB3-1STEERINGMOTOR$2210                                     0004FB GR
+ 18 A$LAB3-1STEERINGMOTOR$2211                                     0004FC GR
+ 18 A$LAB3-1STEERINGMOTOR$2214                                     0004FE GR
+ 18 A$LAB3-1STEERINGMOTOR$2215                                     000500 GR
+ 18 A$LAB3-1STEERINGMOTOR$2216                                     000501 GR
+ 18 A$LAB3-1STEERINGMOTOR$2217                                     000503 GR
+ 18 A$LAB3-1STEERINGMOTOR$2218                                     000505 GR
+ 18 A$LAB3-1STEERINGMOTOR$2219                                     000507 GR
+ 18 A$LAB3-1STEERINGMOTOR$2220                                     000508 GR
+ 18 A$LAB3-1STEERINGMOTOR$2223                                     00050A GR
+ 18 A$LAB3-1STEERINGMOTOR$2226                                     00050D GR
+  F A$LAB3-1STEERINGMOTOR$965                                      000000 GR
+  F A$LAB3-1STEERINGMOTOR$966                                      000003 GR
+  F A$LAB3-1STEERINGMOTOR$968                                      00000B GR
+  F A$LAB3-1STEERINGMOTOR$970                                      000013 GR
+  F A$LAB3-1STEERINGMOTOR$972                                      00001B GR
+  F A$LAB3-1STEERINGMOTOR$974                                      000023 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 13.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  F A$LAB3-1STEERINGMOTOR$976                                      00002B GR
+  F A$LAB3-1STEERINGMOTOR$978                                      000033 GR
+  F A$LAB3-1STEERINGMOTOR$980                                      00003B GR
+  F A$LAB3-1STEERINGMOTOR$982                                      000043 GR
+  F A$LAB3-1STEERINGMOTOR$984                                      00004B GR
+    A.0                                                         =  0000E0 L
+    A.1                                                         =  0000E1 L
+    A.2                                                         =  0000E2 L
+    A.3                                                         =  0000E3 L
+    A.4                                                         =  0000E4 L
+    A.5                                                         =  0000E5 L
+    A.6                                                         =  0000E6 L
+    A.7                                                         =  0000E7 L
+    AC                                                          =  0000D6 L
+    ACC                                                         =  0000E0 L
+    ACC.0                                                       =  0000E0 L
+    ACC.1                                                       =  0000E1 L
+    ACC.2                                                       =  0000E2 L
+    ACC.3                                                       =  0000E3 L
+    ACC.4                                                       =  0000E4 L
+    ACC.5                                                       =  0000E5 L
+    ACC.6                                                       =  0000E6 L
+    ACC.7                                                       =  0000E7 L
+    B                                                           =  0000F0 L
+    B.0                                                         =  0000F0 L
+    B.1                                                         =  0000F1 L
+    B.2                                                         =  0000F2 L
+    B.3                                                         =  0000F3 L
+    B.4                                                         =  0000F4 L
+    B.5                                                         =  0000F5 L
+    B.6                                                         =  0000F6 L
+    B.7                                                         =  0000F7 L
+ 18 C$LAB3_1STEERINGMOTOR.c$101$2$56                            =  000137 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$103$1$55                            =  00013C GR
+ 18 C$LAB3_1STEERINGMOTOR.c$109$1$55                            =  00013D GR
+ 18 C$LAB3_1STEERINGMOTOR.c$111$1$57                            =  00013D GR
+ 18 C$LAB3_1STEERINGMOTOR.c$112$1$57                            =  000140 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$116$1$57                            =  000141 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$118$1$58                            =  000141 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$119$1$58                            =  000144 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$123$1$58                            =  000145 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$125$1$60                            =  000145 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$126$1$60                            =  000148 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$127$1$60                            =  00014B GR
+ 18 C$LAB3_1STEERINGMOTOR.c$128$1$60                            =  00014E GR
+ 18 C$LAB3_1STEERINGMOTOR.c$129$1$60                            =  000151 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$130$1$60                            =  000154 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$131$1$60                            =  000156 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$135$1$60                            =  000157 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$137$1$62                            =  00015B GR
+ 18 C$LAB3_1STEERINGMOTOR.c$138$1$62                            =  000166 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$140$2$63                            =  000166 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$141$2$63                            =  00016B GR
+ 18 C$LAB3_1STEERINGMOTOR.c$144$1$62                            =  000171 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$145$1$62                            =  000178 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 14.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 C$LAB3_1STEERINGMOTOR.c$147$1$62                            =  000179 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$149$1$64                            =  000179 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$150$1$64                            =  00017F GR
+ 18 C$LAB3_1STEERINGMOTOR.c$152$2$65                            =  000184 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$153$2$65                            =  000196 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$155$2$65                            =  00019F GR
+ 18 C$LAB3_1STEERINGMOTOR.c$157$1$64                            =  0001AD GR
+ 18 C$LAB3_1STEERINGMOTOR.c$159$2$66                            =  0001B2 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$160$2$66                            =  0001C4 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$162$2$66                            =  0001CC GR
+ 18 C$LAB3_1STEERINGMOTOR.c$164$1$64                            =  0001D9 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$166$2$67                            =  0001E9 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$168$1$64                            =  0001F6 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$170$2$68                            =  000206 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$172$1$64                            =  000212 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$173$1$64                            =  00021A GR
+ 18 C$LAB3_1STEERINGMOTOR.c$174$1$64                            =  000226 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$175$1$64                            =  00023F GR
+ 18 C$LAB3_1STEERINGMOTOR.c$176$1$64                            =  000260 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$177$1$64                            =  00028B GR
+ 18 C$LAB3_1STEERINGMOTOR.c$178$1$64                            =  000293 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$179$1$64                            =  00029F GR
+ 18 C$LAB3_1STEERINGMOTOR.c$183$1$64                            =  0002A0 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$185$1$70                            =  0002A0 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$186$1$70                            =  0002B5 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$187$1$70                            =  0002BB GR
+ 18 C$LAB3_1STEERINGMOTOR.c$188$1$70                            =  0002C3 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$189$1$70                            =  0002CF GR
+ 18 C$LAB3_1STEERINGMOTOR.c$191$1$70                            =  0002E4 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$192$1$70                            =  0002E7 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$193$1$70                            =  0002EA GR
+ 18 C$LAB3_1STEERINGMOTOR.c$194$1$70                            =  0002ED GR
+ 18 C$LAB3_1STEERINGMOTOR.c$195$1$70                            =  000302 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$202$1$70                            =  000303 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$204$1$72                            =  000303 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$205$1$72                            =  000308 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$207$2$73                            =  000313 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$209$1$72                            =  00031B GR
+ 18 C$LAB3_1STEERINGMOTOR.c$211$1$72                            =  00031C GR
+ 18 C$LAB3_1STEERINGMOTOR.c$214$1$75                            =  00031C GR
+ 18 C$LAB3_1STEERINGMOTOR.c$215$2$76                            =  000331 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$217$2$76                            =  000338 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$218$2$76                            =  00033E GR
+ 18 C$LAB3_1STEERINGMOTOR.c$219$2$76                            =  000353 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$221$3$77                            =  000358 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$223$2$76                            =  000366 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$225$3$78                            =  00036B GR
+ 18 C$LAB3_1STEERINGMOTOR.c$227$2$76                            =  000376 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$228$2$76                            =  00038F GR
+ 18 C$LAB3_1STEERINGMOTOR.c$229$2$76                            =  000397 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$230$2$76                            =  0003A4 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$232$3$79                            =  0003AE GR
+ 18 C$LAB3_1STEERINGMOTOR.c$236$1$75                            =  0003B4 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$237$1$75                            =  0003BA GR
+ 18 C$LAB3_1STEERINGMOTOR.c$238$1$75                            =  0003C0 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 15.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 C$LAB3_1STEERINGMOTOR.c$239$1$75                            =  0003C8 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$240$1$75                            =  0003D4 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$241$1$75                            =  0003D7 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$245$1$75                            =  0003D8 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$247$1$81                            =  0003D8 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$248$2$82                            =  0003ED GR
+ 18 C$LAB3_1STEERINGMOTOR.c$250$2$82                            =  0003F1 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$251$2$82                            =  0003F7 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$253$3$83                            =  0003FC GR
+ 18 C$LAB3_1STEERINGMOTOR.c$255$2$82                            =  00040A GR
+ 18 C$LAB3_1STEERINGMOTOR.c$257$3$84                            =  00040F GR
+ 18 C$LAB3_1STEERINGMOTOR.c$259$2$82                            =  00041A GR
+ 18 C$LAB3_1STEERINGMOTOR.c$261$2$82                            =  000433 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$262$2$82                            =  00043B GR
+ 18 C$LAB3_1STEERINGMOTOR.c$263$2$82                            =  000448 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$265$3$85                            =  00044D GR
+ 18 C$LAB3_1STEERINGMOTOR.c$268$1$81                            =  000452 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$269$1$81                            =  000455 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$271$1$81                            =  00045B GR
+ 18 C$LAB3_1STEERINGMOTOR.c$272$1$81                            =  000461 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$273$1$81                            =  000469 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$274$1$81                            =  000475 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$279$1$81                            =  000476 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$281$1$87                            =  000476 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$282$2$88                            =  00048B GR
+ 18 C$LAB3_1STEERINGMOTOR.c$284$2$88                            =  00048F GR
+ 18 C$LAB3_1STEERINGMOTOR.c$285$2$88                            =  000495 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$287$3$89                            =  00049A GR
+ 18 C$LAB3_1STEERINGMOTOR.c$289$2$88                            =  0004A8 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$291$3$90                            =  0004AD GR
+ 18 C$LAB3_1STEERINGMOTOR.c$293$2$88                            =  0004B8 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$295$2$88                            =  0004D1 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$296$2$88                            =  0004D9 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$297$2$88                            =  0004E6 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$299$3$91                            =  0004EB GR
+ 18 C$LAB3_1STEERINGMOTOR.c$303$1$87                            =  0004F0 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$304$1$87                            =  0004F0 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$305$1$87                            =  0004F6 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$306$1$87                            =  0004FE GR
+ 18 C$LAB3_1STEERINGMOTOR.c$307$1$87                            =  00050A GR
+ 18 C$LAB3_1STEERINGMOTOR.c$308$1$87                            =  00050D GR
+ 16 C$LAB3_1STEERINGMOTOR.c$63$1$87                             =  000000 GR
+ 16 C$LAB3_1STEERINGMOTOR.c$64$1$87                             =  000006 GR
+ 16 C$LAB3_1STEERINGMOTOR.c$65$1$87                             =  00000C GR
+ 16 C$LAB3_1STEERINGMOTOR.c$66$1$87                             =  000012 GR
+ 16 C$LAB3_1STEERINGMOTOR.c$67$1$87                             =  000017 GR
+ 16 C$LAB3_1STEERINGMOTOR.c$68$1$87                             =  00001B GR
+ 16 C$LAB3_1STEERINGMOTOR.c$69$1$87                             =  00001D GR
+ 18 C$LAB3_1STEERINGMOTOR.c$75$1$12                             =  000077 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$78$1$55                             =  000077 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$79$1$55                             =  00007A GR
+ 18 C$LAB3_1STEERINGMOTOR.c$80$1$55                             =  000080 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$81$1$55                             =  000083 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$82$1$55                             =  000086 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$83$1$55                             =  000089 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 16.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 C$LAB3_1STEERINGMOTOR.c$84$1$55                             =  00008C GR
+ 18 C$LAB3_1STEERINGMOTOR.c$85$1$55                             =  000092 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$86$1$55                             =  0000A7 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$87$1$55                             =  0000AC GR
+ 18 C$LAB3_1STEERINGMOTOR.c$89$1$55                             =  0000B6 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$90$1$55                             =  0000CB GR
+ 18 C$LAB3_1STEERINGMOTOR.c$91$1$55                             =  0000E0 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$92$1$55                             =  0000F5 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$93$1$55                             =  00010A GR
+ 18 C$LAB3_1STEERINGMOTOR.c$94$1$55                             =  00011F GR
+ 18 C$LAB3_1STEERINGMOTOR.c$96$1$55                             =  000134 GR
+ 18 C$LAB3_1STEERINGMOTOR.c$97$1$55                             =  000137 GR
+ 18 C$c8051_SDCC.h$100$1$8                                      =  00004C GR
+ 18 C$c8051_SDCC.h$101$1$8                                      =  00004C GR
+ 18 C$c8051_SDCC.h$102$1$8                                      =  000051 GR
+ 18 C$c8051_SDCC.h$103$1$8                                      =  000053 GR
+ 18 C$c8051_SDCC.h$108$1$8                                      =  000054 GR
+ 18 C$c8051_SDCC.h$111$1$10                                     =  000054 GR
+ 18 C$c8051_SDCC.h$112$1$10                                     =  000054 GR
+ 18 C$c8051_SDCC.h$113$1$10                                     =  000059 GR
+ 18 C$c8051_SDCC.h$114$1$10                                     =  00005C GR
+ 18 C$c8051_SDCC.h$115$1$10                                     =  00005F GR
+ 18 C$c8051_SDCC.h$116$1$10                                     =  000062 GR
+ 18 C$c8051_SDCC.h$121$1$10                                     =  000063 GR
+ 18 C$c8051_SDCC.h$124$1$12                                     =  000063 GR
+ 18 C$c8051_SDCC.h$127$2$13                                     =  00006B GR
+ 18 C$c8051_SDCC.h$128$2$13                                     =  00006D GR
+ 18 C$c8051_SDCC.h$129$2$13                                     =  000070 GR
+ 18 C$c8051_SDCC.h$130$2$13                                     =  000073 GR
+ 18 C$c8051_SDCC.h$132$1$12                                     =  000076 GR
+ 18 C$c8051_SDCC.h$42$0$0                                       =  000000 GR
+ 18 C$c8051_SDCC.h$46$1$2                                       =  000000 GR
+ 18 C$c8051_SDCC.h$49$1$2                                       =  000003 GR
+ 18 C$c8051_SDCC.h$51$1$2                                       =  000017 GR
+ 18 C$c8051_SDCC.h$53$1$2                                       =  00001C GR
+ 18 C$c8051_SDCC.h$56$1$2                                       =  00001F GR
+ 18 C$c8051_SDCC.h$64$1$2                                       =  000020 GR
+ 18 C$c8051_SDCC.h$66$1$4                                       =  000020 GR
+ 18 C$c8051_SDCC.h$67$1$4                                       =  000023 GR
+ 18 C$c8051_SDCC.h$68$1$4                                       =  000026 GR
+ 18 C$c8051_SDCC.h$69$1$4                                       =  000029 GR
+ 18 C$c8051_SDCC.h$70$1$4                                       =  00002B GR
+ 18 C$c8051_SDCC.h$71$1$4                                       =  00002E GR
+ 18 C$c8051_SDCC.h$73$1$4                                       =  000031 GR
+ 18 C$c8051_SDCC.h$74$1$4                                       =  000033 GR
+ 18 C$c8051_SDCC.h$75$1$4                                       =  000036 GR
+ 18 C$c8051_SDCC.h$83$1$4                                       =  000037 GR
+ 18 C$c8051_SDCC.h$85$1$6                                       =  000037 GR
+ 18 C$c8051_SDCC.h$86$1$6                                       =  00003A GR
+ 18 C$c8051_SDCC.h$88$1$6                                       =  00003D GR
+ 18 C$c8051_SDCC.h$89$1$6                                       =  000040 GR
+ 18 C$c8051_SDCC.h$91$1$6                                       =  000043 GR
+ 18 C$c8051_SDCC.h$92$1$6                                       =  000046 GR
+ 18 C$c8051_SDCC.h$93$1$6                                       =  000049 GR
+ 18 C$c8051_SDCC.h$98$1$6                                       =  00004A GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    CPRL2                                                       =  0000C8 L
+    CT2                                                         =  0000C9 L
+    CY                                                          =  0000D7 L
+    DPH                                                         =  000083 L
+    DPL                                                         =  000082 L
+    EA                                                          =  0000AF L
+    ES                                                          =  0000AC L
+    ET0                                                         =  0000A9 L
+    ET1                                                         =  0000AB L
+    ET2                                                         =  0000AD L
+    EX0                                                         =  0000A8 L
+    EX1                                                         =  0000AA L
+    EXEN2                                                       =  0000CB L
+    EXF2                                                        =  0000CE L
+    F0                                                          =  0000D5 L
+ 19 FLAB3_1STEERINGMOTOR$__str_0$0$0                            =  000000 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_1$0$0                            =  00003F GR
+ 19 FLAB3_1STEERINGMOTOR$__str_10$0$0                           =  0001DB GR
+ 19 FLAB3_1STEERINGMOTOR$__str_11$0$0                           =  000202 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_12$0$0                           =  000398 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_13$0$0                           =  0003D8 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_14$0$0                           =  000499 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_15$0$0                           =  0004A1 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_16$0$0                           =  0004AB GR
+ 19 FLAB3_1STEERINGMOTOR$__str_17$0$0                           =  00056C GR
+ 19 FLAB3_1STEERINGMOTOR$__str_2$0$0                            =  000082 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_3$0$0                            =  0000AC GR
+ 19 FLAB3_1STEERINGMOTOR$__str_4$0$0                            =  0000D5 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_5$0$0                            =  000104 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_6$0$0                            =  000133 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_7$0$0                            =  000192 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_8$0$0                            =  0001A4 GR
+ 19 FLAB3_1STEERINGMOTOR$__str_9$0$0                            =  0001C6 GR
+    G$AA$0$0                                                    =  0000C2 G
+    G$AC$0$0                                                    =  0000D6 G
+    G$ACC$0$0                                                   =  0000E0 G
+    G$AD0BUSY$0$0                                               =  0000EC G
+    G$AD0CM0$0$0                                                =  0000EA G
+    G$AD0CM1$0$0                                                =  0000EB G
+    G$AD0EN$0$0                                                 =  0000EF G
+    G$AD0INT$0$0                                                =  0000ED G
+    G$AD0LJST$0$0                                               =  0000E8 G
+    G$AD0TM$0$0                                                 =  0000EE G
+    G$AD0WINT$0$0                                               =  0000E9 G
+    G$ADBUSY$0$0                                                =  0000EC G
+    G$ADC0$0$0                                                  =  00BFBE G
+    G$ADC0CF$0$0                                                =  0000BC G
+    G$ADC0CN$0$0                                                =  0000E8 G
+    G$ADC0GT$0$0                                                =  00C5C4 G
+    G$ADC0GTH$0$0                                               =  0000C5 G
+    G$ADC0GTL$0$0                                               =  0000C4 G
+    G$ADC0H$0$0                                                 =  0000BF G
+    G$ADC0L$0$0                                                 =  0000BE G
+    G$ADC0LT$0$0                                                =  00C7C6 G
+    G$ADC0LTH$0$0                                               =  0000C7 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 18.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    G$ADC0LTL$0$0                                               =  0000C6 G
+    G$ADC1$0$0                                                  =  00009C G
+    G$ADC1CF$0$0                                                =  0000AB G
+    G$ADC1CN$0$0                                                =  0000AA G
+    G$ADCEN$0$0                                                 =  0000EF G
+    G$ADCINT$0$0                                                =  0000ED G
+    G$ADCTM$0$0                                                 =  0000EE G
+    G$ADLJST$0$0                                                =  0000E8 G
+    G$ADSTM0$0$0                                                =  0000EA G
+    G$ADSTM1$0$0                                                =  0000EB G
+    G$ADWINT$0$0                                                =  0000E9 G
+    G$AMX0CF$0$0                                                =  0000BA G
+    G$AMX0SL$0$0                                                =  0000BB G
+    G$AMX1SL$0$0                                                =  0000AC G
+    G$B$0$0                                                     =  0000F0 G
+    G$BUSY$0$0                                                  =  0000C7 G
+    G$CCF0$0$0                                                  =  0000D8 G
+    G$CCF1$0$0                                                  =  0000D9 G
+    G$CCF2$0$0                                                  =  0000DA G
+    G$CCF3$0$0                                                  =  0000DB G
+    G$CCF4$0$0                                                  =  0000DC G
+    G$CF$0$0                                                    =  0000DF G
+    G$CKCON$0$0                                                 =  00008E G
+    G$CPRL2$0$0                                                 =  0000C8 G
+    G$CPT0CN$0$0                                                =  00009E G
+    G$CPT1CN$0$0                                                =  00009F G
+    G$CR$0$0                                                    =  0000DE G
+    G$CT2$0$0                                                   =  0000C9 G
+    G$CY$0$0                                                    =  0000D7 G
+ 18 G$Calibration$0$0                                           =  0002A0 GR
+    G$DAC0$0$0                                                  =  00D3D2 G
+    G$DAC0CN$0$0                                                =  0000D4 G
+    G$DAC0H$0$0                                                 =  0000D3 G
+    G$DAC0L$0$0                                                 =  0000D2 G
+    G$DAC1$0$0                                                  =  00D6D5 G
+    G$DAC1CN$0$0                                                =  0000D7 G
+    G$DAC1H$0$0                                                 =  0000D6 G
+    G$DAC1L$0$0                                                 =  0000D5 G
+    G$DPH$0$0                                                   =  000083 G
+    G$DPL$0$0                                                   =  000082 G
+    G$EA$0$0                                                    =  0000AF G
+    G$EIE1$0$0                                                  =  0000E6 G
+    G$EIE2$0$0                                                  =  0000E7 G
+    G$EIP1$0$0                                                  =  0000F6 G
+    G$EIP2$0$0                                                  =  0000F7 G
+    G$EMI0CF$0$0                                                =  0000A3 G
+    G$EMI0CN$0$0                                                =  0000AF G
+    G$EMI0TC$0$0                                                =  0000A1 G
+    G$ENSMB$0$0                                                 =  0000C6 G
+    G$ES$0$0                                                    =  0000AC G
+    G$ES0$0$0                                                   =  0000AC G
+    G$ET0$0$0                                                   =  0000A9 G
+    G$ET1$0$0                                                   =  0000AB G
+    G$ET2$0$0                                                   =  0000AD G
+    G$EX0$0$0                                                   =  0000A8 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    G$EX1$0$0                                                   =  0000AA G
+    G$EXEN2$0$0                                                 =  0000CB G
+    G$EXF2$0$0                                                  =  0000CE G
+    G$F0$0$0                                                    =  0000D5 G
+    G$F1$0$0                                                    =  0000D1 G
+    G$FLACL$0$0                                                 =  0000B7 G
+    G$FLSCL$0$0                                                 =  0000B6 G
+    G$IE$0$0                                                    =  0000A8 G
+    G$IE0$0$0                                                   =  000089 G
+    G$IE1$0$0                                                   =  00008B G
+    G$IP$0$0                                                    =  0000B8 G
+    G$IT0$0$0                                                   =  000088 G
+    G$IT1$0$0                                                   =  00008A G
+    G$MCE0$0$0                                                  =  00009D G
+    G$MODF$0$0                                                  =  0000FD G
+  5 G$MOTOR_PW$0$0                                              =  000006 GR
+    G$MSTEN$0$0                                                 =  0000F9 G
+    G$OSCICN$0$0                                                =  0000B2 G
+    G$OSCXCN$0$0                                                =  0000B1 G
+    G$OV$0$0                                                    =  0000D2 G
+    G$P$0$0                                                     =  0000D0 G
+    G$P0$0$0                                                    =  000080 G
+    G$P0MDOUT$0$0                                               =  0000A4 G
+    G$P0_0$0$0                                                  =  000080 G
+    G$P0_1$0$0                                                  =  000081 G
+    G$P0_2$0$0                                                  =  000082 G
+    G$P0_3$0$0                                                  =  000083 G
+    G$P0_4$0$0                                                  =  000084 G
+    G$P0_5$0$0                                                  =  000085 G
+    G$P0_6$0$0                                                  =  000086 G
+    G$P0_7$0$0                                                  =  000087 G
+    G$P1$0$0                                                    =  000090 G
+    G$P1MDIN$0$0                                                =  0000BD G
+    G$P1MDOUT$0$0                                               =  0000A5 G
+    G$P1_0$0$0                                                  =  000090 G
+    G$P1_1$0$0                                                  =  000091 G
+    G$P1_2$0$0                                                  =  000092 G
+    G$P1_3$0$0                                                  =  000093 G
+    G$P1_4$0$0                                                  =  000094 G
+    G$P1_5$0$0                                                  =  000095 G
+    G$P1_6$0$0                                                  =  000096 G
+    G$P1_7$0$0                                                  =  000097 G
+    G$P2$0$0                                                    =  0000A0 G
+    G$P2MDOUT$0$0                                               =  0000A6 G
+    G$P2_0$0$0                                                  =  0000A0 G
+    G$P2_1$0$0                                                  =  0000A1 G
+    G$P2_2$0$0                                                  =  0000A2 G
+    G$P2_3$0$0                                                  =  0000A3 G
+    G$P2_4$0$0                                                  =  0000A4 G
+    G$P2_5$0$0                                                  =  0000A5 G
+    G$P2_6$0$0                                                  =  0000A6 G
+    G$P2_7$0$0                                                  =  0000A7 G
+    G$P3$0$0                                                    =  0000B0 G
+    G$P3IF$0$0                                                  =  0000AD G
+    G$P3MDOUT$0$0                                               =  0000A7 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 20.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    G$P3_0$0$0                                                  =  0000B0 G
+    G$P3_1$0$0                                                  =  0000B1 G
+    G$P3_2$0$0                                                  =  0000B2 G
+    G$P3_3$0$0                                                  =  0000B3 G
+    G$P3_4$0$0                                                  =  0000B4 G
+    G$P3_5$0$0                                                  =  0000B5 G
+    G$P3_6$0$0                                                  =  0000B6 G
+    G$P3_7$0$0                                                  =  0000B7 G
+    G$P4$0$0                                                    =  000084 G
+    G$P5$0$0                                                    =  000085 G
+    G$P6$0$0                                                    =  000086 G
+    G$P7$0$0                                                    =  000096 G
+    G$P74OUT$0$0                                                =  0000B5 G
+    G$PCA0$0$0                                                  =  00F9E9 G
+    G$PCA0CN$0$0                                                =  0000D8 G
+    G$PCA0CP0$0$0                                               =  00FAEA G
+    G$PCA0CP1$0$0                                               =  00FBEB G
+    G$PCA0CP2$0$0                                               =  00FCEC G
+    G$PCA0CP3$0$0                                               =  00FDED G
+    G$PCA0CP4$0$0                                               =  00FEEE G
+    G$PCA0CPH0$0$0                                              =  0000FA G
+    G$PCA0CPH1$0$0                                              =  0000FB G
+    G$PCA0CPH2$0$0                                              =  0000FC G
+    G$PCA0CPH3$0$0                                              =  0000FD G
+    G$PCA0CPH4$0$0                                              =  0000FE G
+    G$PCA0CPL0$0$0                                              =  0000EA G
+    G$PCA0CPL1$0$0                                              =  0000EB G
+    G$PCA0CPL2$0$0                                              =  0000EC G
+    G$PCA0CPL3$0$0                                              =  0000ED G
+    G$PCA0CPL4$0$0                                              =  0000EE G
+    G$PCA0CPM0$0$0                                              =  0000DA G
+    G$PCA0CPM1$0$0                                              =  0000DB G
+    G$PCA0CPM2$0$0                                              =  0000DC G
+    G$PCA0CPM3$0$0                                              =  0000DD G
+    G$PCA0CPM4$0$0                                              =  0000DE G
+    G$PCA0H$0$0                                                 =  0000F9 G
+    G$PCA0L$0$0                                                 =  0000E9 G
+    G$PCA0MD$0$0                                                =  0000D9 G
+ 18 G$PCA_ISR$0$0                                               =  000157 GR
+ 18 G$PCA_Init$0$0                                              =  000145 GR
+    G$PCON$0$0                                                  =  000087 G
+    G$PRT0CF$0$0                                                =  0000A4 G
+    G$PRT1CF$0$0                                                =  0000A5 G
+    G$PRT2CF$0$0                                                =  0000A6 G
+    G$PRT3CF$0$0                                                =  0000A7 G
+    G$PS$0$0                                                    =  0000BC G
+    G$PS0$0$0                                                   =  0000BC G
+    G$PSCTL$0$0                                                 =  00008F G
+    G$PSW$0$0                                                   =  0000D0 G
+    G$PT0$0$0                                                   =  0000B9 G
+    G$PT1$0$0                                                   =  0000BB G
+    G$PT2$0$0                                                   =  0000BD G
+  5 G$PW$0$0                                                    =  000008 GR
+  5 G$PW_CENTER$0$0                                             =  000004 GR
+  5 G$PW_MAX$0$0                                                =  000000 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+  5 G$PW_MIN$0$0                                                =  000002 GR
+    G$PX0$0$0                                                   =  0000B8 G
+    G$PX1$0$0                                                   =  0000BA G
+ 18 G$Port_Init$0$0                                             =  00013D GR
+    G$RB8$0$0                                                   =  00009A G
+    G$RB80$0$0                                                  =  00009A G
+    G$RCAP2$0$0                                                 =  00CBCA G
+    G$RCAP2H$0$0                                                =  0000CB G
+    G$RCAP2L$0$0                                                =  0000CA G
+    G$RCAP4$0$0                                                 =  00E5E4 G
+    G$RCAP4H$0$0                                                =  0000E5 G
+    G$RCAP4L$0$0                                                =  0000E4 G
+    G$RCLK$0$0                                                  =  0000CD G
+    G$REF0CN$0$0                                                =  0000D1 G
+    G$REN$0$0                                                   =  00009C G
+    G$REN0$0$0                                                  =  00009C G
+    G$RI$0$0                                                    =  000098 G
+    G$RI0$0$0                                                   =  000098 G
+    G$RS0$0$0                                                   =  0000D3 G
+    G$RS1$0$0                                                   =  0000D4 G
+    G$RSTSRC$0$0                                                =  0000EF G
+    G$RXOVRN$0$0                                                =  0000FC G
+    G$S0MODE$0$0                                                =  00009F G
+    G$SADDR0$0$0                                                =  0000A9 G
+    G$SADDR1$0$0                                                =  0000F3 G
+    G$SADEN0$0$0                                                =  0000B9 G
+    G$SADEN1$0$0                                                =  0000AE G
+    G$SBUF$0$0                                                  =  000099 G
+    G$SBUF0$0$0                                                 =  000099 G
+    G$SBUF1$0$0                                                 =  0000F2 G
+    G$SCON$0$0                                                  =  000098 G
+    G$SCON0$0$0                                                 =  000098 G
+    G$SCON1$0$0                                                 =  0000F1 G
+    G$SI$0$0                                                    =  0000C3 G
+    G$SLVSEL$0$0                                                =  0000FA G
+    G$SM0$0$0                                                   =  00009F G
+    G$SM00$0$0                                                  =  00009F G
+    G$SM1$0$0                                                   =  00009E G
+    G$SM10$0$0                                                  =  00009E G
+    G$SM2$0$0                                                   =  00009D G
+    G$SM20$0$0                                                  =  00009D G
+    G$SMB0ADR$0$0                                               =  0000C3 G
+    G$SMB0CN$0$0                                                =  0000C0 G
+    G$SMB0CR$0$0                                                =  0000CF G
+    G$SMB0DAT$0$0                                               =  0000C2 G
+    G$SMB0STA$0$0                                               =  0000C1 G
+    G$SMBFTE$0$0                                                =  0000C1 G
+    G$SMBTOE$0$0                                                =  0000C0 G
+    G$SP$0$0                                                    =  000081 G
+    G$SPI0CFG$0$0                                               =  00009A G
+    G$SPI0CKR$0$0                                               =  00009D G
+    G$SPI0CN$0$0                                                =  0000F8 G
+    G$SPI0DAT$0$0                                               =  00009B G
+    G$SPIEN$0$0                                                 =  0000F8 G
+    G$SPIF$0$0                                                  =  0000FF G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    G$STA$0$0                                                   =  0000C5 G
+    G$STO$0$0                                                   =  0000C4 G
+ 18 G$SYSCLK_Init$0$0                                           =  000000 GR
+ 18 G$SteeringServo_DriveMotor$0$0                              =  000179 GR
+ 18 G$Sys_Init$0$0                                              =  000037 GR
+    G$T2CON$0$0                                                 =  0000C8 G
+    G$T4CON$0$0                                                 =  0000C9 G
+    G$TB8$0$0                                                   =  00009B G
+    G$TB80$0$0                                                  =  00009B G
+    G$TCLK$0$0                                                  =  0000CC G
+    G$TCON$0$0                                                  =  000088 G
+    G$TF0$0$0                                                   =  00008D G
+    G$TF1$0$0                                                   =  00008F G
+    G$TF2$0$0                                                   =  0000CF G
+    G$TH0$0$0                                                   =  00008C G
+    G$TH1$0$0                                                   =  00008D G
+    G$TH2$0$0                                                   =  0000CD G
+    G$TH4$0$0                                                   =  0000F5 G
+    G$TI$0$0                                                    =  000099 G
+    G$TI0$0$0                                                   =  000099 G
+    G$TL0$0$0                                                   =  00008A G
+    G$TL1$0$0                                                   =  00008B G
+    G$TL2$0$0                                                   =  0000CC G
+    G$TL4$0$0                                                   =  0000F4 G
+    G$TMOD$0$0                                                  =  000089 G
+    G$TMR0$0$0                                                  =  008C8A G
+    G$TMR1$0$0                                                  =  008D8B G
+    G$TMR2$0$0                                                  =  00CDCC G
+    G$TMR3$0$0                                                  =  009594 G
+    G$TMR3CN$0$0                                                =  000091 G
+    G$TMR3H$0$0                                                 =  000095 G
+    G$TMR3L$0$0                                                 =  000094 G
+    G$TMR3RL$0$0                                                =  009392 G
+    G$TMR3RLH$0$0                                               =  000093 G
+    G$TMR3RLL$0$0                                               =  000092 G
+    G$TMR4$0$0                                                  =  00F5F4 G
+    G$TR0$0$0                                                   =  00008C G
+    G$TR1$0$0                                                   =  00008E G
+    G$TR2$0$0                                                   =  0000CA G
+    G$TXBSY$0$0                                                 =  0000FB G
+ 18 G$UART0_Init$0$0                                            =  000020 GR
+    G$WCOL$0$0                                                  =  0000FE G
+    G$WDTCN$0$0                                                 =  0000FF G
+    G$XBR0$0$0                                                  =  0000E1 G
+ 18 G$XBR0_Init$0$0                                             =  000141 GR
+    G$XBR1$0$0                                                  =  0000E2 G
+    G$XBR2$0$0                                                  =  0000E3 G
+    G$_XPAGE$0$0                                                =  0000AF G
+ 18 G$center_calibration$0$0                                    =  000476 GR
+  5 G$count$0$0                                                 =  00000B GR
+  5 G$f$0$0                                                     =  00000A GR
+ 18 G$getchar$0$0                                               =  000054 GR
+ 18 G$getchar_nw$0$0                                            =  000063 GR
+  5 G$input$0$0                                                 =  00000D GR
+ 18 G$left_turn_calibration$0$0                                 =  00031C GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 G$main$0$0                                                  =  000077 GR
+ 18 G$putchar$0$0                                               =  00004A GR
+ 18 G$right_turn_calibration$0$0                                =  0003D8 GR
+ 18 G$turnwheel$0$0                                             =  000303 GR
+    IE                                                          =  0000A8 L
+    IE.0                                                        =  0000A8 L
+    IE.1                                                        =  0000A9 L
+    IE.2                                                        =  0000AA L
+    IE.3                                                        =  0000AB L
+    IE.4                                                        =  0000AC L
+    IE.5                                                        =  0000AD L
+    IE.7                                                        =  0000AF L
+    IE0                                                         =  000089 L
+    IE1                                                         =  00008B L
+    INT0                                                        =  0000B2 L
+    INT1                                                        =  0000B3 L
+    IP                                                          =  0000B8 L
+    IP.0                                                        =  0000B8 L
+    IP.1                                                        =  0000B9 L
+    IP.2                                                        =  0000BA L
+    IP.3                                                        =  0000BB L
+    IP.4                                                        =  0000BC L
+    IP.5                                                        =  0000BD L
+    IT0                                                         =  000088 L
+    IT1                                                         =  00008A L
+    OV                                                          =  0000D2 L
+    P                                                           =  0000D0 L
+    P0                                                          =  000080 L
+    P0.0                                                        =  000080 L
+    P0.1                                                        =  000081 L
+    P0.2                                                        =  000082 L
+    P0.3                                                        =  000083 L
+    P0.4                                                        =  000084 L
+    P0.5                                                        =  000085 L
+    P0.6                                                        =  000086 L
+    P0.7                                                        =  000087 L
+    P1                                                          =  000090 L
+    P1.0                                                        =  000090 L
+    P1.1                                                        =  000091 L
+    P1.2                                                        =  000092 L
+    P1.3                                                        =  000093 L
+    P1.4                                                        =  000094 L
+    P1.5                                                        =  000095 L
+    P1.6                                                        =  000096 L
+    P1.7                                                        =  000097 L
+    P2                                                          =  0000A0 L
+    P2.0                                                        =  0000A0 L
+    P2.1                                                        =  0000A1 L
+    P2.2                                                        =  0000A2 L
+    P2.3                                                        =  0000A3 L
+    P2.4                                                        =  0000A4 L
+    P2.5                                                        =  0000A5 L
+    P2.6                                                        =  0000A6 L
+    P2.7                                                        =  0000A7 L
+    P3                                                          =  0000B0 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    P3.0                                                        =  0000B0 L
+    P3.1                                                        =  0000B1 L
+    P3.2                                                        =  0000B2 L
+    P3.3                                                        =  0000B3 L
+    P3.4                                                        =  0000B4 L
+    P3.5                                                        =  0000B5 L
+    P3.6                                                        =  0000B6 L
+    P3.7                                                        =  0000B7 L
+    PCON                                                        =  000087 L
+    PS                                                          =  0000BC L
+    PSW                                                         =  0000D0 L
+    PSW.0                                                       =  0000D0 L
+    PSW.1                                                       =  0000D1 L
+    PSW.2                                                       =  0000D2 L
+    PSW.3                                                       =  0000D3 L
+    PSW.4                                                       =  0000D4 L
+    PSW.5                                                       =  0000D5 L
+    PSW.6                                                       =  0000D6 L
+    PSW.7                                                       =  0000D7 L
+    PT0                                                         =  0000B9 L
+    PT1                                                         =  0000BB L
+    PT2                                                         =  0000BD L
+    PX0                                                         =  0000B8 L
+    PX1                                                         =  0000BA L
+    RB8                                                         =  00009A L
+    RCAP2H                                                      =  0000CB L
+    RCAP2L                                                      =  0000CA L
+    RCLK                                                        =  0000CD L
+    REN                                                         =  00009C L
+    RI                                                          =  000098 L
+    RS0                                                         =  0000D3 L
+    RS1                                                         =  0000D4 L
+    RXD                                                         =  0000B0 L
+    SBUF                                                        =  000099 L
+    SCON                                                        =  000098 L
+    SCON.0                                                      =  000098 L
+    SCON.1                                                      =  000099 L
+    SCON.2                                                      =  00009A L
+    SCON.3                                                      =  00009B L
+    SCON.4                                                      =  00009C L
+    SCON.5                                                      =  00009D L
+    SCON.6                                                      =  00009E L
+    SCON.7                                                      =  00009F L
+    SM0                                                         =  00009F L
+    SM1                                                         =  00009E L
+    SM2                                                         =  00009D L
+    SP                                                          =  000081 L
+    T2CON                                                       =  0000C8 L
+    T2CON.0                                                     =  0000C8 L
+    T2CON.1                                                     =  0000C9 L
+    T2CON.2                                                     =  0000CA L
+    T2CON.3                                                     =  0000CB L
+    T2CON.4                                                     =  0000CC L
+    T2CON.5                                                     =  0000CD L
+    T2CON.6                                                     =  0000CE L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 25.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    T2CON.7                                                     =  0000CF L
+    TB8                                                         =  00009B L
+    TCLK                                                        =  0000CC L
+    TCON                                                        =  000088 L
+    TCON.0                                                      =  000088 L
+    TCON.1                                                      =  000089 L
+    TCON.2                                                      =  00008A L
+    TCON.3                                                      =  00008B L
+    TCON.4                                                      =  00008C L
+    TCON.5                                                      =  00008D L
+    TCON.6                                                      =  00008E L
+    TCON.7                                                      =  00008F L
+    TF0                                                         =  00008D L
+    TF1                                                         =  00008F L
+    TF2                                                         =  0000CF L
+    TH0                                                         =  00008C L
+    TH1                                                         =  00008D L
+    TH2                                                         =  0000CD L
+    TI                                                          =  000099 L
+    TL0                                                         =  00008A L
+    TL1                                                         =  00008B L
+    TL2                                                         =  0000CC L
+    TMOD                                                        =  000089 L
+    TR0                                                         =  00008C L
+    TR1                                                         =  00008E L
+    TR2                                                         =  0000CA L
+    TXD                                                         =  0000B1 L
+ 18 XG$Calibration$0$0                                          =  000302 GR
+ 18 XG$PCA_ISR$0$0                                              =  000178 GR
+ 18 XG$PCA_Init$0$0                                             =  000156 GR
+ 18 XG$Port_Init$0$0                                            =  000140 GR
+ 18 XG$SYSCLK_Init$0$0                                          =  00001F GR
+ 18 XG$SteeringServo_DriveMotor$0$0                             =  00029F GR
+ 18 XG$Sys_Init$0$0                                             =  000049 GR
+ 18 XG$UART0_Init$0$0                                           =  000036 GR
+ 18 XG$XBR0_Init$0$0                                            =  000144 GR
+ 18 XG$center_calibration$0$0                                   =  00050D GR
+ 18 XG$getchar$0$0                                              =  000062 GR
+ 18 XG$getchar_nw$0$0                                           =  000076 GR
+ 18 XG$left_turn_calibration$0$0                                =  0003D7 GR
+ 18 XG$main$0$0                                                 =  00013C GR
+ 18 XG$putchar$0$0                                              =  000053 GR
+ 18 XG$right_turn_calibration$0$0                               =  000475 GR
+ 18 XG$turnwheel$0$0                                            =  00031B GR
+    _AA                                                         =  0000C2 G
+    _AC                                                         =  0000D6 G
+    _ACC                                                        =  0000E0 G
+    _AD0BUSY                                                    =  0000EC G
+    _AD0CM0                                                     =  0000EA G
+    _AD0CM1                                                     =  0000EB G
+    _AD0EN                                                      =  0000EF G
+    _AD0INT                                                     =  0000ED G
+    _AD0LJST                                                    =  0000E8 G
+    _AD0TM                                                      =  0000EE G
+    _AD0WINT                                                    =  0000E9 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 26.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    _ADBUSY                                                     =  0000EC G
+    _ADC0                                                       =  00BFBE G
+    _ADC0CF                                                     =  0000BC G
+    _ADC0CN                                                     =  0000E8 G
+    _ADC0GT                                                     =  00C5C4 G
+    _ADC0GTH                                                    =  0000C5 G
+    _ADC0GTL                                                    =  0000C4 G
+    _ADC0H                                                      =  0000BF G
+    _ADC0L                                                      =  0000BE G
+    _ADC0LT                                                     =  00C7C6 G
+    _ADC0LTH                                                    =  0000C7 G
+    _ADC0LTL                                                    =  0000C6 G
+    _ADC1                                                       =  00009C G
+    _ADC1CF                                                     =  0000AB G
+    _ADC1CN                                                     =  0000AA G
+    _ADCEN                                                      =  0000EF G
+    _ADCINT                                                     =  0000ED G
+    _ADCTM                                                      =  0000EE G
+    _ADLJST                                                     =  0000E8 G
+    _ADSTM0                                                     =  0000EA G
+    _ADSTM1                                                     =  0000EB G
+    _ADWINT                                                     =  0000E9 G
+    _AMX0CF                                                     =  0000BA G
+    _AMX0SL                                                     =  0000BB G
+    _AMX1SL                                                     =  0000AC G
+    _B                                                          =  0000F0 G
+    _BUSY                                                       =  0000C7 G
+    _CCF0                                                       =  0000D8 G
+    _CCF1                                                       =  0000D9 G
+    _CCF2                                                       =  0000DA G
+    _CCF3                                                       =  0000DB G
+    _CCF4                                                       =  0000DC G
+    _CF                                                         =  0000DF G
+    _CKCON                                                      =  00008E G
+    _CPRL2                                                      =  0000C8 G
+    _CPT0CN                                                     =  00009E G
+    _CPT1CN                                                     =  00009F G
+    _CR                                                         =  0000DE G
+    _CT2                                                        =  0000C9 G
+    _CY                                                         =  0000D7 G
+ 18 _Calibration                                                   0002A0 GR
+    _DAC0                                                       =  00D3D2 G
+    _DAC0CN                                                     =  0000D4 G
+    _DAC0H                                                      =  0000D3 G
+    _DAC0L                                                      =  0000D2 G
+    _DAC1                                                       =  00D6D5 G
+    _DAC1CN                                                     =  0000D7 G
+    _DAC1H                                                      =  0000D6 G
+    _DAC1L                                                      =  0000D5 G
+    _DPH                                                        =  000083 G
+    _DPL                                                        =  000082 G
+    _EA                                                         =  0000AF G
+    _EIE1                                                       =  0000E6 G
+    _EIE2                                                       =  0000E7 G
+    _EIP1                                                       =  0000F6 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 27.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    _EIP2                                                       =  0000F7 G
+    _EMI0CF                                                     =  0000A3 G
+    _EMI0CN                                                     =  0000AF G
+    _EMI0TC                                                     =  0000A1 G
+    _ENSMB                                                      =  0000C6 G
+    _ES                                                         =  0000AC G
+    _ES0                                                        =  0000AC G
+    _ET0                                                        =  0000A9 G
+    _ET1                                                        =  0000AB G
+    _ET2                                                        =  0000AD G
+    _EX0                                                        =  0000A8 G
+    _EX1                                                        =  0000AA G
+    _EXEN2                                                      =  0000CB G
+    _EXF2                                                       =  0000CE G
+    _F0                                                         =  0000D5 G
+    _F1                                                         =  0000D1 G
+    _FLACL                                                      =  0000B7 G
+    _FLSCL                                                      =  0000B6 G
+    _IE                                                         =  0000A8 G
+    _IE0                                                        =  000089 G
+    _IE1                                                        =  00008B G
+    _IP                                                         =  0000B8 G
+    _IT0                                                        =  000088 G
+    _IT1                                                        =  00008A G
+    _MCE0                                                       =  00009D G
+    _MODF                                                       =  0000FD G
+  5 _MOTOR_PW                                                      000006 GR
+    _MSTEN                                                      =  0000F9 G
+    _OSCICN                                                     =  0000B2 G
+    _OSCXCN                                                     =  0000B1 G
+    _OV                                                         =  0000D2 G
+    _P                                                          =  0000D0 G
+    _P0                                                         =  000080 G
+    _P0MDOUT                                                    =  0000A4 G
+    _P0_0                                                       =  000080 G
+    _P0_1                                                       =  000081 G
+    _P0_2                                                       =  000082 G
+    _P0_3                                                       =  000083 G
+    _P0_4                                                       =  000084 G
+    _P0_5                                                       =  000085 G
+    _P0_6                                                       =  000086 G
+    _P0_7                                                       =  000087 G
+    _P1                                                         =  000090 G
+    _P1MDIN                                                     =  0000BD G
+    _P1MDOUT                                                    =  0000A5 G
+    _P1_0                                                       =  000090 G
+    _P1_1                                                       =  000091 G
+    _P1_2                                                       =  000092 G
+    _P1_3                                                       =  000093 G
+    _P1_4                                                       =  000094 G
+    _P1_5                                                       =  000095 G
+    _P1_6                                                       =  000096 G
+    _P1_7                                                       =  000097 G
+    _P2                                                         =  0000A0 G
+    _P2MDOUT                                                    =  0000A6 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 28.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    _P2_0                                                       =  0000A0 G
+    _P2_1                                                       =  0000A1 G
+    _P2_2                                                       =  0000A2 G
+    _P2_3                                                       =  0000A3 G
+    _P2_4                                                       =  0000A4 G
+    _P2_5                                                       =  0000A5 G
+    _P2_6                                                       =  0000A6 G
+    _P2_7                                                       =  0000A7 G
+    _P3                                                         =  0000B0 G
+    _P3IF                                                       =  0000AD G
+    _P3MDOUT                                                    =  0000A7 G
+    _P3_0                                                       =  0000B0 G
+    _P3_1                                                       =  0000B1 G
+    _P3_2                                                       =  0000B2 G
+    _P3_3                                                       =  0000B3 G
+    _P3_4                                                       =  0000B4 G
+    _P3_5                                                       =  0000B5 G
+    _P3_6                                                       =  0000B6 G
+    _P3_7                                                       =  0000B7 G
+    _P4                                                         =  000084 G
+    _P5                                                         =  000085 G
+    _P6                                                         =  000086 G
+    _P7                                                         =  000096 G
+    _P74OUT                                                     =  0000B5 G
+    _PCA0                                                       =  00F9E9 G
+    _PCA0CN                                                     =  0000D8 G
+    _PCA0CP0                                                    =  00FAEA G
+    _PCA0CP1                                                    =  00FBEB G
+    _PCA0CP2                                                    =  00FCEC G
+    _PCA0CP3                                                    =  00FDED G
+    _PCA0CP4                                                    =  00FEEE G
+    _PCA0CPH0                                                   =  0000FA G
+    _PCA0CPH1                                                   =  0000FB G
+    _PCA0CPH2                                                   =  0000FC G
+    _PCA0CPH3                                                   =  0000FD G
+    _PCA0CPH4                                                   =  0000FE G
+    _PCA0CPL0                                                   =  0000EA G
+    _PCA0CPL1                                                   =  0000EB G
+    _PCA0CPL2                                                   =  0000EC G
+    _PCA0CPL3                                                   =  0000ED G
+    _PCA0CPL4                                                   =  0000EE G
+    _PCA0CPM0                                                   =  0000DA G
+    _PCA0CPM1                                                   =  0000DB G
+    _PCA0CPM2                                                   =  0000DC G
+    _PCA0CPM3                                                   =  0000DD G
+    _PCA0CPM4                                                   =  0000DE G
+    _PCA0H                                                      =  0000F9 G
+    _PCA0L                                                      =  0000E9 G
+    _PCA0MD                                                     =  0000D9 G
+ 18 _PCA_ISR                                                       000157 GR
+ 18 _PCA_Init                                                      000145 GR
+    _PCON                                                       =  000087 G
+    _PRT0CF                                                     =  0000A4 G
+    _PRT1CF                                                     =  0000A5 G
+    _PRT2CF                                                     =  0000A6 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 29.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    _PRT3CF                                                     =  0000A7 G
+    _PS                                                         =  0000BC G
+    _PS0                                                        =  0000BC G
+    _PSCTL                                                      =  00008F G
+    _PSW                                                        =  0000D0 G
+    _PT0                                                        =  0000B9 G
+    _PT1                                                        =  0000BB G
+    _PT2                                                        =  0000BD G
+  5 _PW                                                            000008 GR
+  5 _PW_CENTER                                                     000004 GR
+  5 _PW_MAX                                                        000000 GR
+  5 _PW_MIN                                                        000002 GR
+    _PX0                                                        =  0000B8 G
+    _PX1                                                        =  0000BA G
+ 18 _Port_Init                                                     00013D GR
+    _RB8                                                        =  00009A G
+    _RB80                                                       =  00009A G
+    _RCAP2                                                      =  00CBCA G
+    _RCAP2H                                                     =  0000CB G
+    _RCAP2L                                                     =  0000CA G
+    _RCAP4                                                      =  00E5E4 G
+    _RCAP4H                                                     =  0000E5 G
+    _RCAP4L                                                     =  0000E4 G
+    _RCLK                                                       =  0000CD G
+    _REF0CN                                                     =  0000D1 G
+    _REN                                                        =  00009C G
+    _REN0                                                       =  00009C G
+    _RI                                                         =  000098 G
+    _RI0                                                        =  000098 G
+    _RS0                                                        =  0000D3 G
+    _RS1                                                        =  0000D4 G
+    _RSTSRC                                                     =  0000EF G
+    _RXOVRN                                                     =  0000FC G
+    _S0MODE                                                     =  00009F G
+    _SADDR0                                                     =  0000A9 G
+    _SADDR1                                                     =  0000F3 G
+    _SADEN0                                                     =  0000B9 G
+    _SADEN1                                                     =  0000AE G
+    _SBUF                                                       =  000099 G
+    _SBUF0                                                      =  000099 G
+    _SBUF1                                                      =  0000F2 G
+    _SCON                                                       =  000098 G
+    _SCON0                                                      =  000098 G
+    _SCON1                                                      =  0000F1 G
+    _SI                                                         =  0000C3 G
+    _SLVSEL                                                     =  0000FA G
+    _SM0                                                        =  00009F G
+    _SM00                                                       =  00009F G
+    _SM1                                                        =  00009E G
+    _SM10                                                       =  00009E G
+    _SM2                                                        =  00009D G
+    _SM20                                                       =  00009D G
+    _SMB0ADR                                                    =  0000C3 G
+    _SMB0CN                                                     =  0000C0 G
+    _SMB0CR                                                     =  0000CF G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 30.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    _SMB0DAT                                                    =  0000C2 G
+    _SMB0STA                                                    =  0000C1 G
+    _SMBFTE                                                     =  0000C1 G
+    _SMBTOE                                                     =  0000C0 G
+    _SP                                                         =  000081 G
+    _SPI0CFG                                                    =  00009A G
+    _SPI0CKR                                                    =  00009D G
+    _SPI0CN                                                     =  0000F8 G
+    _SPI0DAT                                                    =  00009B G
+    _SPIEN                                                      =  0000F8 G
+    _SPIF                                                       =  0000FF G
+    _STA                                                        =  0000C5 G
+    _STO                                                        =  0000C4 G
+ 18 _SYSCLK_Init                                                   000000 GR
+ 18 _SteeringServo_DriveMotor                                      000179 GR
+ 18 _Sys_Init                                                      000037 GR
+    _T2CON                                                      =  0000C8 G
+    _T4CON                                                      =  0000C9 G
+    _TB8                                                        =  00009B G
+    _TB80                                                       =  00009B G
+    _TCLK                                                       =  0000CC G
+    _TCON                                                       =  000088 G
+    _TF0                                                        =  00008D G
+    _TF1                                                        =  00008F G
+    _TF2                                                        =  0000CF G
+    _TH0                                                        =  00008C G
+    _TH1                                                        =  00008D G
+    _TH2                                                        =  0000CD G
+    _TH4                                                        =  0000F5 G
+    _TI                                                         =  000099 G
+    _TI0                                                        =  000099 G
+    _TL0                                                        =  00008A G
+    _TL1                                                        =  00008B G
+    _TL2                                                        =  0000CC G
+    _TL4                                                        =  0000F4 G
+    _TMOD                                                       =  000089 G
+    _TMR0                                                       =  008C8A G
+    _TMR1                                                       =  008D8B G
+    _TMR2                                                       =  00CDCC G
+    _TMR3                                                       =  009594 G
+    _TMR3CN                                                     =  000091 G
+    _TMR3H                                                      =  000095 G
+    _TMR3L                                                      =  000094 G
+    _TMR3RL                                                     =  009392 G
+    _TMR3RLH                                                    =  000093 G
+    _TMR3RLL                                                    =  000092 G
+    _TMR4                                                       =  00F5F4 G
+    _TR0                                                        =  00008C G
+    _TR1                                                        =  00008E G
+    _TR2                                                        =  0000CA G
+    _TXBSY                                                      =  0000FB G
+ 18 _UART0_Init                                                    000020 GR
+    _WCOL                                                       =  0000FE G
+    _WDTCN                                                      =  0000FF G
+    _XBR0                                                       =  0000E1 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 31.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+ 18 _XBR0_Init                                                     000141 GR
+    _XBR1                                                       =  0000E2 G
+    _XBR2                                                       =  0000E3 G
+    __XPAGE                                                     =  0000AF G
+ 19 ___str_0                                                       000000 R
+ 19 ___str_1                                                       00003F R
+ 19 ___str_10                                                      0001DB R
+ 19 ___str_11                                                      000202 R
+ 19 ___str_12                                                      000398 R
+ 19 ___str_13                                                      0003D8 R
+ 19 ___str_14                                                      000499 R
+ 19 ___str_15                                                      0004A1 R
+ 19 ___str_16                                                      0004AB R
+ 19 ___str_17                                                      00056C R
+ 19 ___str_2                                                       000082 R
+ 19 ___str_3                                                       0000AC R
+ 19 ___str_4                                                       0000D5 R
+ 19 ___str_5                                                       000104 R
+ 19 ___str_6                                                       000133 R
+ 19 ___str_7                                                       000192 R
+ 19 ___str_8                                                       0001A4 R
+ 19 ___str_9                                                       0001C6 R
+  F __interrupt_vect                                               000000 R
+    __mcs51_genRAMCLEAR                                            ****** GX
+    __mcs51_genXINIT                                               ****** GX
+    __mcs51_genXRAMCLEAR                                           ****** GX
+    __sdcc_gsinit_startup                                          ****** GX
+  F __sdcc_program_startup                                         00004E GR
+  7 __start__stack                                                 000000 GR
+ 18 _center_calibration                                            000476 GR
+  5 _count                                                         00000B GR
+  5 _f                                                             00000A GR
+ 18 _getchar                                                       000054 GR
+ 18 _getchar_nw                                                    000063 GR
+  5 _input                                                         00000D GR
+ 18 _left_turn_calibration                                         00031C GR
+ 18 _main                                                          000077 GR
+    _printf                                                        ****** GX
+ 18 _putchar                                                       00004A GR
+ 18 _right_turn_calibration                                        0003D8 GR
+ 18 _turnwheel                                                     000303 GR
+    a                                                           =  0000E0 L
+    a.0                                                         =  0000E0 L
+    a.1                                                         =  0000E1 L
+    a.2                                                         =  0000E2 L
+    a.3                                                         =  0000E3 L
+    a.4                                                         =  0000E4 L
+    a.5                                                         =  0000E5 L
+    a.6                                                         =  0000E6 L
+    a.7                                                         =  0000E7 L
+    ac                                                          =  0000D6 L
+    acc                                                         =  0000E0 L
+    acc.0                                                       =  0000E0 L
+    acc.1                                                       =  0000E1 L
+    acc.2                                                       =  0000E2 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 32.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    acc.3                                                       =  0000E3 L
+    acc.4                                                       =  0000E4 L
+    acc.5                                                       =  0000E5 L
+    acc.6                                                       =  0000E6 L
+    acc.7                                                       =  0000E7 L
+    ar0                                                         =  000000 
+    ar1                                                         =  000001 
+    ar2                                                         =  000002 
+    ar3                                                         =  000003 
+    ar4                                                         =  000004 
+    ar5                                                         =  000005 
+    ar6                                                         =  000006 
+    ar7                                                         =  000007 
+    b                                                           =  0000F0 L
+    b.0                                                         =  0000F0 L
+    b.1                                                         =  0000F1 L
+    b.2                                                         =  0000F2 L
+    b.3                                                         =  0000F3 L
+    b.4                                                         =  0000F4 L
+    b.5                                                         =  0000F5 L
+    b.6                                                         =  0000F6 L
+    b.7                                                         =  0000F7 L
+    cprl2                                                       =  0000C8 L
+    ct2                                                         =  0000C9 L
+    cy                                                          =  0000D7 L
+    dph                                                         =  000083 L
+    dpl                                                         =  000082 L
+    ea                                                          =  0000AF L
+    es                                                          =  0000AC L
+    et0                                                         =  0000A9 L
+    et1                                                         =  0000AB L
+    et2                                                         =  0000AD L
+    ex0                                                         =  0000A8 L
+    ex1                                                         =  0000AA L
+    exen2                                                       =  0000CB L
+    exf2                                                        =  0000CE L
+    f0                                                          =  0000D5 L
+    ie                                                          =  0000A8 L
+    ie.0                                                        =  0000A8 L
+    ie.1                                                        =  0000A9 L
+    ie.2                                                        =  0000AA L
+    ie.3                                                        =  0000AB L
+    ie.4                                                        =  0000AC L
+    ie.5                                                        =  0000AD L
+    ie.7                                                        =  0000AF L
+    ie0                                                         =  000089 L
+    ie1                                                         =  00008B L
+    int0                                                        =  0000B2 L
+    int1                                                        =  0000B3 L
+    ip                                                          =  0000B8 L
+    ip.0                                                        =  0000B8 L
+    ip.1                                                        =  0000B9 L
+    ip.2                                                        =  0000BA L
+    ip.3                                                        =  0000BB L
+    ip.4                                                        =  0000BC L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 33.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    ip.5                                                        =  0000BD L
+    it0                                                         =  000088 L
+    it1                                                         =  00008A L
+    ov                                                          =  0000D2 L
+    p                                                           =  0000D0 L
+    p0                                                          =  000080 L
+    p0.0                                                        =  000080 L
+    p0.1                                                        =  000081 L
+    p0.2                                                        =  000082 L
+    p0.3                                                        =  000083 L
+    p0.4                                                        =  000084 L
+    p0.5                                                        =  000085 L
+    p0.6                                                        =  000086 L
+    p0.7                                                        =  000087 L
+    p1                                                          =  000090 L
+    p1.0                                                        =  000090 L
+    p1.1                                                        =  000091 L
+    p1.2                                                        =  000092 L
+    p1.3                                                        =  000093 L
+    p1.4                                                        =  000094 L
+    p1.5                                                        =  000095 L
+    p1.6                                                        =  000096 L
+    p1.7                                                        =  000097 L
+    p2                                                          =  0000A0 L
+    p2.0                                                        =  0000A0 L
+    p2.1                                                        =  0000A1 L
+    p2.2                                                        =  0000A2 L
+    p2.3                                                        =  0000A3 L
+    p2.4                                                        =  0000A4 L
+    p2.5                                                        =  0000A5 L
+    p2.6                                                        =  0000A6 L
+    p2.7                                                        =  0000A7 L
+    p3                                                          =  0000B0 L
+    p3.0                                                        =  0000B0 L
+    p3.1                                                        =  0000B1 L
+    p3.2                                                        =  0000B2 L
+    p3.3                                                        =  0000B3 L
+    p3.4                                                        =  0000B4 L
+    p3.5                                                        =  0000B5 L
+    p3.6                                                        =  0000B6 L
+    p3.7                                                        =  0000B7 L
+    pcon                                                        =  000087 L
+    ps                                                          =  0000BC L
+    psw                                                         =  0000D0 L
+    psw.0                                                       =  0000D0 L
+    psw.1                                                       =  0000D1 L
+    psw.2                                                       =  0000D2 L
+    psw.3                                                       =  0000D3 L
+    psw.4                                                       =  0000D4 L
+    psw.5                                                       =  0000D5 L
+    psw.6                                                       =  0000D6 L
+    psw.7                                                       =  0000D7 L
+    pt0                                                         =  0000B9 L
+    pt1                                                         =  0000BB L
+    pt2                                                         =  0000BD L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 34.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    px0                                                         =  0000B8 L
+    px1                                                         =  0000BA L
+    rb8                                                         =  00009A L
+    rcap2h                                                      =  0000CB L
+    rcap2l                                                      =  0000CA L
+    rclk                                                        =  0000CD L
+    ren                                                         =  00009C L
+    ri                                                          =  000098 L
+    rs0                                                         =  0000D3 L
+    rs1                                                         =  0000D4 L
+    rxd                                                         =  0000B0 L
+    sbuf                                                        =  000099 L
+    scon                                                        =  000098 L
+    scon.0                                                      =  000098 L
+    scon.1                                                      =  000099 L
+    scon.2                                                      =  00009A L
+    scon.3                                                      =  00009B L
+    scon.4                                                      =  00009C L
+    scon.5                                                      =  00009D L
+    scon.6                                                      =  00009E L
+    scon.7                                                      =  00009F L
+    sm0                                                         =  00009F L
+    sm1                                                         =  00009E L
+    sm2                                                         =  00009D L
+    sp                                                          =  000081 L
+    t2con                                                       =  0000C8 L
+    t2con.0                                                     =  0000C8 L
+    t2con.1                                                     =  0000C9 L
+    t2con.2                                                     =  0000CA L
+    t2con.3                                                     =  0000CB L
+    t2con.4                                                     =  0000CC L
+    t2con.5                                                     =  0000CD L
+    t2con.6                                                     =  0000CE L
+    t2con.7                                                     =  0000CF L
+    tb8                                                         =  00009B L
+    tclk                                                        =  0000CC L
+    tcon                                                        =  000088 L
+    tcon.0                                                      =  000088 L
+    tcon.1                                                      =  000089 L
+    tcon.2                                                      =  00008A L
+    tcon.3                                                      =  00008B L
+    tcon.4                                                      =  00008C L
+    tcon.5                                                      =  00008D L
+    tcon.6                                                      =  00008E L
+    tcon.7                                                      =  00008F L
+    tf0                                                         =  00008D L
+    tf1                                                         =  00008F L
+    tf2                                                         =  0000CF L
+    th0                                                         =  00008C L
+    th1                                                         =  00008D L
+    th2                                                         =  0000CD L
+    ti                                                          =  000099 L
+    tl0                                                         =  00008A L
+    tl1                                                         =  00008B L
+    tl2                                                         =  0000CC L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 35.
+Hexadecimal [24-Bits]
+
+Symbol Table
+
+    tmod                                                        =  000089 L
+    tr0                                                         =  00008C L
+    tr1                                                         =  00008E L
+    tr2                                                         =  0000CA L
+    txd                                                         =  0000B1 L
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 36.
+Hexadecimal [24-Bits]
+
+Area Table
+
+   0 _CODE                                      size      0   flags    0
+   1 RSEG                                       size      0   flags    8
+   2 RSEG0                                      size      0   flags    8
+   3 RSEG1                                      size      0   flags    8
+   4 REG_BANK_0                                 size      8   flags    4
+   5 DSEG                                       size      E   flags    0
+   6 OSEG                                       size      0   flags    4
+   7 SSEG                                       size      1   flags    0
+   8 ISEG                                       size      0   flags    0
+   9 IABS                                       size      0   flags    8
+   A BSEG                                       size      0   flags   80
+   B PSEG                                       size      0   flags   50
+   C XSEG                                       size      0   flags   40
+   D XABS                                       size      0   flags   48
+   E XISEG                                      size      0   flags   40
+   F HOME                                       size     51   flags   20
+  10 GSINIT0                                    size      0   flags   20
+  11 GSINIT1                                    size      0   flags   20
+  12 GSINIT2                                    size      0   flags   20
+  13 GSINIT3                                    size      0   flags   20
+  14 GSINIT4                                    size      0   flags   20
+  15 GSINIT5                                    size      0   flags   20
+  16 GSINIT                                     size     21   flags   20
+  17 GSFINAL                                    size      3   flags   20
+  18 CSEG                                       size    50E   flags   20
+  19 CONST                                      size    5FB   flags   20
+  1A XINIT                                      size      0   flags   20
+  1B CABS                                       size      0   flags   28
+

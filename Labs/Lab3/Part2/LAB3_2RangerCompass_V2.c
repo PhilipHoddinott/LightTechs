@@ -1,0 +1,240 @@
+/*
+Description (ranger)
+	Initialize everything
+		start while (1) loop
+			if 80ms has passed
+				call ranger function
+				print range - (printing every 80ms may be more than needed)
+Steps
+1. Write a ranger function that reads the ultrasonic ranger.
+2. Check the ranger for accuracy.
+– Hold an object above the car, measure the height with the ranger and with a tape
+measure.
+– Repeat for several distances
+– Repeat with a piece of carpet
+– What is the closest an object can be and you still get reliable readings?
+3. Check the ranger for sensitivity to objects off to the side. Crudely estimate the angular
+sensitivity of the ranger. Record the information of ranger sensitivity in your lab notebook
+and have a TA verify the performance of the ranger.
+
+Description (compass)
+	Initialize everything
+		start while (1) loop
+			if 40ms has passed,
+				call heading function
+				print heading
+
+1. Write a compass function that reads the electric compass.
+2. Check the heading for accuracy.
+– The magnetic directions will be indicated in an area of the room with low interference
+– Place the car on the floor near these markings and make reading with the car heading
+North, East, South, and West
+– Note the orientation of the module. It must be mounted on the small protoboard toward
+the front of the car and hanging out in front as much as possible to avoid stray
+fields from other iron parts. Its reference will then be in line with the car. So when the
+car is aligned North, the sensor should read about 0 degrees.
+– Note that the room has a fair amount of magnetic interference. The direction of
+‘North’ will depend on where you are located, especially if you are near an active
+power conduit.
+3. If your readings are within 10 degrees of the lines, then show the results to a TA.
+4. If the readings vary by more than 10 degrees, then the sensor should be calibrated following
+the procedure in Compass_calibration on LMS with the Laboratory 3 handouts.
+5. Record the results in you lab notebook and have a TA verify the results, even if you don't get
+any better accuracy than what you started with.
+6. Record these readings in your lab notebook
+
+*/
+//compiler directives
+#include <c8051_SDCC.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <i2c.h>
+//--------------------------------------------------------------------
+// Function Prototypes
+//--------------------------------------------------------------------
+void Port_Init(void);
+void PCA_Init(void);
+void XBR0_Init();
+void PCA_ISR ( void ) __interrupt 9;
+void SMB_Init(void);
+unsigned int ReadCompass(void);
+unsigned int ReadRanger(void);
+void start_ping(void);
+
+//--------------------------------------------------------------------
+// Global Variables
+//--------------------------------------------------------------------
+unsigned char h_count = 0;
+unsigned char r_count = 0;
+unsigned int range=0;
+unsigned char new_heading = 1;
+unsigned int heading;
+unsigned char Data[2]; heads up this is defined in other places!!//watch all these difinton,s there's lots of stuff that is define in many places
+unsigned int counts = 0;
+
+unsigned char Range_Data[2];
+unsigned char Compass_Data[2];
+
+unsigned int heading2=0;
+unsigned int range2=0;//cause heading is used at random places
+
+//--------------------------------------------------------------------
+// Main Function
+//--------------------------------------------------------------------
+void main(void) { 
+    Sys_Init(); // initialize board
+    putchar(' '); //the quotes in this line may not format correctly
+    Port_Init();//Init ports
+    XBR0_Init();//init xbro
+    PCA_Init();//init pca
+    SMB_Init();//init smb
+    printf("\r\n\n\n\nEmbedded Control Electric Compass\n"); //print beginning message
+
+	while(1) {
+		//what i want is for the wihile loop to run. Every 80 ms it returns the range, every 40 ms it returns the heading
+		
+		if (new_heading){	//enough overflows for a new heading COMPASS STUFF
+			counts++;
+			if (counts == 5){	//4 not five right?
+				heading = ReadCompass();	//get compass heading		
+				printf("\r\nHeading: %d", heading);	//print the combined integer
+				/*printing the heading slows the code down a lot, consider printing every 5th reading*/
+				//new_heading=0;
+				counts = 0;
+				this code looks good for the heading!!
+			}//end if counts
+			new_heading = 0;
+		}//end if new heading
+
+		if (new_range) { //if 80 ms has passed
+
+			new_range=0;
+
+			range2=ReadRanger();
+			start_ping();
+			printf("\r\nRange: %d",range2);
+
+			new range says:
+			clear new range
+			read range
+			start a new ping
+
+			pseudo says:
+			read ranger
+			reset flag
+			start a ping
+			print the range
+
+
+
+
+			new_range=0;
+			//Data[0] = 0x51 ; // write 0x51 to reg 0 of the ranger:
+			//i2c_write_data(addr, ___, Data, _) ; // write one byte of data to reg 0 at addr
+			clear new_range, read range, start a new ping//the ranfer stuff here
+			//RANGE STUFF here.
+			//might want to piggy back on to the heading code,
+			//and jsut say every 2 headings get range
+		}//end if new_range
+	}//end inf while
+}//end main
+
+//********************************************************************
+//Reading functions
+//********************************************************************
+unsigned int ReadCompass() {	//Reads Compass, returns heading
+	unsigned char addr = 0xC0;	//the address of the sensor
+	unsigned char Data[2];	//data in array with length 1
+	unsigned int heading;					//the combined integer returned in degrees between 0 and 3599
+	i2c_read_data(addr, 2, Data, 2);	//read two byte, starting at reg 2
+	heading =(unsigned int)(Data[0]<<8 | Data[1]);	//combine the two values
+														//heading has units of 1/10 of a degree
+	return heading;	//the combined integer returned in degrees between 0 and 3599
+}//end read compass
+
+unsigned int ReadRanger() {		//Reads ranger, returns distance
+	unsigned char Data[2]; get his out!
+	unsigned int range =0; also get this out!
+	unsigned char addr=0xE0 // the address of the ranger is 0xE0
+	i2c_read_data(addr, 2, Data, 2); // read two bytes, starting at reg 2
+	range = (((unsigned int)Data[0] << 8) | Data[1]);
+	return range;
+}//end readRanger
+
+void start_ping(void) {
+	unsigned char Data[1]; get this out!!
+	unsigned char addr = 0xE0; also need to get this out!!
+	Data[0] = 0x51;    // write 0x51 to reg 0 of the ranger
+	i2c_write_data(addr, 0, Data, 1);    // write one byte of data to reg 0 at addr
+}
+
+/*
+unsigned int read_ranger()
+{
+	unsigned char Data[2];
+	unsigned int range = 0;
+	unsigned char addr = 0xE0;   // the address of the ranger is 0xE0
+	i2c_read_data(addr, 2, Data, 2);   // read two bytes, starting at reg 2
+	range = (((unsigned int)Data[0] << 8) | Data[1]);
+	return range;
+}
+*/
+
+
+sadsa
+/*
+void start_ping(void)
+{
+	unsigned char Data[1];
+	unsigned char addr = 0xE0;
+	Data[0] = 0x51;    // write 0x51 to reg 0 of the ranger
+	i2c_write_data(addr, 0, Data, 1);    // write one byte of data to reg 0 at addr
+}
+*/
+
+//--------------------------------------------------------------------
+// PCA overflow routine
+//--------------------------------------------------------------------
+void PCA_ISR ( void ) __interrupt 9 {
+	if (CF) {		//if flag is tripped
+		h_count++;
+		r_count++;
+		if(h_count>=2) {
+			new_heading=1;	//we use 2 overflows since its about 40ms
+			h_count=0;	//reset h
+		} //end if h_count    
+		if(r_count>=4){
+			new_range=1; // 4 overflows is about 80 ms
+			r_count = 0;
+		}
+		CF=0;		//reset flag
+		PCA0=28672;
+	}//end if CF
+	PCA0CN &=0xC0;
+}// end if ISR
+
+//********************************************************************
+//initialization functions
+//********************************************************************
+void SMB_Init(void) {
+	SMB0CR = 0x93;	//set SCL to 100kHz
+	ENSMB = 1;		//enable the SMBus
+}//end SMB_INIT
+
+void PCA_Init(void) {
+	PCA0MD=0x81;	//SYSCLK/12, enable CF interrupts, suspend when idle
+	PCA0CPM0 =0xC2;	//16 bit, enable compare, enable PWM
+	PCA0CN |=0x40;	//enable the PCA
+	EIE1 |= 0x08;	//enable PCA interrupt
+	EA = 1;			//enable global interrupts
+}//end PCA init
+
+void Port_Init(void){
+	P1MDOUT |= 0x01;  //set output pin for CEX0 in push-pull mode
+	P0MDOUT &= 0x3F;
+	P0 |= ~0x3F;
+}//end Port Init
+
+void XBR0_Init(void){
+	XBR0 = 0x27;	//configure crossbar as directed in the laboratory
+}//end XBR0 init

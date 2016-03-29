@@ -55,8 +55,10 @@ unsigned char previousnum;
 unsigned char numC=0;
 unsigned char on=0;
 unsigned char off=1;
-unsigned char rand_seq[10];
 
+
+
+unsigned char rand_seq[10];
 unsigned char i=0, k=0, turn=0;// count varilbes
 
 unsigned char scores[3];

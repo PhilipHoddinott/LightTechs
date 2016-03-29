@@ -340,6 +340,8 @@ void light(char ledW)//Function that will light up LED given a LED to light up
 	lightsoff();
 }//END function ligth
 
+is the lights off above redundent?
+
 
 unsigned char bounce_back(unsigned char button_should_be_pushed, unsigned char button_num){//function that allows button pressed to be recoreded at any time period
 	Counts15=0; 
@@ -530,7 +532,7 @@ void Timer0_ISR(void) __interrupt 1
 unsigned char random(void) 
 {
     return (rand()%4);  // rand returns a random number between 0 and 32767.
-}
+}//end random
 
 void randGen(void) 
 {
