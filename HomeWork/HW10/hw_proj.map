@@ -1,0 +1,2583 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000001  s_PSEG                          
+C:   00000001  s_XSEG                          
+C:   00000002  l_BSEG_BYTES                    
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000006  l_ISEG                          
+C:   00000006  l_OSEG                          
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_REG_BANK_1                    
+C:   0000000A  l_BSEG                          
+C:   0000000A  l_GSINIT2                       
+C:   00000010  s_REG_BANK_2                    
+C:   00000011  s_OSEG                          
+C:   00000017  s_ISEG                          
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_REG_BANK_3                    
+C:   00000020  s_BSEG_BYTES                    
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+C:   00000026  l_GSINIT                        
+C:   0000002A  l_GSINIT4                       
+C:   00000050  l_XSEG                          
+C:   00000051  l_HOME                          
+C:   00000051  s_GSINIT0                       
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000051  s_XISEG                         
+C:   00000054  s_GSINIT1                       
+C:   00000054  s_GSINIT2                       
+C:   0000005E  s_GSINIT3                       
+C:   00000068  s_SSEG                          
+C:   0000007D  l_DSEG                          
+C:   00000080  s_GSINIT4                       
+C:   00000098  l_SSEG                          
+C:   000000AA  s_GSINIT                        
+C:   000000AA  s_GSINIT5                       
+C:   000000D0  s_GSFINAL                       
+C:   000000D3  s_CSEG                          
+C:   00000100  l_IRAM                          
+C:   000002F1  l_CONST                         
+C:   00000EF1  l_CSEG                          
+C:   00000FC4  s_CONST                         
+C:   000012B5  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  G$P0$0$0                           LITEC_HW10_Paul_McKee_Philip
+     00000080  G$P0_0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000080  _P0                                LITEC_HW10_Paul_McKee_Philip
+     00000080  _P0_0                              LITEC_HW10_Paul_McKee_Philip
+     00000081  G$P0_1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000081  G$SP$0$0                           LITEC_HW10_Paul_McKee_Philip
+     00000081  _P0_1                              LITEC_HW10_Paul_McKee_Philip
+     00000081  _SP                                LITEC_HW10_Paul_McKee_Philip
+     00000082  G$DPL$0$0                          LITEC_HW10_Paul_McKee_Philip
+     00000082  G$P0_2$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000082  _DPL                               LITEC_HW10_Paul_McKee_Philip
+     00000082  _P0_2                              LITEC_HW10_Paul_McKee_Philip
+     00000083  G$BUS_SCL$0$0                      LITEC_HW10_Paul_McKee_Philip
+     00000083  G$DPH$0$0                          LITEC_HW10_Paul_McKee_Philip
+     00000083  G$P0_3$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000083  _BUS_SCL                           LITEC_HW10_Paul_McKee_Philip
+     00000083  _DPH                               LITEC_HW10_Paul_McKee_Philip
+     00000083  _P0_3                              LITEC_HW10_Paul_McKee_Philip
+     00000084  G$P0_4$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000084  G$P4$0$0                           LITEC_HW10_Paul_McKee_Philip
+     00000084  _P0_4                              LITEC_HW10_Paul_McKee_Philip
+     00000084  _P4                                LITEC_HW10_Paul_McKee_Philip
+     00000085  G$P0_5$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000085  G$P5$0$0                           LITEC_HW10_Paul_McKee_Philip
+     00000085  _P0_5                              LITEC_HW10_Paul_McKee_Philip
+     00000085  _P5                                LITEC_HW10_Paul_McKee_Philip
+     00000086  G$P0_6$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000086  G$P6$0$0                           LITEC_HW10_Paul_McKee_Philip
+     00000086  _P0_6                              LITEC_HW10_Paul_McKee_Philip
+     00000086  _P6                                LITEC_HW10_Paul_McKee_Philip
+     00000087  G$P0_7$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000087  G$PCON$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000087  _P0_7                              LITEC_HW10_Paul_McKee_Philip
+     00000087  _PCON                              LITEC_HW10_Paul_McKee_Philip
+     00000088  G$IT0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     00000088  G$TCON$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000088  _IT0                               LITEC_HW10_Paul_McKee_Philip
+     00000088  _TCON                              LITEC_HW10_Paul_McKee_Philip
+     00000089  G$IE0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     00000089  G$TMOD$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000089  _IE0                               LITEC_HW10_Paul_McKee_Philip
+     00000089  _TMOD                              LITEC_HW10_Paul_McKee_Philip
+     0000008A  G$IT1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008A  G$TL0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008A  _IT1                               LITEC_HW10_Paul_McKee_Philip
+     0000008A  _TL0                               LITEC_HW10_Paul_McKee_Philip
+     0000008B  G$IE1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008B  G$TL1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008B  _IE1                               LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000008B  _TL1                               LITEC_HW10_Paul_McKee_Philip
+     0000008C  G$TH0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008C  G$TR0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008C  _TH0                               LITEC_HW10_Paul_McKee_Philip
+     0000008C  _TR0                               LITEC_HW10_Paul_McKee_Philip
+     0000008D  G$TF0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008D  G$TH1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008D  _TF0                               LITEC_HW10_Paul_McKee_Philip
+     0000008D  _TH1                               LITEC_HW10_Paul_McKee_Philip
+     0000008E  G$CKCON$0$0                        LITEC_HW10_Paul_McKee_Philip
+     0000008E  G$TR1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008E  _CKCON                             LITEC_HW10_Paul_McKee_Philip
+     0000008E  _TR1                               LITEC_HW10_Paul_McKee_Philip
+     0000008F  G$PSCTL$0$0                        LITEC_HW10_Paul_McKee_Philip
+     0000008F  G$TF1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000008F  _PSCTL                             LITEC_HW10_Paul_McKee_Philip
+     0000008F  _TF1                               LITEC_HW10_Paul_McKee_Philip
+     00000090  G$P1$0$0                           LITEC_HW10_Paul_McKee_Philip
+     00000090  G$P1_0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000090  _P1                                LITEC_HW10_Paul_McKee_Philip
+     00000090  _P1_0                              LITEC_HW10_Paul_McKee_Philip
+     00000091  G$P1_1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000091  G$TMR3CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     00000091  _P1_1                              LITEC_HW10_Paul_McKee_Philip
+     00000091  _TMR3CN                            LITEC_HW10_Paul_McKee_Philip
+     00000092  G$P1_2$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000092  G$TMR3RLL$0$0                      LITEC_HW10_Paul_McKee_Philip
+     00000092  _P1_2                              LITEC_HW10_Paul_McKee_Philip
+     00000092  _TMR3RLL                           LITEC_HW10_Paul_McKee_Philip
+     00000093  G$P1_3$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000093  G$TMR3RLH$0$0                      LITEC_HW10_Paul_McKee_Philip
+     00000093  _P1_3                              LITEC_HW10_Paul_McKee_Philip
+     00000093  _TMR3RLH                           LITEC_HW10_Paul_McKee_Philip
+     00000094  G$P1_4$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000094  G$TMR3L$0$0                        LITEC_HW10_Paul_McKee_Philip
+     00000094  _P1_4                              LITEC_HW10_Paul_McKee_Philip
+     00000094  _TMR3L                             LITEC_HW10_Paul_McKee_Philip
+     00000095  G$P1_5$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000095  G$TMR3H$0$0                        LITEC_HW10_Paul_McKee_Philip
+     00000095  _P1_5                              LITEC_HW10_Paul_McKee_Philip
+     00000095  _TMR3H                             LITEC_HW10_Paul_McKee_Philip
+     00000096  G$P1_6$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000096  G$P7$0$0                           LITEC_HW10_Paul_McKee_Philip
+     00000096  _P1_6                              LITEC_HW10_Paul_McKee_Philip
+     00000096  _P7                                LITEC_HW10_Paul_McKee_Philip
+     00000097  G$P1_7$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000097  _P1_7                              LITEC_HW10_Paul_McKee_Philip
+     00000098  G$RI$0$0                           LITEC_HW10_Paul_McKee_Philip
+     00000098  G$RI0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     00000098  G$SCON$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000098  G$SCON0$0$0                        LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000098  _RI                                LITEC_HW10_Paul_McKee_Philip
+     00000098  _RI0                               LITEC_HW10_Paul_McKee_Philip
+     00000098  _SCON                              LITEC_HW10_Paul_McKee_Philip
+     00000098  _SCON0                             LITEC_HW10_Paul_McKee_Philip
+     00000099  G$SBUF$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00000099  G$SBUF0$0$0                        LITEC_HW10_Paul_McKee_Philip
+     00000099  G$TI$0$0                           LITEC_HW10_Paul_McKee_Philip
+     00000099  G$TI0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     00000099  _SBUF                              LITEC_HW10_Paul_McKee_Philip
+     00000099  _SBUF0                             LITEC_HW10_Paul_McKee_Philip
+     00000099  _TI                                LITEC_HW10_Paul_McKee_Philip
+     00000099  _TI0                               LITEC_HW10_Paul_McKee_Philip
+     0000009A  G$RB8$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000009A  G$RB80$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000009A  G$SPI0CFG$0$0                      LITEC_HW10_Paul_McKee_Philip
+     0000009A  _RB8                               LITEC_HW10_Paul_McKee_Philip
+     0000009A  _RB80                              LITEC_HW10_Paul_McKee_Philip
+     0000009A  _SPI0CFG                           LITEC_HW10_Paul_McKee_Philip
+     0000009B  G$SPI0DAT$0$0                      LITEC_HW10_Paul_McKee_Philip
+     0000009B  G$TB8$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000009B  G$TB80$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000009B  _SPI0DAT                           LITEC_HW10_Paul_McKee_Philip
+     0000009B  _TB8                               LITEC_HW10_Paul_McKee_Philip
+     0000009B  _TB80                              LITEC_HW10_Paul_McKee_Philip
+     0000009C  G$ADC1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000009C  G$REN$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000009C  G$REN0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000009C  _ADC1                              LITEC_HW10_Paul_McKee_Philip
+     0000009C  _REN                               LITEC_HW10_Paul_McKee_Philip
+     0000009C  _REN0                              LITEC_HW10_Paul_McKee_Philip
+     0000009D  G$MCE0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000009D  G$SM2$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000009D  G$SM20$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000009D  G$SPI0CKR$0$0                      LITEC_HW10_Paul_McKee_Philip
+     0000009D  _MCE0                              LITEC_HW10_Paul_McKee_Philip
+     0000009D  _SM2                               LITEC_HW10_Paul_McKee_Philip
+     0000009D  _SM20                              LITEC_HW10_Paul_McKee_Philip
+     0000009D  _SPI0CKR                           LITEC_HW10_Paul_McKee_Philip
+     0000009E  G$CPT0CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     0000009E  G$SM1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000009E  G$SM10$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000009E  _CPT0CN                            LITEC_HW10_Paul_McKee_Philip
+     0000009E  _SM1                               LITEC_HW10_Paul_McKee_Philip
+     0000009E  _SM10                              LITEC_HW10_Paul_McKee_Philip
+     0000009F  G$CPT1CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     0000009F  G$S0MODE$0$0                       LITEC_HW10_Paul_McKee_Philip
+     0000009F  G$SM0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     0000009F  G$SM00$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000009F  _CPT1CN                            LITEC_HW10_Paul_McKee_Philip
+     0000009F  _S0MODE                            LITEC_HW10_Paul_McKee_Philip
+     0000009F  _SM0                               LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000009F  _SM00                              LITEC_HW10_Paul_McKee_Philip
+     000000A0  G$P2$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000A0  G$P2_0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000A0  _P2                                LITEC_HW10_Paul_McKee_Philip
+     000000A0  _P2_0                              LITEC_HW10_Paul_McKee_Philip
+     000000A1  G$EMI0TC$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000A1  G$P2_1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000A1  _EMI0TC                            LITEC_HW10_Paul_McKee_Philip
+     000000A1  _P2_1                              LITEC_HW10_Paul_McKee_Philip
+     000000A2  G$P2_2$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000A2  _P2_2                              LITEC_HW10_Paul_McKee_Philip
+     000000A3  G$EMI0CF$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000A3  G$P2_3$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000A3  _EMI0CF                            LITEC_HW10_Paul_McKee_Philip
+     000000A3  _P2_3                              LITEC_HW10_Paul_McKee_Philip
+     000000A4  G$P0MDOUT$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000A4  G$P2_4$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000A4  G$PRT0CF$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000A4  _P0MDOUT                           LITEC_HW10_Paul_McKee_Philip
+     000000A4  _P2_4                              LITEC_HW10_Paul_McKee_Philip
+     000000A4  _PRT0CF                            LITEC_HW10_Paul_McKee_Philip
+     000000A5  G$P1MDOUT$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000A5  G$P2_5$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000A5  G$PRT1CF$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000A5  _P1MDOUT                           LITEC_HW10_Paul_McKee_Philip
+     000000A5  _P2_5                              LITEC_HW10_Paul_McKee_Philip
+     000000A5  _PRT1CF                            LITEC_HW10_Paul_McKee_Philip
+     000000A6  G$P2MDOUT$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000A6  G$P2_6$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000A6  G$PRT2CF$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000A6  _P2MDOUT                           LITEC_HW10_Paul_McKee_Philip
+     000000A6  _P2_6                              LITEC_HW10_Paul_McKee_Philip
+     000000A6  _PRT2CF                            LITEC_HW10_Paul_McKee_Philip
+     000000A7  G$P2_7$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000A7  G$P3MDOUT$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000A7  G$PRT3CF$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000A7  _P2_7                              LITEC_HW10_Paul_McKee_Philip
+     000000A7  _P3MDOUT                           LITEC_HW10_Paul_McKee_Philip
+     000000A7  _PRT3CF                            LITEC_HW10_Paul_McKee_Philip
+     000000A8  G$EX0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000A8  G$IE$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000A8  _EX0                               LITEC_HW10_Paul_McKee_Philip
+     000000A8  _IE                                LITEC_HW10_Paul_McKee_Philip
+     000000A9  G$ET0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000A9  G$SADDR0$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000A9  _ET0                               LITEC_HW10_Paul_McKee_Philip
+     000000A9  _SADDR0                            LITEC_HW10_Paul_McKee_Philip
+     000000AA  G$ADC1CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000AA  G$EX1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000AA  _ADC1CN                            LITEC_HW10_Paul_McKee_Philip
+     000000AA  _EX1                               LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000AB  G$ADC1CF$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000AB  G$ET1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000AB  _ADC1CF                            LITEC_HW10_Paul_McKee_Philip
+     000000AB  _ET1                               LITEC_HW10_Paul_McKee_Philip
+     000000AC  G$AMX1SL$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000AC  G$ES$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000AC  G$ES0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000AC  _AMX1SL                            LITEC_HW10_Paul_McKee_Philip
+     000000AC  _ES                                LITEC_HW10_Paul_McKee_Philip
+     000000AC  _ES0                               LITEC_HW10_Paul_McKee_Philip
+     000000AD  G$ET2$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000AD  G$P3IF$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000AD  _ET2                               LITEC_HW10_Paul_McKee_Philip
+     000000AD  _P3IF                              LITEC_HW10_Paul_McKee_Philip
+     000000AE  G$SADEN1$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000AE  _SADEN1                            LITEC_HW10_Paul_McKee_Philip
+     000000AF  G$EA$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000AF  G$EMI0CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000AF  G$_XPAGE$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000AF  _EA                                LITEC_HW10_Paul_McKee_Philip
+     000000AF  _EMI0CN                            LITEC_HW10_Paul_McKee_Philip
+     000000AF  __XPAGE                            LITEC_HW10_Paul_McKee_Philip
+     000000B0  G$P3$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000B0  G$P3_0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000B0  _P3                                LITEC_HW10_Paul_McKee_Philip
+     000000B0  _P3_0                              LITEC_HW10_Paul_McKee_Philip
+     000000B1  G$OSCXCN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000B1  G$P3_1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000B1  _OSCXCN                            LITEC_HW10_Paul_McKee_Philip
+     000000B1  _P3_1                              LITEC_HW10_Paul_McKee_Philip
+     000000B2  G$OSCICN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000B2  G$P3_2$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000B2  _OSCICN                            LITEC_HW10_Paul_McKee_Philip
+     000000B2  _P3_2                              LITEC_HW10_Paul_McKee_Philip
+     000000B3  G$P3_3$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000B3  _P3_3                              LITEC_HW10_Paul_McKee_Philip
+     000000B4  G$P3_4$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000B4  _P3_4                              LITEC_HW10_Paul_McKee_Philip
+     000000B5  G$P3_5$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000B5  G$P74OUT$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000B5  _P3_5                              LITEC_HW10_Paul_McKee_Philip
+     000000B5  _P74OUT                            LITEC_HW10_Paul_McKee_Philip
+     000000B6  G$FLSCL$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000B6  G$P3_6$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000B6  _FLSCL                             LITEC_HW10_Paul_McKee_Philip
+     000000B6  _P3_6                              LITEC_HW10_Paul_McKee_Philip
+     000000B7  G$FLACL$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000B7  G$P3_7$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000B7  _FLACL                             LITEC_HW10_Paul_McKee_Philip
+     000000B7  _P3_7                              LITEC_HW10_Paul_McKee_Philip
+     000000B8  G$IP$0$0                           LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000B8  G$PX0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000B8  _IP                                LITEC_HW10_Paul_McKee_Philip
+     000000B8  _PX0                               LITEC_HW10_Paul_McKee_Philip
+     000000B9  G$PT0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000B9  G$SADEN0$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000B9  _PT0                               LITEC_HW10_Paul_McKee_Philip
+     000000B9  _SADEN0                            LITEC_HW10_Paul_McKee_Philip
+     000000BA  G$AMX0CF$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000BA  G$PX1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000BA  _AMX0CF                            LITEC_HW10_Paul_McKee_Philip
+     000000BA  _PX1                               LITEC_HW10_Paul_McKee_Philip
+     000000BB  G$AMX0SL$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000BB  G$PT1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000BB  _AMX0SL                            LITEC_HW10_Paul_McKee_Philip
+     000000BB  _PT1                               LITEC_HW10_Paul_McKee_Philip
+     000000BC  G$ADC0CF$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000BC  G$PS$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000BC  G$PS0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000BC  _ADC0CF                            LITEC_HW10_Paul_McKee_Philip
+     000000BC  _PS                                LITEC_HW10_Paul_McKee_Philip
+     000000BC  _PS0                               LITEC_HW10_Paul_McKee_Philip
+     000000BD  G$P1MDIN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000BD  G$PT2$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000BD  _P1MDIN                            LITEC_HW10_Paul_McKee_Philip
+     000000BD  _PT2                               LITEC_HW10_Paul_McKee_Philip
+     000000BE  G$ADC0L$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000BE  _ADC0L                             LITEC_HW10_Paul_McKee_Philip
+     000000BF  G$ADC0H$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000BF  _ADC0H                             LITEC_HW10_Paul_McKee_Philip
+     000000C0  G$BUS_TOE$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C0  G$SMB0CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000C0  G$SMBTOE$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000C0  _BUS_TOE                           LITEC_HW10_Paul_McKee_Philip
+     000000C0  _SMB0CN                            LITEC_HW10_Paul_McKee_Philip
+     000000C0  _SMBTOE                            LITEC_HW10_Paul_McKee_Philip
+     000000C1  G$BUS_FTE$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C1  G$SMB0STA$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C1  G$SMBFTE$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000C1  _BUS_FTE                           LITEC_HW10_Paul_McKee_Philip
+     000000C1  _SMB0STA                           LITEC_HW10_Paul_McKee_Philip
+     000000C1  _SMBFTE                            LITEC_HW10_Paul_McKee_Philip
+     000000C2  G$AA$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000C2  G$BUS_AA$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000C2  G$SMB0DAT$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C2  _AA                                LITEC_HW10_Paul_McKee_Philip
+     000000C2  _BUS_AA                            LITEC_HW10_Paul_McKee_Philip
+     000000C2  _SMB0DAT                           LITEC_HW10_Paul_McKee_Philip
+     000000C3  G$BUS_INT$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C3  G$SI$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000C3  G$SMB0ADR$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C3  _BUS_INT                           LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000C3  _SI                                LITEC_HW10_Paul_McKee_Philip
+     000000C3  _SMB0ADR                           LITEC_HW10_Paul_McKee_Philip
+     000000C4  G$ADC0GTL$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C4  G$BUS_STOP$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000C4  G$STO$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000C4  _ADC0GTL                           LITEC_HW10_Paul_McKee_Philip
+     000000C4  _BUS_STOP                          LITEC_HW10_Paul_McKee_Philip
+     000000C4  _STO                               LITEC_HW10_Paul_McKee_Philip
+     000000C5  G$ADC0GTH$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C5  G$BUS_START$0$0                    LITEC_HW10_Paul_McKee_Philip
+     000000C5  G$STA$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000C5  _ADC0GTH                           LITEC_HW10_Paul_McKee_Philip
+     000000C5  _BUS_START                         LITEC_HW10_Paul_McKee_Philip
+     000000C5  _STA                               LITEC_HW10_Paul_McKee_Philip
+     000000C6  G$ADC0LTL$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C6  G$BUS_EN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000C6  G$ENSMB$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000C6  _ADC0LTL                           LITEC_HW10_Paul_McKee_Philip
+     000000C6  _BUS_EN                            LITEC_HW10_Paul_McKee_Philip
+     000000C6  _ENSMB                             LITEC_HW10_Paul_McKee_Philip
+     000000C7  G$ADC0LTH$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000C7  G$BUSY$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000C7  G$BUS_BUSY$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000C7  _ADC0LTH                           LITEC_HW10_Paul_McKee_Philip
+     000000C7  _BUSY                              LITEC_HW10_Paul_McKee_Philip
+     000000C7  _BUS_BUSY                          LITEC_HW10_Paul_McKee_Philip
+     000000C8  G$CPRL2$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000C8  G$T2CON$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000C8  _CPRL2                             LITEC_HW10_Paul_McKee_Philip
+     000000C8  _T2CON                             LITEC_HW10_Paul_McKee_Philip
+     000000C9  G$CT2$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000C9  G$T4CON$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000C9  _CT2                               LITEC_HW10_Paul_McKee_Philip
+     000000C9  _T4CON                             LITEC_HW10_Paul_McKee_Philip
+     000000CA  G$RCAP2L$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000CA  G$TR2$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000CA  _RCAP2L                            LITEC_HW10_Paul_McKee_Philip
+     000000CA  _TR2                               LITEC_HW10_Paul_McKee_Philip
+     000000CB  G$EXEN2$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000CB  G$RCAP2H$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000CB  _EXEN2                             LITEC_HW10_Paul_McKee_Philip
+     000000CB  _RCAP2H                            LITEC_HW10_Paul_McKee_Philip
+     000000CC  G$TCLK$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000CC  G$TL2$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000CC  _TCLK                              LITEC_HW10_Paul_McKee_Philip
+     000000CC  _TL2                               LITEC_HW10_Paul_McKee_Philip
+     000000CD  G$RCLK$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000CD  G$TH2$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000CD  _RCLK                              LITEC_HW10_Paul_McKee_Philip
+     000000CD  _TH2                               LITEC_HW10_Paul_McKee_Philip
+     000000CE  G$EXF2$0$0                         LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000CE  _EXF2                              LITEC_HW10_Paul_McKee_Philip
+     000000CF  G$SMB0CR$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000CF  G$TF2$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000CF  _SMB0CR                            LITEC_HW10_Paul_McKee_Philip
+     000000CF  _TF2                               LITEC_HW10_Paul_McKee_Philip
+     000000D0  G$P$0$0                            LITEC_HW10_Paul_McKee_Philip
+     000000D0  G$PSW$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000D0  _P                                 LITEC_HW10_Paul_McKee_Philip
+     000000D0  _PSW                               LITEC_HW10_Paul_McKee_Philip
+     000000D1  G$F1$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000D1  G$REF0CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000D1  _F1                                LITEC_HW10_Paul_McKee_Philip
+     000000D1  _REF0CN                            LITEC_HW10_Paul_McKee_Philip
+     000000D2  G$DAC0L$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000D2  G$OV$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000D2  _DAC0L                             LITEC_HW10_Paul_McKee_Philip
+     000000D2  _OV                                LITEC_HW10_Paul_McKee_Philip
+     000000D3  G$DAC0H$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000D3  G$RS0$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000D3  _DAC0H                             LITEC_HW10_Paul_McKee_Philip
+     000000D3  _RS0                               LITEC_HW10_Paul_McKee_Philip
+     000000D4  G$DAC0CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000D4  G$RS1$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000D4  _DAC0CN                            LITEC_HW10_Paul_McKee_Philip
+     000000D4  _RS1                               LITEC_HW10_Paul_McKee_Philip
+     000000D5  G$DAC1L$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000D5  G$F0$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000D5  _DAC1L                             LITEC_HW10_Paul_McKee_Philip
+     000000D5  _F0                                LITEC_HW10_Paul_McKee_Philip
+     000000D6  G$AC$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000D6  G$DAC1H$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000D6  _AC                                LITEC_HW10_Paul_McKee_Philip
+     000000D6  _DAC1H                             LITEC_HW10_Paul_McKee_Philip
+     000000D7  G$CY$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000D7  G$DAC1CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000D7  _CY                                LITEC_HW10_Paul_McKee_Philip
+     000000D7  _DAC1CN                            LITEC_HW10_Paul_McKee_Philip
+     000000D8  G$CCF0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000D8  G$PCA0CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000D8  _CCF0                              LITEC_HW10_Paul_McKee_Philip
+     000000D8  _PCA0CN                            LITEC_HW10_Paul_McKee_Philip
+     000000D9  G$CCF1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000D9  G$PCA0MD$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000D9  _CCF1                              LITEC_HW10_Paul_McKee_Philip
+     000000D9  _PCA0MD                            LITEC_HW10_Paul_McKee_Philip
+     000000DA  G$CCF2$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000DA  G$PCA0CPM0$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000DA  _CCF2                              LITEC_HW10_Paul_McKee_Philip
+     000000DA  _PCA0CPM0                          LITEC_HW10_Paul_McKee_Philip
+     000000DB  G$CCF3$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000DB  G$PCA0CPM1$0$0                     LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000DB  _CCF3                              LITEC_HW10_Paul_McKee_Philip
+     000000DB  _PCA0CPM1                          LITEC_HW10_Paul_McKee_Philip
+     000000DC  G$CCF4$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000DC  G$PCA0CPM2$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000DC  _CCF4                              LITEC_HW10_Paul_McKee_Philip
+     000000DC  _PCA0CPM2                          LITEC_HW10_Paul_McKee_Philip
+     000000DD  G$PCA0CPM3$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000DD  _PCA0CPM3                          LITEC_HW10_Paul_McKee_Philip
+     000000DE  G$CR$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000DE  G$PCA0CPM4$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000DE  _CR                                LITEC_HW10_Paul_McKee_Philip
+     000000DE  _PCA0CPM4                          LITEC_HW10_Paul_McKee_Philip
+     000000DF  G$CF$0$0                           LITEC_HW10_Paul_McKee_Philip
+     000000DF  _CF                                LITEC_HW10_Paul_McKee_Philip
+     000000E0  G$ACC$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000E0  _ACC                               LITEC_HW10_Paul_McKee_Philip
+     000000E1  G$XBR0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000E1  _XBR0                              LITEC_HW10_Paul_McKee_Philip
+     000000E2  G$XBR1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000E2  _XBR1                              LITEC_HW10_Paul_McKee_Philip
+     000000E3  G$XBR2$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000E3  _XBR2                              LITEC_HW10_Paul_McKee_Philip
+     000000E4  G$RCAP4L$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000E4  _RCAP4L                            LITEC_HW10_Paul_McKee_Philip
+     000000E5  G$RCAP4H$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000E5  _RCAP4H                            LITEC_HW10_Paul_McKee_Philip
+     000000E6  G$EIE1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000E6  _EIE1                              LITEC_HW10_Paul_McKee_Philip
+     000000E7  G$EIE2$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000E7  _EIE2                              LITEC_HW10_Paul_McKee_Philip
+     000000E8  G$AD0LJST$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000E8  G$ADC0CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000E8  G$ADLJST$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000E8  _AD0LJST                           LITEC_HW10_Paul_McKee_Philip
+     000000E8  _ADC0CN                            LITEC_HW10_Paul_McKee_Philip
+     000000E8  _ADLJST                            LITEC_HW10_Paul_McKee_Philip
+     000000E9  G$AD0WINT$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000E9  G$ADWINT$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000E9  G$PCA0L$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000E9  _AD0WINT                           LITEC_HW10_Paul_McKee_Philip
+     000000E9  _ADWINT                            LITEC_HW10_Paul_McKee_Philip
+     000000E9  _PCA0L                             LITEC_HW10_Paul_McKee_Philip
+     000000EA  G$AD0CM0$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000EA  G$ADSTM0$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000EA  G$PCA0CPL0$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000EA  _AD0CM0                            LITEC_HW10_Paul_McKee_Philip
+     000000EA  _ADSTM0                            LITEC_HW10_Paul_McKee_Philip
+     000000EA  _PCA0CPL0                          LITEC_HW10_Paul_McKee_Philip
+     000000EB  G$AD0CM1$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000EB  G$ADSTM1$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000EB  G$PCA0CPL1$0$0                     LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000EB  _AD0CM1                            LITEC_HW10_Paul_McKee_Philip
+     000000EB  _ADSTM1                            LITEC_HW10_Paul_McKee_Philip
+     000000EB  _PCA0CPL1                          LITEC_HW10_Paul_McKee_Philip
+     000000EC  G$AD0BUSY$0$0                      LITEC_HW10_Paul_McKee_Philip
+     000000EC  G$ADBUSY$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000EC  G$PCA0CPL2$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000EC  _AD0BUSY                           LITEC_HW10_Paul_McKee_Philip
+     000000EC  _ADBUSY                            LITEC_HW10_Paul_McKee_Philip
+     000000EC  _PCA0CPL2                          LITEC_HW10_Paul_McKee_Philip
+     000000ED  G$AD0INT$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000ED  G$ADCINT$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000ED  G$PCA0CPL3$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000ED  _AD0INT                            LITEC_HW10_Paul_McKee_Philip
+     000000ED  _ADCINT                            LITEC_HW10_Paul_McKee_Philip
+     000000ED  _PCA0CPL3                          LITEC_HW10_Paul_McKee_Philip
+     000000EE  G$AD0TM$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000EE  G$ADCTM$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000EE  G$PCA0CPL4$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000EE  _AD0TM                             LITEC_HW10_Paul_McKee_Philip
+     000000EE  _ADCTM                             LITEC_HW10_Paul_McKee_Philip
+     000000EE  _PCA0CPL4                          LITEC_HW10_Paul_McKee_Philip
+     000000EF  G$AD0EN$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000EF  G$ADCEN$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000EF  G$RSTSRC$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000EF  _AD0EN                             LITEC_HW10_Paul_McKee_Philip
+     000000EF  _ADCEN                             LITEC_HW10_Paul_McKee_Philip
+     000000EF  _RSTSRC                            LITEC_HW10_Paul_McKee_Philip
+     000000F0  G$B$0$0                            LITEC_HW10_Paul_McKee_Philip
+     000000F0  _B                                 LITEC_HW10_Paul_McKee_Philip
+     000000F1  G$SCON1$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000F1  _SCON1                             LITEC_HW10_Paul_McKee_Philip
+     000000F2  G$SBUF1$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000F2  _SBUF1                             LITEC_HW10_Paul_McKee_Philip
+     000000F3  G$SADDR1$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000F3  _SADDR1                            LITEC_HW10_Paul_McKee_Philip
+     000000F4  G$TL4$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000F4  _TL4                               LITEC_HW10_Paul_McKee_Philip
+     000000F5  G$TH4$0$0                          LITEC_HW10_Paul_McKee_Philip
+     000000F5  _B_5                               _gptrget
+     000000F5  _TH4                               LITEC_HW10_Paul_McKee_Philip
+     000000F6  G$EIP1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000F6  _B_6                               _gptrget
+     000000F6  _EIP1                              LITEC_HW10_Paul_McKee_Philip
+     000000F7  G$EIP2$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000F7  _B_7                               _gptrget
+     000000F7  _EIP2                              LITEC_HW10_Paul_McKee_Philip
+     000000F8  G$SPI0CN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000F8  G$SPIEN$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000F8  _SPI0CN                            LITEC_HW10_Paul_McKee_Philip
+     000000F8  _SPIEN                             LITEC_HW10_Paul_McKee_Philip
+     000000F9  G$MSTEN$0$0                        LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000F9  G$PCA0H$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000F9  _MSTEN                             LITEC_HW10_Paul_McKee_Philip
+     000000F9  _PCA0H                             LITEC_HW10_Paul_McKee_Philip
+     000000FA  G$PCA0CPH0$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000FA  G$SLVSEL$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000FA  _PCA0CPH0                          LITEC_HW10_Paul_McKee_Philip
+     000000FA  _SLVSEL                            LITEC_HW10_Paul_McKee_Philip
+     000000FB  G$PCA0CPH1$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000FB  G$TXBSY$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000FB  _PCA0CPH1                          LITEC_HW10_Paul_McKee_Philip
+     000000FB  _TXBSY                             LITEC_HW10_Paul_McKee_Philip
+     000000FC  G$PCA0CPH2$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000FC  G$RXOVRN$0$0                       LITEC_HW10_Paul_McKee_Philip
+     000000FC  _PCA0CPH2                          LITEC_HW10_Paul_McKee_Philip
+     000000FC  _RXOVRN                            LITEC_HW10_Paul_McKee_Philip
+     000000FD  G$MODF$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000FD  G$PCA0CPH3$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000FD  _MODF                              LITEC_HW10_Paul_McKee_Philip
+     000000FD  _PCA0CPH3                          LITEC_HW10_Paul_McKee_Philip
+     000000FE  G$PCA0CPH4$0$0                     LITEC_HW10_Paul_McKee_Philip
+     000000FE  G$WCOL$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000FE  _PCA0CPH4                          LITEC_HW10_Paul_McKee_Philip
+     000000FE  _WCOL                              LITEC_HW10_Paul_McKee_Philip
+     000000FF  G$SPIF$0$0                         LITEC_HW10_Paul_McKee_Philip
+     000000FF  G$WDTCN$0$0                        LITEC_HW10_Paul_McKee_Philip
+     000000FF  _SPIF                              LITEC_HW10_Paul_McKee_Philip
+     000000FF  _WDTCN                             LITEC_HW10_Paul_McKee_Philip
+     00008C8A  G$TMR0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00008C8A  _TMR0                              LITEC_HW10_Paul_McKee_Philip
+     00008D8B  G$TMR1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00008D8B  _TMR1                              LITEC_HW10_Paul_McKee_Philip
+     00009392  G$TMR3RL$0$0                       LITEC_HW10_Paul_McKee_Philip
+     00009392  _TMR3RL                            LITEC_HW10_Paul_McKee_Philip
+     00009594  G$TMR3$0$0                         LITEC_HW10_Paul_McKee_Philip
+     00009594  _TMR3                              LITEC_HW10_Paul_McKee_Philip
+     0000BFBE  G$ADC0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000BFBE  _ADC0                              LITEC_HW10_Paul_McKee_Philip
+     0000C5C4  G$ADC0GT$0$0                       LITEC_HW10_Paul_McKee_Philip
+     0000C5C4  _ADC0GT                            LITEC_HW10_Paul_McKee_Philip
+     0000C7C6  G$ADC0LT$0$0                       LITEC_HW10_Paul_McKee_Philip
+     0000C7C6  _ADC0LT                            LITEC_HW10_Paul_McKee_Philip
+     0000CBCA  G$RCAP2$0$0                        LITEC_HW10_Paul_McKee_Philip
+     0000CBCA  _RCAP2                             LITEC_HW10_Paul_McKee_Philip
+     0000CDCC  G$TMR2$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000CDCC  _TMR2                              LITEC_HW10_Paul_McKee_Philip
+     0000D3D2  G$DAC0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000D3D2  _DAC0                              LITEC_HW10_Paul_McKee_Philip
+     0000D6D5  G$DAC1$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000D6D5  _DAC1                              LITEC_HW10_Paul_McKee_Philip
+     0000E5E4  G$RCAP4$0$0                        LITEC_HW10_Paul_McKee_Philip
+     0000E5E4  _RCAP4                             LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000F5F4  G$TMR4$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000F5F4  _TMR4                              LITEC_HW10_Paul_McKee_Philip
+     0000F9E9  G$PCA0$0$0                         LITEC_HW10_Paul_McKee_Philip
+     0000F9E9  _PCA0                              LITEC_HW10_Paul_McKee_Philip
+     0000FAEA  G$PCA0CP0$0$0                      LITEC_HW10_Paul_McKee_Philip
+     0000FAEA  _PCA0CP0                           LITEC_HW10_Paul_McKee_Philip
+     0000FBEB  G$PCA0CP1$0$0                      LITEC_HW10_Paul_McKee_Philip
+     0000FBEB  _PCA0CP1                           LITEC_HW10_Paul_McKee_Philip
+     0000FCEC  G$PCA0CP2$0$0                      LITEC_HW10_Paul_McKee_Philip
+     0000FCEC  _PCA0CP2                           LITEC_HW10_Paul_McKee_Philip
+     0000FDED  G$PCA0CP3$0$0                      LITEC_HW10_Paul_McKee_Philip
+     0000FDED  _PCA0CP3                           LITEC_HW10_Paul_McKee_Philip
+     0000FEEE  G$PCA0CP4$0$0                      LITEC_HW10_Paul_McKee_Philip
+     0000FEEE  _PCA0CP4                           LITEC_HW10_Paul_McKee_Philip
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+BSEG_BYTES                          00000020    00000002 =           2. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    0000007D =         125. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  _vsprintf_PARM_2                   sprintf
+     0000000B  _vsprintf_PARM_3                   sprintf
+     0000000F  _bp                                _bp
+     00000010  _vprintf_PARM_2                    vprintf
+     00000022  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     00000023  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     00000025  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     00000026  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     00000028  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     00000028  _i2c_write_data_PARM_2             LITEC_HW10_Paul_McKee_Philip
+     00000029  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     00000029  _i2c_write_data_PARM_3             LITEC_HW10_Paul_McKee_Philip
+     0000002C  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     0000002C  _i2c_write_data_PARM_4             LITEC_HW10_Paul_McKee_Philip
+     0000002D  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     0000002D  _i2c_read_data_PARM_2              LITEC_HW10_Paul_McKee_Philip
+     0000002E  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     0000002E  _i2c_read_data_PARM_3              LITEC_HW10_Paul_McKee_Philip
+     00000031  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     00000031  _i2c_read_data_PARM_4              LITEC_HW10_Paul_McKee_Philip
+     00000032  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+     00000033  G$h_count$0$0                      LITEC_HW10_Paul_McKee_Philip
+     00000033  _h_count                           LITEC_HW10_Paul_McKee_Philip
+     00000034  G$r_count$0$0                      LITEC_HW10_Paul_McKee_Philip
+     00000034  _r_count                           LITEC_HW10_Paul_McKee_Philip
+     00000035  G$count$0$0                        LITEC_HW10_Paul_McKee_Philip
+     00000035  _count                             LITEC_HW10_Paul_McKee_Philip
+     00000037  G$range$0$0                        LITEC_HW10_Paul_McKee_Philip
+     00000037  _range                             LITEC_HW10_Paul_McKee_Philip
+     00000039  G$heading$0$0                      LITEC_HW10_Paul_McKee_Philip
+     00000039  _heading                           LITEC_HW10_Paul_McKee_Philip
+     0000003B  G$compass_char$0$0                 LITEC_HW10_Paul_McKee_Philip
+     0000003B  _compass_char                      LITEC_HW10_Paul_McKee_Philip
+     0000003C  G$compass_int$0$0                  LITEC_HW10_Paul_McKee_Philip
+     0000003C  _compass_int                       LITEC_HW10_Paul_McKee_Philip
+     0000003E  G$ranger_char0$0$0                 LITEC_HW10_Paul_McKee_Philip
+     0000003E  _ranger_char0                      LITEC_HW10_Paul_McKee_Philip
+     0000003F  G$ranger_char1$0$0                 LITEC_HW10_Paul_McKee_Philip
+     0000003F  _ranger_char1                      LITEC_HW10_Paul_McKee_Philip
+     00000041  G$new_heading$0$0                  LITEC_HW10_Paul_McKee_Philip
+     00000041  _new_heading                       LITEC_HW10_Paul_McKee_Philip
+     00000042  G$new_range$0$0                    LITEC_HW10_Paul_McKee_Philip
+     00000042  _new_range                         LITEC_HW10_Paul_McKee_Philip
+     00000043  G$counts$0$0                       LITEC_HW10_Paul_McKee_Philip
+     00000043  _counts                            LITEC_HW10_Paul_McKee_Philip
+     00000045  G$comp_addr$0$0                    LITEC_HW10_Paul_McKee_Philip
+     00000045  _comp_addr                         LITEC_HW10_Paul_McKee_Philip
+     00000046  G$comp_Data_char$0$0               LITEC_HW10_Paul_McKee_Philip
+     00000046  _comp_Data_char                    LITEC_HW10_Paul_McKee_Philip
+     00000047  G$comp_Data_int$0$0                LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    0000007D =         125. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000047  _comp_Data_int                     LITEC_HW10_Paul_McKee_Philip
+     00000049  G$range_addr$0$0                   LITEC_HW10_Paul_McKee_Philip
+     00000049  _range_addr                        LITEC_HW10_Paul_McKee_Philip
+     0000004A  G$range_Data_char0$0$0             LITEC_HW10_Paul_McKee_Philip
+     0000004A  _range_Data_char0                  LITEC_HW10_Paul_McKee_Philip
+     0000004B  G$range_Data_char1$0$0             LITEC_HW10_Paul_McKee_Philip
+     0000004B  _range_Data_char1                  LITEC_HW10_Paul_McKee_Philip
+     0000004C  G$ping_addr$0$0                    LITEC_HW10_Paul_McKee_Philip
+     0000004C  _ping_addr                         LITEC_HW10_Paul_McKee_Philip
+     0000004D  G$ping_Data$0$0                    LITEC_HW10_Paul_McKee_Philip
+     0000004D  _ping_Data                         LITEC_HW10_Paul_McKee_Philip
+     0000005A  __print_format_PARM_2              printf_large
+     0000005D  __print_format_PARM_3              printf_large
+     00000060  __print_format_PARM_4              printf_large
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+OSEG                                00000011    00000006 =           6. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000011  __gptrput_PARM_2                   _gptrput
+     00000011  __mulint_PARM_2                    _mulint
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+ISEG                                00000017    00000006 =           6. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000068    00000098 =         152. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000068  __start__stack                     LITEC_HW10_Paul_McKee_Philip
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+XSEG                                00000001    00000050 =          80. bytes (REL,CON,XDATA)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+D:   00000001  LLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000051 =          81. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000003  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000000B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000013  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000001B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000023  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000002B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000033  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000003B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000043  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000004B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000004E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000004E  __sdcc_program_startup             LITEC_HW10_Paul_McKee_Philip
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000051    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000051  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             00000054    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             0000005E    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000005E  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000080    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000080  __mcs51_genRAMCLEAR                
+C:   00000086  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              000000AA    00000026 =          38. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000AA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000AA  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000AD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000AD  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000B0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000B0  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000B1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000B3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000B5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000B5  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000B7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000B9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000B9  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000BB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000BD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000BD  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000C0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000C0  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000C3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000C3  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000C5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000C7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000C7  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000CA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000CA  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000CD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000CD  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             000000D0    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000D0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000D3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000D3  C$c8051_SDCC.h$42$0$0              LITEC_HW10_Paul_McKee_Philip
+C:   000000D3  C$c8051_SDCC.h$46$1$2              LITEC_HW10_Paul_McKee_Philip
+C:   000000D3  G$SYSCLK_Init$0$0                  LITEC_HW10_Paul_McKee_Philip
+C:   000000D3  _SYSCLK_Init                       LITEC_HW10_Paul_McKee_Philip
+C:   000000D6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000D6  C$c8051_SDCC.h$49$1$2              LITEC_HW10_Paul_McKee_Philip
+C:   000000D8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000DA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000DB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000DD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000DE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000DF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000E1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000E2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000E4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000E6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000E7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000E8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000EA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000EA  C$c8051_SDCC.h$51$1$2              LITEC_HW10_Paul_McKee_Philip
+C:   000000EC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000EF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000EF  C$c8051_SDCC.h$53$1$2              LITEC_HW10_Paul_McKee_Philip
+C:   000000F2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000F2  C$c8051_SDCC.h$56$1$2              LITEC_HW10_Paul_McKee_Philip
+C:   000000F2  XG$SYSCLK_Init$0$0                 LITEC_HW10_Paul_McKee_Philip
+C:   000000F3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000F3  C$c8051_SDCC.h$64$1$2              LITEC_HW10_Paul_McKee_Philip
+C:   000000F3  C$c8051_SDCC.h$66$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   000000F3  G$UART0_Init$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   000000F3  _UART0_Init                        LITEC_HW10_Paul_McKee_Philip
+C:   000000F6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000F6  C$c8051_SDCC.h$67$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   000000F9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000F9  C$c8051_SDCC.h$68$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   000000FC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000FC  C$c8051_SDCC.h$69$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   000000FE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000000FE  C$c8051_SDCC.h$70$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   00000101  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000101  C$c8051_SDCC.h$71$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   00000104  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000104  C$c8051_SDCC.h$73$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   00000106  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000106  C$c8051_SDCC.h$74$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   00000109  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000109  C$c8051_SDCC.h$75$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   00000109  XG$UART0_Init$0$0                  LITEC_HW10_Paul_McKee_Philip
+C:   0000010A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000010A  C$c8051_SDCC.h$83$1$4              LITEC_HW10_Paul_McKee_Philip
+C:   0000010A  C$c8051_SDCC.h$85$1$6              LITEC_HW10_Paul_McKee_Philip
+C:   0000010A  G$Sys_Init$0$0                     LITEC_HW10_Paul_McKee_Philip
+C:   0000010A  _Sys_Init                          LITEC_HW10_Paul_McKee_Philip
+C:   0000010D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000010D  C$c8051_SDCC.h$86$1$6              LITEC_HW10_Paul_McKee_Philip
+C:   00000110  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000110  C$c8051_SDCC.h$88$1$6              LITEC_HW10_Paul_McKee_Philip
+C:   00000113  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000113  C$c8051_SDCC.h$89$1$6              LITEC_HW10_Paul_McKee_Philip
+C:   00000116  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000116  C$c8051_SDCC.h$91$1$6              LITEC_HW10_Paul_McKee_Philip
+C:   00000119  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000119  C$c8051_SDCC.h$92$1$6              LITEC_HW10_Paul_McKee_Philip
+C:   0000011C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000011C  C$c8051_SDCC.h$93$1$6              LITEC_HW10_Paul_McKee_Philip
+C:   0000011C  XG$Sys_Init$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   0000011D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000011D  C$c8051_SDCC.h$98$1$6              LITEC_HW10_Paul_McKee_Philip
+C:   0000011D  G$putchar$0$0                      LITEC_HW10_Paul_McKee_Philip
+C:   0000011D  _putchar                           LITEC_HW10_Paul_McKee_Philip
+C:   0000011F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000011F  C$c8051_SDCC.h$100$1$8             LITEC_HW10_Paul_McKee_Philip
+C:   0000011F  C$c8051_SDCC.h$101$1$8             LITEC_HW10_Paul_McKee_Philip
+C:   00000122  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000124  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000124  C$c8051_SDCC.h$102$1$8             LITEC_HW10_Paul_McKee_Philip
+C:   00000126  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000126  C$c8051_SDCC.h$103$1$8             LITEC_HW10_Paul_McKee_Philip
+C:   00000126  XG$putchar$0$0                     LITEC_HW10_Paul_McKee_Philip
+C:   00000127  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000127  C$c8051_SDCC.h$108$1$8             LITEC_HW10_Paul_McKee_Philip
+C:   00000127  C$c8051_SDCC.h$111$1$10            LITEC_HW10_Paul_McKee_Philip
+C:   00000127  C$c8051_SDCC.h$112$1$10            LITEC_HW10_Paul_McKee_Philip
+C:   00000127  G$getchar$0$0                      LITEC_HW10_Paul_McKee_Philip
+C:   0000012A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000012C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000012C  C$c8051_SDCC.h$113$1$10            LITEC_HW10_Paul_McKee_Philip
+C:   0000012F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000012F  C$c8051_SDCC.h$114$1$10            LITEC_HW10_Paul_McKee_Philip
+C:   00000132  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000132  C$c8051_SDCC.h$115$1$10            LITEC_HW10_Paul_McKee_Philip
+C:   00000135  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000135  C$c8051_SDCC.h$116$1$10            LITEC_HW10_Paul_McKee_Philip
+C:   00000135  XG$getchar$0$0                     LITEC_HW10_Paul_McKee_Philip
+C:   00000136  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000136  C$c8051_SDCC.h$121$1$10            LITEC_HW10_Paul_McKee_Philip
+C:   00000136  C$c8051_SDCC.h$124$1$12            LITEC_HW10_Paul_McKee_Philip
+C:   00000136  G$getchar_nw$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   00000136  _getchar_nw                        LITEC_HW10_Paul_McKee_Philip
+C:   00000139  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000013C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000013E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000013E  C$c8051_SDCC.h$127$2$13            LITEC_HW10_Paul_McKee_Philip
+C:   00000140  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000140  C$c8051_SDCC.h$128$2$13            LITEC_HW10_Paul_McKee_Philip
+C:   00000143  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000143  C$c8051_SDCC.h$129$2$13            LITEC_HW10_Paul_McKee_Philip
+C:   00000146  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000146  C$c8051_SDCC.h$130$2$13            LITEC_HW10_Paul_McKee_Philip
+C:   00000149  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000149  C$c8051_SDCC.h$132$1$12            LITEC_HW10_Paul_McKee_Philip
+C:   00000149  XG$getchar_nw$0$0                  LITEC_HW10_Paul_McKee_Philip
+C:   0000014A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000014A  C$i2c.h$81$1$12                    LITEC_HW10_Paul_McKee_Philip
+C:   0000014A  G$lcd_print$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   0000014A  _lcd_print                         LITEC_HW10_Paul_McKee_Philip
+C:   0000014C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000014F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000014F  C$i2c.h$87$1$76                    LITEC_HW10_Paul_McKee_Philip
+C:   00000151  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000153  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000154  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000156  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000157  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000159  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000015A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000015C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000015F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000161  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000164  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000166  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000168  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000016A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000016A  C$i2c.h$89$2$77                    LITEC_HW10_Paul_McKee_Philip
+C:   0000016C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000016E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000016F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000171  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000171  C$i2c.h$90$1$76                    LITEC_HW10_Paul_McKee_Philip
+C:   00000173  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000175  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000176  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000178  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000179  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000017B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000017C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000017E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000181  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000184  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000187  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000187  C$i2c.h$93$1$76                    LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000018A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000018D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000190  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000192  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000194  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000195  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000196  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000197  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000199  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000199  C$i2c.h$96$2$79                    LITEC_HW10_Paul_McKee_Philip
+C:   0000019A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000019C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000019D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000019E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001A0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001A1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001A3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001A5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001A6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001A7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001AA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001AC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001AE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001B0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001B1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001B1  C$i2c.h$94$1$76                    LITEC_HW10_Paul_McKee_Philip
+C:   000001B2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001B4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001B4  C$i2c.h$99$1$76                    LITEC_HW10_Paul_McKee_Philip
+C:   000001B7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001BA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001BD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001C0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001C2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001C5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001C8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001CA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001CA  C$i2c.h$100$1$76                   LITEC_HW10_Paul_McKee_Philip
+C:   000001CA  XG$lcd_print$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   000001CB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001CB  C$i2c.h$103$1$76                   LITEC_HW10_Paul_McKee_Philip
+C:   000001CB  C$i2c.h$105$1$76                   LITEC_HW10_Paul_McKee_Philip
+C:   000001CB  G$lcd_clear$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   000001CB  _lcd_clear                         LITEC_HW10_Paul_McKee_Philip
+C:   000001CE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001CE  C$i2c.h$107$1$80                   LITEC_HW10_Paul_McKee_Philip
+C:   000001D0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001D2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001D4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001D7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001DA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001DD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001E0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001E3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001E6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001E9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001EB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001EB  C$i2c.h$109$1$80                   LITEC_HW10_Paul_McKee_Philip
+C:   000001EE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001EE  C$i2c.h$110$1$80                   LITEC_HW10_Paul_McKee_Philip
+C:   000001F1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001F4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001F7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001FA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000001FD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000200  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000203  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000203  C$i2c.h$111$1$80                   LITEC_HW10_Paul_McKee_Philip
+C:   00000203  XG$lcd_clear$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   00000204  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000204  C$i2c.h$114$1$80                   LITEC_HW10_Paul_McKee_Philip
+C:   00000204  C$i2c.h$118$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   00000204  G$read_keypad$0$0                  LITEC_HW10_Paul_McKee_Philip
+C:   00000204  _read_keypad                       LITEC_HW10_Paul_McKee_Philip
+C:   00000207  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000020A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000020D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000210  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000213  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000216  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000219  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000219  C$i2c.h$119$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   0000021B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000021E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000221  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000223  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000225  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000227  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000227  C$i2c.h$123$2$82                   LITEC_HW10_Paul_McKee_Philip
+C:   0000022A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000022C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000022E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000230  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000232  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000233  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000234  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000235  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000236  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000237  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000238  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000023B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000023D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000023F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000240  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000242  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000243  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000245  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000246  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000247  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000249  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000249  C$i2c.h$124$2$82                   LITEC_HW10_Paul_McKee_Philip
+C:   0000024B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000024C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000024E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000250  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000250  C$i2c.h$121$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   00000252  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000254  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000256  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000258  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000025A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000025A  C$i2c.h$127$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   0000025C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000025D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000260  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000263  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000265  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000265  C$i2c.h$129$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   00000266  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000269  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000026C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000026E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000026E  C$i2c.h$131$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   0000026F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000272  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000275  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000277  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000277  C$i2c.h$133$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   00000278  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000027B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000027E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000280  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000280  C$i2c.h$135$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   00000283  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000283  C$i2c.h$136$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   00000283  XG$read_keypad$0$0                 LITEC_HW10_Paul_McKee_Philip
+C:   00000284  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000284  C$i2c.h$148$1$81                   LITEC_HW10_Paul_McKee_Philip
+C:   00000284  G$kpd_input$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   00000284  _kpd_input                         LITEC_HW10_Paul_McKee_Philip
+C:   00000286  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000286  C$i2c.h$153$1$84                   LITEC_HW10_Paul_McKee_Philip
+C:   00000286  C$i2c.h$156$1$84                   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000287  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000288  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000289  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000028A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000028C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000028E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000290  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000292  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000294  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000296  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000298  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000029A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000029C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000029F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002A1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002A3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002A5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002A7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002A9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002A9  C$i2c.h$158$1$84                   LITEC_HW10_Paul_McKee_Philip
+C:   000002AB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002AD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002AF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002B1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002B2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002B4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002B6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002B8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002B9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002BB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002BD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002BF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002C0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002C2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002C4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002C6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002C7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002C9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002CB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002CD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002CE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002D0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002D2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002D4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002D6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002D8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002DA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002DC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002DF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002E1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002E3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000002E5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002E5  C$i2c.h$160$1$84                   LITEC_HW10_Paul_McKee_Philip
+C:   000002E8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002EB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002EC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002EF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002F1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002F3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002F3  C$i2c.h$166$3$87                   LITEC_HW10_Paul_McKee_Philip
+C:   000002F5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002F7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002F9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002FB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000002FE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000300  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000302  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000304  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000306  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000308  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000030B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000030D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000310  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000313  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000314  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000316  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000318  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000031A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000031C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000031F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000321  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000323  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000325  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000327  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000327  C$i2c.h$167$2$85                   LITEC_HW10_Paul_McKee_Philip
+C:   0000032A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000032A  C$i2c.h$169$3$86                   LITEC_HW10_Paul_McKee_Philip
+C:   0000032C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000032E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000331  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000333  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000335  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000337  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000033A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000033D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000033E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000340  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000342  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000344  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000347  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000349  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000034B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000034D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000034D  C$i2c.h$170$3$86                   LITEC_HW10_Paul_McKee_Philip
+C:   0000034F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000351  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000354  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000354  C$i2c.h$174$3$87                   LITEC_HW10_Paul_McKee_Philip
+C:   00000355  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000356  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000357  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000359  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000035A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000035C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000035E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000360  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000362  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000364  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000366  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000368  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000036A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000036C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000036E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000370  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000372  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000374  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000376  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000379  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000037B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000037D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000037F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000381  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000383  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000385  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000387  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000389  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000389  C$i2c.h$175$1$84                   LITEC_HW10_Paul_McKee_Philip
+C:   0000038B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000038D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000390  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000392  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000394  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000396  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000399  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000039B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000039D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000039F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003A1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003A3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003A5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003A6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003A7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003A8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000003A9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003AA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003AB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003AC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003AE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003AF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003B0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003B2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003B3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003B3  C$i2c.h$176$3$87                   LITEC_HW10_Paul_McKee_Philip
+C:   000003B5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003B7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003B9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003BB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003BE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003C0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003C2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003C4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003C6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003C8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003C9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003CC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003CF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003D0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003D2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003D4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003D6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003D8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003DA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003DD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003DF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003E1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003E3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003E5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003E7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003E7  C$i2c.h$164$1$84                   LITEC_HW10_Paul_McKee_Philip
+C:   000003E8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003E9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003EA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003EC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003EE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003F0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003F3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003F3  C$i2c.h$179$1$84                   LITEC_HW10_Paul_McKee_Philip
+C:   000003F5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003F7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003F7  C$i2c.h$180$1$84                   LITEC_HW10_Paul_McKee_Philip
+C:   000003F7  XG$kpd_input$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   000003F8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003F8  C$i2c.h$189$1$84                   LITEC_HW10_Paul_McKee_Philip
+C:   000003F8  G$delay_time$0$0                   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 40.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000003F8  _delay_time                        LITEC_HW10_Paul_McKee_Philip
+C:   000003FA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003FC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003FE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003FF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000003FF  C$i2c.h$192$1$89                   LITEC_HW10_Paul_McKee_Philip
+C:   00000401  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000403  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000405  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000407  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000408  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000409  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000040A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000040B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000040C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000040D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000040E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000040F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000410  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000412  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000413  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000416  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000417  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000041A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000041B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000041E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000041F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000421  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000421  C$i2c.h$193$1$89                   LITEC_HW10_Paul_McKee_Philip
+C:   00000421  XG$delay_time$0$0                  LITEC_HW10_Paul_McKee_Philip
+C:   00000422  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000422  C$i2c.h$196$1$89                   LITEC_HW10_Paul_McKee_Philip
+C:   00000422  C$i2c.h$198$1$91                   LITEC_HW10_Paul_McKee_Philip
+C:   00000422  G$i2c_start$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   00000422  _i2c_start                         LITEC_HW10_Paul_McKee_Philip
+C:   00000425  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000425  C$i2c.h$199$1$91                   LITEC_HW10_Paul_McKee_Philip
+C:   00000427  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000427  C$i2c.h$200$1$91                   LITEC_HW10_Paul_McKee_Philip
+C:   0000042A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000042A  C$i2c.h$201$1$91                   LITEC_HW10_Paul_McKee_Philip
+C:   0000042C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000042C  C$i2c.h$202$1$91                   LITEC_HW10_Paul_McKee_Philip
+C:   0000042E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000042E  C$i2c.h$203$1$91                   LITEC_HW10_Paul_McKee_Philip
+C:   0000042E  XG$i2c_start$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   0000042F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000042F  C$i2c.h$206$1$91                   LITEC_HW10_Paul_McKee_Philip
+C:   0000042F  G$i2c_write$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   0000042F  _i2c_write                         LITEC_HW10_Paul_McKee_Philip
+C:   00000432  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 41.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000432  C$i2c.h$209$1$93                   LITEC_HW10_Paul_McKee_Philip
+C:   00000432  C$i2c.h$210$1$93                   LITEC_HW10_Paul_McKee_Philip
+C:   00000435  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000437  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000437  C$i2c.h$211$1$93                   LITEC_HW10_Paul_McKee_Philip
+C:   00000437  XG$i2c_write$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   00000438  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000438  C$i2c.h$214$1$93                   LITEC_HW10_Paul_McKee_Philip
+C:   00000438  G$i2c_write_and_stop$0$0           LITEC_HW10_Paul_McKee_Philip
+C:   00000438  _i2c_write_and_stop                LITEC_HW10_Paul_McKee_Philip
+C:   0000043B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000043B  C$i2c.h$217$1$95                   LITEC_HW10_Paul_McKee_Philip
+C:   0000043D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000043D  C$i2c.h$218$1$95                   LITEC_HW10_Paul_McKee_Philip
+C:   0000043D  C$i2c.h$219$1$95                   LITEC_HW10_Paul_McKee_Philip
+C:   00000440  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000442  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000442  C$i2c.h$220$1$95                   LITEC_HW10_Paul_McKee_Philip
+C:   00000442  XG$i2c_write_and_stop$0$0          LITEC_HW10_Paul_McKee_Philip
+C:   00000443  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000443  C$i2c.h$223$1$95                   LITEC_HW10_Paul_McKee_Philip
+C:   00000443  C$i2c.h$226$1$97                   LITEC_HW10_Paul_McKee_Philip
+C:   00000443  G$i2c_read$0$0                     LITEC_HW10_Paul_McKee_Philip
+C:   00000443  _i2c_read                          LITEC_HW10_Paul_McKee_Philip
+C:   00000446  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000446  C$i2c.h$227$1$97                   LITEC_HW10_Paul_McKee_Philip
+C:   00000449  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000449  C$i2c.h$228$1$97                   LITEC_HW10_Paul_McKee_Philip
+C:   0000044B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000044B  C$i2c.h$229$1$97                   LITEC_HW10_Paul_McKee_Philip
+C:   0000044B  C$i2c.h$230$1$97                   LITEC_HW10_Paul_McKee_Philip
+C:   0000044B  XG$i2c_read$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   0000044C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000044C  C$i2c.h$233$1$97                   LITEC_HW10_Paul_McKee_Philip
+C:   0000044C  C$i2c.h$236$1$99                   LITEC_HW10_Paul_McKee_Philip
+C:   0000044C  G$i2c_read_and_stop$0$0            LITEC_HW10_Paul_McKee_Philip
+C:   0000044C  _i2c_read_and_stop                 LITEC_HW10_Paul_McKee_Philip
+C:   0000044F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000044F  C$i2c.h$237$1$99                   LITEC_HW10_Paul_McKee_Philip
+C:   00000451  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000451  C$i2c.h$238$1$99                   LITEC_HW10_Paul_McKee_Philip
+C:   00000453  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000453  C$i2c.h$239$1$99                   LITEC_HW10_Paul_McKee_Philip
+C:   00000455  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000455  C$i2c.h$240$1$99                   LITEC_HW10_Paul_McKee_Philip
+C:   00000455  C$i2c.h$241$1$99                   LITEC_HW10_Paul_McKee_Philip
+C:   00000458  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000045A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000045A  C$i2c.h$242$1$99                   LITEC_HW10_Paul_McKee_Philip
+C:   0000045C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000045C  C$i2c.h$243$1$99                   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 42.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000045C  XG$i2c_read_and_stop$0$0           LITEC_HW10_Paul_McKee_Philip
+C:   0000045D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000045D  C$i2c.h$246$1$99                   LITEC_HW10_Paul_McKee_Philip
+C:   0000045D  G$i2c_write_data$0$0               LITEC_HW10_Paul_McKee_Philip
+C:   0000045D  _i2c_write_data                    LITEC_HW10_Paul_McKee_Philip
+C:   0000045F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000045F  C$i2c.h$250$1$101                  LITEC_HW10_Paul_McKee_Philip
+C:   00000461  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000464  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000466  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000466  C$i2c.h$251$1$101                  LITEC_HW10_Paul_McKee_Philip
+C:   00000468  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000469  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000046B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000046E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000046E  C$i2c.h$252$1$101                  LITEC_HW10_Paul_McKee_Philip
+C:   00000471  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000474  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000476  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000478  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000047A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000047B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000047D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000047E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000047F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000481  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000482  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000484  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000486  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000487  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000488  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000489  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000048A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000048C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000048E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000491  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000493  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000495  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000495  C$i2c.h$254$1$101                  LITEC_HW10_Paul_McKee_Philip
+C:   00000496  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000498  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000499  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000049A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000049C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000049D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000049F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004A1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004A3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004A5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004A8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004AA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 43.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000004AC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004AF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004B1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004B1  C$i2c.h$253$1$101                  LITEC_HW10_Paul_McKee_Philip
+C:   000004B2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004B4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004B4  C$i2c.h$255$1$101                  LITEC_HW10_Paul_McKee_Philip
+C:   000004B5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004B8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004B9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004BA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004BC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004BD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004BE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004C0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004C1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004C3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004C5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004C7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004C9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004CC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004CE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004D1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004D1  C$i2c.h$256$1$101                  LITEC_HW10_Paul_McKee_Philip
+C:   000004D1  XG$i2c_write_data$0$0              LITEC_HW10_Paul_McKee_Philip
+C:   000004D2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004D2  C$i2c.h$259$1$101                  LITEC_HW10_Paul_McKee_Philip
+C:   000004D2  G$i2c_read_data$0$0                LITEC_HW10_Paul_McKee_Philip
+C:   000004D2  _i2c_read_data                     LITEC_HW10_Paul_McKee_Philip
+C:   000004D4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004D4  C$i2c.h$262$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   000004D6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004D9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004DB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004DB  C$i2c.h$263$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   000004DD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004DF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004E0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004E2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004E4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004E7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004E7  C$i2c.h$264$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   000004EA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004ED  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004ED  C$i2c.h$265$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   000004F0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004F2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004F2  C$i2c.h$266$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   000004F4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004F5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004F7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 44.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000004FA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004FC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000004FE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000500  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000501  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000503  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000504  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000505  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000507  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000508  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000050A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000050C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000050D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000050E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000050F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000510  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000512  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000514  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000517  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000519  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000051B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000051B  C$i2c.h$269$2$104                  LITEC_HW10_Paul_McKee_Philip
+C:   0000051D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000051D  C$i2c.h$270$2$104                  LITEC_HW10_Paul_McKee_Philip
+C:   0000051E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000520  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000521  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000522  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000524  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000525  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000527  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000529  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000052B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000052D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000052F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000532  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000534  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000536  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000538  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000053A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000053C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000053E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000540  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000542  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000543  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000546  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000546  C$i2c.h$267$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   00000547  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000549  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000549  C$i2c.h$272$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   0000054B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 45.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000054B  C$i2c.h$273$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   0000054C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000054F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000550  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000551  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000553  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000554  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000555  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000557  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000558  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000055A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000055C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000055E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000560  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000563  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000565  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000567  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000569  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000056B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000056D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000056F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000571  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000572  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000575  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000575  C$i2c.h$274$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   00000575  XG$i2c_read_data$0$0               LITEC_HW10_Paul_McKee_Philip
+C:   00000576  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000576  C$i2c.h$283$1$103                  LITEC_HW10_Paul_McKee_Philip
+C:   00000576  C$i2c.h$287$1$106                  LITEC_HW10_Paul_McKee_Philip
+C:   00000576  G$Accel_Init$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   00000576  _Accel_Init                        LITEC_HW10_Paul_McKee_Philip
+C:   00000579  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000579  C$i2c.h$289$1$106                  LITEC_HW10_Paul_McKee_Philip
+C:   0000057C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000057F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000582  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000585  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000588  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000058B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000058E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000058E  C$i2c.h$290$1$106                  LITEC_HW10_Paul_McKee_Philip
+C:   00000591  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000591  C$i2c.h$292$1$106                  LITEC_HW10_Paul_McKee_Philip
+C:   00000594  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000597  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000059A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000059D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005A0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005A3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005A6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005A6  C$i2c.h$293$1$106                  LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 46.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000005A9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005A9  C$i2c.h$294$1$106                  LITEC_HW10_Paul_McKee_Philip
+C:   000005AC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005AF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005B2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005B5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005B8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005BB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005BE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005BE  C$i2c.h$298$1$106                  LITEC_HW10_Paul_McKee_Philip
+C:   000005BE  XG$Accel_Init$0$0                  LITEC_HW10_Paul_McKee_Philip
+C:   000005BF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005BF  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005BF  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005BF  G$main$0$0                         LITEC_HW10_Paul_McKee_Philip
+C:   000005BF  _main                              LITEC_HW10_Paul_McKee_Philip
+C:   000005C2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005C2  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005C5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005C8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005C8  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005CB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005CB  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005CE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005CE  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005D1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005D1  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005D4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005D4  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005D6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005D8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005DA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005DC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005DE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005E0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005E3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005E5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005E7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005E9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005E9  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005E9  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005EA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005EC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005EE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005EE  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005F1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005F4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005F4  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005F6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005F8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005FA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 47.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000005FC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000005FE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000600  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000603  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000605  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000607  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000609  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000609  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000060C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000060F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000612  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000612  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000614  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000616  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000618  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000061A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000061C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000061E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000621  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000623  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000625  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000627  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000627  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000062A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000062C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000062E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000062E  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000630  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000632  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000634  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000636  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000638  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000063A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000063D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000063F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000641  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000643  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000643  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000646  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000648  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000064A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000064D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000064D  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000064F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000651  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000653  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000655  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000657  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000659  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000065C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000065E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 48.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000660  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000662  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000662  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000665  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000665  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000667  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000669  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000066B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000066D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000066F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000671  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000674  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000676  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000678  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000067A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000067A  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000067D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000067D  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000067E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000680  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000682  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000684  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000686  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000688  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000068B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000068D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000068D  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000068D  XG$main$0$0                        LITEC_HW10_Paul_McKee_Philip
+C:   0000068E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000068E  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000068E  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000068E  G$print_output$0$0                 LITEC_HW10_Paul_McKee_Philip
+C:   0000068E  _print_output                      LITEC_HW10_Paul_McKee_Philip
+C:   00000690  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000692  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000694  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000696  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000698  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000069A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000069C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000069E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006A0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006A2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006A5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006A7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006A9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006AB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006AB  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006AD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006AF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006B1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 49.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000006B3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006B5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006B7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006BA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006BC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006BE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006C0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006C0  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006C2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006C4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006C6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006C8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006CA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006CC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006CE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006D0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006D3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006D5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006D7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006D9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006D9  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006DB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006DD  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006DF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006E1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006E3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006E5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006E8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006EA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006EC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006EE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006EE  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006F0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006F2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006F4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006F6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006F8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006FA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006FC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000006FE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000700  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000702  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000705  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000707  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000709  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000070B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000070B  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000070D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000070F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000711  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000713  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 50.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000715  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000717  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000071A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000071C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000071E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000720  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000720  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000722  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000724  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000726  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000728  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000072A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000072C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000072E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000730  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000733  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000735  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000737  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000739  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000739  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000073B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000073D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000073F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000741  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000743  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000745  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000748  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000074A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000074C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000074E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000074E  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000750  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000752  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000754  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000756  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000758  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000075A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000075D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000075F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000761  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000763  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000763  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000763  XG$print_output$0$0                LITEC_HW10_Paul_McKee_Philip
+C:   00000764  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000764  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000764  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000764  G$ReadCompassChar$0$0              LITEC_HW10_Paul_McKee_Philip
+C:   00000764  _ReadCompassChar                   LITEC_HW10_Paul_McKee_Philip
+C:   00000767  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000076A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000076D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 51.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000770  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000773  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000776  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000779  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000779  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000077C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000077C  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000077C  XG$ReadCompassChar$0$0             LITEC_HW10_Paul_McKee_Philip
+C:   0000077D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000077D  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000077D  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000077D  G$ReadCompassInt$0$0               LITEC_HW10_Paul_McKee_Philip
+C:   0000077D  _ReadCompassInt                    LITEC_HW10_Paul_McKee_Philip
+C:   00000780  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000783  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000786  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000789  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000078C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000078F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000792  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000792  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000794  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000796  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000798  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000079A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000079B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000079D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000079E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007A0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007A2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007A4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007A4  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007A4  XG$ReadCompassInt$0$0              LITEC_HW10_Paul_McKee_Philip
+C:   000007A5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007A5  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007A5  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007A5  G$ReadRangerChar0$0$0              LITEC_HW10_Paul_McKee_Philip
+C:   000007A5  _ReadRangerChar0                   LITEC_HW10_Paul_McKee_Philip
+C:   000007A8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007AB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007AE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007B1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007B4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007B7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007BA  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007BA  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007BC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007BE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007C0  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007C2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007C2  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 52.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000007C2  XG$ReadRangerChar0$0$0             LITEC_HW10_Paul_McKee_Philip
+C:   000007C3  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007C3  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007C3  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007C3  G$ReadRangerChar1$0$0              LITEC_HW10_Paul_McKee_Philip
+C:   000007C3  _ReadRangerChar1                   LITEC_HW10_Paul_McKee_Philip
+C:   000007C6  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007C9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007CC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007CF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007D2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007D5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007D8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007D8  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007DB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007DB  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007DB  XG$ReadRangerChar1$0$0             LITEC_HW10_Paul_McKee_Philip
+C:   000007DC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007DC  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007DC  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007DC  G$start_ping$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   000007DC  _start_ping                        LITEC_HW10_Paul_McKee_Philip
+C:   000007DF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007DF  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007E2  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007E5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007E8  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007EB  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007EE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007F1  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007F4  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007F4  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007F4  XG$start_ping$0$0                  LITEC_HW10_Paul_McKee_Philip
+C:   000007F5  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007F5  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007F5  G$PCA_ISR$0$0                      LITEC_HW10_Paul_McKee_Philip
+C:   000007F5  _PCA_ISR                           LITEC_HW10_Paul_McKee_Philip
+C:   000007F7  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007F9  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007F9  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007FC  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007FC  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007FE  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   000007FF  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000802  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000804  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000804  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000806  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000806  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000808  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000808  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 53.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000080A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000080C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000080E  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000080E  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000811  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000811  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000814  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000814  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000816  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000818  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000081A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000081A  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000081D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000081D  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000820  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000820  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000822  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000822  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000825  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000828  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000828  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000082B  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000082D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000082F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000082F  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000082F  XG$PCA_ISR$0$0                     LITEC_HW10_Paul_McKee_Philip
+C:   00000830  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000830  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000830  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000830  G$SMB_Init$0$0                     LITEC_HW10_Paul_McKee_Philip
+C:   00000830  _SMB_Init                          LITEC_HW10_Paul_McKee_Philip
+C:   00000833  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000833  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000835  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000835  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000835  XG$SMB_Init$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   00000836  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000836  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000836  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000836  G$PCA_Init$0$0                     LITEC_HW10_Paul_McKee_Philip
+C:   00000836  _PCA_Init                          LITEC_HW10_Paul_McKee_Philip
+C:   00000839  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000839  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000083C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000083C  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000083F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000083F  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000842  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000842  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000844  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000844  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+ASxxxx Linker V03.00 + NoICE + sdld,  page 54.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D3    00000EF1 =        3825. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000844  XG$PCA_Init$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   00000845  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000845  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000845  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000845  G$Port_Init$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   00000845  _Port_Init                         LITEC_HW10_Paul_McKee_Philip
+C:   00000848  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000848  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000084A  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000084C  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000084D  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000084F  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000084F  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   0000084F  XG$Port_Init$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   00000850  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000850  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000850  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000850  G$XBR0_Init$0$0                    LITEC_HW10_Paul_McKee_Philip
+C:   00000850  _XBR0_Init                         LITEC_HW10_Paul_McKee_Philip
+C:   00000853  A$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000853  C$LITEC_HW10_Paul_McKee_Philip_H   LITEC_HW10_Paul_McKee_Philip
+C:   00000853  XG$XBR0_Init$0$0                   LITEC_HW10_Paul_McKee_Philip
+C:   00000854  __gptrput                          _gptrput
+C:   0000086F  __mulint                           _mulint
+C:   0000086F  __mulint_dummy                     _mulint
+C:   000008FC  _vsprintf                          sprintf
+C:   00000939  _sprintf                           sprintf
+C:   00000992  _vprintf                           vprintf
+C:   000009AB  _printf                            vprintf
+C:   00000A82  __print_format                     printf_large
+C:   00000F8C  _strlen                            _strlen
+C:   00000FA4  __gptrget                          _gptrget
+C:   00000FC0  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 55.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               00000FC4    000002F1 =         753. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000FC4  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00000FDA  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00000FEA  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00000FED  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00001016  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00001040  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00001069  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00001092  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   000010B7  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   000010E5  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00001123  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00001150  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00001193  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   000011C0  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   000011FD  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   0000122A  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+C:   00001272  FLITEC_HW10_Paul_McKee_Philip_HO   LITEC_HW10_Paul_McKee_Philip
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 56.
+
+Files Linked                              [ module(s) ]
+
+C:\Users\hoddip\Documents\GitHub\LightTechs\HomeWork\HW10\LITEC_HW10_Paul_McKee_Philip_HODDINOTT_BRIAN.rel
+                                          [  ]
+
+
+Libraries Linked                          [ object file ]
+
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxinit.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _gptrput.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libint.lib
+                                          [ _mulint.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ sprintf.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _bp.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ vprintf.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ printf_large.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _strlen.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtstart.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _gptrget.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 57.
+
+User Base Address Definitions
+
+HOME = 0x0000
+XSEG = 0x0001
+PSEG = 0x0001
+ISEG = 0x0000
+BSEG = 0x0000
+
+
