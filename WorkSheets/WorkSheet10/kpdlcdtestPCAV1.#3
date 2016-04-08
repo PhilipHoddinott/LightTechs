@@ -53,15 +53,15 @@ void main(void) {
 
     Counts = 0;
     while (Counts < 1); // Wait a long time (1s) for keypad & LCD to initialize
-	printf("cler ererro\n");
+	printf("\rclear error\n");
     lcd_clear();
 	printf("\rif you see this code works\n");//IF THESE Errors do not show up, you must change your code and tur nthe car on/off
     lcd_print("Calibration:\nHello world!\nPhilip Hoddinott\wrote this code");
     while (1){
-       //normal_operation();
-       //two_key_input();
-       //kpd_input_one();
-       kpd_input_zero();
+       //normal_operation();	// read_keypad()
+       //two_key_input();	// read_keypad() but twice
+       kpd_input_one();	//kpd_input(1)
+       //kpd_input_zero();	//kpd_input(0)
     }//end while
 }//end main
 
@@ -82,6 +82,7 @@ void normal_operation(void){
                 // better approach is to wait for a -1 between keystrokes.
         lcd_clear();
         lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
+		pause();
         printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
         if(keypad == 0){
             printf("   **Wire Connection/XBR0 Error**   ");
@@ -101,7 +102,8 @@ void kpd_input_zero(void){
                 // A longer delay will reduce multiple keypad reads but a
                 // better approach is to wait for a -1 between keystrokes.
         lcd_clear();
-        //lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
+        lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
+		pause();
         printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
         if(keypad == 0){
             printf("   **Wire Connection/XBR0 Error**   ");
@@ -121,6 +123,7 @@ void kpd_input_one(void){
                 // A longer delay will reduce multiple keypad reads but a
                 // better approach is to wait for a -1 between keystrokes.
         lcd_clear();
+		pause();
         lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
         printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
         if(keypad == 0){

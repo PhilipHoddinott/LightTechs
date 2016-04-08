@@ -1,7 +1,7 @@
                                       1 ;--------------------------------------------------------
                                       2 ; File Created by SDCC : free open source ANSI-C Compiler
                                       3 ; Version 3.5.0 #9253 (Jun 20 2015) (MINGW64)
-                                      4 ; This file was generated Tue Apr 05 16:57:19 2016
+                                      4 ; This file was generated Fri Apr 08 14:21:08 2016
                                       5 ;--------------------------------------------------------
                                       6 	.module kpdlcdtestPCAV1
                                       7 	.optsdcc -mmcs51 --model-small
@@ -1052,7 +1052,7 @@
       00003C                       1052 	.ds	7
       000043 32               [24] 1053 	reti
       000044                       1054 	.ds	7
-      00004B 02 08 FA         [24] 1055 	ljmp	_PCA_ISR
+      00004B 02 09 09         [24] 1055 	ljmp	_PCA_ISR
                                    1056 ;--------------------------------------------------------
                                    1057 ; global & static initialisations
                                    1058 ;--------------------------------------------------------
@@ -1319,7 +1319,7 @@
       000131 86 83            [24] 1319 	mov	dph,@r0
       000133 08               [12] 1320 	inc	r0
       000134 86 F0            [24] 1321 	mov	b,@r0
-      000136 12 10 94         [24] 1322 	lcall	_strlen
+      000136 12 10 A3         [24] 1322 	lcall	_strlen
       000139 E5 82            [12] 1323 	mov	a,dpl
       00013B 85 83 F0         [24] 1324 	mov	b,dph
       00013E 45 F0            [12] 1325 	orl	a,b
@@ -1344,12 +1344,12 @@
       000156 86 24            [24] 1344 	mov	(_vsprintf_PARM_2 + 2),@r0
       000158 90 00 01         [24] 1345 	mov	dptr,#_lcd_print_text_1_76
       00015B 75 F0 00         [24] 1346 	mov	b,#0x00
-      00015E 12 0A 04         [24] 1347 	lcall	_vsprintf
+      00015E 12 0A 13         [24] 1347 	lcall	_vsprintf
                            0000B4  1348 	C$i2c.h$93$1$76 ==.
                                    1349 ;	C:/Program Files/SDCC/bin/../include/mcs51/i2c.h:93: len = strlen(text);
       000161 90 00 01         [24] 1350 	mov	dptr,#_lcd_print_text_1_76
       000164 75 F0 00         [24] 1351 	mov	b,#0x00
-      000167 12 10 94         [24] 1352 	lcall	_strlen
+      000167 12 10 A3         [24] 1352 	lcall	_strlen
       00016A AE 82            [24] 1353 	mov	r6,dpl
                            0000BF  1354 	C$i2c.h$94$1$76 ==.
                                    1355 ;	C:/Program Files/SDCC/bin/../include/mcs51/i2c.h:94: for(i=0; i<len; i++)
@@ -1579,7 +1579,7 @@
       000264 70 1D            [24] 1579 	jnz	00102$
       000266 C0 06            [24] 1580 	push	ar6
       000268 C0 05            [24] 1581 	push	ar5
-      00026A 74 CC            [12] 1582 	mov	a,#___str_0
+      00026A 74 DB            [12] 1582 	mov	a,#___str_0
       00026C C0 E0            [24] 1583 	push	acc
       00026E 74 10            [12] 1584 	mov	a,#(___str_0 >> 8)
       000270 C0 E0            [24] 1585 	push	acc
@@ -1616,7 +1616,7 @@
       0002A5 C0 E0            [24] 1616 	push	acc
       0002A7 E4               [12] 1617 	clr	a
       0002A8 C0 E0            [24] 1618 	push	acc
-      0002AA 74 E2            [12] 1619 	mov	a,#___str_1
+      0002AA 74 F1            [12] 1619 	mov	a,#___str_1
       0002AC C0 E0            [24] 1620 	push	acc
       0002AE 74 10            [12] 1621 	mov	a,#(___str_1 >> 8)
       0002B0 C0 E0            [24] 1622 	push	acc
@@ -1708,9 +1708,9 @@
       00033E C0 02            [24] 1708 	push	ar2
       000340 C0 02            [24] 1709 	push	ar2
       000342 C0 04            [24] 1710 	push	ar4
-      000344 74 F2            [12] 1711 	mov	a,#___str_2
+      000344 74 01            [12] 1711 	mov	a,#___str_2
       000346 C0 E0            [24] 1712 	push	acc
-      000348 74 10            [12] 1713 	mov	a,#(___str_2 >> 8)
+      000348 74 11            [12] 1713 	mov	a,#(___str_2 >> 8)
       00034A C0 E0            [24] 1714 	push	acc
       00034C 74 80            [12] 1715 	mov	a,#0x80
       00034E C0 E0            [24] 1716 	push	acc
@@ -1731,7 +1731,7 @@
       00036A C0 04            [24] 1731 	push	ar4
       00036C C0 03            [24] 1732 	push	ar3
       00036E C0 02            [24] 1733 	push	ar2
-      000370 12 09 77         [24] 1734 	lcall	__mulint
+      000370 12 09 86         [24] 1734 	lcall	__mulint
       000373 A8 82            [24] 1735 	mov	r0,dpl
       000375 A9 83            [24] 1736 	mov	r1,dph
       000377 D0 02            [24] 1737 	pop	ar2
@@ -2058,7 +2058,7 @@
       000479 8A 82            [24] 2058 	mov	dpl,r2
       00047B 8B 83            [24] 2059 	mov	dph,r3
       00047D 8C F0            [24] 2060 	mov	b,r4
-      00047F 12 10 AC         [24] 2061 	lcall	__gptrget
+      00047F 12 10 BB         [24] 2061 	lcall	__gptrget
       000482 F5 82            [12] 2062 	mov	dpl,a
       000484 C0 07            [24] 2063 	push	ar7
       000486 12 04 09         [24] 2064 	lcall	_i2c_write
@@ -2084,7 +2084,7 @@
       00049D 8D 82            [24] 2084 	mov	dpl,r5
       00049F 8E 83            [24] 2085 	mov	dph,r6
       0004A1 8F F0            [24] 2086 	mov	b,r7
-      0004A3 12 10 AC         [24] 2087 	lcall	__gptrget
+      0004A3 12 10 BB         [24] 2087 	lcall	__gptrget
       0004A6 F5 82            [12] 2088 	mov	dpl,a
       0004A8 12 04 12         [24] 2089 	lcall	_i2c_write_and_stop
                            0003FE  2090 	C$i2c.h$256$1$101 ==.
@@ -2183,7 +2183,7 @@
       000518 8B 83            [24] 2183 	mov	dph,r3
       00051A 8C F0            [24] 2184 	mov	b,r4
       00051C E9               [12] 2185 	mov	a,r1
-      00051D 12 09 5C         [24] 2186 	lcall	__gptrput
+      00051D 12 09 6B         [24] 2186 	lcall	__gptrput
                            000473  2187 	C$i2c.h$267$1$103 ==.
                                    2188 ;	C:/Program Files/SDCC/bin/../include/mcs51/i2c.h:267: for(j = 0; j < num_bytes - 1; j++)
       000520 0F               [12] 2189 	inc	r7
@@ -2217,7 +2217,7 @@
       000547 8E 83            [24] 2217 	mov	dph,r6
       000549 8F F0            [24] 2218 	mov	b,r7
       00054B EC               [12] 2219 	mov	a,r4
-      00054C 12 09 5C         [24] 2220 	lcall	__gptrput
+      00054C 12 09 6B         [24] 2220 	lcall	__gptrput
                            0004A2  2221 	C$i2c.h$274$1$103 ==.
                            0004A2  2222 	XG$i2c_read_data$0$0 ==.
       00054F 22               [24] 2223 	ret
@@ -2287,29 +2287,29 @@
       000599 12 00 E4         [24] 2287 	lcall	_Sys_Init
                            0004EF  2288 	C$kpdlcdtestPCAV1.c$47$1$120 ==.
                                    2289 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:47: Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
-      00059C 12 09 42         [24] 2290 	lcall	_Port_Init
+      00059C 12 09 51         [24] 2290 	lcall	_Port_Init
                            0004F2  2291 	C$kpdlcdtestPCAV1.c$48$1$120 ==.
                                    2292 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:48: Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
-      00059F 12 09 46         [24] 2293 	lcall	_Interrupt_Init
+      00059F 12 09 55         [24] 2293 	lcall	_Interrupt_Init
                            0004F5  2294 	C$kpdlcdtestPCAV1.c$49$1$120 ==.
                                    2295 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:49: PCA_Init();
-      0005A2 12 09 4F         [24] 2296 	lcall	_PCA_Init
+      0005A2 12 09 5E         [24] 2296 	lcall	_PCA_Init
                            0004F8  2297 	C$kpdlcdtestPCAV1.c$50$1$120 ==.
                                    2298 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:50: SMB0_Init();
-      0005A5 12 09 56         [24] 2299 	lcall	_SMB0_Init
+      0005A5 12 09 65         [24] 2299 	lcall	_SMB0_Init
                            0004FB  2300 	C$kpdlcdtestPCAV1.c$51$1$120 ==.
                                    2301 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:51: putchar('\r');  // Dummy write to serial port
       0005A8 75 82 0D         [24] 2302 	mov	dpl,#0x0D
       0005AB 12 00 F7         [24] 2303 	lcall	_putchar
                            000501  2304 	C$kpdlcdtestPCAV1.c$52$1$120 ==.
                                    2305 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:52: printf("\nStart\r\n");
-      0005AE 74 F5            [12] 2306 	mov	a,#___str_3
+      0005AE 74 04            [12] 2306 	mov	a,#___str_3
       0005B0 C0 E0            [24] 2307 	push	acc
-      0005B2 74 10            [12] 2308 	mov	a,#(___str_3 >> 8)
+      0005B2 74 11            [12] 2308 	mov	a,#(___str_3 >> 8)
       0005B4 C0 E0            [24] 2309 	push	acc
       0005B6 74 80            [12] 2310 	mov	a,#0x80
       0005B8 C0 E0            [24] 2311 	push	acc
-      0005BA 12 0A B3         [24] 2312 	lcall	_printf
+      0005BA 12 0A C2         [24] 2312 	lcall	_printf
       0005BD 15 81            [12] 2313 	dec	sp
       0005BF 15 81            [12] 2314 	dec	sp
       0005C1 15 81            [12] 2315 	dec	sp
@@ -2329,13 +2329,13 @@
       0005D1 40 F5            [24] 2329 	jc	00101$
                            000526  2330 	C$kpdlcdtestPCAV1.c$56$1$120 ==.
                                    2331 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:56: printf("\rclear error\n");
-      0005D3 74 FE            [12] 2332 	mov	a,#___str_4
+      0005D3 74 0D            [12] 2332 	mov	a,#___str_4
       0005D5 C0 E0            [24] 2333 	push	acc
-      0005D7 74 10            [12] 2334 	mov	a,#(___str_4 >> 8)
+      0005D7 74 11            [12] 2334 	mov	a,#(___str_4 >> 8)
       0005D9 C0 E0            [24] 2335 	push	acc
       0005DB 74 80            [12] 2336 	mov	a,#0x80
       0005DD C0 E0            [24] 2337 	push	acc
-      0005DF 12 0A B3         [24] 2338 	lcall	_printf
+      0005DF 12 0A C2         [24] 2338 	lcall	_printf
       0005E2 15 81            [12] 2339 	dec	sp
       0005E4 15 81            [12] 2340 	dec	sp
       0005E6 15 81            [12] 2341 	dec	sp
@@ -2344,19 +2344,19 @@
       0005E8 12 01 A5         [24] 2344 	lcall	_lcd_clear
                            00053E  2345 	C$kpdlcdtestPCAV1.c$58$1$120 ==.
                                    2346 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:58: printf("\rif you see this code works\n");//IF THESE Errors do not show up, you must change your code and tur nthe car on/off
-      0005EB 74 0C            [12] 2347 	mov	a,#___str_5
+      0005EB 74 1B            [12] 2347 	mov	a,#___str_5
       0005ED C0 E0            [24] 2348 	push	acc
       0005EF 74 11            [12] 2349 	mov	a,#(___str_5 >> 8)
       0005F1 C0 E0            [24] 2350 	push	acc
       0005F3 74 80            [12] 2351 	mov	a,#0x80
       0005F5 C0 E0            [24] 2352 	push	acc
-      0005F7 12 0A B3         [24] 2353 	lcall	_printf
+      0005F7 12 0A C2         [24] 2353 	lcall	_printf
       0005FA 15 81            [12] 2354 	dec	sp
       0005FC 15 81            [12] 2355 	dec	sp
       0005FE 15 81            [12] 2356 	dec	sp
                            000553  2357 	C$kpdlcdtestPCAV1.c$59$1$120 ==.
                                    2358 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:59: lcd_print("Calibration:\nHello world!\nPhilip Hoddinott\wrote this code");
-      000600 74 29            [12] 2359 	mov	a,#___str_6
+      000600 74 38            [12] 2359 	mov	a,#___str_6
       000602 C0 E0            [24] 2360 	push	acc
       000604 74 11            [12] 2361 	mov	a,#(___str_6 >> 8)
       000606 C0 E0            [24] 2362 	push	acc
@@ -2367,887 +2367,902 @@
       000611 15 81            [12] 2367 	dec	sp
       000613 15 81            [12] 2368 	dec	sp
                            000568  2369 	C$kpdlcdtestPCAV1.c$60$1$120 ==.
-                                   2370 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:60: while (1){
-      000615                       2371 00105$:
-                           000568  2372 	C$kpdlcdtestPCAV1.c$64$2$121 ==.
-                                   2373 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:64: kpd_input_zero();
-      000615 12 06 98         [24] 2374 	lcall	_kpd_input_zero
-      000618 80 FB            [24] 2375 	sjmp	00105$
-                           00056D  2376 	C$kpdlcdtestPCAV1.c$66$1$120 ==.
-                           00056D  2377 	XG$main$0$0 ==.
-      00061A 22               [24] 2378 	ret
-                                   2379 ;------------------------------------------------------------
-                                   2380 ;Allocation info for local variables in function 'normal_operation'
-                                   2381 ;------------------------------------------------------------
-                                   2382 ;keypad                    Allocated to registers r7 
-                                   2383 ;------------------------------------------------------------
-                           00056E  2384 	G$normal_operation$0$0 ==.
-                           00056E  2385 	C$kpdlcdtestPCAV1.c$73$1$120 ==.
-                                   2386 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:73: void normal_operation(void){
-                                   2387 ;	-----------------------------------------
-                                   2388 ;	 function normal_operation
-                                   2389 ;	-----------------------------------------
-      00061B                       2390 _normal_operation:
-                           00056E  2391 	C$kpdlcdtestPCAV1.c$75$1$123 ==.
-                                   2392 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:75: keypad = read_keypad();
-      00061B 12 01 DE         [24] 2393 	lcall	_read_keypad
-      00061E AF 82            [24] 2394 	mov	r7,dpl
-                           000573  2395 	C$kpdlcdtestPCAV1.c$76$1$123 ==.
-                                   2396 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:76: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
-      000620 C0 07            [24] 2397 	push	ar7
-      000622 12 08 D8         [24] 2398 	lcall	_pause
-      000625 D0 07            [24] 2399 	pop	ar7
-                           00057A  2400 	C$kpdlcdtestPCAV1.c$79$1$123 ==.
-                                   2401 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:79: if (keypad != -1){   // keypad = -1 if no key is pressed
-      000627 BF FF 02         [24] 2402 	cjne	r7,#0xFF,00113$
-      00062A 80 6B            [24] 2403 	sjmp	00105$
-      00062C                       2404 00113$:
-                           00057F  2405 	C$kpdlcdtestPCAV1.c$83$2$124 ==.
-                                   2406 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:83: lcd_clear();
-      00062C C0 07            [24] 2407 	push	ar7
-      00062E 12 01 A5         [24] 2408 	lcall	_lcd_clear
-      000631 D0 07            [24] 2409 	pop	ar7
-                           000586  2410 	C$kpdlcdtestPCAV1.c$84$2$124 ==.
-                                   2411 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:84: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
-      000633 EF               [12] 2412 	mov	a,r7
-      000634 FD               [12] 2413 	mov	r5,a
-      000635 33               [12] 2414 	rlc	a
-      000636 95 E0            [12] 2415 	subb	a,acc
-      000638 FE               [12] 2416 	mov	r6,a
-      000639 C0 07            [24] 2417 	push	ar7
-      00063B C0 06            [24] 2418 	push	ar6
-      00063D C0 05            [24] 2419 	push	ar5
-      00063F C0 05            [24] 2420 	push	ar5
-      000641 C0 06            [24] 2421 	push	ar6
-      000643 C0 05            [24] 2422 	push	ar5
-      000645 C0 06            [24] 2423 	push	ar6
-      000647 74 63            [12] 2424 	mov	a,#___str_7
-      000649 C0 E0            [24] 2425 	push	acc
-      00064B 74 11            [12] 2426 	mov	a,#(___str_7 >> 8)
-      00064D C0 E0            [24] 2427 	push	acc
-      00064F 74 80            [12] 2428 	mov	a,#0x80
-      000651 C0 E0            [24] 2429 	push	acc
-      000653 12 01 24         [24] 2430 	lcall	_lcd_print
-      000656 E5 81            [12] 2431 	mov	a,sp
-      000658 24 F9            [12] 2432 	add	a,#0xf9
-      00065A F5 81            [12] 2433 	mov	sp,a
-      00065C D0 05            [24] 2434 	pop	ar5
-      00065E D0 06            [24] 2435 	pop	ar6
-                           0005B3  2436 	C$kpdlcdtestPCAV1.c$85$2$124 ==.
-                                   2437 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:85: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
-      000660 C0 05            [24] 2438 	push	ar5
-      000662 C0 06            [24] 2439 	push	ar6
-      000664 C0 05            [24] 2440 	push	ar5
-      000666 C0 06            [24] 2441 	push	ar6
-      000668 74 80            [12] 2442 	mov	a,#___str_8
-      00066A C0 E0            [24] 2443 	push	acc
-      00066C 74 11            [12] 2444 	mov	a,#(___str_8 >> 8)
-      00066E C0 E0            [24] 2445 	push	acc
-      000670 74 80            [12] 2446 	mov	a,#0x80
-      000672 C0 E0            [24] 2447 	push	acc
-      000674 12 0A B3         [24] 2448 	lcall	_printf
-      000677 E5 81            [12] 2449 	mov	a,sp
-      000679 24 F9            [12] 2450 	add	a,#0xf9
-      00067B F5 81            [12] 2451 	mov	sp,a
-      00067D D0 07            [24] 2452 	pop	ar7
-                           0005D2  2453 	C$kpdlcdtestPCAV1.c$86$2$124 ==.
-                                   2454 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:86: if(keypad == 0){
-      00067F EF               [12] 2455 	mov	a,r7
-      000680 70 15            [24] 2456 	jnz	00105$
-                           0005D5  2457 	C$kpdlcdtestPCAV1.c$87$3$125 ==.
-                                   2458 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:87: printf("   **Wire Connection/XBR0 Error**   ");
-      000682 74 9E            [12] 2459 	mov	a,#___str_9
-      000684 C0 E0            [24] 2460 	push	acc
-      000686 74 11            [12] 2461 	mov	a,#(___str_9 >> 8)
-      000688 C0 E0            [24] 2462 	push	acc
-      00068A 74 80            [12] 2463 	mov	a,#0x80
-      00068C C0 E0            [24] 2464 	push	acc
-      00068E 12 0A B3         [24] 2465 	lcall	_printf
-      000691 15 81            [12] 2466 	dec	sp
-      000693 15 81            [12] 2467 	dec	sp
-      000695 15 81            [12] 2468 	dec	sp
-      000697                       2469 00105$:
-                           0005EA  2470 	C$kpdlcdtestPCAV1.c$91$1$123 ==.
-                           0005EA  2471 	XG$normal_operation$0$0 ==.
-      000697 22               [24] 2472 	ret
-                                   2473 ;------------------------------------------------------------
-                                   2474 ;Allocation info for local variables in function 'kpd_input_zero'
-                                   2475 ;------------------------------------------------------------
-                                   2476 ;keypad                    Allocated to registers r6 
-                                   2477 ;------------------------------------------------------------
-                           0005EB  2478 	G$kpd_input_zero$0$0 ==.
-                           0005EB  2479 	C$kpdlcdtestPCAV1.c$93$1$123 ==.
-                                   2480 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:93: void kpd_input_zero(void){
-                                   2481 ;	-----------------------------------------
-                                   2482 ;	 function kpd_input_zero
-                                   2483 ;	-----------------------------------------
-      000698                       2484 _kpd_input_zero:
-                           0005EB  2485 	C$kpdlcdtestPCAV1.c$95$1$127 ==.
-                                   2486 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:95: keypad = kpd_input(0);
-      000698 75 82 00         [24] 2487 	mov	dpl,#0x00
-      00069B 12 02 5E         [24] 2488 	lcall	_kpd_input
-      00069E AE 82            [24] 2489 	mov	r6,dpl
-                           0005F3  2490 	C$kpdlcdtestPCAV1.c$96$1$127 ==.
-                                   2491 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:96: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
-      0006A0 C0 06            [24] 2492 	push	ar6
-      0006A2 12 08 D8         [24] 2493 	lcall	_pause
-      0006A5 D0 06            [24] 2494 	pop	ar6
-                           0005FA  2495 	C$kpdlcdtestPCAV1.c$99$1$127 ==.
-                                   2496 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:99: if (keypad != -1){   // keypad = -1 if no key is pressed
-      0006A7 BE FF 02         [24] 2497 	cjne	r6,#0xFF,00113$
-      0006AA 80 6F            [24] 2498 	sjmp	00105$
-      0006AC                       2499 00113$:
-                           0005FF  2500 	C$kpdlcdtestPCAV1.c$103$2$128 ==.
-                                   2501 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:103: lcd_clear();
-      0006AC C0 06            [24] 2502 	push	ar6
-      0006AE 12 01 A5         [24] 2503 	lcall	_lcd_clear
-      0006B1 D0 06            [24] 2504 	pop	ar6
-                           000606  2505 	C$kpdlcdtestPCAV1.c$104$2$128 ==.
-                                   2506 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:104: lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
-      0006B3 EE               [12] 2507 	mov	a,r6
-      0006B4 FD               [12] 2508 	mov	r5,a
-      0006B5 33               [12] 2509 	rlc	a
-      0006B6 95 E0            [12] 2510 	subb	a,acc
-      0006B8 FF               [12] 2511 	mov	r7,a
-      0006B9 C0 07            [24] 2512 	push	ar7
-      0006BB C0 06            [24] 2513 	push	ar6
-      0006BD C0 05            [24] 2514 	push	ar5
-      0006BF C0 05            [24] 2515 	push	ar5
-      0006C1 C0 07            [24] 2516 	push	ar7
-      0006C3 C0 05            [24] 2517 	push	ar5
-      0006C5 C0 07            [24] 2518 	push	ar7
-      0006C7 74 C3            [12] 2519 	mov	a,#___str_10
-      0006C9 C0 E0            [24] 2520 	push	acc
-      0006CB 74 11            [12] 2521 	mov	a,#(___str_10 >> 8)
-      0006CD C0 E0            [24] 2522 	push	acc
-      0006CF 74 80            [12] 2523 	mov	a,#0x80
-      0006D1 C0 E0            [24] 2524 	push	acc
-      0006D3 12 01 24         [24] 2525 	lcall	_lcd_print
-      0006D6 E5 81            [12] 2526 	mov	a,sp
-      0006D8 24 F9            [12] 2527 	add	a,#0xf9
-      0006DA F5 81            [12] 2528 	mov	sp,a
-      0006DC D0 05            [24] 2529 	pop	ar5
-      0006DE D0 06            [24] 2530 	pop	ar6
-      0006E0 D0 07            [24] 2531 	pop	ar7
-                           000635  2532 	C$kpdlcdtestPCAV1.c$105$2$128 ==.
-                                   2533 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:105: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
-      0006E2 C0 06            [24] 2534 	push	ar6
-      0006E4 C0 05            [24] 2535 	push	ar5
-      0006E6 C0 07            [24] 2536 	push	ar7
-      0006E8 C0 05            [24] 2537 	push	ar5
-      0006EA C0 07            [24] 2538 	push	ar7
-      0006EC 74 80            [12] 2539 	mov	a,#___str_8
-      0006EE C0 E0            [24] 2540 	push	acc
-      0006F0 74 11            [12] 2541 	mov	a,#(___str_8 >> 8)
-      0006F2 C0 E0            [24] 2542 	push	acc
-      0006F4 74 80            [12] 2543 	mov	a,#0x80
-      0006F6 C0 E0            [24] 2544 	push	acc
-      0006F8 12 0A B3         [24] 2545 	lcall	_printf
-      0006FB E5 81            [12] 2546 	mov	a,sp
-      0006FD 24 F9            [12] 2547 	add	a,#0xf9
-      0006FF F5 81            [12] 2548 	mov	sp,a
-      000701 D0 06            [24] 2549 	pop	ar6
-                           000656  2550 	C$kpdlcdtestPCAV1.c$106$2$128 ==.
-                                   2551 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:106: if(keypad == 0){
-      000703 EE               [12] 2552 	mov	a,r6
-      000704 70 15            [24] 2553 	jnz	00105$
-                           000659  2554 	C$kpdlcdtestPCAV1.c$107$3$129 ==.
-                                   2555 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:107: printf("   **Wire Connection/XBR0 Error**   ");
-      000706 74 9E            [12] 2556 	mov	a,#___str_9
-      000708 C0 E0            [24] 2557 	push	acc
-      00070A 74 11            [12] 2558 	mov	a,#(___str_9 >> 8)
-      00070C C0 E0            [24] 2559 	push	acc
-      00070E 74 80            [12] 2560 	mov	a,#0x80
-      000710 C0 E0            [24] 2561 	push	acc
-      000712 12 0A B3         [24] 2562 	lcall	_printf
-      000715 15 81            [12] 2563 	dec	sp
-      000717 15 81            [12] 2564 	dec	sp
-      000719 15 81            [12] 2565 	dec	sp
-      00071B                       2566 00105$:
-                           00066E  2567 	C$kpdlcdtestPCAV1.c$111$1$127 ==.
-                           00066E  2568 	XG$kpd_input_zero$0$0 ==.
-      00071B 22               [24] 2569 	ret
-                                   2570 ;------------------------------------------------------------
-                                   2571 ;Allocation info for local variables in function 'kpd_input_one'
-                                   2572 ;------------------------------------------------------------
-                                   2573 ;keypad                    Allocated to registers r6 
-                                   2574 ;------------------------------------------------------------
-                           00066F  2575 	G$kpd_input_one$0$0 ==.
-                           00066F  2576 	C$kpdlcdtestPCAV1.c$113$1$127 ==.
-                                   2577 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:113: void kpd_input_one(void){
-                                   2578 ;	-----------------------------------------
-                                   2579 ;	 function kpd_input_one
-                                   2580 ;	-----------------------------------------
-      00071C                       2581 _kpd_input_one:
-                           00066F  2582 	C$kpdlcdtestPCAV1.c$115$1$131 ==.
-                                   2583 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:115: keypad = kpd_input(1);
-      00071C 75 82 01         [24] 2584 	mov	dpl,#0x01
-      00071F 12 02 5E         [24] 2585 	lcall	_kpd_input
-      000722 AE 82            [24] 2586 	mov	r6,dpl
-                           000677  2587 	C$kpdlcdtestPCAV1.c$116$1$131 ==.
-                                   2588 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:116: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
-      000724 C0 06            [24] 2589 	push	ar6
-      000726 12 08 D8         [24] 2590 	lcall	_pause
-      000729 D0 06            [24] 2591 	pop	ar6
-                           00067E  2592 	C$kpdlcdtestPCAV1.c$119$1$131 ==.
-                                   2593 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:119: if (keypad != -1){   // keypad = -1 if no key is pressed
-      00072B BE FF 02         [24] 2594 	cjne	r6,#0xFF,00113$
-      00072E 80 6F            [24] 2595 	sjmp	00105$
-      000730                       2596 00113$:
-                           000683  2597 	C$kpdlcdtestPCAV1.c$123$2$132 ==.
-                                   2598 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:123: lcd_clear();
-      000730 C0 06            [24] 2599 	push	ar6
-      000732 12 01 A5         [24] 2600 	lcall	_lcd_clear
-      000735 D0 06            [24] 2601 	pop	ar6
-                           00068A  2602 	C$kpdlcdtestPCAV1.c$124$2$132 ==.
-                                   2603 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:124: lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
-      000737 EE               [12] 2604 	mov	a,r6
-      000738 FD               [12] 2605 	mov	r5,a
-      000739 33               [12] 2606 	rlc	a
-      00073A 95 E0            [12] 2607 	subb	a,acc
-      00073C FF               [12] 2608 	mov	r7,a
-      00073D C0 07            [24] 2609 	push	ar7
-      00073F C0 06            [24] 2610 	push	ar6
-      000741 C0 05            [24] 2611 	push	ar5
-      000743 C0 05            [24] 2612 	push	ar5
-      000745 C0 07            [24] 2613 	push	ar7
-      000747 C0 05            [24] 2614 	push	ar5
-      000749 C0 07            [24] 2615 	push	ar7
-      00074B 74 C3            [12] 2616 	mov	a,#___str_10
-      00074D C0 E0            [24] 2617 	push	acc
-      00074F 74 11            [12] 2618 	mov	a,#(___str_10 >> 8)
-      000751 C0 E0            [24] 2619 	push	acc
-      000753 74 80            [12] 2620 	mov	a,#0x80
-      000755 C0 E0            [24] 2621 	push	acc
-      000757 12 01 24         [24] 2622 	lcall	_lcd_print
-      00075A E5 81            [12] 2623 	mov	a,sp
-      00075C 24 F9            [12] 2624 	add	a,#0xf9
-      00075E F5 81            [12] 2625 	mov	sp,a
-      000760 D0 05            [24] 2626 	pop	ar5
-      000762 D0 06            [24] 2627 	pop	ar6
-      000764 D0 07            [24] 2628 	pop	ar7
-                           0006B9  2629 	C$kpdlcdtestPCAV1.c$125$2$132 ==.
-                                   2630 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:125: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
-      000766 C0 06            [24] 2631 	push	ar6
-      000768 C0 05            [24] 2632 	push	ar5
-      00076A C0 07            [24] 2633 	push	ar7
-      00076C C0 05            [24] 2634 	push	ar5
-      00076E C0 07            [24] 2635 	push	ar7
-      000770 74 80            [12] 2636 	mov	a,#___str_8
-      000772 C0 E0            [24] 2637 	push	acc
-      000774 74 11            [12] 2638 	mov	a,#(___str_8 >> 8)
-      000776 C0 E0            [24] 2639 	push	acc
-      000778 74 80            [12] 2640 	mov	a,#0x80
-      00077A C0 E0            [24] 2641 	push	acc
-      00077C 12 0A B3         [24] 2642 	lcall	_printf
-      00077F E5 81            [12] 2643 	mov	a,sp
-      000781 24 F9            [12] 2644 	add	a,#0xf9
-      000783 F5 81            [12] 2645 	mov	sp,a
-      000785 D0 06            [24] 2646 	pop	ar6
-                           0006DA  2647 	C$kpdlcdtestPCAV1.c$126$2$132 ==.
-                                   2648 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:126: if(keypad == 0){
-      000787 EE               [12] 2649 	mov	a,r6
-      000788 70 15            [24] 2650 	jnz	00105$
-                           0006DD  2651 	C$kpdlcdtestPCAV1.c$127$3$133 ==.
-                                   2652 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:127: printf("   **Wire Connection/XBR0 Error**   ");
-      00078A 74 9E            [12] 2653 	mov	a,#___str_9
-      00078C C0 E0            [24] 2654 	push	acc
-      00078E 74 11            [12] 2655 	mov	a,#(___str_9 >> 8)
-      000790 C0 E0            [24] 2656 	push	acc
-      000792 74 80            [12] 2657 	mov	a,#0x80
-      000794 C0 E0            [24] 2658 	push	acc
-      000796 12 0A B3         [24] 2659 	lcall	_printf
-      000799 15 81            [12] 2660 	dec	sp
-      00079B 15 81            [12] 2661 	dec	sp
-      00079D 15 81            [12] 2662 	dec	sp
-      00079F                       2663 00105$:
-                           0006F2  2664 	C$kpdlcdtestPCAV1.c$131$1$131 ==.
-                           0006F2  2665 	XG$kpd_input_one$0$0 ==.
-      00079F 22               [24] 2666 	ret
-                                   2667 ;------------------------------------------------------------
-                                   2668 ;Allocation info for local variables in function 'two_key_input'
-                                   2669 ;------------------------------------------------------------
-                                   2670 ;keypad1                   Allocated to registers r7 
-                                   2671 ;keypad2                   Allocated to registers r6 
-                                   2672 ;result                    Allocated to registers r5 
-                                   2673 ;------------------------------------------------------------
-                           0006F3  2674 	G$two_key_input$0$0 ==.
-                           0006F3  2675 	C$kpdlcdtestPCAV1.c$134$1$131 ==.
-                                   2676 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:134: void two_key_input(void){
-                                   2677 ;	-----------------------------------------
-                                   2678 ;	 function two_key_input
-                                   2679 ;	-----------------------------------------
-      0007A0                       2680 _two_key_input:
-                           0006F3  2681 	C$kpdlcdtestPCAV1.c$136$1$135 ==.
-                                   2682 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:136: keypad1 = philip_read_keyboard();
-      0007A0 12 08 29         [24] 2683 	lcall	_philip_read_keyboard
-      0007A3 AF 82            [24] 2684 	mov	r7,dpl
-                           0006F8  2685 	C$kpdlcdtestPCAV1.c$137$1$135 ==.
-                                   2686 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:137: keypad2 = philip_read_keyboard();
-      0007A5 C0 07            [24] 2687 	push	ar7
-      0007A7 12 08 29         [24] 2688 	lcall	_philip_read_keyboard
-      0007AA AE 82            [24] 2689 	mov	r6,dpl
-      0007AC D0 07            [24] 2690 	pop	ar7
-                           000701  2691 	C$kpdlcdtestPCAV1.c$138$1$135 ==.
-                                   2692 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:138: result = (((keypad1)*10) + (keypad2));
-      0007AE EF               [12] 2693 	mov	a,r7
-      0007AF 75 F0 0A         [24] 2694 	mov	b,#0x0A
-      0007B2 A4               [48] 2695 	mul	ab
-      0007B3 2E               [12] 2696 	add	a,r6
-      0007B4 FD               [12] 2697 	mov	r5,a
-                           000708  2698 	C$kpdlcdtestPCAV1.c$140$1$135 ==.
-                                   2699 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:140: printf("\rFirst number was %u, second number was %u\n", keypad1, keypad2);//for debugging
-      0007B5 EE               [12] 2700 	mov	a,r6
-      0007B6 33               [12] 2701 	rlc	a
-      0007B7 95 E0            [12] 2702 	subb	a,acc
-      0007B9 FC               [12] 2703 	mov	r4,a
-      0007BA EF               [12] 2704 	mov	a,r7
-      0007BB 33               [12] 2705 	rlc	a
-      0007BC 95 E0            [12] 2706 	subb	a,acc
-      0007BE FB               [12] 2707 	mov	r3,a
-      0007BF C0 05            [24] 2708 	push	ar5
-      0007C1 C0 06            [24] 2709 	push	ar6
-      0007C3 C0 04            [24] 2710 	push	ar4
-      0007C5 C0 07            [24] 2711 	push	ar7
-      0007C7 C0 03            [24] 2712 	push	ar3
-      0007C9 74 E1            [12] 2713 	mov	a,#___str_11
-      0007CB C0 E0            [24] 2714 	push	acc
-      0007CD 74 11            [12] 2715 	mov	a,#(___str_11 >> 8)
-      0007CF C0 E0            [24] 2716 	push	acc
-      0007D1 74 80            [12] 2717 	mov	a,#0x80
-      0007D3 C0 E0            [24] 2718 	push	acc
-      0007D5 12 0A B3         [24] 2719 	lcall	_printf
-      0007D8 E5 81            [12] 2720 	mov	a,sp
-      0007DA 24 F9            [12] 2721 	add	a,#0xf9
-      0007DC F5 81            [12] 2722 	mov	sp,a
-      0007DE D0 05            [24] 2723 	pop	ar5
-                           000733  2724 	C$kpdlcdtestPCAV1.c$141$1$135 ==.
-                                   2725 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:141: printf("\rResult is %u\n", result);
-      0007E0 ED               [12] 2726 	mov	a,r5
-      0007E1 33               [12] 2727 	rlc	a
-      0007E2 95 E0            [12] 2728 	subb	a,acc
-      0007E4 FF               [12] 2729 	mov	r7,a
-      0007E5 C0 07            [24] 2730 	push	ar7
-      0007E7 C0 05            [24] 2731 	push	ar5
-      0007E9 C0 05            [24] 2732 	push	ar5
-      0007EB C0 07            [24] 2733 	push	ar7
-      0007ED 74 0D            [12] 2734 	mov	a,#___str_12
-      0007EF C0 E0            [24] 2735 	push	acc
-      0007F1 74 12            [12] 2736 	mov	a,#(___str_12 >> 8)
-      0007F3 C0 E0            [24] 2737 	push	acc
-      0007F5 74 80            [12] 2738 	mov	a,#0x80
-      0007F7 C0 E0            [24] 2739 	push	acc
-      0007F9 12 0A B3         [24] 2740 	lcall	_printf
-      0007FC E5 81            [12] 2741 	mov	a,sp
-      0007FE 24 FB            [12] 2742 	add	a,#0xfb
-      000800 F5 81            [12] 2743 	mov	sp,a
-      000802 D0 05            [24] 2744 	pop	ar5
-      000804 D0 07            [24] 2745 	pop	ar7
-                           000759  2746 	C$kpdlcdtestPCAV1.c$142$1$135 ==.
-                                   2747 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:142: lcd_print("\rResult is %u\n", result);
-      000806 C0 05            [24] 2748 	push	ar5
-      000808 C0 07            [24] 2749 	push	ar7
-      00080A 74 0D            [12] 2750 	mov	a,#___str_12
-      00080C C0 E0            [24] 2751 	push	acc
-      00080E 74 12            [12] 2752 	mov	a,#(___str_12 >> 8)
-      000810 C0 E0            [24] 2753 	push	acc
-      000812 74 80            [12] 2754 	mov	a,#0x80
-      000814 C0 E0            [24] 2755 	push	acc
-      000816 12 01 24         [24] 2756 	lcall	_lcd_print
-      000819 E5 81            [12] 2757 	mov	a,sp
-      00081B 24 FB            [12] 2758 	add	a,#0xfb
-      00081D F5 81            [12] 2759 	mov	sp,a
-                           000772  2760 	C$kpdlcdtestPCAV1.c$143$1$135 ==.
-                                   2761 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:143: wait(); wait(); 
-      00081F 12 08 E9         [24] 2762 	lcall	_wait
-      000822 12 08 E9         [24] 2763 	lcall	_wait
-                           000778  2764 	C$kpdlcdtestPCAV1.c$145$1$135 ==.
-                                   2765 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:145: lcd_clear();
-      000825 12 01 A5         [24] 2766 	lcall	_lcd_clear
-                           00077B  2767 	C$kpdlcdtestPCAV1.c$146$1$135 ==.
-                           00077B  2768 	XG$two_key_input$0$0 ==.
-      000828 22               [24] 2769 	ret
-                                   2770 ;------------------------------------------------------------
-                                   2771 ;Allocation info for local variables in function 'philip_read_keyboard'
-                                   2772 ;------------------------------------------------------------
-                                   2773 ;keypad                    Allocated to registers r6 
-                                   2774 ;keypad_prime              Allocated to registers r7 
-                                   2775 ;------------------------------------------------------------
-                           00077C  2776 	G$philip_read_keyboard$0$0 ==.
-                           00077C  2777 	C$kpdlcdtestPCAV1.c$148$1$135 ==.
-                                   2778 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:148: char philip_read_keyboard(void){
-                                   2779 ;	-----------------------------------------
-                                   2780 ;	 function philip_read_keyboard
-                                   2781 ;	-----------------------------------------
-      000829                       2782 _philip_read_keyboard:
-                           00077C  2783 	C$kpdlcdtestPCAV1.c$149$1$135 ==.
-                                   2784 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:149: char keypad,keypad_prime = 0;
-      000829 7F 00            [12] 2785 	mov	r7,#0x00
-                           00077E  2786 	C$kpdlcdtestPCAV1.c$150$1$137 ==.
-                                   2787 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:150: keypad = read_keypad();
-      00082B C0 07            [24] 2788 	push	ar7
-      00082D 12 01 DE         [24] 2789 	lcall	_read_keypad
-      000830 AE 82            [24] 2790 	mov	r6,dpl
-                           000785  2791 	C$kpdlcdtestPCAV1.c$151$1$137 ==.
-                                   2792 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:151: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
-      000832 C0 06            [24] 2793 	push	ar6
-      000834 12 08 D8         [24] 2794 	lcall	_pause
-      000837 D0 06            [24] 2795 	pop	ar6
-      000839 D0 07            [24] 2796 	pop	ar7
-                           00078E  2797 	C$kpdlcdtestPCAV1.c$154$1$137 ==.
-                                   2798 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:154: while(keypad == (-1)){
-      00083B                       2799 00101$:
-      00083B E4               [12] 2800 	clr	a
-      00083C BE FF 01         [24] 2801 	cjne	r6,#0xFF,00131$
-      00083F 04               [12] 2802 	inc	a
-      000840                       2803 00131$:
-      000840 FD               [12] 2804 	mov	r5,a
-      000841 60 0B            [24] 2805 	jz	00103$
-                           000796  2806 	C$kpdlcdtestPCAV1.c$155$2$138 ==.
-                                   2807 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:155: keypad = read_keypad();
-      000843 C0 07            [24] 2808 	push	ar7
-      000845 12 01 DE         [24] 2809 	lcall	_read_keypad
-      000848 AE 82            [24] 2810 	mov	r6,dpl
-      00084A D0 07            [24] 2811 	pop	ar7
-      00084C 80 ED            [24] 2812 	sjmp	00101$
-      00084E                       2813 00103$:
-                           0007A1  2814 	C$kpdlcdtestPCAV1.c$157$1$137 ==.
-                                   2815 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:157: if (keypad != (-1)){  // keypad = -1 if no key is pressed
-      00084E ED               [12] 2816 	mov	a,r5
-      00084F 70 71            [24] 2817 	jnz	00108$
-                           0007A4  2818 	C$kpdlcdtestPCAV1.c$161$2$139 ==.
-                                   2819 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:161: lcd_clear();
-      000851 C0 06            [24] 2820 	push	ar6
-      000853 12 01 A5         [24] 2821 	lcall	_lcd_clear
-      000856 D0 06            [24] 2822 	pop	ar6
-                           0007AB  2823 	C$kpdlcdtestPCAV1.c$162$2$139 ==.
-                                   2824 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:162: lcd_print("Key was:\n %c,= Hx %X\n", keypad, keypad);
-      000858 EE               [12] 2825 	mov	a,r6
-      000859 FC               [12] 2826 	mov	r4,a
-      00085A 33               [12] 2827 	rlc	a
-      00085B 95 E0            [12] 2828 	subb	a,acc
-      00085D FD               [12] 2829 	mov	r5,a
-      00085E C0 06            [24] 2830 	push	ar6
-      000860 C0 05            [24] 2831 	push	ar5
-      000862 C0 04            [24] 2832 	push	ar4
-      000864 C0 04            [24] 2833 	push	ar4
-      000866 C0 05            [24] 2834 	push	ar5
-      000868 C0 04            [24] 2835 	push	ar4
-      00086A C0 05            [24] 2836 	push	ar5
-      00086C 74 1C            [12] 2837 	mov	a,#___str_13
-      00086E C0 E0            [24] 2838 	push	acc
-      000870 74 12            [12] 2839 	mov	a,#(___str_13 >> 8)
-      000872 C0 E0            [24] 2840 	push	acc
-      000874 74 80            [12] 2841 	mov	a,#0x80
-      000876 C0 E0            [24] 2842 	push	acc
-      000878 12 01 24         [24] 2843 	lcall	_lcd_print
-      00087B E5 81            [12] 2844 	mov	a,sp
-      00087D 24 F9            [12] 2845 	add	a,#0xf9
-      00087F F5 81            [12] 2846 	mov	sp,a
-      000881 D0 04            [24] 2847 	pop	ar4
-      000883 D0 05            [24] 2848 	pop	ar5
-                           0007D8  2849 	C$kpdlcdtestPCAV1.c$163$2$139 ==.
-                                   2850 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:163: printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
-      000885 C0 04            [24] 2851 	push	ar4
-      000887 C0 05            [24] 2852 	push	ar5
-      000889 C0 04            [24] 2853 	push	ar4
-      00088B C0 05            [24] 2854 	push	ar5
-      00088D 74 32            [12] 2855 	mov	a,#___str_14
-      00088F C0 E0            [24] 2856 	push	acc
-      000891 74 12            [12] 2857 	mov	a,#(___str_14 >> 8)
-      000893 C0 E0            [24] 2858 	push	acc
-      000895 74 80            [12] 2859 	mov	a,#0x80
-      000897 C0 E0            [24] 2860 	push	acc
-      000899 12 0A B3         [24] 2861 	lcall	_printf
-      00089C E5 81            [12] 2862 	mov	a,sp
-      00089E 24 F9            [12] 2863 	add	a,#0xf9
-      0008A0 F5 81            [12] 2864 	mov	sp,a
-      0008A2 D0 06            [24] 2865 	pop	ar6
-                           0007F7  2866 	C$kpdlcdtestPCAV1.c$164$2$139 ==.
-                                   2867 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:164: if(keypad == 0){
-      0008A4 EE               [12] 2868 	mov	a,r6
-      0008A5 70 19            [24] 2869 	jnz	00105$
-                           0007FA  2870 	C$kpdlcdtestPCAV1.c$165$3$140 ==.
-                                   2871 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:165: printf("   **Wire Connection Error**   ");
-      0008A7 C0 06            [24] 2872 	push	ar6
-      0008A9 74 50            [12] 2873 	mov	a,#___str_15
-      0008AB C0 E0            [24] 2874 	push	acc
-      0008AD 74 12            [12] 2875 	mov	a,#(___str_15 >> 8)
-      0008AF C0 E0            [24] 2876 	push	acc
-      0008B1 74 80            [12] 2877 	mov	a,#0x80
-      0008B3 C0 E0            [24] 2878 	push	acc
-      0008B5 12 0A B3         [24] 2879 	lcall	_printf
-      0008B8 15 81            [12] 2880 	dec	sp
-      0008BA 15 81            [12] 2881 	dec	sp
-      0008BC 15 81            [12] 2882 	dec	sp
-      0008BE D0 06            [24] 2883 	pop	ar6
-      0008C0                       2884 00105$:
-                           000813  2885 	C$kpdlcdtestPCAV1.c$167$2$139 ==.
-                                   2886 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:167: keypad_prime = keypad;
-      0008C0 8E 07            [24] 2887 	mov	ar7,r6
-                           000815  2888 	C$kpdlcdtestPCAV1.c$169$1$137 ==.
-                                   2889 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:169: while(keypad != -1) {
-      0008C2                       2890 00108$:
-      0008C2 BE FF 02         [24] 2891 	cjne	r6,#0xFF,00136$
-      0008C5 80 0B            [24] 2892 	sjmp	00110$
-      0008C7                       2893 00136$:
-                           00081A  2894 	C$kpdlcdtestPCAV1.c$170$2$141 ==.
-                                   2895 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:170: keypad = read_keypad(); // Waits until keypad returns a -1
-      0008C7 C0 07            [24] 2896 	push	ar7
-      0008C9 12 01 DE         [24] 2897 	lcall	_read_keypad
-      0008CC AE 82            [24] 2898 	mov	r6,dpl
-      0008CE D0 07            [24] 2899 	pop	ar7
-      0008D0 80 F0            [24] 2900 	sjmp	00108$
-      0008D2                       2901 00110$:
-                           000825  2902 	C$kpdlcdtestPCAV1.c$172$1$137 ==.
-                                   2903 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:172: return (keypad_prime - 48);
-      0008D2 EF               [12] 2904 	mov	a,r7
-      0008D3 24 D0            [12] 2905 	add	a,#0xD0
-      0008D5 F5 82            [12] 2906 	mov	dpl,a
-                           00082A  2907 	C$kpdlcdtestPCAV1.c$173$1$137 ==.
-                           00082A  2908 	XG$philip_read_keyboard$0$0 ==.
-      0008D7 22               [24] 2909 	ret
-                                   2910 ;------------------------------------------------------------
-                                   2911 ;Allocation info for local variables in function 'pause'
-                                   2912 ;------------------------------------------------------------
-                           00082B  2913 	G$pause$0$0 ==.
-                           00082B  2914 	C$kpdlcdtestPCAV1.c$178$1$137 ==.
-                                   2915 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:178: void pause(void) {//waits 1/50 second
-                                   2916 ;	-----------------------------------------
-                                   2917 ;	 function pause
-                                   2918 ;	-----------------------------------------
-      0008D8                       2919 _pause:
-                           00082B  2920 	C$kpdlcdtestPCAV1.c$179$1$143 ==.
-                                   2921 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:179: nCounts = 0;
-      0008D8 E4               [12] 2922 	clr	a
-      0008D9 F5 1B            [12] 2923 	mov	_nCounts,a
-      0008DB F5 1C            [12] 2924 	mov	(_nCounts + 1),a
-                           000830  2925 	C$kpdlcdtestPCAV1.c$180$1$143 ==.
-                                   2926 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:180: while (nCounts < 1);// 1 count -> (65536-PCA_START) x 12/22118400 = 20ms
-      0008DD                       2927 00101$:
-      0008DD C3               [12] 2928 	clr	c
-      0008DE E5 1B            [12] 2929 	mov	a,_nCounts
-      0008E0 94 01            [12] 2930 	subb	a,#0x01
-      0008E2 E5 1C            [12] 2931 	mov	a,(_nCounts + 1)
-      0008E4 94 00            [12] 2932 	subb	a,#0x00
-      0008E6 40 F5            [24] 2933 	jc	00101$
-                           00083B  2934 	C$kpdlcdtestPCAV1.c$181$1$143 ==.
-                           00083B  2935 	XG$pause$0$0 ==.
-      0008E8 22               [24] 2936 	ret
-                                   2937 ;------------------------------------------------------------
-                                   2938 ;Allocation info for local variables in function 'wait'
-                                   2939 ;------------------------------------------------------------
-                           00083C  2940 	G$wait$0$0 ==.
-                           00083C  2941 	C$kpdlcdtestPCAV1.c$183$1$143 ==.
-                                   2942 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:183: void wait(void) {//waits 1 second
-                                   2943 ;	-----------------------------------------
-                                   2944 ;	 function wait
-                                   2945 ;	-----------------------------------------
-      0008E9                       2946 _wait:
-                           00083C  2947 	C$kpdlcdtestPCAV1.c$184$1$145 ==.
-                                   2948 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:184: nCounts = 0;
-      0008E9 E4               [12] 2949 	clr	a
-      0008EA F5 1B            [12] 2950 	mov	_nCounts,a
-      0008EC F5 1C            [12] 2951 	mov	(_nCounts + 1),a
-                           000841  2952 	C$kpdlcdtestPCAV1.c$185$1$145 ==.
-                                   2953 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:185: while (nCounts < 50);    // 50 counts -> 50 x 20ms = 1000ms
-      0008EE                       2954 00101$:
-      0008EE C3               [12] 2955 	clr	c
-      0008EF E5 1B            [12] 2956 	mov	a,_nCounts
-      0008F1 94 32            [12] 2957 	subb	a,#0x32
-      0008F3 E5 1C            [12] 2958 	mov	a,(_nCounts + 1)
-      0008F5 94 00            [12] 2959 	subb	a,#0x00
-      0008F7 40 F5            [24] 2960 	jc	00101$
-                           00084C  2961 	C$kpdlcdtestPCAV1.c$186$1$145 ==.
-                           00084C  2962 	XG$wait$0$0 ==.
-      0008F9 22               [24] 2963 	ret
-                                   2964 ;------------------------------------------------------------
-                                   2965 ;Allocation info for local variables in function 'PCA_ISR'
-                                   2966 ;------------------------------------------------------------
-                           00084D  2967 	G$PCA_ISR$0$0 ==.
-                           00084D  2968 	C$kpdlcdtestPCAV1.c$188$1$145 ==.
-                                   2969 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:188: void PCA_ISR(void) __interrupt 9 {//timer interupt
-                                   2970 ;	-----------------------------------------
-                                   2971 ;	 function PCA_ISR
-                                   2972 ;	-----------------------------------------
-      0008FA                       2973 _PCA_ISR:
-      0008FA C0 E0            [24] 2974 	push	acc
-      0008FC C0 D0            [24] 2975 	push	psw
-                           000851  2976 	C$kpdlcdtestPCAV1.c$189$1$147 ==.
-                                   2977 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:189: if (CF) {
-                           000851  2978 	C$kpdlcdtestPCAV1.c$190$2$148 ==.
-                                   2979 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:190: CF = 0;                     // clear the interrupt flag
-      0008FE 10 DF 02         [24] 2980 	jbc	_CF,00114$
-      000901 80 37            [24] 2981 	sjmp	00104$
-      000903                       2982 00114$:
-                           000856  2983 	C$kpdlcdtestPCAV1.c$191$2$148 ==.
-                                   2984 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:191: nOverflows++;               // continuous overflow counter
-      000903 74 01            [12] 2985 	mov	a,#0x01
-      000905 25 1D            [12] 2986 	add	a,_nOverflows
-      000907 F5 1D            [12] 2987 	mov	_nOverflows,a
-      000909 E4               [12] 2988 	clr	a
-      00090A 35 1E            [12] 2989 	addc	a,(_nOverflows + 1)
-      00090C F5 1E            [12] 2990 	mov	(_nOverflows + 1),a
-                           000861  2991 	C$kpdlcdtestPCAV1.c$192$2$148 ==.
-                                   2992 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:192: nCounts++;
-      00090E 74 01            [12] 2993 	mov	a,#0x01
-      000910 25 1B            [12] 2994 	add	a,_nCounts
-      000912 F5 1B            [12] 2995 	mov	_nCounts,a
-      000914 E4               [12] 2996 	clr	a
-      000915 35 1C            [12] 2997 	addc	a,(_nCounts + 1)
-      000917 F5 1C            [12] 2998 	mov	(_nCounts + 1),a
-                           00086C  2999 	C$kpdlcdtestPCAV1.c$193$2$148 ==.
-                                   3000 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:193: PCA0L = PCA_START & 0xFF;   // low byte of start count
-      000919 75 E9 00         [24] 3001 	mov	_PCA0L,#0x00
-                           00086F  3002 	C$kpdlcdtestPCAV1.c$194$2$148 ==.
-                                   3003 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:194: PCA0H = PCA_START >> 8;     // high byte of start count
-      00091C 75 F9 70         [24] 3004 	mov	_PCA0H,#0x70
-                           000872  3005 	C$kpdlcdtestPCAV1.c$195$2$148 ==.
-                                   3006 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:195: if (nCounts > 50) {
-      00091F C3               [12] 3007 	clr	c
-      000920 74 32            [12] 3008 	mov	a,#0x32
-      000922 95 1B            [12] 3009 	subb	a,_nCounts
-      000924 E4               [12] 3010 	clr	a
-      000925 95 1C            [12] 3011 	subb	a,(_nCounts + 1)
-      000927 50 14            [24] 3012 	jnc	00106$
-                           00087C  3013 	C$kpdlcdtestPCAV1.c$196$3$149 ==.
-                                   3014 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:196: nCounts = 0;
-      000929 E4               [12] 3015 	clr	a
-      00092A F5 1B            [12] 3016 	mov	_nCounts,a
-      00092C F5 1C            [12] 3017 	mov	(_nCounts + 1),a
-                           000881  3018 	C$kpdlcdtestPCAV1.c$197$3$149 ==.
-                                   3019 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:197: Counts++;               // seconds counter
-      00092E 04               [12] 3020 	inc	a
-      00092F 25 19            [12] 3021 	add	a,_Counts
-      000931 F5 19            [12] 3022 	mov	_Counts,a
-      000933 E4               [12] 3023 	clr	a
-      000934 35 1A            [12] 3024 	addc	a,(_Counts + 1)
-      000936 F5 1A            [12] 3025 	mov	(_Counts + 1),a
-      000938 80 03            [24] 3026 	sjmp	00106$
-      00093A                       3027 00104$:
-                           00088D  3028 	C$kpdlcdtestPCAV1.c$200$1$147 ==.
-                                   3029 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:200: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
-      00093A 53 D8 C0         [24] 3030 	anl	_PCA0CN,#0xC0
-      00093D                       3031 00106$:
-      00093D D0 D0            [24] 3032 	pop	psw
-      00093F D0 E0            [24] 3033 	pop	acc
-                           000894  3034 	C$kpdlcdtestPCAV1.c$201$1$147 ==.
-                           000894  3035 	XG$PCA_ISR$0$0 ==.
-      000941 32               [24] 3036 	reti
-                                   3037 ;	eliminated unneeded mov psw,# (no regs used in bank)
-                                   3038 ;	eliminated unneeded push/pop dpl
-                                   3039 ;	eliminated unneeded push/pop dph
-                                   3040 ;	eliminated unneeded push/pop b
-                                   3041 ;------------------------------------------------------------
-                                   3042 ;Allocation info for local variables in function 'Port_Init'
-                                   3043 ;------------------------------------------------------------
-                           000895  3044 	G$Port_Init$0$0 ==.
-                           000895  3045 	C$kpdlcdtestPCAV1.c$206$1$147 ==.
-                                   3046 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:206: void Port_Init(void){   //0x05
-                                   3047 ;	-----------------------------------------
-                                   3048 ;	 function Port_Init
-                                   3049 ;	-----------------------------------------
-      000942                       3050 _Port_Init:
-                           000895  3051 	C$kpdlcdtestPCAV1.c$207$1$151 ==.
-                                   3052 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:207: XBR0 = 0x27;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
-      000942 75 E1 27         [24] 3053 	mov	_XBR0,#0x27
-                           000898  3054 	C$kpdlcdtestPCAV1.c$208$1$151 ==.
-                           000898  3055 	XG$Port_Init$0$0 ==.
-      000945 22               [24] 3056 	ret
-                                   3057 ;------------------------------------------------------------
-                                   3058 ;Allocation info for local variables in function 'Interrupt_Init'
-                                   3059 ;------------------------------------------------------------
-                           000899  3060 	G$Interrupt_Init$0$0 ==.
-                           000899  3061 	C$kpdlcdtestPCAV1.c$210$1$151 ==.
-                                   3062 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:210: void Interrupt_Init(void){
-                                   3063 ;	-----------------------------------------
-                                   3064 ;	 function Interrupt_Init
-                                   3065 ;	-----------------------------------------
-      000946                       3066 _Interrupt_Init:
-                           000899  3067 	C$kpdlcdtestPCAV1.c$211$1$153 ==.
-                                   3068 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:211: IE |= 0x02;
-      000946 43 A8 02         [24] 3069 	orl	_IE,#0x02
-                           00089C  3070 	C$kpdlcdtestPCAV1.c$212$1$153 ==.
-                                   3071 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:212: EIE1 |= 0x08;
-      000949 43 E6 08         [24] 3072 	orl	_EIE1,#0x08
-                           00089F  3073 	C$kpdlcdtestPCAV1.c$213$1$153 ==.
-                                   3074 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:213: EA = 1;
-      00094C D2 AF            [12] 3075 	setb	_EA
-                           0008A1  3076 	C$kpdlcdtestPCAV1.c$214$1$153 ==.
-                           0008A1  3077 	XG$Interrupt_Init$0$0 ==.
-      00094E 22               [24] 3078 	ret
-                                   3079 ;------------------------------------------------------------
-                                   3080 ;Allocation info for local variables in function 'PCA_Init'
-                                   3081 ;------------------------------------------------------------
-                           0008A2  3082 	G$PCA_Init$0$0 ==.
-                           0008A2  3083 	C$kpdlcdtestPCAV1.c$216$1$153 ==.
-                                   3084 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:216: void PCA_Init(void){
-                                   3085 ;	-----------------------------------------
-                                   3086 ;	 function PCA_Init
-                                   3087 ;	-----------------------------------------
-      00094F                       3088 _PCA_Init:
-                           0008A2  3089 	C$kpdlcdtestPCAV1.c$217$1$155 ==.
-                                   3090 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:217: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
-      00094F 75 D9 81         [24] 3091 	mov	_PCA0MD,#0x81
-                           0008A5  3092 	C$kpdlcdtestPCAV1.c$219$1$155 ==.
-                                   3093 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:219: PCA0CN |= 0x40;     // enable PCA
-      000952 43 D8 40         [24] 3094 	orl	_PCA0CN,#0x40
-                           0008A8  3095 	C$kpdlcdtestPCAV1.c$220$1$155 ==.
-                           0008A8  3096 	XG$PCA_Init$0$0 ==.
-      000955 22               [24] 3097 	ret
-                                   3098 ;------------------------------------------------------------
-                                   3099 ;Allocation info for local variables in function 'SMB0_Init'
-                                   3100 ;------------------------------------------------------------
-                           0008A9  3101 	G$SMB0_Init$0$0 ==.
-                           0008A9  3102 	C$kpdlcdtestPCAV1.c$222$1$155 ==.
-                                   3103 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:222: void SMB0_Init(void){    // This was at the top, moved it here to call wait()
-                                   3104 ;	-----------------------------------------
-                                   3105 ;	 function SMB0_Init
-                                   3106 ;	-----------------------------------------
-      000956                       3107 _SMB0_Init:
-                           0008A9  3108 	C$kpdlcdtestPCAV1.c$223$1$157 ==.
-                                   3109 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:223: SMB0CR = 0x93;      // Set SCL to 100KHz
-      000956 75 CF 93         [24] 3110 	mov	_SMB0CR,#0x93
-                           0008AC  3111 	C$kpdlcdtestPCAV1.c$224$1$157 ==.
-                                   3112 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:224: ENSMB = 1;          // Enable SMBUS0
-      000959 D2 C6            [12] 3113 	setb	_ENSMB
-                           0008AE  3114 	C$kpdlcdtestPCAV1.c$225$1$157 ==.
-                           0008AE  3115 	XG$SMB0_Init$0$0 ==.
-      00095B 22               [24] 3116 	ret
-                                   3117 	.area CSEG    (CODE)
-                                   3118 	.area CONST   (CODE)
-                           000000  3119 FkpdlcdtestPCAV1$__str_0$0$0 == .
-      0010CC                       3120 ___str_0:
-      0010CC 0A                    3121 	.db 0x0A
-      0010CD 54 79 70 65 20 64 69  3122 	.ascii "Type digits; end w/#"
+                                   2370 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:60: wait();
+      000615 12 08 F8         [24] 2371 	lcall	_wait
+                           00056B  2372 	C$kpdlcdtestPCAV1.c$61$1$120 ==.
+                                   2373 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:61: lcd_clear();
+      000618 12 01 A5         [24] 2374 	lcall	_lcd_clear
+                           00056E  2375 	C$kpdlcdtestPCAV1.c$62$1$120 ==.
+                                   2376 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:62: while (1){
+      00061B                       2377 00105$:
+                           00056E  2378 	C$kpdlcdtestPCAV1.c$63$2$121 ==.
+                                   2379 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:63: normal_operation();	// read_keypad()
+      00061B 12 06 21         [24] 2380 	lcall	_normal_operation
+      00061E 80 FB            [24] 2381 	sjmp	00105$
+                           000573  2382 	C$kpdlcdtestPCAV1.c$68$1$120 ==.
+                           000573  2383 	XG$main$0$0 ==.
+      000620 22               [24] 2384 	ret
+                                   2385 ;------------------------------------------------------------
+                                   2386 ;Allocation info for local variables in function 'normal_operation'
+                                   2387 ;------------------------------------------------------------
+                                   2388 ;keypad                    Allocated to registers r7 
+                                   2389 ;------------------------------------------------------------
+                           000574  2390 	G$normal_operation$0$0 ==.
+                           000574  2391 	C$kpdlcdtestPCAV1.c$75$1$120 ==.
+                                   2392 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:75: void normal_operation(void){
+                                   2393 ;	-----------------------------------------
+                                   2394 ;	 function normal_operation
+                                   2395 ;	-----------------------------------------
+      000621                       2396 _normal_operation:
+                           000574  2397 	C$kpdlcdtestPCAV1.c$77$1$123 ==.
+                                   2398 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:77: keypad = read_keypad();
+      000621 12 01 DE         [24] 2399 	lcall	_read_keypad
+      000624 AF 82            [24] 2400 	mov	r7,dpl
+                           000579  2401 	C$kpdlcdtestPCAV1.c$78$1$123 ==.
+                                   2402 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:78: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+      000626 C0 07            [24] 2403 	push	ar7
+      000628 12 08 E7         [24] 2404 	lcall	_pause
+      00062B D0 07            [24] 2405 	pop	ar7
+                           000580  2406 	C$kpdlcdtestPCAV1.c$81$1$123 ==.
+                                   2407 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:81: if (keypad != -1){   // keypad = -1 if no key is pressed
+      00062D BF FF 02         [24] 2408 	cjne	r7,#0xFF,00113$
+      000630 80 6E            [24] 2409 	sjmp	00105$
+      000632                       2410 00113$:
+                           000585  2411 	C$kpdlcdtestPCAV1.c$85$2$124 ==.
+                                   2412 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:85: lcd_clear();
+      000632 C0 07            [24] 2413 	push	ar7
+      000634 12 01 A5         [24] 2414 	lcall	_lcd_clear
+      000637 D0 07            [24] 2415 	pop	ar7
+                           00058C  2416 	C$kpdlcdtestPCAV1.c$86$2$124 ==.
+                                   2417 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:86: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
+      000639 EF               [12] 2418 	mov	a,r7
+      00063A FD               [12] 2419 	mov	r5,a
+      00063B 33               [12] 2420 	rlc	a
+      00063C 95 E0            [12] 2421 	subb	a,acc
+      00063E FE               [12] 2422 	mov	r6,a
+      00063F C0 07            [24] 2423 	push	ar7
+      000641 C0 06            [24] 2424 	push	ar6
+      000643 C0 05            [24] 2425 	push	ar5
+      000645 C0 05            [24] 2426 	push	ar5
+      000647 C0 06            [24] 2427 	push	ar6
+      000649 C0 05            [24] 2428 	push	ar5
+      00064B C0 06            [24] 2429 	push	ar6
+      00064D 74 72            [12] 2430 	mov	a,#___str_7
+      00064F C0 E0            [24] 2431 	push	acc
+      000651 74 11            [12] 2432 	mov	a,#(___str_7 >> 8)
+      000653 C0 E0            [24] 2433 	push	acc
+      000655 74 80            [12] 2434 	mov	a,#0x80
+      000657 C0 E0            [24] 2435 	push	acc
+      000659 12 01 24         [24] 2436 	lcall	_lcd_print
+      00065C E5 81            [12] 2437 	mov	a,sp
+      00065E 24 F9            [12] 2438 	add	a,#0xf9
+      000660 F5 81            [12] 2439 	mov	sp,a
+                           0005B5  2440 	C$kpdlcdtestPCAV1.c$87$2$124 ==.
+                                   2441 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:87: pause();
+      000662 12 08 E7         [24] 2442 	lcall	_pause
+      000665 D0 05            [24] 2443 	pop	ar5
+      000667 D0 06            [24] 2444 	pop	ar6
+                           0005BC  2445 	C$kpdlcdtestPCAV1.c$88$2$124 ==.
+                                   2446 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:88: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
+      000669 C0 05            [24] 2447 	push	ar5
+      00066B C0 06            [24] 2448 	push	ar6
+      00066D C0 05            [24] 2449 	push	ar5
+      00066F C0 06            [24] 2450 	push	ar6
+      000671 74 8F            [12] 2451 	mov	a,#___str_8
+      000673 C0 E0            [24] 2452 	push	acc
+      000675 74 11            [12] 2453 	mov	a,#(___str_8 >> 8)
+      000677 C0 E0            [24] 2454 	push	acc
+      000679 74 80            [12] 2455 	mov	a,#0x80
+      00067B C0 E0            [24] 2456 	push	acc
+      00067D 12 0A C2         [24] 2457 	lcall	_printf
+      000680 E5 81            [12] 2458 	mov	a,sp
+      000682 24 F9            [12] 2459 	add	a,#0xf9
+      000684 F5 81            [12] 2460 	mov	sp,a
+      000686 D0 07            [24] 2461 	pop	ar7
+                           0005DB  2462 	C$kpdlcdtestPCAV1.c$89$2$124 ==.
+                                   2463 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:89: if(keypad == 0){
+      000688 EF               [12] 2464 	mov	a,r7
+      000689 70 15            [24] 2465 	jnz	00105$
+                           0005DE  2466 	C$kpdlcdtestPCAV1.c$90$3$125 ==.
+                                   2467 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:90: printf("   **Wire Connection/XBR0 Error**   ");
+      00068B 74 AD            [12] 2468 	mov	a,#___str_9
+      00068D C0 E0            [24] 2469 	push	acc
+      00068F 74 11            [12] 2470 	mov	a,#(___str_9 >> 8)
+      000691 C0 E0            [24] 2471 	push	acc
+      000693 74 80            [12] 2472 	mov	a,#0x80
+      000695 C0 E0            [24] 2473 	push	acc
+      000697 12 0A C2         [24] 2474 	lcall	_printf
+      00069A 15 81            [12] 2475 	dec	sp
+      00069C 15 81            [12] 2476 	dec	sp
+      00069E 15 81            [12] 2477 	dec	sp
+      0006A0                       2478 00105$:
+                           0005F3  2479 	C$kpdlcdtestPCAV1.c$94$1$123 ==.
+                           0005F3  2480 	XG$normal_operation$0$0 ==.
+      0006A0 22               [24] 2481 	ret
+                                   2482 ;------------------------------------------------------------
+                                   2483 ;Allocation info for local variables in function 'kpd_input_zero'
+                                   2484 ;------------------------------------------------------------
+                                   2485 ;keypad                    Allocated to registers r6 
+                                   2486 ;------------------------------------------------------------
+                           0005F4  2487 	G$kpd_input_zero$0$0 ==.
+                           0005F4  2488 	C$kpdlcdtestPCAV1.c$96$1$123 ==.
+                                   2489 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:96: void kpd_input_zero(void){
+                                   2490 ;	-----------------------------------------
+                                   2491 ;	 function kpd_input_zero
+                                   2492 ;	-----------------------------------------
+      0006A1                       2493 _kpd_input_zero:
+                           0005F4  2494 	C$kpdlcdtestPCAV1.c$98$1$127 ==.
+                                   2495 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:98: keypad = kpd_input(0);
+      0006A1 75 82 00         [24] 2496 	mov	dpl,#0x00
+      0006A4 12 02 5E         [24] 2497 	lcall	_kpd_input
+      0006A7 AE 82            [24] 2498 	mov	r6,dpl
+                           0005FC  2499 	C$kpdlcdtestPCAV1.c$99$1$127 ==.
+                                   2500 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:99: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+      0006A9 C0 06            [24] 2501 	push	ar6
+      0006AB 12 08 E7         [24] 2502 	lcall	_pause
+      0006AE D0 06            [24] 2503 	pop	ar6
+                           000603  2504 	C$kpdlcdtestPCAV1.c$102$1$127 ==.
+                                   2505 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:102: if (keypad != -1){   // keypad = -1 if no key is pressed
+      0006B0 BE FF 02         [24] 2506 	cjne	r6,#0xFF,00113$
+      0006B3 80 72            [24] 2507 	sjmp	00105$
+      0006B5                       2508 00113$:
+                           000608  2509 	C$kpdlcdtestPCAV1.c$106$2$128 ==.
+                                   2510 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:106: lcd_clear();
+      0006B5 C0 06            [24] 2511 	push	ar6
+      0006B7 12 01 A5         [24] 2512 	lcall	_lcd_clear
+      0006BA D0 06            [24] 2513 	pop	ar6
+                           00060F  2514 	C$kpdlcdtestPCAV1.c$107$2$128 ==.
+                                   2515 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:107: lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
+      0006BC EE               [12] 2516 	mov	a,r6
+      0006BD FD               [12] 2517 	mov	r5,a
+      0006BE 33               [12] 2518 	rlc	a
+      0006BF 95 E0            [12] 2519 	subb	a,acc
+      0006C1 FF               [12] 2520 	mov	r7,a
+      0006C2 C0 07            [24] 2521 	push	ar7
+      0006C4 C0 06            [24] 2522 	push	ar6
+      0006C6 C0 05            [24] 2523 	push	ar5
+      0006C8 C0 05            [24] 2524 	push	ar5
+      0006CA C0 07            [24] 2525 	push	ar7
+      0006CC C0 05            [24] 2526 	push	ar5
+      0006CE C0 07            [24] 2527 	push	ar7
+      0006D0 74 D2            [12] 2528 	mov	a,#___str_10
+      0006D2 C0 E0            [24] 2529 	push	acc
+      0006D4 74 11            [12] 2530 	mov	a,#(___str_10 >> 8)
+      0006D6 C0 E0            [24] 2531 	push	acc
+      0006D8 74 80            [12] 2532 	mov	a,#0x80
+      0006DA C0 E0            [24] 2533 	push	acc
+      0006DC 12 01 24         [24] 2534 	lcall	_lcd_print
+      0006DF E5 81            [12] 2535 	mov	a,sp
+      0006E1 24 F9            [12] 2536 	add	a,#0xf9
+      0006E3 F5 81            [12] 2537 	mov	sp,a
+                           000638  2538 	C$kpdlcdtestPCAV1.c$108$2$128 ==.
+                                   2539 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:108: pause();
+      0006E5 12 08 E7         [24] 2540 	lcall	_pause
+      0006E8 D0 05            [24] 2541 	pop	ar5
+      0006EA D0 06            [24] 2542 	pop	ar6
+      0006EC D0 07            [24] 2543 	pop	ar7
+                           000641  2544 	C$kpdlcdtestPCAV1.c$109$2$128 ==.
+                                   2545 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:109: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
+      0006EE C0 06            [24] 2546 	push	ar6
+      0006F0 C0 05            [24] 2547 	push	ar5
+      0006F2 C0 07            [24] 2548 	push	ar7
+      0006F4 C0 05            [24] 2549 	push	ar5
+      0006F6 C0 07            [24] 2550 	push	ar7
+      0006F8 74 8F            [12] 2551 	mov	a,#___str_8
+      0006FA C0 E0            [24] 2552 	push	acc
+      0006FC 74 11            [12] 2553 	mov	a,#(___str_8 >> 8)
+      0006FE C0 E0            [24] 2554 	push	acc
+      000700 74 80            [12] 2555 	mov	a,#0x80
+      000702 C0 E0            [24] 2556 	push	acc
+      000704 12 0A C2         [24] 2557 	lcall	_printf
+      000707 E5 81            [12] 2558 	mov	a,sp
+      000709 24 F9            [12] 2559 	add	a,#0xf9
+      00070B F5 81            [12] 2560 	mov	sp,a
+      00070D D0 06            [24] 2561 	pop	ar6
+                           000662  2562 	C$kpdlcdtestPCAV1.c$110$2$128 ==.
+                                   2563 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:110: if(keypad == 0){
+      00070F EE               [12] 2564 	mov	a,r6
+      000710 70 15            [24] 2565 	jnz	00105$
+                           000665  2566 	C$kpdlcdtestPCAV1.c$111$3$129 ==.
+                                   2567 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:111: printf("   **Wire Connection/XBR0 Error**   ");
+      000712 74 AD            [12] 2568 	mov	a,#___str_9
+      000714 C0 E0            [24] 2569 	push	acc
+      000716 74 11            [12] 2570 	mov	a,#(___str_9 >> 8)
+      000718 C0 E0            [24] 2571 	push	acc
+      00071A 74 80            [12] 2572 	mov	a,#0x80
+      00071C C0 E0            [24] 2573 	push	acc
+      00071E 12 0A C2         [24] 2574 	lcall	_printf
+      000721 15 81            [12] 2575 	dec	sp
+      000723 15 81            [12] 2576 	dec	sp
+      000725 15 81            [12] 2577 	dec	sp
+      000727                       2578 00105$:
+                           00067A  2579 	C$kpdlcdtestPCAV1.c$115$1$127 ==.
+                           00067A  2580 	XG$kpd_input_zero$0$0 ==.
+      000727 22               [24] 2581 	ret
+                                   2582 ;------------------------------------------------------------
+                                   2583 ;Allocation info for local variables in function 'kpd_input_one'
+                                   2584 ;------------------------------------------------------------
+                                   2585 ;keypad                    Allocated to registers r6 
+                                   2586 ;------------------------------------------------------------
+                           00067B  2587 	G$kpd_input_one$0$0 ==.
+                           00067B  2588 	C$kpdlcdtestPCAV1.c$117$1$127 ==.
+                                   2589 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:117: void kpd_input_one(void){
+                                   2590 ;	-----------------------------------------
+                                   2591 ;	 function kpd_input_one
+                                   2592 ;	-----------------------------------------
+      000728                       2593 _kpd_input_one:
+                           00067B  2594 	C$kpdlcdtestPCAV1.c$119$1$131 ==.
+                                   2595 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:119: keypad = kpd_input(1);
+      000728 75 82 01         [24] 2596 	mov	dpl,#0x01
+      00072B 12 02 5E         [24] 2597 	lcall	_kpd_input
+      00072E AE 82            [24] 2598 	mov	r6,dpl
+                           000683  2599 	C$kpdlcdtestPCAV1.c$120$1$131 ==.
+                                   2600 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:120: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+      000730 C0 06            [24] 2601 	push	ar6
+      000732 12 08 E7         [24] 2602 	lcall	_pause
+      000735 D0 06            [24] 2603 	pop	ar6
+                           00068A  2604 	C$kpdlcdtestPCAV1.c$123$1$131 ==.
+                                   2605 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:123: if (keypad != -1){   // keypad = -1 if no key is pressed
+      000737 BE FF 02         [24] 2606 	cjne	r6,#0xFF,00113$
+      00073A 80 72            [24] 2607 	sjmp	00105$
+      00073C                       2608 00113$:
+                           00068F  2609 	C$kpdlcdtestPCAV1.c$127$2$132 ==.
+                                   2610 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:127: lcd_clear();
+      00073C C0 06            [24] 2611 	push	ar6
+      00073E 12 01 A5         [24] 2612 	lcall	_lcd_clear
+                           000694  2613 	C$kpdlcdtestPCAV1.c$128$2$132 ==.
+                                   2614 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:128: pause();
+      000741 12 08 E7         [24] 2615 	lcall	_pause
+      000744 D0 06            [24] 2616 	pop	ar6
+                           000699  2617 	C$kpdlcdtestPCAV1.c$129$2$132 ==.
+                                   2618 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:129: lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
+      000746 EE               [12] 2619 	mov	a,r6
+      000747 FD               [12] 2620 	mov	r5,a
+      000748 33               [12] 2621 	rlc	a
+      000749 95 E0            [12] 2622 	subb	a,acc
+      00074B FF               [12] 2623 	mov	r7,a
+      00074C C0 07            [24] 2624 	push	ar7
+      00074E C0 06            [24] 2625 	push	ar6
+      000750 C0 05            [24] 2626 	push	ar5
+      000752 C0 05            [24] 2627 	push	ar5
+      000754 C0 07            [24] 2628 	push	ar7
+      000756 C0 05            [24] 2629 	push	ar5
+      000758 C0 07            [24] 2630 	push	ar7
+      00075A 74 D2            [12] 2631 	mov	a,#___str_10
+      00075C C0 E0            [24] 2632 	push	acc
+      00075E 74 11            [12] 2633 	mov	a,#(___str_10 >> 8)
+      000760 C0 E0            [24] 2634 	push	acc
+      000762 74 80            [12] 2635 	mov	a,#0x80
+      000764 C0 E0            [24] 2636 	push	acc
+      000766 12 01 24         [24] 2637 	lcall	_lcd_print
+      000769 E5 81            [12] 2638 	mov	a,sp
+      00076B 24 F9            [12] 2639 	add	a,#0xf9
+      00076D F5 81            [12] 2640 	mov	sp,a
+      00076F D0 05            [24] 2641 	pop	ar5
+      000771 D0 06            [24] 2642 	pop	ar6
+      000773 D0 07            [24] 2643 	pop	ar7
+                           0006C8  2644 	C$kpdlcdtestPCAV1.c$130$2$132 ==.
+                                   2645 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:130: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
+      000775 C0 06            [24] 2646 	push	ar6
+      000777 C0 05            [24] 2647 	push	ar5
+      000779 C0 07            [24] 2648 	push	ar7
+      00077B C0 05            [24] 2649 	push	ar5
+      00077D C0 07            [24] 2650 	push	ar7
+      00077F 74 8F            [12] 2651 	mov	a,#___str_8
+      000781 C0 E0            [24] 2652 	push	acc
+      000783 74 11            [12] 2653 	mov	a,#(___str_8 >> 8)
+      000785 C0 E0            [24] 2654 	push	acc
+      000787 74 80            [12] 2655 	mov	a,#0x80
+      000789 C0 E0            [24] 2656 	push	acc
+      00078B 12 0A C2         [24] 2657 	lcall	_printf
+      00078E E5 81            [12] 2658 	mov	a,sp
+      000790 24 F9            [12] 2659 	add	a,#0xf9
+      000792 F5 81            [12] 2660 	mov	sp,a
+      000794 D0 06            [24] 2661 	pop	ar6
+                           0006E9  2662 	C$kpdlcdtestPCAV1.c$131$2$132 ==.
+                                   2663 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:131: if(keypad == 0){
+      000796 EE               [12] 2664 	mov	a,r6
+      000797 70 15            [24] 2665 	jnz	00105$
+                           0006EC  2666 	C$kpdlcdtestPCAV1.c$132$3$133 ==.
+                                   2667 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:132: printf("   **Wire Connection/XBR0 Error**   ");
+      000799 74 AD            [12] 2668 	mov	a,#___str_9
+      00079B C0 E0            [24] 2669 	push	acc
+      00079D 74 11            [12] 2670 	mov	a,#(___str_9 >> 8)
+      00079F C0 E0            [24] 2671 	push	acc
+      0007A1 74 80            [12] 2672 	mov	a,#0x80
+      0007A3 C0 E0            [24] 2673 	push	acc
+      0007A5 12 0A C2         [24] 2674 	lcall	_printf
+      0007A8 15 81            [12] 2675 	dec	sp
+      0007AA 15 81            [12] 2676 	dec	sp
+      0007AC 15 81            [12] 2677 	dec	sp
+      0007AE                       2678 00105$:
+                           000701  2679 	C$kpdlcdtestPCAV1.c$136$1$131 ==.
+                           000701  2680 	XG$kpd_input_one$0$0 ==.
+      0007AE 22               [24] 2681 	ret
+                                   2682 ;------------------------------------------------------------
+                                   2683 ;Allocation info for local variables in function 'two_key_input'
+                                   2684 ;------------------------------------------------------------
+                                   2685 ;keypad1                   Allocated to registers r7 
+                                   2686 ;keypad2                   Allocated to registers r6 
+                                   2687 ;result                    Allocated to registers r5 
+                                   2688 ;------------------------------------------------------------
+                           000702  2689 	G$two_key_input$0$0 ==.
+                           000702  2690 	C$kpdlcdtestPCAV1.c$139$1$131 ==.
+                                   2691 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:139: void two_key_input(void){
+                                   2692 ;	-----------------------------------------
+                                   2693 ;	 function two_key_input
+                                   2694 ;	-----------------------------------------
+      0007AF                       2695 _two_key_input:
+                           000702  2696 	C$kpdlcdtestPCAV1.c$141$1$135 ==.
+                                   2697 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:141: keypad1 = philip_read_keyboard();
+      0007AF 12 08 38         [24] 2698 	lcall	_philip_read_keyboard
+      0007B2 AF 82            [24] 2699 	mov	r7,dpl
+                           000707  2700 	C$kpdlcdtestPCAV1.c$142$1$135 ==.
+                                   2701 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:142: keypad2 = philip_read_keyboard();
+      0007B4 C0 07            [24] 2702 	push	ar7
+      0007B6 12 08 38         [24] 2703 	lcall	_philip_read_keyboard
+      0007B9 AE 82            [24] 2704 	mov	r6,dpl
+      0007BB D0 07            [24] 2705 	pop	ar7
+                           000710  2706 	C$kpdlcdtestPCAV1.c$143$1$135 ==.
+                                   2707 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:143: result = (((keypad1)*10) + (keypad2));
+      0007BD EF               [12] 2708 	mov	a,r7
+      0007BE 75 F0 0A         [24] 2709 	mov	b,#0x0A
+      0007C1 A4               [48] 2710 	mul	ab
+      0007C2 2E               [12] 2711 	add	a,r6
+      0007C3 FD               [12] 2712 	mov	r5,a
+                           000717  2713 	C$kpdlcdtestPCAV1.c$145$1$135 ==.
+                                   2714 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:145: printf("\rFirst number was %u, second number was %u\n", keypad1, keypad2);//for debugging
+      0007C4 EE               [12] 2715 	mov	a,r6
+      0007C5 33               [12] 2716 	rlc	a
+      0007C6 95 E0            [12] 2717 	subb	a,acc
+      0007C8 FC               [12] 2718 	mov	r4,a
+      0007C9 EF               [12] 2719 	mov	a,r7
+      0007CA 33               [12] 2720 	rlc	a
+      0007CB 95 E0            [12] 2721 	subb	a,acc
+      0007CD FB               [12] 2722 	mov	r3,a
+      0007CE C0 05            [24] 2723 	push	ar5
+      0007D0 C0 06            [24] 2724 	push	ar6
+      0007D2 C0 04            [24] 2725 	push	ar4
+      0007D4 C0 07            [24] 2726 	push	ar7
+      0007D6 C0 03            [24] 2727 	push	ar3
+      0007D8 74 F0            [12] 2728 	mov	a,#___str_11
+      0007DA C0 E0            [24] 2729 	push	acc
+      0007DC 74 11            [12] 2730 	mov	a,#(___str_11 >> 8)
+      0007DE C0 E0            [24] 2731 	push	acc
+      0007E0 74 80            [12] 2732 	mov	a,#0x80
+      0007E2 C0 E0            [24] 2733 	push	acc
+      0007E4 12 0A C2         [24] 2734 	lcall	_printf
+      0007E7 E5 81            [12] 2735 	mov	a,sp
+      0007E9 24 F9            [12] 2736 	add	a,#0xf9
+      0007EB F5 81            [12] 2737 	mov	sp,a
+      0007ED D0 05            [24] 2738 	pop	ar5
+                           000742  2739 	C$kpdlcdtestPCAV1.c$146$1$135 ==.
+                                   2740 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:146: printf("\rResult is %u\n", result);
+      0007EF ED               [12] 2741 	mov	a,r5
+      0007F0 33               [12] 2742 	rlc	a
+      0007F1 95 E0            [12] 2743 	subb	a,acc
+      0007F3 FF               [12] 2744 	mov	r7,a
+      0007F4 C0 07            [24] 2745 	push	ar7
+      0007F6 C0 05            [24] 2746 	push	ar5
+      0007F8 C0 05            [24] 2747 	push	ar5
+      0007FA C0 07            [24] 2748 	push	ar7
+      0007FC 74 1C            [12] 2749 	mov	a,#___str_12
+      0007FE C0 E0            [24] 2750 	push	acc
+      000800 74 12            [12] 2751 	mov	a,#(___str_12 >> 8)
+      000802 C0 E0            [24] 2752 	push	acc
+      000804 74 80            [12] 2753 	mov	a,#0x80
+      000806 C0 E0            [24] 2754 	push	acc
+      000808 12 0A C2         [24] 2755 	lcall	_printf
+      00080B E5 81            [12] 2756 	mov	a,sp
+      00080D 24 FB            [12] 2757 	add	a,#0xfb
+      00080F F5 81            [12] 2758 	mov	sp,a
+      000811 D0 05            [24] 2759 	pop	ar5
+      000813 D0 07            [24] 2760 	pop	ar7
+                           000768  2761 	C$kpdlcdtestPCAV1.c$147$1$135 ==.
+                                   2762 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:147: lcd_print("\rResult is %u\n", result);
+      000815 C0 05            [24] 2763 	push	ar5
+      000817 C0 07            [24] 2764 	push	ar7
+      000819 74 1C            [12] 2765 	mov	a,#___str_12
+      00081B C0 E0            [24] 2766 	push	acc
+      00081D 74 12            [12] 2767 	mov	a,#(___str_12 >> 8)
+      00081F C0 E0            [24] 2768 	push	acc
+      000821 74 80            [12] 2769 	mov	a,#0x80
+      000823 C0 E0            [24] 2770 	push	acc
+      000825 12 01 24         [24] 2771 	lcall	_lcd_print
+      000828 E5 81            [12] 2772 	mov	a,sp
+      00082A 24 FB            [12] 2773 	add	a,#0xfb
+      00082C F5 81            [12] 2774 	mov	sp,a
+                           000781  2775 	C$kpdlcdtestPCAV1.c$148$1$135 ==.
+                                   2776 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:148: wait(); wait(); 
+      00082E 12 08 F8         [24] 2777 	lcall	_wait
+      000831 12 08 F8         [24] 2778 	lcall	_wait
+                           000787  2779 	C$kpdlcdtestPCAV1.c$150$1$135 ==.
+                                   2780 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:150: lcd_clear();
+      000834 12 01 A5         [24] 2781 	lcall	_lcd_clear
+                           00078A  2782 	C$kpdlcdtestPCAV1.c$151$1$135 ==.
+                           00078A  2783 	XG$two_key_input$0$0 ==.
+      000837 22               [24] 2784 	ret
+                                   2785 ;------------------------------------------------------------
+                                   2786 ;Allocation info for local variables in function 'philip_read_keyboard'
+                                   2787 ;------------------------------------------------------------
+                                   2788 ;keypad                    Allocated to registers r6 
+                                   2789 ;keypad_prime              Allocated to registers r7 
+                                   2790 ;------------------------------------------------------------
+                           00078B  2791 	G$philip_read_keyboard$0$0 ==.
+                           00078B  2792 	C$kpdlcdtestPCAV1.c$153$1$135 ==.
+                                   2793 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:153: char philip_read_keyboard(void){
+                                   2794 ;	-----------------------------------------
+                                   2795 ;	 function philip_read_keyboard
+                                   2796 ;	-----------------------------------------
+      000838                       2797 _philip_read_keyboard:
+                           00078B  2798 	C$kpdlcdtestPCAV1.c$154$1$135 ==.
+                                   2799 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:154: char keypad,keypad_prime = 0;
+      000838 7F 00            [12] 2800 	mov	r7,#0x00
+                           00078D  2801 	C$kpdlcdtestPCAV1.c$155$1$137 ==.
+                                   2802 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:155: keypad = read_keypad();
+      00083A C0 07            [24] 2803 	push	ar7
+      00083C 12 01 DE         [24] 2804 	lcall	_read_keypad
+      00083F AE 82            [24] 2805 	mov	r6,dpl
+                           000794  2806 	C$kpdlcdtestPCAV1.c$156$1$137 ==.
+                                   2807 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:156: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+      000841 C0 06            [24] 2808 	push	ar6
+      000843 12 08 E7         [24] 2809 	lcall	_pause
+      000846 D0 06            [24] 2810 	pop	ar6
+      000848 D0 07            [24] 2811 	pop	ar7
+                           00079D  2812 	C$kpdlcdtestPCAV1.c$159$1$137 ==.
+                                   2813 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:159: while(keypad == (-1)){
+      00084A                       2814 00101$:
+      00084A E4               [12] 2815 	clr	a
+      00084B BE FF 01         [24] 2816 	cjne	r6,#0xFF,00131$
+      00084E 04               [12] 2817 	inc	a
+      00084F                       2818 00131$:
+      00084F FD               [12] 2819 	mov	r5,a
+      000850 60 0B            [24] 2820 	jz	00103$
+                           0007A5  2821 	C$kpdlcdtestPCAV1.c$160$2$138 ==.
+                                   2822 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:160: keypad = read_keypad();
+      000852 C0 07            [24] 2823 	push	ar7
+      000854 12 01 DE         [24] 2824 	lcall	_read_keypad
+      000857 AE 82            [24] 2825 	mov	r6,dpl
+      000859 D0 07            [24] 2826 	pop	ar7
+      00085B 80 ED            [24] 2827 	sjmp	00101$
+      00085D                       2828 00103$:
+                           0007B0  2829 	C$kpdlcdtestPCAV1.c$162$1$137 ==.
+                                   2830 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:162: if (keypad != (-1)){  // keypad = -1 if no key is pressed
+      00085D ED               [12] 2831 	mov	a,r5
+      00085E 70 71            [24] 2832 	jnz	00108$
+                           0007B3  2833 	C$kpdlcdtestPCAV1.c$166$2$139 ==.
+                                   2834 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:166: lcd_clear();
+      000860 C0 06            [24] 2835 	push	ar6
+      000862 12 01 A5         [24] 2836 	lcall	_lcd_clear
+      000865 D0 06            [24] 2837 	pop	ar6
+                           0007BA  2838 	C$kpdlcdtestPCAV1.c$167$2$139 ==.
+                                   2839 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:167: lcd_print("Key was:\n %c,= Hx %X\n", keypad, keypad);
+      000867 EE               [12] 2840 	mov	a,r6
+      000868 FC               [12] 2841 	mov	r4,a
+      000869 33               [12] 2842 	rlc	a
+      00086A 95 E0            [12] 2843 	subb	a,acc
+      00086C FD               [12] 2844 	mov	r5,a
+      00086D C0 06            [24] 2845 	push	ar6
+      00086F C0 05            [24] 2846 	push	ar5
+      000871 C0 04            [24] 2847 	push	ar4
+      000873 C0 04            [24] 2848 	push	ar4
+      000875 C0 05            [24] 2849 	push	ar5
+      000877 C0 04            [24] 2850 	push	ar4
+      000879 C0 05            [24] 2851 	push	ar5
+      00087B 74 2B            [12] 2852 	mov	a,#___str_13
+      00087D C0 E0            [24] 2853 	push	acc
+      00087F 74 12            [12] 2854 	mov	a,#(___str_13 >> 8)
+      000881 C0 E0            [24] 2855 	push	acc
+      000883 74 80            [12] 2856 	mov	a,#0x80
+      000885 C0 E0            [24] 2857 	push	acc
+      000887 12 01 24         [24] 2858 	lcall	_lcd_print
+      00088A E5 81            [12] 2859 	mov	a,sp
+      00088C 24 F9            [12] 2860 	add	a,#0xf9
+      00088E F5 81            [12] 2861 	mov	sp,a
+      000890 D0 04            [24] 2862 	pop	ar4
+      000892 D0 05            [24] 2863 	pop	ar5
+                           0007E7  2864 	C$kpdlcdtestPCAV1.c$168$2$139 ==.
+                                   2865 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:168: printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
+      000894 C0 04            [24] 2866 	push	ar4
+      000896 C0 05            [24] 2867 	push	ar5
+      000898 C0 04            [24] 2868 	push	ar4
+      00089A C0 05            [24] 2869 	push	ar5
+      00089C 74 41            [12] 2870 	mov	a,#___str_14
+      00089E C0 E0            [24] 2871 	push	acc
+      0008A0 74 12            [12] 2872 	mov	a,#(___str_14 >> 8)
+      0008A2 C0 E0            [24] 2873 	push	acc
+      0008A4 74 80            [12] 2874 	mov	a,#0x80
+      0008A6 C0 E0            [24] 2875 	push	acc
+      0008A8 12 0A C2         [24] 2876 	lcall	_printf
+      0008AB E5 81            [12] 2877 	mov	a,sp
+      0008AD 24 F9            [12] 2878 	add	a,#0xf9
+      0008AF F5 81            [12] 2879 	mov	sp,a
+      0008B1 D0 06            [24] 2880 	pop	ar6
+                           000806  2881 	C$kpdlcdtestPCAV1.c$169$2$139 ==.
+                                   2882 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:169: if(keypad == 0){
+      0008B3 EE               [12] 2883 	mov	a,r6
+      0008B4 70 19            [24] 2884 	jnz	00105$
+                           000809  2885 	C$kpdlcdtestPCAV1.c$170$3$140 ==.
+                                   2886 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:170: printf("   **Wire Connection Error**   ");
+      0008B6 C0 06            [24] 2887 	push	ar6
+      0008B8 74 5F            [12] 2888 	mov	a,#___str_15
+      0008BA C0 E0            [24] 2889 	push	acc
+      0008BC 74 12            [12] 2890 	mov	a,#(___str_15 >> 8)
+      0008BE C0 E0            [24] 2891 	push	acc
+      0008C0 74 80            [12] 2892 	mov	a,#0x80
+      0008C2 C0 E0            [24] 2893 	push	acc
+      0008C4 12 0A C2         [24] 2894 	lcall	_printf
+      0008C7 15 81            [12] 2895 	dec	sp
+      0008C9 15 81            [12] 2896 	dec	sp
+      0008CB 15 81            [12] 2897 	dec	sp
+      0008CD D0 06            [24] 2898 	pop	ar6
+      0008CF                       2899 00105$:
+                           000822  2900 	C$kpdlcdtestPCAV1.c$172$2$139 ==.
+                                   2901 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:172: keypad_prime = keypad;
+      0008CF 8E 07            [24] 2902 	mov	ar7,r6
+                           000824  2903 	C$kpdlcdtestPCAV1.c$174$1$137 ==.
+                                   2904 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:174: while(keypad != -1) {
+      0008D1                       2905 00108$:
+      0008D1 BE FF 02         [24] 2906 	cjne	r6,#0xFF,00136$
+      0008D4 80 0B            [24] 2907 	sjmp	00110$
+      0008D6                       2908 00136$:
+                           000829  2909 	C$kpdlcdtestPCAV1.c$175$2$141 ==.
+                                   2910 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:175: keypad = read_keypad(); // Waits until keypad returns a -1
+      0008D6 C0 07            [24] 2911 	push	ar7
+      0008D8 12 01 DE         [24] 2912 	lcall	_read_keypad
+      0008DB AE 82            [24] 2913 	mov	r6,dpl
+      0008DD D0 07            [24] 2914 	pop	ar7
+      0008DF 80 F0            [24] 2915 	sjmp	00108$
+      0008E1                       2916 00110$:
+                           000834  2917 	C$kpdlcdtestPCAV1.c$177$1$137 ==.
+                                   2918 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:177: return (keypad_prime - 48);
+      0008E1 EF               [12] 2919 	mov	a,r7
+      0008E2 24 D0            [12] 2920 	add	a,#0xD0
+      0008E4 F5 82            [12] 2921 	mov	dpl,a
+                           000839  2922 	C$kpdlcdtestPCAV1.c$178$1$137 ==.
+                           000839  2923 	XG$philip_read_keyboard$0$0 ==.
+      0008E6 22               [24] 2924 	ret
+                                   2925 ;------------------------------------------------------------
+                                   2926 ;Allocation info for local variables in function 'pause'
+                                   2927 ;------------------------------------------------------------
+                           00083A  2928 	G$pause$0$0 ==.
+                           00083A  2929 	C$kpdlcdtestPCAV1.c$183$1$137 ==.
+                                   2930 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:183: void pause(void) {//waits 1/50 second
+                                   2931 ;	-----------------------------------------
+                                   2932 ;	 function pause
+                                   2933 ;	-----------------------------------------
+      0008E7                       2934 _pause:
+                           00083A  2935 	C$kpdlcdtestPCAV1.c$184$1$143 ==.
+                                   2936 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:184: nCounts = 0;
+      0008E7 E4               [12] 2937 	clr	a
+      0008E8 F5 1B            [12] 2938 	mov	_nCounts,a
+      0008EA F5 1C            [12] 2939 	mov	(_nCounts + 1),a
+                           00083F  2940 	C$kpdlcdtestPCAV1.c$185$1$143 ==.
+                                   2941 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:185: while (nCounts < 1);// 1 count -> (65536-PCA_START) x 12/22118400 = 20ms
+      0008EC                       2942 00101$:
+      0008EC C3               [12] 2943 	clr	c
+      0008ED E5 1B            [12] 2944 	mov	a,_nCounts
+      0008EF 94 01            [12] 2945 	subb	a,#0x01
+      0008F1 E5 1C            [12] 2946 	mov	a,(_nCounts + 1)
+      0008F3 94 00            [12] 2947 	subb	a,#0x00
+      0008F5 40 F5            [24] 2948 	jc	00101$
+                           00084A  2949 	C$kpdlcdtestPCAV1.c$186$1$143 ==.
+                           00084A  2950 	XG$pause$0$0 ==.
+      0008F7 22               [24] 2951 	ret
+                                   2952 ;------------------------------------------------------------
+                                   2953 ;Allocation info for local variables in function 'wait'
+                                   2954 ;------------------------------------------------------------
+                           00084B  2955 	G$wait$0$0 ==.
+                           00084B  2956 	C$kpdlcdtestPCAV1.c$188$1$143 ==.
+                                   2957 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:188: void wait(void) {//waits 1 second
+                                   2958 ;	-----------------------------------------
+                                   2959 ;	 function wait
+                                   2960 ;	-----------------------------------------
+      0008F8                       2961 _wait:
+                           00084B  2962 	C$kpdlcdtestPCAV1.c$189$1$145 ==.
+                                   2963 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:189: nCounts = 0;
+      0008F8 E4               [12] 2964 	clr	a
+      0008F9 F5 1B            [12] 2965 	mov	_nCounts,a
+      0008FB F5 1C            [12] 2966 	mov	(_nCounts + 1),a
+                           000850  2967 	C$kpdlcdtestPCAV1.c$190$1$145 ==.
+                                   2968 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:190: while (nCounts < 50);    // 50 counts -> 50 x 20ms = 1000ms
+      0008FD                       2969 00101$:
+      0008FD C3               [12] 2970 	clr	c
+      0008FE E5 1B            [12] 2971 	mov	a,_nCounts
+      000900 94 32            [12] 2972 	subb	a,#0x32
+      000902 E5 1C            [12] 2973 	mov	a,(_nCounts + 1)
+      000904 94 00            [12] 2974 	subb	a,#0x00
+      000906 40 F5            [24] 2975 	jc	00101$
+                           00085B  2976 	C$kpdlcdtestPCAV1.c$191$1$145 ==.
+                           00085B  2977 	XG$wait$0$0 ==.
+      000908 22               [24] 2978 	ret
+                                   2979 ;------------------------------------------------------------
+                                   2980 ;Allocation info for local variables in function 'PCA_ISR'
+                                   2981 ;------------------------------------------------------------
+                           00085C  2982 	G$PCA_ISR$0$0 ==.
+                           00085C  2983 	C$kpdlcdtestPCAV1.c$193$1$145 ==.
+                                   2984 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:193: void PCA_ISR(void) __interrupt 9 {//timer interupt
+                                   2985 ;	-----------------------------------------
+                                   2986 ;	 function PCA_ISR
+                                   2987 ;	-----------------------------------------
+      000909                       2988 _PCA_ISR:
+      000909 C0 E0            [24] 2989 	push	acc
+      00090B C0 D0            [24] 2990 	push	psw
+                           000860  2991 	C$kpdlcdtestPCAV1.c$194$1$147 ==.
+                                   2992 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:194: if (CF) {
+                           000860  2993 	C$kpdlcdtestPCAV1.c$195$2$148 ==.
+                                   2994 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:195: CF = 0;                     // clear the interrupt flag
+      00090D 10 DF 02         [24] 2995 	jbc	_CF,00114$
+      000910 80 37            [24] 2996 	sjmp	00104$
+      000912                       2997 00114$:
+                           000865  2998 	C$kpdlcdtestPCAV1.c$196$2$148 ==.
+                                   2999 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:196: nOverflows++;               // continuous overflow counter
+      000912 74 01            [12] 3000 	mov	a,#0x01
+      000914 25 1D            [12] 3001 	add	a,_nOverflows
+      000916 F5 1D            [12] 3002 	mov	_nOverflows,a
+      000918 E4               [12] 3003 	clr	a
+      000919 35 1E            [12] 3004 	addc	a,(_nOverflows + 1)
+      00091B F5 1E            [12] 3005 	mov	(_nOverflows + 1),a
+                           000870  3006 	C$kpdlcdtestPCAV1.c$197$2$148 ==.
+                                   3007 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:197: nCounts++;
+      00091D 74 01            [12] 3008 	mov	a,#0x01
+      00091F 25 1B            [12] 3009 	add	a,_nCounts
+      000921 F5 1B            [12] 3010 	mov	_nCounts,a
+      000923 E4               [12] 3011 	clr	a
+      000924 35 1C            [12] 3012 	addc	a,(_nCounts + 1)
+      000926 F5 1C            [12] 3013 	mov	(_nCounts + 1),a
+                           00087B  3014 	C$kpdlcdtestPCAV1.c$198$2$148 ==.
+                                   3015 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:198: PCA0L = PCA_START & 0xFF;   // low byte of start count
+      000928 75 E9 00         [24] 3016 	mov	_PCA0L,#0x00
+                           00087E  3017 	C$kpdlcdtestPCAV1.c$199$2$148 ==.
+                                   3018 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:199: PCA0H = PCA_START >> 8;     // high byte of start count
+      00092B 75 F9 70         [24] 3019 	mov	_PCA0H,#0x70
+                           000881  3020 	C$kpdlcdtestPCAV1.c$200$2$148 ==.
+                                   3021 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:200: if (nCounts > 50) {
+      00092E C3               [12] 3022 	clr	c
+      00092F 74 32            [12] 3023 	mov	a,#0x32
+      000931 95 1B            [12] 3024 	subb	a,_nCounts
+      000933 E4               [12] 3025 	clr	a
+      000934 95 1C            [12] 3026 	subb	a,(_nCounts + 1)
+      000936 50 14            [24] 3027 	jnc	00106$
+                           00088B  3028 	C$kpdlcdtestPCAV1.c$201$3$149 ==.
+                                   3029 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:201: nCounts = 0;
+      000938 E4               [12] 3030 	clr	a
+      000939 F5 1B            [12] 3031 	mov	_nCounts,a
+      00093B F5 1C            [12] 3032 	mov	(_nCounts + 1),a
+                           000890  3033 	C$kpdlcdtestPCAV1.c$202$3$149 ==.
+                                   3034 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:202: Counts++;               // seconds counter
+      00093D 04               [12] 3035 	inc	a
+      00093E 25 19            [12] 3036 	add	a,_Counts
+      000940 F5 19            [12] 3037 	mov	_Counts,a
+      000942 E4               [12] 3038 	clr	a
+      000943 35 1A            [12] 3039 	addc	a,(_Counts + 1)
+      000945 F5 1A            [12] 3040 	mov	(_Counts + 1),a
+      000947 80 03            [24] 3041 	sjmp	00106$
+      000949                       3042 00104$:
+                           00089C  3043 	C$kpdlcdtestPCAV1.c$205$1$147 ==.
+                                   3044 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:205: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+      000949 53 D8 C0         [24] 3045 	anl	_PCA0CN,#0xC0
+      00094C                       3046 00106$:
+      00094C D0 D0            [24] 3047 	pop	psw
+      00094E D0 E0            [24] 3048 	pop	acc
+                           0008A3  3049 	C$kpdlcdtestPCAV1.c$206$1$147 ==.
+                           0008A3  3050 	XG$PCA_ISR$0$0 ==.
+      000950 32               [24] 3051 	reti
+                                   3052 ;	eliminated unneeded mov psw,# (no regs used in bank)
+                                   3053 ;	eliminated unneeded push/pop dpl
+                                   3054 ;	eliminated unneeded push/pop dph
+                                   3055 ;	eliminated unneeded push/pop b
+                                   3056 ;------------------------------------------------------------
+                                   3057 ;Allocation info for local variables in function 'Port_Init'
+                                   3058 ;------------------------------------------------------------
+                           0008A4  3059 	G$Port_Init$0$0 ==.
+                           0008A4  3060 	C$kpdlcdtestPCAV1.c$211$1$147 ==.
+                                   3061 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:211: void Port_Init(void){   //0x05
+                                   3062 ;	-----------------------------------------
+                                   3063 ;	 function Port_Init
+                                   3064 ;	-----------------------------------------
+      000951                       3065 _Port_Init:
+                           0008A4  3066 	C$kpdlcdtestPCAV1.c$212$1$151 ==.
+                                   3067 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:212: XBR0 = 0x27;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
+      000951 75 E1 27         [24] 3068 	mov	_XBR0,#0x27
+                           0008A7  3069 	C$kpdlcdtestPCAV1.c$213$1$151 ==.
+                           0008A7  3070 	XG$Port_Init$0$0 ==.
+      000954 22               [24] 3071 	ret
+                                   3072 ;------------------------------------------------------------
+                                   3073 ;Allocation info for local variables in function 'Interrupt_Init'
+                                   3074 ;------------------------------------------------------------
+                           0008A8  3075 	G$Interrupt_Init$0$0 ==.
+                           0008A8  3076 	C$kpdlcdtestPCAV1.c$215$1$151 ==.
+                                   3077 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:215: void Interrupt_Init(void){
+                                   3078 ;	-----------------------------------------
+                                   3079 ;	 function Interrupt_Init
+                                   3080 ;	-----------------------------------------
+      000955                       3081 _Interrupt_Init:
+                           0008A8  3082 	C$kpdlcdtestPCAV1.c$216$1$153 ==.
+                                   3083 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:216: IE |= 0x02;
+      000955 43 A8 02         [24] 3084 	orl	_IE,#0x02
+                           0008AB  3085 	C$kpdlcdtestPCAV1.c$217$1$153 ==.
+                                   3086 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:217: EIE1 |= 0x08;
+      000958 43 E6 08         [24] 3087 	orl	_EIE1,#0x08
+                           0008AE  3088 	C$kpdlcdtestPCAV1.c$218$1$153 ==.
+                                   3089 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:218: EA = 1;
+      00095B D2 AF            [12] 3090 	setb	_EA
+                           0008B0  3091 	C$kpdlcdtestPCAV1.c$219$1$153 ==.
+                           0008B0  3092 	XG$Interrupt_Init$0$0 ==.
+      00095D 22               [24] 3093 	ret
+                                   3094 ;------------------------------------------------------------
+                                   3095 ;Allocation info for local variables in function 'PCA_Init'
+                                   3096 ;------------------------------------------------------------
+                           0008B1  3097 	G$PCA_Init$0$0 ==.
+                           0008B1  3098 	C$kpdlcdtestPCAV1.c$221$1$153 ==.
+                                   3099 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:221: void PCA_Init(void){
+                                   3100 ;	-----------------------------------------
+                                   3101 ;	 function PCA_Init
+                                   3102 ;	-----------------------------------------
+      00095E                       3103 _PCA_Init:
+                           0008B1  3104 	C$kpdlcdtestPCAV1.c$222$1$155 ==.
+                                   3105 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:222: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+      00095E 75 D9 81         [24] 3106 	mov	_PCA0MD,#0x81
+                           0008B4  3107 	C$kpdlcdtestPCAV1.c$224$1$155 ==.
+                                   3108 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:224: PCA0CN |= 0x40;     // enable PCA
+      000961 43 D8 40         [24] 3109 	orl	_PCA0CN,#0x40
+                           0008B7  3110 	C$kpdlcdtestPCAV1.c$225$1$155 ==.
+                           0008B7  3111 	XG$PCA_Init$0$0 ==.
+      000964 22               [24] 3112 	ret
+                                   3113 ;------------------------------------------------------------
+                                   3114 ;Allocation info for local variables in function 'SMB0_Init'
+                                   3115 ;------------------------------------------------------------
+                           0008B8  3116 	G$SMB0_Init$0$0 ==.
+                           0008B8  3117 	C$kpdlcdtestPCAV1.c$227$1$155 ==.
+                                   3118 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:227: void SMB0_Init(void){    // This was at the top, moved it here to call wait()
+                                   3119 ;	-----------------------------------------
+                                   3120 ;	 function SMB0_Init
+                                   3121 ;	-----------------------------------------
+      000965                       3122 _SMB0_Init:
+                           0008B8  3123 	C$kpdlcdtestPCAV1.c$228$1$157 ==.
+                                   3124 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:228: SMB0CR = 0x93;      // Set SCL to 100KHz
+      000965 75 CF 93         [24] 3125 	mov	_SMB0CR,#0x93
+                           0008BB  3126 	C$kpdlcdtestPCAV1.c$229$1$157 ==.
+                                   3127 ;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:229: ENSMB = 1;          // Enable SMBUS0
+      000968 D2 C6            [12] 3128 	setb	_ENSMB
+                           0008BD  3129 	C$kpdlcdtestPCAV1.c$230$1$157 ==.
+                           0008BD  3130 	XG$SMB0_Init$0$0 ==.
+      00096A 22               [24] 3131 	ret
+                                   3132 	.area CSEG    (CODE)
+                                   3133 	.area CONST   (CODE)
+                           000000  3134 FkpdlcdtestPCAV1$__str_0$0$0 == .
+      0010DB                       3135 ___str_0:
+      0010DB 0A                    3136 	.db 0x0A
+      0010DC 54 79 70 65 20 64 69  3137 	.ascii "Type digits; end w/#"
              67 69 74 73 3B 20 65
              6E 64 20 77 2F 23
-      0010E1 00                    3123 	.db 0x00
-                           000016  3124 FkpdlcdtestPCAV1$__str_1$0$0 == .
-      0010E2                       3125 ___str_1:
-      0010E2 20 20 20 20 20 25 63  3126 	.ascii "     %c%c%c%c%c"
+      0010F0 00                    3138 	.db 0x00
+                           000016  3139 FkpdlcdtestPCAV1$__str_1$0$0 == .
+      0010F1                       3140 ___str_1:
+      0010F1 20 20 20 20 20 25 63  3141 	.ascii "     %c%c%c%c%c"
              25 63 25 63 25 63 25
              63
-      0010F1 00                    3127 	.db 0x00
-                           000026  3128 FkpdlcdtestPCAV1$__str_2$0$0 == .
-      0010F2                       3129 ___str_2:
-      0010F2 25 63                 3130 	.ascii "%c"
-      0010F4 00                    3131 	.db 0x00
-                           000029  3132 FkpdlcdtestPCAV1$__str_3$0$0 == .
-      0010F5                       3133 ___str_3:
-      0010F5 0A                    3134 	.db 0x0A
-      0010F6 53 74 61 72 74        3135 	.ascii "Start"
-      0010FB 0D                    3136 	.db 0x0D
-      0010FC 0A                    3137 	.db 0x0A
-      0010FD 00                    3138 	.db 0x00
-                           000032  3139 FkpdlcdtestPCAV1$__str_4$0$0 == .
-      0010FE                       3140 ___str_4:
-      0010FE 0D                    3141 	.db 0x0D
-      0010FF 63 6C 65 61 72 20 65  3142 	.ascii "clear error"
+      001100 00                    3142 	.db 0x00
+                           000026  3143 FkpdlcdtestPCAV1$__str_2$0$0 == .
+      001101                       3144 ___str_2:
+      001101 25 63                 3145 	.ascii "%c"
+      001103 00                    3146 	.db 0x00
+                           000029  3147 FkpdlcdtestPCAV1$__str_3$0$0 == .
+      001104                       3148 ___str_3:
+      001104 0A                    3149 	.db 0x0A
+      001105 53 74 61 72 74        3150 	.ascii "Start"
+      00110A 0D                    3151 	.db 0x0D
+      00110B 0A                    3152 	.db 0x0A
+      00110C 00                    3153 	.db 0x00
+                           000032  3154 FkpdlcdtestPCAV1$__str_4$0$0 == .
+      00110D                       3155 ___str_4:
+      00110D 0D                    3156 	.db 0x0D
+      00110E 63 6C 65 61 72 20 65  3157 	.ascii "clear error"
              72 72 6F 72
-      00110A 0A                    3143 	.db 0x0A
-      00110B 00                    3144 	.db 0x00
-                           000040  3145 FkpdlcdtestPCAV1$__str_5$0$0 == .
-      00110C                       3146 ___str_5:
-      00110C 0D                    3147 	.db 0x0D
-      00110D 69 66 20 79 6F 75 20  3148 	.ascii "if you see this code works"
+      001119 0A                    3158 	.db 0x0A
+      00111A 00                    3159 	.db 0x00
+                           000040  3160 FkpdlcdtestPCAV1$__str_5$0$0 == .
+      00111B                       3161 ___str_5:
+      00111B 0D                    3162 	.db 0x0D
+      00111C 69 66 20 79 6F 75 20  3163 	.ascii "if you see this code works"
              73 65 65 20 74 68 69
              73 20 63 6F 64 65 20
              77 6F 72 6B 73
-      001127 0A                    3149 	.db 0x0A
-      001128 00                    3150 	.db 0x00
-                           00005D  3151 FkpdlcdtestPCAV1$__str_6$0$0 == .
-      001129                       3152 ___str_6:
-      001129 43 61 6C 69 62 72 61  3153 	.ascii "Calibration:"
+      001136 0A                    3164 	.db 0x0A
+      001137 00                    3165 	.db 0x00
+                           00005D  3166 FkpdlcdtestPCAV1$__str_6$0$0 == .
+      001138                       3167 ___str_6:
+      001138 43 61 6C 69 62 72 61  3168 	.ascii "Calibration:"
              74 69 6F 6E 3A
-      001135 0A                    3154 	.db 0x0A
-      001136 48 65 6C 6C 6F 20 77  3155 	.ascii "Hello world!"
+      001144 0A                    3169 	.db 0x0A
+      001145 48 65 6C 6C 6F 20 77  3170 	.ascii "Hello world!"
              6F 72 6C 64 21
-      001142 0A                    3156 	.db 0x0A
-      001143 50 68 69 6C 69 70 20  3157 	.ascii "Philip Hoddinottwrote this code"
+      001151 0A                    3171 	.db 0x0A
+      001152 50 68 69 6C 69 70 20  3172 	.ascii "Philip Hoddinottwrote this code"
              48 6F 64 64 69 6E 6F
              74 74 77 72 6F 74 65
              20 74 68 69 73 20 63
              6F 64 65
-      001162 00                    3158 	.db 0x00
-                           000097  3159 FkpdlcdtestPCAV1$__str_7$0$0 == .
-      001163                       3160 ___str_7:
-      001163 59 6F 75 72 20 6B 65  3161 	.ascii "Your key was:"
+      001171 00                    3173 	.db 0x00
+                           000097  3174 FkpdlcdtestPCAV1$__str_7$0$0 == .
+      001172                       3175 ___str_7:
+      001172 59 6F 75 72 20 6B 65  3176 	.ascii "Your key was:"
              79 20 77 61 73 3A
-      001170 0A                    3162 	.db 0x0A
-      001171 20 25 63 2C 20 20 3D  3163 	.ascii " %c,  = Hex %X"
+      00117F 0A                    3177 	.db 0x0A
+      001180 20 25 63 2C 20 20 3D  3178 	.ascii " %c,  = Hex %X"
              20 48 65 78 20 25 58
-      00117F 00                    3164 	.db 0x00
-                           0000B4  3165 FkpdlcdtestPCAV1$__str_8$0$0 == .
-      001180                       3166 ___str_8:
-      001180 0A                    3167 	.db 0x0A
-      001181 0D                    3168 	.db 0x0D
-      001182 59 6F 75 72 20 6B 65  3169 	.ascii "Your key was: %c,  = Hex %X"
+      00118E 00                    3179 	.db 0x00
+                           0000B4  3180 FkpdlcdtestPCAV1$__str_8$0$0 == .
+      00118F                       3181 ___str_8:
+      00118F 0A                    3182 	.db 0x0A
+      001190 0D                    3183 	.db 0x0D
+      001191 59 6F 75 72 20 6B 65  3184 	.ascii "Your key was: %c,  = Hex %X"
              79 20 77 61 73 3A 20
              25 63 2C 20 20 3D 20
              48 65 78 20 25 58
-      00119D 00                    3170 	.db 0x00
-                           0000D2  3171 FkpdlcdtestPCAV1$__str_9$0$0 == .
-      00119E                       3172 ___str_9:
-      00119E 20 20 20 2A 2A 57 69  3173 	.ascii "   **Wire Connection/XBR0 Error**   "
+      0011AC 00                    3185 	.db 0x00
+                           0000D2  3186 FkpdlcdtestPCAV1$__str_9$0$0 == .
+      0011AD                       3187 ___str_9:
+      0011AD 20 20 20 2A 2A 57 69  3188 	.ascii "   **Wire Connection/XBR0 Error**   "
              72 65 20 43 6F 6E 6E
              65 63 74 69 6F 6E 2F
              58 42 52 30 20 45 72
              72 6F 72 2A 2A 20 20
              20
-      0011C2 00                    3174 	.db 0x00
-                           0000F7  3175 FkpdlcdtestPCAV1$__str_10$0$0 == .
-      0011C3                       3176 ___str_10:
-      0011C3 59 6F 75 72 20 6B 65  3177 	.ascii "Your key was:"
+      0011D1 00                    3189 	.db 0x00
+                           0000F7  3190 FkpdlcdtestPCAV1$__str_10$0$0 == .
+      0011D2                       3191 ___str_10:
+      0011D2 59 6F 75 72 20 6B 65  3192 	.ascii "Your key was:"
              79 20 77 61 73 3A
-      0011D0 0A                    3178 	.db 0x0A
-      0011D1 20 25 63 2C 20 20 3D  3179 	.ascii " %c,  = Hex %X"
+      0011DF 0A                    3193 	.db 0x0A
+      0011E0 20 25 63 2C 20 20 3D  3194 	.ascii " %c,  = Hex %X"
              20 48 65 78 20 25 58
-      0011DF 0A                    3180 	.db 0x0A
-      0011E0 00                    3181 	.db 0x00
-                           000115  3182 FkpdlcdtestPCAV1$__str_11$0$0 == .
-      0011E1                       3183 ___str_11:
-      0011E1 0D                    3184 	.db 0x0D
-      0011E2 46 69 72 73 74 20 6E  3185 	.ascii "First number was %u, second number was %u"
+      0011EE 0A                    3195 	.db 0x0A
+      0011EF 00                    3196 	.db 0x00
+                           000115  3197 FkpdlcdtestPCAV1$__str_11$0$0 == .
+      0011F0                       3198 ___str_11:
+      0011F0 0D                    3199 	.db 0x0D
+      0011F1 46 69 72 73 74 20 6E  3200 	.ascii "First number was %u, second number was %u"
              75 6D 62 65 72 20 77
              61 73 20 25 75 2C 20
              73 65 63 6F 6E 64 20
              6E 75 6D 62 65 72 20
              77 61 73 20 25 75
-      00120B 0A                    3186 	.db 0x0A
-      00120C 00                    3187 	.db 0x00
-                           000141  3188 FkpdlcdtestPCAV1$__str_12$0$0 == .
-      00120D                       3189 ___str_12:
-      00120D 0D                    3190 	.db 0x0D
-      00120E 52 65 73 75 6C 74 20  3191 	.ascii "Result is %u"
+      00121A 0A                    3201 	.db 0x0A
+      00121B 00                    3202 	.db 0x00
+                           000141  3203 FkpdlcdtestPCAV1$__str_12$0$0 == .
+      00121C                       3204 ___str_12:
+      00121C 0D                    3205 	.db 0x0D
+      00121D 52 65 73 75 6C 74 20  3206 	.ascii "Result is %u"
              69 73 20 25 75
-      00121A 0A                    3192 	.db 0x0A
-      00121B 00                    3193 	.db 0x00
-                           000150  3194 FkpdlcdtestPCAV1$__str_13$0$0 == .
-      00121C                       3195 ___str_13:
-      00121C 4B 65 79 20 77 61 73  3196 	.ascii "Key was:"
+      001229 0A                    3207 	.db 0x0A
+      00122A 00                    3208 	.db 0x00
+                           000150  3209 FkpdlcdtestPCAV1$__str_13$0$0 == .
+      00122B                       3210 ___str_13:
+      00122B 4B 65 79 20 77 61 73  3211 	.ascii "Key was:"
              3A
-      001224 0A                    3197 	.db 0x0A
-      001225 20 25 63 2C 3D 20 48  3198 	.ascii " %c,= Hx %X"
+      001233 0A                    3212 	.db 0x0A
+      001234 20 25 63 2C 3D 20 48  3213 	.ascii " %c,= Hx %X"
              78 20 25 58
-      001230 0A                    3199 	.db 0x0A
-      001231 00                    3200 	.db 0x00
-                           000166  3201 FkpdlcdtestPCAV1$__str_14$0$0 == .
-      001232                       3202 ___str_14:
-      001232 0D                    3203 	.db 0x0D
-      001233 59 6F 75 72 20 6B 65  3204 	.ascii "Your key was: %c,  = Hex %X"
+      00123F 0A                    3214 	.db 0x0A
+      001240 00                    3215 	.db 0x00
+                           000166  3216 FkpdlcdtestPCAV1$__str_14$0$0 == .
+      001241                       3217 ___str_14:
+      001241 0D                    3218 	.db 0x0D
+      001242 59 6F 75 72 20 6B 65  3219 	.ascii "Your key was: %c,  = Hex %X"
              79 20 77 61 73 3A 20
              25 63 2C 20 20 3D 20
              48 65 78 20 25 58
-      00124E 0A                    3205 	.db 0x0A
-      00124F 00                    3206 	.db 0x00
-                           000184  3207 FkpdlcdtestPCAV1$__str_15$0$0 == .
-      001250                       3208 ___str_15:
-      001250 20 20 20 2A 2A 57 69  3209 	.ascii "   **Wire Connection Error**   "
+      00125D 0A                    3220 	.db 0x0A
+      00125E 00                    3221 	.db 0x00
+                           000184  3222 FkpdlcdtestPCAV1$__str_15$0$0 == .
+      00125F                       3223 ___str_15:
+      00125F 20 20 20 2A 2A 57 69  3224 	.ascii "   **Wire Connection Error**   "
              72 65 20 43 6F 6E 6E
              65 63 74 69 6F 6E 20
              45 72 72 6F 72 2A 2A
              20 20 20
-      00126F 00                    3210 	.db 0x00
-                                   3211 	.area XINIT   (CODE)
-                                   3212 	.area CABS    (ABS,CODE)
+      00127E 00                    3225 	.db 0x00
+                                   3226 	.area XINIT   (CODE)
+                                   3227 	.area CABS    (ABS,CODE)

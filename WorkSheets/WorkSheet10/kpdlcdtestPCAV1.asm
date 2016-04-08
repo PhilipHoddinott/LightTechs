@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 3.5.0 #9253 (Jun 20 2015) (MINGW64)
-; This file was generated Tue Apr 05 16:57:19 2016
+; This file was generated Fri Apr 08 14:21:08 2016
 ;--------------------------------------------------------
 	.module kpdlcdtestPCAV1
 	.optsdcc -mmcs51 --model-small
@@ -2367,13 +2367,19 @@ _main:
 	dec	sp
 	dec	sp
 	C$kpdlcdtestPCAV1.c$60$1$120 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:60: while (1){
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:60: wait();
+	lcall	_wait
+	C$kpdlcdtestPCAV1.c$61$1$120 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:61: lcd_clear();
+	lcall	_lcd_clear
+	C$kpdlcdtestPCAV1.c$62$1$120 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:62: while (1){
 00105$:
-	C$kpdlcdtestPCAV1.c$64$2$121 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:64: kpd_input_zero();
-	lcall	_kpd_input_zero
+	C$kpdlcdtestPCAV1.c$63$2$121 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:63: normal_operation();	// read_keypad()
+	lcall	_normal_operation
 	sjmp	00105$
-	C$kpdlcdtestPCAV1.c$66$1$120 ==.
+	C$kpdlcdtestPCAV1.c$68$1$120 ==.
 	XG$main$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2382,33 +2388,33 @@ _main:
 ;keypad                    Allocated to registers r7 
 ;------------------------------------------------------------
 	G$normal_operation$0$0 ==.
-	C$kpdlcdtestPCAV1.c$73$1$120 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:73: void normal_operation(void){
+	C$kpdlcdtestPCAV1.c$75$1$120 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:75: void normal_operation(void){
 ;	-----------------------------------------
 ;	 function normal_operation
 ;	-----------------------------------------
 _normal_operation:
-	C$kpdlcdtestPCAV1.c$75$1$123 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:75: keypad = read_keypad();
+	C$kpdlcdtestPCAV1.c$77$1$123 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:77: keypad = read_keypad();
 	lcall	_read_keypad
 	mov	r7,dpl
-	C$kpdlcdtestPCAV1.c$76$1$123 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:76: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+	C$kpdlcdtestPCAV1.c$78$1$123 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:78: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
 	push	ar7
 	lcall	_pause
 	pop	ar7
-	C$kpdlcdtestPCAV1.c$79$1$123 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:79: if (keypad != -1){   // keypad = -1 if no key is pressed
+	C$kpdlcdtestPCAV1.c$81$1$123 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:81: if (keypad != -1){   // keypad = -1 if no key is pressed
 	cjne	r7,#0xFF,00113$
 	sjmp	00105$
 00113$:
-	C$kpdlcdtestPCAV1.c$83$2$124 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:83: lcd_clear();
+	C$kpdlcdtestPCAV1.c$85$2$124 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:85: lcd_clear();
 	push	ar7
 	lcall	_lcd_clear
 	pop	ar7
-	C$kpdlcdtestPCAV1.c$84$2$124 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:84: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
+	C$kpdlcdtestPCAV1.c$86$2$124 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:86: lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
 	mov	a,r7
 	mov	r5,a
 	rlc	a
@@ -2431,10 +2437,13 @@ _normal_operation:
 	mov	a,sp
 	add	a,#0xf9
 	mov	sp,a
+	C$kpdlcdtestPCAV1.c$87$2$124 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:87: pause();
+	lcall	_pause
 	pop	ar5
 	pop	ar6
-	C$kpdlcdtestPCAV1.c$85$2$124 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:85: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
+	C$kpdlcdtestPCAV1.c$88$2$124 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:88: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
 	push	ar5
 	push	ar6
 	push	ar5
@@ -2450,12 +2459,12 @@ _normal_operation:
 	add	a,#0xf9
 	mov	sp,a
 	pop	ar7
-	C$kpdlcdtestPCAV1.c$86$2$124 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:86: if(keypad == 0){
+	C$kpdlcdtestPCAV1.c$89$2$124 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:89: if(keypad == 0){
 	mov	a,r7
 	jnz	00105$
-	C$kpdlcdtestPCAV1.c$87$3$125 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:87: printf("   **Wire Connection/XBR0 Error**   ");
+	C$kpdlcdtestPCAV1.c$90$3$125 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:90: printf("   **Wire Connection/XBR0 Error**   ");
 	mov	a,#___str_9
 	push	acc
 	mov	a,#(___str_9 >> 8)
@@ -2467,7 +2476,7 @@ _normal_operation:
 	dec	sp
 	dec	sp
 00105$:
-	C$kpdlcdtestPCAV1.c$91$1$123 ==.
+	C$kpdlcdtestPCAV1.c$94$1$123 ==.
 	XG$normal_operation$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2476,34 +2485,34 @@ _normal_operation:
 ;keypad                    Allocated to registers r6 
 ;------------------------------------------------------------
 	G$kpd_input_zero$0$0 ==.
-	C$kpdlcdtestPCAV1.c$93$1$123 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:93: void kpd_input_zero(void){
+	C$kpdlcdtestPCAV1.c$96$1$123 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:96: void kpd_input_zero(void){
 ;	-----------------------------------------
 ;	 function kpd_input_zero
 ;	-----------------------------------------
 _kpd_input_zero:
-	C$kpdlcdtestPCAV1.c$95$1$127 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:95: keypad = kpd_input(0);
+	C$kpdlcdtestPCAV1.c$98$1$127 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:98: keypad = kpd_input(0);
 	mov	dpl,#0x00
 	lcall	_kpd_input
 	mov	r6,dpl
-	C$kpdlcdtestPCAV1.c$96$1$127 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:96: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+	C$kpdlcdtestPCAV1.c$99$1$127 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:99: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
 	push	ar6
 	lcall	_pause
 	pop	ar6
-	C$kpdlcdtestPCAV1.c$99$1$127 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:99: if (keypad != -1){   // keypad = -1 if no key is pressed
+	C$kpdlcdtestPCAV1.c$102$1$127 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:102: if (keypad != -1){   // keypad = -1 if no key is pressed
 	cjne	r6,#0xFF,00113$
 	sjmp	00105$
 00113$:
-	C$kpdlcdtestPCAV1.c$103$2$128 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:103: lcd_clear();
+	C$kpdlcdtestPCAV1.c$106$2$128 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:106: lcd_clear();
 	push	ar6
 	lcall	_lcd_clear
 	pop	ar6
-	C$kpdlcdtestPCAV1.c$104$2$128 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:104: lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
+	C$kpdlcdtestPCAV1.c$107$2$128 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:107: lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
 	mov	a,r6
 	mov	r5,a
 	rlc	a
@@ -2526,11 +2535,14 @@ _kpd_input_zero:
 	mov	a,sp
 	add	a,#0xf9
 	mov	sp,a
+	C$kpdlcdtestPCAV1.c$108$2$128 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:108: pause();
+	lcall	_pause
 	pop	ar5
 	pop	ar6
 	pop	ar7
-	C$kpdlcdtestPCAV1.c$105$2$128 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:105: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
+	C$kpdlcdtestPCAV1.c$109$2$128 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:109: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
 	push	ar6
 	push	ar5
 	push	ar7
@@ -2547,12 +2559,12 @@ _kpd_input_zero:
 	add	a,#0xf9
 	mov	sp,a
 	pop	ar6
-	C$kpdlcdtestPCAV1.c$106$2$128 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:106: if(keypad == 0){
+	C$kpdlcdtestPCAV1.c$110$2$128 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:110: if(keypad == 0){
 	mov	a,r6
 	jnz	00105$
-	C$kpdlcdtestPCAV1.c$107$3$129 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:107: printf("   **Wire Connection/XBR0 Error**   ");
+	C$kpdlcdtestPCAV1.c$111$3$129 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:111: printf("   **Wire Connection/XBR0 Error**   ");
 	mov	a,#___str_9
 	push	acc
 	mov	a,#(___str_9 >> 8)
@@ -2564,7 +2576,7 @@ _kpd_input_zero:
 	dec	sp
 	dec	sp
 00105$:
-	C$kpdlcdtestPCAV1.c$111$1$127 ==.
+	C$kpdlcdtestPCAV1.c$115$1$127 ==.
 	XG$kpd_input_zero$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2573,34 +2585,37 @@ _kpd_input_zero:
 ;keypad                    Allocated to registers r6 
 ;------------------------------------------------------------
 	G$kpd_input_one$0$0 ==.
-	C$kpdlcdtestPCAV1.c$113$1$127 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:113: void kpd_input_one(void){
+	C$kpdlcdtestPCAV1.c$117$1$127 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:117: void kpd_input_one(void){
 ;	-----------------------------------------
 ;	 function kpd_input_one
 ;	-----------------------------------------
 _kpd_input_one:
-	C$kpdlcdtestPCAV1.c$115$1$131 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:115: keypad = kpd_input(1);
+	C$kpdlcdtestPCAV1.c$119$1$131 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:119: keypad = kpd_input(1);
 	mov	dpl,#0x01
 	lcall	_kpd_input
 	mov	r6,dpl
-	C$kpdlcdtestPCAV1.c$116$1$131 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:116: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+	C$kpdlcdtestPCAV1.c$120$1$131 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:120: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
 	push	ar6
 	lcall	_pause
 	pop	ar6
-	C$kpdlcdtestPCAV1.c$119$1$131 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:119: if (keypad != -1){   // keypad = -1 if no key is pressed
+	C$kpdlcdtestPCAV1.c$123$1$131 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:123: if (keypad != -1){   // keypad = -1 if no key is pressed
 	cjne	r6,#0xFF,00113$
 	sjmp	00105$
 00113$:
-	C$kpdlcdtestPCAV1.c$123$2$132 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:123: lcd_clear();
+	C$kpdlcdtestPCAV1.c$127$2$132 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:127: lcd_clear();
 	push	ar6
 	lcall	_lcd_clear
+	C$kpdlcdtestPCAV1.c$128$2$132 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:128: pause();
+	lcall	_pause
 	pop	ar6
-	C$kpdlcdtestPCAV1.c$124$2$132 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:124: lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
+	C$kpdlcdtestPCAV1.c$129$2$132 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:129: lcd_print("Your key was:\n %c,  = Hex %X\n", keypad, keypad);
 	mov	a,r6
 	mov	r5,a
 	rlc	a
@@ -2626,8 +2641,8 @@ _kpd_input_one:
 	pop	ar5
 	pop	ar6
 	pop	ar7
-	C$kpdlcdtestPCAV1.c$125$2$132 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:125: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
+	C$kpdlcdtestPCAV1.c$130$2$132 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:130: printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
 	push	ar6
 	push	ar5
 	push	ar7
@@ -2644,12 +2659,12 @@ _kpd_input_one:
 	add	a,#0xf9
 	mov	sp,a
 	pop	ar6
-	C$kpdlcdtestPCAV1.c$126$2$132 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:126: if(keypad == 0){
+	C$kpdlcdtestPCAV1.c$131$2$132 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:131: if(keypad == 0){
 	mov	a,r6
 	jnz	00105$
-	C$kpdlcdtestPCAV1.c$127$3$133 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:127: printf("   **Wire Connection/XBR0 Error**   ");
+	C$kpdlcdtestPCAV1.c$132$3$133 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:132: printf("   **Wire Connection/XBR0 Error**   ");
 	mov	a,#___str_9
 	push	acc
 	mov	a,#(___str_9 >> 8)
@@ -2661,7 +2676,7 @@ _kpd_input_one:
 	dec	sp
 	dec	sp
 00105$:
-	C$kpdlcdtestPCAV1.c$131$1$131 ==.
+	C$kpdlcdtestPCAV1.c$136$1$131 ==.
 	XG$kpd_input_one$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2672,31 +2687,31 @@ _kpd_input_one:
 ;result                    Allocated to registers r5 
 ;------------------------------------------------------------
 	G$two_key_input$0$0 ==.
-	C$kpdlcdtestPCAV1.c$134$1$131 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:134: void two_key_input(void){
+	C$kpdlcdtestPCAV1.c$139$1$131 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:139: void two_key_input(void){
 ;	-----------------------------------------
 ;	 function two_key_input
 ;	-----------------------------------------
 _two_key_input:
-	C$kpdlcdtestPCAV1.c$136$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:136: keypad1 = philip_read_keyboard();
+	C$kpdlcdtestPCAV1.c$141$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:141: keypad1 = philip_read_keyboard();
 	lcall	_philip_read_keyboard
 	mov	r7,dpl
-	C$kpdlcdtestPCAV1.c$137$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:137: keypad2 = philip_read_keyboard();
+	C$kpdlcdtestPCAV1.c$142$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:142: keypad2 = philip_read_keyboard();
 	push	ar7
 	lcall	_philip_read_keyboard
 	mov	r6,dpl
 	pop	ar7
-	C$kpdlcdtestPCAV1.c$138$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:138: result = (((keypad1)*10) + (keypad2));
+	C$kpdlcdtestPCAV1.c$143$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:143: result = (((keypad1)*10) + (keypad2));
 	mov	a,r7
 	mov	b,#0x0A
 	mul	ab
 	add	a,r6
 	mov	r5,a
-	C$kpdlcdtestPCAV1.c$140$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:140: printf("\rFirst number was %u, second number was %u\n", keypad1, keypad2);//for debugging
+	C$kpdlcdtestPCAV1.c$145$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:145: printf("\rFirst number was %u, second number was %u\n", keypad1, keypad2);//for debugging
 	mov	a,r6
 	rlc	a
 	subb	a,acc
@@ -2721,8 +2736,8 @@ _two_key_input:
 	add	a,#0xf9
 	mov	sp,a
 	pop	ar5
-	C$kpdlcdtestPCAV1.c$141$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:141: printf("\rResult is %u\n", result);
+	C$kpdlcdtestPCAV1.c$146$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:146: printf("\rResult is %u\n", result);
 	mov	a,r5
 	rlc	a
 	subb	a,acc
@@ -2743,8 +2758,8 @@ _two_key_input:
 	mov	sp,a
 	pop	ar5
 	pop	ar7
-	C$kpdlcdtestPCAV1.c$142$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:142: lcd_print("\rResult is %u\n", result);
+	C$kpdlcdtestPCAV1.c$147$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:147: lcd_print("\rResult is %u\n", result);
 	push	ar5
 	push	ar7
 	mov	a,#___str_12
@@ -2757,14 +2772,14 @@ _two_key_input:
 	mov	a,sp
 	add	a,#0xfb
 	mov	sp,a
-	C$kpdlcdtestPCAV1.c$143$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:143: wait(); wait(); 
+	C$kpdlcdtestPCAV1.c$148$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:148: wait(); wait(); 
 	lcall	_wait
 	lcall	_wait
-	C$kpdlcdtestPCAV1.c$145$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:145: lcd_clear();
+	C$kpdlcdtestPCAV1.c$150$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:150: lcd_clear();
 	lcall	_lcd_clear
-	C$kpdlcdtestPCAV1.c$146$1$135 ==.
+	C$kpdlcdtestPCAV1.c$151$1$135 ==.
 	XG$two_key_input$0$0 ==.
 	ret
 ;------------------------------------------------------------
@@ -2774,28 +2789,28 @@ _two_key_input:
 ;keypad_prime              Allocated to registers r7 
 ;------------------------------------------------------------
 	G$philip_read_keyboard$0$0 ==.
-	C$kpdlcdtestPCAV1.c$148$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:148: char philip_read_keyboard(void){
+	C$kpdlcdtestPCAV1.c$153$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:153: char philip_read_keyboard(void){
 ;	-----------------------------------------
 ;	 function philip_read_keyboard
 ;	-----------------------------------------
 _philip_read_keyboard:
-	C$kpdlcdtestPCAV1.c$149$1$135 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:149: char keypad,keypad_prime = 0;
+	C$kpdlcdtestPCAV1.c$154$1$135 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:154: char keypad,keypad_prime = 0;
 	mov	r7,#0x00
-	C$kpdlcdtestPCAV1.c$150$1$137 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:150: keypad = read_keypad();
+	C$kpdlcdtestPCAV1.c$155$1$137 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:155: keypad = read_keypad();
 	push	ar7
 	lcall	_read_keypad
 	mov	r6,dpl
-	C$kpdlcdtestPCAV1.c$151$1$137 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:151: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+	C$kpdlcdtestPCAV1.c$156$1$137 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:156: pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
 	push	ar6
 	lcall	_pause
 	pop	ar6
 	pop	ar7
-	C$kpdlcdtestPCAV1.c$154$1$137 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:154: while(keypad == (-1)){
+	C$kpdlcdtestPCAV1.c$159$1$137 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:159: while(keypad == (-1)){
 00101$:
 	clr	a
 	cjne	r6,#0xFF,00131$
@@ -2803,25 +2818,25 @@ _philip_read_keyboard:
 00131$:
 	mov	r5,a
 	jz	00103$
-	C$kpdlcdtestPCAV1.c$155$2$138 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:155: keypad = read_keypad();
+	C$kpdlcdtestPCAV1.c$160$2$138 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:160: keypad = read_keypad();
 	push	ar7
 	lcall	_read_keypad
 	mov	r6,dpl
 	pop	ar7
 	sjmp	00101$
 00103$:
-	C$kpdlcdtestPCAV1.c$157$1$137 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:157: if (keypad != (-1)){  // keypad = -1 if no key is pressed
+	C$kpdlcdtestPCAV1.c$162$1$137 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:162: if (keypad != (-1)){  // keypad = -1 if no key is pressed
 	mov	a,r5
 	jnz	00108$
-	C$kpdlcdtestPCAV1.c$161$2$139 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:161: lcd_clear();
+	C$kpdlcdtestPCAV1.c$166$2$139 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:166: lcd_clear();
 	push	ar6
 	lcall	_lcd_clear
 	pop	ar6
-	C$kpdlcdtestPCAV1.c$162$2$139 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:162: lcd_print("Key was:\n %c,= Hx %X\n", keypad, keypad);
+	C$kpdlcdtestPCAV1.c$167$2$139 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:167: lcd_print("Key was:\n %c,= Hx %X\n", keypad, keypad);
 	mov	a,r6
 	mov	r4,a
 	rlc	a
@@ -2846,8 +2861,8 @@ _philip_read_keyboard:
 	mov	sp,a
 	pop	ar4
 	pop	ar5
-	C$kpdlcdtestPCAV1.c$163$2$139 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:163: printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
+	C$kpdlcdtestPCAV1.c$168$2$139 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:168: printf("\rYour key was: %c,  = Hex %X\n", keypad, keypad);
 	push	ar4
 	push	ar5
 	push	ar4
@@ -2863,12 +2878,12 @@ _philip_read_keyboard:
 	add	a,#0xf9
 	mov	sp,a
 	pop	ar6
-	C$kpdlcdtestPCAV1.c$164$2$139 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:164: if(keypad == 0){
+	C$kpdlcdtestPCAV1.c$169$2$139 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:169: if(keypad == 0){
 	mov	a,r6
 	jnz	00105$
-	C$kpdlcdtestPCAV1.c$165$3$140 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:165: printf("   **Wire Connection Error**   ");
+	C$kpdlcdtestPCAV1.c$170$3$140 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:170: printf("   **Wire Connection Error**   ");
 	push	ar6
 	mov	a,#___str_15
 	push	acc
@@ -2882,48 +2897,48 @@ _philip_read_keyboard:
 	dec	sp
 	pop	ar6
 00105$:
-	C$kpdlcdtestPCAV1.c$167$2$139 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:167: keypad_prime = keypad;
+	C$kpdlcdtestPCAV1.c$172$2$139 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:172: keypad_prime = keypad;
 	mov	ar7,r6
-	C$kpdlcdtestPCAV1.c$169$1$137 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:169: while(keypad != -1) {
+	C$kpdlcdtestPCAV1.c$174$1$137 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:174: while(keypad != -1) {
 00108$:
 	cjne	r6,#0xFF,00136$
 	sjmp	00110$
 00136$:
-	C$kpdlcdtestPCAV1.c$170$2$141 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:170: keypad = read_keypad(); // Waits until keypad returns a -1
+	C$kpdlcdtestPCAV1.c$175$2$141 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:175: keypad = read_keypad(); // Waits until keypad returns a -1
 	push	ar7
 	lcall	_read_keypad
 	mov	r6,dpl
 	pop	ar7
 	sjmp	00108$
 00110$:
-	C$kpdlcdtestPCAV1.c$172$1$137 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:172: return (keypad_prime - 48);
+	C$kpdlcdtestPCAV1.c$177$1$137 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:177: return (keypad_prime - 48);
 	mov	a,r7
 	add	a,#0xD0
 	mov	dpl,a
-	C$kpdlcdtestPCAV1.c$173$1$137 ==.
+	C$kpdlcdtestPCAV1.c$178$1$137 ==.
 	XG$philip_read_keyboard$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'pause'
 ;------------------------------------------------------------
 	G$pause$0$0 ==.
-	C$kpdlcdtestPCAV1.c$178$1$137 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:178: void pause(void) {//waits 1/50 second
+	C$kpdlcdtestPCAV1.c$183$1$137 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:183: void pause(void) {//waits 1/50 second
 ;	-----------------------------------------
 ;	 function pause
 ;	-----------------------------------------
 _pause:
-	C$kpdlcdtestPCAV1.c$179$1$143 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:179: nCounts = 0;
+	C$kpdlcdtestPCAV1.c$184$1$143 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:184: nCounts = 0;
 	clr	a
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
-	C$kpdlcdtestPCAV1.c$180$1$143 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:180: while (nCounts < 1);// 1 count -> (65536-PCA_START) x 12/22118400 = 20ms
+	C$kpdlcdtestPCAV1.c$185$1$143 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:185: while (nCounts < 1);// 1 count -> (65536-PCA_START) x 12/22118400 = 20ms
 00101$:
 	clr	c
 	mov	a,_nCounts
@@ -2931,26 +2946,26 @@ _pause:
 	mov	a,(_nCounts + 1)
 	subb	a,#0x00
 	jc	00101$
-	C$kpdlcdtestPCAV1.c$181$1$143 ==.
+	C$kpdlcdtestPCAV1.c$186$1$143 ==.
 	XG$pause$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'wait'
 ;------------------------------------------------------------
 	G$wait$0$0 ==.
-	C$kpdlcdtestPCAV1.c$183$1$143 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:183: void wait(void) {//waits 1 second
+	C$kpdlcdtestPCAV1.c$188$1$143 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:188: void wait(void) {//waits 1 second
 ;	-----------------------------------------
 ;	 function wait
 ;	-----------------------------------------
 _wait:
-	C$kpdlcdtestPCAV1.c$184$1$145 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:184: nCounts = 0;
+	C$kpdlcdtestPCAV1.c$189$1$145 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:189: nCounts = 0;
 	clr	a
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
-	C$kpdlcdtestPCAV1.c$185$1$145 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:185: while (nCounts < 50);    // 50 counts -> 50 x 20ms = 1000ms
+	C$kpdlcdtestPCAV1.c$190$1$145 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:190: while (nCounts < 50);    // 50 counts -> 50 x 20ms = 1000ms
 00101$:
 	clr	c
 	mov	a,_nCounts
@@ -2958,65 +2973,65 @@ _wait:
 	mov	a,(_nCounts + 1)
 	subb	a,#0x00
 	jc	00101$
-	C$kpdlcdtestPCAV1.c$186$1$145 ==.
+	C$kpdlcdtestPCAV1.c$191$1$145 ==.
 	XG$wait$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_ISR'
 ;------------------------------------------------------------
 	G$PCA_ISR$0$0 ==.
-	C$kpdlcdtestPCAV1.c$188$1$145 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:188: void PCA_ISR(void) __interrupt 9 {//timer interupt
+	C$kpdlcdtestPCAV1.c$193$1$145 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:193: void PCA_ISR(void) __interrupt 9 {//timer interupt
 ;	-----------------------------------------
 ;	 function PCA_ISR
 ;	-----------------------------------------
 _PCA_ISR:
 	push	acc
 	push	psw
-	C$kpdlcdtestPCAV1.c$189$1$147 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:189: if (CF) {
-	C$kpdlcdtestPCAV1.c$190$2$148 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:190: CF = 0;                     // clear the interrupt flag
+	C$kpdlcdtestPCAV1.c$194$1$147 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:194: if (CF) {
+	C$kpdlcdtestPCAV1.c$195$2$148 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:195: CF = 0;                     // clear the interrupt flag
 	jbc	_CF,00114$
 	sjmp	00104$
 00114$:
-	C$kpdlcdtestPCAV1.c$191$2$148 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:191: nOverflows++;               // continuous overflow counter
+	C$kpdlcdtestPCAV1.c$196$2$148 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:196: nOverflows++;               // continuous overflow counter
 	mov	a,#0x01
 	add	a,_nOverflows
 	mov	_nOverflows,a
 	clr	a
 	addc	a,(_nOverflows + 1)
 	mov	(_nOverflows + 1),a
-	C$kpdlcdtestPCAV1.c$192$2$148 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:192: nCounts++;
+	C$kpdlcdtestPCAV1.c$197$2$148 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:197: nCounts++;
 	mov	a,#0x01
 	add	a,_nCounts
 	mov	_nCounts,a
 	clr	a
 	addc	a,(_nCounts + 1)
 	mov	(_nCounts + 1),a
-	C$kpdlcdtestPCAV1.c$193$2$148 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:193: PCA0L = PCA_START & 0xFF;   // low byte of start count
+	C$kpdlcdtestPCAV1.c$198$2$148 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:198: PCA0L = PCA_START & 0xFF;   // low byte of start count
 	mov	_PCA0L,#0x00
-	C$kpdlcdtestPCAV1.c$194$2$148 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:194: PCA0H = PCA_START >> 8;     // high byte of start count
+	C$kpdlcdtestPCAV1.c$199$2$148 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:199: PCA0H = PCA_START >> 8;     // high byte of start count
 	mov	_PCA0H,#0x70
-	C$kpdlcdtestPCAV1.c$195$2$148 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:195: if (nCounts > 50) {
+	C$kpdlcdtestPCAV1.c$200$2$148 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:200: if (nCounts > 50) {
 	clr	c
 	mov	a,#0x32
 	subb	a,_nCounts
 	clr	a
 	subb	a,(_nCounts + 1)
 	jnc	00106$
-	C$kpdlcdtestPCAV1.c$196$3$149 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:196: nCounts = 0;
+	C$kpdlcdtestPCAV1.c$201$3$149 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:201: nCounts = 0;
 	clr	a
 	mov	_nCounts,a
 	mov	(_nCounts + 1),a
-	C$kpdlcdtestPCAV1.c$197$3$149 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:197: Counts++;               // seconds counter
+	C$kpdlcdtestPCAV1.c$202$3$149 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:202: Counts++;               // seconds counter
 	inc	a
 	add	a,_Counts
 	mov	_Counts,a
@@ -3025,13 +3040,13 @@ _PCA_ISR:
 	mov	(_Counts + 1),a
 	sjmp	00106$
 00104$:
-	C$kpdlcdtestPCAV1.c$200$1$147 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:200: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
+	C$kpdlcdtestPCAV1.c$205$1$147 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:205: else PCA0CN &= 0xC0;           // clear all other 9-type interrupts
 	anl	_PCA0CN,#0xC0
 00106$:
 	pop	psw
 	pop	acc
-	C$kpdlcdtestPCAV1.c$201$1$147 ==.
+	C$kpdlcdtestPCAV1.c$206$1$147 ==.
 	XG$PCA_ISR$0$0 ==.
 	reti
 ;	eliminated unneeded mov psw,# (no regs used in bank)
@@ -3042,76 +3057,76 @@ _PCA_ISR:
 ;Allocation info for local variables in function 'Port_Init'
 ;------------------------------------------------------------
 	G$Port_Init$0$0 ==.
-	C$kpdlcdtestPCAV1.c$206$1$147 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:206: void Port_Init(void){   //0x05
+	C$kpdlcdtestPCAV1.c$211$1$147 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:211: void Port_Init(void){   //0x05
 ;	-----------------------------------------
 ;	 function Port_Init
 ;	-----------------------------------------
 _Port_Init:
-	C$kpdlcdtestPCAV1.c$207$1$151 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:207: XBR0 = 0x27;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
+	C$kpdlcdtestPCAV1.c$212$1$151 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:212: XBR0 = 0x27;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
 	mov	_XBR0,#0x27
-	C$kpdlcdtestPCAV1.c$208$1$151 ==.
+	C$kpdlcdtestPCAV1.c$213$1$151 ==.
 	XG$Port_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'Interrupt_Init'
 ;------------------------------------------------------------
 	G$Interrupt_Init$0$0 ==.
-	C$kpdlcdtestPCAV1.c$210$1$151 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:210: void Interrupt_Init(void){
+	C$kpdlcdtestPCAV1.c$215$1$151 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:215: void Interrupt_Init(void){
 ;	-----------------------------------------
 ;	 function Interrupt_Init
 ;	-----------------------------------------
 _Interrupt_Init:
-	C$kpdlcdtestPCAV1.c$211$1$153 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:211: IE |= 0x02;
+	C$kpdlcdtestPCAV1.c$216$1$153 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:216: IE |= 0x02;
 	orl	_IE,#0x02
-	C$kpdlcdtestPCAV1.c$212$1$153 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:212: EIE1 |= 0x08;
+	C$kpdlcdtestPCAV1.c$217$1$153 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:217: EIE1 |= 0x08;
 	orl	_EIE1,#0x08
-	C$kpdlcdtestPCAV1.c$213$1$153 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:213: EA = 1;
+	C$kpdlcdtestPCAV1.c$218$1$153 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:218: EA = 1;
 	setb	_EA
-	C$kpdlcdtestPCAV1.c$214$1$153 ==.
+	C$kpdlcdtestPCAV1.c$219$1$153 ==.
 	XG$Interrupt_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'PCA_Init'
 ;------------------------------------------------------------
 	G$PCA_Init$0$0 ==.
-	C$kpdlcdtestPCAV1.c$216$1$153 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:216: void PCA_Init(void){
+	C$kpdlcdtestPCAV1.c$221$1$153 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:221: void PCA_Init(void){
 ;	-----------------------------------------
 ;	 function PCA_Init
 ;	-----------------------------------------
 _PCA_Init:
-	C$kpdlcdtestPCAV1.c$217$1$155 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:217: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
+	C$kpdlcdtestPCAV1.c$222$1$155 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:222: PCA0MD = 0x81;      // SYSCLK/12, enable CF interrupts, suspend when idle
 	mov	_PCA0MD,#0x81
-	C$kpdlcdtestPCAV1.c$219$1$155 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:219: PCA0CN |= 0x40;     // enable PCA
+	C$kpdlcdtestPCAV1.c$224$1$155 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:224: PCA0CN |= 0x40;     // enable PCA
 	orl	_PCA0CN,#0x40
-	C$kpdlcdtestPCAV1.c$220$1$155 ==.
+	C$kpdlcdtestPCAV1.c$225$1$155 ==.
 	XG$PCA_Init$0$0 ==.
 	ret
 ;------------------------------------------------------------
 ;Allocation info for local variables in function 'SMB0_Init'
 ;------------------------------------------------------------
 	G$SMB0_Init$0$0 ==.
-	C$kpdlcdtestPCAV1.c$222$1$155 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:222: void SMB0_Init(void){    // This was at the top, moved it here to call wait()
+	C$kpdlcdtestPCAV1.c$227$1$155 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:227: void SMB0_Init(void){    // This was at the top, moved it here to call wait()
 ;	-----------------------------------------
 ;	 function SMB0_Init
 ;	-----------------------------------------
 _SMB0_Init:
-	C$kpdlcdtestPCAV1.c$223$1$157 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:223: SMB0CR = 0x93;      // Set SCL to 100KHz
+	C$kpdlcdtestPCAV1.c$228$1$157 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:228: SMB0CR = 0x93;      // Set SCL to 100KHz
 	mov	_SMB0CR,#0x93
-	C$kpdlcdtestPCAV1.c$224$1$157 ==.
-;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:224: ENSMB = 1;          // Enable SMBUS0
+	C$kpdlcdtestPCAV1.c$229$1$157 ==.
+;	C:\Users\hoddip\Documents\GitHub\LightTechs\WorkSheets\WorkSheet10\kpdlcdtestPCAV1.c:229: ENSMB = 1;          // Enable SMBUS0
 	setb	_ENSMB
-	C$kpdlcdtestPCAV1.c$225$1$157 ==.
+	C$kpdlcdtestPCAV1.c$230$1$157 ==.
 	XG$SMB0_Init$0$0 ==.
 	ret
 	.area CSEG    (CODE)

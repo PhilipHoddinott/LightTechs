@@ -1,3 +1,6 @@
+
+
+
 //modified 4/28/2010 RPK, 11/17/2011 RPK (return 0 when not wired correctly)
 //LCD Model: Devantech LCD02
 //LCD Documentation: http://www.robot-electronics.co.uk/htm/Lcd02tech.htm
@@ -29,13 +32,20 @@ void SMB0_Init(void);
 void PCA_ISR(void) __interrupt 9;
 void wait(void);
 void pause(void);
+char new_key_input(void);
 
 // Global variables
-unsigned int Counts, nCounts, nOverflows;
+unsigned int   nOverflows;
+volatile unsigned int Counts, nCounts;
+char keypad_input;
+char real_keypad = 0;
+
 
 //*****************************************************************************
 void main(void) {
-    char keypad=0, keypad1=0, keypad2=0, result;
+    char keypad=0;
+    char keypad1=0;
+    char  keypad2=0, result=0;
     Sys_Init();     // System Initialization - MUST BE 1st EXECUTABLE STATEMENT
     Port_Init();    // Initialize ports 2 and 3 - XBR0 set to 0x05, UART0 & SMB
     Interrupt_Init();   // You may want to change XBR0 to match your SMB wiring
@@ -46,9 +56,10 @@ void main(void) {
 
     Counts = 0;
     while (Counts < 1); // Wait a long time (1s) for keypad & LCD to initialize
-
+    printf("\n\rhello");
     lcd_clear();
     lcd_print("Calibration:\nHello world!\n012_345_678:\nabc def ghij");
+    lcd_clear();
     while (1){
         /*
         keypad1 = new_key_input();
@@ -58,29 +69,46 @@ void main(void) {
         printf("\rFirst number was %u, second number was %u\n", keypad1, keypad2);
         lcd_print("\rResult is %u\n", result);
         */
-        //  keypad = kpd_input(0);
-        //  keypad = kpd_input(1);
-        keypad = read_keypad();
+        keypad = kpd_input(1);
+        printf("\n\ryou typed %d, in hex %u", keypad, keypad);
+        lcd_print("\r\ninput = %u", keypad);
         pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
                     // If the keypad is read too frequently (no delay), it will
                     // lock up and stop responding. Must power down to reset.
-        if (keypad != -1){   // keypad = -1 if no key is pressed
-                   // Note: fast read results in multiple lines on terminal
-                    // A longer delay will reduce multiple keypad reads but a
-                    // better approach is to wait for a -1 between keystrokes.
-            lcd_clear();
-            lcd_print("Your key was:\n %c,  = Hex %X", keypad, keypad);
-            printf("\n\rYour key was: %c,  = Hex %X", keypad, keypad);
-            if(keypad == 0)printf("   **Wire Connection/XBR0 Error**   ");
-        }           // A returned value of 0 (0x00) indicates wiring error
+        
+    
     }//end while
 }//end main
 //*****************************************************************************
 
-void Port_Init(void){	//0x05
+                // No CEXn are used; no ports to initialize
 
-    XBR0 = 0x05;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
-}                   // No CEXn are used; no ports to initialize
+char new_key_input(void) {
+
+    keypad_input = read_keypad();
+    pause();    // This pauses for 1 PCA0 counter clock cycle (20ms) 
+                    // If the keypad is read too frequently (no delay), it will
+                    // lock up and stop responding. Must power down to reset.
+    while(keypad_input == (-1)) {
+        keypad_input = read_keypad();
+    }
+    if (keypad_input != (-1)){   // keypad = -1 if no key is pressed
+              // Note: fast read results in multiple lines on terminal
+                    // A longer delay will reduce multiple keypad reads but a
+                    // better approach is to wait for a -1 between keystrokes.
+        lcd_clear();
+        lcd_print("Your key was:\n %c,  = Hex %X", keypad_input, keypad_input);
+        printf("\rYour key was: %c,  = Hex %X\n", keypad_input, keypad_input);
+        if(keypad_input == 0)printf("   **Wire Connection Error**   ");
+        real_keypad = keypad_input;
+    }           // A returned value of 0 (0x00) indicates wiring error'
+    while(keypad_input != -1) keypad_input = read_keypad(); // Waits until keypad returns a -1
+    return (real_keypad - 48);
+}
+
+void Port_Init(void){   //0x05
+    XBR0=0x27;//XBR0 = 0x05;    // NOTE: Only UART0 & SMB enabled; SMB on P0.2 & P0.3
+}   
 
 void Interrupt_Init(void){
     IE |= 0x02;
@@ -123,7 +151,3 @@ void wait(void) {
     nCounts = 0;
     while (nCounts < 50);    // 50 counts -> 50 x 20ms = 1000ms
 }
-
-
-
-
