@@ -52,6 +52,7 @@ unsigned char r_count = 0;//ranger counter
 unsigned char new_print =0; //flag for printing
 volatile unsigned char Counts=0, 
 volatile unsigned char n_Counts=0;
+volatile unsigned char test_counts=0;
 unsigned char print_count =0; //overflow count for printing
 
 
@@ -424,7 +425,10 @@ void calibration_input(void) {
 //*********************************************************************
 void pause(void){
 	n_Counts=0;
-	while(n_Counts<=50);
+	while(n_Counts<=10);
+	while(n_Counts<=10);
+	while(n_Counts<=10);
+	while(n_Counts<=10);
 }//end pause
 
 //-----------------------------------------------------------------------------
@@ -486,7 +490,7 @@ void PCA_ISR(void) __interrupt 9  {
 	{         
 		CF = 0; // clear overflow indicator  
 		PCA0 = 28672;       
-		h_count++;         
+		h_count++;        
 		if (h_count>=2)  //40ms for the compass    
 		{             
 			new_heading=1;	//new heading flag     
@@ -509,7 +513,7 @@ void PCA_ISR(void) __interrupt 9  {
 		{
 			new_print =1;	//set the print flag
 			print_count = 0;
-		}   
+		} 
 	}     
 	PCA0CN &= 0xC0; // handle other PCA interrupt sources  
 }//end PCAISR

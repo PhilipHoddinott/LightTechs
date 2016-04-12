@@ -210,10 +210,10 @@ void LCD_Print(void) {
 		pause();
 		lcd_print("\rHeading: %u", heading/10);
 		lcd_print("\rRange:%u", range);
-		if(Counts=1)	//only call the battery voltage once every second
+		if(Counts==1)	//only call the battery voltage once every second
 		{
 			battery=(read_AD_input(5));	//switch channels
-			battery =((read_AD_input(5)/256.) * 15.);	//Reads once it has stabilized do calc
+			battery =((read_AD_input(5)/256) * 15);	//Reads once it has stabilized do calc
 			result = read_AD_input(6);	//Allow it stabilize 
 			Counts=0;
 		}
@@ -424,7 +424,10 @@ void calibration_input(void) {
 //*********************************************************************
 void pause(void){
 	n_Counts=0;
-	while(n_Counts<=50);
+	while(n_Counts<=10);
+	while(n_Counts<=10);
+	while(n_Counts<=10);
+	while(n_Counts<=10);
 }//end pause
 
 //-----------------------------------------------------------------------------
@@ -481,35 +484,33 @@ void SMB_Init(void)
 // PCA_ISR 
 //----------------------------------------------------------------------------- 
 void PCA_ISR(void) __interrupt 9  {   
-
-	if (CF)      
-	{         
+	if (CF)  {         
+		
 		CF = 0; // clear overflow indicator  
 		PCA0 = 28672;       
-		h_count++;         
-		if (h_count>=2)  //40ms for the compass    
-		{             
+		h_count++;  
+		r_count++; 
+		n_Counts++;
+		print_count++;       
+		if (h_count>=2){  //40ms for the compass           
 			new_heading=1;	//new heading flag     
 			h_count = 0;         
-		}     
-		r_count++; 
-		n_Counts++; 
-		if (n_Counts > 50)//battery
-        {			
+		}//end if h count     
+
+		if (n_Counts > 50){//battery		
             n_Counts = 0;
             Counts=1;    //new battery voltage print flag
-        }       
-		if (r_count>=4) //80ms for the ranger        
-		{             
+        } //end battery counts
+
+		if (r_count>=4) {//80ms for the ranger                    
 			new_range = 1;	//set the new rage flag    
 			r_count = 0;         
 		}
-		print_count++;
-		if(print_count >= 20)	//lcd printing
-		{
+
+		if(print_count >= 20){	//lcd printing
 			new_print =1;	//set the print flag
 			print_count = 0;
-		}   
+		} 
 	}     
 	PCA0CN &= 0xC0; // handle other PCA interrupt sources  
 }//end PCAISR
