@@ -47,16 +47,15 @@ void pick_speed(void);
 __sbit __at 0xB7 SS;
 
 //************TIMER VARIBLES
-unsigned char h_count = 0;//compas counter
-unsigned char r_count = 0;//ranger counter
+unsigned char hr_count=0;
 unsigned char new_print =0; //flag for printing
-volatile unsigned char Counts=0, 
-volatile unsigned char n_Counts=0;
+volatile unsigned char Counts=0; 
+volatile unsigned char n_count=0;
 unsigned char print_count =0; //overflow count for printing
 
 
 //**************range and heading varibles + triggers
-unsigned char range=0;//range distance
+unsigned int range=0;//range distance
 unsigned int heading=0;//heading distance
 unsigned char new_heading = 1;//triggers compass function
 unsigned char new_range = 1;//triggers range function
@@ -96,6 +95,7 @@ int battery=0;//adc value for battery//******************float to int FOR RAM
 unsigned int keypad;
 unsigned int result; // int for AD input
 
+
 void main(void) {         
 	Sys_Init();	//All init function
 	putchar(' ');
@@ -112,7 +112,8 @@ void main(void) {
 	PCA0CP2 = 0xFFFF - MOTOR_NEUT;
 	PCA0CPL0 = 0xFFFF - PW_CENTER;
    	PCA0CPH0 = (0xFFFF - PW_CENTER) >> 8;
-	while (n_Counts < 50);	//pause for a second?
+
+	pause();	//pause for a second?
 
 	start_run();
 	while (1) { 
@@ -124,7 +125,7 @@ void main(void) {
 			Heading();
 			Ranger();
 			LCD_Print();	//print all values on the lcd
-			printf("\n\r Range:%d  Compass:%d  PW:%d", range, heading, PW);	//print these on the secure crt for data aquisition
+			printf("\n\r Range:%d  Compass:%d  PW:%d", range, heading, MOTOR_PW);	//print these on the secure crt for data aquisition
 		}
 	}	//end of the infinite while loop
 }//end of the main function
@@ -190,10 +191,10 @@ void Heading(void) {
 void Ranger(void)  {
 	if (new_range) //80ms passed
 	{
-		//printf("/r/n new range");
+		printf("\r\n new range");
 		new_range = 0;
 		range=ReadRanger();
-		//printf("range2: %d", range);
+		printf("\r\nrange2: %d", range);
 		range_Data[0] = 0x51 ;  // write 0x51 to reg 0 of the ranger:
 		i2c_write_data(0xE0, 0, range_Data, 1) ; // write one byte of data to reg 0 at addr_r
 	}
@@ -273,7 +274,24 @@ void choose_gain(void) {
 //-----------------------------------------------------------------------------
 // Choose speed
 //-----------------------------------------------------------------------------
+//*************************MODIFIED NO AD!!!
 void pick_speed(void){
+	/*lcd_clear();
+	lcd_print("\nenter speed 1-5\n");
+	lcd_print("0=full back, 3 = neut, etc\n");
+	keypad = read_keypad();
+	pause();
+	if(keypad != -1)
+	{
+		lcd_clear();
+		lcd_print("\nyour value was%c", keypad);
+		if(keypad ==0)
+		{
+			lcd_print("Wire Connection/XBR0 Error");
+		}
+	}
+	speed_motor = 50*keypad;
+	*/
 	lcd_clear();
 	lcd_print("To set speed, adjust pMeter now");
 	lcd_print("\n3 seconds to do so");
@@ -286,64 +304,53 @@ void pick_speed(void){
 	lcd_print("To set speed, adjust pMeter now");
 	lcd_print("\n1 seconds to do so");
 	pause();
+	
 }//end pick motor speed
 
 //-----------------------------------------------------------------------------
 // Control Functions
 //-----------------------------------------------------------------------------
 void Steering_Servo() {	//function that steers using compass
-	
-	unsigned char final_heading;
-
-	if(near_obstical==1)
-	{
-		final_heading = desired_heading + 900;
+	if(near_obstical==1) {
+		desired_heading += 900;
 		near_obstical=0;
 	}
-	else
+	/*else if (near_obstical==2)
 	{
-		final_heading = desired_heading;
+        MOTOR_PW=MOTOR_NEUT;
+	}*/
+
+	error1 = desired_heading - heading;
+	error2 = error1+3600; //compute error
+
+	if (abs(error1)<=abs(error2))  {
+		PW = ratio*error1 + PW_CENTER;	//use the smaller error to calcualte the servo setting
+	} 
+	else  {
+		PW = ratio*error2 + PW_CENTER;
+	}
+	if (PW < PW_MIN)  {	//if steering is set to below the minimum, set servo to minum postion
+		PW = PW_MIN;
+	}
+	if (PW > PW_MAX)  { //if steering is set to above the maximum, set servo to max postion
+		PW = PW_MAX;
 	}
 
-	error1 = final_heading - heading;
-	error2 = final_heading - (heading-3600); //compute error
 
-	if(!SS)
-	{	//if slide switich is enabled, steer
-		if (abs(error1)<=abs(error2)) 
-		{
-			PW = ratio*error1 + PW_CENTER;	//use the smaller error to calcualte the servo setting
-		} 
-		else 
-		{
-			PW = ratio*error2 + PW_CENTER;
-		}
-		if (PW < PW_MIN) 
-		{	//if steering is set to below the minimum, set servo to minum postion
-			PW = PW_MIN;
-		}
-		if (PW > PW_MAX) 
-		{ //if steering is set to above the maximum, set servo to max postion
-			PW = PW_MAX;
-		}
-	}//end slide switch
-	else
-	{	//if slide swtich is in off postion
-		PW = PW_CENTER;
-	}//end if else steer slide swtich
 
 	PCA0CPL0 = 0xFFFF - PW;
 	PCA0CPH0 = (0xFFFF - PW) >> 8;//set the servo's postion
 }//end steering servo 
 
+//*******************modified no AD!!!!!!!!!!!!!
 void Drive_Motor(void){
 	if (range<=10) {
 		//The motor is neutral when the object is 10 cm above the car.
-		MOTOR_PW=PW_NEUT;
+		MOTOR_PW=MOTOR_NEUT;
 		near_obstical = 1; //trip the "obstacle has been encountered" flag
 	}//end if range
 	else{
-		MOTOR_PW = (read_AD_input(4)* PW_DIFF_SC)/255;
+		MOTOR_PW = 2028+(230* PW_DIFF_SC)/255;//MOTOR_PW = (read_AD_input(4)* PW_DIFF_SC)/255;
 	}//end else normal ad
 	PCA0CPL2 = 0xFFFF - MOTOR_PW;
     PCA0CPH2 = (0xFFFF - MOTOR_PW) >> 8;//sed motor values
@@ -423,8 +430,8 @@ void calibration_input(void) {
 //Pause function
 //*********************************************************************
 void pause(void){
-	n_Counts=0;
-	while(n_Counts<=49);
+	n_count=0;
+	while(n_count<=45);
 }//end pause
 
 //-----------------------------------------------------------------------------
@@ -485,28 +492,28 @@ void PCA_ISR(void) __interrupt 9  {
 		
 		CF = 0; // clear overflow indicator  
 		PCA0 = 28672;       
-		h_count++;  
-		r_count++; 
-		n_Counts++;
-		print_count++;       
-		if (h_count>=2){  //40ms for the compass           
-			new_heading=1;	//new heading flag     
-			h_count = 0;         
-		}//end if h count     
+		hr_count++;  
+		n_count++;
 
-		if (n_Counts > 50){//battery		
-            n_Counts = 0;
+		if (hr_count == 2){  //40ms for the compass           
+			new_heading=1;	//new heading flag             
+		}//end if h count
+
+		else if (hr_count == 4) {//80ms for the ranger                       
+			hr_count = 0;	//reset
+			print_count++;	//increment print count
+			new_range = 1;	//set the new rage flag 
+			new_heading = 1; //set the new heading flag
+		}
+
+		if (n_count == 50){//battery		
+            n_count = 0;	//reset
             Counts=1;    //new battery voltage print flag
         } //end battery counts
 
-		if (r_count>=4) {//80ms for the ranger                    
-			new_range = 1;	//set the new rage flag    
-			r_count = 0;         
-		}
-
-		if(print_count >= 20){	//lcd printing
+		if(print_count == 5){	//lcd printing
+			print_count = 0;	//reset
 			new_print =1;	//set the print flag
-			print_count = 0;
 		} 
 	}     
 	PCA0CN &= 0xC0; // handle other PCA interrupt sources  

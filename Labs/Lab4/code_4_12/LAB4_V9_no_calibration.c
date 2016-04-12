@@ -93,6 +93,7 @@ unsigned char input;	//usde to get input for calibration
 char near_obstical;
 float battery=0;//adc value for battery
 unsigned int keypad;
+unsigned 
 
 void main(void) {         
 	Sys_Init();	//All init function
@@ -335,6 +336,7 @@ void Steering_Servo() {	//function that steers using compass
 }//end steering servo 
 
 void Drive_Motor(void){
+	
 	if (range<=10) {
 		//The motor is neutral when the object is 10 cm above the car.
 		MOTOR_PW=PW_NEUT;

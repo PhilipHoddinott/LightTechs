@@ -47,16 +47,15 @@ void pick_speed(void);
 __sbit __at 0xB7 SS;
 
 //************TIMER VARIBLES
-unsigned char h_count = 0;//compas counter
-unsigned char r_count = 0;//ranger counter
+unsigned char hr_count=0;
 unsigned char new_print =0; //flag for printing
 volatile unsigned char Counts=0, 
-volatile unsigned char n_Counts=0;
+volatile unsigned char n_count=0;
 unsigned char print_count =0; //overflow count for printing
 
 
 //**************range and heading varibles + triggers
-unsigned char range=0;//range distance
+unsigned int range=0;//range distance
 unsigned int heading=0;//heading distance
 unsigned char new_heading = 1;//triggers compass function
 unsigned char new_range = 1;//triggers range function
@@ -485,28 +484,28 @@ void PCA_ISR(void) __interrupt 9  {
 		
 		CF = 0; // clear overflow indicator  
 		PCA0 = 28672;       
-		h_count++;  
-		r_count++; 
-		n_Counts++;
-		print_count++;       
-		if (h_count>=2){  //40ms for the compass           
-			new_heading=1;	//new heading flag     
-			h_count = 0;         
-		}//end if h count     
+		hr_count++;  
+		n_count++;
 
-		if (n_Counts > 50){//battery		
-            n_Counts = 0;
+		if (hr_count == 2){  //40ms for the compass           
+			new_heading=1;	//new heading flag             
+		}//end if h count
+
+		else if (hr_count == 4) {//80ms for the ranger                       
+			hr_count = 0;	//reset
+			print_count++;	//increment print count
+			new_range = 1;	//set the new rage flag 
+			new_heading = 1; //set the new heading flag
+		}
+
+		if (n_count == 50){//battery		
+            n_count = 0;	//reset
             Counts=1;    //new battery voltage print flag
         } //end battery counts
 
-		if (r_count>=4) {//80ms for the ranger                    
-			new_range = 1;	//set the new rage flag    
-			r_count = 0;         
-		}
-
-		if(print_count >= 20){	//lcd printing
+		if(print_count == 5){	//lcd printing
+			print_count = 0;	//reset
 			new_print =1;	//set the print flag
-			print_count = 0;
 		} 
 	}     
 	PCA0CN &= 0xC0; // handle other PCA interrupt sources  
