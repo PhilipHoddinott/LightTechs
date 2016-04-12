@@ -1,0 +1,13 @@
+void drive motor, i though we did not do this? speed is set by gain, not range
+
+looking at main
+	no calibration exists whithin the main??
+
+also all work has to be today/ thursday cause no open shop firday or wensday
+
+move set speed to control functions
+put in a small function that says set the servo to what you want
+
+ad float ratio to xdata ( void choose gain)
+
+add in option to skip calibration
