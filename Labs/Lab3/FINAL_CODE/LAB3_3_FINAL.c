@@ -1,5 +1,3 @@
-//add descripton, group, side, section, etc
-
 //compiler directives
 #include <c8051_SDCC.h>
 #include <stdio.h>
@@ -53,8 +51,6 @@ unsigned char range_Data[2];//range data array
 unsigned char ping_addr= 0xE0;//declare addr
 unsigned char ping_Data[1];//ping data array
 
-
-
 unsigned int PW_MAX =3335;//max postion
 unsigned int PW_MIN =2345;//min postion
 unsigned int PW_CENTER =2760;//neutral postion
@@ -72,7 +68,6 @@ unsigned char f = 1; //used for calibration
 
 float ratio = .417;	//ratio for servo movment
 unsigned char input;	//usde to get input for calibration
-
 
 //********************************************************************
 // Main Functions

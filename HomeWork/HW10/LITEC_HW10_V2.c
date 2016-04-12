@@ -1,13 +1,4 @@
-/*	Name: Paul McKee
-	Partners: Phil Hoddinot, Brian Ortiz-Perez
-	Section: 4
-	Side: A
-	Date: 3/29/2016
-
-
-
-	File name: LITEC_HW10_Paul_McKee.c
-	
+/*	Names:Paul,Phil, Brian
 Description: 
 
 For Homework 10 you must modify the program written for Lab 3-2 to read 
@@ -36,7 +27,6 @@ read Register 1. You must force an update by issuing a command to the
 ranger. The easiest option is to issue the same command used to ping 
 the ranger in Lab 3-2 before reading the register.
 */
-
 
 //--------------------------------------------------------------------
 //compiler directives
@@ -143,10 +133,7 @@ void main(void)
 //******************************************************************
 //Output Functions
 //******************************************************************
-
-
-void print_output(void)
-{	
+void print_output(void){	
 	printf("\r\nThe Register 0 byte from the compass is: %u", compass_char);
 	printf("\r\nThis is the software revision number for the compass model.");
 
@@ -165,11 +152,7 @@ void print_output(void)
 //********************************************************************
 //Reading functions
 //********************************************************************
-
-
-
-unsigned char ReadCompassChar(void)
-{
+unsigned char ReadCompassChar(void){
 	i2c_read_data(comp_addr, 0, comp_Data_char, 1);	
 	//read one byte, located at comp_addr, starting at register 0
 	//store it in comp_Data_char, 1 byte total
@@ -177,8 +160,7 @@ unsigned char ReadCompassChar(void)
 	//simple return statement, just one byte
 }//end ReadCompassInt
 
-unsigned int ReadCompassInt(void)
-{
+unsigned int ReadCompassInt(void){
 	//i2c_read_data(sensor_addr, start_reg, comp_array_address, num_bytes)
 	i2c_read_data(comp_addr, 12, comp_Data_int, 2);	
 	//read 2 bytes, located at comp_adddr, starting at reg 12
@@ -236,7 +218,7 @@ void PCA_ISR ( void ) __interrupt 9 {
 	PCA0CN &=0xC0;
 }// end if ISR
 
-//much of this function was carried over from lab 3-2
+//much of this function was carried over from lab 3-2 
 //and serves no purpose in HW10 but was left in
 //simply to avoid any potential issues
 
