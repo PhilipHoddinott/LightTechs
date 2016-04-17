@@ -1,0 +1,29 @@
+varible result has been removed
+	it's spot in LCD print was repced by a holding varible
+
+varible PW and MOTOR_PW have been 
+	they have been replaced by MOTOR_PW_AND_STEER_PW
+
+the varibles used for the ranger and the compass
+	unsigned char comp_addr = 0xC0;//the address of the sensor
+	unsigned char comp_Data[2];  //data in array with length 1
+	unsigned char range_addr = 0xE0;// the address of the ranger is 0xE0
+	unsigned char range_Data[2];//range data array
+	unsigned char ping_addr= 0xE0;//declare addr
+	unsigned char ping_Data[1];//ping data array
+HAVE BEEN REPLACED BY
+	unsigned char comp_addr = 0xC0;//the address of the sensor
+	unsigned char comp_and_range_Data[2];  //range and comp data array
+	unsigned char range_and_ping_addr = 0xE0;// the address of the ranger is 0xE0
+	unsigned char ping_Data[1];//ping data array
+
+Varible MOTOR_NEUT has been made into a define
+
+varibles f and input have been placed in individual calibration functions
+
+The calibration functins have been moved to bottem of file
+
+NEED TO TEST ALL OF THESE CHANGES
+
+NEED TO ASK TA/PROF
+	can we store the calibration varibles so we only have to run that thing once a day?

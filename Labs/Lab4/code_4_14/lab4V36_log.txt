@@ -1,0 +1,35 @@
+
+
+will remove result variable
+	from LCD print
+	and from drive motor
+	and from main
+
+will see if PW can be removed
+
+
+will move calibration to bottem of file
+
+ask TA/prof about the data varibles?
+
+	unsigned char comp_addr = 0xC0;//the address of the sensor
+	unsigned char comp_Data[2];  //data in array with length 1
+	unsigned char range_addr = 0xE0;// the address of the ranger is 0xE0
+	unsigned char range_Data[2];//range data array
+	unsigned char ping_addr= 0xE0;//declare addr
+	unsigned char ping_Data[1];//ping data array
+
+
+	could they be combind?? could we have instead 
+
+	unsigned char comp_addr = 0xC0;//the address of the sensor
+	unsigned char comp_and_range_Data[2];  //range and comp data array
+	unsigned char range_and_ping_addr = 0xE0;// the address of the ranger is 0xE0
+	unsigned char ping_Data[1];//ping data array
+
+
+MOTOR_NEUT is now a define
+
+moved f to calibration
+
+moved input to calibration
