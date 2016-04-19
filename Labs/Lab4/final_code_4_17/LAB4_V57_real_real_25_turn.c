@@ -139,9 +139,8 @@ void main(void) {
 //supplamental main functions
 //-----------------------------------------------------------------------------------
 void start_run(void){	//function that does the inital thngs like get heading, gain, set values to neutral
-desired_heading = choose_heading();                 
-	//steer_gain=1; //
-	choose_gain();
+desired_heading = 1800;//choose_heading();                 
+	steer_gain=1; //choose_gain();
 	pause();
 	choose_speed();
                   
@@ -245,8 +244,6 @@ void choose_gain(void) // This function reads desired steering gain from the key
 		pause();
 		lcd_clear();
 		keypad=0;
-
-
 }
 
 
@@ -355,10 +352,8 @@ void Drive_Motor(void){
 		//desired_heading=1800;
 	}
 
-
 	if(range<25&&range>0){
 		MOTOR_PW_AND_STEER_PW=MOTOR_NEUT;
-		//near_obstical=1;
 	}
 	if(near_obstical==1){
 		MOTOR_PW_AND_STEER_PW=MOTOR_NEUT;

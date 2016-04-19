@@ -1,3 +1,4 @@
+
 /*
 plan
 assemble circut
@@ -54,7 +55,7 @@ void start_run(void);
 void slide_switch_off(void);
 
 void choose_speed(void);
-
+void comp_cal(void);
 //--------------------------------------------------------------------
 // Global Variables
 //--------------------------------------------------------------------
@@ -63,6 +64,7 @@ void choose_speed(void);
 __sbit __at 0xB7 SS;
 
 //************TIMER VARIBLES*******************
+unsigned char main_count=0;
 unsigned char hr_count=0;
 unsigned char new_print =0; //flag for printing
 unsigned char Counts=0;
@@ -113,6 +115,7 @@ void main(void) {
 	lcd_clear();	
 	lcd_print("initializing\r\n");
 	printf("\n\n\n\rinitalizing");
+	lcd_clear();
 
 	PCA0CP2 = 0xFFFF - MOTOR_NEUT;//set all to neutural
 	PCA0CPL0 = 0xFFFF - PW_CENTER;
@@ -126,10 +129,18 @@ void main(void) {
 			slide_switch_off();
 		}///end slide switch off
 		while(!SS){	//while the slideswitch is on
-			Heading();
-			Ranger();
+			//if mod 2 Heading();
+			//Steering_Servo();
+			//if mod 4 Ranger();
+			//Drive_Motor();
+			//if mod 20 LCD_Print();
+			//mod 50 is internal to LCD_Print();
 			LCD_Print();	//print all values on the lcd
-			printf("\n\rRange:%d Compass:%d dh: %d, mPW: %d, sPW %d, batt:%d, obst: %d", range, heading, desired_heading, MOTOR_PW_AND_STEER_PW, STEER_PW, battery, near_obstical);	//print these on the secure crt for data aquisition
+			printf("\n\rRange:%d", range);
+			printf("Compass:%d", heading);
+			printf("\r\nSteerPW:%u", STEER_PW);
+			
+			//printf("\n\rRange:%d, Compass:%d, steerPW %d", range, heading, STEER_PW);	//print these on the secure crt for data aquisition
 			//printf("\n\r Range:%d Compass:%d dh: %d, mPW: %d, sPW %d, obst: %d", range, heading, desired_heading, MOTOR_PW_AND_STEER_PW, STEER_PW, near_obstical);	//print these on the secure crt for data aquisition
 		}//end slide switch on
 	}	//end of the infinite while loop
@@ -139,8 +150,15 @@ void main(void) {
 //supplamental main functions
 //-----------------------------------------------------------------------------------
 void start_run(void){	//function that does the inital thngs like get heading, gain, set values to neutral
-desired_heading = choose_heading();                 
-	//steer_gain=1; //
+	lcd_print("       If the compass needs to be calibrated press 1");
+	keypad=kpd_input(0);
+	if (keypad==1)
+	{	lcd_clear();
+		comp_cal();
+		lcd_clear();
+		keypad=0;
+	}
+    choose_heading();                 
 	choose_gain();
 	pause();
 	choose_speed();
@@ -214,7 +232,7 @@ void LCD_Print(void) {
 	if (new_print){ // Call display function every 400 ms 
 		new_print =0;
 		lcd_clear();
-		lcd_print("\rHeading: %u", heading/10);
+		lcd_print("\rHd: %u, dh: %u", heading/10, desired_heading/10);
 		lcd_print("\rRange:%u", range);
 		if(Counts==1){	//only call the battery voltage once every second
 			battery=(read_AD_input(5));	//switch channels
@@ -222,8 +240,12 @@ void LCD_Print(void) {
 			keypad = read_AD_input(4);	//Allow it stabilize. using this variable as just a throw away
 			Counts=0;
 		}//end if counts
-		lcd_print("\rVoltage:%d", (1*battery));	//prints battery voltage to nearest volt
-		lcd_print("\rtrip: %d", near_obstical);
+		if(heading>desired_heading){
+			lcd_print("\rVoltage:%d, left", (1*battery));	//hn//prints battery voltage to nearest volt
+		} else if(heading<=desired_heading){
+			lcd_print("\rVoltage:%d, right", (1*battery));	//prints battery voltage to nearest volt
+		}
+		lcd_print("\rOtp: %d, Htp: %d", near_obstical, trip_heading_change);
 	}//end if new print
 }//end LCD print
   
@@ -234,13 +256,15 @@ void choose_gain(void) // This function reads desired steering gain from the key
 {					// Desired gain is chosen by incrementing it by pressing button 8 and decrementing it by pressing button 2
 	
 		lcd_clear();	//must clear screen before filling with each new print statment
-		lcd_print("Press 2 for a gain of.2, 3 for 1.2, 4 for 8");
+		lcd_print("Press 2 for a gain of.5, 3 for 2, 4 for 5, 5 for 8");
 		keypad=kpd_input(0);
 		if(keypad==2)
 			steer_gain=.22;
 		if(keypad==3)
-			steer_gain=1.2;
+			steer_gain=2;
 		if(keypad==4)
+			steer_gain=5;
+		if(keypad==5)
 			steer_gain=8;
 		pause();
 		lcd_clear();
@@ -374,6 +398,31 @@ void Drive_Motor(void){
     PCA0CPH2 = (0xFFFF - MOTOR_PW_AND_STEER_PW) >> 8;//set motor values
 }//end drive motor
 
+//******************************************************************************
+//Calibration Functions 
+//******************************************************************************
+void comp_cal(void){
+	heading = ReadCompass();	//get compass heading	
+	lcd_print("Face north, press 1 and ground");
+	keypad=kpd_input(0);
+	lcd_clear();
+	heading = ReadCompass();	//get compass heading	
+	lcd_print("\r\nFace east, press 2 and ground");
+	keypad=kpd_input(0);
+	heading = ReadCompass();	//get compass heading	
+	lcd_clear();
+	lcd_print("\r\nFace south, press 3 and ground");
+	keypad=kpd_input(0);
+	lcd_clear();
+	heading = ReadCompass();	//get compass heading	
+	lcd_print("\r\nFace west, press 4 and ground");
+	keypad=kpd_input(0);
+	lcd_clear();
+	lcd_print("Compass is calibrated");
+	pause();
+	lcd_clear();
+}//endcom cal
+
 //**********************************************************************
 //Pause function
 //*********************************************************************
@@ -436,6 +485,17 @@ void SMB_Init(void) {
 //----------------------------------------------------------------------------- 
 // PCA_ISR 
 //----------------------------------------------------------------------------- 
+
+//hr_count 
+//mod 2 heading flag
+//mod 4 range flag
+//mod 20 lcd print flag
+//mod 50 battery flag
+//watch for range and battery and same time 
+//don't want the AD thing too close
+// have it go to 100 
+
+
 void PCA_ISR(void) __interrupt 9  {   
 	if (CF)  {         
 		
